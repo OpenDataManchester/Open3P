@@ -6,7 +6,7 @@ An open data standard is a set of rules that describe the structure and componen
 
 ## What is the Plastic Packaging Portal open data standard?
 
-The Open3R open data standard describes information about the UK’s Household Waste Recycling Centres, and other places people can take waste from their home for recycling or reuse. It has been designed to provide guidance to local authorities (like local councils) for publishing data about these places. It includes data such as opening times, services offered and location of ‘bring-banks’. A data standard will make the available data better for users, because it means that different publishers, with different data capture or publishing systems, can publish data in the same format. If every local authority publishes its data in this way, then it is theoretically possible to have a dataset that covers the whole of the UK. This could then be used to power a ‘Where’s My Nearest Recycling Centre’ app, or support ‘time-to-travel’ analyses of local recycling centres.
+The Plastic Packaging Portal open data standard describes information about .
 
 The standard is being developed according to the [OpenStand](https://open-stand.org/){target=_blank} principles of:
 
@@ -18,7 +18,7 @@ The standard is being developed according to the [OpenStand](https://open-stand.
 
 ## How is the standard being developed?
 
-The initial standard development was funded by the [Open Data Institute](https://www.opendatamanchester.org.uk/odistimulus-environment/){target=_blank}, with the later stages supported by [Innovate UK](https://www.opendatamanchester.org.uk/plastics-packaging-portal/){target=_blank}, and is being developed through workshops with industry experts over a number of iterations.
+The initial standard development was funded by [Innovate UK](https://www.opendatamanchester.org.uk/plastics-packaging-portal/){target=_blank}, and is being developed through workshops with industry experts over a number of iterations.
 
 ## How to use the standard
 
