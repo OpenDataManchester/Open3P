@@ -1,4 +1,4 @@
-site_name: Open3R
+site_name: PPP
 theme:
   name: material
   icon:
@@ -40,8 +40,8 @@ extra:
     - icon: fontawesome/solid/globe
       link: https://www.opendatamanchester.org.uk/
       name: ODM Website
-repo_url: https://github.com/OpenDataManchester/Open3R
-repo_name: ODM/Open3R
+repo_url: https://github.com/OpenDataManchester/PPP
+repo_name: ODM/PPP
 edit_uri: ""
 markdown_extensions:
   - admonition
