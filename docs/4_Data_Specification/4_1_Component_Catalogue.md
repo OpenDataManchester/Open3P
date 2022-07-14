@@ -27,12 +27,11 @@ The following table lists the column headings that should be used. When providin
 |volumeDate|`required`|String|The date that the volume was last verified/measured. Use the format `dd/mm/yyyy`.|
 |weight|`required`|String|The weight of the component. TBD|
 |weightDate|`required`|String|The date that the weight was last verified/measured. Use the format `dd/mm/yyyy`.|
-|thickness|`required`|String|The thickness of the component. TBD|
-|thicknessDate|`required`|String|The date that the thickness was last verified/measured. Use the format `dd/mm/yyyy`.|
 |format|`required`|String|What is the format or shape of the component? The entry should contain the format controlled list identifier for the component.|
 |flexibility|`required`|String|Whether the component is considered flexible or rigid. The entry should be the flexibility controlled list identifier.|
 |componentRecyclingDisruptors|`required`|String|What challenges the component has for recycling. The entry should be the componentRecyclingDisruptors controlled list identifier.|
-|colour|`required`|String|TBD.|
+|colour|`required`|String|The actual colour of the component using CMYK (Cyan-Magenta-Yellow-blacK) values. The format is specified according to cmyk(C%, M%, Y%, K%), where C, M, Y, and K are the percent values for the cyan, magenta, yellow, and black values of the color. For example: black is `cmyk(0%,0%,0%,100%)`. |
+|opacity|`required`|percent|The transparency of the colours on a 0 to 100% scale. The lower the value, the more transparent; the higher the value, the more solid.|
 |recycledContent|`required`|Percent|A percent of how much recycled content is included in the makeup of the component.|
 |recycledContentEvidenceType|`required`|String|What evidence type supports the recycledContent claim. The entry should be the recycledContentEvidenceType controlled list identifier.|
 |recycledContentEvidenceReference|`required`|String|An accompanying reference number associated with the recycledContentEvidenceType for the component.|
@@ -54,7 +53,6 @@ All measurements should be given using the metric system.
 - Length: millimetre (mm)
 - Volume: cubic millimetre (mm3)
 - Weight: grams (g)
-- Thickness: micrometre (um)
 
 Numbers should be entered with a decimal place, a space between the number, and the unit as specified above. Use the decimal / full stop / period character as a separator. For example: volume = 20.000 mm3. Do not exceed 3 decimal places.
 
@@ -133,8 +131,6 @@ For cylindrical items two dimensions will be nominally equal. Which dimensions a
 determined by the result of determination of the default front.
 <image>
 
-### Measuring the thickness of a component
-provide the measurement for the thickest point
 
 ### Measuring the volume and weight of a component
 
