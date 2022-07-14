@@ -59,7 +59,7 @@ Numbers should be entered with a decimal place, a space between the number, and 
 **Important**: When converting between systems of measurement, perform the conversion first and then apply rounding. This will give more accuracy and consistency.
 
 ### Default Front of a component
-Prior caputuring measurements, first determine the default front of the component, this is similar to[gs1](https://www.gs1.org/). In this standard, the default front is the face with the largest area, where area is equal to the width times the height.
+Prior caputuring measurements, first determine the default front of the component, this is similar to [gs1](https://www.gs1.org/). In this standard, the default front is the face with the largest area, where area is equal to the width times the height.
 
 **Important**: Determining of default front provides a consistent, repeatable process to find measurements for a given component.
 
