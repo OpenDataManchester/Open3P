@@ -1,4 +1,4 @@
-identifier,name
-hwrc-proc-01,Reuse
-hwrc_proc-02,Recycle
-hwrc-proc-03,Dispose
+identifier,category,detailed
+unique-component-level-0001,primary,
+unique-component-level-0002,secondary,
+unique-component-level-0003,tertiary,

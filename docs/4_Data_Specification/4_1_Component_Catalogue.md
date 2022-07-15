@@ -25,7 +25,7 @@ The following table lists the column headings that should be used. When providin
 |volumeDate|`required`|String|The date that the volume was last verified/measured. Use the format `dd/mm/yyyy`.|
 |weight|`required`|String|The weight of the component. TBD|
 |weightDate|`required`|String|The date that the weight was last verified/measured. Use the format `dd/mm/yyyy`.|
-|format|`required`|String|What is the format or shape of the component? The entry should contain the format controlled list identifier for the component.|
+|shape|`required`|String|What is the shape of the component? The entry should contain the shape controlled list identifier for the component.|
 |flexibility|`required`|String|Whether the component is considered flexible or rigid. The entry should be the flexibility controlled list identifier.|
 |componentRecyclingDisruptors|`required`|String|What challenges the component has for recycling. The entry should be the componentRecyclingDisruptors controlled list identifier.|
 |colour|`required`|String|The actual colour of the component using CMYK (Cyan-Magenta-Yellow-blacK) values. The format is specified according to cmyk(C%, M%, Y%, K%), where C, M, Y, and K are the percent values for the cyan, magenta, yellow, and black values of the color. For example: black is `cmyk(0%,0%,0%,100%)`. |

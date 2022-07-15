@@ -6,9 +6,9 @@
 
 An open data standard is a set of rules that describe the structure and components of an open dataset. Putting rules in place means people and organisations that publish data about the same thing can use the same language to talk about it. Having a standard makes it a lot easier to understand and reuse data that has been published. It is especially useful if data is being published by lots of different people to make an even bigger dataset. Anyone can then read about the standard, contribute data, or use the data knowing everyone is talking about the same thing.
 
-## What is the Plastic Packaging Portal open data standard?
+## What is the Open3P?
 
-The Plastic Packaging Portal open data standard describes information about .
+Open3P describes information about .
 
 The standard is being developed according to the [OpenStand](https://open-stand.org/){target=_blank} principles of:
 

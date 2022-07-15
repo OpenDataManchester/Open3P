@@ -1,5 +1,5 @@
-identifier,name
-hwrc-ctry-eng,England
-hwrc-ctry-sct,Scotland
-hwrc-ctry-wal,Wales
-hwrc-ctry-nir,Northern Ireland
+identifier,name,description
+complete-packaging-drs-0001,England,
+complete-packaging-drs-0002,Scotland,
+complete-packaging-drs-0003,Wales,
+complete-packaging-drs-0004,Northern Ireland,
