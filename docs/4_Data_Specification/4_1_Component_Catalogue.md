@@ -2,11 +2,9 @@
 
 ## Standard Spreadsheet Format
 
-The spreadsheet format is the simplest way to provide information about recycling and waste sites (RWS).
-
 The following table lists the column headings that should be used. When providing this information, you can either build your spreadsheet from scratch, or use the template provided.
 
-[open3R_main.csv](https://github.com/OpenDataManchester/Open3R/blob/V2/docs/8_Supporting_Files/8_1_1_RWS_Main_Template.csv){target=_blank}
+[component_catalogue.csv](https://github.com/OpenDataManchester/Open3R/blob/V2/docs/8_Supporting_Files/8_1_1_RWS_Main_Template.csv){target=_blank}
 
 
 |Column|Status|Format|Notes|
@@ -32,7 +30,10 @@ The following table lists the column headings that should be used. When providin
 |componentRecyclingDisruptors|`required`|String|What challenges the component has for recycling. The entry should be the componentRecyclingDisruptors controlled list identifier.|
 |colour|`required`|String|The actual colour of the component using CMYK (Cyan-Magenta-Yellow-blacK) values. The format is specified according to cmyk(C%, M%, Y%, K%), where C, M, Y, and K are the percent values for the cyan, magenta, yellow, and black values of the color. For example: black is `cmyk(0%,0%,0%,100%)`. |
 |opacity|`required`|percent|The transparency of the colours on a 0 to 100% scale. The lower the value, the more transparent; the higher the value, the more solid.|
-|recycledContent|`required`|Percent|A percent of how much recycled content is included in the makeup of the component.|
+|recycledContent|`required`|Percent|A percent of how much recycled content is included in the makeup of the component. For the purposes of this standard, we refer to the [UK's HM Revenue & Customs](https://www.gov.uk/guidance/work-out-which-packaging-is-subject-to-plastic-packaging-tax) definition of recycled content. "Recycled plastic is plastic that has been reprocessed from recovered material by using a chemical or manufacturing process. This is so it can be used either for its original purpose or for other purposes. This does not include organic recycling.
+Recovered material is pre-consumer plastic or post-consumer plastic that both:
+- is no longer suitable to be used in the process from which it was generated and would otherwise have been used for energy recovery (for example, by incineration) or disposed of as waste (for example, by being sent to landfill)
+- has been collected and recovered for use as a material input for a recycling or manufacturing process, instead of new primary material"|
 |recycledContentEvidenceType|`required`|String|What evidence type supports the recycledContent claim. The entry should be the recycledContentEvidenceType controlled list identifier.|
 |recycledContentEvidenceReference|`required`|String|An accompanying reference number associated with the recycledContentEvidenceType for the component.|
 |recyclability|`recommended`|Boolean|Is the component recyclable?|

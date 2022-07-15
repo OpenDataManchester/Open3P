@@ -2,7 +2,7 @@
 
 From the component catelogue, information differs based on the application of the component. Pull the component catelogue item to add unique information.
 
-[rws_area_served.csv](https://github.com/OpenDataManchester/Open3R/blob/V2/docs/8_Supporting_Files/8_1_2_RWS_Area_Served_Template.csv){target=_blank}
+[unique_component.csv](https://github.com/OpenDataManchester/Open3R/blob/V2/docs/8_Supporting_Files/8_1_2_RWS_Area_Served_Template.csv){target=_blank}
 
 |Column|Status|Format|Notes|
 |:-|:-|:-|:-|
@@ -16,6 +16,7 @@ From the component catelogue, information differs based on the application of th
 |importedUK|`required`|Boolean|Is the component manufactured in the UK?|
 |manufacturedCountry|`required`|Numeric|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iban.com/country-codes) as described in the ISO 3166 international standard.|
 |directContactWithProduct|`required`|Boolean|Does the component come into direct contact with the product before purchased by a consumer?|
+|uniqueComponentRecyclingDisruptors|`required`|String|What challenges the unique component has for recycling. The entry should be the uniqueComponentRecyclingDisruptors controlled list identifier.|
 |uploadDate|`required`|String|The date that the component was provided/last updated. Use the format `dd/mm/yyyy`.|
 |releaseDate|`required`|String|The date that the component will be available to use. Use the format `dd/mm/yyyy`.|
 |discontinuedDate|`required`|String|The date that the component will no longer be available to use. Use the format `dd/mm/yyyy`.|
