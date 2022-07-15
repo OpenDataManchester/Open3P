@@ -4,7 +4,7 @@
 
 The following table lists the column headings that should be used. When providing this information, you can either build your spreadsheet from scratch, or use the template provided.
 
-[component_catalogue.csv](https://github.com/OpenDataManchester/Open3R/blob/V2/docs/8_Supporting_Files/8_1_1_RWS_Main_Template.csv){target=_blank}
+[component_catalogue.csv](https://github.com/OpenDataManchester/PPP/blob/main/docs/8_Supporting_Files/8_1_1_Component_Catalogue_Template.csv){target=_blank}
 
 
 |Column|Status|Format|Notes|

@@ -2,7 +2,7 @@
 
 From the component catelogue, information differs based on the application of the component. Pull the component catelogue item to add unique information.
 
-[unique_component.csv](https://github.com/OpenDataManchester/Open3R/blob/V2/docs/8_Supporting_Files/8_1_2_RWS_Area_Served_Template.csv){target=_blank}
+[unique_component.csv](https://github.com/OpenDataManchester/PPP/blob/main/docs/8_Supporting_Files/8_1_3_Unique_Component_Template.csv){target=_blank}
 
 |Column|Status|Format|Notes|
 |:-|:-|:-|:-|

@@ -4,7 +4,7 @@ We can now use the unique components, to create a complete packaging.
 
 The specification of this csv file is as follows:
 
-[complete_packaging.csv ](https://github.com/OpenDataManchester/Open3R/blob/V2/docs/8_Supporting_Files/8_1_4_RWS_Transport_Restrictions_Template.csv){target=_blank}
+[complete_packaging.csv ](https://github.com/OpenDataManchester/PPP/blob/main/docs/8_Supporting_Files/8_1_4_Complete_Packaging_Template.csv){target=_blank}
 
 |Column|Status|Format|Notes|
 |:-|:-|:-|:-|
