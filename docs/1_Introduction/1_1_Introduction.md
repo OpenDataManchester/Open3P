@@ -10,7 +10,7 @@ An open data standard is a set of rules that describe the structure and componen
 
 Open3P describes information about .
 
-The standard is being developed according to the [OpenStand](https://open-stand.org/){target=_blank} principles of:
+The standard is being developed according to the [OpenStand](https://open-stand.org/) principles of:
 
 * Due process
 * Broad consensus
@@ -20,14 +20,14 @@ The standard is being developed according to the [OpenStand](https://open-stand.
 
 ## How is the standard being developed?
 
-The initial standard development was funded by [Innovate UK](https://www.opendatamanchester.org.uk/plastics-packaging-portal/){target=_blank}, and is being developed through workshops with industry experts over a number of iterations.
+The initial standard development was funded by [Innovate UK](https://www.opendatamanchester.org.uk/plastics-packaging-portal/), and is being developed through workshops with industry experts over a number of iterations.
 
 ## How to use the standard
 
 The documentation here details how to *publish* data to the standard, and how to use data that has been published to the standard. At a high level, the publishing flow is as follows:
 
 1. Someone at a local authority decides they want to publish HWRC data to the standard
-2. They populate the csv [template](https://github.com/OpenDataManchester/Open3R/blob/V2/docs/8_Supporting_Files/8_1_1_RWS_Main_Template.csv){target=_blank} (or prepare one from scratch using the specified column names)
+2. They populate the csv [template](https://github.com/OpenDataManchester/Open3R/blob/V2/docs/8_Supporting_Files/8_1_1_RWS_Main_Template.csv) (or prepare one from scratch using the specified column names)
 3. They create a csv file or spatial file of local areas served by each HWRC, then:
     1. They publish the csv file(s) and/or spatial files on their website OR
     2. They send the data to the custodian of the standard for publishing
