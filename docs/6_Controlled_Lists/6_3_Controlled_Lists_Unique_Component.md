@@ -1,4 +1,4 @@
-# Controlled Lists
+# Unique Component
 
 Controlled lists are possible options in certain fields of the dataset. These are items that are maintained by a custodian of the data.
 
