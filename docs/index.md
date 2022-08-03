@@ -1,4 +1,4 @@
-[![Open Data Manchester](images/odm_banner.jpg)](https://www.opendatamanchester.org.uk/){target=_blank}
+[![Open Data Manchester](images/Open3PFullColour.jpg)](https://www.opendatamanchester.org.uk/){target=_blank}
 
 ## Open3R: Definition
 
