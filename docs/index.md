@@ -1,12 +1,12 @@
-[![Open Data Manchester](images/Open3PFullColour.jpg)](https://www.opendatamanchester.org.uk/){target=_blank}
+[![Open Data Manchester](images/Open3PFullColour.jpg)](https://www.opendatamanchester.org.uk/plastics-packaging-portal/){target=_blank}
 
-## Open3R: Definition
+## Open3P: Definition
 
-A data standard for reporting data about recycling and waste sites (RWS).
+A data standard for the plastic packaging value chain.
 
 ## Version
 
-Version 2.0 Published 2021-12-10
+Version 1.0 Published 2022-08-01
 
 ## Contents
 
