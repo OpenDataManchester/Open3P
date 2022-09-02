@@ -1,10 +1,10 @@
-# Load
+# Load Catalogue
 
 All the complete packaging from different levels (primary, secondary, and tertiary), including multipacks, put together to send to the final destination. Each row corresponds a unique complete packaging (or multipack) item sent to a specific location during a specific time period.
 
 The specification of this csv file is as follows:
 
-[load.csv](https://github.com/OpenDataManchester/PPP/blob/main/docs/8_Supporting_Files/8_1_6_Load_Template.csv){target=_blank}
+[load_Catalogue.csv](https://github.com/OpenDataManchester/PPP/blob/main/docs/8_Supporting_Files/8_1_5_Load_Catalogue.csv){target=_blank}
 
 |Column|Status|Format|Notes|
 |:-|:-|:-|:-|
