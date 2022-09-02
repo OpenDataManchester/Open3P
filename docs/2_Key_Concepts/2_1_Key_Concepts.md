@@ -25,6 +25,8 @@
 - Complete packaging units are combined into a delivery load
 - Usually wrapped in secondary and tertiary packaging 
 
+## Product
+- That which is contained inside of the packaging
 
 
 
