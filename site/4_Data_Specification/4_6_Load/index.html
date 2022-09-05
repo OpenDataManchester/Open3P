@@ -254,17 +254,21 @@
         
           
         
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_2">
-          1 Introduction
+          1 Start Here
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="1 Introduction" data-md-level="1">
+      <nav class="md-nav" aria-label="1 Start Here" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          1 Introduction
+          1 Start Here
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -274,8 +278,36 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1_Introduction/1_1_Introduction/" class="md-nav__link">
+      <a href="../../1_Start_Here/1_1_Introduction/" class="md-nav__link">
         Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1_Start_Here/1_2_Data_Flow/" class="md-nav__link">
+        Data Flow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1_Start_Here/1_3_Data_Schema/" class="md-nav__link">
+        Data Schema
       </a>
     </li>
   
@@ -470,21 +502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../4_3_Unique_Component/" class="md-nav__link">
-        Unique Component
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../4_4_Complete_Packaging/" class="md-nav__link">
+      <a href="../4_3_Complete_Packaging/" class="md-nav__link">
         Complete Packaging
       </a>
     </li>
@@ -498,8 +516,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../4_5_Multipack/" class="md-nav__link">
+      <a href="../4_4_Multipack/" class="md-nav__link">
         Multipack
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4_5_Load_Catalogue/" class="md-nav__link">
+        Load Catalogue
       </a>
     </li>
   
@@ -610,8 +642,6 @@
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_7">
@@ -660,21 +690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../6_Controlled_Lists/6_3_Controlled_Lists_Unique_Component/" class="md-nav__link">
-        Unique Component
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../6_Controlled_Lists/6_4_Controlled_Lists_Complete_Packaging/" class="md-nav__link">
+      <a href="../../6_Controlled_Lists/6_3_Controlled_Lists_Complete_Packaging/" class="md-nav__link">
         Complete Packaging
       </a>
     </li>
@@ -792,6 +808,58 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          9 Change Log
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="9 Change Log" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          9 Change Log
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../9_Change_Log/9_1_Change_Log/" class="md-nav__link">
+        Latest Updates
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -827,7 +895,7 @@
 </tr>
 <tr>
 <td align="left">name</td>
-<td align="left"><code>required</code></td>
+<td align="left"><code>recommended</code></td>
 <td align="left">String</td>
 <td align="left">The name of this load.</td>
 </tr>
@@ -840,26 +908,8 @@
 <tr>
 <td align="left">tags</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">A list of identifiers that might be used to identify the load in other systems. For example: bar codes or global trade item number (gtin). To provide tags please follow this format. <code>tagName1: identifier1; tagName2: identifier2</code></td>
-</tr>
-<tr>
-<td align="left">loadIdentifier</td>
-<td align="left"><code>required</code></td>
-<td align="left">String</td>
-<td align="left">The unique identifier of the created load. A globally unique identifier. See identifiers section for information on how to construct this identifier.</td>
-</tr>
-<tr>
-<td align="left">packagingItems</td>
-<td align="left"><code>required</code></td>
-<td align="left">String</td>
-<td align="left">The complete packaging and/or the multipack identifiers used to create the load. There must be an equivalent record in the <code>complete_packaging</code> or <code>multipack</code> data.</td>
-</tr>
-<tr>
-<td align="left">quantityInLoad</td>
-<td align="left"><code>required</code></td>
-<td align="left">Numeric</td>
-<td align="left">Number of units for the packaging items found in a load that this row corresponds to.</td>
+<td align="left">Dictionary</td>
+<td align="left">A dictionary of identifiers that might be used to identify the complete packaging in other systems. For example: bar codes or global trade item number (gtin). To provide tags please follow this format. <code>{'tagName1': 'identifier1', 'tagName2': 'identifier2'}</code></td>
 </tr>
 <tr>
 <td align="left">startDate</td>
@@ -923,7 +973,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../4_5_Multipack/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Multipack" rel="prev">
+        <a href="../4_5_Load_Catalogue/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Load Catalogue" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -932,7 +982,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Multipack
+              Load Catalogue
             </div>
           </div>
         </a>

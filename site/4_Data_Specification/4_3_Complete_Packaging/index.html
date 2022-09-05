@@ -254,17 +254,21 @@
         
           
         
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_2">
-          1 Introduction
+          1 Start Here
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="1 Introduction" data-md-level="1">
+      <nav class="md-nav" aria-label="1 Start Here" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          1 Introduction
+          1 Start Here
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -274,8 +278,36 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1_Introduction/1_1_Introduction/" class="md-nav__link">
+      <a href="../../1_Start_Here/1_1_Introduction/" class="md-nav__link">
         Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1_Start_Here/1_2_Data_Flow/" class="md-nav__link">
+        Data Flow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1_Start_Here/1_3_Data_Schema/" class="md-nav__link">
+        Data Schema
       </a>
     </li>
   
@@ -468,20 +500,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../4_3_Unique_Component/" class="md-nav__link">
-        Unique Component
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
@@ -614,8 +632,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../4_5_Multipack/" class="md-nav__link">
+      <a href="../4_4_Multipack/" class="md-nav__link">
         Multipack
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4_5_Load_Catalogue/" class="md-nav__link">
+        Load Catalogue
       </a>
     </li>
   
@@ -716,8 +748,6 @@
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_7">
@@ -766,21 +796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../6_Controlled_Lists/6_3_Controlled_Lists_Unique_Component/" class="md-nav__link">
-        Unique Component
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../6_Controlled_Lists/6_4_Controlled_Lists_Complete_Packaging/" class="md-nav__link">
+      <a href="../../6_Controlled_Lists/6_3_Controlled_Lists_Complete_Packaging/" class="md-nav__link">
         Complete Packaging
       </a>
     </li>
@@ -898,6 +914,58 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          9 Change Log
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="9 Change Log" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          9 Change Log
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../9_Change_Log/9_1_Change_Log/" class="md-nav__link">
+        Latest Updates
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -914,7 +982,7 @@
 <h1 id="complete-packaging">Complete Packaging<a class="headerlink" href="#complete-packaging" title="Permanent link">&para;</a></h1>
 <p>We can now use the unique components, to create a complete packaging.</p>
 <p>The specification of this csv file is as follows:</p>
-<p><a href="https://github.com/OpenDataManchester/PPP/blob/main/docs/8_Supporting_Files/8_1_4_Complete_Packaging_Template.csv" target="_blank">complete_packaging.csv </a></p>
+<p><a href="https://github.com/OpenDataManchester/PPP/blob/main/docs/8_Supporting_Files/8_1_3_Complete_Packaging_Template.csv" target="_blank">complete_packaging.csv </a></p>
 <table>
 <thead>
 <tr>
@@ -933,7 +1001,7 @@
 </tr>
 <tr>
 <td align="left">name</td>
-<td align="left"><code>required</code></td>
+<td align="left"><code>recommended</code></td>
 <td align="left">String</td>
 <td align="left">The name of this complete packaging.</td>
 </tr>
@@ -946,8 +1014,8 @@
 <tr>
 <td align="left">tags</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">A list of identifiers that might be used to identify the complete packaging in other systems. For example: bar codes or global trade item number (gtin). To provide tags please follow this format. <code>tagName1: identifier1; tagName2: identifier2</code></td>
+<td align="left">Dictionary</td>
+<td align="left">A dictionary of identifiers that might be used to identify the complete packaging in other systems. For example: bar codes or global trade item number (gtin). To provide tags please follow this format. <code>{'tagName1': 'identifier1', 'tagName2': 'identifier2'}</code></td>
 </tr>
 <tr>
 <td align="left">imageURL</td>
@@ -959,37 +1027,43 @@
 <td align="left">independentComponent</td>
 <td align="left"><code>required</code></td>
 <td align="left">String</td>
-<td align="left">The component identifier from the unique component that is independently created. There must be an equivalent record in the <code>unique_Component</code> data. If all the components were created together use <code>NA</code>. If there are multiple components, separate with a semicolon. <code>e.g. component1; component2</code></td>
+<td align="left">The component identifier from the component catalogue that is independently created. There must be an equivalent record in the <code>component_Catalogue</code> data. If all the components were created together use <code>NA</code>. If there are multiple components, separate with a comma. <code>e.g. 'component1', 'component2'</code></td>
 </tr>
 <tr>
 <td align="left">previouslyAssembledComponent</td>
 <td align="left"><code>required</code></td>
 <td align="left">String</td>
-<td align="left">The component identifier from the unique component that was combined with other components when created. There must be an equivalent record in the <code>unique_Component</code> data. If all the components were independently created use <code>NA</code>. If there are multiple components, separate with a semicolon. <code>e.g. component1; component2</code></td>
+<td align="left">The component identifier from the component catalogue that was combined with other components when created. There must be an equivalent record in the <code>component_Catalogue</code> data. If all the components were independently created use <code>NA</code>. If there are multiple components, separate with a comma. <code>e.g. 'component1', 'component2'</code></td>
 </tr>
 <tr>
 <td align="left">allComponent</td>
 <td align="left"><code>required</code></td>
 <td align="left">String</td>
-<td align="left">All of the component identifiers from the unique component that are combined to create the complete packaging. There must be an equivalent record in the <code>unique_Component</code> data for all component identifiers. If there are multiple components, separate with a semicolon. <code>e.g. component1; component2</code></td>
+<td align="left">All of the component identifiers from the component catalogue that are combined to create the complete packaging. There must be equivalent records in the <code>component_Catalogue</code> data for all component identifiers. If there are multiple components, separate with a comma. <code>e.g. 'component1', 'component2'</code></td>
 </tr>
 <tr>
 <td align="left">LOWcodeWOproduct</td>
-<td align="left"><code>required</code></td>
+<td align="left"><code>here</code></td>
 <td align="left">String</td>
-<td align="left">The list of waste code for <strong>only</strong> the complete packaging, by itself (excluding the product). LOW code is synonymous with European Waste Catelogue Code (EWC). For example: an empty bottle would have a LOWcode of <code>15 01 02</code>. Please use <a href="https://dsposal.uk/browse/ewc">Dsposal</a> or <a href="https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made">legislation.gov</a> to find the LOWcode. <strong>Note</strong>: The LOWcode can based on its combination with other components and the actual product contained in the complete packaging. Be sure to only include the complete packaging LOWcode and not the complete packaging with the product. If you cannot find the code or are uncertain please enter <code>Uncertain</code>.</td>
+<td align="left">The list of waste code for <strong>only</strong> the complete packaging, by itself (excluding the product). LOW code is synonymous with European Waste Catelogue Code (EWC). For example: an empty bottle would have a LOWcode of <code>15 01 02</code>. Please use <a href="https://dsposal.uk/browse/ewc" target="_blank">Dsposal</a> or <a href="https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made" target="_blank">legislation.gov</a> to find the LOWcode. <strong>Note</strong>: The LOWcode can based on its combination with other components and the actual product contained in the complete packaging. Be sure to only include the complete packaging LOWcode and not the complete packaging with the product. If you cannot find the code or are uncertain please enter <code>Uncertain</code>.</td>
 </tr>
 <tr>
 <td align="left">productType</td>
-<td align="left"><code>required</code></td>
+<td align="left"><code>here</code></td>
 <td align="left">String</td>
 <td align="left">Information about the product contained in the complete packaging. The entry here should be drawn from the product type controlled list.</td>
 </tr>
 <tr>
-<td align="left">LOWcodeWproduct</td>
+<td align="left">componentContactWithProduct</td>
 <td align="left"><code>required</code></td>
 <td align="left">String</td>
-<td align="left">The list of waste code for <strong>everything</strong> in the complete packaging. LOW code is synonymous with European Waste Catelogue Code (EWC). For example: an empty bottle would have a LOWcode of <code>15 01 02</code>. Please use <a href="https://dsposal.uk/browse/ewc">Dsposal</a> or <a href="https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made">legislation.gov</a> to find the LOWcode. <strong>Note</strong>: The LOWcode can based on its combination with other components and the actual product contained in the complete packaging. Be sure to include the complete packaging LOWcode with the product. If you cannot find the code or are uncertain please enter <code>Uncertain</code>.</td>
+<td align="left">What components (if any) come into direct contact with the product before purchased by a consumer? If none of the components come into contact with the product use <code>NA</code>. If there are multiple components, separate with a comma. <code>e.g. 'component1', 'component2'</code></td>
+</tr>
+<tr>
+<td align="left">LOWcodeWproduct</td>
+<td align="left"><code>here</code></td>
+<td align="left">String</td>
+<td align="left">The list of waste code for <strong>everything</strong> in the complete packaging. LOW code is synonymous with European Waste Catelogue Code (EWC). For example: an empty bottle would have a LOWcode of <code>15 01 02</code>. Please use <a href="https://dsposal.uk/browse/ewc" target="_blank">Dsposal</a> or <a href="https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made" target="_blank">legislation.gov</a> to find the LOWcode. <strong>Note</strong>: The LOWcode can based on its combination with other components and the actual product contained in the complete packaging. Be sure to include the complete packaging LOWcode with the product. If you cannot find the code or are uncertain please enter <code>Uncertain</code>.</td>
 </tr>
 <tr>
 <td align="left">onTheGo</td>
@@ -999,7 +1073,7 @@
 </tr>
 <tr>
 <td align="left">householdWaste</td>
-<td align="left"><code>required</code></td>
+<td align="left"><code>here</code></td>
 <td align="left">Boolean</td>
 <td align="left">Is the complete packaging often classed as packaging that will end up in kerbside collections?</td>
 </tr>
@@ -1007,11 +1081,11 @@
 <td align="left">depositReturnScheme</td>
 <td align="left"><code>required</code></td>
 <td align="left">String</td>
-<td align="left">Which countries in the United Kingdom support a <a href="https://www.gov.uk/government/consultations/introduction-of-a-deposit-return-scheme-in-england-wales-and-northern-ireland">deposit return scheme</a> for this particular complete packaging? The entry here should be drawn from the deposit return scheme controlled list.</td>
+<td align="left">Which countries in the United Kingdom support a <a href="https://www.gov.uk/government/consultations/introduction-of-a-deposit-return-scheme-in-england-wales-and-northern-ireland" target="_blank">deposit return scheme</a> for this particular complete packaging? The entry here should be drawn from the deposit return scheme controlled list.</td>
 </tr>
 <tr>
 <td align="left">recyclingDisruptors</td>
-<td align="left"><code>required</code></td>
+<td align="left"><code>here</code></td>
 <td align="left">String</td>
 <td align="left">What challenges the complete packaging has for recycling. The entry should be the recycling disruptors controlled list identifier.</td>
 </tr>
@@ -1019,113 +1093,113 @@
 <td align="left">recyclability</td>
 <td align="left"><code>recommended</code></td>
 <td align="left">Boolean</td>
-<td align="left">Is the complete packaging recyclable?</td>
+<td align="left">Is the complete packaging recyclable (as determined by a reputable source)?</td>
 </tr>
 <tr>
 <td align="left">recyclabilitySource</td>
-<td align="left"><code>required</code></td>
+<td align="left"><code>recommended</code></td>
 <td align="left">String</td>
 <td align="left">What source provided the recyclability claim? The entry should be the recyclabilitySource controlled list identifier.</td>
 </tr>
 <tr>
 <td align="left">recyclabilityDate</td>
-<td align="left"><code>required</code></td>
+<td align="left"><code>recommended</code></td>
 <td align="left">String</td>
 <td align="left">The date that the recyclability was provided/last updated. Use the format <code>dd/mm/yyyy</code>.</td>
 </tr>
 <tr>
 <td align="left">height</td>
-<td align="left"><code>required</code></td>
-<td align="left">String</td>
+<td align="left"><code>here</code></td>
+<td align="left">Numeric</td>
 <td align="left">The height of the complete packaging. Please see the guidelines below on how to properly measure and report the height.</td>
 </tr>
 <tr>
 <td align="left">heightDate</td>
-<td align="left"><code>required</code></td>
+<td align="left"><code>here</code></td>
 <td align="left">String</td>
 <td align="left">The date that the height was last verified/measured. Use the format <code>dd/mm/yyyy</code>.</td>
 </tr>
 <tr>
 <td align="left">width</td>
-<td align="left"><code>required</code></td>
-<td align="left">String</td>
+<td align="left"><code>here</code></td>
+<td align="left">Numeric</td>
 <td align="left">The width of the complete packaging. Please see the guidelines below on how to properly measure and report the width.</td>
 </tr>
 <tr>
 <td align="left">widthDate</td>
-<td align="left"><code>required</code></td>
+<td align="left"><code>here</code></td>
 <td align="left">String</td>
 <td align="left">The date that the width was last verified/measured. Use the format <code>dd/mm/yyyy</code>.</td>
 </tr>
 <tr>
 <td align="left">depth</td>
-<td align="left"><code>required</code></td>
-<td align="left">String</td>
+<td align="left"><code>here</code></td>
+<td align="left">Numeric</td>
 <td align="left">The depth of the complete packaging. Please see the guidelines below on how to properly measure and report the depth.</td>
 </tr>
 <tr>
 <td align="left">depthDate</td>
-<td align="left"><code>required</code></td>
+<td align="left"><code>here</code></td>
 <td align="left">String</td>
 <td align="left">The date that the depth was last verified/measured. Use the format <code>dd/mm/yyyy</code>.</td>
 </tr>
 <tr>
 <td align="left">volume</td>
-<td align="left"><code>required</code></td>
-<td align="left">String</td>
-<td align="left">Using the height, width, and depth found using the measurement guidelines, calculate the complete packaging&rsquo;s volume using: <code>height x width x depth</code>. Report the volume as a string with mm3 and a space between the measurement. For example: the volume is <code>20 mm3</code>.</td>
+<td align="left"><code>here</code></td>
+<td align="left">Numeric</td>
+<td align="left">Using the height, width, and depth found using the measurement guidelines, calculate the complete packaging&rsquo;s volume using: <code>height x width x depth</code>.</td>
 </tr>
 <tr>
 <td align="left">volumeDate</td>
-<td align="left"><code>required</code></td>
+<td align="left"><code>here</code></td>
 <td align="left">String</td>
 <td align="left">The date that the volume was last verified/measured. Use the format <code>dd/mm/yyyy</code>.</td>
 </tr>
 <tr>
 <td align="left">weight</td>
 <td align="left"><code>required</code></td>
-<td align="left">String</td>
+<td align="left">Numeric</td>
 <td align="left">The weight of the complete packaging. TBD</td>
 </tr>
 <tr>
 <td align="left">weightDate</td>
-<td align="left"><code>required</code></td>
+<td align="left"><code>recommended</code></td>
 <td align="left">String</td>
 <td align="left">The date that the weight was last verified/measured. Use the format <code>dd/mm/yyyy</code>.</td>
 </tr>
 <tr>
 <td align="left">servingCapacity</td>
-<td align="left"><code>required</code></td>
-<td align="left">String</td>
+<td align="left"><code>here</code></td>
+<td align="left">Numeric</td>
 <td align="left">The serving capacity of the complete packaging - how much of a product that can be contained in the complete packaging</td>
 </tr>
 <tr>
 <td align="left">servingCapacityDate</td>
-<td align="left"><code>required</code></td>
+<td align="left"><code>here</code></td>
 <td align="left">String</td>
 <td align="left">The date that the serving capacity was last verified/measured. Use the format <code>dd/mm/yyyy</code>.</td>
 </tr>
 <tr>
 <td align="left">partOfMultipack</td>
-<td align="left"><code>required</code></td>
+<td align="left"><code>here</code></td>
 <td align="left">Boolean</td>
 <td align="left">Is the complete packaging part of a multipack?</td>
 </tr>
 <tr>
 <td align="left">uploadDate</td>
-<td align="left"><code>required</code></td>
+<td align="left"><code>here</code></td>
 <td align="left">String</td>
 <td align="left">The date that the component was provided/last updated. Use the format <code>dd/mm/yyyy</code>.</td>
 </tr>
 <tr>
 <td align="left">releaseDate</td>
-<td align="left"><code>required</code></td>
+<td align="left"><code>here</code></td>
 <td align="left">String</td>
 <td align="left">The date that the component will be available to use. Use the format <code>dd/mm/yyyy</code>.</td>
 </tr>
 <tr>
 <td align="left">discontinuedDate</td>
-<td align="left"><code>required</code></td>
+<td align="left"><code>here</code></td>
 <td align="left">String</td>
 <td align="left">The date that the component will no longer be available to use. Use the format <code>dd/mm/yyyy</code>.</td>
 </tr>
@@ -1145,7 +1219,7 @@
 <p>Numbers should be entered with a decimal place, a space between the number, and the unit as specified above. Use the decimal / full stop / period character as a separator. For example: volume = 20.000 mm3. Do not exceed 3 decimal places.</p>
 <p><strong>Important</strong>: When converting between systems of measurement, perform the conversion first and then apply rounding. This will give more accuracy and consistency.</p>
 <h3 id="default-front-of-a-complete-packaging">Default Front of a complete packaging<a class="headerlink" href="#default-front-of-a-complete-packaging" title="Permanent link">&para;</a></h3>
-<p>Prior caputuring measurements, first determine the default front of the complete packaging, this is similar to <a href="https://www.gs1.org/">gs1</a>. In this standard, the default front is the face with the largest area, where area is equal to the width times the height.</p>
+<p>Prior caputuring measurements, first determine the default front of the complete packaging, this is similar to <a href="https://www.gs1.org/" target="_blank">gs1</a>. In this standard, the default front is the face with the largest area, where area is equal to the width times the height.</p>
 <p><strong>Important</strong>: Determining of default front provides a consistent, repeatable process to find measurements for a given complete packaging.</p>
 <p>Figure 1: An example for finding the default front of a complete packaging. The default front is the face of the with the largest area (A = width X height)
 <image></p>
@@ -1278,7 +1352,7 @@ For cylindrical items two dimensions will be nominally equal. Which dimensions a
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../4_3_Unique_Component/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Unique Component" rel="prev">
+        <a href="../4_2_Component_Catalogue_Materials/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Component Catalogue Materials" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1287,14 +1361,14 @@ For cylindrical items two dimensions will be nominally equal. Which dimensions a
               <span class="md-footer__direction">
                 Previous
               </span>
-              Unique Component
+              Component Catalogue Materials
             </div>
           </div>
         </a>
       
       
         
-        <a href="../4_5_Multipack/" class="md-footer__link md-footer__link--next" aria-label="Next: Multipack" rel="next">
+        <a href="../4_4_Multipack/" class="md-footer__link md-footer__link--next" aria-label="Next: Multipack" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
