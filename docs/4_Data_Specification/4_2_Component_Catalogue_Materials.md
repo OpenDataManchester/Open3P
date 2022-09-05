@@ -16,6 +16,6 @@ The specification of this csv file is as follows:
 |materialPurpose|`required`|String|Why is this material being used? Use the identifier of the material function that this row relates to. The entry here should be drawn from the material function controlled list.|
 |materialCategory|`required`|String|The category this material row relates to. The entry here should be drawn from the material category controlled list.|
 |materialChemCID|`required`|String|The PubChem CID for the exact material used. The PubChem CID is PubChem's compound identifier, which is a non-zero integer for a unique chemical structure. PubChem CID can be found using their [search](https://pubchem.ncbi.nlm.nih.gov/). If for some reason the PubChem CID cannot be located, consider contributing to PubChem and create the compound identifier. However, if this cannot be done, please enter `Unknown`.|
-|materialOther|`required`|String|If the materialChemCID is `Unknown`, please enter the unique material here.|
+|materialOther|`required if`|String|If the materialChemCID is `Unknown`, please enter the unique material here.|
 |materialPrivacy|`required`|Boolean|Is the unique materialChemCID or materialOther anonymous/ privately protected?|
 |virginMaterial|`required`|numeric|The percent of the material that was newly created for the component.|

@@ -9,7 +9,7 @@ The specification of this csv file is as follows:
 |Column|Status|Format|Notes|
 |:-|:-|:-|:-|
 |identifier|`required`|String|A globally unique identifier. See identifiers section for information on how to construct this identifier|
-|name|`required`|String|The name of this load.|
+|name|`recommended`|String|The name of this load.|
 |description|`recommended`|String|A brief description of this load.|
 |tags|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the complete packaging in other systems. For example: bar codes or global trade item number (gtin). To provide tags please follow this format. `{'tagName1': 'identifier1', 'tagName2': 'identifier2'}`|
 |loadIdentifier|`required`|String|The unique identifier of the created load. A globally unique identifier. See identifiers section for information on how to construct this identifier.|
