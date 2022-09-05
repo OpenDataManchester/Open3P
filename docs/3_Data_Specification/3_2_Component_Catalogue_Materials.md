@@ -4,7 +4,7 @@ Materials should be provided as a separate csv file, in tidy format. This means 
 
 The specification of this csv file is as follows:
 
-[component_catalogue_material.csv](https://github.com/OpenDataManchester/PPP/blob/main/docs/8_Supporting_Files/8_1_2_Component_Catalogue_Material_Template.csv){target=_blank}
+[component_catalogue_material.csv](https://github.com/OpenDataManchester/PPP/blob/main/docs/7_Supporting_Files/7_1_2_Component_Catalogue_Material_Template.csv){target=_blank}
 
 |Column|Status|Format|Notes|
 |:-|:-|:-|:-|

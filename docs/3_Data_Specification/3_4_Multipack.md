@@ -4,7 +4,7 @@ If the complete packaging is further combined to create multipacks, the informat
 
 The specification of this csv file is as follows:
 
-[multipack.csv](https://github.com/OpenDataManchester/PPP/blob/main/docs/8_Supporting_Files/8_1_4_Multipack_Template.csv){target=_blank}
+[multipack.csv](https://github.com/OpenDataManchester/PPP/blob/main/docs/7_Supporting_Files/7_1_4_Multipack_Template.csv){target=_blank}
 
 |Column|Status|Format|Notes|
 |:-|:-|:-|:-|
