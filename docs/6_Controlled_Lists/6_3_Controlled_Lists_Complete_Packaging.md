@@ -15,16 +15,16 @@ The controlled lists in use in the standard for complete packaging are:
 
 ## 1. Product Type
 
-[Product Type Controlled List](https://github.com/OpenDataManchester/PPP/blob/main/docs/6_Controlled_Lists/6_3_1_Product_Type.csv)
+[Product Type Controlled List](https://github.com/OpenDataManchester/PPP/blob/main/docs/6_Controlled_Lists/6_3_1_Product_Type.csv){target=_blank}
 
 ## 2. Deposit Return Scheme
 
-[Deposit Return Scheme Controlled List](https://github.com/OpenDataManchester/PPP/blob/main/docs/6_Controlled_Lists/6_3_2_Deposit_Return_Scheme.csv)
+[Deposit Return Scheme Controlled List](https://github.com/OpenDataManchester/PPP/blob/main/docs/6_Controlled_Lists/6_3_2_Deposit_Return_Scheme.csv){target=_blank}
 
 ## 3. Complete Packaging Recycling Disruptors
 
-[Complete Packaging Recycling Disruptors Controlled List](https://github.com/OpenDataManchester/PPP/blob/main/docs/6_Controlled_Lists/6_3_3_Complete_Packaging_Recycling_Disruptors.csv)
+[Complete Packaging Recycling Disruptors Controlled List](https://github.com/OpenDataManchester/PPP/blob/main/docs/6_Controlled_Lists/6_3_3_Complete_Packaging_Recycling_Disruptors.csv){target=_blank}
 
 ## 4. Recyclability Source
 
-[Recyclability Source Controlled List](https://github.com/OpenDataManchester/PPP/blob/main/docs/6_Controlled_Lists/6_3_4_Recyclability_Source.csv)
+[Recyclability Source Controlled List](https://github.com/OpenDataManchester/PPP/blob/main/docs/6_Controlled_Lists/6_3_4_Recyclability_Source.csv){target=_blank}
