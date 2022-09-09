@@ -15,7 +15,9 @@ The specification of this csv file is as follows:
 |materialType|`recommended`|String|Is the material 'synthetic' or 'biobased'? Use the identifier of the material type that this row relates to. The entry here should be drawn from the material type controlled list.|
 |materialPurpose|`recommended`|String|Why is this material being used? Use the identifier of the material function that this row relates to. The entry here should be drawn from the material function controlled list.|
 |materialCategory|`required`|String|The category this material row relates to. The entry here should be drawn from the material category controlled list.|
-|materialChemCID|`required`|String|The PubChem CID for the exact material used. The PubChem CID is PubChem's compound identifier, which is a non-zero integer for a unique chemical structure. PubChem CID can be found using their [search](https://pubchem.ncbi.nlm.nih.gov/){target=_blank}. If for some reason the PubChem CID cannot be located, consider contributing to PubChem and create the compound identifier. However, if this cannot be done, please enter `Unknown`.|
-|materialOther|`required if`|String|If the materialChemCID is `Unknown`, please enter the unique material here.|
+|materialName|`required`|String|The name of the material this row relates to. `e.g., Polypropylene or Titanium Dioxide`|
+|materialChemCID|`recommnded`|String|The PubChem CID for the exact material used. The PubChem CID is PubChem's compound identifier, which is a non-zero integer for a unique chemical structure. PubChem CID can be found using their [search](https://pubchem.ncbi.nlm.nih.gov/){target=_blank}. If for some reason the PubChem CID cannot be located, consider contributing to PubChem and create the compound identifier. However, if this cannot be done, please enter `Unknown`.|
+|materialOther|`recommended`|String|If the materialChemCID is `Unknown`, please enter the unique material here.|
 |materialPrivacy|`required`|Boolean|Is the unique materialChemCID or materialOther anonymous/ privately protected?|
 |virginMaterial|`recommended`|numeric|The percent of the material that was newly created for the component.|
+|updateDate|`required`|String|The date that the material was provided/last updated. Use the format `dd/mm/yyyy`.|

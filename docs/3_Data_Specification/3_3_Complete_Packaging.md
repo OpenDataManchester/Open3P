@@ -16,33 +16,33 @@ The specification of this csv file is as follows:
 |independentComponent|`required`|String|The component identifier from the component catalogue that is independently created. There must be an equivalent record in the `component_Catalogue` data. If all the components were created together use `NA`. If there are multiple components, separate with a comma. `e.g. 'component1', 'component2'`|
 |previouslyAssembledComponent|`required`|String|The component identifier from the component catalogue that was combined with other components when created. There must be an equivalent record in the `component_Catalogue` data. If all the components were independently created use `NA`. If there are multiple components, separate with a comma. `e.g. 'component1', 'component2'`|
 |allComponent|`required`|String|All of the component identifiers from the component catalogue that are combined to create the complete packaging. There must be equivalent records in the `component_Catalogue` data for all component identifiers. If there are multiple components, separate with a comma. `e.g. 'component1', 'component2'`|
-|LOWcodeWOproduct|`here`|String|The list of waste code for **only** the complete packaging, by itself (excluding the product). LOW code is synonymous with European Waste Catelogue Code (EWC). For example: an empty bottle would have a LOWcode of `15 01 02`. Please use [Dsposal](https://dsposal.uk/browse/ewc){target=_blank} or [legislation.gov](https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made){target=_blank} to find the LOWcode. **Note**: The LOWcode can based on its combination with other components and the actual product contained in the complete packaging. Be sure to only include the complete packaging LOWcode and not the complete packaging with the product. If you cannot find the code or are uncertain please enter `Uncertain`.|
-|productType|`here`|String|Information about the product contained in the complete packaging. The entry here should be drawn from the product type controlled list.|
+|LOWcodeWOproduct|`recommended`|String|The list of waste code for **only** the complete packaging, by itself (excluding the product). LOW code is synonymous with European Waste Catelogue Code (EWC). For example: an empty bottle would have a LOWcode of `15 01 02`. Please use [Dsposal](https://dsposal.uk/browse/ewc){target=_blank} or [legislation.gov](https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made){target=_blank} to find the LOWcode. **Note**: The LOWcode can based on its combination with other components and the actual product contained in the complete packaging. Be sure to only include the complete packaging LOWcode and not the complete packaging with the product. If you cannot find the code or are uncertain please enter `Uncertain`.|
+|productType|`recommended`|String|Information about the product contained in the complete packaging. The entry here should be drawn from the product type controlled list.|
 |componentContactWithProduct|`required`|String|What components (if any) come into direct contact with the product before purchased by a consumer? If none of the components come into contact with the product use `NA`. If there are multiple components, separate with a comma. `e.g. 'component1', 'component2'`|
-|LOWcodeWproduct|`here`|String|The list of waste code for **everything** in the complete packaging. LOW code is synonymous with European Waste Catelogue Code (EWC). For example: an empty bottle would have a LOWcode of `15 01 02`. Please use [Dsposal](https://dsposal.uk/browse/ewc){target=_blank} or [legislation.gov](https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made){target=_blank} to find the LOWcode. **Note**: The LOWcode can based on its combination with other components and the actual product contained in the complete packaging. Be sure to include the complete packaging LOWcode with the product. If you cannot find the code or are uncertain please enter `Uncertain`.|
+|LOWcodeWproduct|`recommended`|String|The list of waste code for **everything** in the complete packaging. LOW code is synonymous with European Waste Catelogue Code (EWC). For example: an empty bottle would have a LOWcode of `15 01 02`. Please use [Dsposal](https://dsposal.uk/browse/ewc){target=_blank} or [legislation.gov](https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made){target=_blank} to find the LOWcode. **Note**: The LOWcode can based on its combination with other components and the actual product contained in the complete packaging. Be sure to include the complete packaging LOWcode with the product. If you cannot find the code or are uncertain please enter `Uncertain`.|
 |onTheGo|`required`|Boolean|Is the complete packaging often classed as packaging that will end up in street bins?|
-|householdWaste|`here`|Boolean|Is the complete packaging often classed as packaging that will end up in kerbside collections?|
+|householdWaste|`recommended`|Boolean|Is the complete packaging often classed as packaging that will end up in kerbside collections?|
 |depositReturnScheme|`required`|String| Which countries in the United Kingdom support a [deposit return scheme](https://www.gov.uk/government/consultations/introduction-of-a-deposit-return-scheme-in-england-wales-and-northern-ireland){target=_blank} for this particular complete packaging? The entry here should be drawn from the deposit return scheme controlled list.|
-|recyclingDisruptors|`here`|String|What challenges the complete packaging has for recycling. The entry should be the recycling disruptors controlled list identifier.|
+|recyclingDisruptors|`recommended`|String|What challenges the complete packaging has for recycling. The entry should be the recycling disruptors controlled list identifier.|
 |recyclability|`recommended`|Boolean|Is the complete packaging recyclable (as determined by a reputable source)?|
 |recyclabilitySource|`recommended`|String|What source provided the recyclability claim? The entry should be the recyclabilitySource controlled list identifier.|
 |recyclabilityDate|`recommended`|String|The date that the recyclability was provided/last updated. Use the format `dd/mm/yyyy`.|
-|height|`here`|Numeric|The height of the complete packaging. Please see the guidelines below on how to properly measure and report the height.|
-|heightDate|`here`|String|The date that the height was last verified/measured. Use the format `dd/mm/yyyy`.|
-|width|`here`|Numeric|The width of the complete packaging. Please see the guidelines below on how to properly measure and report the width.|
-|widthDate|`here`|String|The date that the width was last verified/measured. Use the format `dd/mm/yyyy`.|
-|depth|`here`|Numeric|The depth of the complete packaging. Please see the guidelines below on how to properly measure and report the depth.|
-|depthDate|`here`|String|The date that the depth was last verified/measured. Use the format `dd/mm/yyyy`.|
-|volume|`here`|Numeric|Using the height, width, and depth found using the measurement guidelines, calculate the complete packaging's volume using: `height x width x depth`.|
-|volumeDate|`here`|String|The date that the volume was last verified/measured. Use the format `dd/mm/yyyy`.|
+|height|`recommended`|Numeric|The height of the complete packaging. Please see the guidelines below on how to properly measure and report the height.|
+|heightDate|`recommended`|String|The date that the height was last verified/measured. Use the format `dd/mm/yyyy`.|
+|width|`recommended`|Numeric|The width of the complete packaging. Please see the guidelines below on how to properly measure and report the width.|
+|widthDate|`recommended`|String|The date that the width was last verified/measured. Use the format `dd/mm/yyyy`.|
+|depth|`recommended`|Numeric|The depth of the complete packaging. Please see the guidelines below on how to properly measure and report the depth.|
+|depthDate|`recommended`|String|The date that the depth was last verified/measured. Use the format `dd/mm/yyyy`.|
+|volume|`recommended`|Numeric|Using the height, width, and depth found using the measurement guidelines, calculate the complete packaging's volume using: `height x width x depth`.|
+|volumeDate|`recommended`|String|The date that the volume was last verified/measured. Use the format `dd/mm/yyyy`.|
 |weight|`required`|Numeric|The weight of the complete packaging. TBD|
 |weightDate|`recommended`|String|The date that the weight was last verified/measured. Use the format `dd/mm/yyyy`.|
-|servingCapacity|`here`|Numeric|The serving capacity of the complete packaging - how much of a product that can be contained in the complete packaging|
-|servingCapacityDate|`here`|String|The date that the serving capacity was last verified/measured. Use the format `dd/mm/yyyy`.|
-|partOfMultipack|`here`|Boolean|Is the complete packaging part of a multipack?|
-|uploadDate|`here`|String|The date that the component was provided/last updated. Use the format `dd/mm/yyyy`.|
-|releaseDate|`here`|String|The date that the component will be available to use. Use the format `dd/mm/yyyy`.|
-|discontinuedDate|`here`|String|The date that the component will no longer be available to use. Use the format `dd/mm/yyyy`.|
+|servingCapacity|`recommended`|Numeric|The serving capacity of the complete packaging - how much of a product that can be contained in the complete packaging|
+|servingCapacityDate|`recommended`|String|The date that the serving capacity was last verified/measured. Use the format `dd/mm/yyyy`.|
+|partOfMultipack|`required`|Boolean|Is the complete packaging part of a multipack?|
+|updateDate|`required`|String|The date that the complete packaging was provided/last updated. Use the format `dd/mm/yyyy`.|
+|releaseDate|`recommended`|String|The date that the complete packaging will be available to use. Use the format `dd/mm/yyyy`.|
+|discontinueDate|`recommended`|String|The date that the complete packaging will no longer be available to use. Use the format `dd/mm/yyyy`.|
 
 ## Guide for how to take measurements
 

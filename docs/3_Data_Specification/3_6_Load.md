@@ -19,3 +19,4 @@ The specification of this csv file is as follows:
 |destinationAddressCountry|`required`|String|The country of this load destination.|
 |destinationPostalCode|`required`|String|The postal code of this load destination.|
 |timesSent|`required`|Numeric|The number of times this load was sent to the destination during the specified time period.|
+|updateDate|`required`|String|The date that the load was provided/last updated. Use the format `dd/mm/yyyy`.|

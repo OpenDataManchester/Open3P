@@ -14,23 +14,23 @@ The following table lists the column headings that should be used. When providin
 |description|`recommended`|String|A brief description of this component.|
 |tags|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the component in other systems. For example: bar codes or global trade item number (gtin). To provide tags please follow this format. `{'tagName1': 'identifier1', 'tagName2': 'identifier2'}`|
 |imageURL|`recommended`|URL|A URL that links to a picture of the component. Please see the guidelines below on how to capture the image and name the URL.|
-|LOWcode|`here`|String|The list of waste code for **only** the component, by itself. LOW code is synonymous with European Waste Catelogue Code (EWC). For example: an empty bottle would have a LOWcode of `15 01 02`. Please use [Dsposal](https://dsposal.uk/browse/ewc){target=_blank} or [legislation.gov](https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made){target=_blank} to find the LOWcode. **Note**: The LOWcode can based on its combination with other components and the actual product contained in the completePackaging. Be sure to only include the component LOWcode. If you cannot find the code or are uncertain please enter `Uncertain`.|
-|height|`here`|Numeric|The height of the component. Please see the guidelines below on how to properly measure and report the height.|
-|heightDate|`here`|String|The date that the height was last verified/measured. Use the format `dd/mm/yyyy`.|
-|width|`here`|Numeric|The width of the component. Please see the guidelines below on how to properly measure and report the width.|
-|widthDate|`here`|String|The date that the width was last verified/measured. Use the format `dd/mm/yyyy`.|
-|depth|`here`|Numeric|The depth of the component. Please see the guidelines below on how to properly measure and report the depth.|
-|depthDate|`here`|String|The date that the depth was last verified/measured. Use the format `dd/mm/yyyy`.|
-|volume|`here`|Numeric|Using the height, width, and depth found using the measurement guidelines, calculate the component's volume using: `height x width x depth`.|
-|volumeDate|`here`|String|The date that the volume was last verified/measured. Use the format `dd/mm/yyyy`.|
+|LOWcode|`recommended`|String|The list of waste code for **only** the component, by itself. LOW code is synonymous with European Waste Catelogue Code (EWC). For example: an empty bottle would have a LOWcode of `15 01 02`. Please use [Dsposal](https://dsposal.uk/browse/ewc){target=_blank} or [legislation.gov](https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made){target=_blank} to find the LOWcode. **Note**: The LOWcode can based on its combination with other components and the actual product contained in the completePackaging. Be sure to only include the component LOWcode. If you cannot find the code or are uncertain please enter `Uncertain`.|
+|height|`recommended`|Numeric|The height of the component. Please see the guidelines below on how to properly measure and report the height.|
+|heightDate|`recommended`|String|The date that the height was last verified/measured. Use the format `dd/mm/yyyy`.|
+|width|`recommended`|Numeric|The width of the component. Please see the guidelines below on how to properly measure and report the width.|
+|widthDate|`recommended`|String|The date that the width was last verified/measured. Use the format `dd/mm/yyyy`.|
+|depth|`recommended`|Numeric|The depth of the component. Please see the guidelines below on how to properly measure and report the depth.|
+|depthDate|`recommended`|String|The date that the depth was last verified/measured. Use the format `dd/mm/yyyy`.|
+|volume|`recommended`|Numeric|Using the height, width, and depth found using the measurement guidelines, calculate the component's volume using: `height x width x depth`.|
+|volumeDate|`recommended`|String|The date that the volume was last verified/measured. Use the format `dd/mm/yyyy`.|
 |weight|`required`|Numeric|The weight of the component. TBD|
 |weightDate|`recommended`|String|The date that the weight was last verified/measured. Use the format `dd/mm/yyyy`.|
-|shape|`here`|String|What is the shape of the component? The entry should contain the shape controlled list identifier for the component.|
-|function|`here`|String|What is the function of the component? The entry should contain the function controlled list identifier for the component.|
-|flexibility|`here`|String|Whether the component is considered flexible or rigid. The entry should be the flexibility controlled list identifier.|
+|shape|`recommended`|String|What is the shape of the component? The entry should contain the shape controlled list identifier for the component.|
+|function|`recommended`|String|What is the function of the component? The entry should contain the function controlled list identifier for the component.|
+|flexibility|`recommended`|String|Whether the component is considered flexible or rigid. The entry should be the flexibility controlled list identifier.|
 |componentRecyclingDisruptors|`recommended`|String|What challenges the component has for recycling. The entry should be the componentRecyclingDisruptors controlled list identifier.|
-|colour|`here`|String|The actual colour of the component at point of production using CMYK (Cyan-Magenta-Yellow-blacK) values. The format is specified according to cmyk(C%, M%, Y%, K%), where C, M, Y, and K are the percent values for the cyan, magenta, yellow, and black values of the color. For example: black is `cmyk(0%,0%,0%,100%)`. |
-|opacity|`here`|String|The transparency of the colours. The entry should be the opacity controlled list identifier.|
+|colour|`recommended`|String|The actual colour of the component at point of production using CMYK (Cyan-Magenta-Yellow-blacK) values. The format is specified according to cmyk(C%, M%, Y%, K%), where C, M, Y, and K are the percent values for the cyan, magenta, yellow, and black values of the color. For example: black is `cmyk(0%,0%,0%,100%)`. |
+|opacity|`recommended`|String|The transparency of the colours. The entry should be the opacity controlled list identifier.|
 |level|`required`|String|The intended use of the component for the packaging `i.e., primary, secondary, tertiary`. The entry here should be drawn from the level controlled list.|
 |reuseSystem|`recommended`|String|The system that facilitates the reuse of the component  `e.g., Loop`|
 |importedUK|`required`|Boolean|Is the component manufactured in the UK?|
@@ -38,12 +38,13 @@ The following table lists the column headings that should be used. When providin
 |recycledContent|`required`|Numeric|A percent of how much recycled content is included in the makeup of the component. For the purposes of this standard, we refer to the [UK's HM Revenue & Customs](https://www.gov.uk/guidance/work-out-which-packaging-is-subject-to-plastic-packaging-tax){target=_blank} definition of recycled content. "Recycled plastic is plastic that has been reprocessed from recovered material by using a chemical or manufacturing process. This is so it can be used either for its original purpose or for other purposes. This does not include organic recycling. Recovered material is pre-consumer plastic or post-consumer plastic that both: a) is no longer suitable to be used in the process from which it was generated and would otherwise have been used for energy recovery (for example, by incineration) or disposed of as waste (for example, by being sent to landfill); b) has been collected and recovered for use as a material input for a recycling or manufacturing process, instead of new primary material"|
 |recycledContentEvidenceType|`required`|String|What evidence type supports the recycledContent claim. The entry should be the recycledContentEvidenceType controlled list identifier.|
 |recycledContentEvidenceReference|`required`|String|An accompanying reference number associated with the recycledContentEvidenceType for the component.|
-|recyclability|`here`|Boolean|Is the component recyclable (as determined by a reputable source)?|
-|recyclabilitySource|`here`|String|What source provided the recyclability claim? The entry should be the recyclabilitySource controlled list identifier.|
-|recyclabilityDate|`here`|String|The date that the recyclability was provided/last updated. Use the format `dd/mm/yyyy`.|
-|uploadDate|`here`|String|The date that the component was provided/last updated. Use the format `dd/mm/yyyy`.|
-|releaseDate|`here`|String|The date that the component will be available to use. Use the format `dd/mm/yyyy`.|
-|discontinuedDate|`here`|String|The date that the component will no longer be available to use. Use the format `dd/mm/yyyy`.|
+|recyclability|`recommended`|Boolean|Is the component recyclable (as determined by a reputable source)?|
+|recyclabilitySource|`recommended`|String|What source provided the recyclability claim? The entry should be the recyclabilitySource controlled list identifier.|
+|recyclabilityDate|`recommended`|String|The date that the recyclability was provided/last updated. Use the format `dd/mm/yyyy`.|
+|partOfMultipack|`required`|Boolean|Is the component part of a multipack?|
+|updateDate|`required`|String|The date that the component was provided/last updated. Use the format `dd/mm/yyyy`.|
+|releaseDate|`recommended`|String|The date that the component will be available to use. Use the format `dd/mm/yyyy`.|
+|discontinueDate|`recommended`|String|The date that the component will no longer be available to use. Use the format `dd/mm/yyyy`.|
 
 ## Guide for how to take measurements
 
