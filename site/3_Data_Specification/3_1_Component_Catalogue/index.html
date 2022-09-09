@@ -1003,55 +1003,55 @@
 </tr>
 <tr>
 <td align="left">LOWcode</td>
-<td align="left"><code>here</code></td>
+<td align="left"><code>recommended</code></td>
 <td align="left">String</td>
 <td align="left">The list of waste code for <strong>only</strong> the component, by itself. LOW code is synonymous with European Waste Catelogue Code (EWC). For example: an empty bottle would have a LOWcode of <code>15 01 02</code>. Please use <a href="https://dsposal.uk/browse/ewc" target="_blank">Dsposal</a> or <a href="https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made" target="_blank">legislation.gov</a> to find the LOWcode. <strong>Note</strong>: The LOWcode can based on its combination with other components and the actual product contained in the completePackaging. Be sure to only include the component LOWcode. If you cannot find the code or are uncertain please enter <code>Uncertain</code>.</td>
 </tr>
 <tr>
 <td align="left">height</td>
-<td align="left"><code>here</code></td>
+<td align="left"><code>recommended</code></td>
 <td align="left">Numeric</td>
 <td align="left">The height of the component. Please see the guidelines below on how to properly measure and report the height.</td>
 </tr>
 <tr>
 <td align="left">heightDate</td>
-<td align="left"><code>here</code></td>
+<td align="left"><code>recommended</code></td>
 <td align="left">String</td>
 <td align="left">The date that the height was last verified/measured. Use the format <code>dd/mm/yyyy</code>.</td>
 </tr>
 <tr>
 <td align="left">width</td>
-<td align="left"><code>here</code></td>
+<td align="left"><code>recommended</code></td>
 <td align="left">Numeric</td>
 <td align="left">The width of the component. Please see the guidelines below on how to properly measure and report the width.</td>
 </tr>
 <tr>
 <td align="left">widthDate</td>
-<td align="left"><code>here</code></td>
+<td align="left"><code>recommended</code></td>
 <td align="left">String</td>
 <td align="left">The date that the width was last verified/measured. Use the format <code>dd/mm/yyyy</code>.</td>
 </tr>
 <tr>
 <td align="left">depth</td>
-<td align="left"><code>here</code></td>
+<td align="left"><code>recommended</code></td>
 <td align="left">Numeric</td>
 <td align="left">The depth of the component. Please see the guidelines below on how to properly measure and report the depth.</td>
 </tr>
 <tr>
 <td align="left">depthDate</td>
-<td align="left"><code>here</code></td>
+<td align="left"><code>recommended</code></td>
 <td align="left">String</td>
 <td align="left">The date that the depth was last verified/measured. Use the format <code>dd/mm/yyyy</code>.</td>
 </tr>
 <tr>
 <td align="left">volume</td>
-<td align="left"><code>here</code></td>
+<td align="left"><code>recommended</code></td>
 <td align="left">Numeric</td>
 <td align="left">Using the height, width, and depth found using the measurement guidelines, calculate the component&rsquo;s volume using: <code>height x width x depth</code>.</td>
 </tr>
 <tr>
 <td align="left">volumeDate</td>
-<td align="left"><code>here</code></td>
+<td align="left"><code>recommended</code></td>
 <td align="left">String</td>
 <td align="left">The date that the volume was last verified/measured. Use the format <code>dd/mm/yyyy</code>.</td>
 </tr>
@@ -1069,19 +1069,19 @@
 </tr>
 <tr>
 <td align="left">shape</td>
-<td align="left"><code>here</code></td>
+<td align="left"><code>recommended</code></td>
 <td align="left">String</td>
 <td align="left">What is the shape of the component? The entry should contain the shape controlled list identifier for the component.</td>
 </tr>
 <tr>
 <td align="left">function</td>
-<td align="left"><code>here</code></td>
+<td align="left"><code>recommended</code></td>
 <td align="left">String</td>
 <td align="left">What is the function of the component? The entry should contain the function controlled list identifier for the component.</td>
 </tr>
 <tr>
 <td align="left">flexibility</td>
-<td align="left"><code>here</code></td>
+<td align="left"><code>recommended</code></td>
 <td align="left">String</td>
 <td align="left">Whether the component is considered flexible or rigid. The entry should be the flexibility controlled list identifier.</td>
 </tr>
@@ -1093,13 +1093,13 @@
 </tr>
 <tr>
 <td align="left">colour</td>
-<td align="left"><code>here</code></td>
+<td align="left"><code>recommended</code></td>
 <td align="left">String</td>
 <td align="left">The actual colour of the component at point of production using CMYK (Cyan-Magenta-Yellow-blacK) values. The format is specified according to cmyk(C%, M%, Y%, K%), where C, M, Y, and K are the percent values for the cyan, magenta, yellow, and black values of the color. For example: black is <code>cmyk(0%,0%,0%,100%)</code>.</td>
 </tr>
 <tr>
 <td align="left">opacity</td>
-<td align="left"><code>here</code></td>
+<td align="left"><code>recommended</code></td>
 <td align="left">String</td>
 <td align="left">The transparency of the colours. The entry should be the opacity controlled list identifier.</td>
 </tr>
@@ -1147,37 +1147,43 @@
 </tr>
 <tr>
 <td align="left">recyclability</td>
-<td align="left"><code>here</code></td>
+<td align="left"><code>recommended</code></td>
 <td align="left">Boolean</td>
 <td align="left">Is the component recyclable (as determined by a reputable source)?</td>
 </tr>
 <tr>
 <td align="left">recyclabilitySource</td>
-<td align="left"><code>here</code></td>
+<td align="left"><code>recommended</code></td>
 <td align="left">String</td>
 <td align="left">What source provided the recyclability claim? The entry should be the recyclabilitySource controlled list identifier.</td>
 </tr>
 <tr>
 <td align="left">recyclabilityDate</td>
-<td align="left"><code>here</code></td>
+<td align="left"><code>recommended</code></td>
 <td align="left">String</td>
 <td align="left">The date that the recyclability was provided/last updated. Use the format <code>dd/mm/yyyy</code>.</td>
 </tr>
 <tr>
-<td align="left">uploadDate</td>
-<td align="left"><code>here</code></td>
+<td align="left">partOfMultipack</td>
+<td align="left"><code>required</code></td>
+<td align="left">Boolean</td>
+<td align="left">Is the component part of a multipack?</td>
+</tr>
+<tr>
+<td align="left">updateDate</td>
+<td align="left"><code>required</code></td>
 <td align="left">String</td>
 <td align="left">The date that the component was provided/last updated. Use the format <code>dd/mm/yyyy</code>.</td>
 </tr>
 <tr>
 <td align="left">releaseDate</td>
-<td align="left"><code>here</code></td>
+<td align="left"><code>recommended</code></td>
 <td align="left">String</td>
 <td align="left">The date that the component will be available to use. Use the format <code>dd/mm/yyyy</code>.</td>
 </tr>
 <tr>
-<td align="left">discontinuedDate</td>
-<td align="left"><code>here</code></td>
+<td align="left">discontinueDate</td>
+<td align="left"><code>recommended</code></td>
 <td align="left">String</td>
 <td align="left">The date that the component will no longer be available to use. Use the format <code>dd/mm/yyyy</code>.</td>
 </tr>

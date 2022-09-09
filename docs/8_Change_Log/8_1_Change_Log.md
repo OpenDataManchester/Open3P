@@ -10,6 +10,9 @@ A document that contains all the changes made to the standard.
 - Component Catalgoue: added `partOfMultipack`
 - Multipack: `packagingItems` replaced `completePackaging` and `component`
 
+### Structural/Model Changes
+- Added downloadable csv files to Supporting Files
+
 ## September 5, 2022
 ### Structural/Model Changes
 - Data Flow created

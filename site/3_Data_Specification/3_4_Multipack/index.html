@@ -839,6 +839,7 @@
 
 <h1 id="multipack">Multipack<a class="headerlink" href="#multipack" title="Permanent link">&para;</a></h1>
 <p>If the complete packaging is further combined to create multipacks, the information is collected here. Each row corresponds to a unique complete packaging item or a unique component.</p>
+<p><strong>Note:</strong> The multipack portion is optional (only applies to multipacks). If the complete packaging or component is <em>not</em> in a multipack, all of the fields below are optional. </p>
 <p>The specification of this csv file is as follows:</p>
 <p><a href="https://github.com/OpenDataManchester/PPP/blob/main/docs/7_Supporting_Files/7_1_4_Multipack_Template.csv" target="_blank">multipack.csv</a></p>
 <table>
@@ -882,16 +883,10 @@
 <td align="left">The unique identifier of the created multipack. A globally unique identifier. See identifiers section for information on how to construct this identifier.</td>
 </tr>
 <tr>
-<td align="left">completePackaging</td>
-<td align="left"><code>required if</code></td>
+<td align="left">packagingItems</td>
+<td align="left"><code>required</code></td>
 <td align="left">String</td>
-<td align="left">The unique identifier of the complete packaging that this row relates to. There must be an equivalent record in the <code>completePackaging</code> data. If referring to components, use  <code>NA</code>.</td>
-</tr>
-<tr>
-<td align="left">component</td>
-<td align="left"><code>required if</code></td>
-<td align="left">String</td>
-<td align="left">The unique identifier of the component that this row relates to. There must be an equivalent record in the <code>component_Catalogue</code> data. If referring to complete packaging, use <code>NA</code>.</td>
+<td align="left">The complete packaging and/or the component identifiers used to create the multipack. There must be an equivalent record in the <code>complete_packaging</code> or <code>component_Catalogue</code> data.</td>
 </tr>
 <tr>
 <td align="left">tier</td>
@@ -912,20 +907,20 @@
 <td align="left">Number of identical units for the unique complete packaging item or a component this row corresponds to.</td>
 </tr>
 <tr>
-<td align="left">uploadDate</td>
-<td align="left"><code>here</code></td>
+<td align="left">updateDate</td>
+<td align="left"><code>required</code></td>
 <td align="left">String</td>
-<td align="left">The date that the component was provided/last updated. Use the format <code>dd/mm/yyyy</code>.</td>
+<td align="left">The date that the multipack was provided/last updated. Use the format <code>dd/mm/yyyy</code>.</td>
 </tr>
 <tr>
 <td align="left">releaseDate</td>
-<td align="left"><code>here</code></td>
+<td align="left"><code>recommended</code></td>
 <td align="left">String</td>
 <td align="left">The date that the component will be available to use. Use the format <code>dd/mm/yyyy</code>.</td>
 </tr>
 <tr>
-<td align="left">discontinuedDate</td>
-<td align="left"><code>here</code></td>
+<td align="left">discontinueDate</td>
+<td align="left"><code>recommended</code></td>
 <td align="left">String</td>
 <td align="left">The date that the component will no longer be available to use. Use the format <code>dd/mm/yyyy</code>.</td>
 </tr>
