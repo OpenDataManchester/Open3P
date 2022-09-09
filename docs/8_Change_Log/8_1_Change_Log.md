@@ -1,5 +1,15 @@
 # Latest Updates
 A document that contains all the changes made to the standard.
+## September 9, 2022
+### Data Fields
+- required fields updated 
+- All:`uploaded` changed to `update`
+- All: `update` added
+- All: `discontinued` changed to `discontinue`
+- Component Catalogue Materials: added `materialName` 
+- Component Catalgoue: added `partOfMultipack`
+- Multipack: `packagingItems` replaced `completePackaging` and `component`
+
 ## September 5, 2022
 ### Structural/Model Changes
 - Data Flow created
