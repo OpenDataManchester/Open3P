@@ -9,16 +9,16 @@ It is important that these controlled lists are adhered to. Software developers 
 The controlled lists in use in the standard for component catalogue materials are:
 
 * Material Type
-* Material Function
+* Material Purpose
 * Material Category
 
 ## 1. Material Type
 
 [Material Type Controlled List](https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_2_1_Material_Type.csv){target=_blank}
 
-## 2. Material Function
+## 2. Material Purpose
 
-[Material Function Controlled List](https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_2_2_Material_Function.csv){target=_blank}
+[Material Purpose Controlled List](https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_2_2_Material_Purpose.csv){target=_blank}
 
 ## 3. Material Category
 

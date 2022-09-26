@@ -1,1 +1,1 @@
-identifier,name,description,tags,startDate,endDate,destinationAddressName,destinationAddressStreet,destinationAddressCountry,destinationAddressPostalCode,timesSent,updateDate
+identifier,name,description,tags,loadIdentifier,startDate,endDate,destinationAddressName,destinationAddressStreet,destinationAddressCountry,destinationAddressPostalCode,timesSent,updateDate

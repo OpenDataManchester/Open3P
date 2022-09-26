@@ -1,5 +1,18 @@
 # Latest Updates
 A document that contains all the changes made to the standard.
+## September 26, 2022
+### Structural/Model Changes
+- Controlled list material function -> material purpose
+
+### Data Fields
+- Component Catalgoue: Moved `level` from  component catalogue to load catalogue
+- Component Catalgoue: Removed `importedUK` since `manufacturedCountry` codes the same information
+- Component Catalogue: `recycledContent` description updated - Recycled Content as the minimum allowable recycled content
+- Component Catalogue: Added `weightTolerance` - definition to be updated.
+- Component Catalogue Materials: `virginMaterial` description updated - virigin material as the maximum allowable created for the component
+- Load: add the field `loadIdentifier` to link to the load catalogue
+
+
 ## September 9, 2022
 ### Data Fields
 - required fields updated 
