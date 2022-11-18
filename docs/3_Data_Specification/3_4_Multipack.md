@@ -1,6 +1,6 @@
 # Multipack
 
-If the complete packaging is further combined to create multipacks, the information is collected here. Each row corresponds to a unique complete packaging item or a unique component.
+If the complete packaging is further combined to create multipacks, the information is collected here. Each row corresponds to a single packaging item.
 
 **Note:** The multipack portion is optional (only applies to multipacks). If the complete packaging or component is *not* in a multipack, all of the fields below are optional. 
 

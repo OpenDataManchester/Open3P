@@ -4,13 +4,13 @@ component-catalogue-shape-0002,cone,3D shape with circular base and narrows from
 component-catalogue-shape-0003,cube,"3D shape with 6 [square] faces, 8 vertices, and 12 edges"
 component-catalogue-shape-0004,cuboid,"3D shape with 6 [rectangular] faces, 8 vertices, and 12 edges"
 component-catalogue-shape-0005,cylinder,3D shape with 2 parallel circular bases connected by a curved surface
-component-catalogue-shape-0006,kite,
-component-catalogue-shape-0007,parallelogram,2D shape quadrilateral with 2 pairs of parallel sides and opposite angles equal in measure
+component-catalogue-shape-0006,kite,"2D shape quadrilateral with 2 pairs of sides, with each pair having of 2 adjacent sides which meet and that are equal in length"
+component-catalogue-shape-0007,parallelogram,2D shape quadrilateral with 2 pairs of equal-length adjacent (next to each other) sides  and reflection symmetry across a diagonal
 component-catalogue-shape-0008,polygons,"2D shape with line segments and no curves. They include: pentagon, hexagon, octagon, nonagon, decagon, etc."
 component-catalogue-shape-0009,rectangle,2D shape quadrilateral with 2 pairs of opposite sides equal in length
-component-catalogue-shape-0010,rhombus,
-component-catalogue-shape-0011,semi-cirlce,
+component-catalogue-shape-0010,rhombus,"2D shape quadrilateral with all sides equal length, where opposite sides are parallel, and opposite angles are equal"
+component-catalogue-shape-0011,semi-circle,2D shape which is half of a circle
 component-catalogue-shape-0012,sphere,3D shape with a radius that is extended to all three dimensions
 component-catalogue-shape-0013,square,2D shape quadrilateral with 4 sides and 4 angles that are equal
-component-catalogue-shape-0014,trapezium,
+component-catalogue-shape-0014,trapezium,2D shape quadrilateral with at least 1 pair of parallel sides
 component-catalogue-shape-0015,triangle,"2D shape polygon with 3 sides, 3 edges, and 3 vertices"

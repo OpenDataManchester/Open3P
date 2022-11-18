@@ -1,4 +1,4 @@
 # Data Schema
 
-*Coming Soon*
+![Schema](../images/schema.png)
 

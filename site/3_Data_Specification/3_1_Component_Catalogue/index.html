@@ -1047,7 +1047,7 @@
 <td align="left">volume</td>
 <td align="left"><code>recommended</code></td>
 <td align="left">Numeric</td>
-<td align="left">Using the height, width, and depth found using the measurement guidelines, calculate the component&rsquo;s volume using: <code>height x width x depth</code>.</td>
+<td align="left">The amount of space the component takes up. Note: this is related to the size of the component and is different to capacity. Using the height, width, and depth found using the measurement guidelines, calculate the component’s volume using: <code>height x width x depth</code>.</td>
 </tr>
 <tr>
 <td align="left">volumeDate</td>
@@ -1065,7 +1065,7 @@
 <td align="left">weightTolerance</td>
 <td align="left"><code>required</code></td>
 <td align="left">Numeric</td>
-<td align="left">The threshold of weight that components vary by.</td>
+<td align="left">The threshold of weight that components can vary by. This is given as +/- x%.</td>
 </tr>
 <tr>
 <td align="left">weightDate</td>
@@ -1190,32 +1190,27 @@
 <li>Height: millimetre (mm)</li>
 <li>Width: millimetre (mm)</li>
 <li>Length: millimetre (mm)</li>
-<li>Volume: cubic millimetre (mm3)</li>
+<li>Volume: cubic metre (m3)</li>
 <li>Weight: grams (g)</li>
+<li>Weight Tolerance: percent (%)</li>
 </ul>
-<p>Numbers should be entered with a decimal place, a space between the number, and the unit as specified above. Use the decimal / full stop / period character as a separator. For example: volume = 20.000 mm3. Do not exceed 3 decimal places.</p>
-<p><strong>Important</strong>: When converting between systems of measurement, perform the conversion first and then apply rounding. This will give more accuracy and consistency.</p>
+<p>Numbers should be entered with a decimal place. Use the decimal / full stop / period character as a separator. Do not exceed 3 decimal places. When rounding, use convential rounding methods: for 5 and above round up, 4 and below round down. For example: volume = 0.67952 rounded to 0.68. </p>
+<p><strong>Important</strong>: When converting between systems of measurement, perform the conversion first and then apply the convential rounding. This will give more accuracy and consistency.</p>
 <h3 id="default-front-of-a-component">Default Front of a component<a class="headerlink" href="#default-front-of-a-component" title="Permanent link">&para;</a></h3>
-<p>Prior caputuring measurements, first determine the default front of the component, this is similar to <a href="https://www.gs1.org/" target="_blank">gs1</a>. In this standard, the default front is the face with the largest area, where area is equal to the width times the height.</p>
+<p>Prior caputuring measurements, first determine the default front of the component, this is similar to <a href="https://www.gs1.org/" target="_blank">gs1</a> (Note: GS1 rules are specified only for complete packaging and not components. Therefore, there are subtle differences to convert from taking a measurement for the complete packaging versus a component). In this standard, the default front is the face with the largest area, where area is equal to the <code>width</code> times the <code>height</code>.</p>
 <p><strong>Important</strong>: Determining of default front provides a consistent, repeatable process to find measurements for a given component.</p>
-<p>Figure 1: An example for finding the default front of a component. The default front is the face of the with the largest area (A = width X height)
-<image></p>
+<p><center><img alt="image" height="20%" src="../../images/measurements/figure1.defaultFront.png" width="20%" /></center>
+<center><em>Figure 1: An example for finding the default front of a component. The default front is the face of the with the largest area (Area = <code>width</code> X <code>height</code>)</em></center></p>
 <p>Some components have the same area, thus more than one possible front. These components can be presented both vertically and horizontally. If a component has more than one possible front, the highest side is considered to be the default front.</p>
-<p>Figure 2: An example of when the area is the same for more than one face. The default front becomes the side with the maximum height.
-<image></p>
-<p><strong>Note</strong>: Calculating the area for a rectangular component is simple. However, for non-rectangular components (for example, components with a cylindrical or irregular form), the method to calculate the area is:
-- First break the component into multiple sides. Then, for:
-- a round component, do not use (=pi*r^2) to calculate the area. Instead, draw &ldquo;two dimensional&rdquo; rectangles around the round component&rsquo;s sides and then calculate the area for each side.</p>
-<p>Figure 3: Example of a round component, breaking down the sides and drawing rectangles around them.
-<image></p>
+<p><strong>Note</strong>: Calculating the area for a rectangular component is simple. However, for non-rectangular components (for example, components with a cylindrical or irregular form), the method to calculate the area is:</p>
 <ul>
+<li>First break the component into multiple sides. Then, for:</li>
+<li>a round component, do not use (=pi*r^2) to calculate the area. Instead, draw &ldquo;two dimensional&rdquo; rectangles around the round component&rsquo;s sides and then calculate the area for each side.</li>
 <li>any other shape component, draw a &ldquo;two dimensional&rdquo; rectangle around the sides of the component, and then calculate the area for each side.</li>
-</ul>
-<p>Figure 4: Example of an irregular shaped component placed inside a rectangle to determine the area for a single side. 
-<image></p>
-<ul>
 <li>The side with the maximum area then becomes the default front of that component.</li>
 </ul>
+<p><center><img alt="image" height="20%" src="../../images/measurements/figure1.defaultFront.png" width="20%" /></center>
+<center><em>Figure 2: An example for finding the default front of an irregular shaped component. After drawing rectangles around the component, the default front is the face of the with the largest area (Area = <code>width</code> X <code>height</code>)</em></center></p>
 <h3 id="measuring-the-height-width-and-depth-of-a-component">Measuring the height, width, and depth of a component<a class="headerlink" href="#measuring-the-height-width-and-depth-of-a-component" title="Permanent link">&para;</a></h3>
 <p>After the default front has been determined, it is possible to determine the height, width, and depth of a component. </p>
 <ol>
@@ -1274,7 +1269,6 @@ determined by the result of determination of the default front.
 </li>
 </ol>
 <h3 id="measuring-the-volume-and-weight-of-a-component">Measuring the volume and weight of a component<a class="headerlink" href="#measuring-the-volume-and-weight-of-a-component" title="Permanent link">&para;</a></h3>
-<p>(https://www.gs1.org/standards/gs1-package-and-product-measurement-standard/current-standard#4-Consumer-(End-user)-trade-items+4-2-Determining-the-default-front-of-an-item)</p>
 <h2 id="guide-for-component-images">Guide for component images<a class="headerlink" href="#guide-for-component-images" title="Permanent link">&para;</a></h2>
 <p>As with providing measurements, please first find the default front of the component. The image capturing process and naming convention is similar to <a href="https://www.gs1.org/standards/gs1-product-image-specification-standard/current-standard#1-Introduction">gs1</a>. As with measurements, we altered the gs1 standard for capturing the component.</p>
 <h3 id="type-of-image">Type of Image<a class="headerlink" href="#type-of-image" title="Permanent link">&para;</a></h3>

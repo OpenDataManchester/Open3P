@@ -1,5 +1,36 @@
 # Latest Updates
 A document that contains all the changes made to the standard.
+## November 18, 2022
+### Documents
+- Complete Packaging: reformat component catalogue references by replacing `independentComponent`, `previouslyAssembledComponent` and `allComponent` with    
+- Component Catalogue: created `previouslyAssembledComponent` as boolean and `componentLink` for addressing which components are attached when created.
+- Upload Schema
+
+## November 11, 2022
+### Documents
+- Component Catalogue: Update measurement guidelines.
+- Complete Packaging: Update measurement guidelines.
+
+## October 21, 2022
+### Documents
+- Complete Packaging: `householdWaste` turned into required field - representing the updated EPR
+
+### Controlled Lists
+- Completed Definitions for `shapes`
+- Completed Definitions for `opacity`
+- Completed Definitions for `level`
+- Removed tertiary and replaced with ‘shipment’ and ‘transit’ to reflect updated EPR for `level`
+
+## September 30, 2022
+### Documents
+- Fix typo in Key Concepts, Multipack
+- For measurements: Add rounding rule. 
+- Change volume measurement to millilitres
+- For measurements: clarify why component measurements are slightly different to GS1's complete packaging measurement guidance. 
+
+### Data Fields
+- Complete Packaging: Added `weightTolerance` to the complete packaging
+
 ## September 26, 2022
 ### Structural/Model Changes
 - Controlled list material function -> material purpose

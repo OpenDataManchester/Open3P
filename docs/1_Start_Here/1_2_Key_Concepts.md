@@ -17,7 +17,7 @@
 - for example, a lid, a bottle and a label are all individual components. These would be combined to form a complete packaging item
 
 ## Multipack
-- Sometimes, multiple units of complete packaing are combined, and sold as a single unit
+- Sometimes, multiple units of complete packaging are combined, and sold as a single unit
 - This is a multipack
 
 ## Load Catalogue

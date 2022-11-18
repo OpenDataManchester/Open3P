@@ -21,10 +21,10 @@ The following table lists the column headings that should be used. When providin
 |widthDate|`recommended`|String|The date that the width was last verified/measured. Use the format `dd/mm/yyyy`.|
 |depth|`recommended`|Numeric|The depth of the component. Please see the guidelines below on how to properly measure and report the depth.|
 |depthDate|`recommended`|String|The date that the depth was last verified/measured. Use the format `dd/mm/yyyy`.|
-|volume|`recommended`|Numeric|Using the height, width, and depth found using the measurement guidelines, calculate the component's volume using: `height x width x depth`.|
+|volume|`recommended`|Numeric|The amount of space the component takes up. Note: this is related to the size of the component and is different to capacity. Using the height, width, and depth found using the measurement guidelines, calculate the component’s volume using: `height x width x depth`.|
 |volumeDate|`recommended`|String|The date that the volume was last verified/measured. Use the format `dd/mm/yyyy`.|
 |weight|`required`|Numeric|The weight of the component.|
-|weightTolerance|`required`|Numeric|The threshold of weight that components vary by.|
+|weightTolerance|`required`|Numeric|The threshold of weight that components can vary by. This is given as +/- x%.|
 |weightDate|`recommended`|String|The date that the weight was last verified/measured. Use the format `dd/mm/yyyy`.|
 |shape|`recommended`|String|What is the shape of the component? The entry should contain the shape controlled list identifier for the component.|
 |function|`recommended`|String|What is the function of the component? The entry should contain the function controlled list identifier for the component.|
@@ -40,7 +40,9 @@ The following table lists the column headings that should be used. When providin
 |recyclability|`recommended`|Boolean|Is the component recyclable (as determined by a reputable source)?|
 |recyclabilitySource|`recommended`|String|What source provided the recyclability claim? The entry should be the recyclabilitySource controlled list identifier.|
 |recyclabilityDate|`recommended`|String|The date that the recyclability was provided/last updated. Use the format `dd/mm/yyyy`.|
-|partOfMultipack|`required`|Boolean|Is the component part of a multipack?|
+|partOfMultipack|`required`|Boolean|Is the component part of a multipack? Answer as: `1` for yes and `0` for no.|
+|previouslyAssembledComponent|`required`|Boolean|When manufactured, was this component combined with other components? Answer as: `1` for yes and `0` for no.|
+|componentLink|`required`|String|If `previouslyAssembledComponent` is yes, please provide the `identifier` for the component that is attached when created. Answer `NA` if `previouslyAssembledComponent` is no.|
 |updateDate|`required`|String|The date that the component was provided/last updated. Use the format `dd/mm/yyyy`.|
 |releaseDate|`recommended`|String|The date that the component will be available to use. Use the format `dd/mm/yyyy`.|
 |discontinueDate|`recommended`|String|The date that the component will no longer be available to use. Use the format `dd/mm/yyyy`.|
@@ -54,98 +56,81 @@ All measurements should be given using the metric system.
 - Height: millimetre (mm)
 - Width: millimetre (mm)
 - Length: millimetre (mm)
-- Volume: cubic millimetre (mm3)
+- Volume: cubic metre (m3)
 - Weight: grams (g)
+- Weight Tolerance: percent (%)
 
-Numbers should be entered with a decimal place, a space between the number, and the unit as specified above. Use the decimal / full stop / period character as a separator. For example: volume = 20.000 mm3. Do not exceed 3 decimal places.
+Numbers should be entered with a decimal place. Use the decimal / full stop / period character as a separator. Do not exceed 3 decimal places. When rounding, use convential rounding methods: for 5 and above round up, 4 and below round down. For example: volume = 0.67952 rounded to 0.68. 
 
-**Important**: When converting between systems of measurement, perform the conversion first and then apply rounding. This will give more accuracy and consistency.
+**Important**: When converting between systems of measurement, perform the conversion first and then apply the convential rounding. This will give more accuracy and consistency.
 
 ### Default Front of a component
-Prior caputuring measurements, first determine the default front of the component, this is similar to [gs1](https://www.gs1.org/){target=_blank}. In this standard, the default front is the face with the largest area, where area is equal to the width times the height.
+Prior caputuring measurements, first determine the default front of the component, this is similar to [GS1](https://www.gs1.org/){target=_blank} (Note: GS1 rules are specified only for complete packaging and not components. Therefore, there are subtle differences to convert from taking a measurement for the complete packaging versus a component). In this standard, as with [GS1](https://www.gs1.org/standards/gs1-package-and-product-measurement-standard/current-standard#4-Consumer-(end-user)-trade-items+4-2-Determining-the-default-front){target=_blank}, the default front is the face with the largest surface area, where area is equal to the `width` times the `height`.
 
 **Important**: Determining of default front provides a consistent, repeatable process to find measurements for a given component.
 
-Figure 1: An example for finding the default front of a component. The default front is the face of the with the largest area (A = width X height)
-<image>
+<center>![image](../images/measurements/figure1.defaultFront.png){:height="40%" width="30%"}</center>
+<center>_Figure 1: An example for finding the default front of a component. The default front is the face of the with the largest area (Area = `width` X `height`)_</center>
 
-Some components have the same area, thus more than one possible front. These components can be presented both vertically and horizontally. If a component has more than one possible front, the highest side is considered to be the default front.
-
-Figure 2: An example of when the area is the same for more than one face. The default front becomes the side with the maximum height.
-<image>
+Some components have the same surface area, thus more than one possible front. These components can be presented both vertically and horizontally. If a component has more than one possible front, the highest side is considered to be the default front.
 
 **Note**: Calculating the area for a rectangular component is simple. However, for non-rectangular components (for example, components with a cylindrical or irregular form), the method to calculate the area is:
+
 - First break the component into multiple sides. Then, for:
-- a round component, do not use (=pi*r^2) to calculate the area. Instead, draw "two dimensional" rectangles around the round component's sides and then calculate the area for each side.
-
-Figure 3: Example of a round component, breaking down the sides and drawing rectangles around them.
-<image>
-
-- any other shape component, draw a "two dimensional" rectangle around the sides of the component, and then calculate the area for each side.
-
-Figure 4: Example of an irregular shaped component placed inside a rectangle to determine the area for a single side. 
-<image>
-
+    - a round component: do not use (=pi*r^2) to calculate the area. Instead, draw "two dimensional" rectangles around the round component's sides and then calculate the area for each side.
+    - any other shape component: draw a "two dimensional" rectangle around the sides of the component, and then calculate the area for each side.
 - The side with the maximum area then becomes the default front of that component.
 
+<center>![image](../images/measurements/figure2.defaultFront.png){:height="40%" width="50%"}</center>
+<center>_Figure 2: An example for finding the default front of an irregular shaped component. After drawing rectangles around the component, the default front is the face of the with the largest surface area (Area = `width` X `height`)_</center>
+
 ### Measuring the height, width, and depth of a component
-After the default front has been determined, it is possible to determine the height, width, and depth of a component. 
+After the default front has been determined, as with [GS1](https://www.gs1.org/standards/gs1-package-and-product-measurement-standard/current-standard#4-Consumer-(end-user)-trade-items+4-3-Determining-the-height,-width-and-depth){target=_blank}, it is possible to determine the height, width, and depth of a component. 
 
 1. For rectangular components: 
-- Height: from the base to the top
-- Width: from the left to the right
-- Depth: from the front to the back
-If there are two different measurements for the height, width, or depth, always report the maximum measurement.
+    - Height: from the base to the top
+    - Width: from the left to the right
+    - Depth: from the front to the back
 
-Figure 5: Example of measuring the height, width, and depth for a rectangular component. 
-<image> 
 
-Figure 6: Example of reporting the maximum width, when there are two different size widths.
-<image>
+<center>![image](../images/measurements/figure1.measuring.png){:height="40%" width="30%"}</center>
+<center>_Figure 3: Example of measuring the height, width, and depth for a rectangular component._</center>
+
+**Note:** If there are two different measurements for the height, width, or depth, always report the maximum measurement.
+
+<center>![image](../images/measurements/figure2.measuring.png){:height="40%" width="30%"}</center>
+<center>_Figure 4: Example of reporting the maximum width, when there are two different size widths. Here, the width reported would be 12 mm because it is larger than the 8 mm. Additionally, there are two different sized depths. Here, the 9 mm depth would be reported because it is larger than the 5 mm depth._</center>
+
 
 2. For irregular shaped components:
 Similar to finding the default front of an irregularly shaped component, draw a "three dimensional" rectangle around the component.
-- Height: from the base to the top
-- Width: from the left to the right
-- Depth: from the front to the back
-<image>(include example with hanger)
+    - Height: from the base to the top
+    - Width: from the left to the right
+    - Depth: from the front to the back
 
 3. For unformed, flexible components:
-Take the measurements as if the component was fully formed and filled.
-- Height:
-- Width:
-- Depth: 
-<image>
+    - Take the measurements as if the component was fully formed and filled.
 
 4. For standing components:
-- Height: from the flat surface to the top most point
-- Width: from the left-most point to the right-most point
-- Depth: from the default front to the farthest opposite surface
-<image>
+    - Height: from the flat surface to the top most point
+    - Width: from the left-most point to the right-most point
+    - Depth: from the default front to the farthest opposite surface
 
 5. For components with leaning or irregular verticlas:
-- Height: from the flat surface to the top most point (parallel to the vertex)
-- Width: from the left most point to the right most point 
-- Depth: from the default front to the farthest opposite surface
-<image>
+    - Height: from the flat surface to the top most point (parallel to the vertex)
+    - Width: from the left most point to the right most point 
+    - Depth: from the default front to the farthest opposite surface
 
 6. For components that are cylindrical:
-For cylindrical items two dimensions will be nominally equal. Which dimensions are equal is
-determined by the result of determination of the default front.
-<image>
+    - For cylindrical items two dimensions will be nominally equal. Which dimensions are equal is determined by the result of determination of the default front.
 
-
-### Measuring the volume and weight of a component
-
-
-
-(https://www.gs1.org/standards/gs1-package-and-product-measurement-standard/current-standard#4-Consumer-(End-user)-trade-items+4-2-Determining-the-default-front-of-an-item)
 
 ## Guide for component images
-As with providing measurements, please first find the default front of the component. The image capturing process and naming convention is similar to [gs1](https://www.gs1.org/standards/gs1-product-image-specification-standard/current-standard#1-Introduction). As with measurements, we altered the gs1 standard for capturing the component.
+As with providing measurements, please first find the default front of the component. The image capturing process and naming convention is similar to [GS1](https://www.gs1.org/standards/gs1-product-image-specification-standard/current-standard#1-Introduction){target=_blank}. As with measurements, we altered the gs1 standard for capturing the component.
 
 ### Type of Image
 For the purposes of this standard, we define the differences between photographic and rendered images. Note: both types are accepted but the naming convention will differ based on image type so that images have unique names and do not having naming conflicts.
+
 - **Photographic image**: the result of the electronic or chemical capture of a likeness of a physical object with the use of a camera.
 - **Rendered image**: the result of the creation of a digital likeness of a physical object with the use of a computer and software.
 
