@@ -538,47 +538,6 @@
     Guide for complete packaging images
   </a>
   
-    <nav class="md-nav" aria-label="Guide for complete packaging images">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#type-of-image" class="md-nav__link">
-    Type of Image
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#image-recommendations" class="md-nav__link">
-    Image Recommendations
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#file-size" class="md-nav__link">
-    File size
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#complete-packaging-faces" class="md-nav__link">
-    Complete Packaging faces
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#naming-convention-for-url" class="md-nav__link">
-    Naming convention for URL
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -944,7 +903,7 @@
                 
 
 <h1 id="complete-packaging">Complete Packaging<a class="headerlink" href="#complete-packaging" title="Permanent link">&para;</a></h1>
-<p>We can now use the unique components, to create a complete packaging.</p>
+<p>We can now use the unique components, to create a complete packaging. Each row refers to the complete package.</p>
 <p>The specification of this csv file is as follows:</p>
 <p><a href="https://github.com/OpenDataManchester/PPP/blob/main/docs/7_Supporting_Files/7_1_3_Complete_Packaging_Template.csv" target="_blank">complete_packaging.csv </a></p>
 <table>
@@ -988,22 +947,10 @@
 <td align="left">A URL that links to a picture of the complete packaging. Please see the guidelines below on how to capture the image and name the URL.</td>
 </tr>
 <tr>
-<td align="left">independentComponent</td>
+<td align="left">componentItems</td>
 <td align="left"><code>required</code></td>
 <td align="left">String</td>
-<td align="left">The component identifier from the component catalogue that is independently created. There must be an equivalent record in the <code>component_Catalogue</code> data. If all the components were created together use <code>NA</code>. If there are multiple components, separate with a comma. <code>e.g. 'component1', 'component2'</code></td>
-</tr>
-<tr>
-<td align="left">previouslyAssembledComponent</td>
-<td align="left"><code>required</code></td>
-<td align="left">String</td>
-<td align="left">The component identifier from the component catalogue that was combined with other components when created. There must be an equivalent record in the <code>component_Catalogue</code> data. If all the components were independently created use <code>NA</code>. If there are multiple components, separate with a comma. <code>e.g. 'component1', 'component2'</code></td>
-</tr>
-<tr>
-<td align="left">allComponent</td>
-<td align="left"><code>required</code></td>
-<td align="left">String</td>
-<td align="left">All of the component identifiers from the component catalogue that are combined to create the complete packaging. There must be equivalent records in the <code>component_Catalogue</code> data for all component identifiers. If there are multiple components, separate with a comma. <code>e.g. 'component1', 'component2'</code></td>
+<td align="left">The component catalogue identifiers used to create the complete packaging. There must be an equivalent record in the <code>component_catalogue</code> data.</td>
 </tr>
 <tr>
 <td align="left">LOWcodeWOproduct</td>
@@ -1037,7 +984,7 @@
 </tr>
 <tr>
 <td align="left">householdWaste</td>
-<td align="left"><code>recommended</code></td>
+<td align="left"><code>required</code></td>
 <td align="left">Boolean</td>
 <td align="left">Is the complete packaging often classed as packaging that will end up in kerbside collections?</td>
 </tr>
@@ -1153,7 +1100,7 @@
 <td align="left">partOfMultipack</td>
 <td align="left"><code>required</code></td>
 <td align="left">Boolean</td>
-<td align="left">Is the complete packaging part of a multipack?</td>
+<td align="left">Is the complete packaging part of a multipack? Answer as: <code>1</code> for yes and <code>0</code> for no.</td>
 </tr>
 <tr>
 <td align="left">updateDate</td>
@@ -1182,128 +1129,21 @@
 <li>Height: millimetre (mm)</li>
 <li>Width: millimetre (mm)</li>
 <li>Length: millimetre (mm)</li>
-<li>Volume: cubic millimetre (mm3)</li>
+<li>Volume: cubic metre (m3)</li>
 <li>Weight: grams (g)</li>
 <li>servingCapacity: grams (g)</li>
 </ul>
 <p>Numbers should be entered with a decimal place, a space between the number, and the unit as specified above. Use the decimal / full stop / period character as a separator. For example: volume = 20.000 mm3. Do not exceed 3 decimal places.</p>
 <p><strong>Important</strong>: When converting between systems of measurement, perform the conversion first and then apply rounding. This will give more accuracy and consistency.</p>
 <h3 id="default-front-of-a-complete-packaging">Default Front of a complete packaging<a class="headerlink" href="#default-front-of-a-complete-packaging" title="Permanent link">&para;</a></h3>
-<p>Prior caputuring measurements, first determine the default front of the complete packaging, this is similar to <a href="https://www.gs1.org/" target="_blank">gs1</a>. In this standard, the default front is the face with the largest area, where area is equal to the width times the height.</p>
-<p><strong>Important</strong>: Determining of default front provides a consistent, repeatable process to find measurements for a given complete packaging.</p>
-<p>Figure 1: An example for finding the default front of a complete packaging. The default front is the face of the with the largest area (A = width X height)
-<image></p>
-<p>Some complete packaging have the same area, thus more than one possible front. These complete packaging can be presented both vertically and horizontally. If a complete packaging has more than one possible front, the highest side is considered to be the default front.</p>
-<p>Figure 2: An example of when the area is the same for more than one face. The default front becomes the side with the maximum height.
-<image></p>
-<p><strong>Note</strong>: Calculating the area for a rectangular complete packaging is simple. However, for non-rectangular complete packaging (for example, complete packaging with a cylindrical or irregular form), the method to calculate the area is:
-- First break the complete packaging into multiple sides. Then, for:
-- a round complete packaging, do not use (=pi*r^2) to calculate the area. Instead, draw &ldquo;two dimensional&rdquo; rectangles around the round complete packaging&rsquo;s sides and then calculate the area for each side.</p>
-<p>Figure 3: Example of a round complete packaging, breaking down the sides and drawing rectangles around them.
-<image></p>
-<ul>
-<li>any other shape complete packaging, draw a &ldquo;two dimensional&rdquo; rectangle around the sides of the complete packaging, and then calculate the area for each side.</li>
-</ul>
-<p>Figure 4: Example of an irregular shaped complete packaging placed inside a rectangle to determine the area for a single side. 
-<image></p>
+<p>As with taking and reporting measurements for components, we use the <a href="https://www.gs1.org/" target="_blank">GS1</a> method for taking measurements. Now, with all the components put together to form the complete packaging, first find the default front, the the face with the largest area, where area is equal to the width times the height.</p>
 <ul>
 <li>The side with the maximum area then becomes the default front of that complete packaging.</li>
 </ul>
 <h3 id="measuring-the-height-width-and-depth-of-a-complete-packaging">Measuring the height, width, and depth of a complete packaging<a class="headerlink" href="#measuring-the-height-width-and-depth-of-a-complete-packaging" title="Permanent link">&para;</a></h3>
-<p>After the default front has been determined, it is possible to determine the height, width, and depth of the complete packaging. </p>
-<ol>
-<li>For rectangular complete packaging: </li>
-<li>Height: from the base to the top</li>
-<li>Width: from the left to the right</li>
-<li>Depth: from the front to the back
-If there are two different measurements for the height, width, or depth, always report the maximum measurement.</li>
-</ol>
-<p>Figure 5: Example of measuring the height, width, and depth for a rectangular complete packaging. 
-<image> </p>
-<p>Figure 6: Example of reporting the maximum width, when there are two different size widths.
-<image></p>
-<ol>
-<li>For irregular shaped complete packaging:
-Similar to finding the default front of an irregularly shaped complete packaging, draw a &ldquo;three dimensional&rdquo; rectangle around the complete packaging.</li>
-<li>Height: from the base to the top</li>
-<li>Width: from the left to the right</li>
-<li>
-<p>Depth: from the front to the back
-<image>(include example with hanger)</p>
-</li>
-<li>
-<p>For unformed, flexible complete packaging:
-Take the measurements as if the complete packaging was fully formed and filled.</p>
-</li>
-<li>Height:</li>
-<li>Width:</li>
-<li>
-<p>Depth: 
-<image></p>
-</li>
-<li>
-<p>For standing complete packaging:</p>
-</li>
-<li>Height: from the flat surface to the top most point</li>
-<li>Width: from the left-most point to the right-most point</li>
-<li>
-<p>Depth: from the default front to the farthest opposite surface
-<image></p>
-</li>
-<li>
-<p>For complete packaging with leaning or irregular verticlas:</p>
-</li>
-<li>Height: from the flat surface to the top most point (parallel to the vertex)</li>
-<li>Width: from the left most point to the right most point </li>
-<li>
-<p>Depth: from the default front to the farthest opposite surface
-<image></p>
-</li>
-<li>
-<p>For complete packaging that are cylindrical:
-For cylindrical items two dimensions will be nominally equal. Which dimensions are equal is determined by the result of determination of the default front.
-<image></p>
-</li>
-</ol>
-<p>(https://www.gs1.org/standards/gs1-package-and-product-measurement-standard/current-standard#4-Consumer-(End-user)-trade-items+4-2-Determining-the-default-front-of-an-item)</p>
+<p>After the default front has been determined, it is possible to determine the height, width, and depth of the complete packaging. Please follow the measurement guidelines provided by <a href="https://www.gs1.org/standards/gs1-package-and-product-measurement-standard/current-standard#4-Consumer-(end-user)-trade-items+4-3-Determining-the-height,-width-and-depth" target="_blank">GS1</a></p>
 <h2 id="guide-for-complete-packaging-images">Guide for complete packaging images<a class="headerlink" href="#guide-for-complete-packaging-images" title="Permanent link">&para;</a></h2>
-<p>As with providing measurements, please first find the default front of the complete packaging. The image capturing process and naming convention is similar to <a href="https://www.gs1.org/standards/gs1-product-image-specification-standard/current-standard#1-Introduction">gs1</a>. </p>
-<h3 id="type-of-image">Type of Image<a class="headerlink" href="#type-of-image" title="Permanent link">&para;</a></h3>
-<p>For the purposes of this standard, we define the differences between photographic and rendered images. Note: both types are accepted but the naming convention will differ based on image type so that images have unique names and do not have naming conflicts.
-- <strong>Photographic image</strong>: the result of the electronic or chemical capture of a likeness of a physical object with the use of a camera.
-- <strong>Rendered image</strong>: the result of the creation of a digital likeness of a physical object with the use of a computer and software.</p>
-<h3 id="image-recommendations">Image Recommendations<a class="headerlink" href="#image-recommendations" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Provide coloured images. However, do not provide colour casts. Colour should be as rich, vibrant and eye-catching as possible</li>
-<li>Contrast and exposure should be balanced; avoid high contrast effects and &ldquo;blown-out&rdquo; highlights</li>
-<li>Images should not be overly sharpened</li>
-<li>Complete Packaging should be centred in Margins to cover 95% on the canvas.</li>
-<li>Graphic rendering of a complete packaging should be realistic.</li>
-<li>Do not provide layers, guides or rulers in the images.</li>
-<li>Background layer should be white (RGB 255,255,255).</li>
-<li>Remove signatures, &ldquo;finger printing&rdquo; or visible watermarks. No compression artifacts. No interpolation (&ldquo;resizing up&rdquo;).</li>
-</ul>
-<h3 id="file-size">File size<a class="headerlink" href="#file-size" title="Permanent link">&para;</a></h3>
-<ul>
-<li>900x900 to 2400x2400 pixels</li>
-</ul>
-<h3 id="complete-packaging-faces">Complete Packaging faces<a class="headerlink" href="#complete-packaging-faces" title="Permanent link">&para;</a></h3>
-<p>After determining the default front, the possible faces, in relation to the default front, are:
-1. Default Front
-2. Left
-3. Top
-7. Back
-8. Right
-9. Bottom</p>
-<h3 id="naming-convention-for-url">Naming convention for URL<a class="headerlink" href="#naming-convention-for-url" title="Permanent link">&para;</a></h3>
-<p>Please follow this naming convention: 
-- complete packaging identifier
-- underscore <code>_</code>
-- type of image (<code>photographic</code> or <code>rendered</code>)
-- underscore <code>_</code>
-- component face (<code>1</code>: Default front, <code>2</code>: Left, <code>3</code>: Top, <code>7</code>: Back, <code>8</code>: Right, <code>9</code>: Bottom)
-- orientation (<code>C</code>: Centre, <code>L</code>: left, <code>R</code>: right, <code>N</code>: No plunge angle)</p>
-<p><strong>Example</strong>: An image for a complete packaging that is rendered with a default front facing image and centred orientation. <code>123_rendered_1C.jpg</code></p>
+<p>As with providing measurements, please first find the default front of the complete packaging. The image capturing process and naming convention is similar to <a href="https://www.gs1.org/standards/gs1-product-image-specification-standard/current-standard#1-Introduction" target="_blank">GS1</a>. </p>
 
               
             </article>
