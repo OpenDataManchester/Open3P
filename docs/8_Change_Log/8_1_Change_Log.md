@@ -1,5 +1,12 @@
 # Latest Updates
 A document that contains all the changes made to the standard.
+## November 25, 2022
+### Documentation
+- Add definitions of recycling and reuse
+
+### Data Fields
+- Component Catalogue: `branding` added due to updated epr
+
 ## November 18, 2022
 ### Documents
 - Complete Packaging: reformat component catalogue references by replacing `independentComponent`, `previouslyAssembledComponent` and `allComponent` with    

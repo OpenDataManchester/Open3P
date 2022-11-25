@@ -27,6 +27,13 @@
 ## Load
 - Collection of load catalogue broken into destinations and on-the-market packaging for specified reporting periods.
 
+## Packaging Item
+- A component, complete packaging, or multipack 
 
+## Reuse
+- The packaging item remains as created and is repurposed without reconstruction
+
+## Recycle
+- The packaging item is broken down and created into something new
 
 
