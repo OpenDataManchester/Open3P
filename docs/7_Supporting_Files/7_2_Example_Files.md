@@ -2,11 +2,11 @@
 
 This section of the guidance provides examples of different scenarios for providing information about plastic packaging and download files for the templates
 
- ## Examples
+## Examples
  
  *coming soon*
 
- ## Downloads
+## Downloads
 
  1. [Component Catalogue](https://www.opendatamanchester.org.uk/wp-content/uploads/2022/09/7_1_1_Component_Catalogue_Template.csv){target=_blank}
  2. [Component Catalogue Material](https://www.opendatamanchester.org.uk/wp-content/uploads/2022/09/7_1_2_Component_Catalogue_Material_Template.csv){target=_blank}

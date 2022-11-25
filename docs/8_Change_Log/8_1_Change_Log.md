@@ -3,6 +3,7 @@ A document that contains all the changes made to the standard.
 ## November 25, 2022
 ### Documentation
 - Add definitions of recycling and reuse
+- Bug fixes, typos and tweaks throughout
 
 ### Data Fields
 - Component Catalogue and Complete Packaging: `branding` added due to updated epr

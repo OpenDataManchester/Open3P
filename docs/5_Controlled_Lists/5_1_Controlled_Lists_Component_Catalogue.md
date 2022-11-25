@@ -45,6 +45,6 @@ The controlled lists in use in the standard for component catalogue are:
 
 [Reuse System Controlled List](https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_1_7_Reuse_System.csv){target=_blank}
 
-## 5. Recycled Content Evidence Type
+## 8. Recycled Content Evidence Type
 
 [Recycled Content Evidence Type](https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_1_8_Recycled_Evidence_Type.csv){target=_blank}
