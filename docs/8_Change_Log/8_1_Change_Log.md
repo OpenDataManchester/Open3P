@@ -6,7 +6,7 @@ A document that contains all the changes made to the standard.
 - Bug fixes, typos and tweaks throughout
 
 ### Data Fields
-- Component Catalogue and Complete Packaging: `branding` added due to updated epr
+- Component Catalogue: `branding` added due to updated epr
 - Component Catalogue: `loaned` added due to epr
 - Multipack: `outsideTier` removed because encoded with tier level
 
