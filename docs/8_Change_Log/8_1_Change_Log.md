@@ -5,7 +5,8 @@ A document that contains all the changes made to the standard.
 - Add definitions of recycling and reuse
 
 ### Data Fields
-- Component Catalogue: `branding` added due to updated epr
+- Component Catalogue and Complete Packaging: `branding` added due to updated epr
+- Component Catalogue: `loanded` added due to epr
 
 ## November 18, 2022
 ### Documents
