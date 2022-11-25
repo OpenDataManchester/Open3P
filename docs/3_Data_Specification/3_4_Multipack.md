@@ -17,7 +17,6 @@ The specification of this csv file is as follows:
 |multipackIdentifier|`required`|String|The unique identifier of the created multipack. A globally unique identifier. See identifiers section for information on how to construct this identifier.|
 |packagingItems|`required`|String|The complete packaging and/or the component identifiers used to create the multipack. There must be an equivalent record in the `complete_packaging` or `component_Catalogue` data.|
 |tier|`recommended`|Integer|The tier associated with the multipack. The inner most tier denoted as 1, and the outermost tier is the biggest number.|
-|outsideTier|`required`|Boolean|Is this the very outside of the multipack?|
 |identicalQuantity|`required`|Numeric|Number of identical units for the unique complete packaging item or a component this row corresponds to.|
 |updateDate|`required`|String|The date that the multipack was provided/last updated. Use the format `dd/mm/yyyy`.|
 |releaseDate|`recommended`|String|The date that the component will be available to use. Use the format `dd/mm/yyyy`.|
