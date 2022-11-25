@@ -34,8 +34,8 @@ An open data standard is a set of rules that describe the structure and componen
 
 ## How is the standard being developed?
 
-The initial standard development was funded by [Innovate UK](https://www.opendatamanchester.org.uk/plastics-packaging-portal/){target=_blank}, and is being developed through workshops with industry experts over a number of iterations.
+The initial standard development was funded by [Innovate UK](https://www.gov.uk/government/organisations/innovate-uk){target=_blank}, and is being developed through workshops with industry experts over a number of iterations.
 
 ## How to use the standard
 
-The documentation here details how to *publish* data to the standard, and how to use data that has been published to the standard. At this stage, the expectation is that data management will be supported by additional applications (such as the packaging portal that is also being developed as part of this project), and it is possible to record and publish data to the standard using the provided csv files in [Section 8]() of this documentation. 
+The documentation here details how to *publish* data to the standard, and how to use data that has been published to the standard. At this stage, the expectation is that data management will be supported by additional applications (such as the packaging portal that is also being developed as part of this project), and it is possible to record and publish data to the standard using the provided csv files in [Section 7](/PPP/7_Supporting_Files/7_2_Example_Files/) of this documentation. 
