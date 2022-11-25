@@ -10,6 +10,9 @@ A document that contains all the changes made to the standard.
 - Component Catalogue: `loaned` added due to epr
 - Multipack: `outsideTier` removed because encoded with tier level
 
+### Controlled Lists
+- add none option to drs
+
 ## November 18, 2022
 ### Documents
 - Complete Packaging: reformat component catalogue references by replacing `independentComponent`, `previouslyAssembledComponent` and `allComponent` with    
