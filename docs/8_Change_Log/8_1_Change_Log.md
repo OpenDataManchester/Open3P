@@ -7,7 +7,7 @@ A document that contains all the changes made to the standard.
 
 ### Data Fields
 - Component Catalogue and Complete Packaging: `branding` added due to updated epr
-- Component Catalogue: `loanded` added due to epr
+- Component Catalogue: `loaned` added due to epr
 - Multipack: `outsideTier` removed because encoded with tier level
 
 ## November 18, 2022
