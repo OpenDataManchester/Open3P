@@ -14,11 +14,11 @@ The standard is open and free to use, copy and distribute. However, the standard
 
 ## Contents
 
-1. Introduction
-2. Key Concepts
-3. Data Formats
-4. Data Specification
-5. Identifiers
-6. Controlled Lists
-7. Governance
-8. Supporting Files
+1. Start Here
+2. Data Formats
+3. Data Specification
+4. Identifiers
+5. Controlled Lists
+6. Governance
+7. Supporting Files
+8. Change Log
