@@ -8,7 +8,7 @@ The specification of this csv file is as follows:
 
 [multipack.csv](https://github.com/OpenDataManchester/PPP/blob/main/docs/7_Supporting_Files/7_1_4_Multipack_Template.csv){target=_blank}
 
-|Column|Status|Format|Notes|
+|Column|<div style="width:80px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
 |identifier|`required`|String|A globally unique identifier. See identifiers section for information on how to construct this identifier|
 |name|`recommended`|String|The name of this multipack.|
