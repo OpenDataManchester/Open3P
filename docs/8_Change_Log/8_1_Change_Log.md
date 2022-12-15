@@ -1,5 +1,14 @@
 # Latest Updates
 A document that contains all the changes made to the standard.
+## December 15, 2022
+### Documentation
+- Add new schema image
+- Widen status field so recommended doesn't spill onto two lines
+
+### Data Fields
+- Component Catalogue: `materialsCatalogue` added as it was determined that components should map to materials
+- Component Catalogue Material: `componentCatalogue` removed  as it was determined that materials should not map to components
+
 ## November 25, 2022
 ### Documentation
 - Add definitions of recycling and reuse
