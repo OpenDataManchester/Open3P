@@ -7,14 +7,14 @@ The following table lists the column headings that should be used. When providin
 [component_catalogue.csv](https://github.com/OpenDataManchester/PPP/blob/main/docs/7_Supporting_Files/7_1_1_Component_Catalogue_Template.csv){target=_blank}
 
 
-|Column|Status|Format|Notes|
+|Column|<div style="width:80px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
 |identifier|`required`|String|A globally unique identifier. See identifiers section for information on how to construct this identifier|
 |name|`recommended`|String|The name of this component.|
 |description|`recommended`|String|A brief description of this component.|
 |tags|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the component in other systems. For example: bar codes or global trade item number (gtin). To provide tags please follow this format. `{'tagName1': 'identifier1', 'tagName2': 'identifier2'}`|
 |imageURL|`recommended`|URL|A URL that links to a picture of the component. Please see the guidelines below on how to capture the image and name the URL.|
-|MaterialsCatalogue|`required`|String|The unique identifier of the material that this row relates to. There must be an equivalent record in the `component_Catalogue_Materials` data|
+|materialsCatalogue|`required`|String|The unique identifier of the material that this row relates to. There must be an equivalent record in the `component_Catalogue_Materials` data|
 |LOWcode|`recommended`|String|The list of waste code for **only** the component, by itself. LOW code is synonymous with European Waste Catelogue Code (EWC). For example: an empty bottle would have a LOWcode of `15 01 02`. Please use [Dsposal](https://dsposal.uk/browse/ewc){target=_blank} or [legislation.gov](https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made){target=_blank} to find the LOWcode. **Note**: The LOWcode can based on its combination with other components and the actual product contained in the completePackaging. Be sure to only include the component LOWcode. If you cannot find the code or are uncertain please enter `Uncertain`.|
 |height|`recommended`|Numeric|The height of the component. Please see the guidelines below on how to properly measure and report the height.|
 |heightDate|`recommended`|String|The date that the height was last verified/measured. Use the format `dd/mm/yyyy`.|
