@@ -1,6 +1,10 @@
 # Data Flow
 
-Here, we show two examples of how data could flow using the open standard. This tells the story of how water bottles are created with a packaging manufacturer, how that packaging manufacturer sends their packaging to a packer/filler (Figure 1), and then how that packer/filler will put packaging together, filled with a product and then send them to a retailer (Figure 2). 
+Here, we show two examples of how data could flow using the open standard. This tells the story of how water bottles are created with a packaging manufacturer, how that packaging manufacturer sends their packaging to a packer/filler (Figure 1), and then how that packer/filler will put packaging together, filled with a product and then send them to a retailer (Figure 2). In both figures: 
+- black represents the component catalogue items used to create complete packaging
+- orange represents the complete packaging items used to create multipacks
+- green represents the component catalogue, multipack, or complete packaging items used to create the load catalogue item
+- yellow represents the load catalogue item made to create a load
 
 ![example1](../images/data_flow_example1.png)
 *Figure 1: From a packaging manufacturer to a packer/filler*
@@ -12,4 +16,6 @@ Another packaging manufacturer would then separately create the plastic rings an
 ![example1](../images/data_flow_example2.png)
 *Figure 2: From a packer/filler to a retailer*
 
-Instead of re-entering data, a packer/filler would pull the data from the packaging manufacturer for the water bottle components. Using the component catalogue, the packer/filler could create two different types of water bottles (with the two different kinds of lids). The packer/filler uses the components to create the two different complete packaging, sealed bottles with lids, which is filled with the product (in this case, water). In addition to creating single purchase water bottle items, the packer/filler can use the same created water bottles, along with the plastic ring to create a multipack. The two different types of individual use bottles along with the multipack can be combined onto a mixed pallet with boxes to create a load catalogue. As with the packaging manufacturer, the packer/filler can use the commonly created load catalogue items to send to multiple retail stores. They would then update how many times they sent the load to the retailer during certain reporting periods. 
+Instead of re-entering data, a packer/filler would pull the data from the packaging manufacturer for the water bottle components. Using the component catalogue, the packer/filler could create two different types of water bottles (with the two different kinds of lids). The packer/filler uses the components to create the two different complete packaging, sealed bottles with lids, which is filled with the product (in this case, water). Notice that even though the plastic ring is alone in complete packaging. The reason for this is to fill in data related to this component, even though alone. For instance, the level of packaging (primary, secondary, shipment, transit) relies on how the complete packaging is filled and used, which is contained in the complete packaging csv. 
+
+In addition to creating single purchase water bottle items, the packer/filler can use the same created water bottles, along with the plastic ring to create a multipack. Notice how the first type of lid is used solely for creating a multipack, and the second type of lid is used to create an individual unit. The individual use bottles along with the multipack can be combined onto a mixed pallet with boxes to create a load catalogue. As with the packaging manufacturer, the packer/filler can use the commonly created load catalogue items to send to multiple retail stores. They would then update how many times they sent the load to the retailer during certain reporting periods. 
