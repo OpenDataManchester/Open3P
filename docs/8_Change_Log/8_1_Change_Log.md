@@ -1,5 +1,12 @@
 # Latest Updates
 A document that contains all the changes made to the standard.
+## December 20, 2022
+### Model
+- separate out materials and material catalogue -> move to the front of the process
+
+### Data Fields
+- Component Catalogue: add identifier to link materials
+
 ## November 25, 2022
 ### Documentation
 - Add definitions of recycling and reuse
