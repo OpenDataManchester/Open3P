@@ -1,4 +1,4 @@
-# Component Catalogue Materials
+# Materials Catalogue
 
 Materials should be provided as a separate csv file, in tidy format. This means that each row of the csv file should be one material that is combined in the materials csv to create combinations. An example is provided.
 

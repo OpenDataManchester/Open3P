@@ -3,6 +3,7 @@ A document that contains all the changes made to the standard.
 ## January 06, 2023
 ### Documents
 - Neaten up tables so that the status column doesn't go over multiple lines.
+- Updated schema image.
 
 ## December 20, 2022
 ### Model

@@ -72,7 +72,7 @@ Prior caputuring measurements, first determine the default front of the componen
 
 **Important**: Determining of default front provides a consistent, repeatable process to find measurements for a given component.
 
-<center>![image](../images/measurements/figure1.defaultFront.png){:height="40%" width="30%"}</center>
+<center>![image](../img/measurements/figure1.defaultFront.png){:height="40%" width="30%"}</center>
 <center>_Figure 1: An example for finding the default front of a component. The default front is the face of the with the largest area (Area = `width` X `height`)_</center>
 
 Some components have the same surface area, thus more than one possible front. These components can be presented both vertically and horizontally. If a component has more than one possible front, the highest side is considered to be the default front.
@@ -84,7 +84,7 @@ Some components have the same surface area, thus more than one possible front. T
     - any other shape component: draw a "two dimensional" rectangle around the sides of the component, and then calculate the area for each side.
 - The side with the maximum area then becomes the default front of that component.
 
-<center>![image](../images/measurements/figure2.defaultFront.png){:height="40%" width="50%"}</center>
+<center>![image](../img/measurements/figure2.defaultFront.png){:height="40%" width="50%"}</center>
 <center>_Figure 2: An example for finding the default front of an irregular shaped component. After drawing rectangles around the component, the default front is the face of the with the largest surface area (Area = `width` X `height`)_</center>
 
 ### Measuring the height, width, and depth of a component
@@ -96,12 +96,12 @@ After the default front has been determined, as with [GS1](https://www.gs1.org/s
     - Depth: from the front to the back
 
 
-<center>![image](../images/measurements/figure1.measuring.png){:height="40%" width="30%"}</center>
+<center>![image](../img/measurements/figure1.measuring.png){:height="40%" width="30%"}</center>
 <center>_Figure 3: Example of measuring the height, width, and depth for a rectangular component._</center>
 
 **Note:** If there are two different measurements for the height, width, or depth, always report the maximum measurement.
 
-<center>![image](../images/measurements/figure2.measuring.png){:height="40%" width="30%"}</center>
+<center>![image](../img/measurements/figure2.measuring.png){:height="40%" width="30%"}</center>
 <center>_Figure 4: Example of reporting the maximum width, when there are two different size widths. Here, the width reported would be 12 mm because it is larger than the 8 mm. Additionally, there are two different sized depths. Here, the 9 mm depth would be reported because it is larger than the 5 mm depth._</center>
 
 
