@@ -1,5 +1,12 @@
 # Key Concepts
 
+## Material Catalogue
+- general template used to store information about a base level material
+
+## Materials
+- an individual substance (e.g., PET)
+- created from the material catalogue
+
 ## Components
 - an individual unit (e.g., a bottle)
 - parts made from different materials (e.g., a window on a sandwich box)

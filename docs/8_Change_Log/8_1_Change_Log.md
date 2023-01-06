@@ -4,6 +4,8 @@ A document that contains all the changes made to the standard.
 ### Documents
 - Neaten up tables so that the status column doesn't go over multiple lines.
 - Updated schema image.
+- Fixed naming for material and material catalogue pages.
+- Added favicon.
 
 ## December 20, 2022
 ### Model
