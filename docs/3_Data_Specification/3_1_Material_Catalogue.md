@@ -6,7 +6,7 @@ The specification of this csv file is as follows:
 
 [component_catalogue_material.csv](https://github.com/OpenDataManchester/PPP/blob/main/docs/7_Supporting_Files/7_1_2_Component_Catalogue_Material_Template.csv){target=_blank}
 
-|Column|Status|Format|Notes|
+|Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
 |identifier|`required`|String|A globally unique identifier. See identifiers section for information on how to construct this identifier|
 |materialVolume|`recommended`|numeric|The amount of material used given in `ml` (See 'Guide for how to take measurements' below).|

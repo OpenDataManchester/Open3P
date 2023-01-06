@@ -7,7 +7,7 @@ The following table lists the column headings that should be used. When providin
 [component_catalogue.csv](https://github.com/OpenDataManchester/PPP/blob/main/docs/7_Supporting_Files/7_1_1_Component_Catalogue_Template.csv){target=_blank}
 
 
-|Column|Status|Format|Notes|
+|Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
 |identifier|`required`|String|A globally unique identifier. See identifiers section for information on how to construct this identifier|
 |name|`recommended`|String|The name of this component.|
