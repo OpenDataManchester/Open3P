@@ -49,6 +49,8 @@ markdown_extensions:
   - codehilite
   - smarty
   - meta
+  - attr_list
+  - md_in_html
   - toc:
       permalink: True
   - attr_list
