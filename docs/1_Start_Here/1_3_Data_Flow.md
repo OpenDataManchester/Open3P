@@ -1,3 +1,8 @@
+---
+title: Data Flow
+description: The intented flow of data through the plastic value chain using Open3P.
+---
+
 # Data Flow
 
 Here, we show two examples of how data could flow using the open standard. This tells the story of how water bottles are created with a packaging manufacturer, how that packaging manufacturer sends their packaging to a packer/filler (Figure 1), and then how that packer/filler will put packaging together, filled with a product and then send them to a retailer (Figure 2). In both figures: 

@@ -1,8 +1,15 @@
+---
+title: Materials
+---
+
 # Materials
 
 Materials should be provided as a separate csv file, in tidy format. This means that each row of the csv file should be one material for a component. An example is provided.
 
-<a href="/img/materials-v1.0-2022-12-20.png" target="_blank"><img src="/img/materials-v1.0-2022-12-20.png"target="_blank" title="Open schema in new tab" width="200px"></img></a>
+<figure markdown>
+![Schema](../img/materials-v1.0-2022-12-20.png){ width="450" }
+  <figcaption>Data schema</figcaption>
+</figure>
 
 The specification of this csv file is as follows:
 

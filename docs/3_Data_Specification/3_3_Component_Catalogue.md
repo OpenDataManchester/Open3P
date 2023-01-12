@@ -1,3 +1,7 @@
+---
+title: Component Catalogue
+---
+
 # Component Catalogue
 
 ## Standard Spreadsheet Format

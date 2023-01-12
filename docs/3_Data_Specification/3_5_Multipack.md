@@ -1,3 +1,7 @@
+---
+title: Multipack
+---
+
 # Multipack
 
 If the complete packaging is further combined to create multipacks, the information is collected here. Each row corresponds to a single packaging item.

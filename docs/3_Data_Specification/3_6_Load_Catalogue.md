@@ -1,3 +1,7 @@
+---
+title: Load Catalogue
+---
+
 # Load Catalogue
 
 All the complete packaging from different levels (primary, secondary, and tertiary), including multipacks, put together to send to the final destination. Each row corresponds to a single packaging item.
