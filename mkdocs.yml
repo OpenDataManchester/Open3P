@@ -1,6 +1,7 @@
 site_name: Open3P
 theme:
   name: material
+  favicon: img/favicon-192.png
   icon:
     repo: fontawesome/brands/git-alt
   palette:
