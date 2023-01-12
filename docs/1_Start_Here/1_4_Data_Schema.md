@@ -1,3 +1,8 @@
+---
+title: Data Schema
+description: The current data schema of the Open3P open data standard for the plastic value chain.
+---
+
 # Data Schema
 
 <figure markdown>

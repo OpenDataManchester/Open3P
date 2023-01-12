@@ -1,3 +1,7 @@
+---
+title: Complete Packaging
+---
+
 # Complete Packaging
 
 We can now use the unique components, to create a complete packaging. Each row refers to the complete package.

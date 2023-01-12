@@ -1,3 +1,8 @@
+---
+title: Latest Updates
+---
+
+
 # Latest Updates
 A document that contains all the changes made to the standard.
 ## January 06, 2023

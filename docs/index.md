@@ -1,3 +1,7 @@
+---
+title: The open data standard for the plastic packaging value chain.
+---
+
 [![Open Data Manchester](img/Open3PFullColour.jpg)](https://www.opendatamanchester.org.uk/plastics-packaging-portal/){target=_blank}
 
 ## Open3P: Definition
