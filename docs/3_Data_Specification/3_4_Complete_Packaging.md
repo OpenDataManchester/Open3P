@@ -4,12 +4,9 @@ title: Complete Packaging
 
 # Complete Packaging
 
-We can now use the unique components, to create a complete packaging. Each row refers to the complete package.
+The complete packaging schema contains information regarding the complete packages that are used to create loads. These maybe created from a single component or a combination of components from the component catalogue schema.
 
-The specification of this csv file is as follows:
-
-[complete_packaging.csv ](https://github.com/OpenDataManchester/PPP/blob/main/docs/7_Supporting_Files/7_1_3_Complete_Packaging_Template.csv){target=_blank}
-
+## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
 |identifier|`required`|String|A globally unique identifier. See identifiers section for information on how to construct this identifier|
@@ -46,6 +43,24 @@ The specification of this csv file is as follows:
 |updateDate|`required`|String|The date that the complete packaging was provided/last updated. Use the format `dd/mm/yyyy`.|
 |releaseDate|`recommended`|String|The date that the complete packaging will be available to use. Use the format `dd/mm/yyyy`.|
 |discontinueDate|`recommended`|String|The date that the complete packaging will no longer be available to use. Use the format `dd/mm/yyyy`.|
+
+## Diagram
+
+<figure markdown>
+![Schema](../img/complete-packaging-v1.0.0-22-12-20.png){ width="800" }
+  <figcaption>Data schema</figcaption>
+</figure>
+
+## Template
+
+Complete packaging should be provided as a separate csv file, in tidy format. This means that each row of the csv file should be one complete package of a load. An example is provided.
+
+The specification of this csv file is as follows:
+
+[complete_packaging.csv ](https://github.com/OpenDataManchester/PPP/blob/main/docs/7_Supporting_Files/7_1_3_Complete_Packaging_Template.csv){target=_blank}
+## Example
+
+*Coming Soon*
 
 ## Guide for how to take measurements
 
