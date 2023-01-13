@@ -4,13 +4,9 @@ title: Component Catalogue
 
 # Component Catalogue
 
-## Standard Spreadsheet Format
+The component catalogue schema contains information regarding the components that are used to create complete packages. These maybe created from a single material or a combination of materials from the materials schema.
 
-The following table lists the column headings that should be used. When providing this information, you can either build your spreadsheet from scratch, or use the template provided.
-
-[component_catalogue.csv](https://github.com/OpenDataManchester/PPP/blob/main/docs/7_Supporting_Files/7_1_1_Component_Catalogue_Template.csv){target=_blank}
-
-
+## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
 |identifier|`required`|String|A globally unique identifier. See identifiers section for information on how to construct this identifier|
@@ -53,6 +49,25 @@ The following table lists the column headings that should be used. When providin
 |updateDate|`required`|String|The date that the component was provided/last updated. Use the format `dd/mm/yyyy`.|
 |releaseDate|`recommended`|String|The date that the component will be available to use. Use the format `dd/mm/yyyy`.|
 |discontinueDate|`recommended`|String|The date that the component will no longer be available to use. Use the format `dd/mm/yyyy`.|
+
+## Diagram
+
+<figure markdown>
+![Schema](../img/component-catalogue-v1.0.0-22-12-20.png){ width="800" }
+  <figcaption>Data schema</figcaption>
+</figure>
+
+## Template
+
+Components should be provided as a separate csv file, in tidy format. This means that each row of the csv file should be one component of a complete package. An example is provided.
+
+The specification of this csv file is as follows:
+
+[component_catalogue.csv](https://github.com/OpenDataManchester/PPP/blob/main/docs/7_Supporting_Files/7_1_1_Component_Catalogue_Template.csv){target=_blank}
+
+## Example
+
+*Coming soon*
 
 ## Guide for how to take measurements
 
