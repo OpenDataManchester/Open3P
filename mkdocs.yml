@@ -52,6 +52,9 @@ markdown_extensions:
   - meta
   - attr_list
   - md_in_html
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
   - toc:
       permalink: True
   - attr_list
