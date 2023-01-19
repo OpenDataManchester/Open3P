@@ -33,7 +33,26 @@ The specification of this csv file is as follows:
 
 ## Example
 
-*Coming soon*
+=== "JSON"
+
+    ``` json linenums="1"
+    {
+      "identifier": "DCEE1F88-A83B-5BBC-D2D9-6A862B344977",
+      "materialIdentifier": "278EFE8A-720A-06C1-A411-CB94878AD3E2",
+      "materialCatalogue": "A4BAE07C-1847-CD8E-C933-6FD30478423B",
+      "layer": "1",
+      "materialWeight": "100",
+      "combinationPurpose": {
+        "identifier":"material-component-catalogue-purpose-0015",
+        "category":"structure",
+        },
+      "updateDate": "01/08/2022",
+    }
+    ```
+
+=== "CSV"
+
+    [Download example CSV](https://opendatamanchester.org.uk)
 
 ## Guide for how to take measurements
 
