@@ -40,4 +40,28 @@ The specification of this csv file is as follows:
 
 ## Example
 
-*Coming soon*
+=== "CSV"
+
+    [Download example CSV](https://opendatamanchester.org.uk)
+
+=== "JSON"
+
+    ``` json linenums="1"
+    {
+      "identifier": "ED051AFD-EC7F-0428-B054-8837118922FE",
+      "name": "Weekly Load of Guacamole Dip",
+      "description": "24 cases of 12 tubs of guacamole dip for example company on high street west",
+      "tags": {
+        "GTIN":"00123456789012",
+        },
+      "loadIdentifier": "AB94B70F-F01B-7BE8-8B01-0320CA7662A4",
+      "startDate": "01/08/2022",
+      "endDate": "01/08/2022",
+      "destinationAddressName": "Example Company",
+      "destinationAddressStreet": "High Street West",
+      "destinationAddressCountry": "England",
+      "destinationPostalCode": "XX00 0XX",
+      "timesSent": "2",
+      "updateDate": "01/08/2022",
+    }
+    ```
