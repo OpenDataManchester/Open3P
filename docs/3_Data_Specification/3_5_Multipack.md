@@ -40,4 +40,26 @@ The specification of this csv file is as follows:
 
 ## Example
 
-*Coming soon*
+=== "JSON"
+
+    ``` json linenums="1"
+    {
+      "identifier": "B9574E9A-A561-BCA6-0E36-448A2E46B2BF",
+      "name": "4 pack of guacamole dip",
+      "description": "4 tubs of guacamole that are sold together. Not to be sold seperately.",
+      "tags": {
+        "GTIN":"00123456789012",
+        },
+      "multipackIdentifier": "346C5546-282B-C040-CE74-DD0DD4688C0B",
+      "packagingItems": "C29B4703-121C-7552-D905-FD5AB263D611",
+      "tier": "1",
+      "identicalQuantity": "4",
+      "updateDate": "01/08/2022",
+      "releaseDate": "01/08/2022",
+      "discontinueDate": "",
+    }
+    ```
+
+=== "CSV"
+
+    [Download example CSV](https://opendatamanchester.org.uk)
