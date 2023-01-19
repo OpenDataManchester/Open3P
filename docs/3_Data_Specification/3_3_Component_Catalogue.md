@@ -67,7 +67,85 @@ The specification of this csv file is as follows:
 
 ## Example
 
-*Coming soon*
+=== "JSON"
+
+    ``` json linenums="1"
+    {
+      "identifier": "278EFE8A-720A-06C1-A411-CB94878AD3E2",
+      "name": "Guacamole Dip Pot",
+      "description": "Clear PET pot for the Guacamole Dip",
+      "tags": {
+        "GTIN":"00123456789012",
+        },
+      "imageURL": "",
+      "LOWcode": "15 01 02",
+      "materialIdentifier":"278EFE8A-720A-06C1-A411-CB94878AD3E2",
+      "height": 46,
+      "heightDate": "01/08/2022",
+      "width": 101,
+      "widthDate": "01/08/2022",
+      "depth": 101,
+      "depthDate": "01/08/2022",
+      "volume": "",
+      "volumeDate": "",
+      "weight": 6.85,
+      "weightTolerance": "4.38%",
+      "weightDate": "01/08/2022",
+      "shape": {
+        "identifier":"component-catalogue-shape-0005",
+        "category":"cylinder",
+        "detailed":"3D shape with 2 parallel circular bases connected by a curved surface"
+      },
+      "function": {
+        "identifier":"component-catalogue-function-0030",
+        "category":"pot",
+        "detailed":""
+      },
+      "flexibility": {
+        "identifier": "component-catalogue-flexibility-0002",
+        "category": "Rigid",
+        "detailed": ""
+      },
+      "branding": "FALSE",
+      "componentRecyclingDisruptors": "",
+      "colour": "",
+      "opacity": {
+        "identifier": "component-catalogue-opacity-0003",
+        "category": "transparent",
+        "detailed": "allows light to pass through so that objects behind can be distinctly seen; no colour/ clear"
+      },
+      "loaned": "FALSE",
+      "reuseSystem": "",
+      "manufacturedCountry": {
+        "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
+        "Numeric": 826
+      },
+      "recycledContent": 90,
+      "recycledContentEvidenceType": {
+        "identifier":"component-catalogue-recycled-evidence-0001",
+        "category":"certificate",
+        "detailed":""
+      },
+      "recycledContentEvidenceReference": "EXA-123-MPL-4-E",
+      "recyclability": "TRUE",
+      "recyclabilitySource": {
+        "identifier":"complete-packaging-recyclability-source-0001",
+        "category":"OPRL",
+        "detailed":""
+      },
+      "recyclabilityDate": "01/08/2022",
+      "partOfMultipack": "FALSE",
+      "previouslyAssembledComponent": "FALSE",
+      "componentLink": "NA",
+      "updateDate": "01/08/2022",
+      "releaseDate": "01/08/2022",
+      "discontinueDate": ""
+    }
+    ```
+
+=== "CSV"
+
+    [Download example CSV](https://opendatamanchester.org.uk)
 
 ## Guide for how to take measurements
 
