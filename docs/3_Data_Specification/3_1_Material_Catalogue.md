@@ -36,7 +36,25 @@ The specification of this csv file is as follows:
 
 ## Example
 
-*Coming soon*
+=== "JSON"
+
+    ``` json linenums="1"
+    {
+      "identifier": "A4BAE07C-1847-CD8E-C933-6FD30478423B",
+      "materialVolume": "1000",
+      "materialType": "material-component-catalogue-type-0002",
+      "materialPurpose": "material-component-catalogue-purpose-0015",
+      "materialCategory": "material-component-catalogue-category-0007",
+      "materialName": "PET",
+      "materialChemCID": "223961227",
+      "virginMaterial": "20",
+      "updateDate": "01/08/2022",
+    }
+    ```
+
+=== "CSV"
+
+    [Download example CSV](https://opendatamanchester.org.uk)
 
 ## Guide for how to take measurements
 
