@@ -50,7 +50,7 @@ The specification of this csv file is as follows:
       "tags": {
         "GTIN":"00123456789012",
         },
-      "loadIdentifier": "AB94B70F-F01B-7BE8-8B01-0320CA7662A4",
+      "loadIdentifier": "CA88F5CE-2D09-AFE0-08D7-44804780F924",
       "startDate": "01/08/2022",
       "endDate": "01/08/2022",
       "destinationAddressName": "Example Company",
