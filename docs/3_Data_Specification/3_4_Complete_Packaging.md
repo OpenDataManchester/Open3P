@@ -58,9 +58,80 @@ Complete packaging should be provided as a separate csv file, in tidy format. Th
 The specification of this csv file is as follows:
 
 [complete_packaging.csv ](https://github.com/OpenDataManchester/PPP/blob/main/docs/7_Supporting_Files/7_1_3_Complete_Packaging_Template.csv){target=_blank}
+
 ## Example
 
-*Coming Soon*
+=== "JSON"
+
+    ``` json linenums="1"
+    {
+      "identifier": "C29B4703-121C-7552-D905-FD5AB263D611",
+      "name": "2022 P06 2 Star Summer CHL Salad And Dips Guacamole Dip",
+      "description": "A clear pot, film and lid in a decorative sleeve packed into an outercase.",
+      "tags": {
+          "GTIN":"00123456789012"
+          },
+      "imageURL": [
+          "https://dsposal-my.sharepoint.com/:i:/g/personal/tom_yourdsposal_uk/Eblhs6hbkTFAo6SNdYh1ew8BfRwTFna21RyzaKJSq6xX9g?e=0BJKsf",
+          "https://dsposal-my.sharepoint.com/:i:/g/personal/tom_yourdsposal_uk/ERs2KgXOTh1Ep6fqci0wqBIBVjOCe4uLJMrySoLm5P3Stg?e=C07ga9",
+          "https://dsposal-my.sharepoint.com/:i:/g/personal/tom_yourdsposal_uk/ETQTTA8p1Y5Aj-eIThf6M4wBdunvvSVdVoV0bFqK6Nyfhw?e=DKRcHq"
+
+      ],
+      "componentItems": [
+          "278EFE8A-720A-06C1-A411-CB94878AD3E2",
+          "4CF8CE85-BA1A-BACB-670E-FAAB71D97D95",
+          "661C7790-94D1-147D-7BF4-D518EAF5FA32",
+          "7AA5DDF9-0FE1-110C-26C0-ECED9D05F6F1"
+          ],
+      "LOWcodeWOproduct": "15 01 06",
+      "productType": {
+          "identifier":"complete-packaging-product-type-0001",
+          "category":"food",
+          "detailed":""
+          },
+      "componentContactWithProduct": [
+          "278EFE8A-720A-06C1-A411-CB94878AD3E2",
+          "4CF8CE85-BA1A-BACB-670E-FAAB71D97D95"
+          ],
+      "LOWcodeWproduct": "20 01 08",
+      "onTheGo": "FALSE",
+      "householdWaste": "TRUE",
+      "depositReturnScheme": {
+          "identifier":"complete-packaging-drs-0005",
+          "name":"none",
+          "description":""
+          },
+      "recyclingDisruptors": "",
+      "recyclability": 0,
+      "recyclabilitySource": {
+          "identifier":"complete-packaging-recyclability-source-0001",
+          "category":"OPRL",
+          "detailed":""
+          },
+      "recyclabilityDate": "01/08/2022",
+      "height": 51.5,
+      "heightDate": "01/08/2022",
+      "width": 104,
+      "widthDate": "01/08/2022",
+      "depth": 104,
+      "depthDate": "01/08/2022",
+      "volume": 245,
+      "volumeDate": "01/08/2022",
+      "weight": 16.92,
+      "weightTolerance": 0.74,
+      "weightDate": "01/08/2022",
+      "servingCapacity": 4,
+      "servingCapacityDate": "01/08/2022",
+      "partOfMultipack": "FALSE",
+      "updateDate": "01/08/2022",
+      "releaseDate": "01/08/2022",
+      "discontinueDate": ""
+    }
+    ```
+
+=== "CSV"
+
+    [Download example CSV](https://opendatamanchester.org.uk)
 
 ## Guide for how to take measurements
 
