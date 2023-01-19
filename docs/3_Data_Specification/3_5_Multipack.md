@@ -4,14 +4,9 @@ title: Multipack
 
 # Multipack
 
-If the complete packaging is further combined to create multipacks, the information is collected here. Each row corresponds to a single packaging item.
+The multipack schema contains information regarding the multipacks that are used to create loads. These are created from a number of either identical or different complete packages from the complete packaging schema.
 
-**Note:** The multipack portion is optional (only applies to multipacks). If the complete packaging or component is *not* in a multipack, all of the fields below are optional. 
-
-The specification of this csv file is as follows:
-
-[multipack.csv](https://github.com/OpenDataManchester/PPP/blob/main/docs/7_Supporting_Files/7_1_4_Multipack_Template.csv){target=_blank}
-
+## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
 |identifier|`required`|String|A globally unique identifier. See identifiers section for information on how to construct this identifier|
@@ -25,3 +20,24 @@ The specification of this csv file is as follows:
 |updateDate|`required`|String|The date that the multipack was provided/last updated. Use the format `dd/mm/yyyy`.|
 |releaseDate|`recommended`|String|The date that the component will be available to use. Use the format `dd/mm/yyyy`.|
 |discontinueDate|`recommended`|String|The date that the component will no longer be available to use. Use the format `dd/mm/yyyy`.|
+
+## Diagram
+
+<figure markdown>
+![Schema](../img/multipack-v1.0.0-22-12-20.png){ width="450" }
+  <figcaption>Data schema</figcaption>
+</figure>
+
+## Template
+
+**Note:** The multipack portion is optional (only applies to multipacks). If the complete packaging or component is *not* in a multipack, all of the fields below are optional. 
+
+Multipack should be provided as a separate csv file, in tidy format. This means that each row of the csv file should be one multipack of a load. An example is provided.
+
+The specification of this csv file is as follows:
+
+[multipack.csv](https://github.com/OpenDataManchester/PPP/blob/main/docs/7_Supporting_Files/7_1_4_Multipack_Template.csv){target=_blank}
+
+## Example
+
+*Coming soon*
