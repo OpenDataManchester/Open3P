@@ -40,10 +40,6 @@ The specification of this csv file is as follows:
 
 ## Example
 
-=== "CSV"
-
-    [Download example CSV](https://opendatamanchester.org.uk)
-
 === "JSON"
 
     ``` json linenums="1"
@@ -65,3 +61,7 @@ The specification of this csv file is as follows:
       "updateDate": "01/08/2022",
     }
     ```
+
+=== "CSV"
+
+    [Download example CSV](https://opendatamanchester.org.uk)
