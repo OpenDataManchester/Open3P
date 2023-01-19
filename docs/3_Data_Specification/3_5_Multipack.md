@@ -62,4 +62,4 @@ The specification of this csv file is as follows:
 
 === "CSV"
 
-    [Download example CSV](https://opendatamanchester.org.uk)
+    [Coming soon](https://opendatamanchester.org.uk)

@@ -42,9 +42,21 @@ The specification of this csv file is as follows:
     {
       "identifier": "A4BAE07C-1847-CD8E-C933-6FD30478423B",
       "materialVolume": "1000",
-      "materialType": "material-component-catalogue-type-0002",
-      "materialPurpose": "material-component-catalogue-purpose-0015",
-      "materialCategory": "material-component-catalogue-category-0007",
+      "materialType": {
+        "identifier":"material-component-catalogue-type-0002",
+        "category":"synthetic",
+        "detailed":"derived from crude oil, natural gas or coal."
+      },
+      "materialPurpose": {
+        "identifier":"material-component-catalogue-purpose-0015",
+        "category":"structure",
+        "detailed":""
+      },
+      "materialCategory": {
+        "identifier":"material-component-catalogue-category-0007",
+        "category":"plastic",
+        "detailed":""
+      },
       "materialName": "PET",
       "materialChemCID": "223961227",
       "virginMaterial": "20",
@@ -54,7 +66,7 @@ The specification of this csv file is as follows:
 
 === "CSV"
 
-    [Download example CSV](https://opendatamanchester.org.uk)
+    [Coming soon](https://opendatamanchester.org.uk)
 
 ## Guide for how to take measurements
 
