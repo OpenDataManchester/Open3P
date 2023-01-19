@@ -36,4 +36,28 @@ The specification of this csv file is as follows:
 
 ## Example
 
-*Coming soon*
+=== "JSON"
+
+    ``` json linenums="1"
+    {
+      "identifier": "91F2060F-17CD-DA56-7746-0018A90AEF5A",
+      "name": "Full pallet of multipack guacamole dip",
+      "description": "24 cases of 3 x multipack tubs of guacamole dip",
+      "tags": {
+        "GTIN":"00123456789012",
+        },
+      "loadIdentifier": "CA88F5CE-2D09-AFE0-08D7-44804780F924",
+      "packagingItems": "346C5546-282B-C040-CE74-DD0DD4688C0B",
+      "quantityInLoad": "72",
+      "level": {
+        "identifier":"component-catalogue-level-0001",
+        "category":"primary",
+        "detailed":"The individual container that you store goods in to sell to consumers. This is called a "sales unit". For example, if you sell peas in steel tins with paper labels, the primary packaging is "steel tin" and "paper label"."
+      },
+      "updateDate": "01/08/2022",
+    }
+    ```
+
+=== "CSV"
+
+    [Download example CSV](https://opendatamanchester.org.uk)
