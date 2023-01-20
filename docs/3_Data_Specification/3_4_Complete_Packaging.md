@@ -4,12 +4,9 @@ title: Complete Packaging
 
 # Complete Packaging
 
-We can now use the unique components, to create a complete packaging. Each row refers to the complete package.
+The complete packaging schema contains information regarding the complete packages that are used to create loads. These maybe created from a single component or a combination of components from the component catalogue schema.
 
-The specification of this csv file is as follows:
-
-[complete_packaging.csv ](https://github.com/OpenDataManchester/PPP/blob/main/docs/7_Supporting_Files/7_1_3_Complete_Packaging_Template.csv){target=_blank}
-
+## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
 |identifier|`required`|String|A globally unique identifier. See identifiers section for information on how to construct this identifier|
@@ -46,6 +43,94 @@ The specification of this csv file is as follows:
 |updateDate|`required`|String|The date that the complete packaging was provided/last updated. Use the format `dd/mm/yyyy`.|
 |releaseDate|`recommended`|String|The date that the complete packaging will be available to use. Use the format `dd/mm/yyyy`.|
 |discontinueDate|`recommended`|String|The date that the complete packaging will no longer be available to use. Use the format `dd/mm/yyyy`.|
+
+## Diagram
+
+<figure markdown>
+[![Schema](../img/complete-packaging-v1.0.0-22-12-20.png){ width="800" }](https://opendatamanchester.github.io/PPP/img/complete-packaging-v1.0.0-22-12-20.png)){target=_blank}
+  <figcaption>Data schema</figcaption>
+</figure>
+
+## Template
+
+Complete packaging should be provided as a separate csv file, in tidy format. This means that each row of the csv file should be one complete package of a load. An example is provided.
+
+The specification of this csv file is as follows:
+
+[Complete_Packaging_Template.csv](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_3_Complete_Packaging_Template.csv){target=_blank}
+
+## Example
+
+=== "JSON"
+
+    ``` json linenums="1"
+    {
+      "identifier": "C29B4703-121C-7552-D905-FD5AB263D611",
+      "name": "2022 P06 2 Star Summer CHL Salad And Dips Guacamole Dip",
+      "description": "A clear pot, film and lid in a decorative sleeve packed into an outercase.",
+      "tags": {
+          "GTIN":"00123456789012"
+          },
+      "imageURL": [
+          "https://dsposal-my.sharepoint.com/:i:/g/personal/tom_yourdsposal_uk/Eblhs6hbkTFAo6SNdYh1ew8BfRwTFna21RyzaKJSq6xX9g?e=0BJKsf",
+          "https://dsposal-my.sharepoint.com/:i:/g/personal/tom_yourdsposal_uk/ERs2KgXOTh1Ep6fqci0wqBIBVjOCe4uLJMrySoLm5P3Stg?e=C07ga9",
+          "https://dsposal-my.sharepoint.com/:i:/g/personal/tom_yourdsposal_uk/ETQTTA8p1Y5Aj-eIThf6M4wBdunvvSVdVoV0bFqK6Nyfhw?e=DKRcHq"
+
+      ],
+      "componentItems": [
+          "278EFE8A-720A-06C1-A411-CB94878AD3E2",
+          "4CF8CE85-BA1A-BACB-670E-FAAB71D97D95",
+          "661C7790-94D1-147D-7BF4-D518EAF5FA32",
+          "7AA5DDF9-0FE1-110C-26C0-ECED9D05F6F1"
+          ],
+      "LOWcodeWOproduct": "15 01 06",
+      "productType": {
+          "identifier":"complete-packaging-product-type-0001",
+          "category":"food",
+          "detailed":""
+          },
+      "componentContactWithProduct": [
+          "278EFE8A-720A-06C1-A411-CB94878AD3E2",
+          "4CF8CE85-BA1A-BACB-670E-FAAB71D97D95"
+          ],
+      "LOWcodeWproduct": "20 01 08",
+      "onTheGo": "FALSE",
+      "householdWaste": "TRUE",
+      "depositReturnScheme": {
+          "identifier":"complete-packaging-drs-0005",
+          "name":"none",
+          "description":""
+          },
+      "recyclingDisruptors": "",
+      "recyclability": 0,
+      "recyclabilitySource": {
+          "identifier":"complete-packaging-recyclability-source-0001",
+          "category":"OPRL",
+          "detailed":""
+          },
+      "recyclabilityDate": "01/08/2022",
+      "height": 51.5,
+      "heightDate": "01/08/2022",
+      "width": 104,
+      "widthDate": "01/08/2022",
+      "depth": 104,
+      "depthDate": "01/08/2022",
+      "volume": 245,
+      "volumeDate": "01/08/2022",
+      "weight": 16.92,
+      "weightTolerance": 0.74,
+      "weightDate": "01/08/2022",
+      "servingCapacity": 4,
+      "servingCapacityDate": "01/08/2022",
+      "partOfMultipack": "TRUE",
+      "updateDate": "01/08/2022",
+      "releaseDate": "01/08/2022",
+      "discontinueDate": ""
+    }
+    ```
+=== "CSV download"
+
+    * [Complete Packaging example download](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_3_Complete_Packaging_Example.csv){target=_blank}
 
 ## Guide for how to take measurements
 

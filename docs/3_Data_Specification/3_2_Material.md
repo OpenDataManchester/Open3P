@@ -4,17 +4,9 @@ title: Materials
 
 # Materials
 
-Materials should be provided as a separate csv file, in tidy format. This means that each row of the csv file should be one material for a component. An example is provided.
+The materials schema contains information regarding the materials that are used within components. These maybe a single base material from the materials catalogue and a combination of materials.
 
-<figure markdown>
-![Schema](../img/materials-v1.0-2022-12-20.png){ width="450" }
-  <figcaption>Data schema</figcaption>
-</figure>
-
-The specification of this csv file is as follows:
-
-[component_catalogue_material.csv](https://github.com/OpenDataManchester/PPP/blob/main/docs/7_Supporting_Files/7_1_2_Component_Catalogue_Material_Template.csv){target=_blank}
-
+## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
 |identifier|`required`|String|A globally unique identifier. See identifiers section for information on how to construct this identifier|
@@ -24,6 +16,42 @@ The specification of this csv file is as follows:
 |materialWeight|`recommended`|numeric|The percentage of the total materials making-up the component. For every unique componentCatalogue, weightMaterial should add to 100%.|
 |combinationPurpose|`recommended`|String|Why is this material being used? Use the identifier of the material function that this row relates to. The entry here should be drawn from the material function controlled list.|
 |updateDate|`required`|String|The date that the material was provided/last updated. Use the format `dd/mm/yyyy`.|
+
+## Diagram
+
+<figure markdown>
+[![Schema](../img/materials-v1.0-2022-12-20.png){ width="450" }](https://opendatamanchester.github.io/PPP/img/materials-v1.0-2022-12-20.png){target=_blank}
+  <figcaption>Data schema</figcaption>
+</figure>
+
+## Template
+Materials should be provided as a separate csv file, in tidy format. This means that each row of the csv file should be one material for a component. An example is provided.
+
+The specification of this csv file is as follows:
+
+[Materials_Template.csv](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_2_Materials_Template.csv){target=_blank}
+
+## Example
+
+=== "JSON"
+
+    ``` json linenums="1"
+    {
+      "identifier": "DCEE1F88-A83B-5BBC-D2D9-6A862B344977",
+      "materialIdentifier": "278EFE8A-720A-06C1-A411-CB94878AD3E2",
+      "materialCatalogue": "A4BAE07C-1847-CD8E-C933-6FD30478423B",
+      "layer": "1",
+      "materialWeight": "100",
+      "combinationPurpose": {
+        "identifier":"material-component-catalogue-purpose-0015",
+        "category":"structure",
+        },
+      "updateDate": "01/08/2022",
+    }
+    ```
+=== "CSV download"
+
+    * [Materials example download](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_2_Materials_Example.csv){target=_blank}
 
 ## Guide for how to take measurements
 

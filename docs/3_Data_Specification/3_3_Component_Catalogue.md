@@ -4,13 +4,9 @@ title: Component Catalogue
 
 # Component Catalogue
 
-## Standard Spreadsheet Format
+The component catalogue schema contains information regarding the components that are used to create complete packages. These maybe created from a single material or a combination of materials from the materials schema.
 
-The following table lists the column headings that should be used. When providing this information, you can either build your spreadsheet from scratch, or use the template provided.
-
-[component_catalogue.csv](https://github.com/OpenDataManchester/PPP/blob/main/docs/7_Supporting_Files/7_1_1_Component_Catalogue_Template.csv){target=_blank}
-
-
+## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
 |identifier|`required`|String|A globally unique identifier. See identifiers section for information on how to construct this identifier|
@@ -53,6 +49,102 @@ The following table lists the column headings that should be used. When providin
 |updateDate|`required`|String|The date that the component was provided/last updated. Use the format `dd/mm/yyyy`.|
 |releaseDate|`recommended`|String|The date that the component will be available to use. Use the format `dd/mm/yyyy`.|
 |discontinueDate|`recommended`|String|The date that the component will no longer be available to use. Use the format `dd/mm/yyyy`.|
+
+## Diagram
+
+<figure markdown>
+[![Schema](../img/component-catalogue-v1.0.0-22-12-20.png){ width="800" }](https://opendatamanchester.github.io/PPP/img/component-catalogue-v1.0.0-22-12-20.png){target=_blank}
+  <figcaption>Data schema</figcaption>
+</figure>
+
+## Template
+
+Components should be provided as a separate csv file, in tidy format. This means that each row of the csv file should be one component of a complete package. An example is provided.
+
+The specification of this csv file is as follows:
+
+[Component_Catalogue_Template.csv](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_1_Component_Catalogue_Template.csv){target=_blank}
+
+## Example
+
+=== "JSON"
+
+    ``` json linenums="1"
+    {
+      "identifier": "278EFE8A-720A-06C1-A411-CB94878AD3E2",
+      "name": "Guacamole Dip Pot",
+      "description": "Clear PET pot for the Guacamole Dip",
+      "tags": {
+        "GTIN":"00123456789012",
+        },
+      "imageURL": "",
+      "LOWcode": "15 01 02",
+      "materialIdentifier":"278EFE8A-720A-06C1-A411-CB94878AD3E2",
+      "height": 46,
+      "heightDate": "01/08/2022",
+      "width": 101,
+      "widthDate": "01/08/2022",
+      "depth": 101,
+      "depthDate": "01/08/2022",
+      "volume": "",
+      "volumeDate": "",
+      "weight": 6.85,
+      "weightTolerance": "4.38%",
+      "weightDate": "01/08/2022",
+      "shape": {
+        "identifier":"component-catalogue-shape-0005",
+        "category":"cylinder",
+        "detailed":"3D shape with 2 parallel circular bases connected by a curved surface"
+      },
+      "function": {
+        "identifier":"component-catalogue-function-0030",
+        "category":"pot",
+        "detailed":""
+      },
+      "flexibility": {
+        "identifier": "component-catalogue-flexibility-0002",
+        "category": "Rigid",
+        "detailed": ""
+      },
+      "branding": "FALSE",
+      "componentRecyclingDisruptors": "",
+      "colour": "",
+      "opacity": {
+        "identifier": "component-catalogue-opacity-0003",
+        "category": "transparent",
+        "detailed": "allows light to pass through so that objects behind can be distinctly seen; no colour/ clear"
+      },
+      "loaned": "FALSE",
+      "reuseSystem": "",
+      "manufacturedCountry": {
+        "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
+        "Numeric": 826
+      },
+      "recycledContent": 90,
+      "recycledContentEvidenceType": {
+        "identifier":"component-catalogue-recycled-evidence-0001",
+        "category":"certificate",
+        "detailed":""
+      },
+      "recycledContentEvidenceReference": "EXA-123-MPL-4-E",
+      "recyclability": "TRUE",
+      "recyclabilitySource": {
+        "identifier":"complete-packaging-recyclability-source-0001",
+        "category":"OPRL",
+        "detailed":""
+      },
+      "recyclabilityDate": "01/08/2022",
+      "partOfMultipack": "TRUE",
+      "previouslyAssembledComponent": "FALSE",
+      "componentLink": "NA",
+      "updateDate": "01/08/2022",
+      "releaseDate": "01/08/2022",
+      "discontinueDate": ""
+    }
+    ```
+=== "CSV download"
+
+    * [Component Catalogue example download](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_1_Component_Catalogue_Example.csv){target=_blank}
 
 ## Guide for how to take measurements
 
