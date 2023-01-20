@@ -59,7 +59,3 @@ The specification of this csv file is as follows:
       "discontinueDate": "",
     }
     ```
-
-=== "CSV"
-
-    [Coming soon](https://opendatamanchester.org.uk)

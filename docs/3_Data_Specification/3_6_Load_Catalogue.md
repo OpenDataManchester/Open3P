@@ -57,7 +57,3 @@ The specification of this csv file is as follows:
       "updateDate": "01/08/2022",
     }
     ```
-
-=== "CSV"
-
-    [Coming soon](https://opendatamanchester.org.uk)

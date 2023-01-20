@@ -64,10 +64,6 @@ The specification of this csv file is as follows:
     }
     ```
 
-=== "CSV"
-
-    [Coming soon](https://opendatamanchester.org.uk)
-
 ## Guide for how to take measurements
 
 ### Units
