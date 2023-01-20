@@ -134,7 +134,7 @@ The specification of this csv file is as follows:
         "detailed":""
       },
       "recyclabilityDate": "01/08/2022",
-      "partOfMultipack": "FALSE",
+      "partOfMultipack": "TRUE",
       "previouslyAssembledComponent": "FALSE",
       "componentLink": "NA",
       "updateDate": "01/08/2022",

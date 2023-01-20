@@ -122,7 +122,7 @@ The specification of this csv file is as follows:
       "weightDate": "01/08/2022",
       "servingCapacity": 4,
       "servingCapacityDate": "01/08/2022",
-      "partOfMultipack": "FALSE",
+      "partOfMultipack": "TRUE",
       "updateDate": "01/08/2022",
       "releaseDate": "01/08/2022",
       "discontinueDate": ""
