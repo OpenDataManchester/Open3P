@@ -20,7 +20,7 @@ The materials schema contains information regarding the materials that are used 
 ## Diagram
 
 <figure markdown>
-![Schema](../img/materials-v1.0-2022-12-20.png){ width="450" }
+[![Schema](../img/materials-v1.0-2022-12-20.png){ width="450" }](https://opendatamanchester.github.io/PPP/img/materials-v1.0-2022-12-20.png){target=_blank}
   <figcaption>Data schema</figcaption>
 </figure>
 

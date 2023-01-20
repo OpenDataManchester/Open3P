@@ -26,7 +26,7 @@ All the complete packaging from different levels (primary, secondary, and tertia
 ## Diagram
 
 <figure markdown>
-![Schema](../img/load-v1.0.0-22-12-20.png){ width="450" }
+[![Schema](../img/load-v1.0.0-22-12-20.png){ width="450" }](https://opendatamanchester.github.io/PPP/img/load-v1.0.0-22-12-20.png){target=_blank}
   <figcaption>Data schema</figcaption>
 </figure>
 

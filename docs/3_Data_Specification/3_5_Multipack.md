@@ -24,7 +24,7 @@ The multipack schema contains information regarding the multipacks that are used
 ## Diagram
 
 <figure markdown>
-![Schema](../img/multipack-v1.0.0-22-12-20.png){ width="450" }
+[![Schema](../img/multipack-v1.0.0-22-12-20.png){ width="450" }](https://opendatamanchester.github.io/PPP/img/multipack-v1.0.0-22-12-20.png){target=_blank}
   <figcaption>Data schema</figcaption>
 </figure>
 

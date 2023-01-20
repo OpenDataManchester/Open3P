@@ -53,7 +53,7 @@ The component catalogue schema contains information regarding the components tha
 ## Diagram
 
 <figure markdown>
-![Schema](../img/component-catalogue-v1.0.0-22-12-20.png){ width="800" }
+[![Schema](../img/component-catalogue-v1.0.0-22-12-20.png){ width="800" }](https://opendatamanchester.github.io/PPP/img/component-catalogue-v1.0.0-22-12-20.png){target=_blank}
   <figcaption>Data schema</figcaption>
 </figure>
 

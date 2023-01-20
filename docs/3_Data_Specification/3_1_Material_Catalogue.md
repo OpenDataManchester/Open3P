@@ -22,7 +22,7 @@ The materials catalogue schema contains information regarding the base material.
 ## Diagram
 
 <figure markdown>
-![Schema](../img/material_catalogue-v1.0.0-22-12-20.png){ width="450" }
+[![Schema](../img/material_catalogue-v1.0.0-22-12-20.png){ width="450" }](https://opendatamanchester.github.io/PPP/img/material_catalogue-v1.0.0-22-12-20.png){target=_blank}
   <figcaption>Data schema</figcaption>
 </figure>
 
