@@ -36,7 +36,7 @@ Loads should be provided as a separate csv file, in tidy format. This means that
 
 The specification of this csv file is as follows:
 
-[load.csv](https://github.com/OpenDataManchester/PPP/blob/main/docs/7_Supporting_Files/7_1_6_Load_Template.csv){target=_blank}
+[Load_Template.csv](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_6_Load_Template.csv){target=_blank}
 
 ## Example
 
@@ -61,3 +61,7 @@ The specification of this csv file is as follows:
       "updateDate": "01/08/2022",
     }
     ```
+=== "CSV download"
+
+    * [Load example download](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_6_Load_Example.csv){target=_blank}
+    

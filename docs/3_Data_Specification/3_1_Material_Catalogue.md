@@ -21,6 +21,25 @@ The materials catalogue schema contains information regarding the base material.
 
 ## Diagram
 
+<!-- ``` mermaid
+erDiagram
+  MATERIAL_TYPE }o..o{ MATERIALS_CATALOGUE : atritube
+  MATERIAL_PURPOSE }o..o{ MATERIALS_CATALOGUE : atritube
+  MATERIAL_CATEGORY }o--o{ MATERIALS_CATALOGUE : atritube
+  MATERIALS_CATALOGUE {
+    identifier String
+    materialVolume numeric
+    materialType String
+    materialPurpose String
+    materialCategory String
+    materialName String
+    materialChemCID String
+    virginMaterial numeric
+    updateDate String
+  }
+  MATERIALS_CATALOGUE }o--o{ MATERIALS : within
+``` -->
+
 <figure markdown>
 [![Schema](../img/material_catalogue-v1.0.0-22-12-20.png){ width="450" }](https://opendatamanchester.github.io/PPP/img/material_catalogue-v1.0.0-22-12-20.png){target=_blank}
   <figcaption>Data schema</figcaption>
@@ -32,7 +51,7 @@ Materials should be provided as a separate csv file, in tidy format. This means 
 
 The specification of this csv file is as follows:
 
-[component_catalogue_material.csv](https://github.com/OpenDataManchester/PPP/blob/main/docs/7_Supporting_Files/7_1_2_Component_Catalogue_Material_Template.csv){target=_blank}
+[Material_Catalogue_Template.csv](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_7_Materials_Catalogue_Template.csv){target=_blank}
 
 ## Example
 
@@ -63,6 +82,10 @@ The specification of this csv file is as follows:
       "updateDate": "01/08/2022",
     }
     ```
+=== "CSV download"
+
+    * [Material Catalogue example download](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_7_Materials_Catalogue_Example.csv){target=_blank}
+
 
 ## Guide for how to take measurements
 

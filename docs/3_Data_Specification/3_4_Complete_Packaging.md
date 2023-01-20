@@ -57,7 +57,7 @@ Complete packaging should be provided as a separate csv file, in tidy format. Th
 
 The specification of this csv file is as follows:
 
-[complete_packaging.csv ](https://github.com/OpenDataManchester/PPP/blob/main/docs/7_Supporting_Files/7_1_3_Complete_Packaging_Template.csv){target=_blank}
+[Complete_Packaging_Template.csv](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_3_Complete_Packaging_Template.csv){target=_blank}
 
 ## Example
 
@@ -128,6 +128,9 @@ The specification of this csv file is as follows:
       "discontinueDate": ""
     }
     ```
+=== "CSV download"
+
+    * [Complete Packaging example download](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_3_Complete_Packaging_Example.csv){target=_blank}
 
 ## Guide for how to take measurements
 

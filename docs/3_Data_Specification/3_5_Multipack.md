@@ -6,6 +6,8 @@ title: Multipack
 
 The multipack schema contains information regarding the multipacks that are used to create loads. These are created from a number of either identical or different complete packages from the complete packaging schema.
 
+**Note:** The multipack portion is optional (only applies to multipacks). If the complete packaging or component is *not* in a multipack, all of the fields below are optional. 
+
 ## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
@@ -23,6 +25,26 @@ The multipack schema contains information regarding the multipacks that are used
 
 ## Diagram
 
+<!-- ``` mermaid
+erDiagram
+  LOAD_CATATLOGUE }o..o{ MULTIPACK : part
+  MULTIPACK {
+    identifier String
+    name String
+    description String
+    tags Dictionary
+    multipackIdentifier String
+    packagingItems String
+    tier String
+    identicalQuantity Numeric
+    updateDate String
+    releaseDate String
+    discontinueDate String
+  }
+  MULTIPACK }o--o{ COMPLETE_PACKAGING : contains
+  MULTIPACK }o--o{ COMPONENT_CATATLOGUE : contains
+``` -->
+
 <figure markdown>
 [![Schema](../img/multipack-v1.0.0-22-12-20.png){ width="450" }](https://opendatamanchester.github.io/PPP/img/multipack-v1.0.0-22-12-20.png){target=_blank}
   <figcaption>Data schema</figcaption>
@@ -30,13 +52,11 @@ The multipack schema contains information regarding the multipacks that are used
 
 ## Template
 
-**Note:** The multipack portion is optional (only applies to multipacks). If the complete packaging or component is *not* in a multipack, all of the fields below are optional. 
-
 Multipack should be provided as a separate csv file, in tidy format. This means that each row of the csv file should be one multipack of a load. An example is provided.
 
 The specification of this csv file is as follows:
 
-[multipack.csv](https://github.com/OpenDataManchester/PPP/blob/main/docs/7_Supporting_Files/7_1_4_Multipack_Template.csv){target=_blank}
+[Multipack_Template.csv](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_4_Multipack_Template.csv){target=_blank}
 
 ## Example
 
@@ -59,3 +79,6 @@ The specification of this csv file is as follows:
       "discontinueDate": "",
     }
     ```
+=== "CSV download"
+
+    * [Multipack example download](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_4_Multipack_Example.csv){target=_blank}
