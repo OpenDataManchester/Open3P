@@ -1,6 +1,6 @@
 ---
 title: Key Concepts
-description: The key concepts to understanding the open data standard for the plastic value chain.
+description: The key concepts to understanding the open data standard for the packaging value chain.
 ---
 
 # Key Concepts
