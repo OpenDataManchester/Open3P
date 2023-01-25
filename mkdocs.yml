@@ -1,7 +1,8 @@
 site_name: Open3P
-site_description: Open3P is an open data standard for the plastic value chain.
+site_description: Open3P is an open data standard for the packaging value chain.
 theme:
   name: material
+  custom_dir: overrides
   favicon: img/favicon-192.png
   icon:
     repo: fontawesome/brands/git-alt
