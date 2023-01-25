@@ -1,6 +1,6 @@
 ---
 title: Data Flow
-description: The intented flow of data through the plastic value chain using Open3P.
+description: The intented flow of data through the packaging value chain using Open 3P.
 ---
 
 # Data Flow
