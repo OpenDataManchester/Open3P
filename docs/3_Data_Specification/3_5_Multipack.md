@@ -25,9 +25,11 @@ The multipack schema contains information regarding the multipacks that are used
 
 ## Diagram
 
-<!-- ``` mermaid
+``` mermaid
 erDiagram
-  LOAD_CATATLOGUE }o..o{ MULTIPACK : part
+COMPONENT_CATALOGUE }o..o{ MULTIPACK : within
+COMPONENT_CATALOGUE }o..o{ COMPLETE_PACKAGING : within
+COMPLETE_PACKAGING }o..o{ MULTIPACK : within
   MULTIPACK {
     identifier String
     name String
@@ -41,14 +43,15 @@ erDiagram
     releaseDate String
     discontinueDate String
   }
-  MULTIPACK }o--o{ COMPLETE_PACKAGING : contains
-  MULTIPACK }o--o{ COMPONENT_CATATLOGUE : contains
-``` -->
+  COMPLETE_PACKAGING }o..o{ LOAD_CATALOGUE : within
+  MULTIPACK }o..o{ LOAD_CATALOGUE : within
+  COMPONENT_CATALOGUE }o--o{ LOAD_CATALOGUE : within
+```
 
-<figure markdown>
+<!-- <figure markdown>
 [![Schema](../img/multipack-v1.0.0-22-12-20.png){ width="450" }](https://opendatamanchester.github.io/PPP/img/multipack-v1.0.0-22-12-20.png){target=_blank}
   <figcaption>Data schema</figcaption>
-</figure>
+</figure> -->
 
 ## Template
 

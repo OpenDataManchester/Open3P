@@ -21,11 +21,8 @@ The materials catalogue schema contains information regarding the base material.
 
 ## Diagram
 
-<!-- ``` mermaid
+``` mermaid
 erDiagram
-  MATERIAL_TYPE }o..o{ MATERIALS_CATALOGUE : atritube
-  MATERIAL_PURPOSE }o..o{ MATERIALS_CATALOGUE : atritube
-  MATERIAL_CATEGORY }o--o{ MATERIALS_CATALOGUE : atritube
   MATERIALS_CATALOGUE {
     identifier String
     materialVolume numeric
@@ -37,13 +34,19 @@ erDiagram
     virginMaterial numeric
     updateDate String
   }
+  MATERIALS_CATALOGUE }o..o{ CONTOLLED_LISTS : attritubes
   MATERIALS_CATALOGUE }o--o{ MATERIALS : within
-``` -->
+      CONTOLLED_LISTS {
+    materialType recommended
+    materialPurpose recommended
+    materialCategory required
+  }
+```
 
-<figure markdown>
+<!-- <figure markdown>
 [![Schema](../img/material_catalogue-v1.0.0-22-12-20.png){ width="450" }](https://opendatamanchester.github.io/PPP/img/material_catalogue-v1.0.0-22-12-20.png){target=_blank}
   <figcaption>Data schema</figcaption>
-</figure>
+</figure> -->
 
 ## Template
 

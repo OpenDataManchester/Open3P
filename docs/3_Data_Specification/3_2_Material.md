@@ -19,10 +19,29 @@ The materials schema contains information regarding the materials that are used 
 
 ## Diagram
 
-<figure markdown>
+``` mermaid
+erDiagram
+MATERIALS_CATALOGUE }o--o{ MATERIALS : within
+  MATERIALS {
+    identifier String
+    materialIdentifier numeric
+    materialCatalogue String
+    layer String
+    materialWeight String
+    combinationPurpose String
+    updateDate String
+  }
+  MATERIALS }o..o{ CONTOLLED_LISTS : attritubes
+  MATERIALS }o--o{ COMPONENT_CATALOGUE : within
+        CONTOLLED_LISTS {
+    materialFunction recommended
+    }
+```
+
+<!-- <figure markdown>
 [![Schema](../img/materials-v1.0-2022-12-20.png){ width="450" }](https://opendatamanchester.github.io/PPP/img/materials-v1.0-2022-12-20.png){target=_blank}
   <figcaption>Data schema</figcaption>
-</figure>
+</figure> -->
 
 ## Template
 Materials should be provided as a separate csv file, in tidy format. This means that each row of the csv file should be one material for a component. An example is provided.

@@ -21,10 +21,35 @@ All the complete packaging from different levels (primary, secondary, and tertia
 
 ## Diagram
 
-<figure markdown>
+``` mermaid
+erDiagram
+COMPONENT_CATALOGUE }o..o{ LOAD_CATALOGUE : within
+COMPONENT_CATALOGUE }o..o{ COMPLETE_PACKAGING : within
+COMPONENT_CATALOGUE }o..o{ MULTIPACK : within
+MULTIPACK }o..o{ LOAD_CATALOGUE : within
+COMPLETE_PACKAGING }o..o{ LOAD_CATALOGUE : within
+COMPLETE_PACKAGING }o..o{ MULTIPACK : within
+
+  LOAD_CATALOGUE {
+    identifier String
+    materialIdentifier numeric
+    materialCatalogue String
+    layer String
+    materialWeight String
+    combinationPurpose String
+    updateDate String
+  }
+  LOAD_CATALOGUE }o..o{ CONTOLLED_LISTS : attritubes
+  LOAD_CATALOGUE }o--o{ LOAD : within
+        CONTOLLED_LISTS {
+    level required
+    }
+```
+
+<!-- <figure markdown>
 [![Schema](../img/load-catalogue-v1.0.0-22-12-20.png){ width="450" }](https://opendatamanchester.github.io/PPP/img/load-catalogue-v1.0.0-22-12-20.png){target=_blank}
   <figcaption>Data schema</figcaption>
-</figure>
+</figure> -->
 
 ## Template
 

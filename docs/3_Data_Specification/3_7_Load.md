@@ -25,10 +25,29 @@ All the complete packaging from different levels (primary, secondary, and tertia
 
 ## Diagram
 
-<figure markdown>
+``` mermaid
+erDiagram
+LOAD_CATALOGUE }o..o{ LOAD : within
+  LOAD {
+    identifier String
+    name numeric
+    description String
+    tags Dictionary
+    loadIdentifier String
+    startDate String
+    destinationAddressName String
+    destinationAddressStreet String
+    destinationAddressCountry String
+    destinationPostalCode String
+    timesSent Numeric
+    updateDate String
+  }
+```
+
+<!-- <figure markdown>
 [![Schema](../img/load-v1.0.0-22-12-20.png){ width="450" }](https://opendatamanchester.github.io/PPP/img/load-v1.0.0-22-12-20.png){target=_blank}
   <figcaption>Data schema</figcaption>
-</figure>
+</figure> -->
 
 ## Template
 
