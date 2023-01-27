@@ -12,7 +12,7 @@ in the packaging value chain. We have had more than 80 individuals from over 40 
 
 PPP has 5 main aims which will be delivered by 30th November 2022:
 
-1. Extend the Open3R Household Waste Recycling Centre (HWRCs) [data standard](https://opendatamanchester.github.io/Open3R/){target=_blank}
+1. Extend the Open3R Household Waste Recycling Centre (HWRCs) [data standard](https://opendatamanchester.github.io/Open3R/)
 2. Develop a prototype portal to capture data on geographically located recycling services such as HWRCs, bring banks, instore take back schemes
 to support a comprehensive open database of this information
 3. Develop an open standard for plastic packaging data (Open 3P)
@@ -23,7 +23,7 @@ Although this funding and this phase of the project is focussed on plastic packa
 
 By improving the data quality, granularity and availability of both packaging data and recycling services data and by enabling these datasets to be linked we believe we can support more sustainable packaging choices. By giving stakeholders visibility of the different parts of the chain we can help designers and manufacturers consider the end-of-life implications of their choices and we can help them determine the difference between a material being technically  recyclable and the practicality of it being recycled. Providing recyclers and reprocessors with detailed data about material types and recycling disruptors we can enable more materials to be kept at a higher value for longer. Improving these datasets also helps deliver better information into the hands of consumers to support them to recycle more. Better data on market trends in packaging can also provide more certainty and unlock investment and innovation so that we can increase our recycling infrastructure and ensure more of our waste packaging ends up recycled.
 
-The standard is being developed according to the [OpenStand](https://open-stand.org/){target=_blank} principles of:
+The standard is being developed according to the [OpenStand](https://open-stand.org/) principles of:
 
 * Due process
 * Broad consensus
@@ -37,7 +37,7 @@ An open data standard is a set of rules that describe the structure and componen
 
 ## How is the standard being developed?
 
-The initial standard development was funded by [Innovate UK](https://www.gov.uk/government/organisations/innovate-uk){target=_blank}, and is being developed through workshops with industry experts over a number of iterations.
+The initial standard development was funded by [Innovate UK](https://www.gov.uk/government/organisations/innovate-uk), and is being developed through workshops with industry experts over a number of iterations.
 
 ## How to use the standard
 
