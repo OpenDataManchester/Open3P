@@ -52,12 +52,74 @@ The component catalogue schema contains information regarding the components tha
 
 ## Diagram
 
-<figure markdown>
+``` mermaid
+erDiagram
+MATERIALS }o--o{ COMPONENT_CATALOGUE : within
+  COMPONENT_CATALOGUE {
+    identifier String
+    name numeric
+    description String
+    tags Dictionary
+    imageURL URL
+    LOWcode String
+    height Numeric
+    heightDate String
+    width Numeric
+    widthDate String
+    depth Numeric
+    depthDate String
+    volume Numeric
+    volumeDate String
+    weight Numeric
+    weightTolerance Numeric
+    weightDate String
+    shape String
+    function String
+    flexibility String
+    branding Boolean
+    componentRecyclingDisruptors String
+    colour String
+    opacity String
+    loaned Boolean
+    reuseSystem String
+    manufacturedCountry Numeric
+    recycledContent Numeric
+    recycledContentEvidenceType String
+    recycledContentEvidenceReference String
+    recyclability Boolean
+    recyclabilitySource String
+    recyclabilityDate String
+    partOfMultipack Boolean
+    previouslyAssembledComponent Boolean
+    componentLink String
+    updateDate String
+    releaseDate String
+    discontinueDate String
+  }
+  COMPONENT_CATALOGUE }o..o{ CONTOLLED_LISTS : attritubes
+  COMPONENT_CATALOGUE }o--o{ COMPLETE_PACKAGING : within
+  COMPONENT_CATALOGUE }o..o{ MULTIPACK : within
+  MULTIPACK }o..o{ LOAD_CATALOGUE : within
+  COMPLETE_PACKAGING }o..o{ MULTIPACK : within
+  COMPLETE_PACKAGING }o..o{ LOAD_CATALOGUE : within
+  COMPONENT_CATALOGUE }o..o{ LOAD_CATALOGUE : within
+    CONTOLLED_LISTS {
+    recyclabilitySource recommended
+    shape recommended
+    function recommended
+    flexibility recommended
+    componentRecyclingDisruptors recommended
+    opacity recommended
+    recycledContentEvidenceType required
+  }
+```
+
+<!-- <figure markdown>
 [![Schema](../img/component-catalogue-v1.0.0-22-12-20.png){ width="800" }](https://opendatamanchester.github.io/PPP/img/component-catalogue-v1.0.0-22-12-20.png){target=_blank}
   <figcaption>Data schema</figcaption>
 </figure>
 
-## Template
+## Template -->
 
 Components should be provided as a separate csv file, in tidy format. This means that each row of the csv file should be one component of a complete package. An example is provided.
 

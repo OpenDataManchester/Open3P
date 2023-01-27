@@ -46,8 +46,61 @@ The complete packaging schema contains information regarding the complete packag
 
 ## Diagram
 
+``` mermaid
+erDiagram
+COMPONENT_CATALOGUE }o--o{ COMPLETE_PACKAGING : within
+  COMPLETE_PACKAGING {
+    identifier String
+    name String
+    description String
+    tags Dictionary
+    imageURL URL
+    componentItems String
+    LOWcodeWOproduct String
+    productType String
+    componentContactWithProduct String
+    LOWcodeWproduct String
+    onTheGo Boolean
+    householdWaste Boolean
+    depositReturnScheme String
+    recyclingDisruptors String
+    recyclability Boolean
+    recyclabilitySource String
+    recyclabilityDate String
+    height Numeric
+    heightDate String
+    width Numeric
+    widthDate String
+    depth Numeric
+    depthDate String
+    volume Numeric
+    volumeDate String
+    weight Numeric
+    weightTolerance Numeric
+    weightDate String
+    servingCapacity Numeric
+    servingCapacityDate String
+    partOfMultipack Boolean
+    updateDate String
+    releaseDate String
+    discontinueDate String
+  }
+  COMPLETE_PACKAGING }o..o{ CONTOLLED_LISTS : attritubes
+  COMPLETE_PACKAGING }o..o{ MULTIPACK : within
+  COMPONENT_CATALOGUE }o..o{ MULTIPACK : within
+  COMPLETE_PACKAGING }o..o{ LOAD_CATALOGUE : within
+  MULTIPACK }o..o{ LOAD_CATALOGUE : within
+  COMPONENT_CATALOGUE }o..o{ LOAD_CATALOGUE : within
+      CONTOLLED_LISTS {
+    productType recommended
+    depositReturnScheme recommended
+    recyclingDisruptors recommended
+    recyclabilitySource recommended
+  }
+```
+
 <figure markdown>
-[![Schema](../img/complete-packaging-v1.0.0-22-12-20.png){ width="800" }](https://opendatamanchester.github.io/PPP/img/complete-packaging-v1.0.0-22-12-20.png)){target=_blank}
+[![Schema](../img/complete-packaging-v1.0.0-22-12-20.png){ width="800" }](https://opendatamanchester.github.io/PPP/img/complete-packaging-v1.0.0-22-12-20.png){target=_blank}
   <figcaption>Data schema</figcaption>
 </figure>
 
