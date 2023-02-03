@@ -33,6 +33,7 @@ erDiagram
     certification Boolean
     certificationSource String
     certificationDate String
+    manufacturedCountry Numeric
     updateDate String
   }
   BASE_MATERIALS }o..o{ CONTOLLED_LISTS : attritubes
