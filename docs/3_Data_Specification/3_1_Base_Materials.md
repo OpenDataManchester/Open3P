@@ -60,7 +60,7 @@ The specification of this csv file is as follows:
 
 ## Example
 
-=== "JSON - #1"
+=== "JSON #1"
 
     ``` json linenums="1"
     --Food grade synthetic polyethylene terephthalate (PET) made in the UK
@@ -92,7 +92,7 @@ The specification of this csv file is as follows:
       "updateDate": "01/08/2022",
     }
     ```
-=== "JSON - #2"
+=== "JSON #2"
 
     ``` json linenums="1"
     --FSC accredited spruce grown in Scotland
