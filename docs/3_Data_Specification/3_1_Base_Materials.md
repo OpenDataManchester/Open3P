@@ -24,7 +24,7 @@ The base materials schema contains information regarding the core materials. The
 
 ``` mermaid
 erDiagram
-  MATERIALS_CATALOGUE {
+  BASE_MATERIALS {
     identifier String
     baseMaterialName String
     baseMaterialType String
@@ -35,12 +35,12 @@ erDiagram
     certificationDate String
     updateDate String
   }
-  MATERIALS_CATALOGUE }o..o{ CONTOLLED_LISTS : attritubes
-  MATERIALS_CATALOGUE }o--o{ MATERIALS : within
+  BASE_MATERIALS }o..o{ CONTOLLED_LISTS : attritubes
+  BASE_MATERIALS }o--o{ MATERIALS : within
       CONTOLLED_LISTS {
     materialType recommended
-    materialPurpose recommended
     materialCategory required
+    certificationSource recommended
   }
 ```
 
@@ -51,7 +51,7 @@ erDiagram
 
 ## Template
 
-Materials should be provided as a separate csv file, in tidy format. This means that each row of the csv file should be one material that is combined in the materials csv to create combinations. An example is provided.
+Base materials should be provided as a separate csv file, in tidy format. This means that each row of the csv file should be one base material. An example is provided.
 
 The specification of this csv file is as follows:
 
@@ -59,47 +59,66 @@ The specification of this csv file is as follows:
 
 ## Example
 
-=== "JSON"
+=== "JSON - #1"
 
     ``` json linenums="1"
+    --Food grade synthetic polyethylene terephthalate (PET) made in the UK
     {
       "identifier": "A4BAE07C-1847-CD8E-C933-6FD30478423B",
-      "materialVolume": "1000",
-      "materialType": {
+      "baseMaterialName": "PET",
+      "baseMaterialType": {
         "identifier":"material-component-catalogue-type-0002",
         "category":"synthetic",
         "detailed":"derived from crude oil, natural gas or coal."
       },
-      "materialPurpose": {
-        "identifier":"material-component-catalogue-purpose-0015",
-        "category":"structure",
-        "detailed":""
-      },
-      "materialCategory": {
+      "baseMaterialCategory": {
         "identifier":"material-component-catalogue-category-0007",
         "category":"plastic",
         "detailed":""
       },
-      "materialName": "PET",
       "materialChemCID": "223961227",
-      "virginMaterial": "20",
+      "certification": "TRUE",
+      "certificationSource": {
+        "identifier":"certification-source-0002",
+        "category":"FSA",
+        "detailed":"The Food Standards Agency (FSA) is the independent government department working to protect public health and consumers’ wider interests in relation to food in England, Wales and Northern Ireland."
+      },
+      "certificationDate": "01/08/2022",
+      "manufacturedCountry": {
+        "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
+        "Numeric": 826
+      },
+      "updateDate": "01/08/2022",
+    }
+    ```
+=== "JSON - #2"
+
+    ``` json linenums="1"
+    --FSC accredited spruce grown in Scotland
+    {
+      "identifier": "a5e6b8bc-ade8-4660-857e-d397243f6b57",
+      "baseMaterialName": "Spruce",
+      "baseMaterialType": "",
+      "baseMaterialCategory": {
+        "identifier":"material-component-catalogue-category-0009",
+        "category":"wood",
+        "detailed":""
+      },
+      "materialChemCID": "",
+      "certification": "TRUE",
+      "certificationSource": {
+        "identifier":"certification-source-0001",
+        "category":"FSC",
+        "detailed":"The Forest Stewardship Council (FSC) is an international, non-governmental organisation dedicated to promoting responsible management of the world’s forests."
+      },
+      "certificationDate": "01/08/2022",
+      "manufacturedCountry": {
+        "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
+        "Numeric": 826
+      },
       "updateDate": "01/08/2022",
     }
     ```
 === "CSV download"
 
     * [Material Catalogue example download](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_7_Materials_Catalogue_Example.csv){target=_blank}
-
-
-## Guide for how to take measurements
-
-### Units
-
-All measurements should be given using the metric system.
-
-- Volume: millilitre (ml)
-
-Numbers should be entered with a decimal place. Use the decimal / full stop / period character as a separator. Do not exceed 3 decimal places. When rounding, use convential rounding methods: for 5 and above round up, 4 and below round down. For example: volume = 0.67952 rounded to 0.68. 
-
-**Important**: When converting between systems of measurement, perform the conversion first and then apply the convential rounding. This will give more accuracy and consistency.
-
