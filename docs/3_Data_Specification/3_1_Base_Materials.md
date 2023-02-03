@@ -1,23 +1,24 @@
 ---
-title: Materials Catalogue
+title: Base Materials
 ---
 
-# Materials Catalogue
+# Base Materials
 
-The materials catalogue schema contains information regarding the base material. These are then combined together within the materials table.
+The base materials schema contains information regarding the core materials. These are then combined together within the materials table to create more complicated materials.
 
 ## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
 |identifier|`required`|String|A globally unique identifier. See identifiers section for information on how to construct this identifier|
-|materialVolume|`recommended`|numeric|The amount of material used given in `ml` (See 'Guide for how to take measurements' below).|
-|materialType|`recommended`|String|Is the material 'synthetic' or 'biobased'? Use the identifier of the material type that this row relates to. The entry here should be drawn from the material type controlled list.|
-|materialPurpose|`recommended`|String|Why is this material being used? Use the identifier of the material purpose that this row relates to. The entry here should be drawn from the material purpose controlled list.|
-|materialCategory|`required`|String|The category this material row relates to. The entry here should be drawn from the material category controlled list.|
-|materialName|`required`|String|The name of the material this row relates to. `e.g., Polypropylene or Titanium Dioxide`|
-|materialChemCID|`recommended`|String|The PubChem CID for the exact material used. The PubChem CID is PubChem's compound identifier, which is a non-zero integer for a unique chemical structure. PubChem CID can be found using their [search](https://pubchem.ncbi.nlm.nih.gov/){target=_blank}. If for some reason the PubChem CID cannot be located, consider contributing to PubChem and create the compound identifier. However, if this cannot be done, please enter `Unknown`.|
-|virginMaterial|`recommended`|numeric|The maximum allowable percent of the material that was newly created for the component.|
-|updateDate|`required`|String|The date that the material was provided/last updated. Use the format `dd/mm/yyyy`.|
+|baseMaterialName|`required`|String|The name of the base material this row relates to. `e.g., Polypropylene or Aluminium or Silica`|
+|baseMaterialType|`recommended`|String|Is the base material 'synthetic' or 'biobased'? Use the identifier of the material type that this row relates to. The entry here should be drawn from the [Material Type Controlled List](https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_2_1_Material_Type.csv){target=_blank}.|
+|baseMaterialCategory|`required`|String|The category this base material row relates to. The entry here should be drawn from the [Material Category Controlled List](https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_2_3_Material_Category.csv){target=_blank}.|
+|materialChemCID|`recommended`|String|The PubChem CID for the exact bse material used. The PubChem CID is PubChem's compound identifier, which is a non-zero integer for a unique chemical structure. PubChem CID can be found using their [search](https://pubchem.ncbi.nlm.nih.gov/){target=_blank}. If for some reason the PubChem CID cannot be located, consider contributing to PubChem and create the compound identifier. However, if this cannot be done, please enter `Unknown`.|
+|certification|`recommended`|Boolean|Does the base material have a certificate (e.g. FSC, REACH, FSA etc.)?|
+|certificationSource|`recommended`|String|What source provided the certificate? The entry should be the [Certification Source Controlled List](https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_2_4_Certification_Source.csv){target=_blank} identifier.|
+|certificationDate|`recommended`|String|The date that the certificate was provided/last updated. Use the format `dd/mm/yyyy`.|
+|manufacturedCountry|`recommended`|Numeric|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
+|updateDate|`required`|String|The date that the base material was provided/last updated. Use the format `dd/mm/yyyy`.|
 
 ## Diagram
 
@@ -25,13 +26,13 @@ The materials catalogue schema contains information regarding the base material.
 erDiagram
   MATERIALS_CATALOGUE {
     identifier String
-    materialVolume numeric
-    materialType String
-    materialPurpose String
-    materialCategory String
-    materialName String
+    baseMaterialName String
+    baseMaterialType String
+    baseMaterialCategory String
     materialChemCID String
-    virginMaterial numeric
+    certification Boolean
+    certificationSource String
+    certificationDate String
     updateDate String
   }
   MATERIALS_CATALOGUE }o..o{ CONTOLLED_LISTS : attritubes

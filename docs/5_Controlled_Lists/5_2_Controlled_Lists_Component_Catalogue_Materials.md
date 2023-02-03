@@ -23,3 +23,7 @@ The controlled lists in use in the standard for component catalogue materials ar
 ## 3. Material Category
 
 [Material Category Controlled List](https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_2_3_Material_Category.csv){target=_blank}
+
+## 4. Certification Source
+
+[Certification Source Controlled List](https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_2_4_Certification_Source.csv){target=_blank}
