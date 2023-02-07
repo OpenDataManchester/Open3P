@@ -14,7 +14,7 @@ The multipack schema contains information regarding the multipacks that are used
 |identifier|`required`|String|A globally unique identifier. See identifiers section for information on how to construct this identifier|
 |name|`recommended`|String|The name of this multipack.|
 |description|`recommended`|String|A brief description of this multipack.|
-|tags|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the complete packaging in other systems. For example: bar codes or global trade item number (gtin). To provide tags please follow this format. `{'tagName1': 'identifier1', 'tagName2': 'identifier2'}`|
+|externalIdentifier|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the component in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide tags please follow this format. `{'tagName1': 'identifier1', 'tagName2': 'identifier2'}`|
 |multipackIdentifier|`required`|String|The unique identifier of the created multipack. A globally unique identifier. See identifiers section for information on how to construct this identifier.|
 |packagingItems|`required`|String|The complete packaging and/or the component identifiers used to create the multipack. There must be an equivalent record in the `complete_packaging` or `component_Catalogue` data.|
 |tier|`recommended`|Integer|The tier associated with the multipack. The inner most tier denoted as 1, and the outermost tier is the biggest number.|
@@ -27,14 +27,14 @@ The multipack schema contains information regarding the multipacks that are used
 
 ``` mermaid
 erDiagram
-COMPONENT_CATALOGUE }o..o{ MULTIPACK : within
-COMPONENT_CATALOGUE }o..o{ COMPLETE_PACKAGING : within
+COMPONENTS }o..o{ MULTIPACK : within
+COMPONENTS }o..o{ COMPLETE_PACKAGING : within
 COMPLETE_PACKAGING }o..o{ MULTIPACK : within
   MULTIPACK {
     identifier String
     name String
     description String
-    tags Dictionary
+    externalIdentifier Dictionary
     multipackIdentifier String
     packagingItems String
     tier String
@@ -70,7 +70,7 @@ The specification of this csv file is as follows:
       "identifier": "B9574E9A-A561-BCA6-0E36-448A2E46B2BF",
       "name": "4 pack of guacamole dip",
       "description": "4 tubs of guacamole that are sold together. Not to be sold seperately.",
-      "tags": {
+      "externalIdentifier": {
         "GTIN":"00123456789012",
         },
       "multipackIdentifier": "346C5546-282B-C040-CE74-DD0DD4688C0B",
