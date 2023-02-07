@@ -12,7 +12,7 @@ The complete packaging schema contains information regarding the complete packag
 |identifier|`required`|String|A globally unique identifier. See identifiers section for information on how to construct this identifier|
 |name|`recommended`|String|The name of this complete packaging.|
 |description|`recommended`|String|A brief description of this complete packaging.|
-|tags|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the complete packaging in other systems. For example: bar codes or global trade item number (gtin). To provide tags please follow this format. `{'tagName1': 'identifier1', 'tagName2': 'identifier2'}`|
+|externalIdentifier|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the component in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide tags please follow this format. `{'tagName1': 'identifier1', 'tagName2': 'identifier2'}`|
 |imageURL|`recommended`|URL|A URL that links to a picture of the complete packaging. Please see the guidelines below on how to capture the image and name the URL.|
 |componentItems|`required`|String|The component catalogue identifiers used to create the complete packaging. There must be an equivalent record in the `component_catalogue` data.|
 |LOWcodeWOproduct|`recommended`|String|The list of waste code for **only** the complete packaging, by itself (excluding the product). LOW code is synonymous with European Waste Catelogue Code (EWC). For example: an empty bottle would have a LOWcode of `15 01 02`. Please use [Dsposal](https://dsposal.uk/browse/ewc){target=_blank} or [legislation.gov](https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made){target=_blank} to find the LOWcode. **Note**: The LOWcode can based on its combination with other components and the actual product contained in the complete packaging. Be sure to only include the complete packaging LOWcode and not the complete packaging with the product. If you cannot find the code or are uncertain please enter `Uncertain`.|
@@ -40,6 +40,9 @@ The complete packaging schema contains information regarding the complete packag
 |servingCapacity|`recommended`|Numeric|The serving capacity of the complete packaging - how much of a product that can be contained in the complete packaging.|
 |servingCapacityDate|`recommended`|String|The date that the serving capacity was last verified/measured. Use the format `dd/mm/yyyy`.|
 |partOfMultipack|`required`|Boolean|Is the complete packaging part of a multipack? Answer as: `1` for yes and `0` for no.|
+|certification|`recommended`|Boolean|Does the material have a certificate (e.g. FSC, REACH, FSA etc.)?|
+|certificationSource|`recommended`|String|What source provided the certificate? The entry should be the [Certification Source Controlled List](https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_2_4_Certification_Source.csv){target=_blank} identifier.|
+|certificationDate|`recommended`|String|The date that the certificate was provided/last updated. Use the format `dd/mm/yyyy`.|
 |updateDate|`required`|String|The date that the complete packaging was provided/last updated. Use the format `dd/mm/yyyy`.|
 |releaseDate|`recommended`|String|The date that the complete packaging will be available to use. Use the format `dd/mm/yyyy`.|
 |discontinueDate|`recommended`|String|The date that the complete packaging will no longer be available to use. Use the format `dd/mm/yyyy`.|
@@ -48,12 +51,12 @@ The complete packaging schema contains information regarding the complete packag
 
 ``` mermaid
 erDiagram
-COMPONENT_CATALOGUE }o--o{ COMPLETE_PACKAGING : within
+COMPONENTS }o--o{ COMPLETE_PACKAGING : within
   COMPLETE_PACKAGING {
     identifier String
     name String
     description String
-    tags Dictionary
+    externalIdentifier Dictionary
     imageURL URL
     componentItems String
     LOWcodeWOproduct String
@@ -81,6 +84,9 @@ COMPONENT_CATALOGUE }o--o{ COMPLETE_PACKAGING : within
     servingCapacity Numeric
     servingCapacityDate String
     partOfMultipack Boolean
+    certification Boolean
+    certificationSource String
+    certificationDate String
     updateDate String
     releaseDate String
     discontinueDate String
@@ -96,6 +102,7 @@ COMPONENT_CATALOGUE }o--o{ COMPLETE_PACKAGING : within
     depositReturnScheme recommended
     recyclingDisruptors recommended
     recyclabilitySource recommended
+    certificationSource recommended
   }
 ```
 
@@ -119,10 +126,11 @@ The specification of this csv file is as follows:
     ``` json linenums="1"
     {
       "identifier": "C29B4703-121C-7552-D905-FD5AB263D611",
-      "name": "2022 P06 2 Star Summer CHL Salad And Dips Guacamole Dip",
+      "name": "Salad And Dips Guacamole Dip",
       "description": "A clear pot, film and lid in a decorative sleeve packed into an outercase.",
-      "tags": {
-          "GTIN":"00123456789012"
+      "externalIdentifier": {
+          "internalIdentifer": "GUA-PET-2022-2341",
+          "GTIN": "00123456789012"
           },
       "imageURL": [
           "https://dsposal-my.sharepoint.com/:i:/g/personal/tom_yourdsposal_uk/Eblhs6hbkTFAo6SNdYh1ew8BfRwTFna21RyzaKJSq6xX9g?e=0BJKsf",
@@ -176,6 +184,13 @@ The specification of this csv file is as follows:
       "servingCapacity": 4,
       "servingCapacityDate": "01/08/2022",
       "partOfMultipack": "TRUE",
+      "certification": "TRUE",
+      "certificationSource": {
+        "identifier": "certification-source-0002",
+        "category": "FSA",
+        "detailed": "The Food Standards Agency (FSA) is the independent government department working to protect public health and consumers’ wider interests in relation to food in England, Wales and Northern Ireland."
+      },
+      "certificationDate": "01/08/2022",
       "updateDate": "01/08/2022",
       "releaseDate": "01/08/2022",
       "discontinueDate": ""

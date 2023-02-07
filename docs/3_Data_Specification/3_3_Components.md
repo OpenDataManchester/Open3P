@@ -135,6 +135,7 @@ The specification of this csv file is as follows:
 === "JSON"
 
     ``` json linenums="1"
+    --Food grade PET circular pot made in the UK
     {
       "identifier": "278EFE8A-720A-06C1-A411-CB94878AD3E2",
       "name": "Guacamole Dip Pot",
