@@ -12,7 +12,7 @@ All the complete packaging from different levels (primary, secondary, and tertia
 |identifier|`required`|String|A globally unique identifier. See identifiers section for information on how to construct this identifier|
 |name|`recommended`|String|The name of this load.|
 |description|`recommended`|String|A brief description of this load.|
-|tags|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the complete packaging in other systems. For example: bar codes or global trade item number (gtin). To provide tags please follow this format. `{'tagName1': 'identifier1', 'tagName2': 'identifier2'}`|
+|externalIdentifier|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the component in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide tags please follow this format. `{'tagName1': 'identifier1', 'tagName2': 'identifier2'}`|
 |loadIdentifier|`required`|String|The unique identifier of the created load. A globally unique identifier. See identifiers section for information on how to construct this identifier.|
 |packagingItems|`required`|String|The complete packaging and/or the multipack identifiers used to create the load. There must be an equivalent record in the `complete_packaging` or `multipack` data.|
 |quantityInLoad|`required`|Numeric|Number of units for the packaging items found in a load that this row corresponds to.|
@@ -23,20 +23,22 @@ All the complete packaging from different levels (primary, secondary, and tertia
 
 ``` mermaid
 erDiagram
-COMPONENT_CATALOGUE }o..o{ LOAD_CATALOGUE : within
-COMPONENT_CATALOGUE }o..o{ COMPLETE_PACKAGING : within
-COMPONENT_CATALOGUE }o..o{ MULTIPACK : within
+COMPONENTS }o..o{ LOAD_CATALOGUE : within
+COMPONENTS }o..o{ COMPLETE_PACKAGING : within
+COMPONENTS }o..o{ MULTIPACK : within
 MULTIPACK }o..o{ LOAD_CATALOGUE : within
 COMPLETE_PACKAGING }o..o{ LOAD_CATALOGUE : within
 COMPLETE_PACKAGING }o..o{ MULTIPACK : within
 
   LOAD_CATALOGUE {
     identifier String
-    materialIdentifier numeric
-    materialCatalogue String
-    layer String
-    materialWeight String
-    combinationPurpose String
+    name String
+    description String
+    externalIdentifier Dictionary
+    loadIdentifier String
+    packagingItems String
+    quantityInLoad Numeric
+    level String
     updateDate String
   }
   LOAD_CATALOGUE }o..o{ CONTOLLED_LISTS : attritubes
@@ -68,7 +70,7 @@ The specification of this csv file is as follows:
       "identifier": "91F2060F-17CD-DA56-7746-0018A90AEF5A",
       "name": "Full pallet of multipack guacamole dip",
       "description": "24 cases of 3 x multipack tubs of guacamole dip",
-      "tags": {
+      "externalIdentifier": {
         "GTIN":"00123456789012",
         },
       "loadIdentifier": "CA88F5CE-2D09-AFE0-08D7-44804780F924",
