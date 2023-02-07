@@ -1,10 +1,10 @@
 ---
-title: Component Catalogue
+title: Components
 ---
 
-# Component Catalogue
+# Components
 
-The component catalogue schema contains information regarding the components that are used to create complete packages. These maybe created from a single material or a combination of materials from the materials schema.
+The components schema contains information regarding the individual components that are used to create complete packages. These maybe created from a single material or a combination of materials from the materials schema.
 
 ## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|
@@ -12,7 +12,7 @@ The component catalogue schema contains information regarding the components tha
 |identifier|`required`|String|A globally unique identifier. See identifiers section for information on how to construct this identifier|
 |name|`recommended`|String|The name of this component.|
 |description|`recommended`|String|A brief description of this component.|
-|tags|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the component in other systems. For example: bar codes or global trade item number (gtin). To provide tags please follow this format. `{'tagName1': 'identifier1', 'tagName2': 'identifier2'}`|
+|externalIdentifier|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the component in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide tags please follow this format. `{'tagName1': 'identifier1', 'tagName2': 'identifier2'}`|
 |imageURL|`recommended`|URL|A URL that links to a picture of the component. Please see the guidelines below on how to capture the image and name the URL.|
 |LOWcode|`recommended`|String|The list of waste code for **only** the component, by itself. LOW code is synonymous with European Waste Catelogue Code (EWC). For example: an empty bottle would have a LOWcode of `15 01 02`. Please use [Dsposal](https://dsposal.uk/browse/ewc){target=_blank} or [legislation.gov](https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made){target=_blank} to find the LOWcode. **Note**: The LOWcode can based on its combination with other components and the actual product contained in the completePackaging. Be sure to only include the component LOWcode. If you cannot find the code or are uncertain please enter `Uncertain`.|
 |materialIdentifier|`required`|String|The unique identifier of the materials that this component is made of. There must be an equivalent record in the `materials` data.|
@@ -44,8 +44,9 @@ The component catalogue schema contains information regarding the components tha
 |recyclabilitySource|`recommended`|String|What source provided the recyclability claim? The entry should be the recyclabilitySource controlled list identifier.|
 |recyclabilityDate|`recommended`|String|The date that the recyclability was provided/last updated. Use the format `dd/mm/yyyy`.|
 |partOfMultipack|`required`|Boolean|Is the component part of a multipack? Answer as: `1` for yes and `0` for no.|
-|previouslyAssembledComponent|`required`|Boolean|When manufactured, was this component combined with other components? Answer as: `1` for yes and `0` for no.|
-|componentLink|`required`|String|If `previouslyAssembledComponent` is yes, please provide the `identifier` for the component that is attached when created. Answer `NA` if `previouslyAssembledComponent` is no.|
+|certification|`recommended`|Boolean|Does the material have a certificate (e.g. FSC, REACH, FSA etc.)?|
+|certificationSource|`recommended`|String|What source provided the certificate? The entry should be the [Certification Source Controlled List](https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_2_4_Certification_Source.csv){target=_blank} identifier.|
+|certificationDate|`recommended`|String|The date that the certificate was provided/last updated. Use the format `dd/mm/yyyy`.|
 |updateDate|`required`|String|The date that the component was provided/last updated. Use the format `dd/mm/yyyy`.|
 |releaseDate|`recommended`|String|The date that the component will be available to use. Use the format `dd/mm/yyyy`.|
 |discontinueDate|`recommended`|String|The date that the component will no longer be available to use. Use the format `dd/mm/yyyy`.|
@@ -54,12 +55,12 @@ The component catalogue schema contains information regarding the components tha
 
 ``` mermaid
 erDiagram
-MATERIALS }o--o{ COMPONENT_CATALOGUE : within
-  COMPONENT_CATALOGUE {
+MATERIALS }o--o{ COMPONENTS : within
+  COMPONENTS {
     identifier String
-    name numeric
+    name Numeric
     description String
-    tags Dictionary
+    externalIdentifier Dictionary
     imageURL URL
     LOWcode String
     height Numeric
@@ -90,19 +91,20 @@ MATERIALS }o--o{ COMPONENT_CATALOGUE : within
     recyclabilitySource String
     recyclabilityDate String
     partOfMultipack Boolean
-    previouslyAssembledComponent Boolean
-    componentLink String
+    certification Boolean
+    certificationSource String
+    certificationDate String
     updateDate String
     releaseDate String
     discontinueDate String
   }
-  COMPONENT_CATALOGUE }o..o{ CONTOLLED_LISTS : attritubes
-  COMPONENT_CATALOGUE }o--o{ COMPLETE_PACKAGING : within
-  COMPONENT_CATALOGUE }o..o{ MULTIPACK : within
+  COMPONENTS }o..o{ CONTOLLED_LISTS : attritubes
+  COMPONENTS }o--o{ COMPLETE_PACKAGING : within
+  COMPONENTS }o..o{ MULTIPACK : within
   MULTIPACK }o..o{ LOAD_CATALOGUE : within
   COMPLETE_PACKAGING }o..o{ MULTIPACK : within
   COMPLETE_PACKAGING }o..o{ LOAD_CATALOGUE : within
-  COMPONENT_CATALOGUE }o..o{ LOAD_CATALOGUE : within
+  COMPONENTS }o..o{ LOAD_CATALOGUE : within
     CONTOLLED_LISTS {
     recyclabilitySource recommended
     shape recommended
@@ -111,6 +113,7 @@ MATERIALS }o--o{ COMPONENT_CATALOGUE : within
     componentRecyclingDisruptors recommended
     opacity recommended
     recycledContentEvidenceType required
+    certificationSource recommended
   }
 ```
 
@@ -136,8 +139,9 @@ The specification of this csv file is as follows:
       "identifier": "278EFE8A-720A-06C1-A411-CB94878AD3E2",
       "name": "Guacamole Dip Pot",
       "description": "Clear PET pot for the Guacamole Dip",
-      "tags": {
-        "GTIN":"00123456789012",
+      "externalIdentifier": {
+        "internalId": "GUA-PET-2022-1",
+        "GTIN": "00123456789012",
         },
       "imageURL": "",
       "LOWcode": "15 01 02",
@@ -197,8 +201,13 @@ The specification of this csv file is as follows:
       },
       "recyclabilityDate": "01/08/2022",
       "partOfMultipack": "TRUE",
-      "previouslyAssembledComponent": "FALSE",
-      "componentLink": "NA",
+      "certification": "TRUE",
+      "certificationSource": {
+        "identifier": "certification-source-0002",
+        "category": "FSA",
+        "detailed": "The Food Standards Agency (FSA) is the independent government department working to protect public health and consumers’ wider interests in relation to food in England, Wales and Northern Ireland."
+      },
+      "certificationDate": "01/08/2022",
       "updateDate": "01/08/2022",
       "releaseDate": "01/08/2022",
       "discontinueDate": ""
