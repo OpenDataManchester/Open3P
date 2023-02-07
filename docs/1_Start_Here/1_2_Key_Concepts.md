@@ -5,7 +5,7 @@ description: The key concepts to understanding the open data standard for the pa
 
 # Key Concepts
 
-## Material Catalogue
+## Base Materials
 - general template used to store information about a base level material
 
 ## Materials
@@ -16,13 +16,11 @@ description: The key concepts to understanding the open data standard for the pa
 - an individual unit (e.g., a bottle)
 - parts made from different materials (e.g., a window on a sandwich box)
 - zippers, taps, etc. (even though attached)
+- general template used for packaging manufacturers to store information.
+- these components can be used by multiple users and combined with other components in different ways
 
 ## Product
 - That which is contained inside of the packaging
-
-## Component Catalogue
-- general template used for packaging manufacturers to store information. 
-- these components can be used by multiple users and combined with other components in different ways
 
 ## Complete Packaging
 - Components are combined to make complete packaging

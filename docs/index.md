@@ -20,7 +20,7 @@ The standard is open and free to use, copy and distribute. However, the standard
 
 1. [Start Here](/PPP/1_Start_Here/1_1_Introduction/)
 2. [Data Formats](/PPP/2_Data_Formats/2_1_Data_Formats/)
-3. [Data Specification](/PPP/3_Data_Specification/3_1_Component_Catalogue/)
+3. [Data Specification](/PPP/3_Data_Specification/3_1_Base_Materials/)
 4. [Identifiers](/PPP/4_Identifiers/4_1_Identifiers/)
 5. [Controlled Lists](/PPP/5_Controlled_Lists/5_1_Controlled_Lists_Component_Catalogue/)
 6. [Governance](/PPP/6_Governance/6_1_Governance/)
