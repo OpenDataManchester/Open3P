@@ -12,7 +12,7 @@ All the complete packaging from different levels (primary, secondary, and tertia
 |identifier|`required`|String|A globally unique identifier. See identifiers section for information on how to construct this identifier|
 |name|`recommended`|String|The name of this load.|
 |description|`recommended`|String|A brief description of this load.|
-|tags|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the complete packaging in other systems. For example: bar codes or global trade item number (gtin). To provide tags please follow this format. `{'tagName1': 'identifier1', 'tagName2': 'identifier2'}`|
+|externalIdentifier|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the component in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'tagName1': 'identifier1', 'tagName2': 'identifier2'}`|
 |loadIdentifier|`required`|String|The unique identifier of the created load. There must be an equivalent identifier found in the `load catalogue`.|
 |startDate|`required`|String|The date that the load began for the destination. Use the format `dd/mm/yyyy`.|
 |endDate|`required`|String|The date that the load ended for the destination. Use the format `dd/mm/yyyy`.|
@@ -32,7 +32,7 @@ LOAD_CATALOGUE }o..o{ LOAD : within
     identifier String
     name numeric
     description String
-    tags Dictionary
+    externalIdentifier Dictionary
     loadIdentifier String
     startDate String
     destinationAddressName String
@@ -66,7 +66,7 @@ The specification of this csv file is as follows:
       "identifier": "ED051AFD-EC7F-0428-B054-8837118922FE",
       "name": "Weekly Load of Guacamole Dip",
       "description": "24 cases of 12 tubs of guacamole dip for example company on high street west",
-      "tags": {
+      "externalIdentifiers": {
         "GTIN":"00123456789012",
         },
       "loadIdentifier": "CA88F5CE-2D09-AFE0-08D7-44804780F924",
