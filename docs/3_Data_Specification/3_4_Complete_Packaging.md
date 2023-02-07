@@ -12,7 +12,7 @@ The complete packaging schema contains information regarding the complete packag
 |identifier|`required`|String|A globally unique identifier. See identifiers section for information on how to construct this identifier|
 |name|`recommended`|String|The name of this complete packaging.|
 |description|`recommended`|String|A brief description of this complete packaging.|
-|externalIdentifier|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the component in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide tags please follow this format. `{'tagName1': 'identifier1', 'tagName2': 'identifier2'}`|
+|externalIdentifiers|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the component in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'tagName1': 'identifier1', 'tagName2': 'identifier2'}`|
 |imageURL|`recommended`|URL|A URL that links to a picture of the complete packaging. Please see the guidelines below on how to capture the image and name the URL.|
 |componentItems|`required`|String|The component catalogue identifiers used to create the complete packaging. There must be an equivalent record in the `component_catalogue` data.|
 |LOWcodeWOproduct|`recommended`|String|The list of waste code for **only** the complete packaging, by itself (excluding the product). LOW code is synonymous with European Waste Catelogue Code (EWC). For example: an empty bottle would have a LOWcode of `15 01 02`. Please use [Dsposal](https://dsposal.uk/browse/ewc){target=_blank} or [legislation.gov](https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made){target=_blank} to find the LOWcode. **Note**: The LOWcode can based on its combination with other components and the actual product contained in the complete packaging. Be sure to only include the complete packaging LOWcode and not the complete packaging with the product. If you cannot find the code or are uncertain please enter `Uncertain`.|
@@ -56,7 +56,7 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : within
     identifier String
     name String
     description String
-    externalIdentifier Dictionary
+    externalIdentifiers Dictionary
     imageURL URL
     componentItems String
     LOWcodeWOproduct String
@@ -128,7 +128,7 @@ The specification of this csv file is as follows:
       "identifier": "C29B4703-121C-7552-D905-FD5AB263D611",
       "name": "Salad And Dips Guacamole Dip",
       "description": "A clear pot, film and lid in a decorative sleeve packed into an outercase.",
-      "externalIdentifier": {
+      "externalIdentifiers": {
           "internalIdentifer": "GUA-PET-2022-2341",
           "GTIN": "00123456789012"
           },

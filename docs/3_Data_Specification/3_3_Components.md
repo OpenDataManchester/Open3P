@@ -12,7 +12,7 @@ The components schema contains information regarding the individual components t
 |identifier|`required`|String|A globally unique identifier. See identifiers section for information on how to construct this identifier|
 |name|`recommended`|String|The name of this component.|
 |description|`recommended`|String|A brief description of this component.|
-|externalIdentifier|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the component in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide tags please follow this format. `{'tagName1': 'identifier1', 'tagName2': 'identifier2'}`|
+|externalIdentifiers|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the component in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'tagName1': 'identifier1', 'tagName2': 'identifier2'}`|
 |imageURL|`recommended`|URL|A URL that links to a picture of the component. Please see the guidelines below on how to capture the image and name the URL.|
 |LOWcode|`recommended`|String|The list of waste code for **only** the component, by itself. LOW code is synonymous with European Waste Catelogue Code (EWC). For example: an empty bottle would have a LOWcode of `15 01 02`. Please use [Dsposal](https://dsposal.uk/browse/ewc){target=_blank} or [legislation.gov](https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made){target=_blank} to find the LOWcode. **Note**: The LOWcode can based on its combination with other components and the actual product contained in the completePackaging. Be sure to only include the component LOWcode. If you cannot find the code or are uncertain please enter `Uncertain`.|
 |materialIdentifier|`required`|String|The unique identifier of the materials that this component is made of. There must be an equivalent record in the `materials` data.|
@@ -60,7 +60,7 @@ MATERIALS }o--o{ COMPONENTS : within
     identifier String
     name Numeric
     description String
-    externalIdentifier Dictionary
+    externalIdentifiers Dictionary
     imageURL URL
     LOWcode String
     height Numeric
@@ -140,7 +140,7 @@ The specification of this csv file is as follows:
       "identifier": "278EFE8A-720A-06C1-A411-CB94878AD3E2",
       "name": "Guacamole Dip Pot",
       "description": "Clear PET pot for the Guacamole Dip",
-      "externalIdentifier": {
+      "externalIdentifiers": {
         "internalId": "GUA-PET-2022-1",
         "GTIN": "00123456789012",
         },
