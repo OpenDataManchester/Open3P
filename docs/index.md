@@ -10,7 +10,7 @@ A data standard for the packaging value chain.
 
 ## Version
 
-Version 1.0 Published 2022-08-01
+Version 1.1-alpha Pre-release
 
 ## Working with the Standard
 
