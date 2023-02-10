@@ -17,3 +17,4 @@ jobs:
       - run: pip install mermaid
       - run: pip install mike
       - run: mkdocs gh-deploy --force
+      
