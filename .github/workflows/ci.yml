@@ -2,7 +2,7 @@ name: ci
 on:
   push:
     branches:
-      - main
+      - develop
 permissions:
   contents: write
 jobs:
@@ -15,4 +15,5 @@ jobs:
           python-version: 3.x
       - run: pip install mkdocs-material
       - run: pip install mermaid
-      - run: mkdocs gh-deploy --force
+      - run: pip install mike
+      - run: mike deploy --push --update-aliases 1.1-alpha pre-release
