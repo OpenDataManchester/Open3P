@@ -2,7 +2,7 @@ name: ci
 on:
   push:
     branches:
-      - main
+      - v1.1-alpha
 permissions:
   contents: write
 jobs:
