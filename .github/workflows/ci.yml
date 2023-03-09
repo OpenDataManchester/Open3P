@@ -13,8 +13,9 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: 3.x
-      - run: pip install mkdocs-material
-      - run: pip install mermaid
-      - run: pip install mike
-      - run: mkdocs gh-deploy --force
-      
+          cache: "pip"
+      - run: pip install -r requirements.txt
+      - run: git config user.name github-actions 
+      - run: git config user.email github-actions@github.com 
+      - run: git fetch origin gh-pages --depth=1
+      - run: mike deploy --push --update-aliases 1.1-alpha development
