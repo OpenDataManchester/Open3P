@@ -28,16 +28,39 @@ There are various online tools available, including but not limited to and in no
 
 ### In code
 
+=== "C"
+
+    ``` c
+    #include <stdio.h>
+
+    int main(void) {
+      printf("Hello world!\n");
+      return 0;
+    }
+    ```
+
+=== "C++"
+
+    ``` c++
+    #include <iostream>
+
+    int main(void) {
+      std::cout << "Hello world!" << std::endl;
+      return 0;
+    }
+    ```
+
 === "Excel Function"
 
-    ''' vb.net
+    ``` vb
     =CONCATENATE(DEC2HEX(RANDBETWEEN(0,4294967295),8),"-",DEC2HEX(RANDBETWEEN(0,65535),4),"-",DEC2HEX(RANDBETWEEN(0,65535),4),"-",DEC2HEX(RANDBETWEEN(0,65535),4),"-",DEC2HEX(RANDBETWEEN(0,4294967295),8),DEC2HEX(RANDBETWEEN(0,65535),4))
-    '''
+    ```
+
 === "T-SQL"
 
-    ''' tsql
-    NEWID ( )
-    '''
+    ``` t-sql
+        NEWID ( )
+    ```
 
 
 
