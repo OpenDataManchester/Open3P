@@ -106,10 +106,10 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : within
   }
 ```
 
-<figure markdown>
+<!-- <figure markdown>
 [![Schema](../img/complete-packaging-v1.0.0-22-12-20.png){ width="800" }](https://opendatamanchester.github.io/PPP/img/complete-packaging-v1.0.0-22-12-20.png){target=_blank}
   <figcaption>Data schema</figcaption>
-</figure>
+</figure> -->
 
 ## Template
 
