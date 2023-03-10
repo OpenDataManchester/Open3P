@@ -953,17 +953,33 @@
 <li><a href="https://www.webtools.services/uuid-generator">Webtools - Online UUID (GUID) Generator</a></li>
 </ul>
 <h3 id="in-code">In code<a class="headerlink" href="#in-code" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Excel Function</label><label for="__tabbed_1_2">T-SQL</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">C</label><label for="__tabbed_1_2">C++</label><label for="__tabbed_1_3">Excel Function</label><label for="__tabbed_1_4">T-SQL</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>&rsquo;&lsquo;&rsquo; vb.net
-=CONCATENATE(DEC2HEX(RANDBETWEEN(0,4294967295),8),&rdquo;-&ldquo;,DEC2HEX(RANDBETWEEN(0,65535),4),&rdquo;-&ldquo;,DEC2HEX(RANDBETWEEN(0,65535),4),&rdquo;-&ldquo;,DEC2HEX(RANDBETWEEN(0,65535),4),&rdquo;-&ldquo;,DEC2HEX(RANDBETWEEN(0,4294967295),8),DEC2HEX(RANDBETWEEN(0,65535),4))
-&lsquo;&rsquo;&lsquo;</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello world!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
 </div>
 <div class="tabbed-block">
-<p>&rsquo;&lsquo;&rsquo; tsql
-NEWID ( )
-&lsquo;&rsquo;&lsquo;</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello world!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>=CONCATENATE(DEC2HEX(RANDBETWEEN(0,4294967295),8),&quot;-&quot;,DEC2HEX(RANDBETWEEN(0,65535),4),&quot;-&quot;,DEC2HEX(RANDBETWEEN(0,65535),4),&quot;-&quot;,DEC2HEX(RANDBETWEEN(0,65535),4),&quot;-&quot;,DEC2HEX(RANDBETWEEN(0,4294967295),8),DEC2HEX(RANDBETWEEN(0,65535),4))
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nf">NEWID</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">)</span>
+</code></pre></div>
 </div>
 </div>
 </div>
