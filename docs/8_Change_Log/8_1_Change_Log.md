@@ -8,8 +8,32 @@ A document that contains all the changes made to the standard.
 
 ## March 10, 2023
 ### Documents
-- Added versioning control so that there can be parrellell versions.
-- Updated Indentifiers page to include information regarding UUID.
+- Added versioning control so that there can be parrellell versions
+- Updated Indentifiers page to include information regarding UUID
+
+## March 9, 2023
+### Documents
+- Variours changes to files for added function for versioning
+
+## February 7, 2023
+### Model
+- Changed component catologue to components
+
+### Documents
+- Added additional examples
+- Updated all data schema to based on changes
+
+### Data Fields
+- Changed tags to external identifiers
+
+## February 3, 2023
+### Model
+- Changed materials catologue to base materials
+- Added country to base materials
+
+### Documents
+- Added examples to base materials
+
 
 ## January 20, 2023
 ### Documents
