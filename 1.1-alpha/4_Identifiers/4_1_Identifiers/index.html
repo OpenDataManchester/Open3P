@@ -614,9 +614,60 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Identifiers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Identifiers
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#generating" class="md-nav__link">
+    Generating
+  </a>
+  
+    <nav class="md-nav" aria-label="Generating">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#online" class="md-nav__link">
+    Online
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-code" class="md-nav__link">
+    In code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -884,8 +935,38 @@
 
 
 <h1 id="identifiers">Identifiers<a class="headerlink" href="#identifiers" title="Permanent link">&para;</a></h1>
-<p>Identifiers are the way that humans and machines can know that a particular thing is definitely that thing. In the context of Open 3P, there are different ways of talking about the various things involved. A packaging manufacturer may refer to a particular bottle as ‘small clear bottle’, but a filler may know it as ‘500 ml clear bottle’. In a database it may be recorded as ‘0.5L PET Bottle’. While these are all referring to the same thing, it could be hard for a human to know that they are the same, and pretty much impossible for a computer. </p>
-<p>To help get around this, we use identifiers. These are codes that we use to unambiguously reference a particular thing in our database. We will provide documentation soon to explain how to create unique identifiers for everything being described in the Open 3P standard.</p>
+<p>Identifiers are the way that humans and machines can know that a particular thing is that thing. In the context of Open 3P, there are different ways of talking about the various things involved. A packaging manufacturer may refer to a particular bottle as ‘small clear bottle’, but a filler may know it as ‘500 ml clear bottle’. In a database it may be recorded as ‘0.5L PET Bottle’. While these are all referring to the same thing, it could be hard for a human to know that they are the same, and pretty much impossible for a computer.</p>
+<p>To help get around this, we use identifiers. These are codes that we use to unambiguously reference a particular thing. Within the Open 3P data standard we need to uniquely identify every entry. Each record in each schema needs to have an identifier. Since the packaging supply chain is global, the Open 3P data standard needs to be global and thus the unique identifier also needs to be global. We are therefore using the <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">Universally Unique Identifier (UUID)</a> standard methodology to (probabilistically) guarantee uniqueness.</p>
+<blockquote>
+<p>A universally unique identifier (UUID) is a 128-bit label used for information in computer systems. The term globally unique identifier (GUID) is also used.</p>
+<p>-<em><a href="https://datatracker.ietf.org/doc/html/rfc4122">A Universally Unique IDentifier (UUID) URN Namespace</a></em></p>
+</blockquote>
+<h2 id="generating">Generating<a class="headerlink" href="#generating" title="Permanent link">&para;</a></h2>
+<p>Generating a UUID must be done by a machine and there are various ways to create one. </p>
+<h3 id="online">Online<a class="headerlink" href="#online" title="Permanent link">&para;</a></h3>
+<p>There are various online tools available, including but not limited to and in no specific order:</p>
+<ul>
+<li><a href="https://www.uuidgenerator.net/">Online UUID Generator</a></li>
+<li><a href="https://www.uuidgen.org/v/4">UUID Generator</a></li>
+<li><a href="https://www.uuidtools.com">Online UUID/GUID Generator</a></li>
+<li><a href="https://generate-uuid.com">Generate UUID Online</a></li>
+<li><a href="https://www.webtools.services/uuid-generator">Webtools - Online UUID (GUID) Generator</a></li>
+</ul>
+<h3 id="in-code">In code<a class="headerlink" href="#in-code" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Excel Function</label><label for="__tabbed_1_2">T-SQL</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>&rsquo;&lsquo;&rsquo; vb.net
+=CONCATENATE(DEC2HEX(RANDBETWEEN(0,4294967295),8),&rdquo;-&ldquo;,DEC2HEX(RANDBETWEEN(0,65535),4),&rdquo;-&ldquo;,DEC2HEX(RANDBETWEEN(0,65535),4),&rdquo;-&ldquo;,DEC2HEX(RANDBETWEEN(0,65535),4),&rdquo;-&ldquo;,DEC2HEX(RANDBETWEEN(0,4294967295),8),DEC2HEX(RANDBETWEEN(0,65535),4))
+&lsquo;&rsquo;&lsquo;</p>
+</div>
+<div class="tabbed-block">
+<p>&rsquo;&lsquo;&rsquo; tsql
+NEWID ( )
+&lsquo;&rsquo;&lsquo;</p>
+</div>
+</div>
+</div>
 
               
             </article>
