@@ -46,7 +46,7 @@ BASE_MATERIALS }o--o{ MATERIALS : within
     updateDate String
   }
   MATERIALS }o..o{ CONTOLLED_LISTS : attritubes
-  MATERIALS }o--o{ COMPONENT_CATALOGUE : within
+  MATERIALS }o--o{ COMPONENTS : within
         CONTOLLED_LISTS {
     materialPurpose recommended
     function recommended

@@ -96,7 +96,7 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : within
   COMPONENT_CATALOGUE }o..o{ MULTIPACK : within
   COMPLETE_PACKAGING }o..o{ LOAD_CATALOGUE : within
   MULTIPACK }o..o{ LOAD_CATALOGUE : within
-  COMPONENT_CATALOGUE }o..o{ LOAD_CATALOGUE : within
+  COMPONENTS }o..o{ LOAD_CATALOGUE : within
       CONTOLLED_LISTS {
     productType recommended
     depositReturnScheme recommended
