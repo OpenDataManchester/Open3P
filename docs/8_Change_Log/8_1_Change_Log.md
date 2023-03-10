@@ -6,6 +6,11 @@ title: Latest Updates
 # Latest Updates
 A document that contains all the changes made to the standard.
 
+## March 10, 2023
+### Documents
+- Added versioning control so that there can be parrellell versions.
+- Updated Indentifiers page to include information regarding UUID.
+
 ## January 20, 2023
 ### Documents
 - Added schema images to all Data Specification pages
