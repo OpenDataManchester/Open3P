@@ -28,6 +28,32 @@ There are various online tools available, including but not limited to and in no
 
 ### In code
 
+=== "Python"
+
+    ``` py
+    import uuid
+
+    uuid.uuid4()
+    ```
+
+=== "C#"
+
+    ``` c#
+    using System;
+    using System.Diagnostics;
+
+    namespace SampleApplication {
+        class Program {
+            static void Main(string[] args) {
+                Guid myuuid = Guid.NewGuid();
+                string myuuidAsString = myuuid.ToString();
+
+                Debug.WriteLine("Your UUID is: " + myuuidAsString);
+            }
+        }
+    }
+    ```
+
 === "Excel Function"
 
     ``` vb
@@ -59,32 +85,6 @@ There are various online tools available, including but not limited to and in no
 
     ``` t-sql
     NEWID ( )
-    ```
-
-=== "C#"
-
-    ``` c#
-    using System;
-    using System.Diagnostics;
-
-    namespace SampleApplication {
-        class Program {
-            static void Main(string[] args) {
-                Guid myuuid = Guid.NewGuid();
-                string myuuidAsString = myuuid.ToString();
-
-                Debug.WriteLine("Your UUID is: " + myuuidAsString);
-            }
-        }
-    }
-    ```
-
-=== "Python"
-
-    ``` py
-    import uuid
-
-    uuid.uuid4()
     ```
 
 === "PHP"
