@@ -953,32 +953,71 @@
 <li><a href="https://www.webtools.services/uuid-generator">Webtools - Online UUID (GUID) Generator</a></li>
 </ul>
 <h3 id="in-code">In code<a class="headerlink" href="#in-code" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">C</label><label for="__tabbed_1_2">C++</label><label for="__tabbed_1_3">Excel Function</label><label for="__tabbed_1_4">T-SQL</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:6"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Excel Function</label><label for="__tabbed_1_2">vba</label><label for="__tabbed_1_3">T-SQL</label><label for="__tabbed_1_4">C#</label><label for="__tabbed_1_5">Python</label><label for="__tabbed_1_6">PHP</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello world!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello world!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-</div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>=CONCATENATE(DEC2HEX(RANDBETWEEN(0,4294967295),8),&quot;-&quot;,DEC2HEX(RANDBETWEEN(0,65535),4),&quot;-&quot;,DEC2HEX(RANDBETWEEN(0,65535),4),&quot;-&quot;,DEC2HEX(RANDBETWEEN(0,65535),4),&quot;-&quot;,DEC2HEX(RANDBETWEEN(0,4294967295),8),DEC2HEX(RANDBETWEEN(0,65535),4))
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nf">NEWID</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code>Function GUID$(Optional lowercase As Boolean, Optional parens As Boolean)
+    Dim k&amp;, h$
+    GUID = Space(36)
+    For k = 1 To Len(GUID)
+        Randomize
+        Select Case k
+            Case 9, 14, 19, 24: h = &quot;-&quot;
+            Case 15:            h = &quot;4&quot;
+            Case 20:            h = Hex(Rnd * 3 + 8)
+            Case Else:          h = Hex(Rnd * 15)
+        End Select
+        Mid$(GUID, k, 1) = h
+    Next
+    If lowercase Then GUID = LCase$(GUID)
+    If parens Then GUID = &quot;{&quot; &amp; GUID &amp; &quot;}&quot;
+End Function
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nf">NEWID</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.Diagnostics</span><span class="p">;</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">SampleApplication</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Guid</span><span class="w"> </span><span class="n">myuuid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Guid</span><span class="p">.</span><span class="n">NewGuid</span><span class="p">();</span>
+<span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="n">myuuidAsString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myuuid</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span>
+
+<span class="w">            </span><span class="n">Debug</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Your UUID is: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">myuuidAsString</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">uuid</span>
+
+<span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">()</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="x">function guidv4($data = null) {</span>
+<span class="x">    // Generate 16 bytes (128 bits) of random data or use the data passed into the function.</span>
+<span class="x">    $data = $data ?? random_bytes(16);</span>
+<span class="x">    assert(strlen($data) == 16);</span>
+
+<span class="x">    // Set version to 0100</span>
+<span class="x">    $data[6] = chr(ord($data[6]) &amp; 0x0f | 0x40);</span>
+<span class="x">    // Set bits 6-7 to 10</span>
+<span class="x">    $data[8] = chr(ord($data[8]) &amp; 0x3f | 0x80);</span>
+
+<span class="x">    // Output the 36 character UUID.</span>
+<span class="x">    return vsprintf(&#39;%s%s-%s-%s-%s-%s%s%s&#39;, str_split(bin2hex($data), 4));</span>
+<span class="x">}</span>
 </code></pre></div>
 </div>
 </div>
