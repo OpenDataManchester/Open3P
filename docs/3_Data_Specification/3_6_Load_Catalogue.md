@@ -16,7 +16,7 @@ All the complete packaging from different levels (primary, secondary, and tertia
 |loadIdentifier|`required`|String|The unique identifier of the created load. A globally unique identifier. See identifiers section for information on how to construct this identifier.|
 |packagingItems|`required`|String|The complete packaging and/or the multipack identifiers used to create the load. There must be an equivalent record in the `complete_packaging` or `multipack` data.|
 |quantityInLoad|`required`|Numeric|Number of units for the packaging items found in a load that this row corresponds to.|
-|level|`required`|String|The intended use of the component for the packaging `i.e., primary, secondary, tertiary`. The entry here should be drawn from the level controlled list.|
+|level|`required`|String|The intended use of the component for the packaging `i.e., primary, secondary, tertiary`. The entry here should be drawn from the [level controlled list](https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_1_6_Level.csv){target=_blank}.|
 |updateDate|`required`|String|The date that the load catalogue was provided/last updated. Use the format `dd/mm/yyyy`.|
 
 ## Diagram
