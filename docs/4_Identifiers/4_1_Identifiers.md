@@ -28,38 +28,81 @@ There are various online tools available, including but not limited to and in no
 
 ### In code
 
-=== "C"
-
-    ``` c
-    #include <stdio.h>
-
-    int main(void) {
-      printf("Hello world!\n");
-      return 0;
-    }
-    ```
-
-=== "C++"
-
-    ``` c++
-    #include <iostream>
-
-    int main(void) {
-      std::cout << "Hello world!" << std::endl;
-      return 0;
-    }
-    ```
-
 === "Excel Function"
 
     ``` vb
     =CONCATENATE(DEC2HEX(RANDBETWEEN(0,4294967295),8),"-",DEC2HEX(RANDBETWEEN(0,65535),4),"-",DEC2HEX(RANDBETWEEN(0,65535),4),"-",DEC2HEX(RANDBETWEEN(0,65535),4),"-",DEC2HEX(RANDBETWEEN(0,4294967295),8),DEC2HEX(RANDBETWEEN(0,65535),4))
     ```
 
+=== "vba"
+
+    ``` vb
+    Function GUID$(Optional lowercase As Boolean, Optional parens As Boolean)
+        Dim k&, h$
+        GUID = Space(36)
+        For k = 1 To Len(GUID)
+            Randomize
+            Select Case k
+                Case 9, 14, 19, 24: h = "-"
+                Case 15:            h = "4"
+                Case 20:            h = Hex(Rnd * 3 + 8)
+                Case Else:          h = Hex(Rnd * 15)
+            End Select
+            Mid$(GUID, k, 1) = h
+        Next
+        If lowercase Then GUID = LCase$(GUID)
+        If parens Then GUID = "{" & GUID & "}"
+    End Function
+    ```
+
 === "T-SQL"
 
     ``` t-sql
-        NEWID ( )
+    NEWID ( )
+    ```
+
+=== "C#"
+
+    ``` c#
+    using System;
+    using System.Diagnostics;
+
+    namespace SampleApplication {
+        class Program {
+            static void Main(string[] args) {
+                Guid myuuid = Guid.NewGuid();
+                string myuuidAsString = myuuid.ToString();
+
+                Debug.WriteLine("Your UUID is: " + myuuidAsString);
+            }
+        }
+    }
+    ```
+
+=== "Python"
+
+    ``` py
+    import uuid
+
+    uuid.uuid4()
+    ```
+
+=== "PHP"
+
+    ``` php
+    function guidv4($data = null) {
+        // Generate 16 bytes (128 bits) of random data or use the data passed into the function.
+        $data = $data ?? random_bytes(16);
+        assert(strlen($data) == 16);
+
+        // Set version to 0100
+        $data[6] = chr(ord($data[6]) & 0x0f | 0x40);
+        // Set bits 6-7 to 10
+        $data[8] = chr(ord($data[8]) & 0x3f | 0x80);
+
+        // Output the 36 character UUID.
+        return vsprintf('%s%s-%s-%s-%s-%s%s%s', str_split(bin2hex($data), 4));
+    }
     ```
 
 
