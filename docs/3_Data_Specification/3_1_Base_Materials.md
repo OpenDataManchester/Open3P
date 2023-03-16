@@ -35,9 +35,9 @@ erDiagram
     manufacturedCountry Numeric
     updateDate String
   }
-  BASE_MATERIALS }o..o{ CONTOLLED_LISTS : attritubes
+  BASE_MATERIALS }o..o{ CONTROLLED_LISTS : attributes
   BASE_MATERIALS }o--o{ MATERIALS : within
-      CONTOLLED_LISTS {
+      CONTROLLED_LISTS {
     materialType recommended
     certificationSource recommended
   }

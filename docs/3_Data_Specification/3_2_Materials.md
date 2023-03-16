@@ -46,9 +46,9 @@ BASE_MATERIALS }o--o{ MATERIALS : within
     manufacturedCountry Numeric
     updateDate String
   }
-  MATERIALS }o..o{ CONTOLLED_LISTS : attritubes
+  MATERIALS }o..o{ CONTROLLED_LISTS : attributes
   MATERIALS }o--o{ COMPONENTS : within
-        CONTOLLED_LISTS {
+        CONTROLLED_LISTS {
     materialPurpose recommended
     function recommended
     certificationSource recommended
