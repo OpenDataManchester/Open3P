@@ -1,5 +1,6 @@
 ---
 title: Load Catalogue
+description: The load catalogue aids organisations to combine products to form a load within Open 3P.
 ---
 
 # Load Catalogue
@@ -16,7 +17,7 @@ All the complete packaging from different levels (primary, secondary, and tertia
 |loadIdentifier|`required`|String|The unique identifier of the created load. A globally unique identifier. See identifiers section for information on how to construct this identifier.|
 |packagingItems|`required`|String|The complete packaging and/or the multipack identifiers used to create the load. There must be an equivalent record in the `complete_packaging` or `multipack` data.|
 |quantityInLoad|`required`|Numeric|Number of units for the packaging items found in a load that this row corresponds to.|
-|level|`required`|String|The intended use of the component for the packaging `i.e., primary, secondary, tertiary`. The entry here should be drawn from the [level controlled list](https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_1_6_Level.csv){target=_blank}.|
+|level|`required`|String|The intended use of the component for the packaging. The entry here should be drawn from the level controlled list.|
 |updateDate|`required`|String|The date that the load catalogue was provided/last updated. Use the format `dd/mm/yyyy`.|
 
 ## Diagram
@@ -77,7 +78,7 @@ The specification of this csv file is as follows:
       "packagingItems": "346C5546-282B-C040-CE74-DD0DD4688C0B",
       "quantityInLoad": "72",
       "level": {
-        "identifier":"component-catalogue-level-0001",
+        "identifier":"lc-level-0001",
         "category":"primary",
         "detailed":"The individual container that you store goods in to sell to consumers. This is called a "sales unit". For example, if you sell peas in steel tins with paper labels, the primary packaging is "steel tin" and "paper label"."
       },

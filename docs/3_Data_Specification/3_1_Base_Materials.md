@@ -1,5 +1,6 @@
 ---
 title: Base Materials
+description: Base materials are the building blocks of Open 3P.
 ---
 
 # Base Materials
@@ -12,7 +13,7 @@ The base materials schema contains information regarding the core materials. The
 |identifier|`required`|String|A globally unique identifier. See identifiers section for information on how to construct this identifier|
 |baseMaterialName|`required`|String|The name of the base material this row relates to. `e.g., Polypropylene or Aluminium or Silica`|
 |baseMaterialType|`recommended`|String|Is the base material 'synthetic' or 'biobased'? Use the identifier of the material type that this row relates to. The entry here should be drawn from the Material Type Controlled List.|
-|materialChemCID|`recommended`|String|The PubChem CID for the exact bse material used. The PubChem CID is PubChem's compound identifier, which is a non-zero integer for a unique chemical structure. PubChem CID can be found using their [search](https://pubchem.ncbi.nlm.nih.gov/){target=_blank}. If for some reason the PubChem CID cannot be located, consider contributing to PubChem and create the compound identifier. However, if this cannot be done, please enter `Unknown`.|
+|materialChemCID|`recommended`|String|The PubChem CID for the exact base material used. The PubChem CID is PubChem's compound identifier, which is a non-zero integer for a unique chemical structure. PubChem CID can be found using their [search](https://pubchem.ncbi.nlm.nih.gov/){target=_blank}. If for some reason the PubChem CID cannot be located, consider contributing to PubChem and create the compound identifier. However, if this cannot be done, please enter `Unknown`.|
 |certification|`recommended`|Boolean|Does the base material have a certificate (e.g. FSC, REACH, FSA etc.)?|
 |certificationSource|`recommended`|String|What source provided the certificate? The entry should be the Certification Source Controlled List identifier.|
 |certificationDate|`recommended`|String|The date that the certificate was provided/last updated. Use the format `dd/mm/yyyy`.|
@@ -60,7 +61,7 @@ The specification of this csv file is as follows:
       "identifier": "A4BAE07C-1847-CD8E-C933-6FD30478423B",
       "baseMaterialName": "PET",
       "baseMaterialType": {
-        "identifier":"material-component-catalogue-type-0002",
+        "identifier":"bm-material-type-0002",
         "category":"synthetic",
         "detailed":"derived from crude oil, natural gas or coal."
       },
@@ -89,16 +90,9 @@ The specification of this csv file is as follows:
       "baseMaterialType": "",
       "materialChemCID": "",
       "certification": "TRUE",
-      "certificationSource": {
-        "identifier":"certification-source-0001",
-        "category":"FSC",
-        "detailed":"The Forest Stewardship Council (FSC) is an international, non-governmental organisation dedicated to promoting responsible management of the world’s forests."
-      },
+      "certificationSource": "certification-source-0001",
       "certificationDate": "01/08/2022",
-      "manufacturedCountry": {
-        "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
-        "Numeric": 826
-      },
+      "manufacturedCountry": 826,
       "updateDate": "01/08/2022",
     }
     ```

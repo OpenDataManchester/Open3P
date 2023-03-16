@@ -1,5 +1,6 @@
 ---
 title: Materials
+description: Materials are a combination of base materials within Open 3P.
 ---
 
 # Materials
@@ -16,7 +17,7 @@ The materials schema contains information regarding the materials that are used 
 |materialPurpose|`recommended`|String|Why is this material being used? Use the identifier of the material purpose that this row relates to. The entry here should be drawn from the Material Purpose Controlled List.|
 |virginMaterial|`recommended`|Numeric|The maximum allowable percent of the material that was newly created for the component.|
 |layer|`recommended`|Numeric|The layer associated with the component. The inner most layer (the layer closest to the product) denoted as 1, and the outermost layer is the biggest number.|
-|materialWeight|`recommended`|Numeric|The percentage of the total materials making-up the component. For every unique componentCatalogue, weightMaterial should add to 100%.|
+|materialWeight|`recommended`|Numeric|The percentage of the total materials making-up the component. For every unique componentCatalogue, materialWeight should add to 100%.|
 |combinationPurpose|`recommended`|String|Why is this material being used? Use the identifier of the function that this row relates to. The entry here should be drawn from the Function Controlled List.|
 |certification|`recommended`|Boolean|Does the material have a certificate (e.g. FSC, REACH, FSA etc.)?|
 |certificationSource|`recommended`|String|What source provided the certificate? The entry should be the Certification Source Controlled List identifier.|
@@ -75,30 +76,17 @@ The specification of this csv file is as follows:
     {
       "identifier": "DCEE1F88-A83B-5BBC-D2D9-6A862B344977",
       "materialIdentifier": "278EFE8A-720A-06C1-A411-CB94878AD3E2",
-      "baseMaterialIdentifier": {
-        "identifier": "A4BAE07C-1847-CD8E-C933-6FD30478423B",
-        "name": "PET",
-        },
+      "baseMaterialIdentifier": "A4BAE07C-1847-CD8E-C933-6FD30478423B",
       "materialName":"PET",
-      "materialPurpose": {
-        "identifier": "material-component-catalogue-purpose-0015",
-        "category": "structure",
-        },
+      "materialPurpose": "m-material-purpose-0015",
       "virginMaterial": 0,
       "layer": "1",
       "materialWeight": "100",
       "combinationPurpose": "",
       "certification": "TRUE",
-      "certificationSource": {
-        "identifier": "certification-source-0002",
-        "category": "FSA",
-        "detailed": "The Food Standards Agency (FSA) is the independent government department working to protect public health and consumers’ wider interests in relation to food in England, Wales and Northern Ireland."
-      },
+      "certificationSource": "certification-source-0002",
       "certificationDate": "01/08/2022",
-      "manufacturedCountry": {
-        "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
-        "Numeric": 826
-      },
+      "manufacturedCountry": 826
       "updateDate": "01/08/2022",
     }
     ```
@@ -115,7 +103,7 @@ The specification of this csv file is as follows:
         },
       "materialName": "Soda-lime-silica glass",
       "materialPurpose": {
-        "identifier": "material-component-catalogue-purpose-0015",
+        "identifier": "m-material-purpose-0015",
         "category": "structure",
         },
       "virginMaterial": 0,
@@ -140,7 +128,7 @@ The specification of this csv file is as follows:
         },
       "materialName": "Soda-lime-silica glass",
       "materialPurpose": {
-        "identifier": "material-component-catalogue-purpose-0015",
+        "identifier": "m-material-purpose-0015",
         "category": "structure",
         },
       "virginMaterial": 0,
@@ -165,7 +153,7 @@ The specification of this csv file is as follows:
         },
       "materialName": "Soda-lime-silica glass",
       "materialPurpose": {
-        "identifier": "material-component-catalogue-purpose-0015",
+        "identifier": "m-material-purpose-0015",
         "category": "structure",
         },
       "virginMaterial": 0,

@@ -1,5 +1,6 @@
 ---
 title: Multipack
+description: Multipacks contain multiple identical packaging items within Open 3P.
 ---
 
 # Multipack

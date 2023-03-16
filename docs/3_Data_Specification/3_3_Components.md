@@ -1,5 +1,6 @@
 ---
 title: Components
+description: Components are the individaul items of packaging made from materials in Open 3P.
 ---
 
 # Components
@@ -27,25 +28,25 @@ The components schema contains information regarding the individual components t
 |weight|`required`|Numeric|The weight of the component.|
 |weightTolerance|`required`|Numeric|The threshold of weight that components can vary by. This is given as +/- x%.|
 |weightDate|`recommended`|String|The date that the weight was last verified/measured. Use the format `dd/mm/yyyy`.|
-|shape|`recommended`|String|What is the shape of the component? The entry should contain the [shape controlled list](https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_1_1_Shape.csv){target=_blank} identifier for the component.|
-|function|`recommended`|String|What is the function of the component? The entry should contain the [function controlled list](https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_1_2_Function.csv){target=_blank} identifier for the component.|
-|flexibility|`recommended`|String|Whether the component is considered flexible or rigid. The entry should be the [flexibility controlled list](https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_1_3_Flexibility.csv){target=_blank} identifier.|
+|shape|`recommended`|String|What is the shape of the component? The entry should contain the shape controlled list identifier for the component.|
+|function|`recommended`|String|What is the function of the component? The entry should contain the function controlled list identifier for the component.|
+|flexibility|`recommended`|String|Whether the component is considered flexible or rigid. The entry should be the flexibility controlled list identifier.|
 |branding|`required`|Boolean|Does the component contain your own brand (logo, trademark, or any distinctive mark)?|
-|componentRecyclingDisruptors|`recommended`|String|What challenges the component has for recycling. The entry should be the [componentRecyclingDisruptors controlled list](https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_1_4_Component_Catalogue_Recycling_Disruptors.csv){target=_blank} identifier.|
+|componentRecyclingDisruptors|`recommended`|String|What challenges the component has for recycling. The entry should be the componentRecyclingDisruptors controlled list identifier.|
 |colour|`recommended`|String|The actual colour of the component at point of production using CMYK (Cyan-Magenta-Yellow-blacK) values. The format is specified according to cmyk(C%, M%, Y%, K%), where C, M, Y, and K are the percent values for the cyan, magenta, yellow, and black values of the color. For example: black is `cmyk(0%,0%,0%,100%)`. |
-|opacity|`recommended`|String|The transparency of the colours. The entry should be the [opacity controlled list](https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_1_5_Opacity.csv){target=_blank} identifier.|
+|opacity|`recommended`|String|The transparency of the colours. The entry should be the opacity controlled list identifier.|
 |loaned|`required`|Boolean|Is the component hired or loaned out as reusable packaging?|
-|reuseSystem|`recommended`|String|The system that facilitates the reuse of the component  `e.g., Loop`. The entry should be the [reuse system controlled list](https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_1_7_Reuse_System.csv){target=_blank} identifier.|
+|reuseSystem|`recommended`|String|The system that facilitates the reuse of the component  `e.g., Loop`. The entry should be the reuse system controlled list identifier.|
 |manufacturedCountry|`required`|Numeric|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
 |recycledContent|`required`|Numeric|The minimum allowable percent of how much recycled content is included in the makeup of the component. For the purposes of this standard, we refer to the [UK's HM Revenue & Customs](https://www.gov.uk/guidance/work-out-which-packaging-is-subject-to-plastic-packaging-tax){target=_blank} definition of recycled content. "Recycled plastic is plastic that has been reprocessed from recovered material by using a chemical or manufacturing process. This is so it can be used either for its original purpose or for other purposes. This does not include organic recycling. Recovered material is pre-consumer plastic or post-consumer plastic that both: a) is no longer suitable to be used in the process from which it was generated and would otherwise have been used for energy recovery (for example, by incineration) or disposed of as waste (for example, by being sent to landfill); b) has been collected and recovered for use as a material input for a recycling or manufacturing process, instead of new primary material"|
-|recycledContentEvidenceType|`required`|String|What evidence type supports the recycledContent claim. The entry should be the [recycledContentEvidenceType controlled list](https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_1_8_Recycled_Evidence_Type.csv){target=_blank} identifier.|
+|recycledContentEvidenceType|`required`|String|What evidence type supports the recycledContent claim. The entry should be the recycledContentEvidenceType controlled list identifier.|
 |recycledContentEvidenceReference|`required`|String|An accompanying reference number associated with the recycledContentEvidenceType for the component.|
 |recyclability|`recommended`|Boolean|Is the component recyclable (as determined by a reputable source)?|
-|recyclabilitySource|`recommended`|String|What source provided the recyclability claim? The entry should be the [recyclabilitySource controlled list](https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_3_4_Recyclability_Source.csv){target=_blank} identifier.|
+|recyclabilitySource|`recommended`|String|What source provided the recyclability claim? The entry should be the recyclabilitySource controlled list identifier.|
 |recyclabilityDate|`recommended`|String|The date that the recyclability was provided/last updated. Use the format `dd/mm/yyyy`.|
 |partOfMultipack|`required`|Boolean|Is the component part of a multipack? Answer as: `1` for yes and `0` for no.|
 |certification|`recommended`|Boolean|Does the component have a certificate (e.g. FSC, REACH, FSA etc.)?|
-|certificationSource|`recommended`|String|What source provided the certificate? The entry should be the [Certification Source Controlled List](https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_2_4_Certification_Source.csv){target=_blank} identifier.|
+|certificationSource|`recommended`|String|What source provided the certificate? The entry should be the Certification Source Controlled List identifier.|
 |certificationDate|`recommended`|String|The date that the certificate was provided/last updated. Use the format `dd/mm/yyyy`.|
 |updateDate|`required`|String|The date that the component was provided/last updated. Use the format `dd/mm/yyyy`.|
 |releaseDate|`recommended`|String|The date that the component will be available to use. Use the format `dd/mm/yyyy`.|
@@ -159,17 +160,17 @@ The specification of this csv file is as follows:
       "weightTolerance": "4.38%",
       "weightDate": "01/08/2022",
       "shape": {
-        "identifier":"component-catalogue-shape-0005",
+        "identifier":"c-shape-0005",
         "category":"cylinder",
         "detailed":"3D shape with 2 parallel circular bases connected by a curved surface"
       },
       "function": {
-        "identifier":"component-catalogue-function-0030",
+        "identifier":"function-0030",
         "category":"pot",
         "detailed":""
       },
       "flexibility": {
-        "identifier": "component-catalogue-flexibility-0002",
+        "identifier": "c-flexibility-0001",
         "category": "Rigid",
         "detailed": ""
       },
@@ -177,7 +178,7 @@ The specification of this csv file is as follows:
       "componentRecyclingDisruptors": "",
       "colour": "",
       "opacity": {
-        "identifier": "component-catalogue-opacity-0003",
+        "identifier": "c-opacity-0003",
         "category": "transparent",
         "detailed": "allows light to pass through so that objects behind can be distinctly seen; no colour/ clear"
       },
@@ -189,16 +190,16 @@ The specification of this csv file is as follows:
       },
       "recycledContent": 90,
       "recycledContentEvidenceType": {
-        "identifier":"component-catalogue-recycled-evidence-0001",
+        "identifier":"c-recycled-evidence-0001",
         "category":"certificate",
         "detailed":""
       },
       "recycledContentEvidenceReference": "EXA-123-MPL-4-E",
       "recyclability": "TRUE",
       "recyclabilitySource": {
-        "identifier":"complete-packaging-recyclability-source-0001",
+        "identifier":"recyclability-source-0001",
         "category":"OPRL",
-        "detailed":""
+        "detailed":"OPRL is a not-for-profit company limited by guarantee, any surpluses being reinvested in our activities to promote recycling of packaging."
       },
       "recyclabilityDate": "01/08/2022",
       "partOfMultipack": "TRUE",

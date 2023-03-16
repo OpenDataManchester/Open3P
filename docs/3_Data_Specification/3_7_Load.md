@@ -1,5 +1,6 @@
 ---
 title: Load
+description: The load is the items what are delivered to a location within Open 3P.
 ---
 
 # Load
