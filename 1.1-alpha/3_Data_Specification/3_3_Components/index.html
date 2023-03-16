@@ -1492,14 +1492,14 @@ MATERIALS }o--o{ COMPONENTS : within
     releaseDate String
     discontinueDate String
   }
-  COMPONENTS }o..o{ CONTOLLED_LISTS : attritubes
+  COMPONENTS }o..o{ CONTROLLED_LISTS : attributes
   COMPONENTS }o--o{ COMPLETE_PACKAGING : within
   COMPONENTS }o..o{ MULTIPACK : within
   MULTIPACK }o..o{ LOAD_CATALOGUE : within
   COMPLETE_PACKAGING }o..o{ MULTIPACK : within
   COMPLETE_PACKAGING }o..o{ LOAD_CATALOGUE : within
   COMPONENTS }o..o{ LOAD_CATALOGUE : within
-    CONTOLLED_LISTS {
+    CONTROLLED_LISTS {
     recyclabilitySource recommended
     shape recommended
     function recommended

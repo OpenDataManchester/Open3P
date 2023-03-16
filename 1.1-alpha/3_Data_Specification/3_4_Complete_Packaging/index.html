@@ -1431,13 +1431,13 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : within
     releaseDate String
     discontinueDate String
   }
-  COMPLETE_PACKAGING }o..o{ CONTOLLED_LISTS : attritubes
+  COMPLETE_PACKAGING }o..o{ CONTROLLED_LISTS : attributes
   COMPLETE_PACKAGING }o..o{ MULTIPACK : within
   COMPONENTS }o..o{ MULTIPACK : within
   COMPLETE_PACKAGING }o..o{ LOAD_CATALOGUE : within
   MULTIPACK }o..o{ LOAD_CATALOGUE : within
   COMPONENTS }o..o{ LOAD_CATALOGUE : within
-      CONTOLLED_LISTS {
+      CONTROLLED_LISTS {
     productType recommended
     depositReturnScheme recommended
     recyclingDisruptors recommended
