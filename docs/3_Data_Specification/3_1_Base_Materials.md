@@ -11,11 +11,10 @@ The base materials schema contains information regarding the core materials. The
 |:-|:-|:-|:-|
 |identifier|`required`|String|A globally unique identifier. See identifiers section for information on how to construct this identifier|
 |baseMaterialName|`required`|String|The name of the base material this row relates to. `e.g., Polypropylene or Aluminium or Silica`|
-|baseMaterialType|`recommended`|String|Is the base material 'synthetic' or 'biobased'? Use the identifier of the material type that this row relates to. The entry here should be drawn from the [Material Type Controlled List](https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_2_1_Material_Type.csv){target=_blank}.|
-|baseMaterialCategory|`required`|String|The category this base material row relates to. The entry here should be drawn from the [Material Category Controlled List](https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_2_3_Material_Category.csv){target=_blank}.|
+|baseMaterialType|`recommended`|String|Is the base material 'synthetic' or 'biobased'? Use the identifier of the material type that this row relates to. The entry here should be drawn from the Material Type Controlled List.|
 |materialChemCID|`recommended`|String|The PubChem CID for the exact bse material used. The PubChem CID is PubChem's compound identifier, which is a non-zero integer for a unique chemical structure. PubChem CID can be found using their [search](https://pubchem.ncbi.nlm.nih.gov/){target=_blank}. If for some reason the PubChem CID cannot be located, consider contributing to PubChem and create the compound identifier. However, if this cannot be done, please enter `Unknown`.|
 |certification|`recommended`|Boolean|Does the base material have a certificate (e.g. FSC, REACH, FSA etc.)?|
-|certificationSource|`recommended`|String|What source provided the certificate? The entry should be the [Certification Source Controlled List](https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_2_4_Certification_Source.csv){target=_blank} identifier.|
+|certificationSource|`recommended`|String|What source provided the certificate? The entry should be the Certification Source Controlled List identifier.|
 |certificationDate|`recommended`|String|The date that the certificate was provided/last updated. Use the format `dd/mm/yyyy`.|
 |manufacturedCountry|`recommended`|Numeric|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
 |updateDate|`required`|String|The date that the base material was provided/last updated. Use the format `dd/mm/yyyy`.|
@@ -28,7 +27,6 @@ erDiagram
     identifier String
     baseMaterialName String
     baseMaterialType String
-    baseMaterialCategory String
     materialChemCID String
     certification Boolean
     certificationSource String
@@ -40,15 +38,9 @@ erDiagram
   BASE_MATERIALS }o--o{ MATERIALS : within
       CONTOLLED_LISTS {
     materialType recommended
-    materialCategory required
     certificationSource recommended
   }
 ```
-
-<!-- <figure markdown>
-[![Schema](../img/material_catalogue-v1.0.0-22-12-20.png){ width="450" }](https://opendatamanchester.github.io/PPP/img/material_catalogue-v1.0.0-22-12-20.png){target=_blank}
-  <figcaption>Data schema</figcaption>
-</figure> -->
 
 ## Template
 
@@ -71,11 +63,6 @@ The specification of this csv file is as follows:
         "identifier":"material-component-catalogue-type-0002",
         "category":"synthetic",
         "detailed":"derived from crude oil, natural gas or coal."
-      },
-      "baseMaterialCategory": {
-        "identifier":"material-component-catalogue-category-0007",
-        "category":"plastic",
-        "detailed":""
       },
       "materialChemCID": "223961227",
       "certification": "TRUE",
@@ -100,11 +87,6 @@ The specification of this csv file is as follows:
       "identifier": "a5e6b8bc-ade8-4660-857e-d397243f6b57",
       "baseMaterialName": "Spruce",
       "baseMaterialType": "",
-      "baseMaterialCategory": {
-        "identifier":"material-component-catalogue-category-0009",
-        "category":"wood",
-        "detailed":""
-      },
       "materialChemCID": "",
       "certification": "TRUE",
       "certificationSource": {
