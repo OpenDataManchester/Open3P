@@ -10,7 +10,7 @@ description: The key concepts to understanding the open data standard for the pa
 
 ## Materials
 - an individual substance (e.g., PET)
-- created from the material catalogue
+- created from the base materials level
 
 ## Components
 - an individual unit (e.g., a bottle)
@@ -35,7 +35,7 @@ description: The key concepts to understanding the open data standard for the pa
 - Usually wrapped in secondary and tertiary packaging 
 
 ## Load
-- Collection of load catalogue broken into destinations and on-the-market packaging for specified reporting periods.
+- Collection of load catalogue broken into destinations and on-the-market packaging for specified reporting periods
 
 ## Packaging Item
 - A component, complete packaging, or multipack 
