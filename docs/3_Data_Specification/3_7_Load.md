@@ -10,7 +10,7 @@ All the complete packaging from different levels (primary, secondary, and tertia
 ## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
-|identifier|`required`|String|A globally unique identifier. See identifiers section for information on how to construct this identifier|
+|identifier|`required`|String|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
 |name|`recommended`|String|The name of this load.|
 |description|`recommended`|String|A brief description of this load.|
 |externalIdentifier|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the component in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'tagName1': 'identifier1', 'tagName2': 'identifier2'}`|

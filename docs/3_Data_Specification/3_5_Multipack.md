@@ -12,7 +12,7 @@ The multipack schema contains information regarding the multipacks that are used
 ## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
-|identifier|`required`|String|A globally unique identifier. See identifiers section for information on how to construct this identifier|
+|identifier|`required`|String|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
 |name|`recommended`|String|The name of this multipack.|
 |description|`recommended`|String|A brief description of this multipack.|
 |externalIdentifiers|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the component in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'tagName1': 'identifier1', 'tagName2': 'identifier2'}`|
@@ -48,11 +48,6 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : within
   MULTIPACK }o..o{ LOAD_CATALOGUE : within
   COMPONENTS }o--o{ LOAD_CATALOGUE : within
 ```
-
-<!-- <figure markdown>
-[![Schema](../img/multipack-v1.0.0-22-12-20.png){ width="450" }](https://opendatamanchester.github.io/PPP/img/multipack-v1.0.0-22-12-20.png){target=_blank}
-  <figcaption>Data schema</figcaption>
-</figure> -->
 
 ## Template
 

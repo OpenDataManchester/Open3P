@@ -10,7 +10,7 @@ The components schema contains information regarding the individual components t
 ## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
-|identifier|`required`|String|A globally unique identifier. See identifiers section for information on how to construct this identifier|
+|identifier|`required`|String|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
 |name|`recommended`|String|The name of this component.|
 |description|`recommended`|String|A brief description of this component.|
 |externalIdentifiers|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the component in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'tagName1': 'identifier1', 'tagName2': 'identifier2'}`|
@@ -28,25 +28,25 @@ The components schema contains information regarding the individual components t
 |weight|`required`|Numeric|The weight of the component.|
 |weightTolerance|`required`|Numeric|The threshold of weight that components can vary by. This is given as +/- x%.|
 |weightDate|`recommended`|String|The date that the weight was last verified/measured. Use the format `dd/mm/yyyy`.|
-|shape|`recommended`|String|What is the shape of the component? The entry should contain the shape controlled list identifier for the component.|
-|function|`recommended`|String|What is the function of the component? The entry should contain the function controlled list identifier for the component.|
-|flexibility|`recommended`|String|Whether the component is considered flexible or rigid. The entry should be the flexibility controlled list identifier.|
+|shape|`recommended`|String|What is the shape of the component? The entry should contain the [shape controlled list](../5_Controlled_Lists/5_006_Shape.md) identifier for the component.|
+|function|`recommended`|String|What is the function of the component? The entry should contain the [function controlled list](../5_Controlled_Lists/5_004_Function.md) identifier for the component.|
+|flexibility|`recommended`|String|Whether the component is considered flexible or rigid. The entry should be the [flexibility controlled list](../5_Controlled_Lists/5_007_Flexibility.md) identifier.|
 |branding|`required`|Boolean|Does the component contain your own brand (logo, trademark, or any distinctive mark)?|
-|componentRecyclingDisruptors|`recommended`|String|What challenges the component has for recycling. The entry should be the componentRecyclingDisruptors controlled list identifier.|
+|componentRecyclingDisruptors|`recommended`|String|What challenges the component has for recycling. The entry should be the [component recycling disruptors controlled list](../5_Controlled_Lists/5_008_Component_Recycling_Disruptors.md) identifier.|
 |colour|`recommended`|String|The actual colour of the component at point of production using CMYK (Cyan-Magenta-Yellow-blacK) values. The format is specified according to cmyk(C%, M%, Y%, K%), where C, M, Y, and K are the percent values for the cyan, magenta, yellow, and black values of the color. For example: black is `cmyk(0%,0%,0%,100%)`. |
-|opacity|`recommended`|String|The transparency of the colours. The entry should be the opacity controlled list identifier.|
+|opacity|`recommended`|String|The transparency of the colours. The entry should be the [opacity controlled list](../5_Controlled_Lists/5_009_Opacity.md) identifier.|
 |loaned|`required`|Boolean|Is the component hired or loaned out as reusable packaging?|
-|reuseSystem|`recommended`|String|The system that facilitates the reuse of the component  `e.g., Loop`. The entry should be the reuse system controlled list identifier.|
+|reuseSystem|`recommended`|String|The system that facilitates the reuse of the component  `e.g., Loop`. The entry should be the [reuse system controlled list](../5_Controlled_Lists/5_010_Reuse_System.md) identifier.|
 |manufacturedCountry|`required`|Numeric|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
 |recycledContent|`required`|Numeric|The minimum allowable percent of how much recycled content is included in the makeup of the component. For the purposes of this standard, we refer to the [UK's HM Revenue & Customs](https://www.gov.uk/guidance/work-out-which-packaging-is-subject-to-plastic-packaging-tax){target=_blank} definition of recycled content. "Recycled plastic is plastic that has been reprocessed from recovered material by using a chemical or manufacturing process. This is so it can be used either for its original purpose or for other purposes. This does not include organic recycling. Recovered material is pre-consumer plastic or post-consumer plastic that both: a) is no longer suitable to be used in the process from which it was generated and would otherwise have been used for energy recovery (for example, by incineration) or disposed of as waste (for example, by being sent to landfill); b) has been collected and recovered for use as a material input for a recycling or manufacturing process, instead of new primary material"|
-|recycledContentEvidenceType|`required`|String|What evidence type supports the recycledContent claim. The entry should be the recycledContentEvidenceType controlled list identifier.|
-|recycledContentEvidenceReference|`required`|String|An accompanying reference number associated with the recycledContentEvidenceType for the component.|
+|recycledContentEvidenceType|`required`|String|What evidence type supports the recycledContent claim. The entry should be the [recycled content evidence type controlled list](../5_Controlled_Lists/5_011_Recycled_Content_Evidence_Type.md) identifier.|
+|recycledContentEvidenceReference|`required`|String|An accompanying reference number associated with the recycled content evidence type for the component.|
 |recyclability|`recommended`|Boolean|Is the component recyclable (as determined by a reputable source)?|
-|recyclabilitySource|`recommended`|String|What source provided the recyclability claim? The entry should be the recyclabilitySource controlled list identifier.|
+|recyclabilitySource|`recommended`|String|What source provided the recyclability claim? The entry should be the [recyclability source controlled list](../5_Controlled_Lists/5_005_Recyclability_Source.md) identifier.|
 |recyclabilityDate|`recommended`|String|The date that the recyclability was provided/last updated. Use the format `dd/mm/yyyy`.|
 |partOfMultipack|`required`|Boolean|Is the component part of a multipack? Answer as: `1` for yes and `0` for no.|
 |certification|`recommended`|Boolean|Does the component have a certificate (e.g. FSC, REACH, FSA etc.)?|
-|certificationSource|`recommended`|String|What source provided the certificate? The entry should be the Certification Source Controlled List identifier.|
+|certificationSource|`recommended`|String|What source provided the certificate? The entry should be the [certification source controlled list](../5_Controlled_Lists/5_002_Certification_Source.md) identifier.|
 |certificationDate|`recommended`|String|The date that the certificate was provided/last updated. Use the format `dd/mm/yyyy`.|
 |updateDate|`required`|String|The date that the component was provided/last updated. Use the format `dd/mm/yyyy`.|
 |releaseDate|`recommended`|String|The date that the component will be available to use. Use the format `dd/mm/yyyy`.|
@@ -113,17 +113,11 @@ MATERIALS }o--o{ COMPONENTS : within
     flexibility recommended
     componentRecyclingDisruptors recommended
     opacity recommended
+    reuseSystem recommended
     recycledContentEvidenceType required
     certificationSource recommended
   }
 ```
-
-<!-- <figure markdown>
-[![Schema](../img/component-catalogue-v1.0.0-22-12-20.png){ width="800" }](https://opendatamanchester.github.io/PPP/img/component-catalogue-v1.0.0-22-12-20.png){target=_blank}
-  <figcaption>Data schema</figcaption>
-</figure>
-
-## Template -->
 
 Components should be provided as a separate csv file, in tidy format. This means that each row of the csv file should be one component of a complete package. An example is provided.
 

@@ -5,7 +5,7 @@ description: The shape controlled list for components.
 
 # Shape
 
-The shape controlled list identifies the shape of a component.
+The shape controlled list identifies the shape in [components](../3_Data_Specification/3_3_Components.md).
 
 ## Data
 |<div style="width:150px">identifier</div>|category|detailed|

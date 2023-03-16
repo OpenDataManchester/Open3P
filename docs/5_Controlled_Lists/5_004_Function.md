@@ -7,8 +7,8 @@ description: The function controlled list.
 
 The function controlled list identifies the function of a material or a component. This is used in the following schemas:
 
-* Materials
-* Components
+* [Materials](../3_Data_Specification/3_2_Materials.md)
+* [Components](../3_Data_Specification/3_3_Components.md)
 
 ## Data
 |<div style="width:150px">identifier</div>|category|detailed|

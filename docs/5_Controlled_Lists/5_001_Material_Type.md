@@ -5,7 +5,7 @@ description: The material type controlled list for base materials.
 
 # Material Type
 
-The Material Type controlled list identifies the type of the base material.
+The Material Type controlled list identifies the type of the [base material](../3_Data_Specification/3_1_Base_Materials.md).
 
 ## Data
 |<div style="width:150px">identifier</div>|category|detailed|

@@ -5,7 +5,7 @@ description: The material purpose controlled list for materials.
 
 # Material Purpose
 
-The material purpose controlled list identifies the purpose of this material in this combination of materials.
+The material purpose controlled list identifies the purpose of this material in this combination of [materials](../3_Data_Specification/3_2_Materials.md).
 
 ## Data
 |<div style="width:200px">identifier</div>|category|detailed|

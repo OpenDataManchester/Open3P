@@ -7,8 +7,8 @@ description: The recyclability source controlled list.
 
 The recyclability source controlled list identifies the source of the recyclability evidence. This is used in the following schemas:
 
-* Components
-* Complete Packaging
+* [Components](../3_Data_Specification/3_3_Components.md)
+* [Complete Packaging](../3_Data_Specification/3_4_Complete_Packaging.md)
 
 ## Data
 |<div style="width:200px">identifier</div>|category|detailed|
