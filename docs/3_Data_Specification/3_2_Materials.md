@@ -13,13 +13,13 @@ The materials schema contains information regarding the materials that are used 
 |materialIdentifier|`required`|String|The unique identifier of the created material. See identifiers section for information on how to construct this identifier.|
 |baseMaterialIdentifier|`required`|String|The unique identifier of the material that this row relates to. There must be an equivalent record in the `base_Materials` data|
 |materialName|`required`|String|The name of the material this row relates to. `e.g., Aluminium 3000 Series or Borosilicate glass`|
-|materialPurpose|`recommended`|String|Why is this material being used? Use the identifier of the material purpose that this row relates to. The entry here should be drawn from the [Material Purpose Controlled List](https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_2_2_Material_Purpose.csv){target=_blank}.|
+|materialPurpose|`recommended`|String|Why is this material being used? Use the identifier of the material purpose that this row relates to. The entry here should be drawn from the Material Purpose Controlled List.|
 |virginMaterial|`recommended`|Numeric|The maximum allowable percent of the material that was newly created for the component.|
 |layer|`recommended`|Numeric|The layer associated with the component. The inner most layer (the layer closest to the product) denoted as 1, and the outermost layer is the biggest number.|
 |materialWeight|`recommended`|Numeric|The percentage of the total materials making-up the component. For every unique componentCatalogue, weightMaterial should add to 100%.|
-|combinationPurpose|`recommended`|String|Why is this material being used? Use the identifier of the function that this row relates to. The entry here should be drawn from the [Function Controlled List](https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_1_2_Function.csv){target=_blank}.|
+|combinationPurpose|`recommended`|String|Why is this material being used? Use the identifier of the function that this row relates to. The entry here should be drawn from the Function Controlled List.|
 |certification|`recommended`|Boolean|Does the material have a certificate (e.g. FSC, REACH, FSA etc.)?|
-|certificationSource|`recommended`|String|What source provided the certificate? The entry should be the [Certification Source Controlled List](https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_2_4_Certification_Source.csv){target=_blank} identifier.|
+|certificationSource|`recommended`|String|What source provided the certificate? The entry should be the Certification Source Controlled List identifier.|
 |certificationDate|`recommended`|String|The date that the certificate was provided/last updated. Use the format `dd/mm/yyyy`.|
 |manufacturedCountry|`recommended`|Numeric|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
 |updateDate|`required`|String|The date that the material was provided/last updated. Use the format `dd/mm/yyyy`.|

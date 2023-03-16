@@ -1,11 +1,11 @@
 ---
 title: Certification Source
-description: The Certification Source controlled list.
+description: The certification source controlled list.
 ---
 
 # Certification Source
 
-The Certification Source controlled list identifiers the source of the certification document.  This is used in the following schemas:
+The certification source controlled list identifies the source of the certification document. This is used in the following schemas:
 
 * Base Materials
 * Materials
@@ -14,7 +14,7 @@ The Certification Source controlled list identifiers the source of the certifica
 
 
 ## Data
-|<div style="width:150px">identifier</div>|category|detailed|
+|<div style="width:200px">identifier</div>|category|detailed|
 |:-|:-|:-|
 |certification-source-0001|FSC|The Forest Stewardship Council (FSC) is an international non-governmental organisation dedicated to promoting responsible management of the world's forests.|
 |certification-source-0002|FSA|The Food Standards Agency (FSA) is the independent government department working to protect public health and consumersâ€™ wider interests in relation to food in England, Wales and Northern Ireland.|
