@@ -703,6 +703,10 @@
         
           
         
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_6">
@@ -716,6 +720,34 @@
           5 Controlled Lists
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5_Controlled_Lists/5_1_1_Material_Type/" class="md-nav__link">
+        Material Type
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5_Controlled_Lists/5_1_2_Certification_Source/" class="md-nav__link">
+        Certification Source
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -964,13 +996,7 @@
 <td align="left">baseMaterialType</td>
 <td align="left"><code>recommended</code></td>
 <td align="left">String</td>
-<td align="left">Is the base material &lsquo;synthetic&rsquo; or &lsquo;biobased&rsquo;? Use the identifier of the material type that this row relates to. The entry here should be drawn from the <a href="https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_2_1_Material_Type.csv" target="_blank">Material Type Controlled List</a>.</td>
-</tr>
-<tr>
-<td align="left">baseMaterialCategory</td>
-<td align="left"><code>required</code></td>
-<td align="left">String</td>
-<td align="left">The category this base material row relates to. The entry here should be drawn from the <a href="https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_2_3_Material_Category.csv" target="_blank">Material Category Controlled List</a>.</td>
+<td align="left">Is the base material &lsquo;synthetic&rsquo; or &lsquo;biobased&rsquo;? Use the identifier of the material type that this row relates to. The entry here should be drawn from the Material Type Controlled List.</td>
 </tr>
 <tr>
 <td align="left">materialChemCID</td>
@@ -988,7 +1014,7 @@
 <td align="left">certificationSource</td>
 <td align="left"><code>recommended</code></td>
 <td align="left">String</td>
-<td align="left">What source provided the certificate? The entry should be the <a href="https://github.com/OpenDataManchester/PPP/blob/main/docs/5_Controlled_Lists/5_2_4_Certification_Source.csv" target="_blank">Certification Source Controlled List</a> identifier.</td>
+<td align="left">What source provided the certificate? The entry should be the Certification Source Controlled List identifier.</td>
 </tr>
 <tr>
 <td align="left">certificationDate</td>
@@ -1016,7 +1042,6 @@
     identifier String
     baseMaterialName String
     baseMaterialType String
-    baseMaterialCategory String
     materialChemCID String
     certification Boolean
     certificationSource String
@@ -1028,14 +1053,8 @@
   BASE_MATERIALS }o--o{ MATERIALS : within
       CONTOLLED_LISTS {
     materialType recommended
-    materialCategory required
     certificationSource recommended
   }</code></pre>
-<!-- <figure markdown>
-[![Schema](../img/material_catalogue-v1.0.0-22-12-20.png){ width="450" }](https://opendatamanchester.github.io/PPP/img/material_catalogue-v1.0.0-22-12-20.png){target=_blank}
-  <figcaption>Data schema</figcaption>
-</figure> -->
-
 <h2 id="template">Template<a class="headerlink" href="#template" title="Permanent link">&para;</a></h2>
 <p>Base materials should be provided as a separate csv file, in tidy format. This means that each row of the csv file should be one base material. An example is provided.</p>
 <p>The specification of this csv file is as follows:</p>
@@ -1066,12 +1085,7 @@
 <span class="normal">20</span>
 <span class="normal">21</span>
 <span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="mi">--</span><span class="err">Food</span><span class="w"> </span><span class="err">grade</span><span class="w"> </span><span class="err">sy</span><span class="kc">nt</span><span class="err">he</span><span class="kc">t</span><span class="err">ic</span><span class="w"> </span><span class="err">polye</span><span class="kc">t</span><span class="err">hyle</span><span class="kc">ne</span><span class="w"> </span><span class="kc">tere</span><span class="err">ph</span><span class="kc">t</span><span class="err">hala</span><span class="kc">te</span><span class="w"> </span><span class="err">(PET)</span><span class="w"> </span><span class="err">made</span><span class="w"> </span><span class="err">i</span><span class="kc">n</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">UK</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="mi">--</span><span class="err">Food</span><span class="w"> </span><span class="err">grade</span><span class="w"> </span><span class="err">sy</span><span class="kc">nt</span><span class="err">he</span><span class="kc">t</span><span class="err">ic</span><span class="w"> </span><span class="err">polye</span><span class="kc">t</span><span class="err">hyle</span><span class="kc">ne</span><span class="w"> </span><span class="kc">tere</span><span class="err">ph</span><span class="kc">t</span><span class="err">hala</span><span class="kc">te</span><span class="w"> </span><span class="err">(PET)</span><span class="w"> </span><span class="err">made</span><span class="w"> </span><span class="err">i</span><span class="kc">n</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">UK</span>
 <span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A4BAE07C-1847-CD8E-C933-6FD30478423B&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;baseMaterialName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PET&quot;</span><span class="p">,</span>
@@ -1079,11 +1093,6 @@
 <span class="w">    </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="s2">&quot;material-component-catalogue-type-0002&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="s2">&quot;synthetic&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;detailed&quot;</span><span class="p">:</span><span class="s2">&quot;derived from crude oil, natural gas or coal.&quot;</span>
-<span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;baseMaterialCategory&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="s2">&quot;material-component-catalogue-category-0007&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="s2">&quot;plastic&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;detailed&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span>
 <span class="w">  </span><span class="p">},</span>
 <span class="w">  </span><span class="nt">&quot;materialChemCID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;223961227&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TRUE&quot;</span><span class="p">,</span>
@@ -1120,21 +1129,11 @@
 <span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="mi">--</span><span class="err">FSC</span><span class="w"> </span><span class="err">accredi</span><span class="kc">te</span><span class="err">d</span><span class="w"> </span><span class="err">spruce</span><span class="w"> </span><span class="err">grow</span><span class="kc">n</span><span class="w"> </span><span class="err">i</span><span class="kc">n</span><span class="w"> </span><span class="err">Sco</span><span class="kc">tlan</span><span class="err">d</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="mi">--</span><span class="err">FSC</span><span class="w"> </span><span class="err">accredi</span><span class="kc">te</span><span class="err">d</span><span class="w"> </span><span class="err">spruce</span><span class="w"> </span><span class="err">grow</span><span class="kc">n</span><span class="w"> </span><span class="err">i</span><span class="kc">n</span><span class="w"> </span><span class="err">Sco</span><span class="kc">tlan</span><span class="err">d</span>
 <span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a5e6b8bc-ade8-4660-857e-d397243f6b57&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;baseMaterialName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Spruce&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;baseMaterialType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;baseMaterialCategory&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="s2">&quot;material-component-catalogue-category-0009&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="s2">&quot;wood&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;detailed&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span>
-<span class="w">  </span><span class="p">},</span>
 <span class="w">  </span><span class="nt">&quot;materialChemCID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TRUE&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;certificationSource&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
