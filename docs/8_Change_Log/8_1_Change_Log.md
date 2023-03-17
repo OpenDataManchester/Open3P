@@ -6,6 +6,10 @@ title: Latest Updates
 # Latest Updates
 A document that contains all the changes made to the standard.
 
+## March 17, 2023
+### Documents
+- General improvements
+
 ## March 10, 2023
 ### Documents
 - Added versioning control so that there can be parrellell versions

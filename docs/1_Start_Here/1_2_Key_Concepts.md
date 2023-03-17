@@ -5,6 +5,8 @@ description: The key concepts to understanding the open data standard for the pa
 
 # Key Concepts
 
+The Open 3P data standard is to provide information about what packaging is made out of and how these materials flow through the packaging supply chain.
+
 ## Base Materials
 - general template used to store information about a base level material
 

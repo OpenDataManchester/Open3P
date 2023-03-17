@@ -49,7 +49,7 @@ Base materials should be provided as a separate csv file, in tidy format. This m
 
 The specification of this csv file is as follows:
 
-[Material_Catalogue_Template.csv](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_7_Materials_Catalogue_Template.csv){target=_blank}
+[Base_Materials_Template.csv](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_7_Materials_Catalogue_Template.csv){target=_blank}
 
 ## Example
 

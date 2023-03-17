@@ -55,11 +55,6 @@ BASE_MATERIALS }o--o{ MATERIALS : within
     }
 ```
 
-<!-- <figure markdown>
-[![Schema](../img/materials-v1.0-2022-12-20.png){ width="450" }](https://opendatamanchester.github.io/PPP/img/materials-v1.0-2022-12-20.png){target=_blank}
-  <figcaption>Data schema</figcaption>
-</figure> -->
-
 ## Template
 Materials should be provided as a separate csv file, in tidy format. This means that each row of the csv file should be one material for a component. An example is provided.
 
