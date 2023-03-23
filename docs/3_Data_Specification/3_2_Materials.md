@@ -60,7 +60,7 @@ Materials should be provided as a separate csv file, in tidy format. This means 
 
 The specification of this csv file is as follows:
 
-[Materials_Template.csv](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_2_Materials_Template.csv){target=_blank}
+[Materials_Template.csv](https://www.open3p.org/wp-content/uploads/2023/03/7_1_2_Materials_Template.csv){target=_blank}
 
 ## Example
 

@@ -49,18 +49,13 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : within
     }
 ```
 
-<!-- <figure markdown>
-[![Schema](../img/load-catalogue-v1.0.0-22-12-20.png){ width="450" }](https://opendatamanchester.github.io/PPP/img/load-catalogue-v1.0.0-22-12-20.png){target=_blank}
-  <figcaption>Data schema</figcaption>
-</figure> -->
-
 ## Template
 
 Loads should be provided as a separate csv file, in tidy format. This means that each row of the csv file should be a single complete package or a multipack of a load. An example is provided.
 
 The specification of this csv file is as follows:
 
-[Load_Catalogue_Template.csv](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_5_Load_Catalogue_Template.csv){target=_blank}
+[Load_Catalogue_Template.csv](https://www.open3p.org/wp-content/uploads/2023/03/7_1_6_Load_Catalogue_Template.csv){target=_blank}
 
 ## Example
 

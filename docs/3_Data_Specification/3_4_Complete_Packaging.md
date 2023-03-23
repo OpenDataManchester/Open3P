@@ -113,7 +113,7 @@ Complete packaging should be provided as a separate csv file, in tidy format. Th
 
 The specification of this csv file is as follows:
 
-[Complete_Packaging_Template.csv](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_3_Complete_Packaging_Template.csv){target=_blank}
+[Complete_Packaging_Template.csv](https://www.open3p.org/wp-content/uploads/2023/03/7_1_4_Complete_Packaging_Template.csv){target=_blank}
 
 ## Example
 

@@ -123,7 +123,7 @@ Components should be provided as a separate csv file, in tidy format. This means
 
 The specification of this csv file is as follows:
 
-[Components_Template.csv](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_1_Component_Catalogue_Template.csv){target=_blank}
+[Components_Template.csv](https://www.open3p.org/wp-content/uploads/2023/03/7_1_3_Components_Template.csv){target=_blank}
 
 ## Example
 
