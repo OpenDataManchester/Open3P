@@ -22,7 +22,7 @@ The component recycling disruptors controlled list identifiers what might disrup
 |cp-recycling-disruptors-0010|EVA with Aluminium||
 |cp-recycling-disruptors-0011|EVOH > 5 %||
 |cp-recycling-disruptors-0012|Foamed thermoplastic non-polyolefin elastomers||
-|cp-recycling-disruptors-0013|"Hazardous Contents (chemicals, household cleaning, oils etc.)"||
+|cp-recycling-disruptors-0013|Hazardous Contents (chemicals, household cleaning, oils etc.)||
 |cp-recycling-disruptors-0014|Inks that bleed||
 |cp-recycling-disruptors-0015|Inks that contain PVC||
 |cp-recycling-disruptors-0016|Labels > 30 % of surface area||
