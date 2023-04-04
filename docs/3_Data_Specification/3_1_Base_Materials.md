@@ -14,6 +14,7 @@ The base materials schema contains information regarding the core materials. The
 |baseMaterialName|`required`|String|The name of the base material this row relates to. `e.g., Polypropylene or Aluminium or Silica`|
 |baseMaterialType|`recommended`|String|Is the base material 'synthetic' or 'biobased'? Use the identifier of the material type that this row relates to. The entry here should be drawn from the [Material Type Controlled List](../5_Controlled_Lists/5_001_Material_Type.md).|
 |materialChemCID|`recommended`|String|The PubChem CID for the exact base material used. The PubChem CID is PubChem's compound identifier, which is a non-zero integer for a unique chemical structure. PubChem CID can be found using their [search](https://pubchem.ncbi.nlm.nih.gov/){target=_blank}. If for some reason the PubChem CID cannot be located, consider contributing to PubChem and create the compound identifier. However, if this cannot be done, please enter `Unknown`.|
+|externalIdentifiers|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the base material in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
 |certification|`recommended`|Boolean|Does the base material have a certificate (e.g. FSC, REACH, FSA etc.)?|
 |certificationSource|`recommended`|String|What source provided the certificate? The entry should be the [Certification Source Controlled List](../5_Controlled_Lists/5_002_Certification_Source.md) identifier.|
 |certificationDate|`recommended`|String|The date that the certificate was provided/last updated. Use the format `dd/mm/yyyy`.|
@@ -29,6 +30,7 @@ erDiagram
     baseMaterialName String
     baseMaterialType String
     materialChemCID String
+    externalIdentifiers Dictionary
     certification Boolean
     certificationSource String
     certificationDate String
@@ -66,6 +68,9 @@ The specification of this csv file is as follows:
         "detailed":"derived from crude oil, natural gas or coal."
       },
       "materialChemCID": "223961227",
+      "externalIdentifiers": {
+        "primaryKey":"9187e576-0dfd-46dd-809e-4af0a35f888d",
+        },
       "certification": "TRUE",
       "certificationSource": {
         "identifier":"certification-source-0002",
@@ -89,6 +94,9 @@ The specification of this csv file is as follows:
       "baseMaterialName": "Spruce",
       "baseMaterialType": "",
       "materialChemCID": "",
+      "externalIdentifiers": {
+        "dbPK":"152314568888",
+        },
       "certification": "TRUE",
       "certificationSource": "certification-source-0001",
       "certificationDate": "01/08/2022",
