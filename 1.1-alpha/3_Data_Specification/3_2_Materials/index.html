@@ -997,6 +997,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_7">
@@ -1033,6 +1035,20 @@
     <li class="md-nav__item">
       <a href="../../6_Relationship_Lists/6_002_Certification_Claims/" class="md-nav__link">
         Certification Claims
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6_Relationship_Lists/6_003_Material_Constituents/" class="md-nav__link">
+        Material Constituents
       </a>
     </li>
   
@@ -1232,19 +1248,13 @@
 <td align="left">identifier</td>
 <td align="left"><code>required</code></td>
 <td align="left">String</td>
-<td align="left">A globally unique identifier. See <a href="../../4_Identifiers/4_1_Identifiers/">identifiers</a> section for information on how to construct this identifier</td>
+<td align="left">The globally unique identifier for the created material unique identifier. See <a href="../../4_Identifiers/4_1_Identifiers/">identifiers</a> section for information on how to construct this identifier</td>
 </tr>
 <tr>
-<td align="left">materialIdentifier</td>
+<td align="left">materialConstituents</td>
 <td align="left"><code>required</code></td>
-<td align="left">String</td>
-<td align="left">The unique identifier of the created material. See <a href="../../4_Identifiers/4_1_Identifiers/">identifiers</a> section for information on how to construct this identifier.</td>
-</tr>
-<tr>
-<td align="left">baseMaterialIdentifier</td>
-<td align="left"><code>required</code></td>
-<td align="left">String</td>
-<td align="left">The unique identifier of the material that this row relates to. There must be an equivalent record in the <code>Base Materials</code> data</td>
+<td align="left">List</td>
+<td align="left">The information regarding the consituents that are combined to create this material. The information regarding the certification? The entry should be the <a href="../../6_Relationship_Lists/6_002_Certification_Claims/">Certification Claims Relationship List</a> identifier.</td>
 </tr>
 <tr>
 <td align="left">materialName</td>
@@ -1259,30 +1269,6 @@
 <td align="left">A dictionary of identifiers that might be used to identify the material in other systems. For example: manufacturer&rsquo;s own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. <code>{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}</code></td>
 </tr>
 <tr>
-<td align="left">materialPurpose</td>
-<td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">Why is this material being used? Use the identifier of the material purpose that this row relates to. The entry here should be drawn from the <a href="../../5_Controlled_Lists/5_003_Material_Purpose/">Material Purpose Controlled List</a>.</td>
-</tr>
-<tr>
-<td align="left">virginMaterial</td>
-<td align="left"><code>recommended</code></td>
-<td align="left">Numeric</td>
-<td align="left">The maximum allowable percent of the material that was newly created for the component.</td>
-</tr>
-<tr>
-<td align="left">layer</td>
-<td align="left"><code>recommended</code></td>
-<td align="left">Numeric</td>
-<td align="left">The layer associated with the component. The inner most layer (the layer closest to the product) denoted as 1, and the outermost layer is the biggest number.</td>
-</tr>
-<tr>
-<td align="left">materialWeight</td>
-<td align="left"><code>recommended</code></td>
-<td align="left">Numeric</td>
-<td align="left">The percentage of the total materials making-up the component. For every unique componentCatalogue, materialWeight should add to 100%.</td>
-</tr>
-<tr>
 <td align="left">combinationPurpose</td>
 <td align="left"><code>recommended</code></td>
 <td align="left">String</td>
@@ -1292,13 +1278,13 @@
 <td align="left">certification</td>
 <td align="left"><code>recommended</code></td>
 <td align="left">Boolean</td>
-<td align="left">Does the material have a certificate (e.g. FSC, REACH, FSA etc.)?</td>
+<td align="left">Does the base material have a certificate (e.g. FSC, REACH, FSA etc.)?</td>
 </tr>
 <tr>
-<td align="left">certificationSource</td>
+<td align="left">certificationClaims</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">What source provided the certificate? The entry should be the <a href="../../5_Controlled_Lists/5_002_Certification_Source/">Certification Source Controlled List</a> identifier.</td>
+<td align="left">List</td>
+<td align="left">The information regarding the certification? The entry should be the <a href="../../6_Relationship_Lists/6_002_Certification_Claims/">Certification Claims Relationship List</a> identifier.</td>
 </tr>
 <tr>
 <td align="left">certificationDate</td>
@@ -1325,28 +1311,26 @@
 BASE_MATERIALS }o--o{ MATERIALS : within
   MATERIALS {
     identifier String
-    materialIdentifier Numeric
-    baseMaterialIdentifier String
     materialName String
     externalIdentifiers Dictionary
-    materialPurpose String
-    virginMaterial String
-    layer String
-    materialWeight String
+    materialConstituents List
     combinationPurpose String
     certification Boolean
-    certificationSource String
-    certificationDate String
+    certificationClaims List
     manufacturedCountry Numeric
     updateDate String
   }
   MATERIALS }o..o{ CONTROLLED_LISTS : attributes
+  BASE_MATERIALS }o..o{ RELATIONSHIP_LISTS : attributes
   MATERIALS }o--o{ COMPONENTS : within
         CONTROLLED_LISTS {
     materialPurpose recommended
     function recommended
-    certificationSource recommended
-    }</code></pre>
+    }
+        RELATIONSHIP_LISTS {
+    materialConstituents required
+    certificationClaims recommended
+      }</code></pre>
 <h2 id="template">Template<a class="headerlink" href="#template" title="Permanent link">&para;</a></h2>
 <p>Materials should be provided as a separate csv file, in tidy format. This means that each row of the csv file should be one material for a component. An example is provided.</p>
 <p>The specification of this csv file is as follows:</p>
