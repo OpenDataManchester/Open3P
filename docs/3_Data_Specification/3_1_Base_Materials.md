@@ -16,8 +16,7 @@ The base materials schema contains information regarding the core materials. The
 |materialChemCID|`recommended`|String|The PubChem CID for the exact base material used. The PubChem CID is PubChem's compound identifier, which is a non-zero integer for a unique chemical structure. PubChem CID can be found using their [search](https://pubchem.ncbi.nlm.nih.gov/){target=_blank}. If for some reason the PubChem CID cannot be located, consider contributing to PubChem and create the compound identifier. However, if this cannot be done, please enter `Unknown`.|
 |externalIdentifiers|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the base material in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
 |certification|`recommended`|Boolean|Does the base material have a certificate (e.g. FSC, REACH, FSA etc.)?|
-|certificationSource|`recommended`|String|What source provided the certificate? The entry should be the [Certification Source Controlled List](../5_Controlled_Lists/5_002_Certification_Source.md) identifier.|
-|certificationDate|`recommended`|String|The date that the certificate was provided/last updated. Use the format `dd/mm/yyyy`.|
+|certificationClaims|`recommended`|List|The information regarding the certification? The entry should be the [Certification Claims Relationship List](../6_Relationship_Lists/6_002_Certification_Claims.md) identifier.|
 |manufacturedCountry|`recommended`|Numeric|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
 |updateDate|`required`|String|The date that the base material was provided/last updated. Use the format `dd/mm/yyyy`.|
 
@@ -32,16 +31,18 @@ erDiagram
     materialChemCID String
     externalIdentifiers Dictionary
     certification Boolean
-    certificationSource String
-    certificationDate String
+    certificationClaims List
     manufacturedCountry Numeric
     updateDate String
   }
   BASE_MATERIALS }o..o{ CONTROLLED_LISTS : attributes
+  BASE_MATERIALS }o..o{ RELATIONSHIP_LISTS : attributes
   BASE_MATERIALS }o--o{ MATERIALS : within
       CONTROLLED_LISTS {
-    materialType recommended
-    certificationSource recommended
+    materialType recommended }
+      RELATIONSHIP_LISTS {
+    certificationClaims recommended
+      }
   }
 ```
 
@@ -72,12 +73,15 @@ The specification of this csv file is as follows:
         "primaryKey":"9187e576-0dfd-46dd-809e-4af0a35f888d",
         },
       "certification": "TRUE",
-      "certificationSource": {
-        "identifier":"certification-source-0002",
-        "category":"FSA",
-        "detailed":"The Food Standards Agency (FSA) is the independent government department working to protect public health and consumers’ wider interests in relation to food in England, Wales and Northern Ireland."
-      },
-      "certificationDate": "01/08/2022",
+      "certificationClaims": [{
+        "certificationIdentifier": "1",
+        "certificationSource": {
+          "identifier":"certification-source-0002",
+          "category":"FSA",
+          "detailed":"The Food Standards Agency (FSA) is the independent government department working to protect public health and consumers’ wider interests in relation to food in England, Wales and Northern Ireland."
+        },
+        "certificationDate": "01/08/2022",
+      }],
       "manufacturedCountry": {
         "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
         "Numeric": 826
@@ -98,7 +102,7 @@ The specification of this csv file is as follows:
         "dbPK":"152314568888",
         },
       "certification": "TRUE",
-      "certificationSource": "certification-source-0001",
+      "certificationClaims": ["1","35"],
       "certificationDate": "01/08/2022",
       "manufacturedCountry": 826,
       "updateDate": "01/08/2022",
