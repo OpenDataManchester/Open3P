@@ -10,18 +10,13 @@ The materials schema contains information regarding the materials that are used 
 ## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
-|identifier|`required`|String|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
-|materialIdentifier|`required`|String|The unique identifier of the created material. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier.|
-|baseMaterialIdentifier|`required`|String|The unique identifier of the material that this row relates to. There must be an equivalent record in the `Base Materials` data|
+|identifier|`required`|String|The globally unique identifier for the created material unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
+|materialConstituents|`required`|List|The information regarding the consituents that are combined to create this material. The information regarding the certification? The entry should be the [Certification Claims Relationship List](../6_Relationship_Lists/6_002_Certification_Claims.md) identifier.|
 |materialName|`required`|String|The name of the material this row relates to. (e.g., Aluminium 3000 Series or Borosilicate glass)|
 |externalIdentifiers|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the material in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
-|materialPurpose|`recommended`|String|Why is this material being used? Use the identifier of the material purpose that this row relates to. The entry here should be drawn from the [Material Purpose Controlled List](../5_Controlled_Lists/5_003_Material_Purpose.md).|
-|virginMaterial|`recommended`|Numeric|The maximum allowable percent of the material that was newly created for the component.|
-|layer|`recommended`|Numeric|The layer associated with the component. The inner most layer (the layer closest to the product) denoted as 1, and the outermost layer is the biggest number.|
-|materialWeight|`recommended`|Numeric|The percentage of the total materials making-up the component. For every unique componentCatalogue, materialWeight should add to 100%.|
 |combinationPurpose|`recommended`|String|Why is this material being used? Use the identifier of the function that this row relates to. The entry here should be drawn from the [Function Controlled List](../5_Controlled_Lists/5_004_Function.md).|
-|certification|`recommended`|Boolean|Does the material have a certificate (e.g. FSC, REACH, FSA etc.)?|
-|certificationSource|`recommended`|String|What source provided the certificate? The entry should be the [Certification Source Controlled List](../5_Controlled_Lists/5_002_Certification_Source.md) identifier.|
+|certification|`recommended`|Boolean|Does the base material have a certificate (e.g. FSC, REACH, FSA etc.)?|
+|certificationClaims|`recommended`|List|The information regarding the certification? The entry should be the [Certification Claims Relationship List](../6_Relationship_Lists/6_002_Certification_Claims.md) identifier.|
 |certificationDate|`recommended`|String|The date that the certificate was provided/last updated. Use the format `dd/mm/yyyy`.|
 |manufacturedCountry|`recommended`|Numeric|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
 |updateDate|`required`|String|The date that the material was provided/last updated. Use the format `dd/mm/yyyy`.|
@@ -33,28 +28,26 @@ erDiagram
 BASE_MATERIALS }o--o{ MATERIALS : within
   MATERIALS {
     identifier String
-    materialIdentifier Numeric
-    baseMaterialIdentifier String
     materialName String
     externalIdentifiers Dictionary
-    materialPurpose String
-    virginMaterial String
-    layer String
-    materialWeight String
+    materialConstituents List
     combinationPurpose String
     certification Boolean
-    certificationSource String
-    certificationDate String
+    certificationClaims List
     manufacturedCountry Numeric
     updateDate String
   }
   MATERIALS }o..o{ CONTROLLED_LISTS : attributes
+  BASE_MATERIALS }o..o{ RELATIONSHIP_LISTS : attributes
   MATERIALS }o--o{ COMPONENTS : within
         CONTROLLED_LISTS {
     materialPurpose recommended
     function recommended
-    certificationSource recommended
     }
+        RELATIONSHIP_LISTS {
+    materialConstituents required
+    certificationClaims recommended
+      }
 ```
 
 ## Template
