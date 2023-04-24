@@ -802,6 +802,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_6">
@@ -1026,6 +1028,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5_Controlled_Lists/5_016_End_Of_Life_Route/" class="md-nav__link">
+        End of Life Route
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1047,6 +1063,14 @@
       
       
       
+        
+          
+        
+          
+        
+          
+        
+          
         
           
         
@@ -1104,6 +1128,62 @@
     <li class="md-nav__item">
       <a href="../../6_Relationship_Lists/6_003_Material_Constituents/" class="md-nav__link">
         Material Constituents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6_Relationship_Lists/6_004_Component_Constituents/" class="md-nav__link">
+        Component Constituents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6_Relationship_Lists/6_005_Recyclability_Claims/" class="md-nav__link">
+        Recyclability Claims
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6_Relationship_Lists/6_006_Recycled_Content_Claims/" class="md-nav__link">
+        Recycled Content Claims
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6_Relationship_Lists/6_007_Component_End_of_Life_Routes/" class="md-nav__link">
+        Component End of Life Routes
       </a>
     </li>
   
@@ -1324,10 +1404,10 @@
 <td align="left">A dictionary of identifiers that might be used to identify the component in other systems. For example: manufacturer&rsquo;s own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. <code>{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}</code></td>
 </tr>
 <tr>
-<td align="left">imageURL</td>
+<td align="left">imageURLs</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">URL</td>
-<td align="left">A URL that links to a picture of the component. Please see the guidelines below on how to capture the image and name the URL.</td>
+<td align="left">List</td>
+<td align="left">A list of URLs that links to a picture of the component. Please see the guidelines below on how to capture the image and name the URL.</td>
 </tr>
 <tr>
 <td align="left">LOWcode</td>
@@ -1336,10 +1416,10 @@
 <td align="left">The list of waste code for <strong>only</strong> the component, by itself. LOW code is synonymous with European Waste Catelogue Code (EWC). For example: an empty bottle would have a LOWcode of <code>15 01 02</code>. Please use <a href="https://dsposal.uk/browse/ewc" target="_blank">Dsposal</a> or <a href="https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made" target="_blank">legislation.gov</a> to find the LOWcode. <strong>Note</strong>: The LOWcode can based on its combination with other components and the actual product contained in the completePackaging. Be sure to only include the component LOWcode. If you cannot find the code or are uncertain please enter <code>Uncertain</code>.</td>
 </tr>
 <tr>
-<td align="left">materialIdentifier</td>
+<td align="left">componentConstituents</td>
 <td align="left"><code>required</code></td>
-<td align="left">String</td>
-<td align="left">The unique identifier of the materials that this component is made of. There must be an equivalent record in the <code>Materials</code> data.</td>
+<td align="left">List</td>
+<td align="left">The information regarding the consituents that are combined to create this component. The entries should be from the <a href="../../6_Relationship_Lists/6_004_Component_Constituents/">Material Constituents Relationship List</a> identifier.</td>
 </tr>
 <tr>
 <td align="left">height</td>
@@ -1432,10 +1512,10 @@
 <td align="left">Does the component contain your own brand (logo, trademark, or any distinctive mark)?</td>
 </tr>
 <tr>
-<td align="left">componentRecyclingDisruptors</td>
+<td align="left">componentEndOfLifeRoutes</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">What challenges the component has for recycling. The entry should be the <a href="../../5_Controlled_Lists/5_008_Component_Recycling_Disruptors/">component recycling disruptors controlled list</a> identifier.</td>
+<td align="left">List</td>
+<td align="left">The information regarding this components purposed end of life routes. The entries should be the <a href="../../6_Relationship_Lists/6_007_Component_End_of_Life_Routes/">component end of life routes</a> identifiers.</td>
 </tr>
 <tr>
 <td align="left">colour</td>
@@ -1458,50 +1538,8 @@
 <tr>
 <td align="left">reuseSystem</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">The system that facilitates the reuse of the component  <code>e.g., Loop</code>. The entry should be the <a href="../../5_Controlled_Lists/5_010_Reuse_System/">reuse system controlled list</a> identifier.</td>
-</tr>
-<tr>
-<td align="left">manufacturedCountry</td>
-<td align="left"><code>required</code></td>
-<td align="left">Numeric</td>
-<td align="left">The country the component was manufactured in. Use the country numeric <a href="https://www.iban.com/country-codes" target="_blank">ISO codes</a> as described in the ISO 3166 international standard.</td>
-</tr>
-<tr>
-<td align="left">recycledContent</td>
-<td align="left"><code>required</code></td>
-<td align="left">Numeric</td>
-<td align="left">The minimum allowable percent of how much recycled content is included in the makeup of the component. For the purposes of this standard, we refer to the <a href="https://www.gov.uk/guidance/work-out-which-packaging-is-subject-to-plastic-packaging-tax" target="_blank">UK&rsquo;s HM Revenue &amp; Customs</a> definition of recycled content. &ldquo;Recycled plastic is plastic that has been reprocessed from recovered material by using a chemical or manufacturing process. This is so it can be used either for its original purpose or for other purposes. This does not include organic recycling. Recovered material is pre-consumer plastic or post-consumer plastic that both: a) is no longer suitable to be used in the process from which it was generated and would otherwise have been used for energy recovery (for example, by incineration) or disposed of as waste (for example, by being sent to landfill); b) has been collected and recovered for use as a material input for a recycling or manufacturing process, instead of new primary material&rdquo;</td>
-</tr>
-<tr>
-<td align="left">recycledContentEvidenceType</td>
-<td align="left"><code>required</code></td>
-<td align="left">String</td>
-<td align="left">What evidence type supports the recycledContent claim. The entry should be the <a href="../../5_Controlled_Lists/5_011_Recycled_Content_Evidence_Type/">recycled content evidence type controlled list</a> identifier.</td>
-</tr>
-<tr>
-<td align="left">recycledContentEvidenceReference</td>
-<td align="left"><code>required</code></td>
-<td align="left">String</td>
-<td align="left">An accompanying reference number associated with the recycled content evidence type for the component.</td>
-</tr>
-<tr>
-<td align="left">recyclability</td>
-<td align="left"><code>recommended</code></td>
-<td align="left">Boolean</td>
-<td align="left">Is the component recyclable (as determined by a reputable source)?</td>
-</tr>
-<tr>
-<td align="left">recyclabilitySource</td>
-<td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">What source provided the recyclability claim? The entry should be the <a href="../../5_Controlled_Lists/5_005_Recyclability_Source/">recyclability source controlled list</a> identifier.</td>
-</tr>
-<tr>
-<td align="left">recyclabilityDate</td>
-<td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">The date that the recyclability was provided/last updated. Use the format <code>dd/mm/yyyy</code>.</td>
+<td align="left">List</td>
+<td align="left">The system(s) that facilitates the reuse of the component  <code>e.g., Loop</code>. The entries should be the <a href="../../5_Controlled_Lists/5_010_Reuse_System/">reuse system controlled list</a> identifier(s).</td>
 </tr>
 <tr>
 <td align="left">partOfMultipack</td>
@@ -1510,22 +1548,46 @@
 <td align="left">Is the component part of a multipack? Answer as: <code>1</code> for yes and <code>0</code> for no.</td>
 </tr>
 <tr>
+<td align="left">recycledContent</td>
+<td align="left"><code>required</code></td>
+<td align="left">Numeric</td>
+<td align="left">The minimum allowable percent of how much recycled content is included in the makeup of the component. For the purposes of this standard, we refer to the <a href="https://www.gov.uk/guidance/work-out-which-packaging-is-subject-to-plastic-packaging-tax" target="_blank">UK&rsquo;s HM Revenue &amp; Customs</a> definition of recycled content. &ldquo;Recycled plastic is plastic that has been reprocessed from recovered material by using a chemical or manufacturing process. This is so it can be used either for its original purpose or for other purposes. This does not include organic recycling. Recovered material is pre-consumer plastic or post-consumer plastic that both: a) is no longer suitable to be used in the process from which it was generated and would otherwise have been used for energy recovery (for example, by incineration) or disposed of as waste (for example, by being sent to landfill); b) has been collected and recovered for use as a material input for a recycling or manufacturing process, instead of new primary material&rdquo;</td>
+</tr>
+<tr>
+<td align="left">recycledContentClaims</td>
+<td align="left"><code>required</code></td>
+<td align="left">List</td>
+<td align="left">The information regarding the recycled contents. The entries should be the <a href="../../6_Relationship_Lists/6_006_Recycled_Content_Claims/">recycled content claims relationship list</a> indentifiers.</td>
+</tr>
+<tr>
+<td align="left">recyclability</td>
+<td align="left"><code>recommended</code></td>
+<td align="left">Boolean</td>
+<td align="left">Is the component recyclable (as determined by a reputable source)?</td>
+</tr>
+<tr>
+<td align="left">recyclabilityClaims</td>
+<td align="left"><code>recommended</code></td>
+<td align="left">List</td>
+<td align="left">The information regarding this recyclability claims. The entries should be the <a href="../../6_Relationship_Lists/6_005_Recyclability_Claims/">recyclability claims relationship list</a> identifiers.</td>
+</tr>
+<tr>
 <td align="left">certification</td>
 <td align="left"><code>recommended</code></td>
 <td align="left">Boolean</td>
-<td align="left">Does the component have a certificate (e.g. FSC, REACH, FSA etc.)?</td>
+<td align="left">Does the base material have a certificate (e.g. FSC, REACH, FSA etc.)?</td>
 </tr>
 <tr>
-<td align="left">certificationSource</td>
+<td align="left">certificationClaims</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">What source provided the certificate? The entry should be the <a href="../../5_Controlled_Lists/5_002_Certification_Source/">certification source controlled list</a> identifier.</td>
+<td align="left">List</td>
+<td align="left">The information regarding the certifications. The entries should be the <a href="../../6_Relationship_Lists/6_002_Certification_Claims/">certification claims relationship list</a> identifiers.</td>
 </tr>
 <tr>
-<td align="left">certificationDate</td>
+<td align="left">manufacturedCountry</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">The date that the certificate was provided/last updated. Use the format <code>dd/mm/yyyy</code>.</td>
+<td align="left">Numeric</td>
+<td align="left">The country the component was manufactured in. Use the country numeric <a href="https://www.iban.com/country-codes" target="_blank">ISO codes</a> as described in the ISO 3166 international standard.</td>
 </tr>
 <tr>
 <td align="left">updateDate</td>
