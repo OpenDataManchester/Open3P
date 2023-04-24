@@ -975,17 +975,19 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_7">
-          6 Governance
+          6 Relationship Lists
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="6 Governance" data-md-level="1">
+      <nav class="md-nav" aria-label="6 Relationship Lists" data-md-level="1">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
-          6 Governance
+          6 Relationship Lists
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -995,8 +997,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../../6_Governance/6_1_Governance/" class="md-nav__link">
-        Governance
+      <a href="../../6_Relationship_Lists/6_001_Relationship_Lists/" class="md-nav__link">
+        Relationship Lists
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6_Relationship_Lists/6_002_Certification_Claims/" class="md-nav__link">
+        Certification Claims
       </a>
     </li>
   
@@ -1082,14 +1098,14 @@
       
       
         <label class="md-nav__link" for="__nav_9">
-          8 Change Log
+          8 Governance
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="8 Change Log" data-md-level="1">
+      <nav class="md-nav" aria-label="8 Governance" data-md-level="1">
         <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
-          8 Change Log
+          8 Governance
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1099,7 +1115,59 @@
   
   
     <li class="md-nav__item">
-      <a href="../../8_Change_Log/8_1_Change_Log/" class="md-nav__link">
+      <a href="../../8_Governance/8_1_Governance/" class="md-nav__link">
+        Governance
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          9 Change Log
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="9 Change Log" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          9 Change Log
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../9_Change_Log/8_1_Change_Log/" class="md-nav__link">
         Latest Updates
       </a>
     </li>
@@ -1177,16 +1245,10 @@
 <td align="left">Does the base material have a certificate (e.g. FSC, REACH, FSA etc.)?</td>
 </tr>
 <tr>
-<td align="left">certificationSource</td>
+<td align="left">certificationClaims</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">What source provided the certificate? The entry should be the <a href="../../5_Controlled_Lists/5_002_Certification_Source/">Certification Source Controlled List</a> identifier.</td>
-</tr>
-<tr>
-<td align="left">certificationDate</td>
-<td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">The date that the certificate was provided/last updated. Use the format <code>dd/mm/yyyy</code>.</td>
+<td align="left">List</td>
+<td align="left">The information regarding the certification? The entry should be the <a href="../../6_Relationship_Lists/6_002_Certification_Claims/">Certification Claims Relationship List</a> identifier.</td>
 </tr>
 <tr>
 <td align="left">manufacturedCountry</td>
@@ -1211,16 +1273,18 @@
     materialChemCID String
     externalIdentifiers Dictionary
     certification Boolean
-    certificationSource String
-    certificationDate String
+    certificationClaims List
     manufacturedCountry Numeric
     updateDate String
   }
   BASE_MATERIALS }o..o{ CONTROLLED_LISTS : attributes
+  BASE_MATERIALS }o..o{ RELATIONSHIP_LISTS : attributes
   BASE_MATERIALS }o--o{ MATERIALS : within
       CONTROLLED_LISTS {
-    materialType recommended
-    certificationSource recommended
+    materialType recommended }
+      RELATIONSHIP_LISTS {
+    certificationClaims recommended
+      }
   }</code></pre>
 <h2 id="template">Template<a class="headerlink" href="#template" title="Permanent link">&para;</a></h2>
 <p>Base materials should be provided as a separate csv file, in tidy format. This means that each row of the csv file should be one base material. An example is provided.</p>
@@ -1255,7 +1319,10 @@
 <span class="normal">23</span>
 <span class="normal">24</span>
 <span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="mi">--</span><span class="err">Food</span><span class="w"> </span><span class="err">grade</span><span class="w"> </span><span class="err">sy</span><span class="kc">nt</span><span class="err">he</span><span class="kc">t</span><span class="err">ic</span><span class="w"> </span><span class="err">polye</span><span class="kc">t</span><span class="err">hyle</span><span class="kc">ne</span><span class="w"> </span><span class="kc">tere</span><span class="err">ph</span><span class="kc">t</span><span class="err">hala</span><span class="kc">te</span><span class="w"> </span><span class="err">(PET)</span><span class="w"> </span><span class="err">made</span><span class="w"> </span><span class="err">i</span><span class="kc">n</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">UK</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="mi">--</span><span class="err">Food</span><span class="w"> </span><span class="err">grade</span><span class="w"> </span><span class="err">sy</span><span class="kc">nt</span><span class="err">he</span><span class="kc">t</span><span class="err">ic</span><span class="w"> </span><span class="err">polye</span><span class="kc">t</span><span class="err">hyle</span><span class="kc">ne</span><span class="w"> </span><span class="kc">tere</span><span class="err">ph</span><span class="kc">t</span><span class="err">hala</span><span class="kc">te</span><span class="w"> </span><span class="err">(PET)</span><span class="w"> </span><span class="err">made</span><span class="w"> </span><span class="err">i</span><span class="kc">n</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">UK</span>
 <span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A4BAE07C-1847-CD8E-C933-6FD30478423B&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;baseMaterialName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PET&quot;</span><span class="p">,</span>
@@ -1269,12 +1336,15 @@
 <span class="w">    </span><span class="nt">&quot;primaryKey&quot;</span><span class="p">:</span><span class="s2">&quot;9187e576-0dfd-46dd-809e-4af0a35f888d&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">  </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TRUE&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;certificationSource&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="s2">&quot;certification-source-0002&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="s2">&quot;FSA&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;detailed&quot;</span><span class="p">:</span><span class="s2">&quot;The Food Standards Agency (FSA) is the independent government department working to protect public health and consumers’ wider interests in relation to food in England, Wales and Northern Ireland.&quot;</span>
-<span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;certificationDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/08/2022&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;certificationClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">    </span><span class="nt">&quot;certificationIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;certificationSource&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="s2">&quot;certification-source-0002&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="s2">&quot;FSA&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;detailed&quot;</span><span class="p">:</span><span class="s2">&quot;The Food Standards Agency (FSA) is the independent government department working to protect public health and consumers’ wider interests in relation to food in England, Wales and Northern Ireland.&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;certificationDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/08/2022&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="p">}],</span>
 <span class="w">  </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;Country&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;United Kingdom of Great Britain and Northern Ireland (the)&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;Numeric&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">826</span>
@@ -1308,7 +1378,7 @@
 <span class="w">    </span><span class="nt">&quot;dbPK&quot;</span><span class="p">:</span><span class="s2">&quot;152314568888&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">  </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TRUE&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;certificationSource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;certification-source-0001&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;certificationClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="s2">&quot;35&quot;</span><span class="p">],</span>
 <span class="w">  </span><span class="nt">&quot;certificationDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/08/2022&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">826</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/08/2022&quot;</span><span class="p">,</span>
