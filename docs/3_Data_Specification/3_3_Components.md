@@ -56,11 +56,12 @@ erDiagram
 MATERIALS }o--o{ COMPONENTS : within
   COMPONENTS {
     identifier String
-    name Numeric
+    name String
     description String
     externalIdentifiers Dictionary
-    imageURL URL
+    imageURLs List
     LOWcode String
+    componentConstituents List
     height Numeric
     heightDate String
     width Numeric
@@ -76,27 +77,25 @@ MATERIALS }o--o{ COMPONENTS : within
     function String
     flexibility String
     branding Boolean
-    componentRecyclingDisruptors String
+    componentEndOfLifeRoutes List
     colour String
     opacity String
     loaned Boolean
     reuseSystem String
     manufacturedCountry Numeric
     recycledContent Numeric
-    recycledContentEvidenceType String
-    recycledContentEvidenceReference String
+    recycledContentClaims List
     recyclability Boolean
-    recyclabilitySource String
-    recyclabilityDate String
+    recyclabilityClaims List
     partOfMultipack Boolean
     certification Boolean
-    certificationSource String
-    certificationDate String
+    certificationClaims List
     updateDate String
     releaseDate String
     discontinueDate String
   }
   COMPONENTS }o..o{ CONTROLLED_LISTS : attributes
+  COMPONENTS }o..o{ RELATIONSHIP_LISTS : attributes
   COMPONENTS }o--o{ COMPLETE_PACKAGING : within
   COMPONENTS }o..o{ MULTIPACK : within
   MULTIPACK }o..o{ LOAD_CATALOGUE : within
@@ -104,15 +103,18 @@ MATERIALS }o--o{ COMPONENTS : within
   COMPLETE_PACKAGING }o..o{ LOAD_CATALOGUE : within
   COMPONENTS }o..o{ LOAD_CATALOGUE : within
     CONTROLLED_LISTS {
-    recyclabilitySource recommended
     shape recommended
     function recommended
     flexibility recommended
-    componentRecyclingDisruptors recommended
     opacity recommended
     reuseSystem recommended
-    recycledContentEvidenceType required
-    certificationSource recommended
+  }
+  RELATIONSHIP_LISTS {
+    componentConstituents required
+    componentEndOfLifeRoutes recommended
+    recycledContentClaims required
+    recyclabilityClaims recommended
+    certificationClaims recommended
   }
 ```
 
