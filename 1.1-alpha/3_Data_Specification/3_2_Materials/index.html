@@ -1251,12 +1251,6 @@
 <td align="left">The globally unique identifier for the created material unique identifier. See <a href="../../4_Identifiers/4_1_Identifiers/">identifiers</a> section for information on how to construct this identifier</td>
 </tr>
 <tr>
-<td align="left">materialConstituents</td>
-<td align="left"><code>required</code></td>
-<td align="left">List</td>
-<td align="left">The information regarding the consituents that are combined to create this material. The information regarding the certification? The entry should be the <a href="../../6_Relationship_Lists/6_002_Certification_Claims/">Certification Claims Relationship List</a> identifier.</td>
-</tr>
-<tr>
 <td align="left">materialName</td>
 <td align="left"><code>required</code></td>
 <td align="left">String</td>
@@ -1267,6 +1261,12 @@
 <td align="left"><code>recommended</code></td>
 <td align="left">Dictionary</td>
 <td align="left">A dictionary of identifiers that might be used to identify the material in other systems. For example: manufacturer&rsquo;s own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. <code>{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}</code></td>
+</tr>
+<tr>
+<td align="left">materialConstituents</td>
+<td align="left"><code>required</code></td>
+<td align="left">List</td>
+<td align="left">The information regarding the consituents that are combined to create this material. The information regarding the certification? The entry should be the <a href="../../6_Relationship_Lists/6_003_Material_Constituents/">Material Constituents Relationship List</a> identifier.</td>
 </tr>
 <tr>
 <td align="left">combinationPurpose</td>
@@ -1321,10 +1321,9 @@ BASE_MATERIALS }o--o{ MATERIALS : within
     updateDate String
   }
   MATERIALS }o..o{ CONTROLLED_LISTS : attributes
-  BASE_MATERIALS }o..o{ RELATIONSHIP_LISTS : attributes
+  MATERIALS }o..o{ RELATIONSHIP_LISTS : attributes
   MATERIALS }o--o{ COMPONENTS : within
         CONTROLLED_LISTS {
-    materialPurpose recommended
     function recommended
     }
         RELATIONSHIP_LISTS {
