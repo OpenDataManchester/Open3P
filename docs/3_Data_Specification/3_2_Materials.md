@@ -17,7 +17,6 @@ The materials schema contains information regarding the materials that are used 
 |combinationPurpose|`recommended`|String|Why is this material being used? Use the identifier of the function that this row relates to. The entry here should be drawn from the [Function Controlled List](../5_Controlled_Lists/5_004_Function.md).|
 |certification|`recommended`|Boolean|Does the base material have a certificate (e.g. FSC, REACH, FSA etc.)?|
 |certificationClaims|`recommended`|List|The information regarding the certification? The entry should be the [Certification Claims Relationship List](../6_Relationship_Lists/6_002_Certification_Claims.md) identifier.|
-|certificationDate|`recommended`|String|The date that the certificate was provided/last updated. Use the format `dd/mm/yyyy`.|
 |manufacturedCountry|`recommended`|Numeric|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
 |updateDate|`required`|String|The date that the material was provided/last updated. Use the format `dd/mm/yyyy`.|
 
@@ -64,20 +63,29 @@ The specification of this csv file is as follows:
     --Food grade synthetic polyethylene terephthalate (PET) made in the UK. Only one base material.
     {
       "identifier": "DCEE1F88-A83B-5BBC-D2D9-6A862B344977",
-      "materialIdentifier": "278EFE8A-720A-06C1-A411-CB94878AD3E2",
-      "baseMaterialIdentifier": "A4BAE07C-1847-CD8E-C933-6FD30478423B",
       "materialName":"PET",
       "externalIdentifiers": {
         "GTIN":"123456789101",
         },
-      "materialPurpose": "m-material-purpose-0015",
-      "virginMaterial": 0,
-      "layer": "1",
-      "materialWeight": "100",
+      "materialConstituents":[{
+        "materialConstituentsIdentifier":"DCEE1F88-A83B-5BBC-D2D9-6A862B344977",
+        "materialIdentifier":"A4BAE07C-1847-CD8E-C933-6FD30478423B",
+        "materialPurpose":"m-material-purpose-0015",
+        "virginMaterial": 100,
+        "layer": ,
+        "materialPercentage": 100,
+      }],
       "combinationPurpose": "",
       "certification": "TRUE",
-      "certificationSource": "certification-source-0002",
-      "certificationDate": "01/08/2022",
+      "certificationClaims": [{
+        "certificationIdentifier": "1",
+        "certificationSource": {
+          "identifier":"certification-source-0002",
+          "category":"FSA",
+          "detailed":"The Food Standards Agency (FSA) is the independent government department working to protect public health and consumers’ wider interests in relation to food in England, Wales and Northern Ireland."
+        },
+        "certificationDate": "01/08/2022",
+      }],
       "manufacturedCountry": 826
       "updateDate": "01/08/2022",
     }
