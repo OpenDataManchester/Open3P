@@ -36,13 +36,13 @@ The components schema contains information regarding the individual components t
 |colour|`recommended`|String|The actual colour of the component at point of production using CMYK (Cyan-Magenta-Yellow-blacK) values. The format is specified according to cmyk(C%, M%, Y%, K%), where C, M, Y, and K are the percent values for the cyan, magenta, yellow, and black values of the color. For example: black is `cmyk(0%,0%,0%,100%)`. |
 |opacity|`recommended`|String|The transparency of the colours. The entry should be the [opacity controlled list](../5_Controlled_Lists/5_009_Opacity.md) identifier.|
 |loaned|`required`|Boolean|Is the component hired or loaned out as reusable packaging?|
-|reuseSystem|`recommended`|List|The system(s) that facilitates the reuse of the component  `e.g., Loop`. The entries should be the [reuse system controlled list](../5_Controlled_Lists/5_010_Reuse_System.md) identifier(s).|
+|reuseSystems|`recommended`|List|The system(s) that facilitates the reuse of the component  `e.g., Loop`. The entries should be the [reuse system controlled list](../5_Controlled_Lists/5_010_Reuse_System.md) identifier(s).|
 |partOfMultipack|`required`|Boolean|Is the component part of a multipack? Answer as: `1` for yes and `0` for no.|
 |recycledContent|`required`|Numeric|The minimum allowable percent of how much recycled content is included in the makeup of the component. For the purposes of this standard, we refer to the [UK's HM Revenue & Customs](https://www.gov.uk/guidance/work-out-which-packaging-is-subject-to-plastic-packaging-tax){target=_blank} definition of recycled content. "Recycled plastic is plastic that has been reprocessed from recovered material by using a chemical or manufacturing process. This is so it can be used either for its original purpose or for other purposes. This does not include organic recycling. Recovered material is pre-consumer plastic or post-consumer plastic that both: a) is no longer suitable to be used in the process from which it was generated and would otherwise have been used for energy recovery (for example, by incineration) or disposed of as waste (for example, by being sent to landfill); b) has been collected and recovered for use as a material input for a recycling or manufacturing process, instead of new primary material"|
 |recycledContentClaims|`required`|List|The information regarding the recycled contents. The entries should be the [recycled content claims relationship list](../6_Relationship_Lists/6_006_Recycled_Content_Claims.md) indentifiers.|
 |recyclability|`recommended`|Boolean|Is the component recyclable (as determined by a reputable source)?|
 |recyclabilityClaims|`recommended`|List|The information regarding this recyclability claims. The entries should be the [recyclability claims relationship list](../6_Relationship_Lists/6_005_Recyclability_Claims.md) identifiers.|
-|certification|`recommended`|Boolean|Does the base material have a certificate (e.g. FSC, REACH, FSA etc.)?|
+|certification|`recommended`|Boolean|Does the component have a certificate (e.g. FSC, REACH, FSA etc.)?|
 |certificationClaims|`recommended`|List|The information regarding the certifications. The entries should be the [certification claims relationship list](../6_Relationship_Lists/6_002_Certification_Claims.md) identifiers.|
 |manufacturedCountry|`recommended`|Numeric|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
 |updateDate|`required`|String|The date that the component was provided/last updated. Use the format `dd/mm/yyyy`.|
@@ -81,7 +81,7 @@ MATERIALS }o--o{ COMPONENTS : within
     colour String
     opacity String
     loaned Boolean
-    reuseSystem String
+    reuseSystems String
     manufacturedCountry Numeric
     recycledContent Numeric
     recycledContentClaims List
@@ -176,7 +176,7 @@ The specification of this csv file is as follows:
         "detailed": "allows light to pass through so that objects behind can be distinctly seen; no colour/ clear"
       },
       "loaned": "FALSE",
-      "reuseSystem": "",
+      "reuseSystems": "",
       "manufacturedCountry": {
         "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
         "Numeric": 826

@@ -14,19 +14,18 @@ The complete packaging schema contains information regarding the complete packag
 |name|`recommended`|String|The name of this complete packaging.|
 |description|`recommended`|String|A brief description of this complete packaging.|
 |externalIdentifiers|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the complete packaging in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
-|imageURL|`recommended`|URL|A URL that links to a picture of the complete packaging. Please see the guidelines below on how to capture the image and name the URL.|
-|componentItems|`required`|String|The component catalogue identifiers used to create the complete packaging. There must be an equivalent record in the `Components` data.|
+|imageURLs|`recommended`|List|URL(s) that links to a picture of the complete packaging. Please see the guidelines below on how to capture the image and name the URL.|
+|componentItems|`required`|List|The component catalogue identifiers used to create the complete packaging. There must be an equivalent record in the `Components` data.|
 |LOWcodeWOproduct|`recommended`|String|The list of waste code for **only** the complete packaging, by itself (excluding the product). LOW code is synonymous with European Waste Catelogue Code (EWC). For example: an empty bottle would have a LOWcode of `15 01 02`. Please use [Dsposal](https://dsposal.uk/browse/ewc){target=_blank} or [legislation.gov](https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made){target=_blank} to find the LOWcode. **Note**: The LOWcode can based on its combination with other components and the actual product contained in the complete packaging. Be sure to only include the complete packaging LOWcode and not the complete packaging with the product. If you cannot find the code or are uncertain please enter `Uncertain`.|
 |productType|`recommended`|String|Information about the product contained in the complete packaging. The entry here should be drawn from the [product type controlled list](../5_Controlled_Lists/5_012_Product_Type.md).|
-|componentContactWithProduct|`required`|String|What components (if any) come into direct contact with the product before purchased by a consumer? If none of the components come into contact with the product use `NA`. If there are multiple components, separate with a comma. `e.g. 'component1', 'component2'`|
+|componentContactWithProduct|`required`|List|What components (if any) come into direct contact with the product before purchased by a consumer? If none of the components come into contact with the product use `NA`.|
 |LOWcodeWproduct|`recommended`|String|The list of waste code for **everything** in the complete packaging. LOW code is synonymous with European Waste Catelogue Code (EWC). For example: an empty bottle would have a LOWcode of `15 01 02`. Please use [Dsposal](https://dsposal.uk/browse/ewc){target=_blank} or [legislation.gov](https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made){target=_blank} to find the LOWcode. **Note**: The LOWcode can based on its combination with other components and the actual product contained in the complete packaging. Be sure to include the complete packaging LOWcode with the product. If you cannot find the code or are uncertain please enter `Uncertain`.|
 |onTheGo|`required`|Boolean|Is the complete packaging often classed as packaging that will end up in street bins?|
 |householdWaste|`required`|Boolean|Is the complete packaging often classed as packaging that will end up in kerbside collections?|
-|depositReturnScheme|`required`|String| Which countries in the United Kingdom support a deposit return scheme for this particular complete packaging? The entry here should be drawn from the [deposit return scheme controlled list](../5_Controlled_Lists/5_013_Deposit_Return_Scheme.md).|
-|recyclingDisruptors|`recommended`|String|What challenges the complete packaging has for recycling. The entry should be the [recycling disruptors controlled list](../5_Controlled_Lists/5_014_Complete_Packaging_Recycling_Disruptors.md) identifier.|
+|depositReturnSchemes|`required`|List|Which countries support a deposit return scheme for this particular complete packaging? The entries here should be drawn from the [deposit return scheme controlled list](../5_Controlled_Lists/5_013_Deposit_Return_Scheme.md).|
+|completePackagingEndOfLifeRoutes|`recommended`|List|The information regarding this complete packaging purposed end of life routes. The entries should be the [complete packaging end of life routes](../6_Relationship_Lists/6_008_Complete_Packaging_End_of_Life_Routes.md) identifiers.|
 |recyclability|`recommended`|Boolean|Is the complete packaging recyclable (as determined by a reputable source)?|
-|recyclabilitySource|`recommended`|String|What source provided the recyclability claim? The entry should be the [recyclability source controlled list](../5_Controlled_Lists/5_005_Recyclability_Source.md) identifier.|
-|recyclabilityDate|`recommended`|String|The date that the recyclability was provided/last updated. Use the format `dd/mm/yyyy`.|
+|recyclabilityClaims|`recommended`|List|The information regarding this recyclability claims. The entries should be the [recyclability claims relationship list](../6_Relationship_Lists/6_005_Recyclability_Claims.md) identifiers.|
 |height|`recommended`|Numeric|The height of the complete packaging. Please see the guidelines below on how to properly measure and report the height.|
 |heightDate|`recommended`|String|The date that the height was last verified/measured. Use the format `dd/mm/yyyy`.|
 |width|`recommended`|Numeric|The width of the complete packaging. Please see the guidelines below on how to properly measure and report the width.|
@@ -36,14 +35,14 @@ The complete packaging schema contains information regarding the complete packag
 |volume|`recommended`|Numeric|Using the height, width, and depth found using the measurement guidelines, calculate the complete packaging's volume using: `height x width x depth`.|
 |volumeDate|`recommended`|String|The date that the volume was last verified/measured. Use the format `dd/mm/yyyy`.|
 |weight|`required`|Numeric|The weight of the complete packaging.|
-|weightTolerance|`required`|Numeric|The threshold of weight that complete packaging can vary by. This should be given in grams.|
+|weightTolerance|`required`|Numeric|The threshold of weight that complete packaging can vary by. This can be given in grams or percentage.|
+|weightToleranceType|`required`|String|Either `grams` or `percentage` based on the value provided in `weightTolerance`|
 |weightDate|`recommended`|String|The date that the weight was last verified/measured. Use the format `dd/mm/yyyy`.|
 |servingCapacity|`recommended`|Numeric|The serving capacity of the complete packaging - how much of a product that can be contained in the complete packaging.|
 |servingCapacityDate|`recommended`|String|The date that the serving capacity was last verified/measured. Use the format `dd/mm/yyyy`.|
 |partOfMultipack|`required`|Boolean|Is the complete packaging part of a multipack? Answer as: `1` for yes and `0` for no.|
 |certification|`recommended`|Boolean|Does the complete packaging have a certificate (e.g. FSC, REACH, FSA etc.)?|
-|certificationSource|`recommended`|String|What source provided the certificate? The entry should be the [certification source controlled list](../5_Controlled_Lists/5_002_Certification_Source.md) identifier.|
-|certificationDate|`recommended`|String|The date that the certificate was provided/last updated. Use the format `dd/mm/yyyy`.|
+|certificationClaims|`recommended`|List|The information regarding the certifications. The entries should be the [certification claims relationship list](../6_Relationship_Lists/6_002_Certification_Claims.md) identifiers.|
 |updateDate|`required`|String|The date that the complete packaging was provided/last updated. Use the format `dd/mm/yyyy`.|
 |releaseDate|`recommended`|String|The date that the complete packaging will be available to use. Use the format `dd/mm/yyyy`.|
 |discontinueDate|`recommended`|String|The date that the complete packaging will no longer be available to use. Use the format `dd/mm/yyyy`.|
@@ -58,19 +57,18 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : within
     name String
     description String
     externalIdentifiers Dictionary
-    imageURL URL
-    componentItems String
+    imageURLs List
+    componentItems List
     LOWcodeWOproduct String
     productType String
-    componentContactWithProduct String
+    componentContactWithProduct List
     LOWcodeWproduct String
     onTheGo Boolean
     householdWaste Boolean
-    depositReturnScheme String
-    recyclingDisruptors String
+    depositReturnSchemes List
+    completePackagingEndOfLifeRoutes List
     recyclability Boolean
-    recyclabilitySource String
-    recyclabilityDate String
+    recyclabilityClaims List
     height Numeric
     heightDate String
     width Numeric
@@ -81,30 +79,33 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : within
     volumeDate String
     weight Numeric
     weightTolerance Numeric
+    weightToleranceType String
     weightDate String
     servingCapacity Numeric
     servingCapacityDate String
     partOfMultipack Boolean
     certification Boolean
-    certificationSource String
-    certificationDate String
+    certificationClaims List
     updateDate String
     releaseDate String
     discontinueDate String
   }
   COMPLETE_PACKAGING }o..o{ CONTROLLED_LISTS : attributes
+  COMPLETE_PACKAGING }O..O{ RELATIONSHIP_LISTS
   COMPLETE_PACKAGING }o..o{ MULTIPACK : within
   COMPONENTS }o..o{ MULTIPACK : within
   COMPLETE_PACKAGING }o..o{ LOAD_CATALOGUE : within
   MULTIPACK }o..o{ LOAD_CATALOGUE : within
   COMPONENTS }o..o{ LOAD_CATALOGUE : within
       CONTROLLED_LISTS {
-    productType recommended
-    depositReturnScheme recommended
-    recyclingDisruptors recommended
-    recyclabilitySource recommended
-    certificationSource recommended
-  }
+      productType recommended
+      depositReturnScheme recommended
+    }
+    RELATIONSHIP_LISTS {
+      completePackagingEndOfLifeRoutes required
+      recyclabilityClaims recommended
+      certificationClaims recommended
+    }
 ```
 
 ## Template
