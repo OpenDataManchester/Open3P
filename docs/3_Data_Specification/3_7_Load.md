@@ -34,7 +34,7 @@ LOAD_CATALOGUE }o..o{ LOAD : within
     name numeric
     description String
     externalIdentifier Dictionary
-    loadIdentifier String
+    loadIdentifiers List
     startDate String
     destinationAddressName String
     destinationAddressStreet String
@@ -65,7 +65,7 @@ The specification of this csv file is as follows:
       "externalIdentifiers": {
         "GTIN":"00123456789012",
         },
-      "loadIdentifier": "CA88F5CE-2D09-AFE0-08D7-44804780F924",
+      "loadIdentifiers": "CA88F5CE-2D09-AFE0-08D7-44804780F924",
       "startDate": "01/08/2022",
       "endDate": "01/08/2022",
       "destinationAddressName": "Example Company",
