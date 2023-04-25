@@ -1078,6 +1078,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_7">
@@ -1184,6 +1186,20 @@
     <li class="md-nav__item">
       <a href="../../6_Relationship_Lists/6_007_Component_End_of_Life_Routes/" class="md-nav__link">
         Component End of Life Routes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6_Relationship_Lists/6_008_Complete_Packaging_End_of_Life_Routes/" class="md-nav__link">
+        Complete Packaging End of Life Routes
       </a>
     </li>
   
@@ -1536,7 +1552,7 @@
 <td align="left">Is the component hired or loaned out as reusable packaging?</td>
 </tr>
 <tr>
-<td align="left">reuseSystem</td>
+<td align="left">reuseSystems</td>
 <td align="left"><code>recommended</code></td>
 <td align="left">List</td>
 <td align="left">The system(s) that facilitates the reuse of the component  <code>e.g., Loop</code>. The entries should be the <a href="../../5_Controlled_Lists/5_010_Reuse_System/">reuse system controlled list</a> identifier(s).</td>
@@ -1575,7 +1591,7 @@
 <td align="left">certification</td>
 <td align="left"><code>recommended</code></td>
 <td align="left">Boolean</td>
-<td align="left">Does the base material have a certificate (e.g. FSC, REACH, FSA etc.)?</td>
+<td align="left">Does the component have a certificate (e.g. FSC, REACH, FSA etc.)?</td>
 </tr>
 <tr>
 <td align="left">certificationClaims</td>
@@ -1639,7 +1655,7 @@ MATERIALS }o--o{ COMPONENTS : within
     colour String
     opacity String
     loaned Boolean
-    reuseSystem String
+    reuseSystems String
     manufacturedCountry Numeric
     recycledContent Numeric
     recycledContentClaims List
@@ -1805,7 +1821,7 @@ MATERIALS }o--o{ COMPONENTS : within
 <span class="w">    </span><span class="nt">&quot;detailed&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;allows light to pass through so that objects behind can be distinctly seen; no colour/ clear&quot;</span>
 <span class="w">  </span><span class="p">},</span>
 <span class="w">  </span><span class="nt">&quot;loaned&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FALSE&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;reuseSystem&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;reuseSystems&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;Country&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;United Kingdom of Great Britain and Northern Ireland (the)&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;Numeric&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">826</span>

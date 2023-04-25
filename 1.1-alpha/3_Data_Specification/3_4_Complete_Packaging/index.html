@@ -1044,6 +1044,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_7">
@@ -1150,6 +1152,20 @@
     <li class="md-nav__item">
       <a href="../../6_Relationship_Lists/6_007_Component_End_of_Life_Routes/" class="md-nav__link">
         Component End of Life Routes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6_Relationship_Lists/6_008_Complete_Packaging_End_of_Life_Routes/" class="md-nav__link">
+        Complete Packaging End of Life Routes
       </a>
     </li>
   
@@ -1370,15 +1386,15 @@
 <td align="left">A dictionary of identifiers that might be used to identify the complete packaging in other systems. For example: manufacturer&rsquo;s own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. <code>{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}</code></td>
 </tr>
 <tr>
-<td align="left">imageURL</td>
+<td align="left">imageURLs</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">URL</td>
-<td align="left">A URL that links to a picture of the complete packaging. Please see the guidelines below on how to capture the image and name the URL.</td>
+<td align="left">List</td>
+<td align="left">URL(s) that links to a picture of the complete packaging. Please see the guidelines below on how to capture the image and name the URL.</td>
 </tr>
 <tr>
 <td align="left">componentItems</td>
 <td align="left"><code>required</code></td>
-<td align="left">String</td>
+<td align="left">List</td>
 <td align="left">The component catalogue identifiers used to create the complete packaging. There must be an equivalent record in the <code>Components</code> data.</td>
 </tr>
 <tr>
@@ -1396,8 +1412,8 @@
 <tr>
 <td align="left">componentContactWithProduct</td>
 <td align="left"><code>required</code></td>
-<td align="left">String</td>
-<td align="left">What components (if any) come into direct contact with the product before purchased by a consumer? If none of the components come into contact with the product use <code>NA</code>. If there are multiple components, separate with a comma. <code>e.g. 'component1', 'component2'</code></td>
+<td align="left">List</td>
+<td align="left">What components (if any) come into direct contact with the product before purchased by a consumer? If none of the components come into contact with the product use <code>NA</code>.</td>
 </tr>
 <tr>
 <td align="left">LOWcodeWproduct</td>
@@ -1418,16 +1434,16 @@
 <td align="left">Is the complete packaging often classed as packaging that will end up in kerbside collections?</td>
 </tr>
 <tr>
-<td align="left">depositReturnScheme</td>
+<td align="left">depositReturnSchemes</td>
 <td align="left"><code>required</code></td>
-<td align="left">String</td>
-<td align="left">Which countries in the United Kingdom support a deposit return scheme for this particular complete packaging? The entry here should be drawn from the <a href="../../5_Controlled_Lists/5_013_Deposit_Return_Scheme/">deposit return scheme controlled list</a>.</td>
+<td align="left">List</td>
+<td align="left">Which countries support a deposit return scheme for this particular complete packaging? The entries here should be drawn from the <a href="../../5_Controlled_Lists/5_013_Deposit_Return_Scheme/">deposit return scheme controlled list</a>.</td>
 </tr>
 <tr>
-<td align="left">recyclingDisruptors</td>
+<td align="left">completePackagingEndOfLifeRoutes</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">What challenges the complete packaging has for recycling. The entry should be the <a href="../../5_Controlled_Lists/5_014_Complete_Packaging_Recycling_Disruptors/">recycling disruptors controlled list</a> identifier.</td>
+<td align="left">List</td>
+<td align="left">The information regarding this complete packaging purposed end of life routes. The entries should be the <a href="../../6_Relationship_Lists/6_008_Complete_Packaging_End_of_Life_Routes/">complete packaging end of life routes</a> identifiers.</td>
 </tr>
 <tr>
 <td align="left">recyclability</td>
@@ -1436,16 +1452,10 @@
 <td align="left">Is the complete packaging recyclable (as determined by a reputable source)?</td>
 </tr>
 <tr>
-<td align="left">recyclabilitySource</td>
+<td align="left">recyclabilityClaims</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">What source provided the recyclability claim? The entry should be the <a href="../../5_Controlled_Lists/5_005_Recyclability_Source/">recyclability source controlled list</a> identifier.</td>
-</tr>
-<tr>
-<td align="left">recyclabilityDate</td>
-<td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">The date that the recyclability was provided/last updated. Use the format <code>dd/mm/yyyy</code>.</td>
+<td align="left">List</td>
+<td align="left">The information regarding this recyclability claims. The entries should be the <a href="../../6_Relationship_Lists/6_005_Recyclability_Claims/">recyclability claims relationship list</a> identifiers.</td>
 </tr>
 <tr>
 <td align="left">height</td>
@@ -1505,7 +1515,13 @@
 <td align="left">weightTolerance</td>
 <td align="left"><code>required</code></td>
 <td align="left">Numeric</td>
-<td align="left">The threshold of weight that complete packaging can vary by. This should be given in grams.</td>
+<td align="left">The threshold of weight that complete packaging can vary by. This can be given in grams or percentage.</td>
+</tr>
+<tr>
+<td align="left">weightToleranceType</td>
+<td align="left"><code>required</code></td>
+<td align="left">String</td>
+<td align="left">Either <code>grams</code> or <code>percentage</code> based on the value provided in <code>weightTolerance</code></td>
 </tr>
 <tr>
 <td align="left">weightDate</td>
@@ -1538,16 +1554,10 @@
 <td align="left">Does the complete packaging have a certificate (e.g. FSC, REACH, FSA etc.)?</td>
 </tr>
 <tr>
-<td align="left">certificationSource</td>
+<td align="left">certificationClaims</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">What source provided the certificate? The entry should be the <a href="../../5_Controlled_Lists/5_002_Certification_Source/">certification source controlled list</a> identifier.</td>
-</tr>
-<tr>
-<td align="left">certificationDate</td>
-<td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">The date that the certificate was provided/last updated. Use the format <code>dd/mm/yyyy</code>.</td>
+<td align="left">List</td>
+<td align="left">The information regarding the certifications. The entries should be the <a href="../../6_Relationship_Lists/6_002_Certification_Claims/">certification claims relationship list</a> identifiers.</td>
 </tr>
 <tr>
 <td align="left">updateDate</td>
@@ -1577,19 +1587,18 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : within
     name String
     description String
     externalIdentifiers Dictionary
-    imageURL URL
-    componentItems String
+    imageURLs List
+    componentItems List
     LOWcodeWOproduct String
     productType String
-    componentContactWithProduct String
+    componentContactWithProduct List
     LOWcodeWproduct String
     onTheGo Boolean
     householdWaste Boolean
-    depositReturnScheme String
-    recyclingDisruptors String
+    depositReturnSchemes List
+    completePackagingEndOfLifeRoutes List
     recyclability Boolean
-    recyclabilitySource String
-    recyclabilityDate String
+    recyclabilityClaims List
     height Numeric
     heightDate String
     width Numeric
@@ -1600,30 +1609,33 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : within
     volumeDate String
     weight Numeric
     weightTolerance Numeric
+    weightToleranceType String
     weightDate String
     servingCapacity Numeric
     servingCapacityDate String
     partOfMultipack Boolean
     certification Boolean
-    certificationSource String
-    certificationDate String
+    certificationClaims List
     updateDate String
     releaseDate String
     discontinueDate String
   }
   COMPLETE_PACKAGING }o..o{ CONTROLLED_LISTS : attributes
+  COMPLETE_PACKAGING }O..O{ RELATIONSHIP_LISTS
   COMPLETE_PACKAGING }o..o{ MULTIPACK : within
   COMPONENTS }o..o{ MULTIPACK : within
   COMPLETE_PACKAGING }o..o{ LOAD_CATALOGUE : within
   MULTIPACK }o..o{ LOAD_CATALOGUE : within
   COMPONENTS }o..o{ LOAD_CATALOGUE : within
       CONTROLLED_LISTS {
-    productType recommended
-    depositReturnScheme recommended
-    recyclingDisruptors recommended
-    recyclabilitySource recommended
-    certificationSource recommended
-  }</code></pre>
+      productType recommended
+      depositReturnScheme recommended
+    }
+    RELATIONSHIP_LISTS {
+      completePackagingEndOfLifeRoutes required
+      recyclabilityClaims recommended
+      certificationClaims recommended
+    }</code></pre>
 <h2 id="template">Template<a class="headerlink" href="#template" title="Permanent link">&para;</a></h2>
 <p>Complete packaging should be provided as a separate csv file, in tidy format. This means that each row of the csv file should be one complete package of a load. An example is provided.</p>
 <p>The specification of this csv file is as follows:</p>
