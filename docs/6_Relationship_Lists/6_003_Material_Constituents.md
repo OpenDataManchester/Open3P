@@ -16,3 +16,23 @@ The material constituents relationship list identifies the base_material and oth
 |virginMaterial|`recommended`|Numeric|The maximum allowable percent of the material that was newly created for the material.|
 |layer|`recommended`|Numeric|The layer associated with the material. The inner most layer (the layer closest to the product) denoted as 1, and the outermost layer is the biggest number.|
 |materialPercentage|`recommended`|Numeric|The percentage of the total materials making-up the material. For every unique material, materialPercentage should add to 100%.|
+
+## Diagram
+
+``` mermaid
+erDiagram
+
+  MATERIALS }o..o{ MATERIAL_CONSTITUENTS : within
+  MATERIAL_CONSTITUENTS {
+    materialConstituentsIdentifier String
+    materialIdentifier String
+    materialPurpose String
+    virginMaterial Numeric
+    layer Numeric
+    materialPercentage Numeric
+  }
+  MATERIAL_CONSTITUENTS }o--o{ CONTROLLED_LISTS : attributes
+      CONTROLLED_LISTS {
+    materialPurposeControlledList required }
+  }
+```

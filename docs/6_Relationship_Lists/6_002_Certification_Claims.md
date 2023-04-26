@@ -16,7 +16,7 @@ The Certification Claims relationship list identifies the certificates that can 
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
 |certificationIdentifier|`required`|String|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
-|certificationSource|`recommended`|String|What source provided the certificate? The entry should be the [Certification Source Controlled List](../5_Controlled_Lists/5_002_Certification_Source.md) identifier.|
+|certificationSource|`required`|String|What source provided the certificate? The entry should be the [Certification Source Controlled List](../5_Controlled_Lists/5_002_Certification_Source.md) identifier.|
 |certificationIssueDate|`recommended`|String|The date that the certificate was provided/last updated. Use the format `dd/mm/yyyy`.|
 
 ## Diagram
@@ -32,7 +32,7 @@ erDiagram
     certificationSource String
     certificationIssueDate String
   }
-  CERTIFICATION_CLAIMS }o..o{ CONTROLLED_LISTS : attributes
+  CERTIFICATION_CLAIMS }o--o{ CONTROLLED_LISTS : attributes
       CONTROLLED_LISTS {
     CertificationSource required }
   }
