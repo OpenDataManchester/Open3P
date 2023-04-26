@@ -1017,6 +1017,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#diagram" class="md-nav__link">
+    Diagram
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1325,6 +1332,21 @@
 </tr>
 </tbody>
 </table>
+<h2 id="diagram">Diagram<a class="headerlink" href="#diagram" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>erDiagram
+  CERTIFICATION_CLAIMS }o..o{ BASE_MATERIALS : within
+  CERTIFICATION_CLAIMS }o--o{ MATERIALS : within
+  CERTIFICATION_CLAIMS }o--o{ COMPONENTS : within
+  CERTIFICATION_CLAIMS }o--o{ COMPLETE_PACKAGING : within
+  CERTIFICATION_CLAIMS {
+    certificationIdentifier String
+    certificationSource String
+    certificationIssueDate String
+  }
+  CERTIFICATION_CLAIMS }o..o{ CONTROLLED_LISTS : attributes
+      CONTROLLED_LISTS {
+    CertificationSource required }
+  }</code></pre>
 
               
             </article>
