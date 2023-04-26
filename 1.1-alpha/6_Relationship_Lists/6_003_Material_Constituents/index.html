@@ -1031,6 +1031,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#diagram" class="md-nav__link">
+    Diagram
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1337,6 +1344,22 @@
 </tr>
 </tbody>
 </table>
+<h2 id="diagram">Diagram<a class="headerlink" href="#diagram" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>erDiagram
+
+  MATERIALS }o..o{ MATERIAL_CONSTITUENTS : within
+  MATERIAL_CONSTITUENTS {
+    materialConstituentsIdentifier String
+    materialIdentifier String
+    materialPurpose String
+    virginMaterial Numeric
+    layer Numeric
+    materialPercentage Numeric
+  }
+  MATERIAL_CONSTITUENTS }o--o{ CONTROLLED_LISTS : attributes
+      CONTROLLED_LISTS {
+    materialPurposeControlledList required }
+  }</code></pre>
 
               
             </article>

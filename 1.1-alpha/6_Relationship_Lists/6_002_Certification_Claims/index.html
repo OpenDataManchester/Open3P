@@ -1320,7 +1320,7 @@
 </tr>
 <tr>
 <td align="left">certificationSource</td>
-<td align="left"><code>recommended</code></td>
+<td align="left"><code>required</code></td>
 <td align="left">String</td>
 <td align="left">What source provided the certificate? The entry should be the <a href="../../5_Controlled_Lists/5_002_Certification_Source/">Certification Source Controlled List</a> identifier.</td>
 </tr>
@@ -1343,7 +1343,7 @@
     certificationSource String
     certificationIssueDate String
   }
-  CERTIFICATION_CLAIMS }o..o{ CONTROLLED_LISTS : attributes
+  CERTIFICATION_CLAIMS }o--o{ CONTROLLED_LISTS : attributes
       CONTROLLED_LISTS {
     CertificationSource required }
   }</code></pre>
