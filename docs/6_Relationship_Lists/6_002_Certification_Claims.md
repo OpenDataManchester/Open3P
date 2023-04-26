@@ -23,10 +23,10 @@ The Certification Claims relationship list identifies the certificates that can 
 
 ``` mermaid
 erDiagram
-  CERTIFICATION_CLAIMS }o..o{ BASE_MATERIALS : within
-  CERTIFICATION_CLAIMS }o--o{ MATERIALS : within
-  CERTIFICATION_CLAIMS }o--o{ COMPONENTS : within
-  CERTIFICATION_CLAIMS }o--o{ COMPLETE_PACKAGING : within
+  BASE_MATERIALS }o..o{ CERTIFICATION_CLAIMS : within
+  MATERIALS }o..o{ CERTIFICATION_CLAIMS : within
+  COMPONENTS}o..o{ CERTIFICATION_CLAIMS : within
+  COMPLETE_PACKAGING }o..o{ CERTIFICATION_CLAIMS : within
   CERTIFICATION_CLAIMS {
     certificationIdentifier String
     certificationSource String
