@@ -1045,6 +1045,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#diagram" class="md-nav__link">
+    Diagram
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1313,6 +1320,13 @@
 </tr>
 </tbody>
 </table>
+<h2 id="diagram">Diagram<a class="headerlink" href="#diagram" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>erDiagram
+  MATERIALS }o..o{ COMPONENT_CONSTITUENTS : within
+  COMPONENT_CONSTITUENTS {
+    componentConstituentsIdentifier String
+    materialIdentifier String
+  }</code></pre>
 
               
             </article>
