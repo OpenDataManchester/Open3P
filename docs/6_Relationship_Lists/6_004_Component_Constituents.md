@@ -12,3 +12,14 @@ The component constituents relationship list identifies the materials that are c
 |:-|:-|:-|:-|
 |componentConstituentsIdentifier|`required`|String|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
 |materialIdentifier|`required`|String|The unique identifier of the materials that this component is made of. There must be an equivalent record in the `Materials` data.|
+
+## Diagram
+
+``` mermaid
+erDiagram
+  MATERIALS }o..o{ COMPONENT_CONSTITUENTS : within
+  COMPONENT_CONSTITUENTS {
+    componentConstituentsIdentifier String
+    materialIdentifier String
+  }
+```

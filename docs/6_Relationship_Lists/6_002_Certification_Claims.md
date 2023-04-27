@@ -34,6 +34,6 @@ erDiagram
   }
   CERTIFICATION_CLAIMS }o--o{ CONTROLLED_LISTS : attributes
       CONTROLLED_LISTS {
-    CertificationSource required }
+    certificationSource required }
   }
 ```
