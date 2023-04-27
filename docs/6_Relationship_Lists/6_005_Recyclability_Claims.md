@@ -23,7 +23,7 @@ The recyclability claims relationship list identifies the materials that are com
 erDiagram
 
   COMPONENTS }o..o{ RECYCLABILITY_CLAIMS : within
-  COMPLETE PACKAGING }o..o{ RECYCLABILITY_CLAIMS : within
+  COMPLETE_PACKAGING }o..o{ RECYCLABILITY_CLAIMS : within
   RECYCLABILITY_CLAIMS {
     recyclabilityIdentifier String
     recyclabilitySource String
