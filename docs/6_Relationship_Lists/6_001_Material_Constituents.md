@@ -38,3 +38,72 @@ erDiagram
     materialPurposeControlledList required }
   }
 ```
+
+## Example
+
+=== "JSON"
+
+    ``` json linenums="1"
+    Fibre based composite Polyethylene, EVOH, Paper multi layer
+    {
+      [
+        {
+          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
+          "materialCombinationIdentifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
+          "materialPurpose": "m-material-purpose-0005",
+          "virginMaterial": "100",
+          "layer": "1",
+          "materialPercentage": 7
+        },
+        {
+          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
+          "materialCombinationIdentifier": "96245c85-5671-4f3d-875f-82665005e9e8",
+          "materialPurpose": "m-material-purpose-0015",
+          "virginMaterial": "100",
+          "layer": 2,
+          "materialPercentage": 27
+        },
+        {
+          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
+          "materialCombinationIdentifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
+          "materialPurpose": "m-material-purpose-0002",
+          "virginMaterial": "100",
+          "layer": 3,
+          "materialPercentage": 7
+        },
+        {
+          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
+          "materialCombinationIdentifier": "ff249e1f-5015-46b8-8655-6c920fbf2606",
+          "materialPurpose": "m-material-purpose-0003",
+          "virginMaterial": "100",
+          "layer": 4,
+          "materialPercentage": 18
+        },
+        {
+          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
+          "materialCombinationIdentifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
+          "materialPurpose": "m-material-purpose-0002",
+          "virginMaterial": "100",
+          "layer": 5,
+          "materialPercentage": 7
+        },
+        {
+          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
+          "materialCombinationIdentifier": "96245c85-5671-4f3d-875f-82665005e9e8",
+          "materialPurpose": "m-material-purpose-0015",
+          "virginMaterial": "100",
+          "layer": 6,
+          "materialPercentage": 27
+        },
+        {
+          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
+          "materialCombinationIdentifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
+          "materialPurpose": "m-material-purpose-0005",
+          "virginMaterial": "100",
+          "layer": 7,
+          "materialPercentage": 7
+        },
+        
+      ]
+    }
+    ```
