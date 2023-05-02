@@ -41,10 +41,10 @@ erDiagram
 
 ## Example
 
-=== "JSON"
+=== "JSON #1"
 
     ``` json linenums="1"
-    Fibre based composite Polyethylene, EVOH, Paper multi layer
+    --Fibre based composite Polyethylene, EVOH, Paper multi layer
     {
       [
         {
@@ -103,14 +103,13 @@ erDiagram
           "layer": 7,
           "materialPercentage": 7
         },
-        
       ]
     } 
     ```
 === "JSON #2"
 
     ``` json linenums="1"
-    Cellulose - verbose data structure
+    --Cellulose - verbose data structure
     {
       "materialConstituentsIdentifier": "a4ef4dec-eceb-417d-bded-9bd1e305a440",
       "materialCombinationIdentifier": {
@@ -132,5 +131,4 @@ erDiagram
       "virginMaterial": 100,
       "layer": null,
       "materialPercentage": 100
-    },
-    ```
+    }
