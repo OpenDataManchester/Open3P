@@ -16,8 +16,7 @@ The multipack schema contains information regarding the multipacks that are used
 |name|`recommended`|String|The name of this multipack.|
 |description|`recommended`|String|A brief description of this multipack.|
 |externalIdentifiers|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the multipack in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
-|multipackIdentifier|`required`|String|The unique identifier of the created multipack. A globally unique identifier. See identifiers section for information on how to construct this identifier.|
-|packagingItems|`required`|List|The complete packaging and/or the component identifiers used to create the multipack. There must be an equivalent record in the `Complete Packaging` or `Components` data.|
+|multipackConstituentsIdentifiers|`required`|List|The complete packaging and/or the component identifiers used to create the multipack. There must be an equivalent record in the `Complete Packaging` or `Components` data.|
 |tier|`recommended`|Integer|The tier associated with the multipack. The inner most tier denoted as 1, and the outermost tier is the biggest number.|
 |identicalQuantity|`required`|Numeric|Number of identical units for the unique complete packaging item or a component this row corresponds to.|
 |updateDate|`required`|String|The date that the multipack was provided/last updated. Use the format `dd/mm/yyyy`.|
@@ -36,8 +35,7 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : within
     name String
     description String
     externalIdentifiers Dictionary
-    multipackIdentifier String
-    packagingItems List
+    multipackConstituentsIdentifiers List
     tier String
     identicalQuantity Numeric
     updateDate String
@@ -47,6 +45,9 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : within
   COMPLETE_PACKAGING }o..o{ LOAD_CATALOGUE : within
   MULTIPACK }o..o{ LOAD_CATALOGUE : within
   COMPONENTS }o--o{ LOAD_CATALOGUE : within
+      RELATIONSHIP_LISTS {
+        multipackConstituentsIdentifier required
+    }
 ```
 
 ## Template
