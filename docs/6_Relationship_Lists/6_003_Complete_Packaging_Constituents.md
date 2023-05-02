@@ -18,10 +18,11 @@ The complete packaging constituents relationship list identifies the componenets
 ``` mermaid
 erDiagram
 
-  COMPONENTS }o..o{ COMPLETE_PACKAGING_CONSTITUENTS : within
   COMPLETE_PACKAGING }o..o{ COMPLETE_PACKAGING_CONSTITUENTS : within
   COMPLETE_PACKAGING_CONSTITUENTS {
     completePackagingConstituentsIdentifier String
     completePackagingCombinationIdentifier String
   }
+  COMPLETE_PACKAGING_CONSTITUENTS }o--o{ COMPONENTS : attributes
+  COMPLETE_PACKAGING_CONSTITUENTS }o--o{ COMPLETE_PACKAGING : attributes
 ```

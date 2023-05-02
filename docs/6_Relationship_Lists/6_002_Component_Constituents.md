@@ -17,10 +17,11 @@ The component constituents relationship list identifies the materials that are c
 
 ``` mermaid
 erDiagram
-  MATERIALS }o..o{ COMPONENT_CONSTITUENTS : within
   COMPONENTS }o..o{ COMPONENT_CONSTITUENTS : within
   COMPONENT_CONSTITUENTS {
     componentConstituentsIdentifier String
     componentCombinationIdentifier String
   }
+  COMPONENT_CONSTITUENTS }o--o{ MATERIALS : attributes
+  COMPONENT_CONSTITUENTS }o--o{ COMPONENTS : attributes
 ```

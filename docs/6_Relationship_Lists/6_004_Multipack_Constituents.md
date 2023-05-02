@@ -18,9 +18,10 @@ The multipack constituents relationship list identifies the complete packaging i
 ``` mermaid
 erDiagram
 
-  COMPLETE_PACKAGING }o..o{ MULTIPACK_CONSTITUENTS : within
+  MULTIPACK }o..o{ MULTIPACK_CONSTITUENTS : within
   MULTIPACK_CONSTITUENTS {
     multipackConstituentsIdentifier String
     multipackCombinationIdentifier String
   }
+  MULTIPACK_CONSTITUENTS }o--o{ COMPLETE_PACKAGING : attributes
 ```
