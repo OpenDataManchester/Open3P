@@ -1370,12 +1370,13 @@
 </table>
 <h2 id="diagram">Diagram<a class="headerlink" href="#diagram" title="Permanent link">&para;</a></h2>
 <pre class="mermaid"><code>erDiagram
-  MATERIALS }o..o{ COMPONENT_CONSTITUENTS : within
   COMPONENTS }o..o{ COMPONENT_CONSTITUENTS : within
   COMPONENT_CONSTITUENTS {
     componentConstituentsIdentifier String
     componentCombinationIdentifier String
-  }</code></pre>
+  }
+  COMPONENT_CONSTITUENTS }o--o{ MATERIALS : attributes
+  COMPONENT_CONSTITUENTS }o--o{ COMPONENTS : attributes</code></pre>
 
               
             </article>

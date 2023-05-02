@@ -1371,11 +1371,12 @@
 <h2 id="diagram">Diagram<a class="headerlink" href="#diagram" title="Permanent link">&para;</a></h2>
 <pre class="mermaid"><code>erDiagram
 
-  COMPLETE_PACKAGING }o..o{ MULTIPACK_CONSTITUENTS : within
+  MULTIPACK }o..o{ MULTIPACK_CONSTITUENTS : within
   MULTIPACK_CONSTITUENTS {
     multipackConstituentsIdentifier String
     multipackCombinationIdentifier String
-  }</code></pre>
+  }
+  MULTIPACK_CONSTITUENTS }o--o{ COMPLETE_PACKAGING : attributes</code></pre>
 
               
             </article>
