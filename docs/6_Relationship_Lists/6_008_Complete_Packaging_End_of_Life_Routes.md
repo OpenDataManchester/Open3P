@@ -25,7 +25,7 @@ erDiagram
     completePackagingEndOfLifeRouteIdentifier String
     completePackagingEndOfLifeRoute String
     orderOfPrecedence String
-    completePackagingDistruptors String
+    completePackagingDistruptors List
   }
   COMPLETE_PACKAGING_END_OF_LIFE_ROUTES }o--o{ CONTROLLED_LISTS : attributes
       CONTROLLED_LISTS {

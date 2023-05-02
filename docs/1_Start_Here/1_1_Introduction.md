@@ -11,7 +11,7 @@ Open 3P is an open data standard for the packaging industry, which is being deve
 
 With Open 3P, stakeholders in the packaging supply chain will be able to share information about materials, components and packaging in a standardised format. This will allow for better collaboration between manufacturers, retailers, recyclers, regulators, and consumers. By creating a common understanding of the materials and processes involved in packaging, it will be easier to identify opportunities for reducing waste, increasing efficiency, and improving sustainability throughout the supply chain.
 
-The first phase of the project brought together stakeholders from the entire packaging ecosystem to explore how we might create the foundations for systemic change in the packaging value chain. We had more than 80 individuals from over 40 organisations take part in our workshops, interviews and research and we are incredibly grateful to them for sharing their time, expertise and support.
+The first phase of the project brought together stakeholders from the entire packaging ecosystem to explore how we might create the foundations for systemic change in the packaging value chain. We had more than 120 individuals from over 70 organisations take part in our workshops, interviews and research and we are incredibly grateful to them for sharing their time, expertise and support.
 
 Open 3P is based on the principles of open data, which means that it is freely accessible, sharable, and usable by anyone. It is designed to be flexible and adaptable to different contexts and use cases, so that it can evolve over time as new technologies and practices emerge. The development of Open 3P is guided by the [OpenStand](https://open-stand.org/){target=_blank} principles of:
 

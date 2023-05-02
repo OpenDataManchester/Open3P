@@ -25,7 +25,7 @@ erDiagram
     componentEndOfLifeRouteIdentifier String
     componentEndOfLifeRoute String
     orderOfPrecedence String
-    componentDistruptors String
+    componentDistruptors List
   }
   COMPONENT_END_OF_LIFE_ROUTES }o--o{ CONTROLLED_LISTS : attributes
       CONTROLLED_LISTS {
