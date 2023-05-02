@@ -334,110 +334,9 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Key Concepts
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         Key Concepts
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#base-materials" class="md-nav__link">
-    Base Materials
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#materials" class="md-nav__link">
-    Materials
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#components" class="md-nav__link">
-    Components
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#product" class="md-nav__link">
-    Product
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#complete-packaging" class="md-nav__link">
-    Complete Packaging
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#multipack" class="md-nav__link">
-    Multipack
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#load-catalogue" class="md-nav__link">
-    Load Catalogue
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#load" class="md-nav__link">
-    Load
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#packaging-item" class="md-nav__link">
-    Packaging Item
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reuse" class="md-nav__link">
-    Reuse
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recycle" class="md-nav__link">
-    Recycle
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -1405,7 +1304,32 @@
 
 
 <h1 id="key-concepts">Key Concepts<a class="headerlink" href="#key-concepts" title="Permanent link">&para;</a></h1>
-<p>The Open 3P data standard is to provide information about what packaging is made out of and how these materials flow through the packaging supply chain.</p>
+<p>The Open 3P data standard is to provide information about what packaging is made out of and how these materials flow through the packaging supply chain. With Open 3P, stakeholders in the packaging supply chain will be able to share information about materials, components and packaging in a standardised format. This will allow for better collaboration between manufacturers, brands, retailers, consumers, recyclers, compliance schemes and regulators.</p>
+<p>sequenceDiagram
+    participant manufacturers
+    participant brands
+    participant retailers
+    participant consumers
+    participant recyclers
+    participant compliance schemes
+    participant regulators
+    manufacturers-&gt;&gt;brands
+    manufacturers-&gt;&gt;retailers
+    manufacturers-&gt;&gt;compliance schemes
+    manufacturers-&gt;&gt;regulators
+    brands-&gt;&gt;retailers
+    brands-&gt;&gt;consumers
+    brands-&gt;&gt;recyclers
+    brands-&gt;&gt;compliance schemes
+    brands-&gt;&gt;regulators
+    retailers-&gt;&gt;consumers
+    retailers-&gt;&gt;recyclers
+    retailers-&gt;&gt;compliance schemes
+    retailers-&gt;&gt;regulators
+    consumers-&gt;&gt;recyclers
+    recyclers-&gt;&gt;manufacturers
+    compliance schemes-&gt;&gt;regulators</p>
+<h1 id="definitions">Definitions<a class="headerlink" href="#definitions" title="Permanent link">&para;</a></h1>
 <h2 id="base-materials">Base Materials<a class="headerlink" href="#base-materials" title="Permanent link">&para;</a></h2>
 <ul>
 <li>general template used to store information about a base level material</li>
