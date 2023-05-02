@@ -59,7 +59,26 @@ The specification of this csv file is as follows:
 === "JSON #1"
 
     ``` json linenums="1"
-    --Food grade synthetic polyethylene terephthalate (PET) made in the UK
+    --FSC accredited wood grown in Spain
+    {
+      "identifier": "a5e6b8bc-ade8-4660-857e-d397243f6b57",
+      "baseMaterialName": "Spainish Softwood",
+      "baseMaterialType": "",
+      "materialChemCID": "",
+      "externalIdentifiers": {
+        "dbPK":"152314568888",
+        },
+      "certification": "TRUE",
+      "certificationClaims": ["1","35"],
+      "certificationDate": "01/08/2022",
+      "manufacturedCountry": 724,
+      "updateDate": "01/08/2022",
+    }
+    ```
+=== "JSON #2"
+
+    ``` json linenums="1"
+    --Food grade synthetic polyethylene terephthalate (PET) made in the UK - verbose data structure
     {
       "identifier": "A4BAE07C-1847-CD8E-C933-6FD30478423B",
       "baseMaterialName": "PET",
@@ -74,7 +93,7 @@ The specification of this csv file is as follows:
         },
       "certification": "TRUE",
       "certificationClaims": [{
-        "certificationIdentifier": "1",
+        "certificationIdentifier": "2e32b7cc-5fa8-425f-a2c0-784340e43f36",
         "certificationSource": {
           "identifier":"certification-source-0002",
           "category":"FSA",
@@ -86,25 +105,6 @@ The specification of this csv file is as follows:
         "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
         "Numeric": 826
       },
-      "updateDate": "01/08/2022",
-    }
-    ```
-=== "JSON #2"
-
-    ``` json linenums="1"
-    --FSC accredited spruce grown in Scotland
-    {
-      "identifier": "a5e6b8bc-ade8-4660-857e-d397243f6b57",
-      "baseMaterialName": "Spruce",
-      "baseMaterialType": "",
-      "materialChemCID": "",
-      "externalIdentifiers": {
-        "dbPK":"152314568888",
-        },
-      "certification": "TRUE",
-      "certificationClaims": ["1","35"],
-      "certificationDate": "01/08/2022",
-      "manufacturedCountry": 826,
       "updateDate": "01/08/2022",
     }
     ```
