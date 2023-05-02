@@ -13,24 +13,24 @@ sequenceDiagram
     participant retailers
     participant consumers
     participant recyclers
-    participant compliance schemes
+    participant compliance
     participant regulators
-    manufacturers->>brands
-    manufacturers->>retailers
-    manufacturers->>compliance schemes
-    manufacturers->>regulators
-    brands->>retailers
-    brands->>consumers
-    brands->>recyclers
-    brands->>compliance schemes
-    brands->>regulators
-    retailers->>consumers
-    retailers->>recyclers
-    retailers->>compliance schemes
-    retailers->>regulators
-    consumers->>recyclers
-    recyclers->>manufacturers
-    compliance schemes->>regulators
+    manufacturers->>brands movement
+    manufacturers->>retailers movement
+    manufacturers->>compliance movement
+    manufacturers->>regulators movement
+    brands->>retailers movement
+    brands->>consumers movement
+    brands->>recyclers movement
+    brands->>compliance movement
+    brands->>regulators movement
+    retailers->>consumers movement
+    retailers->>recyclers movement
+    retailers->>compliance movement
+    retailers->>regulators movement
+    consumers->>recyclers movement
+    recyclers->>manufacturers movement
+    compliance->>regulators movement
 
 # Definitions
 
