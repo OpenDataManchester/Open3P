@@ -1304,7 +1304,7 @@
 
 
 <h1 id="key-concepts">Key Concepts<a class="headerlink" href="#key-concepts" title="Permanent link">&para;</a></h1>
-<p>The Open 3P data standard is to provide information about what packaging is made out of and how these materials flow through the packaging supply chain. With Open 3P, stakeholders in the packaging supply chain will be able to share information about materials, components and packaging in a standardised format. This will allow for better collaboration between manufacturers, brands, retailers, consumers, recyclers, compliance schemes and regulators.</p>
+<p>The Open 3P data standard is to provide information about what packaging is made out of and how these materials flow through the packaging supply chain. With Open 3P, stakeholders in the packaging supply chain will be able to share information about materials, components and packaging in a standardised format. This will allow for better collaboration between manufacturers, brands, retailers, consumers, recyclers, compliance schemes and regulators.
 <pre class="mermaid"><code>sequenceDiagram
     participant manufacturers
     participant brands
@@ -1313,22 +1313,22 @@
     participant recyclers
     participant complianceSchemes
     participant regulators
-    manufacturers-&gt;&gt;brands: movement
-    manufacturers-&gt;&gt;retailers: movement
-    manufacturers-&gt;&gt;complianceSchemes: movement
-    manufacturers-&gt;&gt;regulators: movement
-    brands-&gt;&gt;retailers: movement
-    brands-&gt;&gt;consumers: movement
-    brands-&gt;&gt;recyclers: movement
-    brands-&gt;&gt;complianceSchemes: movement
-    brands-&gt;&gt;regulators: movement
-    retailers-&gt;&gt;consumers: movement
-    retailers-&gt;&gt;recyclers: movement
-    retailers-&gt;&gt;complianceSchemes: movement
-    retailers-&gt;&gt;regulators: movement
-    consumers-&gt;&gt;recyclers: movement
-    recyclers-&gt;&gt;manufacturers: movement
-    complianceSchemes-&gt;&gt;regulators: movement</code></pre>
+    manufacturers-&gt;&gt;brands: products
+    manufacturers-&gt;&gt;retailers: products
+    manufacturers-&gt;&gt;complianceSchemes: data
+    manufacturers-&gt;&gt;regulators: data
+    brands-&gt;&gt;retailers: products
+    brands-&gt;&gt;consumers: products
+    brands-&gt;&gt;recyclers: waste
+    brands-&gt;&gt;complianceSchemes: data
+    brands-&gt;&gt;regulators: data
+    retailers-&gt;&gt;consumers: products
+    retailers-&gt;&gt;recyclers: waste
+    retailers-&gt;&gt;complianceSchemes: data
+    retailers-&gt;&gt;regulators: data
+    consumers-&gt;&gt;recyclers: waste
+    recyclers-&gt;&gt;manufacturers: material
+    complianceSchemes-&gt;&gt;regulators: data</code></pre></p>
 <h1 id="definitions">Definitions<a class="headerlink" href="#definitions" title="Permanent link">&para;</a></h1>
 <h2 id="base-materials">Base Materials<a class="headerlink" href="#base-materials" title="Permanent link">&para;</a></h2>
 <ul>
