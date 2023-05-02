@@ -15,22 +15,22 @@ sequenceDiagram
     participant recyclers
     participant compliance
     participant regulators
-    manufacturers->>brands movement
-    manufacturers->>retailers movement
-    manufacturers->>compliance movement
-    manufacturers->>regulators movement
-    brands->>retailers movement
-    brands->>consumers movement
-    brands->>recyclers movement
-    brands->>compliance movement
-    brands->>regulators movement
-    retailers->>consumers movement
-    retailers->>recyclers movement
-    retailers->>compliance movement
-    retailers->>regulators movement
-    consumers->>recyclers movement
-    recyclers->>manufacturers movement
-    compliance->>regulators movement
+    manufacturers->>brands: movement
+    manufacturers->>retailers: movement
+    manufacturers->>compliance: movement
+    manufacturers->>regulators: movement
+    brands->>retailers: movement
+    brands->>consumers: movement
+    brands->>recyclers: movement
+    brands->>compliance: movement
+    brands->>regulators: movement
+    retailers->>consumers: movement
+    retailers->>recyclers: movement
+    retailers->>compliance: movement
+    retailers->>regulators: movement
+    consumers->>recyclers: movement
+    recyclers->>manufacturers: movement
+    compliance->>regulators: movement
 
 # Definitions
 
