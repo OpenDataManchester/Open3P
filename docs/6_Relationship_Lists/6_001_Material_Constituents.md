@@ -31,6 +31,8 @@ erDiagram
     layer Numeric
     materialPercentage Numeric
   }
+  MATERIAL_CONSTITUENTS }o--o{ BASE_MATERIALS : attributes
+  MATERIAL_CONSTITUENTS }o--o{ MATERIALS : attributes
   MATERIAL_CONSTITUENTS }o--o{ CONTROLLED_LISTS : attributes
       CONTROLLED_LISTS {
     materialPurposeControlledList required }

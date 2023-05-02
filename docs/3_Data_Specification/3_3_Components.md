@@ -43,7 +43,7 @@ The components schema contains information regarding the individual components t
 |recyclability|`recommended`|Boolean|Is the component recyclable (as determined by a reputable source)?|
 |recyclabilityClaims|`recommended`|List|The information regarding this recyclability claims. The entries should be the [recyclability claims relationship list](../6_Relationship_Lists/6_006_Recyclability_Claims.md identifiers.|
 |certification|`recommended`|Boolean|Does the component have a certificate (e.g. FSC, REACH, FSA etc.)?|
-|certificationClaims|`recommended`|List|The information regarding the certifications. The entries should be the [certification claims relationship list](../6_Relationship_Lists/6_005_Certification_Claims.md identifiers.|
+|certificationClaims|`recommended`|List|The information regarding the certifications. The entries should be the [certification claims relationship list](../6_Relationship_Lists/6_005_Certification_Claims.md) identifiers.|
 |manufacturedCountry|`recommended`|Numeric|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
 |updateDate|`required`|String|The date that the component was provided/last updated. Use the format `dd/mm/yyyy`.|
 |releaseDate|`recommended`|String|The date that the component will be available to use. Use the format `dd/mm/yyyy`.|
