@@ -1394,13 +1394,7 @@
 <td align="left">A dictionary of identifiers that might be used to identify the multipack in other systems. For example: manufacturer&rsquo;s own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. <code>{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}</code></td>
 </tr>
 <tr>
-<td align="left">multipackIdentifier</td>
-<td align="left"><code>required</code></td>
-<td align="left">String</td>
-<td align="left">The unique identifier of the created multipack. A globally unique identifier. See identifiers section for information on how to construct this identifier.</td>
-</tr>
-<tr>
-<td align="left">packagingItems</td>
+<td align="left">multipackConstituentsIdentifiers</td>
 <td align="left"><code>required</code></td>
 <td align="left">List</td>
 <td align="left">The complete packaging and/or the component identifiers used to create the multipack. There must be an equivalent record in the <code>Complete Packaging</code> or <code>Components</code> data.</td>
@@ -1447,8 +1441,7 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : within
     name String
     description String
     externalIdentifiers Dictionary
-    multipackIdentifier String
-    packagingItems List
+    multipackConstituentsIdentifiers List
     tier String
     identicalQuantity Numeric
     updateDate String
@@ -1457,7 +1450,10 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : within
   }
   COMPLETE_PACKAGING }o..o{ LOAD_CATALOGUE : within
   MULTIPACK }o..o{ LOAD_CATALOGUE : within
-  COMPONENTS }o--o{ LOAD_CATALOGUE : within</code></pre>
+  COMPONENTS }o--o{ LOAD_CATALOGUE : within
+      RELATIONSHIP_LISTS {
+        multipackConstituentsIdentifier required
+    }</code></pre>
 <h2 id="template">Template<a class="headerlink" href="#template" title="Permanent link">&para;</a></h2>
 <p>Multipack should be provided as a separate csv file, in tidy format. This means that each row of the csv file should be one multipack of a load. An example is provided.</p>
 <p>The specification of this csv file is as follows:</p>

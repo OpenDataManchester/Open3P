@@ -1364,7 +1364,7 @@
 <td align="left">multipackCombinationIdentifier</td>
 <td align="left"><code>required</code></td>
 <td align="left">String</td>
-<td align="left">The unique identifier of complete packaging that this multipack is made of. There must be an equivalent record in the <code>Complete Packaging</code> data.</td>
+<td align="left">The unique identifier of components and/or complete packaging that this multipack is made of. There must be an equivalent record in the <code>Components</code> OR <code>Complete Packaging</code> data.</td>
 </tr>
 </tbody>
 </table>
@@ -1376,7 +1376,8 @@
     multipackConstituentsIdentifier String
     multipackCombinationIdentifier String
   }
-  MULTIPACK_CONSTITUENTS }o--o{ COMPLETE_PACKAGING : attributes</code></pre>
+  MULTIPACK_CONSTITUENTS }o--o{ COMPLETE_PACKAGING : attributes
+  MULTIPACK_CONSTITUENTS }o--o{ COMPONENTS : attributes</code></pre>
 
               
             </article>
