@@ -770,6 +770,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_6">
@@ -783,6 +785,20 @@
           5 Controlled Lists
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5_Controlled_Lists/5_000_Controlled_Lists/" class="md-nav__link">
+        Controlled Lists
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -1046,6 +1062,10 @@
         
           
         
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_7">
@@ -1066,7 +1086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../6_Relationship_Lists/6_001_Relationship_Lists/" class="md-nav__link">
+      <a href="../../6_Relationship_Lists/6_000_Relationship_Lists/" class="md-nav__link">
         Relationship Lists
       </a>
     </li>
@@ -1080,21 +1100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../6_Relationship_Lists/6_002_Certification_Claims/" class="md-nav__link">
-        Certification Claims
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../6_Relationship_Lists/6_003_Material_Constituents/" class="md-nav__link">
+      <a href="../../6_Relationship_Lists/6_001_Material_Constituents/" class="md-nav__link">
         Material Constituents
       </a>
     </li>
@@ -1108,7 +1114,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../6_Relationship_Lists/6_004_Component_Constituents/" class="md-nav__link">
+      <a href="../../6_Relationship_Lists/6_002_Component_Constituents/" class="md-nav__link">
         Component Constituents
       </a>
     </li>
@@ -1122,8 +1128,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../6_Relationship_Lists/6_005_Recyclability_Claims/" class="md-nav__link">
-        Recyclability Claims
+      <a href="../../6_Relationship_Lists/6_003_Complete_Packaging_Constituents/" class="md-nav__link">
+        Complete Packaging Constituents
       </a>
     </li>
   
@@ -1136,8 +1142,36 @@
   
   
     <li class="md-nav__item">
-      <a href="../../6_Relationship_Lists/6_006_Recycled_Content_Claims/" class="md-nav__link">
-        Recycled Content Claims
+      <a href="../../6_Relationship_Lists/6_004_Multipack_Constituents/" class="md-nav__link">
+        Multipack Constituents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6_Relationship_Lists/6_005_Certification_Claims/" class="md-nav__link">
+        Certification Claims
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6_Relationship_Lists/6_006_Recyclability_Claims/" class="md-nav__link">
+        Recyclability Claims
       </a>
     </li>
   
@@ -1166,6 +1200,20 @@
     <li class="md-nav__item">
       <a href="../../6_Relationship_Lists/6_008_Complete_Packaging_End_of_Life_Routes/" class="md-nav__link">
         Complete Packaging End of Life Routes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6_Relationship_Lists/6_009_Recycled_Content_Claims/" class="md-nav__link">
+        Recycled Content Claims
       </a>
     </li>
   
@@ -1392,10 +1440,10 @@
 <td align="left">URL(s) that links to a picture of the complete packaging. Please see the guidelines below on how to capture the image and name the URL.</td>
 </tr>
 <tr>
-<td align="left">componentItems</td>
+<td align="left">completePackagingConstituentsIdentifier</td>
 <td align="left"><code>required</code></td>
 <td align="left">List</td>
-<td align="left">The component catalogue identifiers used to create the complete packaging. There must be an equivalent record in the <code>Components</code> data.</td>
+<td align="left">The information regarding the consituents that are combined to create this complete packaging. The entries should be from the <a href="../../6_Relationship_Lists/6_003_Complete_Packaging_Constituents/">Complete Packaging Constituents Relationship List</a> identifier.</td>
 </tr>
 <tr>
 <td align="left">LOWcodeWOproduct</td>
@@ -1455,7 +1503,7 @@
 <td align="left">recyclabilityClaims</td>
 <td align="left"><code>recommended</code></td>
 <td align="left">List</td>
-<td align="left">The information regarding this recyclability claims. The entries should be the <a href="../../6_Relationship_Lists/6_005_Recyclability_Claims/">recyclability claims relationship list</a> identifiers.</td>
+<td align="left">The information regarding this recyclability claims. The entries should be the <a href="../../6_Relationship_Lists/6_006_Recyclability_Claims/">recyclability claims relationship list</a> identifiers.</td>
 </tr>
 <tr>
 <td align="left">height</td>
@@ -1557,7 +1605,7 @@
 <td align="left">certificationClaims</td>
 <td align="left"><code>recommended</code></td>
 <td align="left">List</td>
-<td align="left">The information regarding the certifications. The entries should be the <a href="../../6_Relationship_Lists/6_002_Certification_Claims/">certification claims relationship list</a> identifiers.</td>
+<td align="left">The information regarding the certifications. The entries should be the <a href="../../6_Relationship_Lists/6_005_Certification_Claims/">certification claims relationship list</a> identifiers.</td>
 </tr>
 <tr>
 <td align="left">updateDate</td>
@@ -1588,7 +1636,7 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : within
     description String
     externalIdentifiers Dictionary
     imageURLs List
-    componentItems List
+    completePackagingConstituentsIdentifier List
     LOWcodeWOproduct String
     productType String
     componentContactWithProduct List
@@ -1633,6 +1681,7 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : within
     }
     RELATIONSHIP_LISTS {
       completePackagingEndOfLifeRoutes required
+      completePackagingConstituentsIdentifier required
       recyclabilityClaims recommended
       certificationClaims recommended
     }</code></pre>
@@ -1728,7 +1777,7 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : within
 <span class="w">      </span><span class="s2">&quot;https://dsposal-my.sharepoint.com/:i:/g/personal/tom_yourdsposal_uk/ETQTTA8p1Y5Aj-eIThf6M4wBdunvvSVdVoV0bFqK6Nyfhw?e=DKRcHq&quot;</span>
 
 <span class="w">  </span><span class="p">],</span>
-<span class="w">  </span><span class="nt">&quot;componentItems&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="nt">&quot;completePackagingConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">      </span><span class="s2">&quot;278EFE8A-720A-06C1-A411-CB94878AD3E2&quot;</span><span class="p">,</span>
 <span class="w">      </span><span class="s2">&quot;4CF8CE85-BA1A-BACB-670E-FAAB71D97D95&quot;</span><span class="p">,</span>
 <span class="w">      </span><span class="s2">&quot;661C7790-94D1-147D-7BF4-D518EAF5FA32&quot;</span><span class="p">,</span>
