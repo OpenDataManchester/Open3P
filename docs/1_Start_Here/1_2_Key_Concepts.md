@@ -6,7 +6,6 @@ description: The key concepts to understanding the open data standard for the pa
 # Key Concepts
 
 The Open 3P data standard is to provide information about what packaging is made out of and how these materials flow through the packaging supply chain. With Open 3P, stakeholders in the packaging supply chain will be able to share information about materials, components and packaging in a standardised format. This will allow for better collaboration between manufacturers, brands, retailers, consumers, recyclers, compliance schemes and regulators.
-
 ``` mermaid
 sequenceDiagram
     participant manufacturers
@@ -16,24 +15,23 @@ sequenceDiagram
     participant recyclers
     participant complianceSchemes
     participant regulators
-    manufacturers->>brands: movement
-    manufacturers->>retailers: movement
-    manufacturers->>complianceSchemes: movement
-    manufacturers->>regulators: movement
-    brands->>retailers: movement
-    brands->>consumers: movement
-    brands->>recyclers: movement
-    brands->>complianceSchemes: movement
-    brands->>regulators: movement
-    retailers->>consumers: movement
-    retailers->>recyclers: movement
-    retailers->>complianceSchemes: movement
-    retailers->>regulators: movement
-    consumers->>recyclers: movement
-    recyclers->>manufacturers: movement
-    complianceSchemes->>regulators: movement
+    manufacturers->>brands: products
+    manufacturers->>retailers: products
+    manufacturers->>complianceSchemes: data
+    manufacturers->>regulators: data
+    brands->>retailers: products
+    brands->>consumers: products
+    brands->>recyclers: waste
+    brands->>complianceSchemes: data
+    brands->>regulators: data
+    retailers->>consumers: products
+    retailers->>recyclers: waste
+    retailers->>complianceSchemes: data
+    retailers->>regulators: data
+    consumers->>recyclers: waste
+    recyclers->>manufacturers: material
+    complianceSchemes->>regulators: data
 ```
-
 # Definitions
 
 ## Base Materials
