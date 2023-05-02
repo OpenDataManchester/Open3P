@@ -24,6 +24,6 @@ The material purpose controlled list identifies the purpose of this material in 
 |m-material-purpose-0012|preservation||
 |m-material-purpose-0013|print||
 |m-material-purpose-0014|slip compound||
-|m-material-purpose-0015|structure||
+|m-material-purpose-0015|structure|Providing strength and stability.|
 |m-material-purpose-0016|thermal stabilizer|Used to minimize loss of HCl within PVC, a degradation process that starts above 70 °C.|
 |m-material-purpose-0017|metal deactivators|Deactivators work by chelation to form an inactive coordination complex with the metal ion.|

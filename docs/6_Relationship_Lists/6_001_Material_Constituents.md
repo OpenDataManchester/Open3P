@@ -51,15 +51,15 @@ erDiagram
           "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
           "materialCombinationIdentifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
           "materialPurpose": "m-material-purpose-0005",
-          "virginMaterial": "100",
-          "layer": "1",
+          "virginMaterial": 100,
+          "layer": 1,
           "materialPercentage": 7
         },
         {
           "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
           "materialCombinationIdentifier": "96245c85-5671-4f3d-875f-82665005e9e8",
           "materialPurpose": "m-material-purpose-0015",
-          "virginMaterial": "100",
+          "virginMaterial": 100,
           "layer": 2,
           "materialPercentage": 27
         },
@@ -67,7 +67,7 @@ erDiagram
           "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
           "materialCombinationIdentifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
           "materialPurpose": "m-material-purpose-0002",
-          "virginMaterial": "100",
+          "virginMaterial": 100,
           "layer": 3,
           "materialPercentage": 7
         },
@@ -75,7 +75,7 @@ erDiagram
           "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
           "materialCombinationIdentifier": "ff249e1f-5015-46b8-8655-6c920fbf2606",
           "materialPurpose": "m-material-purpose-0003",
-          "virginMaterial": "100",
+          "virginMaterial": 100,
           "layer": 4,
           "materialPercentage": 18
         },
@@ -83,7 +83,7 @@ erDiagram
           "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
           "materialCombinationIdentifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
           "materialPurpose": "m-material-purpose-0002",
-          "virginMaterial": "100",
+          "virginMaterial": 100,
           "layer": 5,
           "materialPercentage": 7
         },
@@ -91,7 +91,7 @@ erDiagram
           "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
           "materialCombinationIdentifier": "96245c85-5671-4f3d-875f-82665005e9e8",
           "materialPurpose": "m-material-purpose-0015",
-          "virginMaterial": "100",
+          "virginMaterial": 100,
           "layer": 6,
           "materialPercentage": 27
         },
@@ -99,11 +99,38 @@ erDiagram
           "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
           "materialCombinationIdentifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
           "materialPurpose": "m-material-purpose-0005",
-          "virginMaterial": "100",
+          "virginMaterial": 100,
           "layer": 7,
           "materialPercentage": 7
         },
         
       ]
     }
+    ```
+    === "JSON #2"
+
+    ``` json linenums="1"
+    Cellulose - verbose data structure
+    {
+      "materialConstituentsIdentifier": "a4ef4dec-eceb-417d-bded-9bd1e305a440",
+      "materialCombinationIdentifier": {
+        "identifier": "m-material-purpose-0015",
+        "baseMaterialName": "Cellulose",
+        "baseMaterialType": {
+          "identifier": "bm-material-type-0001",
+          "category": "biobased",
+          "detailed": "from renewable products such as carbohydrates, starch, vegetable fats and oils, bacteria and other biological substances."
+        },
+        "baseMaterialType": "bm-material-type-0001",
+        "materialChemCID": "14055602"
+      },
+      "materialPurpose":{
+        "identifier": "m-material-purpose-0015",
+        "category": "structure",
+        "detailed": "Providing strength and stability."
+      },
+      "virginMaterial": 100,
+      "layer": null,
+      "materialPercentage": 100
+    },
     ```
