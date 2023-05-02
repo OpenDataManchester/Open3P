@@ -5,7 +5,7 @@ description: The disruptors controlled list for complete packaging.
 
 # Component Disruptors
 
-The component disruptors controlled list identifiers what might disrupt the end of life process of a complete packaging item.
+The component disruptors controlled list identifiers what might disrupt the end of life process of a complete packaging item. This is used in [complete packaging end of life routes relationship list](../6_Relationship_Lists/6_008_Complete_Packaging_End_of_Life_Routes.md).
 
 ## Data
 |<div style="width:200px">identifier</div>|category|detailed|

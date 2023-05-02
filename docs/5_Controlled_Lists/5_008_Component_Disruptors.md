@@ -5,7 +5,7 @@ description: The disruptors controlled list for components.
 
 # Component Disruptors
 
-The component disruptors controlled list identifies what might cause disruption during the end of life process of a component.
+The component disruptors controlled list identifies what might cause disruption during the end of life process of a component. This is used in [component end of life routes relationship list](../6_Relationship_Lists/6_007_Component_End_of_Life_Routes.md).
 
 ## Data
 |<div style="width:200px">identifier</div>|category|detailed|
