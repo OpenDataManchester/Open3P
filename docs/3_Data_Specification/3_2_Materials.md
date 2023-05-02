@@ -67,111 +67,200 @@ The specification of this csv file is as follows:
       "externalIdentifiers": {
         "GTIN":"123456789101",
         },
-      "materialConstituents":[{
-        "materialConstituentsIdentifier":"DCEE1F88-A83B-5BBC-D2D9-6A862B344977",
-        "materialIdentifier":"A4BAE07C-1847-CD8E-C933-6FD30478423B",
-        "materialPurpose":"m-material-purpose-0015",
-        "virginMaterial": 100,
-        "layer": ,
-        "materialPercentage": 100,
-      }],
+      "materialConstituents":["DCEE1F88-A83B-5BBC-D2D9-6A862B344977"],
       "combinationPurpose": "",
       "certification": "TRUE",
-      "certificationClaims": [{
-        "certificationIdentifier": "1",
-        "certificationSource": {
-          "identifier":"certification-source-0002",
-          "category":"FSA",
-          "detailed":"The Food Standards Agency (FSA) is the independent government department working to protect public health and consumers’ wider interests in relation to food in England, Wales and Northern Ireland."
-        },
-        "certificationDate": "01/08/2022",
-      }],
-      "manufacturedCountry": 826
+      "certificationClaims": ["1"],
+      "manufacturedCountry": 826,
       "updateDate": "01/08/2022",
     }
     ```
 === "JSON #2"
 
     ``` json linenums="1"
-    --Soda-lime-silica glass made in the UK. Made from three base materials.
+    --Fibre based composite material to be used for a carton - semi verbose
     {
-      "identifier": "339bac2a-4dd0-49f3-977e-f3aa45f9b852",
-      "materialIdentifier": "2823aa68-b2ed-47cf-8e03-4fa97a3efd9c",
-      "baseMaterialIdentifier": {
-        "identifier": "09b0d75d-ddb2-43af-8eaa-f8ab03cd6702",
-        "name": "Silicon dioxide",
-        },
-      "materialName": "Soda-lime-silica glass",
+      "identifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
+      "materialName": "Classic Carton Board - EVOH",
       "externalIdentifiers": {
-        "EAN":"0123456789101",
+        "EAN": "0123456789101",
+        "BatchNumber": "2145-23-po"
         },
-      "materialPurpose": {
-        "identifier": "m-material-purpose-0015",
-        "category": "structure",
+      "materialConstituents": [
+        {
+          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
+          "materialCombinationIdentifier": {
+            "identifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
+            "baseMaterialName": "Polyethylene",
+            "baseMaterialType": {
+              "identifier":"bm-material-type-0002",
+              "category":"synthetic",
+              "detailed":"derived from crude oil, natural gas or coal."
+            },
+            "materialChemCID": null,
+            "externalIdentifiers": {
+              "pk":"12",
+              },
+            "certification": "FALSE",
+            "certificationClaims": null,
+            "manufacturedCountry": {
+              "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
+              "Numeric": 826
+            },
+            "updateDate": "01/08/2022",
+          },
+          "materialPurpose": {
+            "identifier": "m-material-purpose-0005",
+            "category": "barrier",
+            "detailed": "Used to reduce water and gas diffusion into and/or out of the material."
+          },
+          "virginMaterial": 100,
+          "layer": 1,
+          "materialPercentage": 7
         },
-      "virginMaterial": 0,
-      "layer": "",
-      "materialWeight": 74,
-      "combinationPurpose": "",
+        {
+          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
+          "materialCombinationIdentifier": "96245c85-5671-4f3d-875f-82665005e9e8",
+          "materialPurpose": {
+            "identifier": "m-material-purpose-0015",
+            "category": "structure",
+            "detailed": "Providing strength and stability."
+          },
+          "virginMaterial": 100,
+          "layer": 2,
+          "materialPercentage": 27
+        },
+        {
+          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
+          "materialCombinationIdentifier": {
+            "identifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
+            "baseMaterialName": "Polyethylene",
+            "baseMaterialType": {
+              "identifier":"bm-material-type-0002",
+              "category":"synthetic",
+              "detailed":"derived from crude oil, natural gas or coal."
+            },
+            "materialChemCID": null,
+            "externalIdentifiers": {
+              "pk":"12",
+              },
+            "certification": "FALSE",
+            "certificationClaims": null,
+            "manufacturedCountry": {
+              "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
+              "Numeric": 826
+            },
+            "updateDate": "01/08/2022",
+          },
+          "materialPurpose": {
+            "identifier": "m-material-purpose-0002",
+            "category": "adhesive",
+            "detailed": "Applied to one or both surfaces of two separate items that binds them together and resists their separation."
+          },
+          "virginMaterial": 100,
+          "layer": 3,
+          "materialPercentage": 7
+        },
+        {
+          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
+          "materialCombinationIdentifier": "ff249e1f-5015-46b8-8655-6c920fbf2606",
+          "materialPurpose": {
+            "identifier": "m-material-purpose-0003",
+            "category": "antioxidant",
+            "detailed": "Used to inhibit oxidation."
+          },
+          "virginMaterial": 100,
+          "layer": 4,
+          "materialPercentage": 18
+        },
+        {
+          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
+          "materialCombinationIdentifier": {
+            "identifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
+            "baseMaterialName": "Polyethylene",
+            "baseMaterialType": {
+              "identifier":"bm-material-type-0002",
+              "category":"synthetic",
+              "detailed":"derived from crude oil, natural gas or coal."
+            },
+            "materialChemCID": null,
+            "externalIdentifiers": {
+              "pk":"12",
+              },
+            "certification": "FALSE",
+            "certificationClaims": null,
+            "manufacturedCountry": {
+              "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
+              "Numeric": 826
+            },
+            "updateDate": "01/08/2022",
+          },
+          "materialPurpose": {
+            "identifier": "m-material-purpose-0002",
+            "category": "adhesive",
+            "detailed": "Applied to one or both surfaces of two separate items that binds them together and resists their separation."
+          },
+          "virginMaterial": 100,
+          "layer": 5,
+          "materialPercentage": 7
+        },
+        {
+          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
+          "materialCombinationIdentifier": "96245c85-5671-4f3d-875f-82665005e9e8",
+          "materialPurpose": {
+            "identifier": "m-material-purpose-0015",
+            "category": "structure",
+            "detailed": "Providing strength and stability."
+          },
+          "virginMaterial": 100,
+          "layer": 6,
+          "materialPercentage": 27
+        },
+        {
+          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
+          "materialCombinationIdentifier": {
+            "identifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
+            "baseMaterialName": "Polyethylene",
+            "baseMaterialType": {
+              "identifier":"bm-material-type-0002",
+              "category":"synthetic",
+              "detailed":"derived from crude oil, natural gas or coal."
+            },
+            "materialChemCID": null,
+            "externalIdentifiers": {
+              "pk":"12",
+              },
+            "certification": "FALSE",
+            "certificationClaims": null,
+            "manufacturedCountry": {
+              "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
+              "Numeric": 826
+            },
+            "updateDate": "01/08/2022",
+          },
+          "materialPurpose": {
+            "identifier": "m-material-purpose-0005",
+            "category": "barrier",
+            "detailed": "Used to reduce water and gas diffusion into and/or out of the material."
+          },
+          "virginMaterial": 100,
+          "layer": 7,
+          "materialPercentage": 7
+        },
+      ],
+      "combinationPurpose": {
+        "identifier": "function-0012",
+        "category": "carton",
+        "detailed": "Box or container used for transporting and storaging goods."
+      },
       "certification": "FALSE",
-      "certificationSource": """",
-      "certificationDate": "",
+      "certificationClaims": null,
       "manufacturedCountry": {
         "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
         "Numeric": 826
       },
-      "updateDate": "01/08/2022",
-    },
-    {
-      "identifier": "ca7c6b8f-2c48-4578-be92-510898d2179d",
-      "materialIdentifier": "2823aa68-b2ed-47cf-8e03-4fa97a3efd9c",
-      "baseMaterialIdentifier": {
-        "identifier": "d68c1342-00ef-41bb-9a1d-df8d3a43e73e",
-        "name": "Sodium oxide",
-        },
-      "materialName": "Soda-lime-silica glass",
-      "materialPurpose": {
-        "identifier": "m-material-purpose-0015",
-        "category": "structure",
-        },
-      "virginMaterial": 0,
-      "layer": "",
-      "materialWeight": 13,
-      "combinationPurpose": "",
-      "certification": "FALSE",
-      "certificationSource": """",
-      "certificationDate": "",
-      "manufacturedCountry": {
-        "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
-        "Numeric": 826
-      },
-      "updateDate": "01/08/2022",
-    },
-    {
-      "identifier": "128722d2-efca-492c-aa35-343d0275109c",
-      "materialIdentifier": "2823aa68-b2ed-47cf-8e03-4fa97a3efd9c",
-      "baseMaterialIdentifier": {
-        "identifier": "51bfd8c3-1631-4ef4-bec2-04add7c1cb74",
-        "name": "Calcium oxide",
-        },
-      "materialName": "Soda-lime-silica glass",
-      "materialPurpose": {
-        "identifier": "m-material-purpose-0015",
-        "category": "structure",
-        },
-      "virginMaterial": 0,
-      "layer": "",
-      "materialWeight": 10.5,
-      "combinationPurpose": "",
-      "certification": "FALSE",
-      "certificationSource": """",
-      "certificationDate": "",
-      "manufacturedCountry": {
-        "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
-        "Numeric": 826
-      },
-      "updateDate": "01/08/2022",
-    },
+      "updateDate": "01/08/2022"
+    }
     ```
 === "CSV download"
 
