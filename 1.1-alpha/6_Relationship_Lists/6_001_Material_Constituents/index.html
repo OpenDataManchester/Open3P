@@ -1545,30 +1545,52 @@
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>``` json linenums=&rdquo;1&rdquo;
-&ndash;Cellulose - verbose data structure
-{
-  &ldquo;materialConstituentsIdentifier&rdquo;: &ldquo;a4ef4dec-eceb-417d-bded-9bd1e305a440&rdquo;,
-  &ldquo;materialCombinationIdentifier&rdquo;: {
-    &ldquo;identifier&rdquo;: &ldquo;m-material-purpose-0015&rdquo;,
-    &ldquo;baseMaterialName&rdquo;: &ldquo;Cellulose&rdquo;,
-    &ldquo;baseMaterialType&rdquo;: {
-      &ldquo;identifier&rdquo;: &ldquo;bm-material-type-0001&rdquo;,
-      &ldquo;category&rdquo;: &ldquo;biobased&rdquo;,
-      &ldquo;detailed&rdquo;: &ldquo;from renewable products such as carbohydrates, starch, vegetable fats and oils, bacteria and other biological substances.&rdquo;
-    },
-    &ldquo;baseMaterialType&rdquo;: &ldquo;bm-material-type-0001&rdquo;,
-    &ldquo;materialChemCID&rdquo;: &ldquo;14055602&rdquo;
-  },
-  &ldquo;materialPurpose&rdquo;:{
-    &ldquo;identifier&rdquo;: &ldquo;m-material-purpose-0015&rdquo;,
-    &ldquo;category&rdquo;: &ldquo;structure&rdquo;,
-    &ldquo;detailed&rdquo;: &ldquo;Providing strength and stability.&rdquo;
-  },
-  &ldquo;virginMaterial&rdquo;: 100,
-  &ldquo;layer&rdquo;: null,
-  &ldquo;materialPercentage&rdquo;: 100
-}</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="mi">--</span><span class="err">Cellulose</span><span class="w"> </span><span class="mi">-</span><span class="w"> </span><span class="err">verbose</span><span class="w"> </span><span class="err">da</span><span class="kc">ta</span><span class="w"> </span><span class="err">s</span><span class="kc">tru</span><span class="err">c</span><span class="kc">ture</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;materialConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a4ef4dec-eceb-417d-bded-9bd1e305a440&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;materialCombinationIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;m-material-purpose-0015&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;baseMaterialName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Cellulose&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;baseMaterialType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bm-material-type-0001&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;biobased&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;detailed&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;from renewable products such as carbohydrates, starch, vegetable fats and oils, bacteria and other biological substances.&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;baseMaterialType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bm-material-type-0001&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;materialChemCID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;14055602&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;materialPurpose&quot;</span><span class="p">:{</span>
+<span class="w">    </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;m-material-purpose-0015&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;structure&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;detailed&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Providing strength and stability.&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;virginMaterial&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;layer&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;materialPercentage&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>

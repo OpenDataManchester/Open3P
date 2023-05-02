@@ -1546,6 +1546,12 @@
 <td align="left">The threshold of weight that components can vary by. This is given as +/- x%.</td>
 </tr>
 <tr>
+<td align="left">weightToleranceType</td>
+<td align="left"><code>required</code></td>
+<td align="left">String</td>
+<td align="left">Either <code>grams</code> or <code>percentage</code> based on the value provided in <code>weightTolerance</code></td>
+</tr>
+<tr>
 <td align="left">weightDate</td>
 <td align="left"><code>recommended</code></td>
 <td align="left">String</td>
@@ -1585,7 +1591,7 @@
 <td align="left">colour</td>
 <td align="left"><code>recommended</code></td>
 <td align="left">String</td>
-<td align="left">The actual colour of the component at point of production using CMYK (Cyan-Magenta-Yellow-blacK) values. The format is specified according to cmyk(C%, M%, Y%, K%), where C, M, Y, and K are the percent values for the cyan, magenta, yellow, and black values of the color. For example: black is <code>cmyk(0%,0%,0%,100%)</code>.</td>
+<td align="left">The actual colour of the component at point of production using CMYK (Cyan-Magenta-Yellow-blacK) values. The format is specified according to cmyk(C%, M%, Y%, K%), where C, M, Y, and K are the percent values for the cyan, magenta, yellow, and black values of the color. For example: black is <code>cmyk(0%,0%,0%,100%)</code>. If there are multiple colours input <code>decorative</code>.</td>
 </tr>
 <tr>
 <td align="left">opacity</td>
@@ -1621,7 +1627,7 @@
 <td align="left">recycledContentClaims</td>
 <td align="left"><code>required</code></td>
 <td align="left">List</td>
-<td align="left">The information regarding the recycled contents. The entries should be the [recycled content claims relationship list](../6_Relationship_Lists/6_009_Recycled_Content_Claims.md indentifiers.</td>
+<td align="left">The information regarding the recycled contents. The entries should be the <a href="../../6_Relationship_Lists/6_009_Recycled_Content_Claims/">recycled content claims relationship list</a> indentifiers.</td>
 </tr>
 <tr>
 <td align="left">recyclability</td>
@@ -1633,7 +1639,7 @@
 <td align="left">recyclabilityClaims</td>
 <td align="left"><code>recommended</code></td>
 <td align="left">List</td>
-<td align="left">The information regarding this recyclability claims. The entries should be the [recyclability claims relationship list](../6_Relationship_Lists/6_006_Recyclability_Claims.md identifiers.</td>
+<td align="left">The information regarding this recyclability claims. The entries should be the <a href="../../6_Relationship_Lists/6_006_Recyclability_Claims/">recyclability claims relationship list</a> identifiers.</td>
 </tr>
 <tr>
 <td align="left">certification</td>
