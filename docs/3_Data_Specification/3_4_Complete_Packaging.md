@@ -15,7 +15,7 @@ The complete packaging schema contains information regarding the complete packag
 |description|`recommended`|String|A brief description of this complete packaging.|
 |externalIdentifiers|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the complete packaging in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
 |imageURLs|`recommended`|List|URL(s) that links to a picture of the complete packaging. Please see the guidelines below on how to capture the image and name the URL.|
-|componentItems|`required`|List|The component catalogue identifiers used to create the complete packaging. There must be an equivalent record in the `Components` data.|
+|completePackagingConstituentsIdentifier|`required`|List|The information regarding the consituents that are combined to create this complete packaging. The entries should be from the [Complete Packaging Constituents Relationship List](../6_Relationship_Lists/6_003_Complete_Packaging_Constituents.md) identifier.|
 |LOWcodeWOproduct|`recommended`|String|The list of waste code for **only** the complete packaging, by itself (excluding the product). LOW code is synonymous with European Waste Catelogue Code (EWC). For example: an empty bottle would have a LOWcode of `15 01 02`. Please use [Dsposal](https://dsposal.uk/browse/ewc){target=_blank} or [legislation.gov](https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made){target=_blank} to find the LOWcode. **Note**: The LOWcode can based on its combination with other components and the actual product contained in the complete packaging. Be sure to only include the complete packaging LOWcode and not the complete packaging with the product. If you cannot find the code or are uncertain please enter `Uncertain`.|
 |productType|`recommended`|String|Information about the product contained in the complete packaging. The entry here should be drawn from the [product type controlled list](../5_Controlled_Lists/5_012_Product_Type.md).|
 |componentContactWithProduct|`required`|List|What components (if any) come into direct contact with the product before purchased by a consumer? If none of the components come into contact with the product use `NA`.|
@@ -25,7 +25,7 @@ The complete packaging schema contains information regarding the complete packag
 |depositReturnSchemes|`required`|List|Which countries support a deposit return scheme for this particular complete packaging? The entries here should be drawn from the [deposit return scheme controlled list](../5_Controlled_Lists/5_013_Deposit_Return_Scheme.md).|
 |completePackagingEndOfLifeRoutes|`recommended`|List|The information regarding this complete packaging purposed end of life routes. The entries should be the [complete packaging end of life routes](../6_Relationship_Lists/6_008_Complete_Packaging_End_of_Life_Routes.md) identifiers.|
 |recyclability|`recommended`|Boolean|Is the complete packaging recyclable (as determined by a reputable source)?|
-|recyclabilityClaims|`recommended`|List|The information regarding this recyclability claims. The entries should be the [recyclability claims relationship list](../6_Relationship_Lists/6_005_Recyclability_Claims.md) identifiers.|
+|recyclabilityClaims|`recommended`|List|The information regarding this recyclability claims. The entries should be the [recyclability claims relationship list](../6_Relationship_Lists/6_006_Recyclability_Claims.md) identifiers.|
 |height|`recommended`|Numeric|The height of the complete packaging. Please see the guidelines below on how to properly measure and report the height.|
 |heightDate|`recommended`|String|The date that the height was last verified/measured. Use the format `dd/mm/yyyy`.|
 |width|`recommended`|Numeric|The width of the complete packaging. Please see the guidelines below on how to properly measure and report the width.|
@@ -42,7 +42,7 @@ The complete packaging schema contains information regarding the complete packag
 |servingCapacityDate|`recommended`|String|The date that the serving capacity was last verified/measured. Use the format `dd/mm/yyyy`.|
 |partOfMultipack|`required`|Boolean|Is the complete packaging part of a multipack? Answer as: `1` for yes and `0` for no.|
 |certification|`recommended`|Boolean|Does the complete packaging have a certificate (e.g. FSC, REACH, FSA etc.)?|
-|certificationClaims|`recommended`|List|The information regarding the certifications. The entries should be the [certification claims relationship list](../6_Relationship_Lists/6_002_Certification_Claims.md) identifiers.|
+|certificationClaims|`recommended`|List|The information regarding the certifications. The entries should be the [certification claims relationship list](../6_Relationship_Lists/6_005_Certification_Claims.md) identifiers.|
 |updateDate|`required`|String|The date that the complete packaging was provided/last updated. Use the format `dd/mm/yyyy`.|
 |releaseDate|`recommended`|String|The date that the complete packaging will be available to use. Use the format `dd/mm/yyyy`.|
 |discontinueDate|`recommended`|String|The date that the complete packaging will no longer be available to use. Use the format `dd/mm/yyyy`.|
@@ -58,7 +58,7 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : within
     description String
     externalIdentifiers Dictionary
     imageURLs List
-    componentItems List
+    completePackagingConstituentsIdentifier List
     LOWcodeWOproduct String
     productType String
     componentContactWithProduct List
@@ -103,6 +103,7 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : within
     }
     RELATIONSHIP_LISTS {
       completePackagingEndOfLifeRoutes required
+      completePackagingConstituentsIdentifier required
       recyclabilityClaims recommended
       certificationClaims recommended
     }
@@ -135,7 +136,7 @@ The specification of this csv file is as follows:
           "https://dsposal-my.sharepoint.com/:i:/g/personal/tom_yourdsposal_uk/ETQTTA8p1Y5Aj-eIThf6M4wBdunvvSVdVoV0bFqK6Nyfhw?e=DKRcHq"
 
       ],
-      "componentItems": [
+      "completePackagingConstituentsIdentifier": [
           "278EFE8A-720A-06C1-A411-CB94878AD3E2",
           "4CF8CE85-BA1A-BACB-670E-FAAB71D97D95",
           "661C7790-94D1-147D-7BF4-D518EAF5FA32",
