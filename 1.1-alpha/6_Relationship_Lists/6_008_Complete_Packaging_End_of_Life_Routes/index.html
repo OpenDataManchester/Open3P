@@ -884,7 +884,7 @@
   
     <li class="md-nav__item">
       <a href="../../5_Controlled_Lists/5_014_Complete_Packaging_Disruptors/" class="md-nav__link">
-        Component Disruptors
+        Complete Packaging Disruptors
       </a>
     </li>
   
@@ -1369,14 +1369,14 @@
 <tr>
 <td align="left">orderOfPrecedence</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">String</td>
+<td align="left">Numeric</td>
 <td align="left">The order that end of life routes should be used. The preferred route denoted as 1, and the last best option being the biggest number.</td>
 </tr>
 <tr>
 <td align="left">completePackagingDistruptors</td>
 <td align="left"><code>recommended</code></td>
 <td align="left">List</td>
-<td align="left">What challenges this end of life route for this complete packaging has. The entry should be the <a href="../5_Controlled_Lists/5_014_Complete_Packaging_Recycling_Disruptors.md">complete packaging recycling disruptors controlled list</a> identifier.</td>
+<td align="left">What challenges this end of life route for this complete packaging has. The entry should be the <a href="../../5_Controlled_Lists/5_014_Complete_Packaging_Disruptors/">complete packaging recycling disruptors controlled list</a> identifier.</td>
 </tr>
 </tbody>
 </table>
@@ -1387,7 +1387,7 @@
   COMPLETE_PACKAGING_END_OF_LIFE_ROUTES {
     completePackagingEndOfLifeRouteIdentifier String
     completePackagingEndOfLifeRoute String
-    orderOfPrecedence String
+    orderOfPrecedence Numeric
     completePackagingDistruptors List
   }
   COMPLETE_PACKAGING_END_OF_LIFE_ROUTES }o--o{ CONTROLLED_LISTS : attributes
