@@ -23,7 +23,7 @@ The complete packaging schema contains information regarding the complete packag
 |onTheGo|`required`|Boolean|Is the complete packaging often classed as packaging that will end up in street bins?|
 |householdWaste|`required`|Boolean|Is the complete packaging often classed as packaging that will end up in kerbside collections?|
 |depositReturnSchemes|`required`|List|Which countries support a deposit return scheme for this particular complete packaging? The entries here should be drawn from the [deposit return scheme controlled list](../5_Controlled_Lists/5_013_Deposit_Return_Scheme.md).|
-|completePackagingEndOfLifeRoutes|`recommended`|List|The information regarding this complete packaging purposed end of life routes. The entries should be the [complete packaging end of life routes](../6_Relationship_Lists/6_008_Complete_Packaging_End_of_Life_Routes.md) identifiers.|
+|completePackagingEndOfLifeRoutes|`recommended`|List|The information regarding this complete packaging's proposed end of life routes. The entries should be the [complete packaging end of life routes](../6_Relationship_Lists/6_008_Complete_Packaging_End_of_Life_Routes.md) identifiers.|
 |recyclability|`recommended`|Boolean|Is the complete packaging recyclable (as determined by a reputable source)?|
 |recyclabilityClaims|`recommended`|List|The information regarding this recyclability claims. The entries should be the [recyclability claims relationship list](../6_Relationship_Lists/6_006_Recyclability_Claims.md) identifiers.|
 |height|`recommended`|Numeric|The height of the complete packaging. Please see the guidelines below on how to properly measure and report the height.|
