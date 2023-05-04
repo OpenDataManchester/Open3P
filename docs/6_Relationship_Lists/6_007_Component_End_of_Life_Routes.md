@@ -5,7 +5,7 @@ description: The component end of life routes relationship list.
 
 # Component End of Life Routes
 
-The component end of life routes relationship list identifies the purposed and intented destination and process of this component once it has completed its role as packaging. This is only used in [components](../3_Data_Specification/3_3_Components.md).
+The component end of life routes relationship list identifies the purposed and intended destination and process of this component once it has completed its role as packaging. This is only used in [components](../3_Data_Specification/3_3_Components.md).
 
 ## Data
 |Column|<div style="width:90px">Status</div>|Format|Notes|

@@ -1,11 +1,11 @@
 ---
 title: End of Life Route
-description: The end of life route for a piece of packaing.
+description: The end-of-life route for a piece of packaing.
 ---
 
 # End of Life Route
 
-The end of life route controlled list identifies the routes that packaging can go down once it has fulfilled it purpose.
+The end-of-life route controlled list identifies the routes that packaging can go down once it has fulfilled it's purpose.
 
 ## Data
 |<div style="width:200px">identifier</div>|category|detailed|

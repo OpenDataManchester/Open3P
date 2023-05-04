@@ -5,7 +5,7 @@ description: The complete packaging constituents relationship list.
 
 # Complete Packaging Constituents
 
-The complete packaging constituents relationship list identifies the componenets and other complete packaging that are combined to create complete packages. This is only used in [complete packaging](../3_Data_Specification/3_4_Complete_Packaging.md).
+The complete packaging constituents relationship list identifies the components and other complete packaging that are combined to create complete packages. This is only used in [complete packaging](../3_Data_Specification/3_4_Complete_Packaging.md).
 
 ## Data
 |Column|<div style="width:90px">Status</div>|Format|Notes|

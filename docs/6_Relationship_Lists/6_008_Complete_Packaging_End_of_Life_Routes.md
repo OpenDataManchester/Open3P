@@ -5,7 +5,7 @@ description: The complete packaging end of life routes relationship list.
 
 # Complete Packaging End of Life Routes
 
-The complete packaging end of life routes relationship list identifies the purposed and intented destination and process of this complete packaging once it has completed its role as packaging. This is only used in [complete packaging](../3_Data_Specification/3_4_Complete_Packaging.md).
+The complete packaging end of life routes relationship list identifies the purposed and intended destination and process of this complete packaging once it has completed its role as packaging. This is only used in [complete packaging](../3_Data_Specification/3_4_Complete_Packaging.md).
 
 ## Data
 |Column|<div style="width:90px">Status</div>|Format|Notes|
