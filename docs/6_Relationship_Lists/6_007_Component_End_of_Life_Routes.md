@@ -13,7 +13,7 @@ The component end of life routes relationship list identifies the purposed and i
 |componentEndOfLifeRouteIdentifier|`required`|String|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
 |componentEndOfLifeRoute|`required`|String|What is the entended provided the certificate? The entry should be the [end of life route controlled list](../5_Controlled_Lists/5_016_End_Of_Life_Route.md) identifier.|
 |orderOfPrecedence|`recommended`|Numeric|The order that end of life routes should be used. The preferred route denoted as 1, and the last best option being the biggest number.|
-|componentDistruptors|`required`|List|What challenges this end of life route for this component has. The entry should be the [component recycling disruptors controlled list](../5_Controlled_Lists/5_008_Component_Disruptors.md) identifier.|
+|componentDisruptors|`required`|List|What challenges this end of life route for this component has. The entry should be the [component recycling disruptors controlled list](../5_Controlled_Lists/5_008_Component_Disruptors.md) identifier.|
 
 ## Diagram
 
