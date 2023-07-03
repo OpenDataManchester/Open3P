@@ -11,7 +11,7 @@ A data standard for the packaging value chain.
 
 ## Version
 
-Version 2.0 -alpha PRE-RELEASE
+Version 2.0 Published 2023-06-06
 
 ## Working with the Standard
 
