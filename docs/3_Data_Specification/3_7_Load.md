@@ -1,5 +1,6 @@
 ---
 title: Load
+description: The load is the items what are delivered to a location within Open 3P.
 ---
 
 # Load
@@ -9,11 +10,11 @@ All the complete packaging from different levels (primary, secondary, and tertia
 ## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
-|identifier|`required`|String|A globally unique identifier. See identifiers section for information on how to construct this identifier|
+|identifier|`required`|String|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
 |name|`recommended`|String|The name of this load.|
 |description|`recommended`|String|A brief description of this load.|
-|tags|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the complete packaging in other systems. For example: bar codes or global trade item number (gtin). To provide tags please follow this format. `{'tagName1': 'identifier1', 'tagName2': 'identifier2'}`|
-|loadIdentifier|`required`|String|The unique identifier of the created load. There must be an equivalent identifier found in the `load catalogue`.|
+|externalIdentifiers|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the load in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
+|loadIdentifiers|`required`|List|The unique identifier of the created load. There must be an equivalent identifier found in the `Load Catalogue`.|
 |startDate|`required`|String|The date that the load began for the destination. Use the format `dd/mm/yyyy`.|
 |endDate|`required`|String|The date that the load ended for the destination. Use the format `dd/mm/yyyy`.|
 |destinationAddressName|`recommended`|String|The name of the load destination address.|
@@ -32,8 +33,8 @@ LOAD_CATALOGUE }o..o{ LOAD : within
     identifier String
     name numeric
     description String
-    tags Dictionary
-    loadIdentifier String
+    externalIdentifier Dictionary
+    loadIdentifiers List
     startDate String
     destinationAddressName String
     destinationAddressStreet String
@@ -44,18 +45,13 @@ LOAD_CATALOGUE }o..o{ LOAD : within
   }
 ```
 
-<!-- <figure markdown>
-[![Schema](../img/load-v1.0.0-22-12-20.png){ width="450" }](https://opendatamanchester.github.io/PPP/img/load-v1.0.0-22-12-20.png){target=_blank}
-  <figcaption>Data schema</figcaption>
-</figure> -->
-
 ## Template
 
 Loads should be provided as a separate csv file, in tidy format. This means that each row of the csv file should be a single load or a multi loads from the load catagolue schema. An example is provided.
 
 The specification of this csv file is as follows:
 
-[Load_Template.csv](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_6_Load_Template.csv){target=_blank}
+[Load_Template.csv](https://www.open3p.org/wp-content/uploads/2023/03/7_1_7_Load_Template.csv){target=_blank}
 
 ## Example
 
@@ -66,10 +62,10 @@ The specification of this csv file is as follows:
       "identifier": "ED051AFD-EC7F-0428-B054-8837118922FE",
       "name": "Weekly Load of Guacamole Dip",
       "description": "24 cases of 12 tubs of guacamole dip for example company on high street west",
-      "tags": {
+      "externalIdentifiers": {
         "GTIN":"00123456789012",
         },
-      "loadIdentifier": "CA88F5CE-2D09-AFE0-08D7-44804780F924",
+      "loadIdentifiers": "CA88F5CE-2D09-AFE0-08D7-44804780F924",
       "startDate": "01/08/2022",
       "endDate": "01/08/2022",
       "destinationAddressName": "Example Company",

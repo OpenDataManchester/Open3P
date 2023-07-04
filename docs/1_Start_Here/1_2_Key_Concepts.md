@@ -5,24 +5,51 @@ description: The key concepts to understanding the open data standard for the pa
 
 # Key Concepts
 
-## Material Catalogue
+The Open 3P data standard is to provide information about what packaging is made out of and how these materials flow through the packaging supply chain. With Open 3P, stakeholders in the packaging supply chain will be able to share information about materials, components and packaging in a standardised format. This will allow for better collaboration between manufacturers, brands, retailers, consumers, recyclers, compliance schemes and regulators.
+``` mermaid
+sequenceDiagram
+    participant manufacturers
+    participant brands
+    participant retailers
+    participant consumers
+    participant recyclers
+    participant complianceSchemes
+    participant regulators
+    manufacturers->>brands: products
+    manufacturers->>retailers: products
+    manufacturers->>complianceSchemes: data
+    manufacturers->>regulators: data
+    brands->>retailers: products
+    brands->>consumers: products
+    brands->>recyclers: waste
+    brands->>complianceSchemes: data
+    brands->>regulators: data
+    retailers->>consumers: products
+    retailers->>recyclers: waste
+    retailers->>complianceSchemes: data
+    retailers->>regulators: data
+    consumers->>recyclers: waste
+    recyclers->>manufacturers: material
+    complianceSchemes->>regulators: data
+```
+# Definitions
+
+## Base Materials
 - general template used to store information about a base level material
 
 ## Materials
 - an individual substance (e.g., PET)
-- created from the material catalogue
+- created from the base materials level
 
 ## Components
 - an individual unit (e.g., a bottle)
 - parts made from different materials (e.g., a window on a sandwich box)
 - zippers, taps, etc. (even though attached)
+- general template used for packaging manufacturers to store information.
+- these components can be used by multiple users and combined with other components in different ways
 
 ## Product
 - That which is contained inside of the packaging
-
-## Component Catalogue
-- general template used for packaging manufacturers to store information. 
-- these components can be used by multiple users and combined with other components in different ways
 
 ## Complete Packaging
 - Components are combined to make complete packaging
@@ -37,7 +64,7 @@ description: The key concepts to understanding the open data standard for the pa
 - Usually wrapped in secondary and tertiary packaging 
 
 ## Load
-- Collection of load catalogue broken into destinations and on-the-market packaging for specified reporting periods.
+- Collection of load catalogue broken into destinations and on-the-market packaging for specified reporting periods
 
 ## Packaging Item
 - A component, complete packaging, or multipack 

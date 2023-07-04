@@ -1,21 +1,22 @@
 ---
-title: Component Catalogue
+title: Components
+description: Components are the individaul items of packaging made from materials in Open 3P.
 ---
 
-# Component Catalogue
+# Components
 
-The component catalogue schema contains information regarding the components that are used to create complete packages. These maybe created from a single material or a combination of materials from the materials schema.
+The components schema contains information regarding the individual components that are used to create complete packages. These maybe created from a single material or a combination of materials from the materials schema.
 
 ## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
-|identifier|`required`|String|A globally unique identifier. See identifiers section for information on how to construct this identifier|
+|identifier|`required`|String|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
 |name|`recommended`|String|The name of this component.|
 |description|`recommended`|String|A brief description of this component.|
-|tags|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the component in other systems. For example: bar codes or global trade item number (gtin). To provide tags please follow this format. `{'tagName1': 'identifier1', 'tagName2': 'identifier2'}`|
-|imageURL|`recommended`|URL|A URL that links to a picture of the component. Please see the guidelines below on how to capture the image and name the URL.|
-|LOWcode|`recommended`|String|The list of waste code for **only** the component, by itself. LOW code is synonymous with European Waste Catelogue Code (EWC). For example: an empty bottle would have a LOWcode of `15 01 02`. Please use [Dsposal](https://dsposal.uk/browse/ewc){target=_blank} or [legislation.gov](https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made){target=_blank} to find the LOWcode. **Note**: The LOWcode can based on its combination with other components and the actual product contained in the completePackaging. Be sure to only include the component LOWcode. If you cannot find the code or are uncertain please enter `Uncertain`.|
-|materialIdentifier|`required`|String|The unique identifier of the materials that this component is made of. There must be an equivalent record in the `materials` data.|
+|externalIdentifiers|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the component in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
+|imageURLs|`recommended`|List|A list of URLs that links to a picture of the component. Please see the guidelines below on how to capture the image and name the URL.|
+|LOWcode|`recommended`|String|The list of waste code for **only** the component, by itself. LOW code is synonymous with European Waste Catalogue Code (EWC). For example: an empty bottle would have a LOWcode of `15 01 02`. Please use [Dsposal](https://dsposal.uk/browse/ewc) or [legislation.gov](https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made) to find the LOWcode. **Note**: The LOWcode can based on its combination with other components and the actual product contained in the completePackaging. Be sure to only include the component LOWcode. If you cannot find the code or are uncertain please enter `Uncertain`.|
+|componentConstituents|`required`|List|The information regarding the consituents that are combined to create this component. The entries should be from the [Material Constituents Relationship List](../6_Relationship_Lists/6_002_Component_Constituents.md) identifier.|
 |height|`recommended`|Numeric|The height of the component. Please see the guidelines below on how to properly measure and report the height.|
 |heightDate|`recommended`|String|The date that the height was last verified/measured. Use the format `dd/mm/yyyy`.|
 |width|`recommended`|Numeric|The width of the component. Please see the guidelines below on how to properly measure and report the width.|
@@ -26,26 +27,25 @@ The component catalogue schema contains information regarding the components tha
 |volumeDate|`recommended`|String|The date that the volume was last verified/measured. Use the format `dd/mm/yyyy`.|
 |weight|`required`|Numeric|The weight of the component.|
 |weightTolerance|`required`|Numeric|The threshold of weight that components can vary by. This is given as +/- x%.|
+|weightToleranceType|`required`|String|Either `grams` or `percentage` based on the value provided in `weightTolerance`|
 |weightDate|`recommended`|String|The date that the weight was last verified/measured. Use the format `dd/mm/yyyy`.|
-|shape|`recommended`|String|What is the shape of the component? The entry should contain the shape controlled list identifier for the component.|
-|function|`recommended`|String|What is the function of the component? The entry should contain the function controlled list identifier for the component.|
-|flexibility|`recommended`|String|Whether the component is considered flexible or rigid. The entry should be the flexibility controlled list identifier.|
+|shape|`recommended`|String|What is the shape of the component? The entry should contain the [shape controlled list](../5_Controlled_Lists/5_006_Shape.md) identifier for the component.|
+|function|`recommended`|String|What is the function of the component? The entry should contain the [function controlled list](../5_Controlled_Lists/5_004_Function.md) identifier for the component.|
+|flexibility|`recommended`|String|Whether the component is considered flexible or rigid. The entry should be the [flexibility controlled list](../5_Controlled_Lists/5_007_Flexibility.md) identifier.|
 |branding|`required`|Boolean|Does the component contain your own brand (logo, trademark, or any distinctive mark)?|
-|componentRecyclingDisruptors|`recommended`|String|What challenges the component has for recycling. The entry should be the componentRecyclingDisruptors controlled list identifier.|
-|colour|`recommended`|String|The actual colour of the component at point of production using CMYK (Cyan-Magenta-Yellow-blacK) values. The format is specified according to cmyk(C%, M%, Y%, K%), where C, M, Y, and K are the percent values for the cyan, magenta, yellow, and black values of the color. For example: black is `cmyk(0%,0%,0%,100%)`. |
-|opacity|`recommended`|String|The transparency of the colours. The entry should be the opacity controlled list identifier.|
+|componentEndOfLifeRoutes|`recommended`|List|The information regarding this component's proposed end of life routes. The entries should be the [component end of life routes](../6_Relationship_Lists/6_007_Component_End_of_Life_Routes.md) identifiers.|
+|colour|`recommended`|String|The actual colour of the component at point of production using CMYK (Cyan-Magenta-Yellow-blacK) values. The format is specified according to cmyk(C%, M%, Y%, K%), where C, M, Y, and K are the percent values for the cyan, magenta, yellow, and black values of the color. For example: black is `cmyk(0%,0%,0%,100%)`. If there are multiple colours input `decorative`.|
+|opacity|`recommended`|String|The transparency of the colours. The entry should be the [opacity controlled list](../5_Controlled_Lists/5_009_Opacity.md) identifier.|
 |loaned|`required`|Boolean|Is the component hired or loaned out as reusable packaging?|
-|reuseSystem|`recommended`|String|The system that facilitates the reuse of the component  `e.g., Loop`|
-|manufacturedCountry|`required`|Numeric|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
+|reuseSystems|`recommended`|List|The system(s) that facilitates the reuse of the component  `e.g., Loop`. The entries should be the [reuse system controlled list](../5_Controlled_Lists/5_010_Reuse_System.md) identifier(s).|
+|partOfMultipack|`required`|Boolean|Is the component part of a multipack? Answer as: TRUE for yes and FALSE for no.|
 |recycledContent|`required`|Numeric|The minimum allowable percent of how much recycled content is included in the makeup of the component. For the purposes of this standard, we refer to the [UK's HM Revenue & Customs](https://www.gov.uk/guidance/work-out-which-packaging-is-subject-to-plastic-packaging-tax){target=_blank} definition of recycled content. "Recycled plastic is plastic that has been reprocessed from recovered material by using a chemical or manufacturing process. This is so it can be used either for its original purpose or for other purposes. This does not include organic recycling. Recovered material is pre-consumer plastic or post-consumer plastic that both: a) is no longer suitable to be used in the process from which it was generated and would otherwise have been used for energy recovery (for example, by incineration) or disposed of as waste (for example, by being sent to landfill); b) has been collected and recovered for use as a material input for a recycling or manufacturing process, instead of new primary material"|
-|recycledContentEvidenceType|`required`|String|What evidence type supports the recycledContent claim. The entry should be the recycledContentEvidenceType controlled list identifier.|
-|recycledContentEvidenceReference|`required`|String|An accompanying reference number associated with the recycledContentEvidenceType for the component.|
+|recycledContentClaims|`required`|List|The information regarding the recycled contents. The entries should be the [recycled content claims relationship list](../6_Relationship_Lists/6_009_Recycled_Content_Claims.md) indentifiers.|
 |recyclability|`recommended`|Boolean|Is the component recyclable (as determined by a reputable source)?|
-|recyclabilitySource|`recommended`|String|What source provided the recyclability claim? The entry should be the recyclabilitySource controlled list identifier.|
-|recyclabilityDate|`recommended`|String|The date that the recyclability was provided/last updated. Use the format `dd/mm/yyyy`.|
-|partOfMultipack|`required`|Boolean|Is the component part of a multipack? Answer as: `1` for yes and `0` for no.|
-|previouslyAssembledComponent|`required`|Boolean|When manufactured, was this component combined with other components? Answer as: `1` for yes and `0` for no.|
-|componentLink|`required`|String|If `previouslyAssembledComponent` is yes, please provide the `identifier` for the component that is attached when created. Answer `NA` if `previouslyAssembledComponent` is no.|
+|recyclabilityClaims|`recommended`|List|The information regarding this recyclability claims. The entries should be the [recyclability claims relationship list](../6_Relationship_Lists/6_006_Recyclability_Claims.md) identifiers.|
+|certification|`recommended`|Boolean|Does the component have a certificate (e.g. FSC, REACH, FSA etc.)?|
+|certificationClaims|`recommended`|List|The information regarding the certifications. The entries should be the [certification claims relationship list](../6_Relationship_Lists/6_005_Certification_Claims.md) identifiers.|
+|manufacturedCountry|`recommended`|Numeric|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
 |updateDate|`required`|String|The date that the component was provided/last updated. Use the format `dd/mm/yyyy`.|
 |releaseDate|`recommended`|String|The date that the component will be available to use. Use the format `dd/mm/yyyy`.|
 |discontinueDate|`recommended`|String|The date that the component will no longer be available to use. Use the format `dd/mm/yyyy`.|
@@ -54,14 +54,15 @@ The component catalogue schema contains information regarding the components tha
 
 ``` mermaid
 erDiagram
-MATERIALS }o--o{ COMPONENT_CATALOGUE : within
-  COMPONENT_CATALOGUE {
+MATERIALS }o--o{ COMPONENTS : within
+  COMPONENTS {
     identifier String
-    name numeric
+    name String
     description String
-    tags Dictionary
-    imageURL URL
+    externalIdentifiers Dictionary
+    imageURLs List
     LOWcode String
+    componentConstituents List
     height Numeric
     heightDate String
     width Numeric
@@ -77,67 +78,66 @@ MATERIALS }o--o{ COMPONENT_CATALOGUE : within
     function String
     flexibility String
     branding Boolean
-    componentRecyclingDisruptors String
+    componentEndOfLifeRoutes List
     colour String
     opacity String
     loaned Boolean
-    reuseSystem String
+    reuseSystems String
     manufacturedCountry Numeric
     recycledContent Numeric
-    recycledContentEvidenceType String
-    recycledContentEvidenceReference String
+    recycledContentClaims List
     recyclability Boolean
-    recyclabilitySource String
-    recyclabilityDate String
+    recyclabilityClaims List
     partOfMultipack Boolean
-    previouslyAssembledComponent Boolean
-    componentLink String
+    certification Boolean
+    certificationClaims List
     updateDate String
     releaseDate String
     discontinueDate String
   }
-  COMPONENT_CATALOGUE }o..o{ CONTOLLED_LISTS : attritubes
-  COMPONENT_CATALOGUE }o--o{ COMPLETE_PACKAGING : within
-  COMPONENT_CATALOGUE }o..o{ MULTIPACK : within
+  COMPONENTS }o..o{ CONTROLLED_LISTS : attributes
+  COMPONENTS }o..o{ RELATIONSHIP_LISTS : attributes
+  COMPONENTS }o--o{ COMPLETE_PACKAGING : within
+  COMPONENTS }o..o{ MULTIPACK : within
   MULTIPACK }o..o{ LOAD_CATALOGUE : within
   COMPLETE_PACKAGING }o..o{ MULTIPACK : within
   COMPLETE_PACKAGING }o..o{ LOAD_CATALOGUE : within
-  COMPONENT_CATALOGUE }o..o{ LOAD_CATALOGUE : within
-    CONTOLLED_LISTS {
-    recyclabilitySource recommended
+  COMPONENTS }o..o{ LOAD_CATALOGUE : within
+    CONTROLLED_LISTS {
     shape recommended
     function recommended
     flexibility recommended
-    componentRecyclingDisruptors recommended
     opacity recommended
-    recycledContentEvidenceType required
+    reuseSystem recommended
+  }
+  RELATIONSHIP_LISTS {
+    componentConstituents required
+    componentEndOfLifeRoutes recommended
+    recycledContentClaims required
+    recyclabilityClaims recommended
+    certificationClaims recommended
   }
 ```
-
-<!-- <figure markdown>
-[![Schema](../img/component-catalogue-v1.0.0-22-12-20.png){ width="800" }](https://opendatamanchester.github.io/PPP/img/component-catalogue-v1.0.0-22-12-20.png){target=_blank}
-  <figcaption>Data schema</figcaption>
-</figure>
-
-## Template -->
 
 Components should be provided as a separate csv file, in tidy format. This means that each row of the csv file should be one component of a complete package. An example is provided.
 
 The specification of this csv file is as follows:
 
-[Component_Catalogue_Template.csv](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_1_Component_Catalogue_Template.csv){target=_blank}
+[Components_Template.csv](https://www.open3p.org/wp-content/uploads/2023/03/7_1_3_Components_Template.csv){target=_blank}
 
 ## Example
 
 === "JSON"
 
     ``` json linenums="1"
+    --Food grade PET circular pot made in the UK
     {
       "identifier": "278EFE8A-720A-06C1-A411-CB94878AD3E2",
       "name": "Guacamole Dip Pot",
       "description": "Clear PET pot for the Guacamole Dip",
-      "tags": {
-        "GTIN":"00123456789012",
+      "externalIdentifiers": {
+        "internalId": "GUA-PET-2022-1",
+        "GTIN": "00123456789012",
         },
       "imageURL": "",
       "LOWcode": "15 01 02",
@@ -154,17 +154,17 @@ The specification of this csv file is as follows:
       "weightTolerance": "4.38%",
       "weightDate": "01/08/2022",
       "shape": {
-        "identifier":"component-catalogue-shape-0005",
+        "identifier":"c-shape-0005",
         "category":"cylinder",
         "detailed":"3D shape with 2 parallel circular bases connected by a curved surface"
       },
       "function": {
-        "identifier":"component-catalogue-function-0030",
+        "identifier":"function-0030",
         "category":"pot",
         "detailed":""
       },
       "flexibility": {
-        "identifier": "component-catalogue-flexibility-0002",
+        "identifier": "c-flexibility-0001",
         "category": "Rigid",
         "detailed": ""
       },
@@ -172,33 +172,38 @@ The specification of this csv file is as follows:
       "componentRecyclingDisruptors": "",
       "colour": "",
       "opacity": {
-        "identifier": "component-catalogue-opacity-0003",
+        "identifier": "c-opacity-0003",
         "category": "transparent",
         "detailed": "allows light to pass through so that objects behind can be distinctly seen; no colour/ clear"
       },
       "loaned": "FALSE",
-      "reuseSystem": "",
+      "reuseSystems": "",
       "manufacturedCountry": {
         "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
         "Numeric": 826
       },
       "recycledContent": 90,
       "recycledContentEvidenceType": {
-        "identifier":"component-catalogue-recycled-evidence-0001",
+        "identifier":"c-recycled-evidence-0001",
         "category":"certificate",
         "detailed":""
       },
       "recycledContentEvidenceReference": "EXA-123-MPL-4-E",
       "recyclability": "TRUE",
       "recyclabilitySource": {
-        "identifier":"complete-packaging-recyclability-source-0001",
+        "identifier":"recyclability-source-0001",
         "category":"OPRL",
-        "detailed":""
+        "detailed":"OPRL is a not-for-profit company limited by guarantee, any surpluses being reinvested in our activities to promote recycling of packaging."
       },
       "recyclabilityDate": "01/08/2022",
       "partOfMultipack": "TRUE",
-      "previouslyAssembledComponent": "FALSE",
-      "componentLink": "NA",
+      "certification": "TRUE",
+      "certificationSource": {
+        "identifier": "certification-source-0002",
+        "category": "FSA",
+        "detailed": "The Food Standards Agency (FSA) is the independent government department working to protect public health and consumers’ wider interests in relation to food in England, Wales and Northern Ireland."
+      },
+      "certificationDate": "01/08/2022",
       "updateDate": "01/08/2022",
       "releaseDate": "01/08/2022",
       "discontinueDate": ""
