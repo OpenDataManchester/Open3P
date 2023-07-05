@@ -43,6 +43,8 @@ The complete packaging schema contains information regarding the complete packag
 |partOfMultipack|`required`|Boolean|Is the complete packaging part of a multipack? Answer as: `1` for yes and `0` for no.|
 |certification|`recommended`|Boolean|Does the complete packaging have a certificate (e.g. FSC, REACH, FSA etc.)?|
 |certificationClaims|`recommended`|List|The information regarding the certifications. The entries should be the [certification claims relationship list](../6_Relationship_Lists/6_005_Certification_Claims.md) identifiers.|
+|manufacturer|`recommended`|List|The information regarding the manufacturer. The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
+|manufacturedCountry|`recommended`|Numeric|The country the complete packaging was manufactured in. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
 |updateDate|`required`|String|The date that the complete packaging was provided/last updated. Use the format `dd/mm/yyyy`.|
 |releaseDate|`recommended`|String|The date that the complete packaging will be available to use. Use the format `dd/mm/yyyy`.|
 |discontinueDate|`recommended`|String|The date that the complete packaging will no longer be available to use. Use the format `dd/mm/yyyy`.|
@@ -86,6 +88,8 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : within
     partOfMultipack Boolean
     certification Boolean
     certificationClaims List
+    manufacturer List
+    manufacturedCountry Numeric
     updateDate String
     releaseDate String
     discontinueDate String
@@ -106,6 +110,7 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : within
       completePackagingConstituentsIdentifier required
       recyclabilityClaims recommended
       certificationClaims recommended
+      organisations recommended
     }
 ```
 
