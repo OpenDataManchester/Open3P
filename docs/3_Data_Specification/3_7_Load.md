@@ -22,6 +22,7 @@ All the complete packaging from different levels (primary, secondary, and tertia
 |destinationAddressCountry|`required`|String|The country of this load destination.|
 |destinationPostalCode|`required`|String|The postal code of this load destination.|
 |timesSent|`required`|Numeric|The number of times this load was sent to the destination during the specified time period.|
+
 |updateDate|`required`|String|The date that the load was provided/last updated. Use the format `dd/mm/yyyy`.|
 
 ## Diagram
@@ -41,8 +42,14 @@ LOAD_CATALOGUE }o..o{ LOAD : within
     destinationAddressCountry String
     destinationPostalCode String
     timesSent Numeric
+    manufacturer List
+    manufacturedCountry Numeric
     updateDate String
   }
+  LOAD }o..o{ RELATIONSHIP_LISTS : attributes
+        RELATIONSHIP_LISTS {
+    organisations recommended
+    }
 ```
 
 ## Template
