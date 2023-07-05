@@ -18,6 +18,8 @@ All the complete packaging from different levels (primary, secondary, and tertia
 |packagingItems|`required`|List|The complete packaging and/or the multipack identifiers used to create the load. There must be an equivalent record in the `Complete Packaging` or `Multipack` data.|
 |quantityInLoad|`required`|Numeric|Number of units for the packaging items found in a load that this row corresponds to.|
 |level|`required`|String|The intended use of the component for the packaging. The entry here should be drawn from the [level controlled list](../5_Controlled_Lists/5_015_Level.md).|
+|manufacturer|`recommended`|List|The information regarding the manufacturer. The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
+|manufacturedCountry|`recommended`|Numeric|The country the load options were manufactured in. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
 |updateDate|`required`|String|The date that the load catalogue was provided/last updated. Use the format `dd/mm/yyyy`.|
 
 ## Diagram
@@ -40,6 +42,8 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : within
     packagingItems List
     quantityInLoad Numeric
     level String
+    manufacturer List
+    manufacturedCountry Numeric
     updateDate String
   }
   LOAD_CATALOGUE }o..o{ CONTROLLED_LISTS : attributes
@@ -47,6 +51,10 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : within
         CONTROLLED_LISTS {
     level required
     }
+  LOAD }o..o{ RELATIONSHIP_LISTS : attributes
+        RELATIONSHIP_LISTS {
+    organisations recommended
+    } 
 ```
 
 ## Template
