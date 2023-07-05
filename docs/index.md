@@ -15,7 +15,7 @@ Version 2.0 Published 2023-06-06
 
 ## Working with the Standard
 
-The standard is open and free to use, copy and distribute. However, the standard is protected by the [Creative Commons Attribution 4.0 International (CC BY 4.0) licence](https://creativecommons.org/licenses/by/4.0/legalcode){target=_blank} so you must use the correct attribution and licence.
+The standard is open and free to use, copy and distribute. However, the standard is protected by the [Apache License, Version 2.0](../LICENCE.md){target=_blank} so you must use the correct attribution and licence.
 
 ## Contents
 
