@@ -17,6 +17,7 @@ The materials schema contains information regarding the materials that are used 
 |combinationPurpose|`recommended`|String|Why is this material being used? Use the identifier of the function that this row relates to. The entry here should be drawn from the [Function Controlled List](../5_Controlled_Lists/5_004_Function.md).|
 |certification|`recommended`|Boolean|Does the material have a certificate (e.g. FSC, REACH, FSA etc.)?|
 |certificationClaims|`recommended`|List|The information regarding the certification. The entries should be the [Certification Claims Relationship List](../6_Relationship_Lists/6_005_Certification_Claims.md) identifiers.|
+|manufacturer|`recommended`|List|The information regarding the manufacturer. The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
 |manufacturedCountry|`recommended`|Numeric|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
 |updateDate|`required`|String|The date that the material was provided/last updated. Use the format `dd/mm/yyyy`.|
 
@@ -33,6 +34,7 @@ BASE_MATERIALS }o--o{ MATERIALS : within
     combinationPurpose String
     certification Boolean
     certificationClaims List
+    manufacturer List
     manufacturedCountry Numeric
     updateDate String
   }
@@ -45,6 +47,7 @@ BASE_MATERIALS }o--o{ MATERIALS : within
         RELATIONSHIP_LISTS {
     materialConstituents required
     certificationClaims recommended
+    organisations recommended
       }
 ```
 
@@ -71,6 +74,7 @@ The specification of this csv file is as follows:
       "combinationPurpose": "",
       "certification": "TRUE",
       "certificationClaims": ["1"],
+      "manufacturer": "",
       "manufacturedCountry": 826,
       "updateDate": "01/08/2022",
     }
@@ -103,6 +107,7 @@ The specification of this csv file is as follows:
               },
             "certification": "FALSE",
             "certificationClaims": null,
+            "manufacturer": "",
             "manufacturedCountry": {
               "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
               "Numeric": 826
@@ -146,6 +151,7 @@ The specification of this csv file is as follows:
               },
             "certification": "FALSE",
             "certificationClaims": null,
+            "manufacturer": "",
             "manufacturedCountry": {
               "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
               "Numeric": 826
@@ -189,6 +195,7 @@ The specification of this csv file is as follows:
               },
             "certification": "FALSE",
             "certificationClaims": null,
+            "manufacturer": "",
             "manufacturedCountry": {
               "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
               "Numeric": 826
@@ -232,6 +239,7 @@ The specification of this csv file is as follows:
               },
             "certification": "FALSE",
             "certificationClaims": null,
+            "manufacturer": "",
             "manufacturedCountry": {
               "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
               "Numeric": 826
@@ -255,6 +263,7 @@ The specification of this csv file is as follows:
       },
       "certification": "FALSE",
       "certificationClaims": null,
+      "manufacturer": "",
       "manufacturedCountry": {
         "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
         "Numeric": 826
