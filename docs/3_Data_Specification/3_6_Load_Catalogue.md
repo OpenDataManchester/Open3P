@@ -51,7 +51,7 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : within
         CONTROLLED_LISTS {
     level required
     }
-  LOAD }o..o{ RELATIONSHIP_LISTS : attributes
+  LOAD_CATALOGUE }o..o{ RELATIONSHIP_LISTS : attributes
         RELATIONSHIP_LISTS {
     organisations recommended
     } 

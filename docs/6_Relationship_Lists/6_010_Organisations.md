@@ -26,12 +26,13 @@ The organisations relationship list identifies the organisations that part of th
 
 ``` mermaid
 erDiagram
-  BASE_MATERIALS }o..o{ ORGANISATION : within
-  MATERIALS }o..o{ ORGANISATION : within
-  COMPONENTS }o..o{ ORGANISATION : within
-  COMPLETE_PACKAGING }o..o{ ORGANISATION : within
-  MULTIPACK }o..o{ ORGANISATION : within
-  COMPLETE_PACKAGING }o..o{ ORGANISATION : within
+  BASE_MATERIALS }o..o{ ORGANISATIONS : within
+  MATERIALS }o..o{ ORGANISATIONS : within
+  COMPONENTS }o..o{ ORGANISATIONS : within
+  COMPLETE_PACKAGING }o..o{ ORGANISATIONS : within
+  MULTIPACK }o..o{ ORGANISATIONS : within
+  LOAD_CATALOGUE }o..o{ ORGANISATIONS : within
+  LOAD }o..o{ ORGANISATIONS : within
   ORGANISATIONS {
     organisationIdentifier String
     organisationName String
