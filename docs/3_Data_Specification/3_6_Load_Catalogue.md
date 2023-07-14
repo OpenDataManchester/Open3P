@@ -5,7 +5,7 @@ description: The load catalogue aids organisations to combine products to form a
 
 # Load Catalogue
 
-All the complete packaging from different levels (primary, secondary, and tertiary), including multipacks, put together to send to the final destination. Each row corresponds to a single packaging item.
+All the complete packaging from different levels (primary, secondary, transit etc.), including multipacks, put together to send to the final destination. Each row corresponds to a single packaging item.
 
 ## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|

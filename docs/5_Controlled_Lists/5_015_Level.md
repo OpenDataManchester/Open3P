@@ -7,6 +7,8 @@ description: The level controlled list for the load catalogue.
 
 The level controlled list identifies the level or tier a complete packaging item is at.
 
+**Controlled lists are maintained by the SCB, if there are values that you believe need to be added then [contact us](https://www.open3p.org/contact/) and we can add new values to the lists.**
+
 ## Data
 |<div style="width:200px">identifier</div>|category|detailed|
 |:-|:-|:-|

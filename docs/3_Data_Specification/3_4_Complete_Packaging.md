@@ -5,7 +5,7 @@ description: Complete packaging items are the finished packaging within Open 3P.
 
 # Complete Packaging
 
-The complete packaging schema contains information regarding the complete packages that are used to create loads. These maybe created from a single component or a combination of components from the component catalogue schema.
+The complete packaging schema contains information regarding the complete packages that are used to create loads. These maybe created from a single component or a combination of components from the components schema.
 
 ## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|

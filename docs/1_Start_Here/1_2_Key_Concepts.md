@@ -69,10 +69,10 @@ sequenceDiagram
 ## Packaging Item
 - A component, complete packaging, or multipack 
 
-## Reuse
-- The packaging item remains as created and is repurposed without reconstruction
+## Controlled List
+- Controlled Lists serve as reference points for key terms and phrases that are commonly used in the packaging industry, which are maintained and administred by the Standard Custodian Board (SCB)
 
-## Recycle
-- The packaging item is broken down and created into something new
+## Relationship List
+- Relationship lists are user-defined lists used in data standards to specify the relationships between different data elements. Unlike controlled lists relationship lists are populated by the user to provide context and clarity to the data being recorded.
 
 

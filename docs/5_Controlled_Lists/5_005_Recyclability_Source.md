@@ -7,6 +7,8 @@ description: The recyclability source controlled list.
 
 The recyclability source controlled list identifies the source of the recyclability evidence. This is used in [recyclability claims relationship list](../6_Relationship_Lists/6_006_Recyclability_Claims.md).
 
+**Controlled lists are maintained by the SCB, if there are values that you believe need to be added then [contact us](https://www.open3p.org/contact/) and we can add new values to the lists.**
+
 ## Data
 |<div style="width:200px">identifier</div>|category|detailed|
 |:-|:-|:-|
