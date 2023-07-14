@@ -7,6 +7,8 @@ description: The disruptors controlled list for components.
 
 The component disruptors controlled list identifies what might cause disruption during the end of life process of a component. This is used in [component end of life routes relationship list](../6_Relationship_Lists/6_007_Component_End_of_Life_Routes.md).
 
+**Controlled lists are maintained by the SCB, if there are values that you believe need to be added then [contact us](https://www.open3p.org/contact/) and we can add new values to the lists.**
+
 ## Data
 |<div style="width:200px">identifier</div>|category|detailed|
 |:-|:-|:-|

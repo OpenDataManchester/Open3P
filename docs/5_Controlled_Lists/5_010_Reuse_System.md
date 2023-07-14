@@ -7,6 +7,8 @@ description: The reuse system controlled list for components.
 
 The reuse system controlled list identifies the reuse system that this component is aligned to.
 
+**Controlled lists are maintained by the SCB, if there are values that you believe need to be added then [contact us](https://www.open3p.org/contact/) and we can add new values to the lists.**
+
 ## Data
 |<div style="width:200px">identifier</div>|category|detailed|
 |:-|:-|:-|

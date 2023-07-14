@@ -13,3 +13,5 @@ Controlled lists also enable easy querying and reporting of data across the pack
 
 Overall, controlled lists play a vital role in ensuring that data is reliable and can be easily analyzed, leading to more informed decision-making and better outcomes for all stakeholders in the packaging industry.
 
+**Controlled lists are maintained by the SCB, if there are values that you believe need to be added then [contact us](https://www.open3p.org/contact/) and we can add new values to the lists.**
+
