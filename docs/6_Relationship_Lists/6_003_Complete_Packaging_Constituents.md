@@ -12,6 +12,7 @@ The complete packaging constituents relationship list identifies the components 
 |:-|:-|:-|:-|
 |completePackagingConstituentsIdentifier|`required`|String|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
 |completePackagingCombinationIdentifier|`required`|String|The unique identifier of the components and/or complete packaging that this complete packaging is made of. There must be an equivalent record in the `Components` OR `Complete Packaging` data.|
+|contactWithProduct|`required`|Boolean|Does this constituent come into contact with the product?|
 
 ## Diagram
 
@@ -22,6 +23,7 @@ erDiagram
   COMPLETE_PACKAGING_CONSTITUENTS {
     completePackagingConstituentsIdentifier String
     completePackagingCombinationIdentifier String
+    contactWithProduct Boolean
   }
   COMPLETE_PACKAGING_CONSTITUENTS }o--o{ COMPONENTS : attributes
   COMPLETE_PACKAGING_CONSTITUENTS }o--o{ COMPLETE_PACKAGING : attributes
