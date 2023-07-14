@@ -1,13 +1,13 @@
 ---
 title: Introduction
-description: Introduction to the Open 3P open data standard for the packaging value chain.
+description: Introduction to the Open 3P open standard for packaging data for the packaging value chain.
 ---
 
 # Introduction
 
-## What is the Open 3P?
+## What is Open 3P?
 
-Open 3P is an open data standard for the packaging industry, which is being developed by Open Data Manchester in collaboration with over 120 individuals from 70 organisations across the packaging supply chain. The goal of Open 3P is to establish a common language for exchanging and sharing data related to packaging materials and processes, which will help to improve transparency and accountability in the industry.
+Open 3P is an open standard for packaging data for the packaging industry, which is being developed by Open Data Manchester in collaboration with over 120 individuals from 70 organisations across the packaging supply chain. The goal of Open 3P is to establish a common language for exchanging and sharing data related to packaging materials and processes, which will help to improve transparency and accountability in the industry.
 
 With Open 3P, stakeholders in the packaging supply chain will be able to share information about materials, components and packaging in a standardised format. This will allow for better collaboration between manufacturers, retailers, recyclers, regulators, and consumers. By creating a common understanding of the materials and processes involved in packaging, it will be easier to identify opportunities for reducing waste, increasing efficiency, and improving sustainability throughout the supply chain.
 
