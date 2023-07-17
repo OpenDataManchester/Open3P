@@ -8,14 +8,14 @@ theme:
     repo: fontawesome/brands/git-alt
   palette:
     - scheme: default
-      primary: light blue
-      accent: blue
+      primary: deep purple
+      accent: pink
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
     - scheme: slate
-      primary: cyan
-      accent: light blue 
+      primary: deep purple
+      accent: pink 
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode

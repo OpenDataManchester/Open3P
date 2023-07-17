@@ -3,7 +3,7 @@ title: Home
 description: Open 3P is an open data standard built with and for the packaging supply chain.
 ---
 
-[![Open Data Manchester](img/Open3PFullColour.jpg)](https://www.opendatamanchester.org.uk/plastics-packaging-portal/){target=_blank}
+[![Open Data Manchester](img/Open_3P_banner_compress.png)](https://open3p.org){target=_blank}
 
 ## Open 3P: Definition
 
