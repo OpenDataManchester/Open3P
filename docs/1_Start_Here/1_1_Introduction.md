@@ -27,7 +27,7 @@ Overall, Open 3P represents an important step forward for the packaging industry
 
 ## What is an open data standard?
 
-An open data standard is a set of guidelines that dictate the structure and composition of data. It enables people and organisations to communicate data about the same topic using the same language. Standardisation of data structure ensures consistency, comparability and interconnectivity. Open data standards are publicly accessible and can be used by anyone. This makes it easy to understand, share, and reuse data that has been published and shared by others. Open data standards are especially useful when multiple organisations are publishing data about the same subject, as it allows them to collaborate and create a larger and more comprehensive dataset. By adhering to a set of open standards, data can be shared more efficiently, allowing for greater collaboration, analysis and discovery.
+An open data standard is a set of guidelines that dictate the structure and composition of data. It enables people and organisations to communicate data about the same topic using the same language. Standardisation of data structure ensures consistency, comparability and interconnectivity. Open data standards are publicly accessible and can be used by anyone. This makes it easy to understand, share, and reuse data that has been published and shared by others. As a result of open data standards, multiple organisations can collaborate and create a larger and more comprehensive dataset when they publish data about the same topic. By adhering to a set of open standards, data can be shared more efficiently, allowing for greater collaboration, analysis and discovery.
 
 ## How is the standard being developed?
 
