@@ -20,11 +20,11 @@ The complete packaging schema contains information regarding the complete packag
 |productType|`recommended`|String|Information about the product contained in the complete packaging. The entry here should be drawn from the [product type controlled list](../5_Controlled_Lists/5_012_Product_Type.md).|
 |componentContactWithProduct|`required`|List|What components (if any) come into direct contact with the product before purchased by a consumer? If none of the components come into contact with the product use `NA`.|
 |LOWcodeWproduct|`recommended`|String|The list of waste code for **everything** in the complete packaging. LOW code is synonymous with European Waste Catalogue Code (EWC). For example: an empty bottle would have a LOWcode of `15 01 02`. Please use [Dsposal](https://dsposal.uk/browse/ewc){target=_blank} or [legislation.gov](https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made){target=_blank} to find the LOWcode. **Note**: The LOWcode can based on its combination with other components and the actual product contained in the complete packaging. Be sure to include the complete packaging LOWcode with the product. If you cannot find the code or are uncertain please enter `Uncertain`.|
-|onTheGo|`required`|Boolean|Is the complete packaging often classed as packaging that will end up in street bins? Answer as: 'TRUE' for yes and 'FALSE' for no.|
-|householdWaste|`required`|Boolean|Is the complete packaging often classed as packaging that will end up in kerbside collections? Answer as: 'TRUE' for yes and 'FALSE' for no.|
+|onTheGo|`required`|Boolean|Is the complete packaging often classed as packaging that will end up in street bins? Answer as: `TRUE` for yes and `FALSE` for no.|
+|householdWaste|`required`|Boolean|Is the complete packaging often classed as packaging that will end up in kerbside collections? Answer as: `TRUE` for yes and `FALSE` for no.|
 |depositReturnSchemes|`required`|List|Which countries support a deposit return scheme for this particular complete packaging? The entries here should be drawn from the [deposit return scheme controlled list](../5_Controlled_Lists/5_013_Deposit_Return_Scheme.md).|
 |completePackagingEndOfLifeRoutes|`recommended`|List|The information regarding this complete packaging's proposed end of life routes. The entries should be the [complete packaging end of life routes](../6_Relationship_Lists/6_008_Complete_Packaging_End_of_Life_Routes.md) identifiers.|
-|recyclability|`recommended`|Boolean|Is the complete packaging recyclable (as determined by a reputable source)? Answer as: 'TRUE' for yes and 'FALSE' for no.|
+|recyclability|`recommended`|Boolean|Is the complete packaging recyclable (as determined by a reputable source)? Answer as: `TRUE` for yes and `FALSE` for no.|
 |recyclabilityClaims|`recommended`|List|The information regarding this recyclability claims. The entries should be the [recyclability claims relationship list](../6_Relationship_Lists/6_006_Recyclability_Claims.md) identifiers.|
 |height|`recommended`|Numeric|The height of the complete packaging. Please see the guidelines below on how to properly measure and report the height.|
 |heightDate|`recommended`|String|The date that the height was last verified/measured. Use the format `dd/mm/yyyy`.|
@@ -40,8 +40,8 @@ The complete packaging schema contains information regarding the complete packag
 |weightDate|`recommended`|String|The date that the weight was last verified/measured. Use the format `dd/mm/yyyy`.|
 |servingCapacity|`recommended`|Numeric|The serving capacity of the complete packaging - how much of a product that can be contained in the complete packaging.|
 |servingCapacityDate|`recommended`|String|The date that the serving capacity was last verified/measured. Use the format `dd/mm/yyyy`.|
-|partOfMultipack|`required`|Boolean|Is the complete packaging part of a multipack? Answer as: 'TRUE' for yes and 'FALSE' for no.|
-|certification|`recommended`|Boolean|Does the complete packaging have a certificate (e.g. FSC, REACH, FSA etc.)? Answer as: 'TRUE' for yes and 'FALSE' for no.|
+|partOfMultipack|`required`|Boolean|Is the complete packaging part of a multipack? Answer as: `TRUE` for yes and `FALSE` for no.|
+|certification|`recommended`|Boolean|Does the complete packaging have a certificate (e.g. FSC, REACH, FSA etc.)? Answer as: `TRUE` for yes and `FALSE` for no.|
 |certificationClaims|`recommended`|List|The information regarding the certifications. The entries should be the [certification claims relationship list](../6_Relationship_Lists/6_005_Certification_Claims.md) identifiers.|
 |updateDate|`required`|String|The date that the complete packaging was provided/last updated. Use the format `dd/mm/yyyy`.|
 |releaseDate|`recommended`|String|The date that the complete packaging will be available to use. Use the format `dd/mm/yyyy`.|
