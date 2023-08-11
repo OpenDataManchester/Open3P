@@ -6,6 +6,9 @@ description: The key concepts to understanding the open data standard for the pa
 # Key Concepts
 
 The Open 3P data standard is to provide information about what packaging is made out of and how these materials flow through the packaging supply chain. With Open 3P, stakeholders in the packaging supply chain will be able to share information about materials, components and packaging in a standardised format. This will allow for better collaboration between manufacturers, brands, retailers, consumers, recyclers, compliance schemes and regulators.
+
+## Packaging Ecosystem Data, Products, Waste Flows
+The diagram below can help you to visualise how information might flow across the packaging supply chain using Open 3P. The standard supports data exchange between necessary parties whilst preserving a single source of truth across the industry.
 ``` mermaid
 sequenceDiagram
     participant manufacturers
@@ -73,6 +76,13 @@ sequenceDiagram
 - Controlled Lists serve as reference points for key terms and phrases that are commonly used in the packaging industry, which are maintained and administred by the Standard Custodian Board (SCB)
 
 ## Relationship List
-- Relationship lists are user-defined lists used in data standards to specify the relationships between different data elements. Unlike controlled lists relationship lists are populated by the user to provide context and clarity to the data being recorded.
+- Relationship lists are user-defined lists used in data standards to specify the relationships between different data elements. Unlike controlled lists relationship lists are populated by the user to provide context and clarity to the data being recorded
 
+## UUID
+- A machine readable unique identifier generated for an entry conforming to the standard
+- UUIDs improve data flow by assigning an unambiguous tag to your data
+- These IDs are then used to link between layers of the standard e.g. to link components to complete packaging
 
+## Single Source of Truth
+- In information science and information technology, single source of truth (SSOT) architecture, or single point of truth (SPOT) architecture, for information systems is the practice of structuring information models and associated data schemas such that every data element is mastered (or edited) in only one place.
+- [Singe source of truth wikipedia article](https://en.wikipedia.org/wiki/Single_source_of_truth){target=_blank}
