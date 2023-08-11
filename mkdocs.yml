@@ -27,6 +27,8 @@ theme:
     - navigation.footer
     - content.code.copy
 
+copyright: Copyright &copy; Open Data Manchester CIC, and released under the Apache License, Version 2.0.
+
 
 # Page Tree
 nav:
