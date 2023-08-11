@@ -23,13 +23,69 @@ theme:
     - navigation.indexes
     - toc.integrate
     - navigation.top
+    - navigation.path
+    - navigation.footer
     - content.code.copy
+
+
+# Page Tree
+nav:
+  - Home: index.md
+  - Start Here: 
+    - Introduction: 1_Start_Here/1_1_Introduction.md
+    - Key Concepts: 1_Start_Here/1_2_Key_Concepts.md
+    - Data Flow: 1_Start_Here/1_3_Data_Flow.md
+    - Data Schema: 1_Start_Here/1_4_Data_Schema.md
+  - Data Formats: 2_Data_Formats/2_1_Data_Formats.md
+  - Identifiers: 4_Identifiers/4_1_Identifiers.md
+  - Core Schema:
+    - Base Materials: 3_Data_Specification/3_1_Base_Materials.md
+    - Materials: 3_Data_Specification/3_2_Materials.md
+    - Components: 3_Data_Specification/3_3_Components.md
+    - Complete Packaging: 3_Data_Specification/3_4_Complete_Packaging.md
+    - Multipack: 3_Data_Specification/3_5_Multipack.md
+    - Load Catalogue: 3_Data_Specification/3_6_Load_Catalogue.md
+    - Load: 3_Data_Specification/3_7_Load.md
+  - Controlled Lists:
+    - Definition: 5_Controlled_Lists/5_000_Controlled_Lists.md
+    - Material Type: 5_Controlled_Lists/5_001_Material_Type.md
+    - Certification Source: 5_Controlled_Lists/5_002_Certification_Source.md
+    - Material Purpose: 5_Controlled_Lists/5_003_Material_Purpose.md
+    - Function: 5_Controlled_Lists/5_004_Function.md
+    - Recyclability Source: 5_Controlled_Lists/5_005_Recyclability_Source.md
+    - Shape: 5_Controlled_Lists/5_006_Shape.md
+    - Flexibility: 5_Controlled_Lists/5_007_Flexibility.md
+    - Component Disruptors: 5_Controlled_Lists/5_008_Component_Disruptors.md
+    - Opacity: 5_Controlled_Lists/5_009_Opacity.md
+    - Reuse System: 5_Controlled_Lists/5_010_Reuse_System.md
+    - Recycled Content Evidence Type: 5_Controlled_Lists/5_011_Recycled_Content_Evidence_Type.md
+    - Product Type: 5_Controlled_Lists/5_012_Product_Type.md
+    - Deposit Return Scheme: 5_Controlled_Lists/5_013_Deposit_Return_Scheme.md
+    - Complete Packaging Disruptors: 5_Controlled_Lists/5_014_Complete_Packaging_Disruptors.md
+    - Level: 5_Controlled_Lists/5_015_Level.md
+    - End of Life Route: 5_Controlled_Lists/5_016_End_Of_Life_Route.md
+  - Relationship Lists:
+    - Definition: 6_Relationship_Lists/6_000_Relationship_Lists.md
+    - Material Constituents: 6_Relationship_Lists/6_001_Material_Constituents.md
+    - Component Constituents: 6_Relationship_Lists/6_002_Component_Constituents.md
+    - Complete Packaging Constituents: 6_Relationship_Lists/6_003_Complete_Packaging_Constituents.md
+    - Multipack Constituents: 6_Relationship_Lists/6_004_Multipack_Constituents.md
+    - Certification Claims: 6_Relationship_Lists/6_005_Certification_Claims.md
+    - Recyclability Claims: 6_Relationship_Lists/6_006_Recyclability_Claims.md
+    - Component End of Life Routes: 6_Relationship_Lists/6_007_Component_End_of_Life_Routes.md
+    - Complete Packaging End of Life Routes: 6_Relationship_Lists/6_008_Complete_Packaging_End_of_Life_Routes.md
+    - Recycled Content Claims: 6_Relationship_Lists/6_009_Recycled_Content_Claims.md
+  - Supporting Files: 7_Supporting_Files/7_2_Example_Files.md
+  - Goverance: 8_Governance/8_1_Governance.md
+  - Licence: 10_Licence/10_01_Licence.md
+  - Change Log: 9_Change_Log/8_1_Change_Log.md
+
 extra:
   version:
     provider: mike
   social:
     - icon: fontawesome/brands/twitter
-      link: https://twitter.com/opendatamcr?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor
+      link: https://twitter.com/opendatamcr
       name: ODM on Twitter
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/opendatamcr
