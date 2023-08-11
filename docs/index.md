@@ -15,7 +15,7 @@ Version 2.0 Published 2023-06-06
 
 ## Working with the Standard
 
-The standard is open and free to use, copy and distribute. However, the standard is (c) copyright of Open Data Manchester CIC and released under the [Apache License, Version 2.0](./10_Licence/10_01_Licence.md){target=_blank} so you must use the correct attribution and licence.
+The standard is open and free to use, copy and distribute. However, the standard is &copy; copyright of Open Data Manchester CIC and released under the [Apache License, Version 2.0](./10_Licence/10_01_Licence.md){target=_blank} so you must use the correct attribution and licence.
 
 ## Contents
 
