@@ -131,64 +131,64 @@ The specification of this csv file is as follows:
 
     ``` json linenums="1"
     --Food grade PET pot made in Ireland
-{
-    "identifier": "9F459508-E365-0B9F-E3BB-FF4A7AED481B",
-    "name": "Thermoformed rPET tray",
-    "description": "Clear PET tray for food products",
-    "externalIdentifiers": {
-        "internalId": "14",
-        "GTIN": "00123456789012"
-    },
-    "imageURLs": [
+    {
+        "identifier": "9F459508-E365-0B9F-E3BB-FF4A7AED481B",
+        "name": "Thermoformed rPET tray",
+        "description": "Clear PET tray for food products",
+        "externalIdentifiers": {
+            "internalId": "14",
+            "GTIN": "00123456789012"
+        },
+        "imageURLs": [
         "http://standard.open3p.org/2.0/img/measurements/figure1.measuring.png"
-    ],
-    "LOWcode": "150102",
-    "componentConstituents": [
-        "DCEE1F88-A83B-5BBC-D2D9-6A862B344977"
-    ],
-    "height": 50,
-    "heightDate": "01/08/2022",
-    "width": 220,
-    "widthDate": "01/08/2022",
-    "depth": 170,
-    "depthDate": "01/08/2022",
-    "volume": 1870,
-    "volumeDate": "01/08/2022",
-    "weight": 23,
-    "weightTolerance": 1.5,
-    "weightToleranceType": "grams",
-    "weightDate": "01/08/2022",
-    "shape": "c-shape-0004",
-    "function": "function-0041",
-    "flexibility": "c-flexibility-0002",
-    "branding": true,
-    "componentEndOfLifeRoutes": [
-
-    ],
-    "colour": "cmyk(0%,0%,0%,10%)",
-    "opacity": "c-opacity-0002",
-    "loaned": false,
-    "reuseSystems": [
-        "c-reuse-system-0001"
-    ],
-    "partOfMultipack": false,
-    "recycledContent": 0.3,
-    "recycledContentClaims": [
-        "23e8251a-4fe6-4b25-9966-b08acac9ba34"
-    ],
-    "recyclability": true,
-    "recyclabilityClaims": [
-        "b101889f-87e5-4c42-abb7-0df5fc3d1a26"
-    ],
-    "certification": true,
-    "certificationClaims": [
-        "eed87ac3-6e3e-45fb-af2c-dd0f64fdb597"
-    ],
-    "manufacturedCountry": 372,
-    "updateDate": "01/08/2022",
-    "releaseDate": "01/08/2022",
-    "discontinueDate": ""
-}
+        ],
+        "LOWcode": "150102",
+        "componentConstituents": [
+            "DCEE1F88-A83B-5BBC-D2D9-6A862B344977"
+        ],
+        "height": 50,
+        "heightDate": "01/08/2022",
+        "width": 220,
+        "widthDate": "01/08/2022",
+        "depth": 170,
+        "depthDate": "01/08/2022",
+        "volume": 1870,
+        "volumeDate": "01/08/2022",
+        "weight": 23,
+        "weightTolerance": 1.5,
+        "weightToleranceType": "grams",
+        "weightDate": "01/08/2022",
+        "shape": "c-shape-0004",
+        "function": "function-0041",
+        "flexibility": "c-flexibility-0002",
+        "branding": true,
+        "componentEndOfLifeRoutes": [
+            ""
+        ],
+        "colour": "cmyk(0%,0%,0%,10%)",
+        "opacity": "c-opacity-0002",
+        "loaned": false,
+        "reuseSystems": [
+            "c-reuse-system-0001"
+        ],
+        "partOfMultipack": false,
+        "recycledContent": 0.3,
+        "recycledContentClaims": [
+            "23e8251a-4fe6-4b25-9966-b08acac9ba34"
+        ],
+        "recyclability": true,
+        "recyclabilityClaims": [
+            "b101889f-87e5-4c42-abb7-0df5fc3d1a26"
+        ],
+        "certification": true,
+        "certificationClaims": [
+            "eed87ac3-6e3e-45fb-af2c-dd0f64fdb597"
+        ],
+        "manufacturedCountry": 372,
+        "updateDate": "01/08/2022",
+        "releaseDate": "01/08/2022",
+        "discontinueDate": ""
+    }
     ```
 === "CSV download"
 

@@ -123,61 +123,61 @@ The specification of this csv file is as follows:
 
     ``` json linenums="1"
     {
-    "identifier": "63df4b40-ba4f-472e-a260-f8a944eb7961",
-    "name": "4 Breaded Chicken Steaks packaging",
-    "description": "PET tray, lidding film, top & base label",
-    "externalIdentifiers": {
-        "internalIdentifer": "85467889",
-        "GTIN": "00123456789012"
-        },
-    "imageURLs": [
-        "http://standard.open3p.org/2.0/img/measurements/figure1.measuring.png"
-    ],
-    "completePackagingConstituentsIdentifier": [
-        "9F459508-E365-0B9F-E3BB-FF4A7AED481B", "7197de37-8b77-4032-b0fd-84f27bae97be", "0e9a7265-6213-4a76-9a45-3acc5d83fa6f", "1c042eee-ec7a-400b-b05b-ca0d319e9067"
-    ],
-    "LOWcodeWOproduct": "15 01 06",
-    "productType": "cp-product-type-0001",
-    "componentContactWithProduct": [
-        "9F459508-E365-0B9F-E3BB-FF4A7AED481B", "7197de37-8b77-4032-b0fd-84f27bae97be"
-    ],
-    "LOWcodeWproduct": "20 01 08",
-    "onTheGo": false,
-    "householdWaste": true,
-    "depositReturnSchemes": [
-        "cp-drs-0005"
-    ],
-    "completePackagingEndOfLifeRoutes": [
-        "1229f395-3065-4236-bc1e-2aa500f58a79"
-    ],
-    "recyclability": false,
-    "recyclabilityClaims": [
-        "b101889f-87e5-4c42-abb7-0df5fc3d1a26"
-    ],
-    "height": 220,
-    "heightDate": "01/01/2023",
-    "width": 170,
-    "widthDate": "01/01/2023",
-    "depth": 60,
-    "depthDate": "01/01/2023",
-    "volume": 0.002,
-    "volumeDate": "01/01/2023",
-    "weight": 32.8,
-    "weightTolerance": 5,
-    "weightToleranceType": "percentage",
-    "weightDate": "01/01/2023",
-    "servingCapacity": 4,
-    "servingCapacityDate": "01/01/2023",
-    "partOfMultipack": false,
-    "certification": true,
-    "certificationClaims": [
-        "eed87ac3-6e3e-45fb-af2c-dd0f64fdb597"
-    ],
-    "manufacturedCountry": 826,
-    "updateDate": "01/01/2023",
-    "releaseDate": "01/01/2023",
-    "discontinueDate": ""
-}
+        "identifier": "63df4b40-ba4f-472e-a260-f8a944eb7961",
+        "name": "4 Breaded Chicken Steaks packaging",
+        "description": "PET tray, lidding film, top & base label",
+        "externalIdentifiers": {
+            "internalIdentifer": "85467889",
+            "GTIN": "00123456789012"
+            },
+        "imageURLs": [
+            "http://standard.open3p.org/2.0/img/measurements/figure1.measuring.png"
+        ],
+        "completePackagingConstituentsIdentifier": [
+            "9F459508-E365-0B9F-E3BB-FF4A7AED481B", "7197de37-8b77-4032-b0fd-84f27bae97be", "0e9a7265-6213-4a76-9a45-3acc5d83fa6f", "1c042eee-ec7a-400b-b05b-ca0d319e9067"
+        ],
+        "LOWcodeWOproduct": "15 01 06",
+        "productType": "cp-product-type-0001",
+        "componentContactWithProduct": [
+            "9F459508-E365-0B9F-E3BB-FF4A7AED481B", "7197de37-8b77-4032-b0fd-84f27bae97be"
+        ],
+        "LOWcodeWproduct": "20 01 08",
+        "onTheGo": false,
+        "householdWaste": true,
+        "depositReturnSchemes": [
+            "cp-drs-0005"
+        ],
+        "completePackagingEndOfLifeRoutes": [
+            "1229f395-3065-4236-bc1e-2aa500f58a79"
+        ],
+        "recyclability": false,
+        "recyclabilityClaims": [
+            "b101889f-87e5-4c42-abb7-0df5fc3d1a26"
+        ],
+        "height": 220,
+        "heightDate": "01/01/2023",
+        "width": 170,
+        "widthDate": "01/01/2023",
+        "depth": 60,
+        "depthDate": "01/01/2023",
+        "volume": 0.002,
+        "volumeDate": "01/01/2023",
+        "weight": 32.8,
+        "weightTolerance": 5,
+        "weightToleranceType": "percentage",
+        "weightDate": "01/01/2023",
+        "servingCapacity": 4,
+        "servingCapacityDate": "01/01/2023",
+        "partOfMultipack": false,
+        "certification": true,
+        "certificationClaims": [
+            "eed87ac3-6e3e-45fb-af2c-dd0f64fdb597"
+        ],
+        "manufacturedCountry": 826,
+        "updateDate": "01/01/2023",
+        "releaseDate": "01/01/2023",
+        "discontinueDate": ""
+    }
     ```
 === "CSV download"
 

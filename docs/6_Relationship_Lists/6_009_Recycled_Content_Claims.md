@@ -38,10 +38,11 @@ erDiagram
 === "JSON"
 
     ``` json linenums="1"
-    --A certificate providing information about a recycled content claim
-{
-    "recycledContentIdentifier": "23e8251a-4fe6-4b25-9966-b08acac9ba34",
-    "recycledContentEvidenceType": "c-recycled-evidence-0001",
-    "recycledContentEvidenceReference": "ABC-123-Example",
-    "recycledContentIssueDate": "01/08/2022"
-}
+    --A certificate providing information about a recycled content claim.
+    {
+      "recycledContentIdentifier": "23e8251a-4fe6-4b25-9966-b08acac9ba34",
+      "recycledContentEvidenceType": "c-recycled-evidence-0001",
+      "recycledContentEvidenceReference": "ABC-123-Example",
+      "recycledContentIssueDate": "01/08/2022"
+    }
+    ```
