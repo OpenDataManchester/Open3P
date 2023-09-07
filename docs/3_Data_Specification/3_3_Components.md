@@ -130,84 +130,65 @@ The specification of this csv file is as follows:
 === "JSON"
 
     ``` json linenums="1"
-    --Food grade PET circular pot made in the UK
-    {
-      "identifier": "278EFE8A-720A-06C1-A411-CB94878AD3E2",
-      "name": "Guacamole Dip Pot",
-      "description": "Clear PET pot for the Guacamole Dip",
-      "externalIdentifiers": {
-        "internalId": "GUA-PET-2022-1",
-        "GTIN": "00123456789012",
-        },
-      "imageURL": "",
-      "LOWcode": "15 01 02",
-      "materialIdentifier":"278EFE8A-720A-06C1-A411-CB94878AD3E2",
-      "height": 46,
-      "heightDate": "01/08/2022",
-      "width": 101,
-      "widthDate": "01/08/2022",
-      "depth": 101,
-      "depthDate": "01/08/2022",
-      "volume": "",
-      "volumeDate": "",
-      "weight": 6.85,
-      "weightTolerance": "4.38%",
-      "weightDate": "01/08/2022",
-      "shape": {
-        "identifier":"c-shape-0005",
-        "category":"cylinder",
-        "detailed":"3D shape with 2 parallel circular bases connected by a curved surface"
-      },
-      "function": {
-        "identifier":"function-0030",
-        "category":"pot",
-        "detailed":""
-      },
-      "flexibility": {
-        "identifier": "c-flexibility-0001",
-        "category": "Rigid",
-        "detailed": ""
-      },
-      "branding": "FALSE",
-      "componentRecyclingDisruptors": "",
-      "colour": "",
-      "opacity": {
-        "identifier": "c-opacity-0003",
-        "category": "transparent",
-        "detailed": "allows light to pass through so that objects behind can be distinctly seen; no colour/ clear"
-      },
-      "loaned": "FALSE",
-      "reuseSystems": "",
-      "manufacturedCountry": {
-        "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
-        "Numeric": 826
-      },
-      "recycledContent": 90,
-      "recycledContentEvidenceType": {
-        "identifier":"c-recycled-evidence-0001",
-        "category":"certificate",
-        "detailed":""
-      },
-      "recycledContentEvidenceReference": "EXA-123-MPL-4-E",
-      "recyclability": "TRUE",
-      "recyclabilitySource": {
-        "identifier":"recyclability-source-0001",
-        "category":"OPRL",
-        "detailed":"OPRL is a not-for-profit company limited by guarantee, any surpluses being reinvested in our activities to promote recycling of packaging."
-      },
-      "recyclabilityDate": "01/08/2022",
-      "partOfMultipack": "TRUE",
-      "certification": "TRUE",
-      "certificationSource": {
-        "identifier": "certification-source-0002",
-        "category": "FSA",
-        "detailed": "The Food Standards Agency (FSA) is the independent government department working to protect public health and consumers’ wider interests in relation to food in England, Wales and Northern Ireland."
-      },
-      "certificationDate": "01/08/2022",
-      "updateDate": "01/08/2022",
-      "releaseDate": "01/08/2022",
-      "discontinueDate": ""
-    }
+    --Food grade PET pot made in Ireland
+{
+    "identifier": "9F459508-E365-0B9F-E3BB-FF4A7AED481B",
+    "name": "Thermoformed rPET tray",
+    "description": "Clear PET tray for food products",
+    "externalIdentifiers": {
+        "internalId": "14",
+        "GTIN": "00123456789012"
+    },
+    "imageURLs": [
+        "http://standard.open3p.org/2.0/img/measurements/figure1.measuring.png"
+    ],
+    "LOWcode": "150102",
+    "componentConstituents": [
+        "DCEE1F88-A83B-5BBC-D2D9-6A862B344977"
+    ],
+    "height": 50,
+    "heightDate": "01/08/2022",
+    "width": 220,
+    "widthDate": "01/08/2022",
+    "depth": 170,
+    "depthDate": "01/08/2022",
+    "volume": 1870,
+    "volumeDate": "01/08/2022",
+    "weight": 23,
+    "weightTolerance": 1.5,
+    "weightToleranceType": "grams",
+    "weightDate": "01/08/2022",
+    "shape": "c-shape-0004",
+    "function": "function-0041",
+    "flexibility": "c-flexibility-0002",
+    "branding": true,
+    "componentEndOfLifeRoutes": [
+
+    ],
+    "colour": "cmyk(0%,0%,0%,10%)",
+    "opacity": "c-opacity-0002",
+    "loaned": false,
+    "reuseSystems": [
+        "c-reuse-system-0001"
+    ],
+    "partOfMultipack": false,
+    "recycledContent": 0.3,
+    "recycledContentClaims": [
+        "23e8251a-4fe6-4b25-9966-b08acac9ba34"
+    ],
+    "recyclability": true,
+    "recyclabilityClaims": [
+        "b101889f-87e5-4c42-abb7-0df5fc3d1a26"
+    ],
+    "certification": true,
+    "certificationClaims": [
+        "eed87ac3-6e3e-45fb-af2c-dd0f64fdb597"
+    ],
+    "manufacturedCountry": 372,
+    "updateDate": "01/08/2022",
+    "releaseDate": "01/08/2022",
+    "discontinueDate": ""
+}
     ```
 === "CSV download"
 

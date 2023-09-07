@@ -5,7 +5,7 @@ description: The recyclability claims relationship list.
 
 # Recyclability Claims
 
-The recyclability claims relationship list identifies the materials that are combined to create components. This is used in the following schemas:
+The recyclability claims relationship list identifies organisations and schemes that provide the recyclability claims. This is used in the following schemas:
 
 * [Components](../3_Data_Specification/3_3_Components.md)
 * [Complete Packaging](../3_Data_Specification/3_4_Complete_Packaging.md)
@@ -34,3 +34,15 @@ erDiagram
     recyclabilitySource required }
   }
 ```
+
+## Example
+
+=== "JSON"
+
+    ``` json linenums="1"
+    --Claim provided by OPRL
+{
+    "recyclabilityIdentifier": "b101889f-87e5-4c42-abb7-0df5fc3d1a26",
+    "recyclabilitySource": "recyclability-source-0001",
+    "recyclabilityIssueDate": "01/08/2022"
+}
