@@ -33,3 +33,18 @@ erDiagram
     completePackagingDistruptors required }
   }
 ```
+
+## Example
+
+=== "JSON"
+
+    ``` json linenums="1"
+    --A complete packaging end of life route for recycling with food residue and a paper label being a disruptor
+{
+    "completePackagingEndOfLifeRouteIdentifier": "1229f395-3065-4236-bc1e-2aa500f58a79",
+    "completePackagingEndOfLifeRoute": "end-of-life-route-0001",
+    "orderOfPrecedence": 1,
+    "completePackagingDistruptors": [
+        "cp-disruptors-0029", "cp-disruptors-0022"
+    ]
+}
