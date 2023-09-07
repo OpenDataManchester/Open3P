@@ -1074,6 +1074,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1164,7 +1171,7 @@
 
 
 <h1 id="recycled-content-claims">Recycled Content Claims<a class="headerlink" href="#recycled-content-claims" title="Permanent link">&para;</a></h1>
-<p>The recycled content claims relationship list identifies the materials that are combined to create components. This is only used in <a href="../../3_Data_Specification/3_3_Components/">components</a>.</p>
+<p>The recycled content claims relationship list identifies the document that details the recycled content claim. This is only used in <a href="../../3_Data_Specification/3_3_Components/">components</a>.</p>
 <h2 id="data">Data<a class="headerlink" href="#data" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -1186,7 +1193,7 @@
 <td align="left">recycledContentEvidenceType</td>
 <td align="left"><code>recommended</code></td>
 <td align="left">String</td>
-<td align="left">What source provided the certificate? The entry should be the <a href="../../5_Controlled_Lists/5_005_Recyclability_Source/">recyclability source controlled list</a> identifier.</td>
+<td align="left">What type of document provides the information regarding the claim? The entry should be the <a href="../../5_Controlled_Lists/5_011_Recycled_Content_Evidence_Type/">recycled content evidence type</a> identifier.</td>
 </tr>
 <tr>
 <td align="left">recycledContentEvidenceReference</td>
@@ -1216,6 +1223,21 @@
       CONTROLLED_LISTS {
     recycledContentEvidenceType required }
   }</code></pre>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">JSON</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>``` json linenums=&rdquo;1&rdquo;
+&ndash;A certificate providing information about a recycled content claim</p>
+</div>
+</div>
+</div>
+<p>{
+    &ldquo;recycledContentIdentifier&rdquo;: &ldquo;23e8251a-4fe6-4b25-9966-b08acac9ba34&rdquo;,
+    &ldquo;recycledContentEvidenceType&rdquo;: &ldquo;c-recycled-evidence-0001&rdquo;,
+    &ldquo;recycledContentEvidenceReference&rdquo;: &ldquo;ABC-123-Example&rdquo;,
+    &ldquo;recycledContentIssueDate&rdquo;: &ldquo;01/08/2022&rdquo;
+}</p>
 
               
             </article>
