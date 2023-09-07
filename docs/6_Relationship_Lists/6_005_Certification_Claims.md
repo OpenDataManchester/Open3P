@@ -37,3 +37,15 @@ erDiagram
     certificationSource required }
   }
 ```
+
+## Example
+
+=== "JSON"
+
+    ``` json linenums="1"
+    --A certificate provided by the FSA
+{
+    "certificationIdentifier": "eed87ac3-6e3e-45fb-af2c-dd0f64fdb597",
+    "certificationSource": "certification-source-0002",
+    "certificationIssueDate": "01/08/2022"
+}
