@@ -123,76 +123,61 @@ The specification of this csv file is as follows:
 
     ``` json linenums="1"
     {
-      "identifier": "C29B4703-121C-7552-D905-FD5AB263D611",
-      "name": "Salad And Dips Guacamole Dip",
-      "description": "A clear pot, film and lid in a decorative sleeve packed into an outercase.",
-      "externalIdentifiers": {
-          "internalIdentifer": "GUA-PET-2022-2341",
-          "GTIN": "00123456789012"
-          },
-      "imageURL": [
-          "https://dsposal-my.sharepoint.com/:i:/g/personal/tom_yourdsposal_uk/Eblhs6hbkTFAo6SNdYh1ew8BfRwTFna21RyzaKJSq6xX9g?e=0BJKsf",
-          "https://dsposal-my.sharepoint.com/:i:/g/personal/tom_yourdsposal_uk/ERs2KgXOTh1Ep6fqci0wqBIBVjOCe4uLJMrySoLm5P3Stg?e=C07ga9",
-          "https://dsposal-my.sharepoint.com/:i:/g/personal/tom_yourdsposal_uk/ETQTTA8p1Y5Aj-eIThf6M4wBdunvvSVdVoV0bFqK6Nyfhw?e=DKRcHq"
-
-      ],
-      "completePackagingConstituentsIdentifier": [
-          "278EFE8A-720A-06C1-A411-CB94878AD3E2",
-          "4CF8CE85-BA1A-BACB-670E-FAAB71D97D95",
-          "661C7790-94D1-147D-7BF4-D518EAF5FA32",
-          "7AA5DDF9-0FE1-110C-26C0-ECED9D05F6F1"
-          ],
-      "LOWcodeWOproduct": "15 01 06",
-      "productType": {
-          "identifier":"cp-product-type-0001",
-          "category":"food",
-          "detailed":"The product is fit and suitable to be eaten."
-          },
-      "componentContactWithProduct": [
-          "278EFE8A-720A-06C1-A411-CB94878AD3E2",
-          "4CF8CE85-BA1A-BACB-670E-FAAB71D97D95"
-          ],
-      "LOWcodeWproduct": "20 01 08",
-      "onTheGo": "FALSE",
-      "householdWaste": "TRUE",
-      "depositReturnScheme": {
-          "identifier":"cp-drs-0005",
-          "name":"none",
-          "description":""
-          },
-      "recyclingDisruptors": "",
-      "recyclability": 0,
-      "recyclabilitySource": {
-          "identifier":"recyclability-source-0001",
-          "category":"OPRL",
-          "detailed":"OPRL is a not-for-profit company limited by guarantee, any surpluses being reinvested in our activities to promote recycling of packaging."
-          },
-      "recyclabilityDate": "01/08/2022",
-      "height": 51.5,
-      "heightDate": "01/08/2022",
-      "width": 104,
-      "widthDate": "01/08/2022",
-      "depth": 104,
-      "depthDate": "01/08/2022",
-      "volume": 245,
-      "volumeDate": "01/08/2022",
-      "weight": 16.92,
-      "weightTolerance": 0.74,
-      "weightDate": "01/08/2022",
-      "servingCapacity": 4,
-      "servingCapacityDate": "01/08/2022",
-      "partOfMultipack": "TRUE",
-      "certification": "TRUE",
-      "certificationSource": {
-        "identifier": "certification-source-0002",
-        "category": "FSA",
-        "detailed": "The Food Standards Agency (FSA) is the independent government department working to protect public health and consumers’ wider interests in relation to food in England, Wales and Northern Ireland."
-      },
-      "certificationDate": "01/08/2022",
-      "updateDate": "01/08/2022",
-      "releaseDate": "01/08/2022",
-      "discontinueDate": ""
-    }
+    "identifier": "63df4b40-ba4f-472e-a260-f8a944eb7961",
+    "name": "4 Breaded Chicken Steaks packaging",
+    "description": "PET tray, lidding film, top & base label",
+    "externalIdentifiers": {
+        "internalIdentifer": "85467889",
+        "GTIN": "00123456789012"
+        },
+    "imageURLs": [
+        "http://standard.open3p.org/2.0/img/measurements/figure1.measuring.png"
+    ],
+    "completePackagingConstituentsIdentifier": [
+        "9F459508-E365-0B9F-E3BB-FF4A7AED481B", "7197de37-8b77-4032-b0fd-84f27bae97be", "0e9a7265-6213-4a76-9a45-3acc5d83fa6f", "1c042eee-ec7a-400b-b05b-ca0d319e9067"
+    ],
+    "LOWcodeWOproduct": "15 01 06",
+    "productType": "cp-product-type-0001",
+    "componentContactWithProduct": [
+        "9F459508-E365-0B9F-E3BB-FF4A7AED481B", "7197de37-8b77-4032-b0fd-84f27bae97be"
+    ],
+    "LOWcodeWproduct": "20 01 08",
+    "onTheGo": false,
+    "householdWaste": true,
+    "depositReturnSchemes": [
+        "cp-drs-0005"
+    ],
+    "completePackagingEndOfLifeRoutes": [
+        "1229f395-3065-4236-bc1e-2aa500f58a79"
+    ],
+    "recyclability": false,
+    "recyclabilityClaims": [
+        "b101889f-87e5-4c42-abb7-0df5fc3d1a26"
+    ],
+    "height": 220,
+    "heightDate": "01/01/2023",
+    "width": 170,
+    "widthDate": "01/01/2023",
+    "depth": 60,
+    "depthDate": "01/01/2023",
+    "volume": 0.002,
+    "volumeDate": "01/01/2023",
+    "weight": 32.8,
+    "weightTolerance": 5,
+    "weightToleranceType": "percentage",
+    "weightDate": "01/01/2023",
+    "servingCapacity": 4,
+    "servingCapacityDate": "01/01/2023",
+    "partOfMultipack": false,
+    "certification": true,
+    "certificationClaims": [
+        "eed87ac3-6e3e-45fb-af2c-dd0f64fdb597"
+    ],
+    "manufacturedCountry": 826,
+    "updateDate": "01/01/2023",
+    "releaseDate": "01/01/2023",
+    "discontinueDate": ""
+}
     ```
 === "CSV download"
 
