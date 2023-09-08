@@ -6,6 +6,51 @@ title: Latest Updates
 # Latest Updates
 A document that contains all the changes made to the standard.
 
+## September 7, 2023
+### Documents
+- Added example for Recycled Content Claims
+- Added example for Recyclability Claims
+- Added example for Certification Claims
+- Added example for Components
+- Added example for Complete Packaging End of Life
+- Added example for Complete Packaging
+
+## August 11, 2023
+### Documents
+- Added licence page so that users don't need to navigate to Github
+- Improved homepage text regarding licencing
+- Improved sidebar navigation
+- Added licence to the footer
+- Added Relationship list, UUID and Single Source of Truth to Key Concepts page
+- Improved reability of Start Here Introduction
+- Fixed comestics typo to cosmetics in products types
+- Added product type descriptions
+- Various other typos
+
+### Data Fields
+- Harmonised all boolean field descriptions so that they all stated "Answer as: 'TRUE' for yes and 'FALSE' for no."
+
+## July 14, 2023
+### Documents
+- Removed catalogue from the introduction area
+- Improved working about packaging levels
+- Reworked introduction
+- Improved key concepts page
+- Updated data flow
+- Improved Complete Packaging End of Life Route Relationship List
+- Added Controlled List information page
+- Improved the Goverance Page
+- Improved the branding to fit with the Open 3P brand guidelines
+
+## July 5, 2023
+### Documents
+- Removed banner detailing that the standard is about plastic packaging.
+- Added Apache Licence to homepage
+
+## July 4, 2023
+### Documents, Model, Data Fields
+- Moved to [verion 2.0](https://github.com/OpenDataManchester/PPP/releases/tag/v2.0.0). Read the release notes on [Github](https://github.com/OpenDataManchester/PPP/releases/tag/v2.0.0).
+
 ## March 17, 2023
 ### Documents
 - General improvements
@@ -13,7 +58,7 @@ A document that contains all the changes made to the standard.
 ## March 10, 2023
 ### Documents
 - Added versioning control so that there can be parrellell versions
-- Updated Indentifiers page to include information regarding UUID
+- Updated Identifiers page to include information regarding UUID
 
 ## March 9, 2023
 ### Documents
