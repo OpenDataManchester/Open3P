@@ -40,9 +40,10 @@ erDiagram
 === "JSON"
 
     ``` json linenums="1"
-    --Claim provided by OPRL
-{
-    "recyclabilityIdentifier": "b101889f-87e5-4c42-abb7-0df5fc3d1a26",
-    "recyclabilitySource": "recyclability-source-0001",
-    "recyclabilityIssueDate": "01/08/2022"
-}
+    --Claim provided by OPRL.
+    {
+      "recyclabilityIdentifier": "b101889f-87e5-4c42-abb7-0df5fc3d1a26",
+      "recyclabilitySource": "recyclability-source-0001",
+      "recyclabilityIssueDate": "01/08/2022"
+    }
+    ```
