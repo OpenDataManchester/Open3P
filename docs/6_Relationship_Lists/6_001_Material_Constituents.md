@@ -39,6 +39,12 @@ erDiagram
   }
 ```
 
+## Template
+
+Material constituents should be provided as a separate csv file. The specification of this csv file is as follows:
+
+[Material Constituents Template](https://www.open3p.org/wp-content/uploads/2023/09/materialConstituents20230922.csv)
+
 ## Example
 
 === "JSON #1"
