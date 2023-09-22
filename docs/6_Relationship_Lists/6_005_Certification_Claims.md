@@ -38,6 +38,12 @@ erDiagram
   }
 ```
 
+## Template
+
+Certification claims should be provided as a separate csv file. The specification of this csv file is as follows:
+
+[Certification Claims Template](https://www.open3p.org/wp-content/uploads/2023/09/certificationClaims20230922.csv)
+
 ## Example
 
 === "JSON"
@@ -50,3 +56,4 @@ erDiagram
       "certificationIssueDate": "01/08/2022"
     }
     ```
+
