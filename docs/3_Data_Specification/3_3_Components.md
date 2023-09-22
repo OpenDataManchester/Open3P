@@ -119,11 +119,9 @@ MATERIALS }o--o{ COMPONENTS : within
   }
 ```
 
-Components should be provided as a separate csv file, in tidy format. This means that each row of the csv file should be one component of a complete package. An example is provided.
+Components should be provided as a separate csv file. The specification of this csv file is as follows:
 
-The specification of this csv file is as follows:
-
-[Components_Template.csv](https://www.open3p.org/wp-content/uploads/2023/03/7_1_3_Components_Template.csv){target=_blank}
+[Components Template](https://www.open3p.org/wp-content/uploads/2023/09/components20230922.csv){target=_blank}
 
 ## Example
 
