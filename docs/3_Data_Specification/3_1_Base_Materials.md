@@ -48,11 +48,9 @@ erDiagram
 
 ## Template
 
-Base materials should be provided as a separate csv file, in tidy format. This means that each row of the csv file should be one base material. An example is provided.
+Base materials should be provided as a separate csv file. The specification of this csv file is as follows:
 
-The specification of this csv file is as follows:
-
-[Base_Materials_Template.csv](https://www.open3p.org/wp-content/uploads/2023/03/7_1_1_Base_Materials_Template.csv){target=_blank}
+[Base Materials Template](https://www.open3p.org/wp-content/uploads/2023/09/baseMaterials20230922.csv){target=_blank}
 
 ## Example
 

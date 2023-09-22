@@ -35,6 +35,12 @@ erDiagram
   }
 ```
 
+## Template
+
+Recyclability claims should be provided as a separate csv file. The specification of this csv file is as follows:
+
+[Recyclability Claims Template](https://www.open3p.org/wp-content/uploads/2023/09/recyclabilityClaims20230922.csv)
+
 ## Example
 
 === "JSON"

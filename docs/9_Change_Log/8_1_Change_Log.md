@@ -6,6 +6,11 @@ title: Latest Updates
 # Latest Updates
 A document that contains all the changes made to the standard.
 
+## September 22, 2023
+### Documents
+- Added blank Excel workbook to supporting files page
+- Added blank csvs for all core schema and all relationship lists to supporting files page and each schema page 
+
 ## September 7, 2023
 ### Documents
 - Added example for Recycled Content Claims

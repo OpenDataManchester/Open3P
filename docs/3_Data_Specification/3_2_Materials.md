@@ -49,11 +49,9 @@ BASE_MATERIALS }o--o{ MATERIALS : within
 ```
 
 ## Template
-Materials should be provided as a separate csv file, in tidy format. This means that each row of the csv file should be one material for a component. An example is provided.
+Materials should be provided as a separate csv file. The specification of this csv file is as follows:
 
-The specification of this csv file is as follows:
-
-[Materials_Template.csv](https://www.open3p.org/wp-content/uploads/2023/03/7_1_2_Materials_Template.csv){target=_blank}
+[Materials Template](https://www.open3p.org/wp-content/uploads/2023/09/materials20230922.csv){target=_blank}
 
 ## Example
 

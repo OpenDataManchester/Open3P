@@ -33,6 +33,12 @@ erDiagram
   }
 ```
 
+## Template
+
+Recycled content claims should be provided as a separate csv file. The specification of this csv file is as follows:
+
+[Recycled Content Claims](https://www.open3p.org/wp-content/uploads/2023/09/recycledContentClaims20230922.csv)
+
 ## Example
 
 === "JSON"

@@ -34,6 +34,12 @@ erDiagram
   }
 ```
 
+## Template
+
+Complete packaging end of life routes should be provided as a separate csv file. The specification of this csv file is as follows:
+
+[Complete Packaging End of Life Routes Template](https://www.open3p.org/wp-content/uploads/2023/09/completePackagingEOLRoutes20230922.csv)
+
 ## Example
 
 === "JSON"

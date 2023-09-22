@@ -51,11 +51,9 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : within
 
 ## Template
 
-Loads should be provided as a separate csv file, in tidy format. This means that each row of the csv file should be a single complete package or a multipack of a load. An example is provided.
+Loads should be provided as a separate csv file. The specification of this csv file is as follows:
 
-The specification of this csv file is as follows:
-
-[Load_Catalogue_Template.csv](https://www.open3p.org/wp-content/uploads/2023/03/7_1_6_Load_Catalogue_Template.csv){target=_blank}
+[Load Catalogue Template](https://www.open3p.org/wp-content/uploads/2023/09/loadCatalogue20230922.csv){target=_blank}
 
 ## Example
 

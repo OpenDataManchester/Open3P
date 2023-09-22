@@ -47,11 +47,9 @@ LOAD_CATALOGUE }o..o{ LOAD : within
 
 ## Template
 
-Loads should be provided as a separate csv file, in tidy format. This means that each row of the csv file should be a single load or a multi loads from the load catagolue schema. An example is provided.
+Loads should be provided as a separate csv file. The specification of this csv file is as follows:
 
-The specification of this csv file is as follows:
-
-[Load_Template.csv](https://www.open3p.org/wp-content/uploads/2023/03/7_1_7_Load_Template.csv){target=_blank}
+[Load Template](https://www.open3p.org/wp-content/uploads/2023/09/load20230922.csv){target=_blank}
 
 ## Example
 

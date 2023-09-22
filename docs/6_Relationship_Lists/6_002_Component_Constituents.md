@@ -25,3 +25,9 @@ erDiagram
   COMPONENT_CONSTITUENTS }o--o{ MATERIALS : attributes
   COMPONENT_CONSTITUENTS }o--o{ COMPONENTS : attributes
 ```
+
+## Template
+
+Component constituents should be provided as a separate csv file. The specification of this csv file is as follows:
+
+[Component Constituents Template](https://www.open3p.org/wp-content/uploads/2023/09/componentConstituents20230922.csv)
