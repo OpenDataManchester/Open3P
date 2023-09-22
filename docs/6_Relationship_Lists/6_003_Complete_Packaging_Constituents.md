@@ -26,3 +26,9 @@ erDiagram
   COMPLETE_PACKAGING_CONSTITUENTS }o--o{ COMPONENTS : attributes
   COMPLETE_PACKAGING_CONSTITUENTS }o--o{ COMPLETE_PACKAGING : attributes
 ```
+
+## Template
+
+Complete packaging constituents should be provided as a separate csv file. The specification of this csv file is as follows:
+
+[Complete Packaging Constituents](https://www.open3p.org/wp-content/uploads/2023/09/completePackagingConstituent20230922.csv)
