@@ -4,27 +4,32 @@ This section of the guidance provides examples of different scenarios for provid
 
 ## Excel Workbook
 
-[BETA VERSION](https://www.open3p.org/wp-content/uploads/2023/03/Open-3P-Excel-Template-Beta.xlsx)
+[BETA VERSION](https://www.open3p.org/wp-content/uploads/2023/09/Open-3P-Excel-Template-20230922.xlsx)
 
 ## CSV blank
 
- 1. [Base Materials](https://www.open3p.org/wp-content/uploads/2023/03/7_1_1_Base_Materials_Template.csv){target=_blank}
- 2. [Materials](https://www.open3p.org/wp-content/uploads/2023/03/7_1_2_Materials_Template.csv){target=_blank}
- 3. [Components](https://www.open3p.org/wp-content/uploads/2023/03/7_1_3_Components_Template.csv){target=_blank}
- 4. [Complete Packaging](https://www.open3p.org/wp-content/uploads/2023/03/7_1_4_Complete_Packaging_Template.csv){target=_blank}
- 5. [Multipack](https://www.open3p.org/wp-content/uploads/2023/03/7_1_5_Multipack_Template.csv){target=_blank}
- 6. [Load Catalogue](https://www.open3p.org/wp-content/uploads/2023/03/7_1_6_Load_Catalogue_Template.csvv){target=_blank}
- 7. [Load](https://www.open3p.org/wp-content/uploads/2023/03/7_1_7_Load_Template.csv){target=_blank}
+### Core Schema
 
-## CSV with examples
+ 1. [Base Materials](https://www.open3p.org/wp-content/uploads/2023/09/baseMaterials20230922.csv){target=_blank}
+ 2. [Materials](https://www.open3p.org/wp-content/uploads/2023/09/materials20230922.csv){target=_blank}
+ 3. [Components](https://www.open3p.org/wp-content/uploads/2023/09/components20230922.csv){target=_blank}
+ 4. [Complete Packaging](https://www.open3p.org/wp-content/uploads/2023/09/completePackaging20230922.csv){target=_blank}
+ 5. [Multipack](https://www.open3p.org/wp-content/uploads/2023/09/multipack20230922.csv){target=_blank}
+ 6. [Load Catalogue](https://www.open3p.org/wp-content/uploads/2023/09/loadCatalogue20230922.csv){target=_blank}
+ 7. [Load](https://www.open3p.org/wp-content/uploads/2023/09/load20230922.csv){target=_blank}
 
- 1. [Base Materials](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_7_Materials_Catalogue_Example.csv){target=_blank}
- 2. [Materials](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_2_Materials_Example.csv){target=_blank}
- 3. [Components](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_1_Component_Catalogue_Example.csv){target=_blank}
- 4. [Complete Packaging](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_3_Complete_Packaging_Example.csv){target=_blank}
- 5. [Multipack](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_4_Multipack_Example.csv){target=_blank}
- 6. [Load Catalogue](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_5_Load_Catalogue_Example.csv){target=_blank}
- 7. [Load](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_6_Load_Example.csv){target=_blank}
+### Relationship Lists
+
+1. [Material Constituents](https://www.open3p.org/wp-content/uploads/2023/09/materialConstituents20230922.csv)
+2. [Component Constituents](https://www.open3p.org/wp-content/uploads/2023/09/componentConstituents20230922.csv)
+3. [Complete Packaging Constituents](https://www.open3p.org/wp-content/uploads/2023/09/completePackagingConstituent20230922.csv)
+4. [Multipack Constituents](https://www.open3p.org/wp-content/uploads/2023/09/multipackConstituents20230922.csv)
+5. [Certification Claims](https://www.open3p.org/wp-content/uploads/2023/09/certificationClaims20230922.csv)
+6. [Recyclability Claims](https://www.open3p.org/wp-content/uploads/2023/09/recyclabilityClaims20230922.csv)
+7. [Component End of Life Routes](https://www.open3p.org/wp-content/uploads/2023/09/componentEOLRoutes20230922.csv)
+8. [Complete Packaging End of Life Routes](https://www.open3p.org/wp-content/uploads/2023/09/completePackagingEOLRoutes20230922.csv)
+9. [Recycled Content Claims](https://www.open3p.org/wp-content/uploads/2023/09/recycledContentClaims20230922.csv)
+
 
 
 
