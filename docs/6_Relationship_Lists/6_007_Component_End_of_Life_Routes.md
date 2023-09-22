@@ -33,3 +33,9 @@ erDiagram
     componentDistruptors required }
   }
 ```
+
+## Template
+
+Component end of life routes should be provided as a separate csv file. The specification of this csv file is as follows:
+
+[Component End of Life Routes](https://www.open3p.org/wp-content/uploads/2023/09/componentEOLRoutes20230922.csv)
