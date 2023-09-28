@@ -87,12 +87,12 @@ flowchart LR
         lo_example1[load]
         lo_example2[load]
     end
+    bm_limestone --> ma_glass1
     bm_cullet --> ma_glass1
     bm_sand --> ma_glass1
     bm_sand --> ma_glass2
     bm_sodaAsh --> ma_glass1
     bm_sodaAsh --> ma_glass2
-    bm_limestone --> ma_glass1
     bm_boricOxide --> ma_glass2
     ma_glass1 --> co_glassBottle1
     ma_glass2 --> co_glassBottle2
@@ -143,8 +143,8 @@ flowchart LR
     bm_cardboard --> ma_cardboard
     bm_cullet --> ma_glass
     bm_sand --> ma_glass
-    bm_sodaAsh --> ma_glass
     bm_limestone --> ma_glass
+    bm_sodaAsh --> ma_glass
     bm_cork --> ma_cork
     bm_paper --> ma_paper
     bm_adhesive --> ma_adhesive
@@ -152,6 +152,7 @@ flowchart LR
     ma_cardboard --> co_cardboard
     ma_glass --> co_glassBottle
     ma_cork --> co_corkCork
+    co_aluminiumCapsule  --> cp_wineBottle
     ma_aluminium --> co_aluminiumCapsule
     ma_adhesive --> co_paperLabel
     ma_paper --> co_paperLabel
@@ -159,7 +160,6 @@ flowchart LR
     co_corkCork --> cp_wineBottle
     co_paperLabel --> cp_wineBottle
     co_paperLabel --> cp_cardboardBox
-    co_aluminiumCapsule  --> cp_wineBottle
     co_cardboard --> cp_cardboardBox
     cp_wineBottle --> lo_wineDelivery
     cp_cardboardBox --> lo_wineDelivery
