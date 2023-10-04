@@ -195,7 +195,7 @@ flowchart LR
     cp_wineBottle --> lo_wineDelivery
 ```
 ## Within schema combinations
-The Open 3P standards allows further complexity when combining items within a schema. This is seen below where the two materials label and 'solvent free substrate' are futher combined to create a 'solvent free label'.
+The Open 3P standards allows further complexity when combining items within a schema. This is seen below where the two materials label and 'ssolvent free print substrate' are futher combined to create a 'printed label'.
 ``` mermaid
 flowchart LR
     subgraph baseMaterials[Base Materials]
@@ -207,8 +207,8 @@ flowchart LR
     end
     subgraph materials[Materials]
         ma_label[label]
-        ma_coating[solvent free substrate]
-        ma_label2[solvent free label]
+        ma_coating[solvent free print substrate]
+        ma_label2[printed label]
     end
     subgraph components[Components]
         co_topLabel[branded front label]
@@ -295,8 +295,8 @@ flowchart LR
         ma_aluminium[aluminium]
         ma_tape[tape]
         ma_label[label]
-        ma_coating[solvent free substrate]
-        ma_label2[solvent free label]
+        ma_coating[solvent free print substrate]
+        ma_label2[printed label]
         ma_shrinkwrap[plastic laminate]
     end
     subgraph components[Components]
