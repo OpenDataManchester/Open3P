@@ -4,23 +4,357 @@ description: The intented flow of data through the packaging value chain using O
 ---
 
 # Data Flow
+Here, we show examples of how data could flow using the open standard. This tells the story of how wine bottles are created with a packaging manufacturer, how that packaging manufacturer sends their packaging to a packer/filler and then how that packer/filler will put packaging together, filled with a product and then send them to a retailer. The eight flow diagrams below compliment each other to build a complete picture.
 
-Here, we show two examples of how data could flow using the open standard. This tells the story of how water bottles are created with a packaging manufacturer, how that packaging manufacturer sends their packaging to a packer/filler (Figure 1), and then how that packer/filler will put packaging together, filled with a product and then send them to a retailer (Figure 2). In both figures: 
-- black represents the components items used to create complete packaging
-- orange represents the complete packaging items used to create multipacks
-- green represents the components, multipack, or complete packaging items used to create the load catalogue item
-- yellow represents the load catalogue item made to create a load
+!!! note "Shared responsiblity"
 
-![example1](../img/data_flow_example1.png)
-*Figure 1: From a packaging manufacturer to a packer/filler*
+    When viewing the flows below be aware that no single individual and/or organisation is responsible for the entire data capture.
+    It is the intent of Open 3P that experts in their part of the value chain are repsonsible for it's adherence to the data. 
 
-Above in Figure 1, we show the creation of water bottle components. After creating the water bottle components (the plastic bottle, two different types of lids, and a label), a packaging manufacturer would then use boxes (in this diagram it is one box size with the same materials) and a pallet to send their water bottle components to a packer/filler. The water bottle components, placed in the boxes on a pallet would create a load catalogue. This load catalogue would then be used to send to a specific packer/filler during a specific time period. The use of components and the load catalogue simplifies data entry by pulling data that has already been entered. Only the load would need to be updated based on reporting periods to estimate how many times a specific packer/filler recieved the load catalogue.
-
-Another packaging manufacturer would then separately create the plastic rings and use boxes and a pallet that they consistently send to the specific packer/filler. They would also update how many times during a certain time period that they sent these plastic rings to the (single) packer/filler. According to this image, these plastic rings use the same boxes and pallet (sizes and materials) to create the load catalogue for sending the packaging items to the packer/filler. As with the water bottle packaging manufacturer, the load would be updated based on reporting periods to gain an estimate of how much plastic rings are being sent to an area.
-
-![example1](../img/data_flow_example2.png)
-*Figure 2: From a packer/filler to a retailer*
-
-Instead of re-entering data, a packer/filler would pull the data from the packaging manufacturer for the water bottle components. Using components, the packer/filler could create two different types of water bottles (with the two different kinds of lids). The packer/filler uses the components to create the two different complete packaging, sealed bottles with lids, which is filled with the product (in this case, water). Notice that even though the plastic ring is alone in complete packaging. The reason for this is to fill in data related to this component, even though alone. For instance, the level of packaging (primary, secondary, shipment, transit) relies on how the complete packaging is filled and used, which is contained in the complete packaging csv. 
-
-In addition to creating single purchase water bottle items, the packer/filler can use the same created water bottles, along with the plastic ring to create a multipack. Notice how the first type of lid is used solely for creating a multipack, and the second type of lid is used to create an individual unit. The individual use bottles along with the multipack can be combined onto a mixed pallet with boxes to create a load catalogue. As with the packaging manufacturer, the packer/filler can use the commonly created load catalogue items to send to multiple retail stores. They would then update how many times they sent the load to the retailer during certain reporting periods. 
+## The flow
+Open 3P has been designed to allow information to flow from base materials all the way through to a load. Below you can see how these are connected.
+``` mermaid
+flowchart LR
+    subgraph baseMaterials[Base Materials]
+        bm_example[base material]
+    end
+    subgraph materials[Materials]
+        ma_example[material]
+    end
+    subgraph components[Components]
+        co_example[component]
+    end
+    subgraph completePackages[Complete Packages]
+        cp_example[complete package]
+    end
+    subgraph loads[Loads]
+        lo_example[load]
+    end
+    bm_example --> ma_example
+    ma_example --> co_example
+    co_example --> cp_example
+    cp_example --> lo_example
+```
+## Introducting basic items
+At its most basic Open 3P allows the minimal amount of infomation to be passed along. In this example cardboard is using used as the base material, then again as the material and also as the component. At the component step the cardboard box is combined with tape to create a complete package ready to be filled by a product before being sent out on a load.
+``` mermaid
+flowchart LR
+    subgraph baseMaterials[Base Materials]
+        bm_cardboard[cardboard]
+    end
+    subgraph materials[Materials]
+        ma_cardboard[cardboard]
+    end
+    subgraph components[Components]
+        co_cardboard[cardboard box]
+        co_example[tape]
+    end
+    subgraph completePackages[Complete Packages]
+        cp_example[complete package]
+    end
+    subgraph loads[Loads]
+        lo_example[load]
+    end
+    bm_cardboard --> ma_cardboard
+    ma_cardboard --> co_cardboard
+    co_cardboard --> cp_example
+    co_example --> cp_example
+    cp_example --> lo_example
+```
+## Combining items to make complex items
+Although some items used within the packaging value chains are simple, others are complex. Open 3P allows the combination of items at each schema level.  In the example bellow a packaging tape is created by the combination of cellulose and adhesive. This is the used in conjunction with the cardboard box to create the complete packaging.
+``` mermaid
+flowchart LR
+    subgraph baseMaterials[Base Materials]
+        bm_cellulose[cellulose]
+        bm_adhesive[adhesive]
+        bm_cardboard[cardboard]
+    end
+    subgraph materials[Materials]
+        ma_tape[tape]
+        ma_cardboard[cardboard]
+    end
+    subgraph components[Components]
+        co_cardboard[cardboard box]
+        co_tape[tape]
+    end
+    subgraph completePackages[Complete Packages]
+        cp_cardboard[delivery box]
+    end
+    subgraph loads[Loads]
+        lo_example[load]
+    end
+    bm_cellulose --> ma_tape
+    bm_adhesive --> ma_tape
+    bm_cardboard --> ma_cardboard
+    ma_tape --> co_tape
+    ma_cardboard --> co_cardboard
+    co_cardboard --> cp_cardboard
+    co_tape --> cp_cardboard
+    cp_cardboard --> lo_example
+```
+## Using items multiple times
+Within the packaging value chain items are combined in different arrangements to create similar or completely distinct items. This can been seen below where the same sand and soda ash are used to make the two different types of glass; soda-lime glass and borosilicate glass. This information can be passed through the value chain, providing additional insights for stakeholders, clients and customers.
+``` mermaid
+flowchart LR
+    subgraph baseMaterials[Base Materials]
+        bm_sand[sand]
+        bm_sodaAsh[soda ash]
+        bm_limestone[limestone]
+        bm_cullet[cullet]
+        bm_boricOxide[boric oxide]
+    end
+    subgraph materials[Materials]
+        ma_glass1["glass
+        food and drink"]
+        ma_glass2["glass
+        pharmaceutical"]
+    end
+    subgraph components[Components]
+        co_glassBottle1[glass bottle]
+        co_glassBottle2[glass bottle]
+    end
+    subgraph completePackages[Complete Packages]
+        cp_example1[complete packaging]
+        cp_example2[complete packaging]
+    end
+    subgraph loads[Loads]
+        lo_example1[load]
+        lo_example2[load]
+    end
+    bm_limestone --> ma_glass1
+    bm_cullet --> ma_glass1
+    bm_sand --> ma_glass1
+    bm_sand --> ma_glass2
+    bm_sodaAsh --> ma_glass1
+    bm_sodaAsh --> ma_glass2
+    bm_boricOxide --> ma_glass2
+    ma_glass1 --> co_glassBottle1
+    ma_glass2 --> co_glassBottle2
+    co_glassBottle1 --> cp_example1
+    co_glassBottle2 --> cp_example2
+    cp_example1 --> lo_example1
+    cp_example2 --> lo_example2
+```
+## Creating a load
+Taken as a whole the cardboard, tape and glass are combined at various points to create a wine delivery. With the addition of cork and aluminium all the materials and components can be seen.
+``` mermaid
+flowchart LR
+    subgraph baseMaterials[Base Materials]
+        bm_cardboard[cardboard]
+        bm_sand[sand]
+        bm_sodaAsh[soda ash]
+        bm_limestone[limestone]
+        bm_cullet[cullet]
+        bm_aluminium[aluminium]
+        bm_cork[cork]
+        bm_cellulose[cellulose]
+        bm_adhesive[adhesive]
+    end
+    subgraph materials[Materials]
+        ma_cardboard[cardboard]
+        ma_glass[glass]
+        ma_cork[cork]
+        ma_aluminium[aluminium]
+        ma_tape[tape]
+    end
+    subgraph components[Components]
+        co_glassBottle[bottle]
+        co_corkCork[cork]
+        co_aluminiumCapsule[capsule]
+        co_cardboard[box]
+        co_tape[tape]
+    end
+    subgraph completePackages[Complete Packages]
+        cp_wineBottle[wine bottle]
+        cp_cardboardBox[wine box]
+    end
+    subgraph loads[Loads]
+        lo_wineDelivery[wine delivery]
+    end
+    bm_cardboard --> ma_cardboard
+    bm_cullet --> ma_glass
+    bm_sand --> ma_glass
+    bm_limestone --> ma_glass
+    bm_sodaAsh --> ma_glass
+    bm_cork --> ma_cork
+    bm_aluminium --> ma_aluminium
+    bm_cellulose --> ma_tape
+    bm_adhesive --> ma_tape
+    ma_cardboard --> co_cardboard
+    ma_glass --> co_glassBottle
+    ma_aluminium --> co_aluminiumCapsule
+    ma_cork --> co_corkCork
+    ma_tape --> co_tape
+    co_glassBottle --> cp_wineBottle
+    co_corkCork --> cp_wineBottle
+    co_aluminiumCapsule  --> cp_wineBottle
+    co_cardboard --> cp_cardboardBox
+    co_tape --> cp_cardboardBox
+    cp_cardboardBox --> lo_wineDelivery
+    cp_wineBottle --> lo_wineDelivery
+```
+## Within schema combinations
+The Open 3P standards allows further complexity when combining items within a schema. This is seen below where the two materials label and 'ssolvent free print substrate' are futher combined to create a 'printed label'.
+``` mermaid
+flowchart LR
+    subgraph baseMaterials[Base Materials]
+        bm_paper[paper]
+        bm_adhesive[adhesive]
+        bm_glassine[glassine]
+        bm_ink[solvent free ink]
+        bm_varnish[solvent free varnish]
+    end
+    subgraph materials[Materials]
+        ma_label[label]
+        ma_coating[solvent free print substrate]
+        ma_label2[printed label]
+    end
+    subgraph components[Components]
+        co_topLabel[branded front label]
+        co_bottomLabel[branded back label]
+        co_example[bottle]
+    end
+    subgraph completePackages[Complete Packages]
+        cp_example[complete package]
+    end
+    subgraph loads[Loads]
+        lo_example[load]
+    end
+    bm_paper --> ma_label
+    bm_adhesive --> ma_label
+    bm_glassine --> ma_label
+    bm_ink --> ma_coating
+    bm_varnish --> ma_coating
+    ma_label --> ma_label2
+    ma_coating --> ma_label2
+    ma_label2 --> co_topLabel
+    ma_label2 --> co_bottomLabel
+    co_topLabel --> cp_example
+    co_bottomLabel --> cp_example
+    co_example --> cp_example
+    cp_example --> lo_example
+```
+## Laminates
+Additionally base materials and materials can be layered in an ordered arrangement; known as lamination. In the example three base materials are layered together to create a laminate. Two of the materials are used twice within the material, with the third only being used the once.
+``` mermaid
+flowchart LR
+    subgraph baseMaterials[Base Materials]
+        bm_ep[ethylene-propylene]
+        bm_eva[ethylene-vinyl acetate]
+        bm_copolyester[copolyester]
+    end
+    subgraph materials[Materials]
+        ma_shrinkwrap[plastic laminate]
+    end
+    subgraph components[Components]
+        co_shrinkwrap[shrink wrap]
+    end
+    subgraph completePackages[Complete Packages]
+        cp_shrinkwrap[shrink wrap]
+    end
+    subgraph loads[Loads]
+        lo_example[load]
+    end
+    bm_ep -- layer 1 --> ma_shrinkwrap
+    bm_eva -- layer 2 --> ma_shrinkwrap
+    bm_copolyester -- layer 3 --> ma_shrinkwrap
+    bm_eva -- layer 4 --> ma_shrinkwrap
+    bm_ep -- layer 5 --> ma_shrinkwrap
+    ma_shrinkwrap --> co_shrinkwrap
+    co_shrinkwrap --> cp_shrinkwrap
+    cp_shrinkwrap --> lo_example
+```
+## Packaging Tier
+This final example shows how the above examples are combined to create a flow for the wine bottles, with the inclusion of tiers for the packaging at the load schema.
+``` mermaid
+flowchart LR
+    subgraph baseMaterials[Base Materials]
+        bm_cardboard[cardboard]
+        bm_sand[sand]
+        bm_sodaAsh[soda ash]
+        bm_limestone[limestone]
+        bm_cullet[cullet]
+        bm_aluminium[aluminium]
+        bm_cork[cork]
+        bm_cellulose[cellulose]
+        bm_adhesive[adhesive]
+        bm_paper[paper]
+        bm_adhesive2[adhesive]
+        bm_glassine[glassine]
+        bm_ink[solvent free ink]
+        bm_varnish[solvent free varnish]
+        bm_ep[ethylene-propylene]
+        bm_eva[ethylene-vinyl acetate]
+        bm_copolyester[copolyester]
+    end
+    subgraph materials[Materials]
+        ma_cardboard[cardboard]
+        ma_glass[glass]
+        ma_cork[cork]
+        ma_aluminium[aluminium]
+        ma_tape[tape]
+        ma_label[label]
+        ma_coating[solvent free print substrate]
+        ma_label2[printed label]
+        ma_shrinkwrap[plastic laminate]
+    end
+    subgraph components[Components]
+        co_glassBottle[bottle]
+        co_corkCork[cork]
+        co_aluminiumCapsule[capsule]
+        co_cardboard[box]
+        co_tape[tape]
+        co_topLabel[branded front label]
+        co_bottomLabel[branded back label]
+        co_shrinkwrap[shrink wrap]
+    end
+    subgraph completePackages[Complete Packages]
+        cp_wineBottle[wine bottle]
+        cp_cardboardBox[wine box]
+        cp_shrinkwrap[shrink wrap]
+    end
+    subgraph loads[Loads]
+        lo_wineDelivery[wine delivery]
+    end
+    bm_cardboard --> ma_cardboard
+    bm_cullet --> ma_glass
+    bm_sand --> ma_glass
+    bm_limestone --> ma_glass
+    bm_sodaAsh --> ma_glass
+    bm_cork --> ma_cork
+    bm_aluminium --> ma_aluminium
+    bm_cellulose --> ma_tape
+    bm_adhesive2 --> ma_tape
+    bm_paper --> ma_label
+    bm_adhesive --> ma_label
+    bm_glassine --> ma_label
+    bm_ink --> ma_coating
+    bm_varnish --> ma_coating
+    bm_ep -- layer 1 --> ma_shrinkwrap
+    bm_eva -- layer 2 --> ma_shrinkwrap
+    bm_copolyester -- layer 3 --> ma_shrinkwrap
+    bm_eva -- layer 4 --> ma_shrinkwrap
+    bm_ep -- layer 5 --> ma_shrinkwrap
+    ma_label --> ma_label2
+    ma_coating --> ma_label2
+    ma_label2 --> co_topLabel
+    ma_label2 --> co_bottomLabel
+    ma_cardboard --> co_cardboard
+    ma_glass --> co_glassBottle
+    ma_aluminium --> co_aluminiumCapsule
+    ma_cork --> co_corkCork
+    ma_tape --> co_tape
+    ma_shrinkwrap --> co_shrinkwrap
+    co_glassBottle --> cp_wineBottle
+    co_corkCork --> cp_wineBottle
+    co_aluminiumCapsule  --> cp_wineBottle
+    co_topLabel --> cp_wineBottle
+    co_bottomLabel --> cp_wineBottle
+    co_cardboard --> cp_cardboardBox
+    co_tape --> cp_cardboardBox
+    co_shrinkwrap --> cp_shrinkwrap
+    cp_cardboardBox -- Secondary --> lo_wineDelivery
+    cp_wineBottle -- Primary --> lo_wineDelivery
+    cp_shrinkwrap -- Transit --> lo_wineDelivery
+```
