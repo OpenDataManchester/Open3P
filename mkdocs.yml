@@ -46,7 +46,6 @@ nav:
     - Components: 3_Data_Specification/3_3_Components.md
     - Complete Packaging: 3_Data_Specification/3_4_Complete_Packaging.md
     - Multipack: 3_Data_Specification/3_5_Multipack.md
-    - Load Catalogue: 3_Data_Specification/3_6_Load_Catalogue.md
     - Load: 3_Data_Specification/3_7_Load.md
   - Controlled Lists:
     - Definition: 5_Controlled_Lists/5_000_Controlled_Lists.md
@@ -72,6 +71,7 @@ nav:
     - Component Constituents: 6_Relationship_Lists/6_002_Component_Constituents.md
     - Complete Packaging Constituents: 6_Relationship_Lists/6_003_Complete_Packaging_Constituents.md
     - Multipack Constituents: 6_Relationship_Lists/6_004_Multipack_Constituents.md
+    - Load Constituents: 6_Relationship_Lists/6_011_Load_Constituents.md
     - Certification Claims: 6_Relationship_Lists/6_005_Certification_Claims.md
     - Recyclability Claims: 6_Relationship_Lists/6_006_Recyclability_Claims.md
     - Component End of Life Routes: 6_Relationship_Lists/6_007_Component_End_of_Life_Routes.md

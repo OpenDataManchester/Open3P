@@ -5,8 +5,6 @@ description: The load constituents relationship list.
 
 # Load Constituents
 
-All the complete packaging from different levels (primary, secondary, transit etc.), and multipacks, put together to send to the final destination. Each row corresponds to a single packaging item.
-
 The loads constituents relationship list identifies the all the complete packaging from different levels (primary, secondary, transit etc.) and multipacks that are combined to create loads. This is only used in [load](../3_Data_Specification/3_7_Load.md).
 
 ## Table
@@ -23,8 +21,8 @@ The loads constituents relationship list identifies the all the complete packagi
 
 ``` mermaid
 erDiagram
-  COMPLETE_PACKAGING }o..o{ LOAD_CONSTITUENTS : within
-  MULTIPACKS }o..o{ LOAD_CONSTITUENTS : within
+  COMPLETE_PACKAGING }o..o{ LOAD_CONSTITUENTS : attributes
+  MULTIPACKS }o..o{ LOAD_CONSTITUENTS : attributes
   LOAD_CONSTITUENTS {
     loadConstituentsIdentifier String
     loadCombinationIdentifier String
@@ -33,8 +31,8 @@ erDiagram
     quantityInLoad Numeric
     level String
   }
-  LOAD_CONSTITUENTS }o--o{ LOAD : attributes
   LOAD_CONSTITUENTS }o--o{ LOAD : within
+  LOAD_CONSTITUENTS }o--o{ CONTROLLED_LISTS : attributes
   CONTROLLED_LISTS {
     level required
   }
