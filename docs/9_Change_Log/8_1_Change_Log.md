@@ -13,10 +13,15 @@ A document that contains all the changes made to the standard.
 ### Data fields
  - Added manufacturers to all core schemas
  - Added manufacturing country to complete packaging, multipack and load
+ - Removed componentContactWithProduct from Complete Packaging
+ - Added contactWithProduct to Complete Packaging Constituents
+
+### Documents
+- Updated homepage for v2.1
 
 ## September 29, 2023
 ### Documents
- - Reworked data formats page to include various wored examples
+ - Reworked data formats page to include various worked examples
 
 ## September 22, 2023
 ### Documents
