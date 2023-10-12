@@ -43,6 +43,8 @@ The complete packaging schema contains information regarding the complete packag
 |partOfMultipack|`required`|Boolean|Is the complete packaging part of a multipack? Answer as: `TRUE` for yes and `FALSE` for no.|
 |certification|`recommended`|Boolean|Does the complete packaging have a certificate (e.g. FSC, REACH, FSA etc.)? Answer as: `TRUE` for yes and `FALSE` for no.|
 |certificationClaims|`recommended`|List|The information regarding the certifications. The entries should be the [certification claims relationship list](../6_Relationship_Lists/6_005_Certification_Claims.md) identifiers.|
+|manufacturers|`recommended`|List|The information regarding the manufacturer(s). The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
+|manufacturedCountry|`recommended`|Numeric|The country the complete packaging was manufactured and/or combined in. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
 |updateDate|`required`|String|The date that the complete packaging was provided/last updated. Use the format `dd/mm/yyyy`.|
 |releaseDate|`recommended`|String|The date that the complete packaging will be available to use. Use the format `dd/mm/yyyy`.|
 |discontinueDate|`recommended`|String|The date that the complete packaging will no longer be available to use. Use the format `dd/mm/yyyy`.|
@@ -86,6 +88,8 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : within
     partOfMultipack Boolean
     certification Boolean
     certificationClaims List
+    manufacturers List
+    manufacturedCountry Numeric
     updateDate String
     releaseDate String
     discontinueDate String
@@ -106,6 +110,7 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : within
       completePackagingConstituentsIdentifier required
       recyclabilityClaims recommended
       certificationClaims recommended
+      organisations recommended
     }
 ```
 
@@ -171,6 +176,7 @@ Complete packaging should be provided as a separate csv file. The specification 
         "certificationClaims": [
             "eed87ac3-6e3e-45fb-af2c-dd0f64fdb597"
         ],
+        "manufacturers": [""],
         "manufacturedCountry": 826,
         "updateDate": "01/01/2023",
         "releaseDate": "01/01/2023",
