@@ -22,6 +22,8 @@ All the complete packaging from different levels (primary, secondary, transit et
 |destinationAddressCountry|`required`|String|The country of this load destination.|
 |destinationPostalCode|`required`|String|The postal code of this load destination.|
 |timesSent|`required`|Numeric|The number of times this load was sent to the destination during the specified time period.|
+|manufacturers|`recommended`|List|The information regarding the manufacturer(s). The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
+|manufacturedCountry|`recommended`|Numeric|The country the load was manufactured and/or combined. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
 |updateDate|`required`|String|The date that the load was provided/last updated. Use the format `dd/mm/yyyy`.|
 
 ## Diagram
@@ -41,8 +43,14 @@ LOAD_CATALOGUE }o..o{ LOAD : within
     destinationAddressCountry String
     destinationPostalCode String
     timesSent Numeric
+    manufacturers List
+    manufacturedCountry Numeric
     updateDate String
   }
+  LOAD }o--o{ RELATIONSHIP_LISTS : attributes
+  RELATIONSHIP_LISTS {
+      organisations recommended
+    }
 ```
 
 ## Template
@@ -71,6 +79,8 @@ Loads should be provided as a separate csv file. The specification of this csv f
       "destinationAddressCountry": "England",
       "destinationPostalCode": "XX00 0XX",
       "timesSent": "2",
+      "manufacturers": [""],
+      "manufacturedCountry": 826,
       "updateDate": "01/08/2022",
     }
     ```
