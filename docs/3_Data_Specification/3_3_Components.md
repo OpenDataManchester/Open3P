@@ -45,6 +45,7 @@ The components schema contains information regarding the individual components t
 |recyclabilityClaims|`recommended`|List|The information regarding this recyclability claims. The entries should be the [recyclability claims relationship list](../6_Relationship_Lists/6_006_Recyclability_Claims.md) identifiers.|
 |certification|`recommended`|Boolean|Does the component have a certificate (e.g. FSC, REACH, FSA etc.)? Answer as: `TRUE` for yes and `FALSE` for no.|
 |certificationClaims|`recommended`|List|The information regarding the certifications. The entries should be the [certification claims relationship list](../6_Relationship_Lists/6_005_Certification_Claims.md) identifiers.|
+|manufacturers|`recommended`|List|The information regarding the manufacturer(s). The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
 |manufacturedCountry|`recommended`|Numeric|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
 |updateDate|`required`|String|The date that the component was provided/last updated. Use the format `dd/mm/yyyy`.|
 |releaseDate|`recommended`|String|The date that the component will be available to use. Use the format `dd/mm/yyyy`.|
@@ -83,6 +84,7 @@ MATERIALS }o--o{ COMPONENTS : within
     opacity String
     loaned Boolean
     reuseSystems String
+    manufacturers List
     manufacturedCountry Numeric
     recycledContent Numeric
     recycledContentClaims List
@@ -116,6 +118,7 @@ MATERIALS }o--o{ COMPONENTS : within
     recycledContentClaims required
     recyclabilityClaims recommended
     certificationClaims recommended
+    organisations recommended
   }
 ```
 
@@ -182,6 +185,7 @@ Components should be provided as a separate csv file. The specification of this 
         "certificationClaims": [
             "eed87ac3-6e3e-45fb-af2c-dd0f64fdb597"
         ],
+        "manufacturers": [""],
         "manufacturedCountry": 372,
         "updateDate": "01/08/2022",
         "releaseDate": "01/08/2022",
