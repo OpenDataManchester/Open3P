@@ -19,6 +19,8 @@ The multipack schema contains information regarding the multipacks that are used
 |multipackConstituentsIdentifiers|`required`|List|The information regarding the consituents that are combined to create this multipack. The entries should be from the [Multipack Constituents Relationship List](../6_Relationship_Lists/6_004_Multipack_Constituents.md) identifier.|
 |tier|`recommended`|Integer|The tier associated with the multipack. The inner most tier denoted as 1, and the outermost tier is the biggest number.|
 |identicalQuantity|`required`|Numeric|Number of identical units for the unique complete packaging item or a component this row corresponds to.|
+|manufacturers|`recommended`|List|The information regarding the manufacturer(s). The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
+|manufacturedCountry|`recommended`|Numeric|The country the multipack was manufactured and/or combined. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
 |updateDate|`required`|String|The date that the multipack was provided/last updated. Use the format `dd/mm/yyyy`.|
 |releaseDate|`recommended`|String|The date that the component will be available to use. Use the format `dd/mm/yyyy`.|
 |discontinueDate|`recommended`|String|The date that the component will no longer be available to use. Use the format `dd/mm/yyyy`.|
@@ -38,6 +40,8 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : within
     multipackConstituentsIdentifiers List
     tier String
     identicalQuantity Numeric
+    manufacturers List
+    manufacturedCountry Numeric
     updateDate String
     releaseDate String
     discontinueDate String
@@ -48,6 +52,7 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : within
   COMPONENTS }o--o{ LOAD_CATALOGUE : within
       RELATIONSHIP_LISTS {
         multipackConstituentsIdentifier required
+        organisations recommended
     }
 ```
 
@@ -73,6 +78,8 @@ Multipack should be provided as a separate csv file. The specification of this c
       "packagingItems": "C29B4703-121C-7552-D905-FD5AB263D611",
       "tier": "1",
       "identicalQuantity": "4",
+      "manufacturers": [""],
+      "manufacturedCountry": 826,
       "updateDate": "01/08/2022",
       "releaseDate": "01/08/2022",
       "discontinueDate": "",
