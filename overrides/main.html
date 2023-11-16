@@ -1,9 +1,26 @@
-<!-- Announcement bar -->
+
 {% extends "base.html" %}
 
+<!--Stable version warning-->
 {% block outdated %}
   You're not viewing the stable version.
   <a href="{{ '../' ~ base_url }}"> 
     <strong>Click here to go to stable.</strong>
   </a>
+{% endblock %}
+
+<!-- Announcement bar -->
+{% block announce %}
+  <span class="twemoji">
+    {% include ".icons/fontawesome/solid/circle-exclamation.svg" %}
+  </span>
+  ATTENTION!
+  <span class="twemoji">
+    {% include ".icons/fontawesome/solid/circle-exclamation.svg" %}
+  </span>
+  While Open 3P is <strong>free and open</strong>, under the
+  <a rel="me" href="{{ '10_Licence/10_01_Licence' | url }}">
+    <strong>Apache License, Version 2.0</strong>
+  </a>
+  you are required to inform us if you are using it. Provide your contact details to let us know and to stay informed of updates to the standard.
 {% endblock %}
