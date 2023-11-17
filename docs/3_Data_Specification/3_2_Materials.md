@@ -16,7 +16,7 @@ The materials schema contains information regarding the materials that are used 
 |materialConstituents|`required`|List|The information regarding the consituents that are combined to create this material. The entries should be from the [Material Constituents Relationship List](../6_Relationship_Lists/6_001_Material_Constituents.md) identifier.|
 |combinationPurpose|`recommended`|String|Why is this material being used? Use the identifier of the function that this row relates to. The entry here should be drawn from the [Function Controlled List](../5_Controlled_Lists/5_004_Function.md).|
 |areaDensity|`recommended`|Numeric|The area density of the material. Where area density is the measure of how much mass is packed into a given area of a two-dimensional object. Provided in grams per square metre (gsm).|
-|areaDensityUnit|`recommended`|String|Either `gsm` or `m^2/kg` to describe the area unit of measure.|
+|areaDensityUnit|`recommended`|String|Either `gsm` or `m^2/kg` to describe the area density unit of measure.|
 |areaDensityTolerance|`recommended`|Numeric|The threshold of area density that the material can vary by. This is given as a +/- value.|
 |areaDensityToleranceType|`recommended`|String|Either `unit` or `percentage` based on the value provided in `areaDensityTolerance`. Where `unit` is equal to the value provided in `areaDensityUnit`.|
 |areaDensityDate|`recommended`|String|The date that the area density was last verified/measured. Use the format `dd/mm/yyyy`.|
