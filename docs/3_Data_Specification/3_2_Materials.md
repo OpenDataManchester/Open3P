@@ -296,6 +296,7 @@ Materials should be provided as a separate csv file. The specification of this c
 All measurements should be given using the metric system.
 
 - Weight: grams (g)
+- Area Density: grams per square metre (gsm)
 
 Numbers should be entered with a decimal place. Use the decimal / full stop / period character as a separator. Do not exceed 3 decimal places. When rounding, use convential rounding methods: for 5 and above round up, 4 and below round down. For example: volume = 0.67952 rounded to 0.68. 
 
