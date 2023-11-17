@@ -6,6 +6,10 @@ title: Latest Updates
 # Latest Updates
 A document that contains all the changes made to the standard.
 
+## November 17, 2023
+### Data fields
+ - Added `areaDensity`, `areaDensityUnit`, `areaDensityTolerance`, `areaDensityToleranceType`, `areaDensityDate` to Materials core schema.
+
 ## October 12, 2023
 ### Model
  - Added Organisations relationships list
