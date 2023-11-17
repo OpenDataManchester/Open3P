@@ -15,6 +15,10 @@ The materials schema contains information regarding the materials that are used 
 |externalIdentifiers|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the material in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
 |materialConstituents|`required`|List|The information regarding the consituents that are combined to create this material. The entries should be from the [Material Constituents Relationship List](../6_Relationship_Lists/6_001_Material_Constituents.md) identifier.|
 |combinationPurpose|`recommended`|String|Why is this material being used? Use the identifier of the function that this row relates to. The entry here should be drawn from the [Function Controlled List](../5_Controlled_Lists/5_004_Function.md).|
+|areaDensity|`recommended`|Numeric|The area density of the material. Where area density is the measure of how much mass is packed into a given area of a two-dimensional object. Provided in grams per square metre (gsm).|
+|areaDensityTolerance|`recommended`|Numeric|The threshold of area density that the material can vary by. This is given as a +/- value.|
+|areaDensityToleranceType|`recommended`|String|Either `gsm` or `percentage` based on the value provided in `areaDensityTolerance`.|
+|areaDensityDate|`recommended`|String|The date that the area density was last verified/measured. Use the format `dd/mm/yyyy`.|
 |certification|`recommended`|Boolean|Does the material have a certificate (e.g. FSC, REACH, FSA etc.)? Answer as: `TRUE` for yes and `FALSE` for no.|
 |certificationClaims|`recommended`|List|The information regarding the certification. The entries should be the [Certification Claims Relationship List](../6_Relationship_Lists/6_005_Certification_Claims.md) identifiers.|
 |manufacturers|`recommended`|List|The information regarding the manufacturer(s). The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
@@ -32,6 +36,10 @@ BASE_MATERIALS }o--o{ MATERIALS : within
     externalIdentifiers Dictionary
     materialConstituents List
     combinationPurpose String
+    areaDensity Numeric
+    areaDensityTolerance Numeric
+    areaDensityToleranceType String
+    areaDensityDate String
     certification Boolean
     certificationClaims List
     manufacturers List
@@ -70,6 +78,10 @@ Materials should be provided as a separate csv file. The specification of this c
         },
       "materialConstituents":["DCEE1F88-A83B-5BBC-D2D9-6A862B344977"],
       "combinationPurpose": "",
+      "areaDensity": "138",
+      "areaDensityTolerance": "1.3",
+      "areaDensityToleranceType": "percentage",
+      "areaDensityDate": "01/08/2022",
       "certification": "TRUE",
       "certificationClaims": ["1"],
       "manufacturers": [""],
@@ -259,6 +271,10 @@ Materials should be provided as a separate csv file. The specification of this c
         "category": "carton",
         "detailed": "Box or container used for transporting and storaging goods."
       },
+      "areaDensity": "543.5",
+      "areaDensityTolerance": "2",
+      "areaDensityToleranceType": "gsm",
+      "areaDensityDate": "01/08/2022",
       "certification": "FALSE",
       "certificationClaims": null,
       "manufacturers": [""],
