@@ -11,7 +11,7 @@ A data standard for the packaging value chain.
 
 ## Version
 
-Version 2.0 Published 2023-06-06
+Version 2.1 UNRELEASED
 
 ## Working with the Standard
 
@@ -21,7 +21,7 @@ The standard is open and free to use, copy and distribute. However, the standard
 
 1. [Start Here](./1_Start_Here/1_1_Introduction.md)
 2. [Data Formats](./2_Data_Formats/2_1_Data_Formats.md)
-3. [Data Specification](./3_Data_Specification/3_1_Base_Materials.md)
+3. [Core Schema](./3_Data_Specification/3_1_Base_Materials.md)
 4. [Identifiers](./4_Identifiers/4_1_Identifiers.md)
 5. [Controlled Lists](./5_Controlled_Lists/5_000_Controlled_Lists.md)
 6. [Relationship Lists](./6_Relationship_Lists/6_000_Relationship_Lists.md)

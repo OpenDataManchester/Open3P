@@ -18,7 +18,6 @@ The complete packaging schema contains information regarding the complete packag
 |completePackagingConstituentsIdentifier|`required`|List|The information regarding the consituents that are combined to create this complete packaging. The entries should be from the [Complete Packaging Constituents Relationship List](../6_Relationship_Lists/6_003_Complete_Packaging_Constituents.md) identifier.|
 |LOWcodeWOproduct|`recommended`|String|The list of waste code for **only** the complete packaging, by itself (excluding the product). LOW code is synonymous with European Waste Catalogue Code (EWC). For example: an empty bottle would have a LOWcode of `15 01 02`. Please use [Dsposal](https://dsposal.uk/browse/ewc){target=_blank} or [legislation.gov](https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made){target=_blank} to find the LOWcode. **Note**: The LOWcode can based on its combination with other components and the actual product contained in the complete packaging. Be sure to only include the complete packaging LOWcode and not the complete packaging with the product. If you cannot find the code or are uncertain please enter `Uncertain`.|
 |productType|`recommended`|String|Information about the product contained in the complete packaging. The entry here should be drawn from the [product type controlled list](../5_Controlled_Lists/5_012_Product_Type.md).|
-|componentContactWithProduct|`required`|List|What components (if any) come into direct contact with the product before purchased by a consumer? If none of the components come into contact with the product use `NA`.|
 |LOWcodeWproduct|`recommended`|String|The list of waste code for **everything** in the complete packaging. LOW code is synonymous with European Waste Catalogue Code (EWC). For example: an empty bottle would have a LOWcode of `15 01 02`. Please use [Dsposal](https://dsposal.uk/browse/ewc){target=_blank} or [legislation.gov](https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made){target=_blank} to find the LOWcode. **Note**: The LOWcode can based on its combination with other components and the actual product contained in the complete packaging. Be sure to include the complete packaging LOWcode with the product. If you cannot find the code or are uncertain please enter `Uncertain`.|
 |onTheGo|`required`|Boolean|Is the complete packaging often classed as packaging that will end up in street bins? Answer as: `TRUE` for yes and `FALSE` for no.|
 |householdWaste|`required`|Boolean|Is the complete packaging often classed as packaging that will end up in kerbside collections? Answer as: `TRUE` for yes and `FALSE` for no.|
@@ -43,6 +42,8 @@ The complete packaging schema contains information regarding the complete packag
 |partOfMultipack|`required`|Boolean|Is the complete packaging part of a multipack? Answer as: `TRUE` for yes and `FALSE` for no.|
 |certification|`recommended`|Boolean|Does the complete packaging have a certificate (e.g. FSC, REACH, FSA etc.)? Answer as: `TRUE` for yes and `FALSE` for no.|
 |certificationClaims|`recommended`|List|The information regarding the certifications. The entries should be the [certification claims relationship list](../6_Relationship_Lists/6_005_Certification_Claims.md) identifiers.|
+|manufacturers|`recommended`|List|The information regarding the manufacturer(s). The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
+|manufacturedCountry|`recommended`|Numeric|The country the complete packaging was manufactured and/or combined in. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
 |updateDate|`required`|String|The date that the complete packaging was provided/last updated. Use the format `dd/mm/yyyy`.|
 |releaseDate|`recommended`|String|The date that the complete packaging will be available to use. Use the format `dd/mm/yyyy`.|
 |discontinueDate|`recommended`|String|The date that the complete packaging will no longer be available to use. Use the format `dd/mm/yyyy`.|
@@ -61,7 +62,6 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : within
     completePackagingConstituentsIdentifier List
     LOWcodeWOproduct String
     productType String
-    componentContactWithProduct List
     LOWcodeWproduct String
     onTheGo Boolean
     householdWaste Boolean
@@ -86,6 +86,8 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : within
     partOfMultipack Boolean
     certification Boolean
     certificationClaims List
+    manufacturers List
+    manufacturedCountry Numeric
     updateDate String
     releaseDate String
     discontinueDate String
@@ -106,6 +108,7 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : within
       completePackagingConstituentsIdentifier required
       recyclabilityClaims recommended
       certificationClaims recommended
+      organisations recommended
     }
 ```
 
@@ -136,9 +139,6 @@ Complete packaging should be provided as a separate csv file. The specification 
         ],
         "LOWcodeWOproduct": "15 01 06",
         "productType": "cp-product-type-0001",
-        "componentContactWithProduct": [
-            "9F459508-E365-0B9F-E3BB-FF4A7AED481B", "7197de37-8b77-4032-b0fd-84f27bae97be"
-        ],
         "LOWcodeWproduct": "20 01 08",
         "onTheGo": false,
         "householdWaste": true,
@@ -171,6 +171,7 @@ Complete packaging should be provided as a separate csv file. The specification 
         "certificationClaims": [
             "eed87ac3-6e3e-45fb-af2c-dd0f64fdb597"
         ],
+        "manufacturers": [""],
         "manufacturedCountry": 826,
         "updateDate": "01/01/2023",
         "releaseDate": "01/01/2023",

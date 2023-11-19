@@ -6,9 +6,28 @@ title: Latest Updates
 # Latest Updates
 A document that contains all the changes made to the standard.
 
+## November 17, 2023
+### Data fields
+ - Added `areaDensity`, `areaDensityUnit`, `areaDensityTolerance`, `areaDensityToleranceType`, `areaDensityDate` to Materials core schema.
+
+## October 12, 2023
+### Model
+ - Added Organisations relationships list
+ - Removed Load Catalogue
+ - Added Load Consitutuents relationship list  
+
+### Data fields
+ - Added manufacturers to all core schemas
+ - Added manufacturing country to complete packaging, multipack and load
+ - Removed componentContactWithProduct from Complete Packaging
+ - Added contactWithProduct to Complete Packaging Constituents
+
+### Documents
+- Updated homepage for v2.1
+
 ## September 29, 2023
 ### Documents
- - Reworked data formats page to include various wored examples
+ - Reworked data formats page to include various worked examples
 
 ## September 22, 2023
 ### Documents

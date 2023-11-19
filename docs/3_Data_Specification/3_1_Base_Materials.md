@@ -17,6 +17,7 @@ The base materials schema contains information regarding the core materials. The
 |externalIdentifiers|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the base material in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
 |certification|`recommended`|Boolean|Does the base material have a certificate (e.g. FSC, REACH, FSA etc.)? Answer as: `TRUE` for yes and `FALSE` for no.|
 |certificationClaims|`recommended`|List|The information regarding the certification. The entries should be the [Certification Claims Relationship List](../6_Relationship_Lists/6_005_Certification_Claims.md) identifiers.|
+|manufacturers|`recommended`|List|The information regarding the manufacturer(s). The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
 |manufacturedCountry|`recommended`|Numeric|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
 |updateDate|`required`|String|The date that the base material was provided/last updated. Use the format `dd/mm/yyyy`.|
 
@@ -32,6 +33,7 @@ erDiagram
     externalIdentifiers Dictionary
     certification Boolean
     certificationClaims List
+    manufacturers List
     manufacturedCountry Numeric
     updateDate String
   }
@@ -42,6 +44,7 @@ erDiagram
     materialType recommended }
       RELATIONSHIP_LISTS {
     certificationClaims recommended
+    organisations recommended
       }
   }
 ```
@@ -69,6 +72,7 @@ Base materials should be provided as a separate csv file. The specification of t
       "certification": "TRUE",
       "certificationClaims": ["1","35"],
       "certificationDate": "01/08/2022",
+      "manufacturers": [""],
       "manufacturedCountry": 724,
       "updateDate": "01/08/2022",
     }
@@ -99,6 +103,7 @@ Base materials should be provided as a separate csv file. The specification of t
         },
         "certificationDate": "01/08/2022",
       }],
+      "manufacturers": [""],
       "manufacturedCountry": {
         "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
         "Numeric": 826
