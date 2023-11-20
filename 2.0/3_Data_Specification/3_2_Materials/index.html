@@ -1,4 +1,4 @@
-<!-- Announcement bar -->
+
 
 <!doctype html>
 <html lang="en" class="no-js">
@@ -453,8 +453,6 @@
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -615,20 +613,6 @@
     <li class="md-nav__item">
       <a href="../3_5_Multipack/" class="md-nav__link">
         Multipack
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../3_6_Load_Catalogue/" class="md-nav__link">
-        Load Catalogue
       </a>
     </li>
   
@@ -1001,6 +985,10 @@
         
           
         
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -1091,6 +1079,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../6_Relationship_Lists/6_011_Load_Constituents/" class="md-nav__link">
+        Load Constituents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../6_Relationship_Lists/6_005_Certification_Claims/" class="md-nav__link">
         Certification Claims
       </a>
@@ -1149,6 +1151,20 @@
     <li class="md-nav__item">
       <a href="../../6_Relationship_Lists/6_009_Recycled_Content_Claims/" class="md-nav__link">
         Recycled Content Claims
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6_Relationship_Lists/6_010_Organisations/" class="md-nav__link">
+        Organisations
       </a>
     </li>
   
@@ -1280,6 +1296,36 @@
 <td align="left">Why is this material being used? Use the identifier of the function that this row relates to. The entry here should be drawn from the <a href="../../5_Controlled_Lists/5_004_Function/">Function Controlled List</a>.</td>
 </tr>
 <tr>
+<td align="left">areaDensity</td>
+<td align="left"><code>recommended</code></td>
+<td align="left">Numeric</td>
+<td align="left">The area density of the material. Where area density is the measure of how much mass is packed into a given area of a two-dimensional object. Provided in grams per square metre (gsm).</td>
+</tr>
+<tr>
+<td align="left">areaDensityUnit</td>
+<td align="left"><code>recommended</code></td>
+<td align="left">String</td>
+<td align="left">Either <code>gsm</code> or <code>m^2/kg</code> to describe the area density unit of measure.</td>
+</tr>
+<tr>
+<td align="left">areaDensityTolerance</td>
+<td align="left"><code>recommended</code></td>
+<td align="left">Numeric</td>
+<td align="left">The threshold of area density that the material can vary by. This is given as a +/- value.</td>
+</tr>
+<tr>
+<td align="left">areaDensityToleranceType</td>
+<td align="left"><code>recommended</code></td>
+<td align="left">String</td>
+<td align="left">Either <code>unit</code> or <code>percentage</code> based on the value provided in <code>areaDensityTolerance</code>. Where <code>unit</code> is equal to the value provided in <code>areaDensityUnit</code>.</td>
+</tr>
+<tr>
+<td align="left">areaDensityDate</td>
+<td align="left"><code>recommended</code></td>
+<td align="left">String</td>
+<td align="left">The date that the area density was last verified/measured. Use the format <code>dd/mm/yyyy</code>.</td>
+</tr>
+<tr>
 <td align="left">certification</td>
 <td align="left"><code>recommended</code></td>
 <td align="left">Boolean</td>
@@ -1290,6 +1336,12 @@
 <td align="left"><code>recommended</code></td>
 <td align="left">List</td>
 <td align="left">The information regarding the certification. The entries should be the <a href="../../6_Relationship_Lists/6_005_Certification_Claims/">Certification Claims Relationship List</a> identifiers.</td>
+</tr>
+<tr>
+<td align="left">manufacturers</td>
+<td align="left"><code>recommended</code></td>
+<td align="left">List</td>
+<td align="left">The information regarding the manufacturer(s). The entries should be the <a href="../../6_Relationship_Lists/6_010_Organisations/">Organisations Relationship List</a> identifiers.</td>
 </tr>
 <tr>
 <td align="left">manufacturedCountry</td>
@@ -1314,8 +1366,14 @@ BASE_MATERIALS }o--o{ MATERIALS : within
     externalIdentifiers Dictionary
     materialConstituents List
     combinationPurpose String
+    areaDensity Numeric
+    areaDensityUnit String
+    areaDensityTolerance Numeric
+    areaDensityToleranceType String
+    areaDensityDate String
     certification Boolean
     certificationClaims List
+    manufacturers List
     manufacturedCountry Numeric
     updateDate String
   }
@@ -1328,6 +1386,7 @@ BASE_MATERIALS }o--o{ MATERIALS : within
         RELATIONSHIP_LISTS {
     materialConstituents required
     certificationClaims recommended
+    organisations recommended
       }</code></pre>
 <h2 id="template">Template<a class="headerlink" href="#template" title="Permanent link">&para;</a></h2>
 <p>Materials should be provided as a separate csv file. The specification of this csv file is as follows:</p>
@@ -1349,7 +1408,13 @@ BASE_MATERIALS }o--o{ MATERIALS : within
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="mi">--</span><span class="err">Food</span><span class="w"> </span><span class="err">grade</span><span class="w"> </span><span class="err">sy</span><span class="kc">nt</span><span class="err">he</span><span class="kc">t</span><span class="err">ic</span><span class="w"> </span><span class="err">polye</span><span class="kc">t</span><span class="err">hyle</span><span class="kc">ne</span><span class="w"> </span><span class="kc">tere</span><span class="err">ph</span><span class="kc">t</span><span class="err">hala</span><span class="kc">te</span><span class="w"> </span><span class="err">(PET)</span><span class="w"> </span><span class="err">made</span><span class="w"> </span><span class="err">i</span><span class="kc">n</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">UK.</span><span class="w"> </span><span class="err">O</span><span class="kc">nl</span><span class="err">y</span><span class="w"> </span><span class="err">o</span><span class="kc">ne</span><span class="w"> </span><span class="err">base</span><span class="w"> </span><span class="err">ma</span><span class="kc">ter</span><span class="err">ial.</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="mi">--</span><span class="err">Food</span><span class="w"> </span><span class="err">grade</span><span class="w"> </span><span class="err">sy</span><span class="kc">nt</span><span class="err">he</span><span class="kc">t</span><span class="err">ic</span><span class="w"> </span><span class="err">polye</span><span class="kc">t</span><span class="err">hyle</span><span class="kc">ne</span><span class="w"> </span><span class="kc">tere</span><span class="err">ph</span><span class="kc">t</span><span class="err">hala</span><span class="kc">te</span><span class="w"> </span><span class="err">(PET)</span><span class="w"> </span><span class="err">made</span><span class="w"> </span><span class="err">i</span><span class="kc">n</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">UK.</span><span class="w"> </span><span class="err">O</span><span class="kc">nl</span><span class="err">y</span><span class="w"> </span><span class="err">o</span><span class="kc">ne</span><span class="w"> </span><span class="err">base</span><span class="w"> </span><span class="err">ma</span><span class="kc">ter</span><span class="err">ial.</span>
 <span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DCEE1F88-A83B-5BBC-D2D9-6A862B344977&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;materialName&quot;</span><span class="p">:</span><span class="s2">&quot;PET&quot;</span><span class="p">,</span>
@@ -1358,8 +1423,14 @@ BASE_MATERIALS }o--o{ MATERIALS : within
 <span class="w">    </span><span class="p">},</span>
 <span class="w">  </span><span class="nt">&quot;materialConstituents&quot;</span><span class="p">:[</span><span class="s2">&quot;DCEE1F88-A83B-5BBC-D2D9-6A862B344977&quot;</span><span class="p">],</span>
 <span class="w">  </span><span class="nt">&quot;combinationPurpose&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;areaDensity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;138&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;areaDensityUnit&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;gsm&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;areaDensityTolerance&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3.3&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;areaDensityToleranceType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;percentage&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;areaDensityDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/08/2022&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TRUE&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;certificationClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
 <span class="w">  </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">826</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/08/2022&quot;</span><span class="p">,</span>
 <span class="p">}</span>
@@ -1548,7 +1619,17 @@ BASE_MATERIALS }o--o{ MATERIALS : within
 <span class="normal">180</span>
 <span class="normal">181</span>
 <span class="normal">182</span>
-<span class="normal">183</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="mi">--</span><span class="err">Fibre</span><span class="w"> </span><span class="err">based</span><span class="w"> </span><span class="err">composi</span><span class="kc">te</span><span class="w"> </span><span class="err">ma</span><span class="kc">ter</span><span class="err">ial</span><span class="w"> </span><span class="kc">t</span><span class="err">o</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">used</span><span class="w"> </span><span class="kc">f</span><span class="err">or</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">car</span><span class="kc">t</span><span class="err">o</span><span class="kc">n</span><span class="w"> </span><span class="mi">-</span><span class="w"> </span><span class="err">semi</span><span class="w"> </span><span class="err">verbose</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="mi">--</span><span class="err">Fibre</span><span class="w"> </span><span class="err">based</span><span class="w"> </span><span class="err">composi</span><span class="kc">te</span><span class="w"> </span><span class="err">ma</span><span class="kc">ter</span><span class="err">ial</span><span class="w"> </span><span class="kc">t</span><span class="err">o</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">used</span><span class="w"> </span><span class="kc">f</span><span class="err">or</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">car</span><span class="kc">t</span><span class="err">o</span><span class="kc">n</span><span class="w"> </span><span class="mi">-</span><span class="w"> </span><span class="err">semi</span><span class="w"> </span><span class="err">verbose</span>
 <span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;f87b9bb3-f141-41cf-986e-e3a32b223f09&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;materialName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Classic Carton Board - EVOH&quot;</span><span class="p">,</span>
@@ -1573,6 +1654,7 @@ BASE_MATERIALS }o--o{ MATERIALS : within
 <span class="w">          </span><span class="p">},</span>
 <span class="w">        </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FALSE&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;certificationClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
 <span class="w">        </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">          </span><span class="nt">&quot;Country&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;United Kingdom of Great Britain and Northern Ireland (the)&quot;</span><span class="p">,</span>
 <span class="w">          </span><span class="nt">&quot;Numeric&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">826</span>
@@ -1616,6 +1698,7 @@ BASE_MATERIALS }o--o{ MATERIALS : within
 <span class="w">          </span><span class="p">},</span>
 <span class="w">        </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FALSE&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;certificationClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
 <span class="w">        </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">          </span><span class="nt">&quot;Country&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;United Kingdom of Great Britain and Northern Ireland (the)&quot;</span><span class="p">,</span>
 <span class="w">          </span><span class="nt">&quot;Numeric&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">826</span>
@@ -1659,6 +1742,7 @@ BASE_MATERIALS }o--o{ MATERIALS : within
 <span class="w">          </span><span class="p">},</span>
 <span class="w">        </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FALSE&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;certificationClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
 <span class="w">        </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">          </span><span class="nt">&quot;Country&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;United Kingdom of Great Britain and Northern Ireland (the)&quot;</span><span class="p">,</span>
 <span class="w">          </span><span class="nt">&quot;Numeric&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">826</span>
@@ -1702,6 +1786,7 @@ BASE_MATERIALS }o--o{ MATERIALS : within
 <span class="w">          </span><span class="p">},</span>
 <span class="w">        </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FALSE&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;certificationClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
 <span class="w">        </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">          </span><span class="nt">&quot;Country&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;United Kingdom of Great Britain and Northern Ireland (the)&quot;</span><span class="p">,</span>
 <span class="w">          </span><span class="nt">&quot;Numeric&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">826</span>
@@ -1723,8 +1808,14 @@ BASE_MATERIALS }o--o{ MATERIALS : within
 <span class="w">    </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;carton&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;detailed&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Box or container used for transporting and storaging goods.&quot;</span>
 <span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;areaDensity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;543.5&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;areaDensity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;gsm&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;areaDensityTolerance&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;6&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;areaDensityToleranceType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;unit&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;areaDensityDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/08/2022&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FALSE&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;certificationClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
 <span class="w">  </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;Country&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;United Kingdom of Great Britain and Northern Ireland (the)&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;Numeric&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">826</span>
@@ -1745,6 +1836,7 @@ BASE_MATERIALS }o--o{ MATERIALS : within
 <p>All measurements should be given using the metric system.</p>
 <ul>
 <li>Weight: grams (g)</li>
+<li>Area Density: grams per square metre (gsm) or square metres per kilogram (m^2/kg)</li>
 </ul>
 <p>Numbers should be entered with a decimal place. Use the decimal / full stop / period character as a separator. Do not exceed 3 decimal places. When rounding, use convential rounding methods: for 5 and above round up, 4 and below round down. For example: volume = 0.67952 rounded to 0.68. </p>
 <p><strong>Important</strong>: When converting between systems of measurement, perform the conversion first and then apply the convential rounding. This will give more accuracy and consistency.</p>

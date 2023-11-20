@@ -1,4 +1,4 @@
-<!-- Announcement bar -->
+
 
 <!doctype html>
 <html lang="en" class="no-js">
@@ -15,7 +15,7 @@
         <link rel="prev" href="../3_4_Complete_Packaging/">
       
       
-        <link rel="next" href="../3_6_Load_Catalogue/">
+        <link rel="next" href="../3_7_Load/">
       
       <link rel="icon" href="../../img/favicon-192.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
@@ -453,8 +453,6 @@
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -596,20 +594,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../3_6_Load_Catalogue/" class="md-nav__link">
-        Load Catalogue
-      </a>
     </li>
   
 
@@ -981,6 +965,10 @@
         
           
         
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -1071,6 +1059,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../6_Relationship_Lists/6_011_Load_Constituents/" class="md-nav__link">
+        Load Constituents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../6_Relationship_Lists/6_005_Certification_Claims/" class="md-nav__link">
         Certification Claims
       </a>
@@ -1129,6 +1131,20 @@
     <li class="md-nav__item">
       <a href="../../6_Relationship_Lists/6_009_Recycled_Content_Claims/" class="md-nav__link">
         Recycled Content Claims
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6_Relationship_Lists/6_010_Organisations/" class="md-nav__link">
+        Organisations
       </a>
     </li>
   
@@ -1273,6 +1289,18 @@
 <td align="left">Number of identical units for the unique complete packaging item or a component this row corresponds to.</td>
 </tr>
 <tr>
+<td align="left">manufacturers</td>
+<td align="left"><code>recommended</code></td>
+<td align="left">List</td>
+<td align="left">The information regarding the manufacturer(s). The entries should be the <a href="../../6_Relationship_Lists/6_010_Organisations/">Organisations Relationship List</a> identifiers.</td>
+</tr>
+<tr>
+<td align="left">manufacturedCountry</td>
+<td align="left"><code>recommended</code></td>
+<td align="left">Numeric</td>
+<td align="left">The country the multipack was manufactured and/or combined. Use the country numeric <a href="https://www.iban.com/country-codes" target="_blank">ISO codes</a> as described in the ISO 3166 international standard.</td>
+</tr>
+<tr>
 <td align="left">updateDate</td>
 <td align="left"><code>required</code></td>
 <td align="left">String</td>
@@ -1305,6 +1333,8 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : within
     multipackConstituentsIdentifiers List
     tier String
     identicalQuantity Numeric
+    manufacturers List
+    manufacturedCountry Numeric
     updateDate String
     releaseDate String
     discontinueDate String
@@ -1315,6 +1345,7 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : within
   COMPONENTS }o--o{ LOAD_CATALOGUE : within
       RELATIONSHIP_LISTS {
         multipackConstituentsIdentifier required
+        organisations recommended
     }</code></pre>
 <h2 id="template">Template<a class="headerlink" href="#template" title="Permanent link">&para;</a></h2>
 <p>Multipack should be provided as a separate csv file. The specification of this csv file is as follows:</p>
@@ -1337,7 +1368,9 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : within
 <span class="normal">12</span>
 <span class="normal">13</span>
 <span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;B9574E9A-A561-BCA6-0E36-448A2E46B2BF&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4 pack of guacamole dip&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4 tubs of guacamole that are sold together. Not to be sold seperately.&quot;</span><span class="p">,</span>
@@ -1348,6 +1381,8 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : within
 <span class="w">  </span><span class="nt">&quot;packagingItems&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C29B4703-121C-7552-D905-FD5AB263D611&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;tier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;identicalQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">826</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/08/2022&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;releaseDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/08/2022&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;discontinueDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
@@ -1403,13 +1438,13 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : within
         
         
           
-          <a href="../3_6_Load_Catalogue/" class="md-footer__link md-footer__link--next" aria-label="Next: Load Catalogue" rel="next">
+          <a href="../3_7_Load/" class="md-footer__link md-footer__link--next" aria-label="Next: Load" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Load Catalogue
+                Load
               </div>
             </div>
             <div class="md-footer__button md-icon">
