@@ -30,8 +30,8 @@ erDiagram
     recyclabilityIssueDate String
   }
   RECYCLABILITY_CLAIMS }o--o{ CONTROLLED_LISTS : attributes
-      CONTROLLED_LISTS {
-    recyclabilitySource required }
+  CONTROLLED_LISTS {
+    recyclabilitySource required 
   }
 ```
 
