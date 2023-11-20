@@ -39,7 +39,8 @@ erDiagram
   BASE_MATERIALS }o--o{ MATERIALS : within
   BASE_MATERIALS }o..o{ RELATIONSHIP_LISTS : attributes
       CONTROLLED_LISTS {
-    materialType recommended }
+    materialType recommended 
+    }
       RELATIONSHIP_LISTS {
     certificationClaims recommended
       }
