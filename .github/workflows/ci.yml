@@ -14,7 +14,7 @@ jobs:
         with:
           python-version: 3.9
           cache: "pip"
-      - run: pip install scikit-build     
+      - run: pip install scikit-build   
       - run: pip install -r requirements.txt
       - run: git config user.name github-actions 
       - run: git config user.email github-actions@github.com 
