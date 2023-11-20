@@ -33,8 +33,8 @@ erDiagram
     certificationIssueDate String
   }
   CERTIFICATION_CLAIMS }o--o{ CONTROLLED_LISTS : attributes
-      CONTROLLED_LISTS {
-    certificationSource required }
+  CONTROLLED_LISTS {
+    certificationSource required 
   }
 ```
 

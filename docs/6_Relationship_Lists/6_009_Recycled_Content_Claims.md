@@ -28,8 +28,8 @@ erDiagram
     recycledContentIssueDate String
   }
   RECYCLED_CONTENT_CLAIMS }o--o{ CONTROLLED_LISTS : attributes
-      CONTROLLED_LISTS {
-    recycledContentEvidenceType required }
+  CONTROLLED_LISTS {
+    recycledContentEvidenceType required
   }
 ```
 
