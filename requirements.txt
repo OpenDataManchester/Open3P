@@ -1,4 +1,4 @@
 mermaid==0.3.2
 mike==1.1.2
-mkdocs==1.4.2
-mkdocs-material==8.3.9
+mkdocs==1.4.3
+mkdocs-material==9.1.18
