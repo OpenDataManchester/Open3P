@@ -52,7 +52,7 @@ The complete packaging schema contains information regarding the complete packag
 
 ``` mermaid
 erDiagram
-COMPONENTS }o--o{ COMPLETE_PACKAGING : within
+COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
   COMPLETE_PACKAGING {
     identifier String
     name String
@@ -94,18 +94,17 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : within
   }
   COMPLETE_PACKAGING }o..o{ CONTROLLED_LISTS : attributes
   COMPLETE_PACKAGING }O..O{ RELATIONSHIP_LISTS : attributes
-  COMPLETE_PACKAGING }o..o{ MULTIPACK : within
-  COMPONENTS }o..o{ MULTIPACK : within
-  COMPLETE_PACKAGING }o..o{ LOAD_CATALOGUE : within
-  MULTIPACK }o..o{ LOAD_CATALOGUE : within
-  COMPONENTS }o..o{ LOAD_CATALOGUE : within
+  COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
+  COMPONENTS }o..o{ MULTIPACK : multipack_constituents
+  COMPLETE_PACKAGING }o..o{ LOADS : load_constituents
+  MULTIPACK }o..o{ LOADS : load_constituents
+  COMPONENTS }o..o{ LOADS : load_constituents
       CONTROLLED_LISTS {
       productType recommended
       depositReturnScheme recommended
     }
     RELATIONSHIP_LISTS {
       completePackagingEndOfLifeRoutes required
-      completePackagingConstituentsIdentifier required
       recyclabilityClaims recommended
       certificationClaims recommended
       organisations recommended
