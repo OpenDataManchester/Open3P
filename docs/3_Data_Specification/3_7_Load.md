@@ -1,11 +1,13 @@
 ---
-title: Load
-description: The load is the items what are delivered to a location within Open 3P.
+title: Loads
+description: The loads contains items what are delivered to a location within Open 3P.
 ---
 
-# Load
+# Loads
 
 All the complete packaging from different levels (primary, secondary, transit etc.), including multipacks, put together to send to the final destination. Each row corresponds a unique complete packaging (or multipack) item sent to a specific location during a specific time period.
+
+Note that all core entities can be incorporated into loads. This is to faciliate the interface between one organisastion's product is another organisation's packaging item.
 
 ## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|
@@ -30,8 +32,15 @@ All the complete packaging from different levels (primary, secondary, transit et
 
 ``` mermaid
 erDiagram
-LOAD_CATALOGUE }o..o{ LOAD : within
-  LOAD {
+BASE_MATERIALS }o..o{ LOADS : load_constituents
+MATERIALS }o..o{ LOADS : load_constituents
+COMPLETE_PACKAGING }o..o{ LOADS : load_constituents
+COMPONENTS }o..o{ LOADS : load_constituents
+MULTIPACK }o..o{ LOADS : load_constituents
+COMPONENTS }o..o{ MULTIPACK : multipack_constituents
+COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
+COMPONENTS }o..o{ COMPLETE_PACKAGING : complete_packaging_constituents
+  LOADS {
     identifier String
     name numeric
     description String
@@ -47,7 +56,7 @@ LOAD_CATALOGUE }o..o{ LOAD : within
     manufacturedCountry Numeric
     updateDate String
   }
-  LOAD }o--o{ RELATIONSHIP_LISTS : attributes
+  LOADS }o--o{ RELATIONSHIP_LISTS : attributes
   RELATIONSHIP_LISTS {
       organisations recommended
     }
