@@ -46,7 +46,7 @@ nav:
     - Components: 3_Data_Specification/3_3_Components.md
     - Complete Packaging: 3_Data_Specification/3_4_Complete_Packaging.md
     - Multipack: 3_Data_Specification/3_5_Multipack.md
-    - Load: 3_Data_Specification/3_7_Load.md
+    - Loads: 3_Data_Specification/3_7_Load.md
   - Controlled Lists:
     - Definition: 5_Controlled_Lists/5_000_Controlled_Lists.md
     - Material Type: 5_Controlled_Lists/5_001_Material_Type.md
