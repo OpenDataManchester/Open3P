@@ -6,6 +6,11 @@ title: Latest Updates
 # Latest Updates
 A document that contains all the changes made to the standard.
 
+## November 23, 2023
+### Documents
+ - Reworked data diagrams to show the constituents lists as the edges between the tables.
+ - Updated data diagrams to remove obsolete `Load_Catalogue`.
+
 ## November 17, 2023
 ### Data fields
  - Added `areaDensity`, `areaDensityUnit`, `areaDensityTolerance`, `areaDensityToleranceType`, `areaDensityDate` to Materials core schema.
