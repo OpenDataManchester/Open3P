@@ -1187,10 +1187,11 @@
   COMPONENTS }o--o{ COMPLETE_PACKAGING : within
   COMPLETE_PACKAGING }o..o{ MULTIPACK : within
   COMPONENTS }o..o{ MULTIPACK : within
-  COMPLETE_PACKAGING }o..o{ LOAD_CATALOGUE : within
-  MULTIPACK }o..o{ LOAD_CATALOGUE : within
-  COMPONENTS }o..o{ LOAD_CATALOGUE : within
-  LOAD_CATALOGUE }o--o{ LOAD : within</code></pre>
+  BASE_MATERIALS }o--o{ LOADS : within
+  MATERIALS }o--o{ LOADS : within
+  COMPLETE_PACKAGING }o..o{ LOADS : within
+  MULTIPACK }o..o{ LOADS : within
+  COMPONENTS }o..o{ LOADS : within</code></pre>
 
 
 
