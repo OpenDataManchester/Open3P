@@ -30,7 +30,7 @@ The materials schema contains information regarding the materials that are used 
 
 ``` mermaid
 erDiagram
-BASE_MATERIALS }o--o{ MATERIALS : within
+BASE_MATERIALS }o--o{ MATERIALS : material_constituents
   MATERIALS {
     identifier String
     materialName String
@@ -49,13 +49,12 @@ BASE_MATERIALS }o--o{ MATERIALS : within
     updateDate String
   }
   MATERIALS }o..o{ CONTROLLED_LISTS : attributes
-  MATERIALS }o--o{ COMPONENTS : within
+  MATERIALS }o--o{ COMPONENTS : component_constituents
   MATERIALS }o..o{ RELATIONSHIP_LISTS : attributes
         CONTROLLED_LISTS {
     function recommended
     }
         RELATIONSHIP_LISTS {
-    materialConstituents required
     certificationClaims recommended
     organisations recommended
       }
