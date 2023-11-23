@@ -7,7 +7,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="The load is the items what are delivered to a location within Open 3P.">
+        <meta name="description" content="The loads contains items what are delivered to a location within Open 3P.">
       
       
       
@@ -22,7 +22,7 @@
     
     
       
-        <title>Load - Open3P</title>
+        <title>LoadS - Open3P</title>
       
     
     
@@ -146,7 +146,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Load
+              LoadS
             
           </span>
         </div>
@@ -1339,8 +1339,12 @@
 </table>
 <h2 id="diagram">Diagram<a class="headerlink" href="#diagram" title="Permanent link">&para;</a></h2>
 <pre class="mermaid"><code>erDiagram
-LOAD_CATALOGUE }o..o{ LOAD : within
-  LOAD {
+BASE_MATERIALS }o..o{ LOADS : load_constituents
+MATERIALS }o..o{ LOADS : load_constituents
+COMPLETE_PACKAGING }o..o{ LOADS : load_constituents
+MULTIPACK }o..o{ LOADS : load_constituents
+COMPONENTS }o..o{ LOADS : load_constituents
+  LOADS {
     identifier String
     name numeric
     description String
@@ -1356,7 +1360,7 @@ LOAD_CATALOGUE }o..o{ LOAD : within
     manufacturedCountry Numeric
     updateDate String
   }
-  LOAD }o--o{ RELATIONSHIP_LISTS : attributes
+  LOADS }o--o{ RELATIONSHIP_LISTS : attributes
   RELATIONSHIP_LISTS {
       organisations recommended
     }</code></pre>
