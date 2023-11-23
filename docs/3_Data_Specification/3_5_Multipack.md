@@ -29,9 +29,9 @@ The multipack schema contains information regarding the multipacks that are used
 
 ``` mermaid
 erDiagram
-COMPONENTS }o..o{ MULTIPACK : within
-COMPONENTS }o..o{ COMPLETE_PACKAGING : within
-COMPLETE_PACKAGING }o..o{ MULTIPACK : within
+COMPONENTS }o..o{ MULTIPACK : multipack_constituents
+COMPONENTS }o..o{ COMPLETE_PACKAGING : complete_packaging_constituents
+COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
   MULTIPACK {
     identifier String
     name String
@@ -47,11 +47,10 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : within
     discontinueDate String
   }
   MULTIPACK }o--o{ RELATIONSHIP_LISTS : attributes
-  COMPLETE_PACKAGING }o..o{ LOAD_CATALOGUE : within
-  MULTIPACK }o..o{ LOAD_CATALOGUE : within
-  COMPONENTS }o--o{ LOAD_CATALOGUE : within
+  COMPLETE_PACKAGING }o..o{ LOADS : load_constituents
+  MULTIPACK }o..o{ LOADS : load_constituents
+  COMPONENTS }o--o{ LOADS : load_constituents
       RELATIONSHIP_LISTS {
-        multipackConstituentsIdentifier required
         organisations recommended
     }
 ```
