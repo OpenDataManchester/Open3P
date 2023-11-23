@@ -55,7 +55,7 @@ The components schema contains information regarding the individual components t
 
 ``` mermaid
 erDiagram
-MATERIALS }o--o{ COMPONENTS : within
+MATERIALS }o--o{ COMPONENTS : component_constituents
   COMPONENTS {
     identifier String
     name String
@@ -99,12 +99,12 @@ MATERIALS }o--o{ COMPONENTS : within
   }
   COMPONENTS }o..o{ CONTROLLED_LISTS : attributes
   COMPONENTS }o..o{ RELATIONSHIP_LISTS : attributes
-  COMPONENTS }o--o{ COMPLETE_PACKAGING : within
-  COMPONENTS }o..o{ MULTIPACK : within
-  MULTIPACK }o..o{ LOAD_CATALOGUE : within
-  COMPLETE_PACKAGING }o..o{ MULTIPACK : within
-  COMPLETE_PACKAGING }o..o{ LOAD_CATALOGUE : within
-  COMPONENTS }o..o{ LOAD_CATALOGUE : within
+  COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
+  COMPONENTS }o..o{ MULTIPACK : multipack_constituents
+  MULTIPACK }o..o{ LOADS : load_constituents
+  COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
+  COMPLETE_PACKAGING }o..o{ LOADS : load_constituents
+  COMPONENTS }o..o{ LOADS : load_constituents
     CONTROLLED_LISTS {
     shape recommended
     function recommended
@@ -113,7 +113,6 @@ MATERIALS }o--o{ COMPONENTS : within
     reuseSystem recommended
   }
   RELATIONSHIP_LISTS {
-    componentConstituents required
     componentEndOfLifeRoutes recommended
     recycledContentClaims required
     recyclabilityClaims recommended
