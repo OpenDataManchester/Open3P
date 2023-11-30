@@ -13,7 +13,7 @@ The recyclability claims relationship list identifies organisations and schemes 
 ## Data
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
-|recyclabilityIdentifier|`required`|String|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
+|recyclabilityIdentifier|`required`|UUID|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
 |recyclabilitySource|`recommended`|String|What source provided the certificate? The entry should be the [recyclability source controlled list](../5_Controlled_Lists/5_005_Recyclability_Source.md) identifier.|
 |recyclabilityIssueDate|`recommended`|Date|The date that the certificate was provided/last updated. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 
@@ -25,7 +25,7 @@ erDiagram
   COMPONENTS }o..o{ RECYCLABILITY_CLAIMS : within
   COMPLETE_PACKAGING }o..o{ RECYCLABILITY_CLAIMS : within
   RECYCLABILITY_CLAIMS {
-    recyclabilityIdentifier String
+    recyclabilityIdentifier UUID
     recyclabilitySource String
     recyclabilityIssueDate Date
   }
