@@ -10,8 +10,8 @@ The loads constituents relationship list identifies the all the complete packagi
 ## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
-|loadConstituentsIdentifier|`required`|String|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
-|loadCombinationIdentifier|`required`|String|The unique identifier of the items that this component is made of. There must be an equivalent record in the `Complete_Packaging` OR `Multipacks` data.|
+|loadConstituentsIdentifier|`required`|UUID|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
+|loadCombinationIdentifier|`required`|UUID|The unique identifier of the items that this component is made of. There must be an equivalent record in the `Complete_Packaging` OR `Multipacks` data.|
 |name|`recommended`|String|The name of this load constituent.|
 |externalIdentifiers|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the load constituents in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
 |quantityInLoad|`required`|Numeric|Number of units for the packaging items found in a load that this row corresponds to.|
@@ -24,8 +24,8 @@ erDiagram
   COMPLETE_PACKAGING }o..o{ LOAD_CONSTITUENTS : attributes
   MULTIPACKS }o..o{ LOAD_CONSTITUENTS : attributes
   LOAD_CONSTITUENTS {
-    loadConstituentsIdentifier String
-    loadCombinationIdentifier String
+    loadConstituentsIdentifier UUID
+    loadCombinationIdentifier UUID
     name String
     externalIdentifiers Dictionary
     quantityInLoad Numeric

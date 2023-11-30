@@ -10,11 +10,11 @@ All the complete packaging from different levels (primary, secondary, transit et
 ## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
-|identifier|`required`|String|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
+|identifier|`required`|UUID|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
 |name|`recommended`|String|The name of this load.|
 |description|`recommended`|String|A brief description of this load.|
 |externalIdentifiers|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the load catalogue in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
-|loadIdentifier|`required`|String|The unique identifier of the created load. A globally unique identifier. See identifiers section for information on how to construct this identifier.|
+|loadIdentifier|`required`|UUID|The unique identifier of the created load. A globally unique identifier. See identifiers section for information on how to construct this identifier.|
 |packagingItems|`required`|List|The complete packaging and/or the multipack identifiers used to create the load. There must be an equivalent record in the `Complete Packaging` or `Multipack` data.|
 |quantityInLoad|`required`|Numeric|Number of units for the packaging items found in a load that this row corresponds to.|
 |level|`required`|String|The intended use of the component for the packaging. The entry here should be drawn from the [level controlled list](../5_Controlled_Lists/5_015_Level.md).|
@@ -32,11 +32,11 @@ COMPLETE_PACKAGING }o..o{ LOAD_CATALOGUE : within
 COMPLETE_PACKAGING }o..o{ MULTIPACK : within
 
   LOAD_CATALOGUE {
-    identifier String
+    identifier UUID
     name String
     description String
     externalIdentifiers Dictionary
-    loadIdentifier String
+    loadIdentifier UUID
     packagingItems List
     quantityInLoad Numeric
     level String

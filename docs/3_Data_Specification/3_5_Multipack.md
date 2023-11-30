@@ -12,7 +12,7 @@ The multipack schema contains information regarding the multipacks that are used
 ## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
-|identifier|`required`|String|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
+|identifier|`required`|UUID|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
 |name|`recommended`|String|The name of this multipack.|
 |description|`recommended`|String|A brief description of this multipack.|
 |externalIdentifiers|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the multipack in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
@@ -33,7 +33,7 @@ COMPONENTS }o..o{ MULTIPACK : multipack_constituents
 COMPONENTS }o..o{ COMPLETE_PACKAGING : complete_packaging_constituents
 COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
   MULTIPACK {
-    identifier String
+    identifier UUID
     name String
     description String
     externalIdentifiers Dictionary
