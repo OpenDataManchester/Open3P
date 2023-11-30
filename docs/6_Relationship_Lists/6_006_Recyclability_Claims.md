@@ -15,7 +15,7 @@ The recyclability claims relationship list identifies organisations and schemes 
 |:-|:-|:-|:-|
 |recyclabilityIdentifier|`required`|String|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
 |recyclabilitySource|`recommended`|String|What source provided the certificate? The entry should be the [recyclability source controlled list](../5_Controlled_Lists/5_005_Recyclability_Source.md) identifier.|
-|recyclabilityIssueDate|`recommended`|String|The date that the certificate was provided/last updated. Use the format `dd/mm/yyyy`.|
+|recyclabilityIssueDate|`recommended`|Date|The date that the certificate was provided/last updated. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 
 ## Diagram
 
@@ -27,7 +27,7 @@ erDiagram
   RECYCLABILITY_CLAIMS {
     recyclabilityIdentifier String
     recyclabilitySource String
-    recyclabilityIssueDate String
+    recyclabilityIssueDate Date
   }
   RECYCLABILITY_CLAIMS }o--o{ CONTROLLED_LISTS : attributes
   CONTROLLED_LISTS {
@@ -50,6 +50,6 @@ Recyclability claims should be provided as a separate csv file. The specificatio
     {
       "recyclabilityIdentifier": "b101889f-87e5-4c42-abb7-0df5fc3d1a26",
       "recyclabilitySource": "recyclability-source-0001",
-      "recyclabilityIssueDate": "01/08/2022"
+      "recyclabilityIssueDate": "2022-08-01"
     }
     ```
