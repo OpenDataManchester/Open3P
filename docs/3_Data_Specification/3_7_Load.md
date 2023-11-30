@@ -17,8 +17,8 @@ Note that all core entities can be incorporated into loads. This is to faciliate
 |description|`recommended`|String|A brief description of this load.|
 |externalIdentifiers|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the load in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
 |loadIdentifiers|`required`|List|The unique identifier of the created load. There must be an equivalent identifier found in the `Load Catalogue`.|
-|startDate|`required`|String|The date that the load began for the destination. Use the format `dd/mm/yyyy`.|
-|endDate|`required`|String|The date that the load ended for the destination. Use the format `dd/mm/yyyy`.|
+|startDate|`required`|Date|The date that the load began for the destination. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
+|endDate|`required`|Date|The date that the load ended at the destination. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 |destinationAddressName|`recommended`|String|The name of the load destination address.|
 |destinationAddressStreet|`required`|String|The street address of this load destination.|
 |destinationAddressCountry|`required`|String|The country of this load destination.|
@@ -26,7 +26,7 @@ Note that all core entities can be incorporated into loads. This is to faciliate
 |timesSent|`required`|Numeric|The number of times this load was sent to the destination during the specified time period.|
 |manufacturers|`recommended`|List|The information regarding the manufacturer(s). The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
 |manufacturedCountry|`recommended`|Numeric|The country the load was manufactured and/or combined. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
-|updateDate|`required`|String|The date that the load was provided/last updated. Use the format `dd/mm/yyyy`.|
+|updateDate|`required`|Date|The date that the load was provided/last updated. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 
 ## Diagram
 
@@ -46,7 +46,8 @@ COMPONENTS }o..o{ COMPLETE_PACKAGING : complete_packaging_constituents
     description String
     externalIdentifier Dictionary
     loadIdentifiers List
-    startDate String
+    startDate Date
+    endDate Date
     destinationAddressName String
     destinationAddressStreet String
     destinationAddressCountry String
@@ -54,7 +55,7 @@ COMPONENTS }o..o{ COMPLETE_PACKAGING : complete_packaging_constituents
     timesSent Numeric
     manufacturers List
     manufacturedCountry Numeric
-    updateDate String
+    updateDate Date
   }
   LOADS }o--o{ RELATIONSHIP_LISTS : attributes
   RELATIONSHIP_LISTS {
@@ -81,8 +82,8 @@ Loads should be provided as a separate csv file. The specification of this csv f
         "GTIN":"00123456789012",
         },
       "loadIdentifiers": "CA88F5CE-2D09-AFE0-08D7-44804780F924",
-      "startDate": "01/08/2022",
-      "endDate": "01/08/2022",
+      "startDate": "2023-01-01",
+      "endDate": "2023-01-01",
       "destinationAddressName": "Example Company",
       "destinationAddressStreet": "High Street West",
       "destinationAddressCountry": "England",
@@ -90,7 +91,7 @@ Loads should be provided as a separate csv file. The specification of this csv f
       "timesSent": "2",
       "manufacturers": [""],
       "manufacturedCountry": 826,
-      "updateDate": "01/08/2022",
+      "updateDate": "2022-08-01",
     }
     ```
 === "CSV download"
