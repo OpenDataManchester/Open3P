@@ -23,9 +23,9 @@ Note that all core entities can be incorporated into loads. This is to faciliate
 |destinationAddressStreet|`required`|String|The street address of this load destination.|
 |destinationAddressCountry|`required`|String|The country of this load destination.|
 |destinationPostalCode|`required`|String|The postal code of this load destination.|
-|timesSent|`required`|Numeric|The number of times this load was sent to the destination during the specified time period.|
+|timesSent|`required`|Integer|The number of times this load was sent to the destination during the specified time period.|
 |manufacturers|`recommended`|List|The information regarding the manufacturer(s). The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
-|manufacturedCountry|`recommended`|Numeric|The country the load was manufactured and/or combined. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
+|manufacturedCountry|`recommended`|String|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iso.org/obp/ui/#search){target=_blank} as described in the [ISO 3166 international standard](https://www.iso.org/iso-3166-country-codes.html){target=_blank}.|
 |updateDate|`required`|Date|The date that the load was provided/last updated. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 
 ## Diagram
@@ -42,7 +42,7 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
 COMPONENTS }o..o{ COMPLETE_PACKAGING : complete_packaging_constituents
   LOADS {
     identifier UUID
-    name numeric
+    name String
     description String
     externalIdentifier Dictionary
     loadIdentifiers List
@@ -52,9 +52,9 @@ COMPONENTS }o..o{ COMPLETE_PACKAGING : complete_packaging_constituents
     destinationAddressStreet String
     destinationAddressCountry String
     destinationPostalCode String
-    timesSent Numeric
+    timesSent Integer
     manufacturers List
-    manufacturedCountry Numeric
+    manufacturedCountry String
     updateDate Date
   }
   LOADS }o--o{ RELATIONSHIP_LISTS : attributes
@@ -88,9 +88,9 @@ Loads should be provided as a separate csv file. The specification of this csv f
       "destinationAddressStreet": "High Street West",
       "destinationAddressCountry": "England",
       "destinationPostalCode": "XX00 0XX",
-      "timesSent": "2",
+      "timesSent": 2,
       "manufacturers": [""],
-      "manufacturedCountry": 826,
+      "manufacturedCountry": "826",
       "updateDate": "2022-08-01",
     }
     ```
