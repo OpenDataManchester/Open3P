@@ -1266,8 +1266,8 @@
 <tr>
 <td align="left">recycledContentIssueDate</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">The date that the recycled content evidence was issued. Use the format <code>dd/mm/yyyy</code>.</td>
+<td align="left">Date</td>
+<td align="left">The date that the recycled content evidence was issued. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -1279,7 +1279,7 @@
     recycledContentIdentifier String
     recycledContentEvidenceType String
     recycledContentEvidenceReference String
-    recycledContentIssueDate String
+    recycledContentIssueDate Date
   }
   RECYCLED_CONTENT_CLAIMS }o--o{ CONTROLLED_LISTS : attributes
   CONTROLLED_LISTS {
@@ -1303,7 +1303,7 @@
 <span class="w">  </span><span class="nt">&quot;recycledContentIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;23e8251a-4fe6-4b25-9966-b08acac9ba34&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;recycledContentEvidenceType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c-recycled-evidence-0001&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;recycledContentEvidenceReference&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ABC-123-Example&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;recycledContentIssueDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/08/2022&quot;</span>
+<span class="w">  </span><span class="nt">&quot;recycledContentIssueDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>

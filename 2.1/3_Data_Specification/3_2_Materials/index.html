@@ -1322,8 +1322,8 @@
 <tr>
 <td align="left">areaDensityDate</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">The date that the area density was last verified/measured. Use the format <code>dd/mm/yyyy</code>.</td>
+<td align="left">Date</td>
+<td align="left">The date that the area density was last verified/measured. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 <tr>
 <td align="left">certification</td>
@@ -1352,8 +1352,8 @@
 <tr>
 <td align="left">updateDate</td>
 <td align="left"><code>required</code></td>
-<td align="left">String</td>
-<td align="left">The date that the material was provided/last updated. Use the format <code>dd/mm/yyyy</code>.</td>
+<td align="left">Date</td>
+<td align="left">The date that the material was provided/last updated. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -1370,12 +1370,12 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
     areaDensityUnit String
     areaDensityTolerance Numeric
     areaDensityToleranceType String
-    areaDensityDate String
+    areaDensityDate Date
     certification Boolean
     certificationClaims List
     manufacturers List
     manufacturedCountry Numeric
-    updateDate String
+    updateDate Date
   }
   MATERIALS }o..o{ CONTROLLED_LISTS : attributes
   MATERIALS }o--o{ COMPONENTS : component_constituents
@@ -1426,12 +1426,12 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
 <span class="w">  </span><span class="nt">&quot;areaDensityUnit&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;gsm&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;areaDensityTolerance&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3.3&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;areaDensityToleranceType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;percentage&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;areaDensityDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/08/2022&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;areaDensityDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TRUE&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;certificationClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">],</span>
 <span class="w">  </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
 <span class="w">  </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">826</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/08/2022&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
@@ -1658,7 +1658,7 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
 <span class="w">          </span><span class="nt">&quot;Country&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;United Kingdom of Great Britain and Northern Ireland (the)&quot;</span><span class="p">,</span>
 <span class="w">          </span><span class="nt">&quot;Numeric&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">826</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/08/2022&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">&quot;materialPurpose&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;m-material-purpose-0005&quot;</span><span class="p">,</span>
@@ -1702,7 +1702,7 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
 <span class="w">          </span><span class="nt">&quot;Country&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;United Kingdom of Great Britain and Northern Ireland (the)&quot;</span><span class="p">,</span>
 <span class="w">          </span><span class="nt">&quot;Numeric&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">826</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/08/2022&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">&quot;materialPurpose&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;m-material-purpose-0002&quot;</span><span class="p">,</span>
@@ -1746,7 +1746,7 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
 <span class="w">          </span><span class="nt">&quot;Country&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;United Kingdom of Great Britain and Northern Ireland (the)&quot;</span><span class="p">,</span>
 <span class="w">          </span><span class="nt">&quot;Numeric&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">826</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/08/2022&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">&quot;materialPurpose&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;m-material-purpose-0002&quot;</span><span class="p">,</span>
@@ -1790,7 +1790,7 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
 <span class="w">          </span><span class="nt">&quot;Country&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;United Kingdom of Great Britain and Northern Ireland (the)&quot;</span><span class="p">,</span>
 <span class="w">          </span><span class="nt">&quot;Numeric&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">826</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/08/2022&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">&quot;materialPurpose&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;m-material-purpose-0005&quot;</span><span class="p">,</span>
@@ -1811,7 +1811,7 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
 <span class="w">  </span><span class="nt">&quot;areaDensity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;gsm&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;areaDensityTolerance&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;6&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;areaDensityToleranceType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;unit&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;areaDensityDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/08/2022&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;areaDensityDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FALSE&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;certificationClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
@@ -1819,7 +1819,7 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
 <span class="w">    </span><span class="nt">&quot;Country&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;United Kingdom of Great Britain and Northern Ireland (the)&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;Numeric&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">826</span>
 <span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/08/2022&quot;</span>
+<span class="w">  </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>

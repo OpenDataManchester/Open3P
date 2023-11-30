@@ -1264,8 +1264,8 @@
 <tr>
 <td align="left">recyclabilityIssueDate</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">The date that the certificate was provided/last updated. Use the format <code>dd/mm/yyyy</code>.</td>
+<td align="left">Date</td>
+<td align="left">The date that the certificate was provided/last updated. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -1277,7 +1277,7 @@
   RECYCLABILITY_CLAIMS {
     recyclabilityIdentifier String
     recyclabilitySource String
-    recyclabilityIssueDate String
+    recyclabilityIssueDate Date
   }
   RECYCLABILITY_CLAIMS }o--o{ CONTROLLED_LISTS : attributes
   CONTROLLED_LISTS {
@@ -1299,7 +1299,7 @@
 <span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;recyclabilityIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;b101889f-87e5-4c42-abb7-0df5fc3d1a26&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;recyclabilitySource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;recyclability-source-0001&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;recyclabilityIssueDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/08/2022&quot;</span>
+<span class="w">  </span><span class="nt">&quot;recyclabilityIssueDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>

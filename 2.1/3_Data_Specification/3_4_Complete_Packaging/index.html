@@ -1385,8 +1385,8 @@
 <tr>
 <td align="left">heightDate</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">The date that the height was last verified/measured. Use the format <code>dd/mm/yyyy</code>.</td>
+<td align="left">Date</td>
+<td align="left">The date that the height was last verified/measured. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 <tr>
 <td align="left">width</td>
@@ -1397,8 +1397,8 @@
 <tr>
 <td align="left">widthDate</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">The date that the width was last verified/measured. Use the format <code>dd/mm/yyyy</code>.</td>
+<td align="left">Date</td>
+<td align="left">The date that the width was last verified/measured. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 <tr>
 <td align="left">depth</td>
@@ -1409,8 +1409,8 @@
 <tr>
 <td align="left">depthDate</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">The date that the depth was last verified/measured. Use the format <code>dd/mm/yyyy</code>.</td>
+<td align="left">Date</td>
+<td align="left">The date that the depth was last verified/measured. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 <tr>
 <td align="left">volume</td>
@@ -1421,8 +1421,8 @@
 <tr>
 <td align="left">volumeDate</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">The date that the volume was last verified/measured. Use the format <code>dd/mm/yyyy</code>.</td>
+<td align="left">Date</td>
+<td align="left">The date that the volume was last verified/measured. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 <tr>
 <td align="left">weight</td>
@@ -1445,8 +1445,8 @@
 <tr>
 <td align="left">weightDate</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">The date that the weight was last verified/measured. Use the format <code>dd/mm/yyyy</code>.</td>
+<td align="left">Date</td>
+<td align="left">The date that the weight was last verified/measured. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 <tr>
 <td align="left">servingCapacity</td>
@@ -1457,8 +1457,8 @@
 <tr>
 <td align="left">servingCapacityDate</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">The date that the serving capacity was last verified/measured. Use the format <code>dd/mm/yyyy</code>.</td>
+<td align="left">Date</td>
+<td align="left">The date that the serving capacity was last verified/measured. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 <tr>
 <td align="left">partOfMultipack</td>
@@ -1493,20 +1493,20 @@
 <tr>
 <td align="left">updateDate</td>
 <td align="left"><code>required</code></td>
-<td align="left">String</td>
-<td align="left">The date that the complete packaging was provided/last updated. Use the format <code>dd/mm/yyyy</code>.</td>
+<td align="left">Date</td>
+<td align="left">The date that the complete packaging was provided/last updated. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 <tr>
 <td align="left">releaseDate</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">The date that the complete packaging will be available to use. Use the format <code>dd/mm/yyyy</code>.</td>
+<td align="left">Date</td>
+<td align="left">The date that the complete packaging will be available to use. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 <tr>
 <td align="left">discontinueDate</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">The date that the complete packaging will no longer be available to use. Use the format <code>dd/mm/yyyy</code>.</td>
+<td align="left">Date</td>
+<td align="left">The date that the complete packaging will no longer be available to use. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -1530,27 +1530,27 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
     recyclability Boolean
     recyclabilityClaims List
     height Numeric
-    heightDate String
+    heightDate Date
     width Numeric
-    widthDate String
+    widthDate Date
     depth Numeric
-    depthDate String
+    depthDate Date
     volume Numeric
-    volumeDate String
+    volumeDate Date
     weight Numeric
     weightTolerance Numeric
     weightToleranceType String
-    weightDate String
+    weightDate Date
     servingCapacity Numeric
-    servingCapacityDate String
+    servingCapacityDate Date
     partOfMultipack Boolean
     certification Boolean
     certificationClaims List
     manufacturers List
     manufacturedCountry Numeric
-    updateDate String
-    releaseDate String
-    discontinueDate String
+    updateDate Date
+    releaseDate Date
+    discontinueDate Date
   }
   COMPLETE_PACKAGING }o..o{ CONTROLLED_LISTS : attributes
   COMPLETE_PACKAGING }O..O{ RELATIONSHIP_LISTS : attributes
@@ -1659,19 +1659,19 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
 <span class="w">        </span><span class="s2">&quot;b101889f-87e5-4c42-abb7-0df5fc3d1a26&quot;</span>
 <span class="w">    </span><span class="p">],</span>
 <span class="w">    </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">220</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;heightDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/01/2023&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;heightDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-01-01&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">170</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;widthDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/01/2023&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;widthDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-01-01&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;depth&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;depthDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/01/2023&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;depthDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-01-01&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;volume&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.002</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;volumeDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/01/2023&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;volumeDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-01-01&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;weight&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">32.8</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;weightTolerance&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;weightToleranceType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;percentage&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;weightDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/01/2023&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;weightDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-01-01&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;servingCapacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;servingCapacityDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/01/2023&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;servingCapacityDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-01-01&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;partOfMultipack&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;certificationClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -1679,8 +1679,8 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
 <span class="w">    </span><span class="p">],</span>
 <span class="w">    </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
 <span class="w">    </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">826</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/01/2023&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;releaseDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/01/2023&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-01-01&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;releaseDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-01-01&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;discontinueDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>

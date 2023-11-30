@@ -1303,20 +1303,20 @@
 <tr>
 <td align="left">updateDate</td>
 <td align="left"><code>required</code></td>
-<td align="left">String</td>
-<td align="left">The date that the multipack was provided/last updated. Use the format <code>dd/mm/yyyy</code>.</td>
+<td align="left">Date</td>
+<td align="left">The date that the multipack was provided/last updated. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 <tr>
 <td align="left">releaseDate</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">The date that the component will be available to use. Use the format <code>dd/mm/yyyy</code>.</td>
+<td align="left">Date</td>
+<td align="left">The date that the component will be available to use. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 <tr>
 <td align="left">discontinueDate</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">The date that the component will no longer be available to use. Use the format <code>dd/mm/yyyy</code>.</td>
+<td align="left">Date</td>
+<td align="left">The date that the component will no longer be available to use. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -1335,9 +1335,9 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
     identicalQuantity Numeric
     manufacturers List
     manufacturedCountry Numeric
-    updateDate String
-    releaseDate String
-    discontinueDate String
+    updateDate Date
+    releaseDate Date
+    discontinueDate Date
   }
   MULTIPACK }o--o{ RELATIONSHIP_LISTS : attributes
   COMPLETE_PACKAGING }o..o{ LOADS : load_constituents
@@ -1382,8 +1382,8 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
 <span class="w">  </span><span class="nt">&quot;identicalQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
 <span class="w">  </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">826</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/08/2022&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;releaseDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/08/2022&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;releaseDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;discontinueDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>

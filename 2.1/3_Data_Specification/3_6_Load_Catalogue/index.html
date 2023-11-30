@@ -1228,8 +1228,8 @@
 <tr>
 <td align="left">updateDate</td>
 <td align="left"><code>required</code></td>
-<td align="left">String</td>
-<td align="left">The date that the load catalogue was provided/last updated. Use the format <code>dd/mm/yyyy</code>.</td>
+<td align="left">Date</td>
+<td align="left">The date that the load catalogue was provided/last updated. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -1251,7 +1251,7 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : within
     packagingItems List
     quantityInLoad Numeric
     level String
-    updateDate String
+    updateDate Date
   }
   LOAD_CATALOGUE }o..o{ CONTROLLED_LISTS : attributes
   LOAD_CATALOGUE }o--o{ LOAD : within
@@ -1296,7 +1296,7 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : within
 <span class="w">    </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="s2">&quot;primary&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;detailed&quot;</span><span class="p">:</span><span class="s2">&quot;The individual container that you store goods in to sell to consumers. This is called a &quot;</span><span class="err">sales</span><span class="w"> </span><span class="err">u</span><span class="kc">n</span><span class="err">i</span><span class="kc">t</span><span class="s2">&quot;. For example, if you sell peas in steel tins with paper labels, the primary packaging is &quot;</span><span class="err">s</span><span class="kc">teel</span><span class="w"> </span><span class="kc">t</span><span class="err">i</span><span class="kc">n</span><span class="s2">&quot; and &quot;</span><span class="err">paper</span><span class="w"> </span><span class="err">label</span><span class="s2">&quot;.&quot;</span>
 <span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/08/2022&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-01-01&quot;</span><span class="p">,</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>

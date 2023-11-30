@@ -1266,8 +1266,8 @@
 <tr>
 <td align="left">certificationIssueDate</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">String</td>
-<td align="left">The date that the certificate was provided/last updated. Use the format <code>dd/mm/yyyy</code>.</td>
+<td align="left">Date</td>
+<td align="left">The date that the certificate was provided/last updated. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -1280,7 +1280,7 @@
   CERTIFICATION_CLAIMS {
     certificationIdentifier String
     certificationSource String
-    certificationIssueDate String
+    certificationIssueDate Date
   }
   CERTIFICATION_CLAIMS }o--o{ CONTROLLED_LISTS : attributes
   CONTROLLED_LISTS {
@@ -1302,7 +1302,7 @@
 <span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;certificationIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eed87ac3-6e3e-45fb-af2c-dd0f64fdb597&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;certificationSource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;certification-source-0002&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;certificationIssueDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01/08/2022&quot;</span>
+<span class="w">  </span><span class="nt">&quot;certificationIssueDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
