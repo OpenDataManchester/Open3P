@@ -69,7 +69,7 @@ Base materials should be provided as a separate csv file. The specification of t
       "externalIdentifiers": {
         "dbPK":"152314568888",
         },
-      "certification": "TRUE",
+      "certification": true,
       "certificationClaims": ["1","35"],
       "certificationDate": "2022-08-01",
       "manufacturers": [""],
@@ -93,7 +93,7 @@ Base materials should be provided as a separate csv file. The specification of t
       "externalIdentifiers": {
         "primaryKey":"9187e576-0dfd-46dd-809e-4af0a35f888d",
         },
-      "certification": "TRUE",
+      "certification": true,
       "certificationClaims": [{
         "certificationIdentifier": "2e32b7cc-5fa8-425f-a2c0-784340e43f36",
         "certificationSource": {
