@@ -10,7 +10,7 @@ The base materials schema contains information regarding the core materials. The
 ## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
-|identifier|`required`|String|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
+|identifier|`required`|UUID|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
 |baseMaterialName|`required`|String|The name of the base material this row relates to. `e.g., Polypropylene or Aluminium or Silica`|
 |baseMaterialType|`recommended`|String|Is the base material 'synthetic' or 'biobased'? Use the identifier of the material type that this row relates to. The entry here should be drawn from the [Material Type Controlled List](../5_Controlled_Lists/5_001_Material_Type.md).|
 |materialChemCID|`recommended`|String|The PubChem CID for the exact base material used. The PubChem CID is PubChem's compound identifier, which is a non-zero integer for a unique chemical structure. PubChem CID can be found using their [search](https://pubchem.ncbi.nlm.nih.gov/){target=_blank}. If for some reason the PubChem CID cannot be located, consider contributing to PubChem and create the compound identifier. However, if this cannot be done, please enter `Unknown`.|
@@ -26,7 +26,7 @@ The base materials schema contains information regarding the core materials. The
 ``` mermaid
 erDiagram
   BASE_MATERIALS {
-    identifier String
+    identifier UUID
     baseMaterialName String
     baseMaterialType String
     materialChemCID String
