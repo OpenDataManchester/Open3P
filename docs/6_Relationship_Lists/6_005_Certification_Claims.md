@@ -15,7 +15,7 @@ The Certification Claims relationship list identifies the certificates that can 
 ## Data
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
-|certificationIdentifier|`required`|String|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
+|certificationIdentifier|`required`|UUID|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
 |certificationSource|`required`|String|What source provided the certificate? The entry should be the [Certification Source Controlled List](../5_Controlled_Lists/5_002_Certification_Source.md) identifier.|
 |certificationIssueDate|`recommended`|Date|The date that the certificate was provided/last updated. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 
@@ -28,7 +28,7 @@ erDiagram
   COMPONENTS}o..o{ CERTIFICATION_CLAIMS : within
   COMPLETE_PACKAGING }o..o{ CERTIFICATION_CLAIMS : within
   CERTIFICATION_CLAIMS {
-    certificationIdentifier String
+    certificationIdentifier UUID
     certificationSource String
     certificationIssueDate Date
   }
