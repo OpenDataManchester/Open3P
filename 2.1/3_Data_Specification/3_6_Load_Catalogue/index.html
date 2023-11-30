@@ -1180,7 +1180,7 @@
 <tr>
 <td align="left">identifier</td>
 <td align="left"><code>required</code></td>
-<td align="left">String</td>
+<td align="left">UUID</td>
 <td align="left">A globally unique identifier. See <a href="../../4_Identifiers/4_1_Identifiers/">identifiers</a> section for information on how to construct this identifier</td>
 </tr>
 <tr>
@@ -1204,7 +1204,7 @@
 <tr>
 <td align="left">loadIdentifier</td>
 <td align="left"><code>required</code></td>
-<td align="left">String</td>
+<td align="left">UUID</td>
 <td align="left">The unique identifier of the created load. A globally unique identifier. See identifiers section for information on how to construct this identifier.</td>
 </tr>
 <tr>
@@ -1243,11 +1243,11 @@ COMPLETE_PACKAGING }o..o{ LOAD_CATALOGUE : within
 COMPLETE_PACKAGING }o..o{ MULTIPACK : within
 
   LOAD_CATALOGUE {
-    identifier String
+    identifier UUID
     name String
     description String
     externalIdentifiers Dictionary
-    loadIdentifier String
+    loadIdentifier UUID
     packagingItems List
     quantityInLoad Numeric
     level String

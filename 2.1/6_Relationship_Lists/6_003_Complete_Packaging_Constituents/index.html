@@ -1241,13 +1241,13 @@
 <tr>
 <td align="left">completePackagingConstituentsIdentifier</td>
 <td align="left"><code>required</code></td>
-<td align="left">String</td>
+<td align="left">UUID</td>
 <td align="left">A globally unique identifier. See <a href="../../4_Identifiers/4_1_Identifiers/">identifiers</a> section for information on how to construct this identifier</td>
 </tr>
 <tr>
 <td align="left">completePackagingCombinationIdentifier</td>
 <td align="left"><code>required</code></td>
-<td align="left">String</td>
+<td align="left">UUID</td>
 <td align="left">The unique identifier of the components and/or complete packaging that this complete packaging is made of. There must be an equivalent record in the <code>Components</code> OR <code>Complete Packaging</code> data.</td>
 </tr>
 <tr>
@@ -1263,8 +1263,8 @@
 
   COMPLETE_PACKAGING }o..o{ COMPLETE_PACKAGING_CONSTITUENTS : within
   COMPLETE_PACKAGING_CONSTITUENTS {
-    completePackagingConstituentsIdentifier String
-    completePackagingCombinationIdentifier String
+    completePackagingConstituentsIdentifier UUID
+    completePackagingCombinationIdentifier UUID
     contactWithProduct Boolean
   }
   COMPLETE_PACKAGING_CONSTITUENTS }o--o{ COMPONENTS : attributes

@@ -1241,13 +1241,13 @@
 <tr>
 <td align="left">multipackConstituentsIdentifier</td>
 <td align="left"><code>required</code></td>
-<td align="left">String</td>
+<td align="left">UUID</td>
 <td align="left">A globally unique identifier. See <a href="../../4_Identifiers/4_1_Identifiers/">identifiers</a> section for information on how to construct this identifier</td>
 </tr>
 <tr>
 <td align="left">multipackCombinationIdentifier</td>
 <td align="left"><code>required</code></td>
-<td align="left">String</td>
+<td align="left">UUID</td>
 <td align="left">The unique identifier of components and/or complete packaging that this multipack is made of. There must be an equivalent record in the <code>Components</code> OR <code>Complete Packaging</code> data.</td>
 </tr>
 </tbody>
@@ -1257,8 +1257,8 @@
 
   MULTIPACK }o..o{ MULTIPACK_CONSTITUENTS : within
   MULTIPACK_CONSTITUENTS {
-    multipackConstituentsIdentifier String
-    multipackCombinationIdentifier String
+    multipackConstituentsIdentifier UUID
+    multipackCombinationIdentifier UUID
   }
   MULTIPACK_CONSTITUENTS }o--o{ COMPLETE_PACKAGING : attributes
   MULTIPACK_CONSTITUENTS }o--o{ COMPONENTS : attributes</code></pre>

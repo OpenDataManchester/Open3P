@@ -1248,13 +1248,13 @@
 <tr>
 <td align="left">materialConstituentsIdentifier</td>
 <td align="left"><code>required</code></td>
-<td align="left">String</td>
+<td align="left">UUID</td>
 <td align="left">A globally unique identifier. See <a href="../../4_Identifiers/4_1_Identifiers/">identifiers</a> section for information on how to construct this identifier</td>
 </tr>
 <tr>
 <td align="left">materialCombinationIdentifier</td>
 <td align="left"><code>required</code></td>
-<td align="left">String</td>
+<td align="left">UUID</td>
 <td align="left">The unique identifier of the materials that this component is made of. There must be an equivalent record in the <code>Base_Materials</code> OR <code>Materials</code> data.</td>
 </tr>
 <tr>
@@ -1288,8 +1288,8 @@
 
   MATERIALS }o..o{ MATERIAL_CONSTITUENTS : within
   MATERIAL_CONSTITUENTS {
-    materialConstituentsIdentifier String
-    materialCombinationIdentifier String
+    materialConstituentsIdentifier UUID
+    materialCombinationIdentifier UUID
     materialPurpose String
     virginMaterial Numeric
     layer Numeric

@@ -1241,13 +1241,13 @@
 <tr>
 <td align="left">componentConstituentsIdentifier</td>
 <td align="left"><code>required</code></td>
-<td align="left">String</td>
+<td align="left">UUID</td>
 <td align="left">A globally unique identifier. See <a href="../../4_Identifiers/4_1_Identifiers/">identifiers</a> section for information on how to construct this identifier</td>
 </tr>
 <tr>
 <td align="left">materialCombinationIdentifier</td>
 <td align="left"><code>required</code></td>
-<td align="left">String</td>
+<td align="left">UUID</td>
 <td align="left">The unique identifier of the materials that this component is made of. There must be an equivalent record in the <code>Materials</code> OR <code>Components</code> data.</td>
 </tr>
 </tbody>
@@ -1256,8 +1256,8 @@
 <pre class="mermaid"><code>erDiagram
   COMPONENTS }o..o{ COMPONENT_CONSTITUENTS : within
   COMPONENT_CONSTITUENTS {
-    componentConstituentsIdentifier String
-    componentCombinationIdentifier String
+    componentConstituentsIdentifier UUID
+    componentCombinationIdentifier UUID
   }
   COMPONENT_CONSTITUENTS }o--o{ MATERIALS : attributes
   COMPONENT_CONSTITUENTS }o--o{ COMPONENTS : attributes</code></pre>

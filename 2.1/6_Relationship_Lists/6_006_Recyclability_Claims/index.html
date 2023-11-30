@@ -1252,7 +1252,7 @@
 <tr>
 <td align="left">recyclabilityIdentifier</td>
 <td align="left"><code>required</code></td>
-<td align="left">String</td>
+<td align="left">UUID</td>
 <td align="left">A globally unique identifier. See <a href="../../4_Identifiers/4_1_Identifiers/">identifiers</a> section for information on how to construct this identifier</td>
 </tr>
 <tr>
@@ -1275,7 +1275,7 @@
   COMPONENTS }o..o{ RECYCLABILITY_CLAIMS : within
   COMPLETE_PACKAGING }o..o{ RECYCLABILITY_CLAIMS : within
   RECYCLABILITY_CLAIMS {
-    recyclabilityIdentifier String
+    recyclabilityIdentifier UUID
     recyclabilitySource String
     recyclabilityIssueDate Date
   }

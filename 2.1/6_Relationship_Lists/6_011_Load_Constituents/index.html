@@ -1234,13 +1234,13 @@
 <tr>
 <td align="left">loadConstituentsIdentifier</td>
 <td align="left"><code>required</code></td>
-<td align="left">String</td>
+<td align="left">UUID</td>
 <td align="left">A globally unique identifier. See <a href="../../4_Identifiers/4_1_Identifiers/">identifiers</a> section for information on how to construct this identifier</td>
 </tr>
 <tr>
 <td align="left">loadCombinationIdentifier</td>
 <td align="left"><code>required</code></td>
-<td align="left">String</td>
+<td align="left">UUID</td>
 <td align="left">The unique identifier of the items that this component is made of. There must be an equivalent record in the <code>Complete_Packaging</code> OR <code>Multipacks</code> data.</td>
 </tr>
 <tr>
@@ -1274,8 +1274,8 @@
   COMPLETE_PACKAGING }o..o{ LOAD_CONSTITUENTS : attributes
   MULTIPACKS }o..o{ LOAD_CONSTITUENTS : attributes
   LOAD_CONSTITUENTS {
-    loadConstituentsIdentifier String
-    loadCombinationIdentifier String
+    loadConstituentsIdentifier UUID
+    loadCombinationIdentifier UUID
     name String
     externalIdentifiers Dictionary
     quantityInLoad Numeric

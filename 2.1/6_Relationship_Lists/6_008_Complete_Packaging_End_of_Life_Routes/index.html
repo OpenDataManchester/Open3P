@@ -1248,7 +1248,7 @@
 <tr>
 <td align="left">completePackagingEndOfLifeRouteIdentifier</td>
 <td align="left"><code>required</code></td>
-<td align="left">String</td>
+<td align="left">UUID</td>
 <td align="left">A globally unique identifier. See <a href="../../4_Identifiers/4_1_Identifiers/">identifiers</a> section for information on how to construct this identifier</td>
 </tr>
 <tr>
@@ -1276,7 +1276,7 @@
 
   COMPLETE_PACKAGING }o..o{ COMPLETE_PACKAGING_END_OF_LIFE_ROUTES : within
   COMPLETE_PACKAGING_END_OF_LIFE_ROUTES {
-    completePackagingEndOfLifeRouteIdentifier String
+    completePackagingEndOfLifeRouteIdentifier UUID
     completePackagingEndOfLifeRoute String
     orderOfPrecedence Numeric
     completePackagingDistruptors List

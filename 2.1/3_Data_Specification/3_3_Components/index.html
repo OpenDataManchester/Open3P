@@ -1323,7 +1323,7 @@
 <tr>
 <td align="left">identifier</td>
 <td align="left"><code>required</code></td>
-<td align="left">String</td>
+<td align="left">UUID</td>
 <td align="left">A globally unique identifier. See <a href="../../4_Identifiers/4_1_Identifiers/">identifiers</a> section for information on how to construct this identifier</td>
 </tr>
 <tr>
@@ -1566,7 +1566,7 @@
 <pre class="mermaid"><code>erDiagram
 MATERIALS }o--o{ COMPONENTS : component_constituents
   COMPONENTS {
-    identifier String
+    identifier UUID
     name String
     description String
     externalIdentifiers Dictionary
