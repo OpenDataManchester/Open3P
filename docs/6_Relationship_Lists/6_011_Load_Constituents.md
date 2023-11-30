@@ -14,7 +14,7 @@ The loads constituents relationship list identifies the all the complete packagi
 |loadCombinationIdentifier|`required`|UUID|The unique identifier of the items that this component is made of. There must be an equivalent record in the `Complete_Packaging` OR `Multipacks` data.|
 |name|`recommended`|String|The name of this load constituent.|
 |externalIdentifiers|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the load constituents in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
-|quantityInLoad|`required`|Numeric|Number of units for the packaging items found in a load that this row corresponds to.|
+|quantityInLoad|`required`|Integer|Number of units for the packaging items found in a load that this row corresponds to.|
 |level|`required`|String|The intended use of the component for the packaging. The entry here should be drawn from the [level controlled list](../5_Controlled_Lists/5_015_Level.md).|
 
 ## Diagram
@@ -28,7 +28,7 @@ erDiagram
     loadCombinationIdentifier UUID
     name String
     externalIdentifiers Dictionary
-    quantityInLoad Numeric
+    quantityInLoad Integer
     level String
   }
   LOAD_CONSTITUENTS }o--o{ LOAD : within
