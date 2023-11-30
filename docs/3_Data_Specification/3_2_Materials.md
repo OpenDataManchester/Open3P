@@ -84,7 +84,7 @@ Materials should be provided as a separate csv file. The specification of this c
       "areaDensityTolerance": "3.3",
       "areaDensityToleranceType": "percentage",
       "areaDensityDate": "2022-08-01",
-      "certification": "TRUE",
+      "certification": true,
       "certificationClaims": ["1"],
       "manufacturers": [""],
       "manufacturedCountry": 826,
@@ -117,7 +117,7 @@ Materials should be provided as a separate csv file. The specification of this c
             "externalIdentifiers": {
               "pk":"12",
               },
-            "certification": "FALSE",
+            "certification": false,
             "certificationClaims": null,
             "manufacturers": [""],
             "manufacturedCountry": {
@@ -161,7 +161,7 @@ Materials should be provided as a separate csv file. The specification of this c
             "externalIdentifiers": {
               "pk":"12",
               },
-            "certification": "FALSE",
+            "certification": false,
             "certificationClaims": null,
             "manufacturers": [""],
             "manufacturedCountry": {
@@ -205,7 +205,7 @@ Materials should be provided as a separate csv file. The specification of this c
             "externalIdentifiers": {
               "pk":"12",
               },
-            "certification": "FALSE",
+            "certification": false,
             "certificationClaims": null,
             "manufacturers": [""],
             "manufacturedCountry": {
@@ -249,7 +249,7 @@ Materials should be provided as a separate csv file. The specification of this c
             "externalIdentifiers": {
               "pk":"12",
               },
-            "certification": "FALSE",
+            "certification": false,
             "certificationClaims": null,
             "manufacturers": [""],
             "manufacturedCountry": {
@@ -278,7 +278,7 @@ Materials should be provided as a separate csv file. The specification of this c
       "areaDensityTolerance": "6",
       "areaDensityToleranceType": "unit",
       "areaDensityDate": "2022-08-01",
-      "certification": "FALSE",
+      "certification": false,
       "certificationClaims": null,
       "manufacturers": [""],
       "manufacturedCountry": {
