@@ -10,6 +10,7 @@ A document that contains all the changes made to the standard.
 ### Documents
  - Changed ALL date related fields to ISO 8601 standard, changed the format to `Date`.
  - Updated ALL JSON dates to read as `yyyy-mm-dd`. 
+ - Changed apprioate identifier fields to UUID from string.
 
 ## November 23, 2023
 ### Documents
