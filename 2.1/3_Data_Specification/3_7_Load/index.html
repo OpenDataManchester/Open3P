@@ -1315,7 +1315,7 @@
 <tr>
 <td align="left">timesSent</td>
 <td align="left"><code>required</code></td>
-<td align="left">Numeric</td>
+<td align="left">Integer</td>
 <td align="left">The number of times this load was sent to the destination during the specified time period.</td>
 </tr>
 <tr>
@@ -1327,8 +1327,8 @@
 <tr>
 <td align="left">manufacturedCountry</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">Numeric</td>
-<td align="left">The country the load was manufactured and/or combined. Use the country numeric <a href="https://www.iban.com/country-codes" target="_blank">ISO codes</a> as described in the ISO 3166 international standard.</td>
+<td align="left">String</td>
+<td align="left">The country the component was manufactured in. Use the country numeric <a href="https://www.iso.org/obp/ui/#search" target="_blank">ISO codes</a> as described in the <a href="https://www.iso.org/iso-3166-country-codes.html" target="_blank">ISO 3166 international standard</a>.</td>
 </tr>
 <tr>
 <td align="left">updateDate</td>
@@ -1350,7 +1350,7 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
 COMPONENTS }o..o{ COMPLETE_PACKAGING : complete_packaging_constituents
   LOADS {
     identifier UUID
-    name numeric
+    name String
     description String
     externalIdentifier Dictionary
     loadIdentifiers List
@@ -1360,9 +1360,9 @@ COMPONENTS }o..o{ COMPLETE_PACKAGING : complete_packaging_constituents
     destinationAddressStreet String
     destinationAddressCountry String
     destinationPostalCode String
-    timesSent Numeric
+    timesSent Integer
     manufacturers List
-    manufacturedCountry Numeric
+    manufacturedCountry String
     updateDate Date
   }
   LOADS }o--o{ RELATIONSHIP_LISTS : attributes
@@ -1408,9 +1408,9 @@ COMPONENTS }o..o{ COMPLETE_PACKAGING : complete_packaging_constituents
 <span class="w">  </span><span class="nt">&quot;destinationAddressStreet&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;High Street West&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;destinationAddressCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;England&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;destinationPostalCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;XX00 0XX&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;timesSent&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;timesSent&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
-<span class="w">  </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">826</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;826&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>

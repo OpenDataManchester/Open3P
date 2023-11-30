@@ -1379,7 +1379,7 @@
 <tr>
 <td align="left">height</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">Numeric</td>
+<td align="left">Decimal</td>
 <td align="left">The height of the complete packaging. Please see the guidelines below on how to properly measure and report the height.</td>
 </tr>
 <tr>
@@ -1391,7 +1391,7 @@
 <tr>
 <td align="left">width</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">Numeric</td>
+<td align="left">Decimal</td>
 <td align="left">The width of the complete packaging. Please see the guidelines below on how to properly measure and report the width.</td>
 </tr>
 <tr>
@@ -1403,7 +1403,7 @@
 <tr>
 <td align="left">depth</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">Numeric</td>
+<td align="left">Decimal</td>
 <td align="left">The depth of the complete packaging. Please see the guidelines below on how to properly measure and report the depth.</td>
 </tr>
 <tr>
@@ -1415,7 +1415,7 @@
 <tr>
 <td align="left">volume</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">Numeric</td>
+<td align="left">Decimal</td>
 <td align="left">Using the height, width, and depth found using the measurement guidelines, calculate the complete packaging&rsquo;s volume using: <code>height x width x depth</code>.</td>
 </tr>
 <tr>
@@ -1427,13 +1427,13 @@
 <tr>
 <td align="left">weight</td>
 <td align="left"><code>required</code></td>
-<td align="left">Numeric</td>
+<td align="left">Decimal</td>
 <td align="left">The weight of the complete packaging.</td>
 </tr>
 <tr>
 <td align="left">weightTolerance</td>
 <td align="left"><code>required</code></td>
-<td align="left">Numeric</td>
+<td align="left">Decimal</td>
 <td align="left">The threshold of weight that complete packaging can vary by. This can be given in grams or percentage.</td>
 </tr>
 <tr>
@@ -1451,7 +1451,7 @@
 <tr>
 <td align="left">servingCapacity</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">Numeric</td>
+<td align="left">Integer</td>
 <td align="left">The serving capacity of the complete packaging - how much of a product that can be contained in the complete packaging.</td>
 </tr>
 <tr>
@@ -1487,8 +1487,8 @@
 <tr>
 <td align="left">manufacturedCountry</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">Numeric</td>
-<td align="left">The country the complete packaging was manufactured and/or combined in. Use the country numeric <a href="https://www.iban.com/country-codes" target="_blank">ISO codes</a> as described in the ISO 3166 international standard.</td>
+<td align="left">String</td>
+<td align="left">The country the component was manufactured in. Use the country numeric <a href="https://www.iso.org/obp/ui/#search" target="_blank">ISO codes</a> as described in the <a href="https://www.iso.org/iso-3166-country-codes.html" target="_blank">ISO 3166 international standard</a>.</td>
 </tr>
 <tr>
 <td align="left">updateDate</td>
@@ -1529,25 +1529,25 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
     completePackagingEndOfLifeRoutes List
     recyclability Boolean
     recyclabilityClaims List
-    height Numeric
+    height Decimal
     heightDate Date
-    width Numeric
+    width Decimal
     widthDate Date
-    depth Numeric
+    depth Decimal
     depthDate Date
-    volume Numeric
+    volume Decimal
     volumeDate Date
-    weight Numeric
-    weightTolerance Numeric
+    weight Decimal
+    weightTolerance Decimal
     weightToleranceType String
     weightDate Date
-    servingCapacity Numeric
+    servingCapacity Integer
     servingCapacityDate Date
     partOfMultipack Boolean
     certification Boolean
     certificationClaims List
     manufacturers List
-    manufacturedCountry Numeric
+    manufacturedCountry String
     updateDate Date
     releaseDate Date
     discontinueDate Date
@@ -1678,7 +1678,7 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
 <span class="w">        </span><span class="s2">&quot;eed87ac3-6e3e-45fb-af2c-dd0f64fdb597&quot;</span>
 <span class="w">    </span><span class="p">],</span>
 <span class="w">    </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">826</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;826&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-01-01&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;releaseDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-01-01&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;discontinueDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>

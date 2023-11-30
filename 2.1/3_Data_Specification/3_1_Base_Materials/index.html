@@ -1296,14 +1296,14 @@
 <tr>
 <td align="left">manufacturedCountry</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">Numeric</td>
-<td align="left">The country the component was manufactured in. Use the country numeric <a href="https://www.iban.com/country-codes" target="_blank">ISO codes</a> as described in the ISO 3166 international standard.</td>
+<td align="left">String</td>
+<td align="left">The country the component was manufactured in. Use the country numeric <a href="https://www.iso.org/obp/ui/#search" target="_blank">ISO codes</a> as described in the <a href="https://www.iso.org/iso-3166-country-codes.html" target="_blank">ISO 3166 international standard</a>.</td>
 </tr>
 <tr>
 <td align="left">updateDate</td>
 <td align="left"><code>required</code></td>
 <td align="left">Date</td>
-<td align="left">The date that the base material was provided/last updated. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
+<td align="left">The date that the base material was provided/last updated. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html" target="_blank">ISO 8601 dateTime standard</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -1318,7 +1318,7 @@
     certification Boolean
     certificationClaims List
     manufacturers List
-    manufacturedCountry Numeric
+    manufacturedCountry String
     updateDate Date
   }
   BASE_MATERIALS }o..o{ CONTROLLED_LISTS : attributes
@@ -1362,11 +1362,11 @@
 <span class="w">  </span><span class="nt">&quot;externalIdentifiers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;dbPK&quot;</span><span class="p">:</span><span class="s2">&quot;152314568888&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TRUE&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;certificationClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="s2">&quot;35&quot;</span><span class="p">],</span>
 <span class="w">  </span><span class="nt">&quot;certificationDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
-<span class="w">  </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">724</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;724&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
@@ -1401,7 +1401,9 @@
 <span class="normal">27</span>
 <span class="normal">28</span>
 <span class="normal">29</span>
-<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="mi">--</span><span class="err">Food</span><span class="w"> </span><span class="err">grade</span><span class="w"> </span><span class="err">sy</span><span class="kc">nt</span><span class="err">he</span><span class="kc">t</span><span class="err">ic</span><span class="w"> </span><span class="err">polye</span><span class="kc">t</span><span class="err">hyle</span><span class="kc">ne</span><span class="w"> </span><span class="kc">tere</span><span class="err">ph</span><span class="kc">t</span><span class="err">hala</span><span class="kc">te</span><span class="w"> </span><span class="err">(PET)</span><span class="w"> </span><span class="err">made</span><span class="w"> </span><span class="err">i</span><span class="kc">n</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">UK</span><span class="w"> </span><span class="mi">-</span><span class="w"> </span><span class="err">verbose</span><span class="w"> </span><span class="err">da</span><span class="kc">ta</span><span class="w"> </span><span class="err">s</span><span class="kc">tru</span><span class="err">c</span><span class="kc">ture</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="mi">--</span><span class="err">Food</span><span class="w"> </span><span class="err">grade</span><span class="w"> </span><span class="err">sy</span><span class="kc">nt</span><span class="err">he</span><span class="kc">t</span><span class="err">ic</span><span class="w"> </span><span class="err">polye</span><span class="kc">t</span><span class="err">hyle</span><span class="kc">ne</span><span class="w"> </span><span class="kc">tere</span><span class="err">ph</span><span class="kc">t</span><span class="err">hala</span><span class="kc">te</span><span class="w"> </span><span class="err">(PET)</span><span class="w"> </span><span class="err">made</span><span class="w"> </span><span class="err">i</span><span class="kc">n</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">UK</span><span class="w"> </span><span class="mi">-</span><span class="w"> </span><span class="err">verbose</span><span class="w"> </span><span class="err">da</span><span class="kc">ta</span><span class="w"> </span><span class="err">s</span><span class="kc">tru</span><span class="err">c</span><span class="kc">ture</span>
 <span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A4BAE07C-1847-CD8E-C933-6FD30478423B&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;baseMaterialName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PET&quot;</span><span class="p">,</span>
@@ -1414,7 +1416,7 @@
 <span class="w">  </span><span class="nt">&quot;externalIdentifiers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;primaryKey&quot;</span><span class="p">:</span><span class="s2">&quot;9187e576-0dfd-46dd-809e-4af0a35f888d&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TRUE&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;certificationClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
 <span class="w">    </span><span class="nt">&quot;certificationIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2e32b7cc-5fa8-425f-a2c0-784340e43f36&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;certificationSource&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -1426,8 +1428,10 @@
 <span class="w">  </span><span class="p">}],</span>
 <span class="w">  </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
 <span class="w">  </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;Country&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;United Kingdom of Great Britain and Northern Ireland (the)&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;Numeric&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">826</span>
+<span class="w">    </span><span class="nt">&quot;Numeric&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;826&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;EnglishShortName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;United Kingdom of Great Britain and Northern Ireland (the)&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;Alpha2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GB&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;Alpha3&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GBR&quot;</span>
 <span class="w">  </span><span class="p">},</span>
 <span class="w">  </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
 <span class="p">}</span>

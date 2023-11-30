@@ -22,7 +22,7 @@
     
     
       
-        <title>Multipack - Open3P</title>
+        <title>Multipacks - Open3P</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#multipack" class="md-skip">
+        <a href="#multipacks" class="md-skip">
           Skip to content
         </a>
       
@@ -146,7 +146,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Multipack
+              Multipacks
             
           </span>
         </div>
@@ -1232,8 +1232,8 @@
                   
 
 
-<h1 id="multipack">Multipack<a class="headerlink" href="#multipack" title="Permanent link">&para;</a></h1>
-<p>The multipack schema contains information regarding the multipacks that are used to create loads. These are created from a number of either identical or different complete packages from the complete packaging schema.</p>
+<h1 id="multipacks">Multipacks<a class="headerlink" href="#multipacks" title="Permanent link">&para;</a></h1>
+<p>The multipacks schema contains information regarding the multipacks that are used to create loads. These are created from a number of either identical or different complete packages from the complete packaging schema.</p>
 <p><strong>Note:</strong> The multipack portion is optional (only applies to multipacks). If the complete packaging or component is <em>not</em> in a multipack, all of the fields below are optional. </p>
 <h2 id="table">Table<a class="headerlink" href="#table" title="Permanent link">&para;</a></h2>
 <table>
@@ -1285,7 +1285,7 @@
 <tr>
 <td align="left">identicalQuantity</td>
 <td align="left"><code>required</code></td>
-<td align="left">Numeric</td>
+<td align="left">Integer</td>
 <td align="left">Number of identical units for the unique complete packaging item or a component this row corresponds to.</td>
 </tr>
 <tr>
@@ -1297,8 +1297,8 @@
 <tr>
 <td align="left">manufacturedCountry</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">Numeric</td>
-<td align="left">The country the multipack was manufactured and/or combined. Use the country numeric <a href="https://www.iban.com/country-codes" target="_blank">ISO codes</a> as described in the ISO 3166 international standard.</td>
+<td align="left">String</td>
+<td align="left">The country the component was manufactured in. Use the country numeric <a href="https://www.iso.org/obp/ui/#search" target="_blank">ISO codes</a> as described in the <a href="https://www.iso.org/iso-3166-country-codes.html" target="_blank">ISO 3166 international standard</a>.</td>
 </tr>
 <tr>
 <td align="left">updateDate</td>
@@ -1332,9 +1332,9 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
     externalIdentifiers Dictionary
     multipackConstituentsIdentifiers List
     tier String
-    identicalQuantity Numeric
+    identicalQuantity Integer
     manufacturers List
-    manufacturedCountry Numeric
+    manufacturedCountry String
     updateDate Date
     releaseDate Date
     discontinueDate Date
@@ -1378,10 +1378,10 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
 <span class="w">    </span><span class="p">},</span>
 <span class="w">  </span><span class="nt">&quot;multipackIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;346C5546-282B-C040-CE74-DD0DD4688C0B&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;packagingItems&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C29B4703-121C-7552-D905-FD5AB263D611&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;tier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;identicalQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;tier&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;identicalQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
-<span class="w">  </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">826</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;826&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;releaseDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;discontinueDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>

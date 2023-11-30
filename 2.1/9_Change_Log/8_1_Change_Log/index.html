@@ -1879,7 +1879,63 @@
 <ul>
 <li>Changed ALL date related fields to ISO 8601 standard, changed the format to <code>Date</code>.</li>
 <li>Updated ALL JSON dates to read as <code>yyyy-mm-dd</code>. </li>
-<li>Changed apprioate identifier fields to UUID from string.</li>
+<li>Changed appropriate identifier fields to UUID from string.</li>
+<li>Changed Boolean values in JSON examples to <code>true</code> and <code>false</code> rather than <code>"TRUE"</code> and <code>"FALSE"</code>.</li>
+<li>Change manufactedCountry format to string, and improved description to indicate that the numeric value should be used from ISO 3166.</li>
+<li>Changed Numeric format to either Decimal or Integer.<ul>
+<li>Materials<ul>
+<li>areaDensity -&gt; Decimal</li>
+<li>areaDensityTolerance -&gt; Decimal</li>
+</ul>
+</li>
+<li>Components<ul>
+<li>height -&gt; Decimal</li>
+<li>width -&gt; Decimal</li>
+<li>depth -&gt; Decimal</li>
+<li>volume -&gt; Decimal</li>
+<li>weight -&gt; Decimal</li>
+<li>weightTolerance -&gt; Decimal</li>
+<li>recycledContent -&gt; Decimal</li>
+</ul>
+</li>
+<li>Complete Packaging<ul>
+<li>height -&gt; Decimal</li>
+<li>width -&gt; Decimal</li>
+<li>depth -&gt; Decimal</li>
+<li>volume -&gt; Decimal</li>
+<li>weight -&gt; Decimal</li>
+<li>weightTolerance -&gt; Decimal</li>
+<li>servingCapacity -&gt; Integer</li>
+</ul>
+</li>
+<li>Multipacks<ul>
+<li>identicalQuantity -&gt; Integer</li>
+</ul>
+</li>
+<li>Loads<ul>
+<li>timesSent -&gt; Integer</li>
+</ul>
+</li>
+<li>Material Constituents<ul>
+<li>virginMaterial -&gt; Decimal</li>
+<li>layer -&gt; Integer</li>
+<li>materialPercentage -&gt; Decimal</li>
+</ul>
+</li>
+<li>Component End of Life Routes<ul>
+<li>orderOfPrecedence -&gt; Integer</li>
+</ul>
+</li>
+<li>Complete Packaging End of Life Routes<ul>
+<li>orderOfPrecedence -&gt; Integer</li>
+</ul>
+</li>
+<li>Load Constituent<ul>
+<li>quantityInLoad -&gt; Integer</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <h2 id="november-23-2023">November 23, 2023<a class="headerlink" href="#november-23-2023" title="Permanent link">&para;</a></h2>
 <h3 id="documents_1">Documents<a class="headerlink" href="#documents_1" title="Permanent link">&para;</a></h3>

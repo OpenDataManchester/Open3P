@@ -1298,7 +1298,7 @@
 <tr>
 <td align="left">areaDensity</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">Numeric</td>
+<td align="left">Decimal</td>
 <td align="left">The area density of the material. Where area density is the measure of how much mass is packed into a given area of a two-dimensional object. Provided in grams per square metre (gsm).</td>
 </tr>
 <tr>
@@ -1310,7 +1310,7 @@
 <tr>
 <td align="left">areaDensityTolerance</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">Numeric</td>
+<td align="left">Decimal</td>
 <td align="left">The threshold of area density that the material can vary by. This is given as a +/- value.</td>
 </tr>
 <tr>
@@ -1346,8 +1346,8 @@
 <tr>
 <td align="left">manufacturedCountry</td>
 <td align="left"><code>recommended</code></td>
-<td align="left">Numeric</td>
-<td align="left">The country the component was manufactured in. Use the country numeric <a href="https://www.iban.com/country-codes" target="_blank">ISO codes</a> as described in the ISO 3166 international standard.</td>
+<td align="left">String</td>
+<td align="left">The country the component was manufactured in. Use the country numeric <a href="https://www.iso.org/obp/ui/#search" target="_blank">ISO codes</a> as described in the <a href="https://www.iso.org/iso-3166-country-codes.html" target="_blank">ISO 3166 international standard</a>.</td>
 </tr>
 <tr>
 <td align="left">updateDate</td>
@@ -1366,15 +1366,15 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
     externalIdentifiers Dictionary
     materialConstituents List
     combinationPurpose String
-    areaDensity Numeric
+    areaDensity Decimal
     areaDensityUnit String
-    areaDensityTolerance Numeric
+    areaDensityTolerance Decimal
     areaDensityToleranceType String
     areaDensityDate Date
     certification Boolean
     certificationClaims List
     manufacturers List
-    manufacturedCountry Numeric
+    manufacturedCountry String
     updateDate Date
   }
   MATERIALS }o..o{ CONTROLLED_LISTS : attributes
@@ -1427,10 +1427,10 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
 <span class="w">  </span><span class="nt">&quot;areaDensityTolerance&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3.3&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;areaDensityToleranceType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;percentage&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;areaDensityDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TRUE&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;certificationClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">],</span>
 <span class="w">  </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
-<span class="w">  </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">826</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;826&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
@@ -1628,7 +1628,17 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
 <span class="normal">190</span>
 <span class="normal">191</span>
 <span class="normal">192</span>
-<span class="normal">193</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="mi">--</span><span class="err">Fibre</span><span class="w"> </span><span class="err">based</span><span class="w"> </span><span class="err">composi</span><span class="kc">te</span><span class="w"> </span><span class="err">ma</span><span class="kc">ter</span><span class="err">ial</span><span class="w"> </span><span class="kc">t</span><span class="err">o</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">used</span><span class="w"> </span><span class="kc">f</span><span class="err">or</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">car</span><span class="kc">t</span><span class="err">o</span><span class="kc">n</span><span class="w"> </span><span class="mi">-</span><span class="w"> </span><span class="err">semi</span><span class="w"> </span><span class="err">verbose</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="mi">--</span><span class="err">Fibre</span><span class="w"> </span><span class="err">based</span><span class="w"> </span><span class="err">composi</span><span class="kc">te</span><span class="w"> </span><span class="err">ma</span><span class="kc">ter</span><span class="err">ial</span><span class="w"> </span><span class="kc">t</span><span class="err">o</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">used</span><span class="w"> </span><span class="kc">f</span><span class="err">or</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">car</span><span class="kc">t</span><span class="err">o</span><span class="kc">n</span><span class="w"> </span><span class="mi">-</span><span class="w"> </span><span class="err">semi</span><span class="w"> </span><span class="err">verbose</span>
 <span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;f87b9bb3-f141-41cf-986e-e3a32b223f09&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;materialName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Classic Carton Board - EVOH&quot;</span><span class="p">,</span>
@@ -1651,12 +1661,14 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
 <span class="w">        </span><span class="nt">&quot;externalIdentifiers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">          </span><span class="nt">&quot;pk&quot;</span><span class="p">:</span><span class="s2">&quot;12&quot;</span><span class="p">,</span>
 <span class="w">          </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FALSE&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;certificationClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
 <span class="w">        </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;Country&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;United Kingdom of Great Britain and Northern Ireland (the)&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;Numeric&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">826</span>
+<span class="w">          </span><span class="nt">&quot;Numeric&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;826&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;EnglishShortName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;United Kingdom of Great Britain and Northern Ireland (the)&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;Alpha2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GB&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;Alpha3&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GBR&quot;</span>
 <span class="w">        </span><span class="p">},</span>
 <span class="w">        </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
 <span class="w">      </span><span class="p">},</span>
@@ -1665,9 +1677,9 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
 <span class="w">        </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;barrier&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;detailed&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Used to reduce water and gas diffusion into and/or out of the material.&quot;</span>
 <span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;virginMaterial&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;virginMaterial&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">100.0</span><span class="p">,</span>
 <span class="w">      </span><span class="nt">&quot;layer&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;materialPercentage&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span>
+<span class="w">      </span><span class="nt">&quot;materialPercentage&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">7.0</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;materialConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;f87b9bb3-f141-41cf-986e-e3a32b223f09&quot;</span><span class="p">,</span>
@@ -1677,9 +1689,9 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
 <span class="w">        </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;structure&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;detailed&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Providing strength and stability.&quot;</span>
 <span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;virginMaterial&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;virginMaterial&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">100.0</span><span class="p">,</span>
 <span class="w">      </span><span class="nt">&quot;layer&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;materialPercentage&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">27</span>
+<span class="w">      </span><span class="nt">&quot;materialPercentage&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">27.0</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;materialConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;f87b9bb3-f141-41cf-986e-e3a32b223f09&quot;</span><span class="p">,</span>
@@ -1695,12 +1707,14 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
 <span class="w">        </span><span class="nt">&quot;externalIdentifiers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">          </span><span class="nt">&quot;pk&quot;</span><span class="p">:</span><span class="s2">&quot;12&quot;</span><span class="p">,</span>
 <span class="w">          </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FALSE&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;certificationClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
 <span class="w">        </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;Country&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;United Kingdom of Great Britain and Northern Ireland (the)&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;Numeric&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">826</span>
+<span class="w">          </span><span class="nt">&quot;Numeric&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;826&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;EnglishShortName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;United Kingdom of Great Britain and Northern Ireland (the)&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;Alpha2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GB&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;Alpha3&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GBR&quot;</span>
 <span class="w">        </span><span class="p">},</span>
 <span class="w">        </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
 <span class="w">      </span><span class="p">},</span>
@@ -1709,9 +1723,9 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
 <span class="w">        </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;adhesive&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;detailed&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Applied to one or both surfaces of two separate items that binds them together and resists their separation.&quot;</span>
 <span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;virginMaterial&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;virginMaterial&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">100.0</span><span class="p">,</span>
 <span class="w">      </span><span class="nt">&quot;layer&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;materialPercentage&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span>
+<span class="w">      </span><span class="nt">&quot;materialPercentage&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">7.0</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;materialConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;f87b9bb3-f141-41cf-986e-e3a32b223f09&quot;</span><span class="p">,</span>
@@ -1721,9 +1735,9 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
 <span class="w">        </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;antioxidant&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;detailed&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Used to inhibit oxidation.&quot;</span>
 <span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;virginMaterial&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;virginMaterial&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">100.0</span><span class="p">,</span>
 <span class="w">      </span><span class="nt">&quot;layer&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;materialPercentage&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span>
+<span class="w">      </span><span class="nt">&quot;materialPercentage&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">18.0</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;materialConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;f87b9bb3-f141-41cf-986e-e3a32b223f09&quot;</span><span class="p">,</span>
@@ -1739,12 +1753,14 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
 <span class="w">        </span><span class="nt">&quot;externalIdentifiers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">          </span><span class="nt">&quot;pk&quot;</span><span class="p">:</span><span class="s2">&quot;12&quot;</span><span class="p">,</span>
 <span class="w">          </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FALSE&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;certificationClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
 <span class="w">        </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;Country&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;United Kingdom of Great Britain and Northern Ireland (the)&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;Numeric&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">826</span>
+<span class="w">          </span><span class="nt">&quot;Numeric&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;826&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;EnglishShortName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;United Kingdom of Great Britain and Northern Ireland (the)&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;Alpha2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GB&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;Alpha3&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GBR&quot;</span>
 <span class="w">        </span><span class="p">},</span>
 <span class="w">        </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
 <span class="w">      </span><span class="p">},</span>
@@ -1753,9 +1769,9 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
 <span class="w">        </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;adhesive&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;detailed&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Applied to one or both surfaces of two separate items that binds them together and resists their separation.&quot;</span>
 <span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;virginMaterial&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;virginMaterial&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">100.0</span><span class="p">,</span>
 <span class="w">      </span><span class="nt">&quot;layer&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;materialPercentage&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span>
+<span class="w">      </span><span class="nt">&quot;materialPercentage&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">7.0</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;materialConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;f87b9bb3-f141-41cf-986e-e3a32b223f09&quot;</span><span class="p">,</span>
@@ -1765,9 +1781,9 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
 <span class="w">        </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;structure&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;detailed&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Providing strength and stability.&quot;</span>
 <span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;virginMaterial&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;virginMaterial&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">100.0</span><span class="p">,</span>
 <span class="w">      </span><span class="nt">&quot;layer&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;materialPercentage&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">27</span>
+<span class="w">      </span><span class="nt">&quot;materialPercentage&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">27.0</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;materialConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;f87b9bb3-f141-41cf-986e-e3a32b223f09&quot;</span><span class="p">,</span>
@@ -1783,12 +1799,14 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
 <span class="w">        </span><span class="nt">&quot;externalIdentifiers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">          </span><span class="nt">&quot;pk&quot;</span><span class="p">:</span><span class="s2">&quot;12&quot;</span><span class="p">,</span>
 <span class="w">          </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FALSE&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;certificationClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
 <span class="w">        </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;Country&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;United Kingdom of Great Britain and Northern Ireland (the)&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;Numeric&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">826</span>
+<span class="w">          </span><span class="nt">&quot;Numeric&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;826&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;EnglishShortName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;United Kingdom of Great Britain and Northern Ireland (the)&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;Alpha2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GB&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;Alpha3&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GBR&quot;</span>
 <span class="w">        </span><span class="p">},</span>
 <span class="w">        </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
 <span class="w">      </span><span class="p">},</span>
@@ -1797,9 +1815,9 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
 <span class="w">        </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;barrier&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;detailed&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Used to reduce water and gas diffusion into and/or out of the material.&quot;</span>
 <span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;virginMaterial&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;virginMaterial&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">100.0</span><span class="p">,</span>
 <span class="w">      </span><span class="nt">&quot;layer&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;materialPercentage&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span>
+<span class="w">      </span><span class="nt">&quot;materialPercentage&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">7.0</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">  </span><span class="p">],</span>
 <span class="w">  </span><span class="nt">&quot;combinationPurpose&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -1812,12 +1830,14 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
 <span class="w">  </span><span class="nt">&quot;areaDensityTolerance&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;6&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;areaDensityToleranceType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;unit&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;areaDensityDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FALSE&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;certificationClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
 <span class="w">  </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;Country&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;United Kingdom of Great Britain and Northern Ireland (the)&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;Numeric&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">826</span>
+<span class="w">    </span><span class="nt">&quot;Numeric&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;826&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;EnglishShortName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;United Kingdom of Great Britain and Northern Ireland (the)&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;Alpha2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GB&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;Alpha3&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GBR&quot;</span>
 <span class="w">  </span><span class="p">},</span>
 <span class="w">  </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span>
 <span class="p">}</span>
