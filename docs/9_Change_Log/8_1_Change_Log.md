@@ -12,6 +12,41 @@ A document that contains all the changes made to the standard.
  - Updated ALL JSON dates to read as `yyyy-mm-dd`. 
  - Changed appropriate identifier fields to UUID from string.
  - Changed Boolean values in JSON examples to `true` and `false` rather than `"TRUE"` and `"FALSE"`.
+ - Change manufactedCountry format to string, and improved description to indicate that the numeric value should be used from ISO 3166.
+ - Changed Numeric format to either Decimal or Integer.
+    - Materials
+        - areaDensity -> Decimal
+        - areaDensityTolerance -> Decimal
+    - Components
+        - height -> Decimal
+        - width -> Decimal
+        - depth -> Decimal
+        - volume -> Decimal
+        - weight -> Decimal
+        - weightTolerance -> Decimal
+        - recycledContent -> Decimal
+    - Complete Packaging
+        - height -> Decimal
+        - width -> Decimal
+        - depth -> Decimal
+        - volume -> Decimal
+        - weight -> Decimal
+        - weightTolerance -> Decimal
+        - servingCapacity -> Integer
+    - Multipacks
+        - identicalQuantity -> Integer
+    - Loads
+        - timesSent -> Integer
+    - Material Constituents
+        - virginMaterial -> Decimal
+        - layer -> Integer
+        - materialPercentage -> Decimal
+    - Component End of Life Routes
+        - orderOfPrecedence -> Integer
+    - Complete Packaging End of Life Routes
+        - orderOfPrecedence -> Integer
+    - Load Constituent
+        - quantityInLoad -> Integer
 
 ## November 23, 2023
 ### Documents
