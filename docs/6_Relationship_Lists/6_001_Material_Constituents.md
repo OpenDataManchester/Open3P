@@ -13,9 +13,9 @@ The material constituents relationship list identifies the base_material and oth
 |materialConstituentsIdentifier|`required`|UUID|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
 |materialCombinationIdentifier|`required`|UUID|The unique identifier of the materials that this component is made of. There must be an equivalent record in the `Base_Materials` OR `Materials` data.|
 |materialPurpose|`recommended`|String|Why is this base material or material being used? Use the identifier of the material purpose that this row relates to. The entry here should be drawn from the [Material Purpose Controlled List](../5_Controlled_Lists/5_003_Material_Purpose.md).|
-|virginMaterial|`recommended`|Numeric|The maximum allowable percent of the material that was newly created for the material.|
-|layer|`recommended`|Numeric|The layer associated with the material. The inner most layer (the layer closest to the product) denoted as 1, and the outermost layer is the biggest number.|
-|materialPercentage|`recommended`|Numeric|The percentage of the total materials making-up the material. For every unique material, materialPercentage should add to 100%.|
+|virginMaterial|`recommended`|Decimal|The maximum allowable percent of the material that was newly created for the material.|
+|layer|`recommended`|Integer|The layer associated with the material. The inner most layer (the layer closest to the product) denoted as 1, and the outermost layer is the biggest number.|
+|materialPercentage|`recommended`|Decimal|The percentage of the total materials making-up the material. For every unique material, materialPercentage should add to 100%.|
 
 ## Diagram
 
@@ -27,9 +27,9 @@ erDiagram
     materialConstituentsIdentifier UUID
     materialCombinationIdentifier UUID
     materialPurpose String
-    virginMaterial Numeric
-    layer Numeric
-    materialPercentage Numeric
+    virginMaterial Decimal
+    layer Integer
+    materialPercentage Decimal
   }
   MATERIAL_CONSTITUENTS }o--o{ BASE_MATERIALS : attributes
   MATERIAL_CONSTITUENTS }o--o{ MATERIALS : attributes
@@ -57,57 +57,57 @@ Material constituents should be provided as a separate csv file. The specificati
           "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
           "materialCombinationIdentifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
           "materialPurpose": "m-material-purpose-0005",
-          "virginMaterial": 100,
+          "virginMaterial": 100.0,
           "layer": 1,
-          "materialPercentage": 7
+          "materialPercentage": 7.0
         },
         {
           "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
           "materialCombinationIdentifier": "96245c85-5671-4f3d-875f-82665005e9e8",
           "materialPurpose": "m-material-purpose-0015",
-          "virginMaterial": 100,
+          "virginMaterial": 100.0,
           "layer": 2,
-          "materialPercentage": 27
+          "materialPercentage": 27.0
         },
         {
           "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
           "materialCombinationIdentifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
           "materialPurpose": "m-material-purpose-0002",
-          "virginMaterial": 100,
+          "virginMaterial": 100.0,
           "layer": 3,
-          "materialPercentage": 7
+          "materialPercentage": 7.0
         },
         {
           "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
           "materialCombinationIdentifier": "ff249e1f-5015-46b8-8655-6c920fbf2606",
           "materialPurpose": "m-material-purpose-0003",
-          "virginMaterial": 100,
+          "virginMaterial": 100.0,
           "layer": 4,
-          "materialPercentage": 18
+          "materialPercentage": 18.0
         },
         {
           "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
           "materialCombinationIdentifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
           "materialPurpose": "m-material-purpose-0002",
-          "virginMaterial": 100,
+          "virginMaterial": 100.0,
           "layer": 5,
-          "materialPercentage": 7
+          "materialPercentage": 7.0
         },
         {
           "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
           "materialCombinationIdentifier": "96245c85-5671-4f3d-875f-82665005e9e8",
           "materialPurpose": "m-material-purpose-0015",
-          "virginMaterial": 100,
+          "virginMaterial": 100.0,
           "layer": 6,
-          "materialPercentage": 27
+          "materialPercentage": 27.0
         },
         {
           "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
           "materialCombinationIdentifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
           "materialPurpose": "m-material-purpose-0005",
-          "virginMaterial": 100,
+          "virginMaterial": 100.0,
           "layer": 7,
-          "materialPercentage": 7
+          "materialPercentage": 7.0
         },
       ]
     } 
@@ -134,8 +134,8 @@ Material constituents should be provided as a separate csv file. The specificati
         "category": "structure",
         "detailed": "Providing strength and stability."
       },
-      "virginMaterial": 100,
+      "virginMaterial": 100.0,
       "layer": null,
-      "materialPercentage": 100
+      "materialPercentage": 100.0
     }
     ```

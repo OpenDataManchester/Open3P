@@ -25,25 +25,25 @@ The complete packaging schema contains information regarding the complete packag
 |completePackagingEndOfLifeRoutes|`recommended`|List|The information regarding this complete packaging's proposed end of life routes. The entries should be the [complete packaging end of life routes](../6_Relationship_Lists/6_008_Complete_Packaging_End_of_Life_Routes.md) identifiers.|
 |recyclability|`recommended`|Boolean|Is the complete packaging recyclable (as determined by a reputable source)? Answer as: `TRUE` for yes and `FALSE` for no.|
 |recyclabilityClaims|`recommended`|List|The information regarding this recyclability claims. The entries should be the [recyclability claims relationship list](../6_Relationship_Lists/6_006_Recyclability_Claims.md) identifiers.|
-|height|`recommended`|Numeric|The height of the complete packaging. Please see the guidelines below on how to properly measure and report the height.|
+|height|`recommended`|Decimal|The height of the complete packaging. Please see the guidelines below on how to properly measure and report the height.|
 |heightDate|`recommended`|Date|The date that the height was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
-|width|`recommended`|Numeric|The width of the complete packaging. Please see the guidelines below on how to properly measure and report the width.|
+|width|`recommended`|Decimal|The width of the complete packaging. Please see the guidelines below on how to properly measure and report the width.|
 |widthDate|`recommended`|Date|The date that the width was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
-|depth|`recommended`|Numeric|The depth of the complete packaging. Please see the guidelines below on how to properly measure and report the depth.|
+|depth|`recommended`|Decimal|The depth of the complete packaging. Please see the guidelines below on how to properly measure and report the depth.|
 |depthDate|`recommended`|Date|The date that the depth was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
-|volume|`recommended`|Numeric|Using the height, width, and depth found using the measurement guidelines, calculate the complete packaging's volume using: `height x width x depth`.|
+|volume|`recommended`|Decimal|Using the height, width, and depth found using the measurement guidelines, calculate the complete packaging's volume using: `height x width x depth`.|
 |volumeDate|`recommended`|Date|The date that the volume was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
-|weight|`required`|Numeric|The weight of the complete packaging.|
-|weightTolerance|`required`|Numeric|The threshold of weight that complete packaging can vary by. This can be given in grams or percentage.|
+|weight|`required`|Decimal|The weight of the complete packaging.|
+|weightTolerance|`required`|Decimal|The threshold of weight that complete packaging can vary by. This can be given in grams or percentage.|
 |weightToleranceType|`required`|String|Either `grams` or `percentage` based on the value provided in `weightTolerance`|
 |weightDate|`recommended`|Date|The date that the weight was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
-|servingCapacity|`recommended`|Numeric|The serving capacity of the complete packaging - how much of a product that can be contained in the complete packaging.|
+|servingCapacity|`recommended`|Integer|The serving capacity of the complete packaging - how much of a product that can be contained in the complete packaging.|
 |servingCapacityDate|`recommended`|Date|The date that the serving capacity was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 |partOfMultipack|`required`|Boolean|Is the complete packaging part of a multipack? Answer as: `TRUE` for yes and `FALSE` for no.|
 |certification|`recommended`|Boolean|Does the complete packaging have a certificate (e.g. FSC, REACH, FSA etc.)? Answer as: `TRUE` for yes and `FALSE` for no.|
 |certificationClaims|`recommended`|List|The information regarding the certifications. The entries should be the [certification claims relationship list](../6_Relationship_Lists/6_005_Certification_Claims.md) identifiers.|
 |manufacturers|`recommended`|List|The information regarding the manufacturer(s). The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
-|manufacturedCountry|`recommended`|Numeric|The country the complete packaging was manufactured and/or combined in. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
+|manufacturedCountry|`recommended`|String|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iso.org/obp/ui/#search){target=_blank} as described in the [ISO 3166 international standard](https://www.iso.org/iso-3166-country-codes.html){target=_blank}.|
 |updateDate|`required`|Date|The date that the complete packaging was provided/last updated. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 |releaseDate|`recommended`|Date|The date that the complete packaging will be available to use. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 |discontinueDate|`recommended`|Date|The date that the complete packaging will no longer be available to use. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
@@ -69,25 +69,25 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
     completePackagingEndOfLifeRoutes List
     recyclability Boolean
     recyclabilityClaims List
-    height Numeric
+    height Decimal
     heightDate Date
-    width Numeric
+    width Decimal
     widthDate Date
-    depth Numeric
+    depth Decimal
     depthDate Date
-    volume Numeric
+    volume Decimal
     volumeDate Date
-    weight Numeric
-    weightTolerance Numeric
+    weight Decimal
+    weightTolerance Decimal
     weightToleranceType String
     weightDate Date
-    servingCapacity Numeric
+    servingCapacity Integer
     servingCapacityDate Date
     partOfMultipack Boolean
     certification Boolean
     certificationClaims List
     manufacturers List
-    manufacturedCountry Numeric
+    manufacturedCountry String
     updateDate Date
     releaseDate Date
     discontinueDate Date
@@ -171,7 +171,7 @@ Complete packaging should be provided as a separate csv file. The specification 
             "eed87ac3-6e3e-45fb-af2c-dd0f64fdb597"
         ],
         "manufacturers": [""],
-        "manufacturedCountry": 826,
+        "manufacturedCountry": "826",
         "updateDate": "2023-01-01",
         "releaseDate": "2023-01-01",
         "discontinueDate": ""

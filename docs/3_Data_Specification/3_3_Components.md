@@ -17,16 +17,16 @@ The components schema contains information regarding the individual components t
 |imageURLs|`recommended`|List|A list of URLs that links to a picture of the component. Please see the guidelines below on how to capture the image and name the URL.|
 |LOWcode|`recommended`|String|The list of waste code for **only** the component, by itself. LOW code is synonymous with European Waste Catalogue Code (EWC). For example: an empty bottle would have a LOWcode of `15 01 02`. Please use [Dsposal](https://dsposal.uk/browse/ewc) or [legislation.gov](https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made) to find the LOWcode. **Note**: The LOWcode can based on its combination with other components and the actual product contained in the completePackaging. Be sure to only include the component LOWcode. If you cannot find the code or are uncertain please enter `Uncertain`.|
 |componentConstituents|`required`|List|The information regarding the consituents that are combined to create this component. The entries should be from the [Component Constituents Relationship List](../6_Relationship_Lists/6_002_Component_Constituents.md) identifier.|
-|height|`recommended`|Numeric|The height of the component. Please see the guidelines below on how to properly measure and report the height.|
+|height|`recommended`|Decimal|The height of the component. Please see the guidelines below on how to properly measure and report the height.|
 |heightDate|`recommended`|Date|The date that the height was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
-|width|`recommended`|Numeric|The width of the component. Please see the guidelines below on how to properly measure and report the width.|
+|width|`recommended`|Decimal|The width of the component. Please see the guidelines below on how to properly measure and report the width.|
 |widthDate|`recommended`|Date|The date that the width was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
-|depth|`recommended`|Numeric|The depth of the component. Please see the guidelines below on how to properly measure and report the depth.|
+|depth|`recommended`|Decimal|The depth of the component. Please see the guidelines below on how to properly measure and report the depth.|
 |depthDate|`recommended`|Date|The date that the depth was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
-|volume|`recommended`|Numeric|The amount of space the component takes up. Note: this is related to the size of the component and is different to capacity. Using the height, width, and depth found using the measurement guidelines, calculate the component’s volume using: `height x width x depth`.|
+|volume|`recommended`|Decimal|The amount of space the component takes up. Note: this is related to the size of the component and is different to capacity. Using the height, width, and depth found using the measurement guidelines, calculate the component’s volume using: `height x width x depth`.|
 |volumeDate|`recommended`|Date|The date that the volume was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
-|weight|`required`|Numeric|The weight of the component.|
-|weightTolerance|`required`|Numeric|The threshold of weight that components can vary by. This is given as +/- x%.|
+|weight|`required`|Decimal|The weight of the component.|
+|weightTolerance|`required`|Decimal|The threshold of weight that components can vary by. This is given as +/- value.|
 |weightToleranceType|`required`|String|Either `grams` or `percentage` based on the value provided in `weightTolerance`|
 |weightDate|`recommended`|Date|The date that the weight was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 |shape|`recommended`|String|What is the shape of the component? The entry should contain the [shape controlled list](../5_Controlled_Lists/5_006_Shape.md) identifier for the component.|
@@ -39,14 +39,14 @@ The components schema contains information regarding the individual components t
 |loaned|`required`|Boolean|Is the component hired or loaned out as reusable packaging? Answer as: `TRUE` for yes and `FALSE` for no.|
 |reuseSystems|`recommended`|List|The system(s) that facilitates the reuse of the component  `e.g., Loop`. The entries should be the [reuse system controlled list](../5_Controlled_Lists/5_010_Reuse_System.md) identifier(s).|
 |partOfMultipack|`required`|Boolean|Is the component part of a multipack? Answer as: `TRUE` for yes and `FALSE` for no.|
-|recycledContent|`recommended`|Numeric|The minimum allowable percent of how much recycled content is included in the makeup of the component. t is ‘required’ for plastic packaging where for the purposes of this standard we refer to [UK's HM Revenue & Customs](https://www.gov.uk/guidance/work-out-which-packaging-is-subject-to-plastic-packaging-tax){target=_blank} definition of recycled content. "Recycled plastic is plastic that has been reprocessed from recovered material by using a chemical or manufacturing process. This is so it can be used either for its original purpose or for other purposes. This does not include organic recycling. Recovered material is pre-consumer plastic or post-consumer plastic that both: a) is no longer suitable to be used in the process from which it was generated and would otherwise have been used for energy recovery (for example, by incineration) or disposed of as waste (for example, by being sent to landfill); b) has been collected and recovered for use as a material input for a recycling or manufacturing process, instead of new primary material"|
+|recycledContent|`recommended`|Decimal|The minimum allowable percent of how much recycled content is included in the makeup of the component. t is ‘required’ for plastic packaging where for the purposes of this standard we refer to [UK's HM Revenue & Customs](https://www.gov.uk/guidance/work-out-which-packaging-is-subject-to-plastic-packaging-tax){target=_blank} definition of recycled content. "Recycled plastic is plastic that has been reprocessed from recovered material by using a chemical or manufacturing process. This is so it can be used either for its original purpose or for other purposes. This does not include organic recycling. Recovered material is pre-consumer plastic or post-consumer plastic that both: a) is no longer suitable to be used in the process from which it was generated and would otherwise have been used for energy recovery (for example, by incineration) or disposed of as waste (for example, by being sent to landfill); b) has been collected and recovered for use as a material input for a recycling or manufacturing process, instead of new primary material"|
 |recycledContentClaims|`required`|List|The information regarding the recycled contents. The entries should be the [recycled content claims relationship list](../6_Relationship_Lists/6_009_Recycled_Content_Claims.md) indentifiers.|
 |recyclability|`recommended`|Boolean|Is the component recyclable (as determined by a reputable source)? Answer as: `TRUE` for yes and `FALSE` for no.|
 |recyclabilityClaims|`recommended`|List|The information regarding this recyclability claims. The entries should be the [recyclability claims relationship list](../6_Relationship_Lists/6_006_Recyclability_Claims.md) identifiers.|
 |certification|`recommended`|Boolean|Does the component have a certificate (e.g. FSC, REACH, FSA etc.)? Answer as: `TRUE` for yes and `FALSE` for no.|
 |certificationClaims|`recommended`|List|The information regarding the certifications. The entries should be the [certification claims relationship list](../6_Relationship_Lists/6_005_Certification_Claims.md) identifiers.|
 |manufacturers|`recommended`|List|The information regarding the manufacturer(s). The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
-|manufacturedCountry|`recommended`|Numeric|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
+|manufacturedCountry|`recommended`|String|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iso.org/obp/ui/#search){target=_blank} as described in the [ISO 3166 international standard](https://www.iso.org/iso-3166-country-codes.html){target=_blank}.|
 |updateDate|`required`|Date|The date that the component was provided/last updated. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 |releaseDate|`recommended`|Date|The date that the component will be available to use. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 |discontinueDate|`recommended`|Date|The date that the component will no longer be available to use. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
@@ -64,16 +64,17 @@ MATERIALS }o--o{ COMPONENTS : component_constituents
     imageURLs List
     LOWcode String
     componentConstituents List
-    height Numeric
+    height Decimal
     heightDate Date
-    width Numeric
+    width Decimal
     widthDate Date
-    depth Numeric
+    depth Decimal
     depthDate Date
-    volume Numeric
+    volume Decimal
     volumeDate Date
-    weight Numeric
-    weightTolerance Numeric
+    weight Decimal
+    weightTolerance Decimal
+    weightToleranceType String
     weightDate Date
     shape String
     function String
@@ -85,8 +86,8 @@ MATERIALS }o--o{ COMPONENTS : component_constituents
     loaned Boolean
     reuseSystems String
     manufacturers List
-    manufacturedCountry Numeric
-    recycledContent Numeric
+    manufacturedCountry String
+    recycledContent Decimal
     recycledContentClaims List
     recyclability Boolean
     recyclabilityClaims List
@@ -146,15 +147,15 @@ Components should be provided as a separate csv file. The specification of this 
         "componentConstituents": [
             "DCEE1F88-A83B-5BBC-D2D9-6A862B344977"
         ],
-        "height": 50,
+        "height": 50.0,
         "heightDate": "2022-08-01",
-        "width": 220,
+        "width": 220.0,
         "widthDate": "2022-08-01",
-        "depth": 170,
+        "depth": 170.0,
         "depthDate": "2022-08-01",
-        "volume": 1870,
+        "volume": 1870.0,
         "volumeDate": "2022-08-01",
-        "weight": 23,
+        "weight": 23.0,
         "weightTolerance": 1.5,
         "weightToleranceType": "grams",
         "weightDate": "2022-08-01",
@@ -185,7 +186,7 @@ Components should be provided as a separate csv file. The specification of this 
             "eed87ac3-6e3e-45fb-af2c-dd0f64fdb597"
         ],
         "manufacturers": [""],
-        "manufacturedCountry": 372,
+        "manufacturedCountry": "372",
         "updateDate": "2022-08-01",
         "releaseDate": "2022-08-01",
         "discontinueDate": ""
