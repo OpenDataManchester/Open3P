@@ -16,7 +16,7 @@ All the complete packaging from different levels (primary, secondary, transit et
 |externalIdentifiers|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the load catalogue in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
 |loadIdentifier|`required`|UUID|The unique identifier of the created load. A globally unique identifier. See identifiers section for information on how to construct this identifier.|
 |packagingItems|`required`|List|The complete packaging and/or the multipack identifiers used to create the load. There must be an equivalent record in the `Complete Packaging` or `Multipack` data.|
-|quantityInLoad|`required`|Numeric|Number of units for the packaging items found in a load that this row corresponds to.|
+|quantityInLoad|`required`|Integer|Number of units for the packaging items found in a load that this row corresponds to.|
 |level|`required`|String|The intended use of the component for the packaging. The entry here should be drawn from the [level controlled list](../5_Controlled_Lists/5_015_Level.md).|
 |updateDate|`required`|Date|The date that the load catalogue was provided/last updated. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 
@@ -38,7 +38,7 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : within
     externalIdentifiers Dictionary
     loadIdentifier UUID
     packagingItems List
-    quantityInLoad Numeric
+    quantityInLoad Integer
     level String
     updateDate Date
   }
@@ -69,7 +69,7 @@ Loads should be provided as a separate csv file. The specification of this csv f
         },
       "loadIdentifiers": "CA88F5CE-2D09-AFE0-08D7-44804780F924",
       "packagingItems": "346C5546-282B-C040-CE74-DD0DD4688C0B",
-      "quantityInLoad": "72",
+      "quantityInLoad": 72,
       "level": {
         "identifier":"lc-level-0001",
         "category":"primary",
