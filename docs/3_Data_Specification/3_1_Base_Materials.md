@@ -19,7 +19,7 @@ The base materials schema contains information regarding the core materials. The
 |certificationClaims|`recommended`|List|The information regarding the certification. The entries should be the [Certification Claims Relationship List](../6_Relationship_Lists/6_005_Certification_Claims.md) identifiers.|
 |manufacturers|`recommended`|List|The information regarding the manufacturer(s). The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
 |manufacturedCountry|`recommended`|Numeric|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
-|updateDate|`required`|String|The date that the base material was provided/last updated. Use the format `dd/mm/yyyy`.|
+|updateDate|`required`|Date|The date that the base material was provided/last updated. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 
 ## Diagram
 
@@ -35,7 +35,7 @@ erDiagram
     certificationClaims List
     manufacturers List
     manufacturedCountry Numeric
-    updateDate String
+    updateDate Date
   }
   BASE_MATERIALS }o..o{ CONTROLLED_LISTS : attributes
   BASE_MATERIALS }o--o{ MATERIALS : material_constituents
@@ -71,10 +71,10 @@ Base materials should be provided as a separate csv file. The specification of t
         },
       "certification": "TRUE",
       "certificationClaims": ["1","35"],
-      "certificationDate": "01/08/2022",
+      "certificationDate": "2022-08-01",
       "manufacturers": [""],
       "manufacturedCountry": 724,
-      "updateDate": "01/08/2022",
+      "updateDate": "2022-08-01",
     }
     ```
 === "JSON #2"
@@ -101,14 +101,14 @@ Base materials should be provided as a separate csv file. The specification of t
           "category":"FSA",
           "detailed":"The Food Standards Agency (FSA) is the independent government department working to protect public health and consumers’ wider interests in relation to food in England, Wales and Northern Ireland."
         },
-        "certificationDate": "01/08/2022",
+        "certificationDate": "2022-08-01",
       }],
       "manufacturers": [""],
       "manufacturedCountry": {
         "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
         "Numeric": 826
       },
-      "updateDate": "01/08/2022",
+      "updateDate": "2022-08-01",
     }
     ```
 === "CSV download"
