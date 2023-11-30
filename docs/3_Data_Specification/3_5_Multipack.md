@@ -21,9 +21,9 @@ The multipack schema contains information regarding the multipacks that are used
 |identicalQuantity|`required`|Numeric|Number of identical units for the unique complete packaging item or a component this row corresponds to.|
 |manufacturers|`recommended`|List|The information regarding the manufacturer(s). The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
 |manufacturedCountry|`recommended`|Numeric|The country the multipack was manufactured and/or combined. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
-|updateDate|`required`|String|The date that the multipack was provided/last updated. Use the format `dd/mm/yyyy`.|
-|releaseDate|`recommended`|String|The date that the component will be available to use. Use the format `dd/mm/yyyy`.|
-|discontinueDate|`recommended`|String|The date that the component will no longer be available to use. Use the format `dd/mm/yyyy`.|
+|updateDate|`required`|Date|The date that the multipack was provided/last updated. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
+|releaseDate|`recommended`|Date|The date that the component will be available to use. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
+|discontinueDate|`recommended`|Date|The date that the component will no longer be available to use. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 
 ## Diagram
 
@@ -42,9 +42,9 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
     identicalQuantity Numeric
     manufacturers List
     manufacturedCountry Numeric
-    updateDate String
-    releaseDate String
-    discontinueDate String
+    updateDate Date
+    releaseDate Date
+    discontinueDate Date
   }
   MULTIPACK }o--o{ RELATIONSHIP_LISTS : attributes
   COMPLETE_PACKAGING }o..o{ LOADS : load_constituents
@@ -79,8 +79,8 @@ Multipack should be provided as a separate csv file. The specification of this c
       "identicalQuantity": "4",
       "manufacturers": [""],
       "manufacturedCountry": 826,
-      "updateDate": "01/08/2022",
-      "releaseDate": "01/08/2022",
+      "updateDate": "2022-08-01",
+      "releaseDate": "2022-08-01",
       "discontinueDate": "",
     }
     ```
