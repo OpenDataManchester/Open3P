@@ -1,11 +1,11 @@
 ---
-title: Multipack
+title: Multipacks
 description: Multipacks contain multiple identical packaging items within Open 3P.
 ---
 
-# Multipack
+# Multipacks
 
-The multipack schema contains information regarding the multipacks that are used to create loads. These are created from a number of either identical or different complete packages from the complete packaging schema.
+The multipacks schema contains information regarding the multipacks that are used to create loads. These are created from a number of either identical or different complete packages from the complete packaging schema.
 
 **Note:** The multipack portion is optional (only applies to multipacks). If the complete packaging or component is *not* in a multipack, all of the fields below are optional. 
 
@@ -18,9 +18,9 @@ The multipack schema contains information regarding the multipacks that are used
 |externalIdentifiers|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the multipack in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
 |multipackConstituentsIdentifiers|`required`|List|The information regarding the consituents that are combined to create this multipack. The entries should be from the [Multipack Constituents Relationship List](../6_Relationship_Lists/6_004_Multipack_Constituents.md) identifier.|
 |tier|`recommended`|Integer|The tier associated with the multipack. The inner most tier denoted as 1, and the outermost tier is the biggest number.|
-|identicalQuantity|`required`|Numeric|Number of identical units for the unique complete packaging item or a component this row corresponds to.|
+|identicalQuantity|`required`|Integer|Number of identical units for the unique complete packaging item or a component this row corresponds to.|
 |manufacturers|`recommended`|List|The information regarding the manufacturer(s). The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
-|manufacturedCountry|`recommended`|Numeric|The country the multipack was manufactured and/or combined. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
+|manufacturedCountry|`recommended`|String|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iso.org/obp/ui/#search){target=_blank} as described in the [ISO 3166 international standard](https://www.iso.org/iso-3166-country-codes.html){target=_blank}.|
 |updateDate|`required`|Date|The date that the multipack was provided/last updated. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 |releaseDate|`recommended`|Date|The date that the component will be available to use. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 |discontinueDate|`recommended`|Date|The date that the component will no longer be available to use. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
@@ -39,9 +39,9 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
     externalIdentifiers Dictionary
     multipackConstituentsIdentifiers List
     tier String
-    identicalQuantity Numeric
+    identicalQuantity Integer
     manufacturers List
-    manufacturedCountry Numeric
+    manufacturedCountry String
     updateDate Date
     releaseDate Date
     discontinueDate Date
@@ -75,10 +75,10 @@ Multipack should be provided as a separate csv file. The specification of this c
         },
       "multipackIdentifier": "346C5546-282B-C040-CE74-DD0DD4688C0B",
       "packagingItems": "C29B4703-121C-7552-D905-FD5AB263D611",
-      "tier": "1",
-      "identicalQuantity": "4",
+      "tier": 1,
+      "identicalQuantity": 4,
       "manufacturers": [""],
-      "manufacturedCountry": 826,
+      "manufacturedCountry": "826",
       "updateDate": "2022-08-01",
       "releaseDate": "2022-08-01",
       "discontinueDate": "",
