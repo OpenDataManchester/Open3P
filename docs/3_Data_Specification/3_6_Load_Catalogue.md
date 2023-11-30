@@ -18,7 +18,7 @@ All the complete packaging from different levels (primary, secondary, transit et
 |packagingItems|`required`|List|The complete packaging and/or the multipack identifiers used to create the load. There must be an equivalent record in the `Complete Packaging` or `Multipack` data.|
 |quantityInLoad|`required`|Numeric|Number of units for the packaging items found in a load that this row corresponds to.|
 |level|`required`|String|The intended use of the component for the packaging. The entry here should be drawn from the [level controlled list](../5_Controlled_Lists/5_015_Level.md).|
-|updateDate|`required`|String|The date that the load catalogue was provided/last updated. Use the format `dd/mm/yyyy`.|
+|updateDate|`required`|Date|The date that the load catalogue was provided/last updated. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 
 ## Diagram
 
@@ -40,7 +40,7 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : within
     packagingItems List
     quantityInLoad Numeric
     level String
-    updateDate String
+    updateDate Date
   }
   LOAD_CATALOGUE }o..o{ CONTROLLED_LISTS : attributes
   LOAD_CATALOGUE }o--o{ LOAD : within
@@ -75,7 +75,7 @@ Loads should be provided as a separate csv file. The specification of this csv f
         "category":"primary",
         "detailed":"The individual container that you store goods in to sell to consumers. This is called a "sales unit". For example, if you sell peas in steel tins with paper labels, the primary packaging is "steel tin" and "paper label"."
       },
-      "updateDate": "01/08/2022",
+      "updateDate": "2023-01-01",
     }
     ```
 === "CSV download"
