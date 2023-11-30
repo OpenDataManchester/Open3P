@@ -10,8 +10,8 @@ The component constituents relationship list identifies the materials that are c
 ## Data
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
-|componentConstituentsIdentifier|`required`|String|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
-|materialCombinationIdentifier|`required`|String|The unique identifier of the materials that this component is made of. There must be an equivalent record in the `Materials` OR `Components` data.|
+|componentConstituentsIdentifier|`required`|UUID|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
+|materialCombinationIdentifier|`required`|UUID|The unique identifier of the materials that this component is made of. There must be an equivalent record in the `Materials` OR `Components` data.|
 
 ## Diagram
 
@@ -19,8 +19,8 @@ The component constituents relationship list identifies the materials that are c
 erDiagram
   COMPONENTS }o..o{ COMPONENT_CONSTITUENTS : within
   COMPONENT_CONSTITUENTS {
-    componentConstituentsIdentifier String
-    componentCombinationIdentifier String
+    componentConstituentsIdentifier UUID
+    componentCombinationIdentifier UUID
   }
   COMPONENT_CONSTITUENTS }o--o{ MATERIALS : attributes
   COMPONENT_CONSTITUENTS }o--o{ COMPONENTS : attributes
