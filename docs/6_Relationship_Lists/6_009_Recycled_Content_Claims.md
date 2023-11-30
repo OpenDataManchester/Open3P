@@ -13,7 +13,7 @@ The recycled content claims relationship list identifies the document that detai
 |recycledContentIdentifier|`required`|String|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
 |recycledContentEvidenceType|`recommended`|String|What type of document provides the information regarding the claim? The entry should be the [recycled content evidence type](../5_Controlled_Lists/5_011_Recycled_Content_Evidence_Type.md) identifier.|
 |recycledContentEvidenceReference|`recommended`|String|An accompanying reference number associated with the recycled content evidence type for the component.|
-|recycledContentIssueDate|`recommended`|String|The date that the recycled content evidence was issued. Use the format `dd/mm/yyyy`.|
+|recycledContentIssueDate|`recommended`|Date|The date that the recycled content evidence was issued. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 
 ## Diagram
 
@@ -25,7 +25,7 @@ erDiagram
     recycledContentIdentifier String
     recycledContentEvidenceType String
     recycledContentEvidenceReference String
-    recycledContentIssueDate String
+    recycledContentIssueDate Date
   }
   RECYCLED_CONTENT_CLAIMS }o--o{ CONTROLLED_LISTS : attributes
   CONTROLLED_LISTS {
@@ -49,6 +49,6 @@ Recycled content claims should be provided as a separate csv file. The specifica
       "recycledContentIdentifier": "23e8251a-4fe6-4b25-9966-b08acac9ba34",
       "recycledContentEvidenceType": "c-recycled-evidence-0001",
       "recycledContentEvidenceReference": "ABC-123-Example",
-      "recycledContentIssueDate": "01/08/2022"
+      "recycledContentIssueDate": "2022-08-01"
     }
     ```

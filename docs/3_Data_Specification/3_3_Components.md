@@ -18,17 +18,17 @@ The components schema contains information regarding the individual components t
 |LOWcode|`recommended`|String|The list of waste code for **only** the component, by itself. LOW code is synonymous with European Waste Catalogue Code (EWC). For example: an empty bottle would have a LOWcode of `15 01 02`. Please use [Dsposal](https://dsposal.uk/browse/ewc) or [legislation.gov](https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made) to find the LOWcode. **Note**: The LOWcode can based on its combination with other components and the actual product contained in the completePackaging. Be sure to only include the component LOWcode. If you cannot find the code or are uncertain please enter `Uncertain`.|
 |componentConstituents|`required`|List|The information regarding the consituents that are combined to create this component. The entries should be from the [Component Constituents Relationship List](../6_Relationship_Lists/6_002_Component_Constituents.md) identifier.|
 |height|`recommended`|Numeric|The height of the component. Please see the guidelines below on how to properly measure and report the height.|
-|heightDate|`recommended`|String|The date that the height was last verified/measured. Use the format `dd/mm/yyyy`.|
+|heightDate|`recommended`|Date|The date that the height was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 |width|`recommended`|Numeric|The width of the component. Please see the guidelines below on how to properly measure and report the width.|
-|widthDate|`recommended`|String|The date that the width was last verified/measured. Use the format `dd/mm/yyyy`.|
+|widthDate|`recommended`|Date|The date that the width was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 |depth|`recommended`|Numeric|The depth of the component. Please see the guidelines below on how to properly measure and report the depth.|
-|depthDate|`recommended`|String|The date that the depth was last verified/measured. Use the format `dd/mm/yyyy`.|
+|depthDate|`recommended`|Date|The date that the depth was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 |volume|`recommended`|Numeric|The amount of space the component takes up. Note: this is related to the size of the component and is different to capacity. Using the height, width, and depth found using the measurement guidelines, calculate the component’s volume using: `height x width x depth`.|
-|volumeDate|`recommended`|String|The date that the volume was last verified/measured. Use the format `dd/mm/yyyy`.|
+|volumeDate|`recommended`|Date|The date that the volume was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 |weight|`required`|Numeric|The weight of the component.|
 |weightTolerance|`required`|Numeric|The threshold of weight that components can vary by. This is given as +/- x%.|
 |weightToleranceType|`required`|String|Either `grams` or `percentage` based on the value provided in `weightTolerance`|
-|weightDate|`recommended`|String|The date that the weight was last verified/measured. Use the format `dd/mm/yyyy`.|
+|weightDate|`recommended`|Date|The date that the weight was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 |shape|`recommended`|String|What is the shape of the component? The entry should contain the [shape controlled list](../5_Controlled_Lists/5_006_Shape.md) identifier for the component.|
 |function|`recommended`|String|What is the function of the component? The entry should contain the [function controlled list](../5_Controlled_Lists/5_004_Function.md) identifier for the component.|
 |flexibility|`recommended`|String|Whether the component is considered flexible or rigid. The entry should be the [flexibility controlled list](../5_Controlled_Lists/5_007_Flexibility.md) identifier.|
@@ -47,9 +47,9 @@ The components schema contains information regarding the individual components t
 |certificationClaims|`recommended`|List|The information regarding the certifications. The entries should be the [certification claims relationship list](../6_Relationship_Lists/6_005_Certification_Claims.md) identifiers.|
 |manufacturers|`recommended`|List|The information regarding the manufacturer(s). The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
 |manufacturedCountry|`recommended`|Numeric|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
-|updateDate|`required`|String|The date that the component was provided/last updated. Use the format `dd/mm/yyyy`.|
-|releaseDate|`recommended`|String|The date that the component will be available to use. Use the format `dd/mm/yyyy`.|
-|discontinueDate|`recommended`|String|The date that the component will no longer be available to use. Use the format `dd/mm/yyyy`.|
+|updateDate|`required`|Date|The date that the component was provided/last updated. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
+|releaseDate|`recommended`|Date|The date that the component will be available to use. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
+|discontinueDate|`recommended`|Date|The date that the component will no longer be available to use. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 
 ## Diagram
 
@@ -65,16 +65,16 @@ MATERIALS }o--o{ COMPONENTS : component_constituents
     LOWcode String
     componentConstituents List
     height Numeric
-    heightDate String
+    heightDate Date
     width Numeric
-    widthDate String
+    widthDate Date
     depth Numeric
-    depthDate String
+    depthDate Date
     volume Numeric
-    volumeDate String
+    volumeDate Date
     weight Numeric
     weightTolerance Numeric
-    weightDate String
+    weightDate Date
     shape String
     function String
     flexibility String
@@ -93,9 +93,9 @@ MATERIALS }o--o{ COMPONENTS : component_constituents
     partOfMultipack Boolean
     certification Boolean
     certificationClaims List
-    updateDate String
-    releaseDate String
-    discontinueDate String
+    updateDate Date
+    releaseDate Date
+    discontinueDate Date
   }
   COMPONENTS }o..o{ CONTROLLED_LISTS : attributes
   COMPONENTS }o..o{ RELATIONSHIP_LISTS : attributes
@@ -147,17 +147,17 @@ Components should be provided as a separate csv file. The specification of this 
             "DCEE1F88-A83B-5BBC-D2D9-6A862B344977"
         ],
         "height": 50,
-        "heightDate": "01/08/2022",
+        "heightDate": "2022-08-01",
         "width": 220,
-        "widthDate": "01/08/2022",
+        "widthDate": "2022-08-01",
         "depth": 170,
-        "depthDate": "01/08/2022",
+        "depthDate": "2022-08-01",
         "volume": 1870,
-        "volumeDate": "01/08/2022",
+        "volumeDate": "2022-08-01",
         "weight": 23,
         "weightTolerance": 1.5,
         "weightToleranceType": "grams",
-        "weightDate": "01/08/2022",
+        "weightDate": "2022-08-01",
         "shape": "c-shape-0004",
         "function": "function-0041",
         "flexibility": "c-flexibility-0002",
@@ -186,8 +186,8 @@ Components should be provided as a separate csv file. The specification of this 
         ],
         "manufacturers": [""],
         "manufacturedCountry": 372,
-        "updateDate": "01/08/2022",
-        "releaseDate": "01/08/2022",
+        "updateDate": "2022-08-01",
+        "releaseDate": "2022-08-01",
         "discontinueDate": ""
     }
     ```

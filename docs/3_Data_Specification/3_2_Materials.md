@@ -19,12 +19,12 @@ The materials schema contains information regarding the materials that are used 
 |areaDensityUnit|`recommended`|String|Either `gsm` or `m^2/kg` to describe the area density unit of measure.|
 |areaDensityTolerance|`recommended`|Numeric|The threshold of area density that the material can vary by. This is given as a +/- value.|
 |areaDensityToleranceType|`recommended`|String|Either `unit` or `percentage` based on the value provided in `areaDensityTolerance`. Where `unit` is equal to the value provided in `areaDensityUnit`.|
-|areaDensityDate|`recommended`|String|The date that the area density was last verified/measured. Use the format `dd/mm/yyyy`.|
+|areaDensityDate|`recommended`|Date|The date that the area density was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 |certification|`recommended`|Boolean|Does the material have a certificate (e.g. FSC, REACH, FSA etc.)? Answer as: `TRUE` for yes and `FALSE` for no.|
 |certificationClaims|`recommended`|List|The information regarding the certification. The entries should be the [Certification Claims Relationship List](../6_Relationship_Lists/6_005_Certification_Claims.md) identifiers.|
 |manufacturers|`recommended`|List|The information regarding the manufacturer(s). The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
 |manufacturedCountry|`recommended`|Numeric|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
-|updateDate|`required`|String|The date that the material was provided/last updated. Use the format `dd/mm/yyyy`.|
+|updateDate|`required`|Date|The date that the material was provided/last updated. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 
 ## Diagram
 
@@ -41,12 +41,12 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
     areaDensityUnit String
     areaDensityTolerance Numeric
     areaDensityToleranceType String
-    areaDensityDate String
+    areaDensityDate Date
     certification Boolean
     certificationClaims List
     manufacturers List
     manufacturedCountry Numeric
-    updateDate String
+    updateDate Date
   }
   MATERIALS }o..o{ CONTROLLED_LISTS : attributes
   MATERIALS }o--o{ COMPONENTS : component_constituents
@@ -83,12 +83,12 @@ Materials should be provided as a separate csv file. The specification of this c
       "areaDensityUnit": "gsm",
       "areaDensityTolerance": "3.3",
       "areaDensityToleranceType": "percentage",
-      "areaDensityDate": "01/08/2022",
+      "areaDensityDate": "2022-08-01",
       "certification": "TRUE",
       "certificationClaims": ["1"],
       "manufacturers": [""],
       "manufacturedCountry": 826,
-      "updateDate": "01/08/2022",
+      "updateDate": "2022-08-01",
     }
     ```
 === "JSON #2"
@@ -124,7 +124,7 @@ Materials should be provided as a separate csv file. The specification of this c
               "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
               "Numeric": 826
             },
-            "updateDate": "01/08/2022",
+            "updateDate": "2022-08-01",
           },
           "materialPurpose": {
             "identifier": "m-material-purpose-0005",
@@ -168,7 +168,7 @@ Materials should be provided as a separate csv file. The specification of this c
               "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
               "Numeric": 826
             },
-            "updateDate": "01/08/2022",
+            "updateDate": "2022-08-01",
           },
           "materialPurpose": {
             "identifier": "m-material-purpose-0002",
@@ -212,7 +212,7 @@ Materials should be provided as a separate csv file. The specification of this c
               "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
               "Numeric": 826
             },
-            "updateDate": "01/08/2022",
+            "updateDate": "2022-08-01",
           },
           "materialPurpose": {
             "identifier": "m-material-purpose-0002",
@@ -256,7 +256,7 @@ Materials should be provided as a separate csv file. The specification of this c
               "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
               "Numeric": 826
             },
-            "updateDate": "01/08/2022",
+            "updateDate": "2022-08-01",
           },
           "materialPurpose": {
             "identifier": "m-material-purpose-0005",
@@ -277,7 +277,7 @@ Materials should be provided as a separate csv file. The specification of this c
       "areaDensity": "gsm",
       "areaDensityTolerance": "6",
       "areaDensityToleranceType": "unit",
-      "areaDensityDate": "01/08/2022",
+      "areaDensityDate": "2022-08-01",
       "certification": "FALSE",
       "certificationClaims": null,
       "manufacturers": [""],
@@ -285,7 +285,7 @@ Materials should be provided as a separate csv file. The specification of this c
         "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
         "Numeric": 826
       },
-      "updateDate": "01/08/2022"
+      "updateDate": "2022-08-01"
     }
     ```
 === "CSV download"

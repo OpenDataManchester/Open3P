@@ -6,6 +6,11 @@ title: Latest Updates
 # Latest Updates
 A document that contains all the changes made to the standard.
 
+## November 30, 2023
+### Documents
+ - Changed ALL date related fields to ISO 8601 standard, changed the format to `Date`.
+ - Updated ALL JSON dates to read as `yyyy-mm-dd`. 
+
 ## November 23, 2023
 ### Documents
  - Reworked data diagrams to show the constituents lists as the edges between the tables.
