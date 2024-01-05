@@ -10,7 +10,7 @@ The base materials schema contains information regarding the materials at the ve
 !!! question "Frequently Asked Question"
 
     Do all packaging items need to contain a `Base Material`?  
-    Yes - base materials is what all packaging in made from. The base material(s) can be as detailed or as minimal as required. Please see [Data flow](../1_Start_Here/1_3_Data_Flow.md) for more information.
+    Yes, every packaging item must include a Base Material. This foundational component serves as the building block for all packaging materials. The level of detail in specifying base material(s) can vary based on requirements. For more in-depth insights, refer to the Data Flow section.
 
 ## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|
