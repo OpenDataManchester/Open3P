@@ -6,6 +6,10 @@ title: Latest Updates
 # Latest Updates
 A document that contains all the changes made to the standard.
 
+## January 5, 2024
+### Documents
+ - Fixed typo in sidebar ~~Goverance~~ to Governance
+
 ## November 30, 2023
 ### Documents
  - Changed ALL date related fields to ISO 8601 standard, changed the format to `Date`.
