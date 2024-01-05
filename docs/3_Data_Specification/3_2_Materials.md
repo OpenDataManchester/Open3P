@@ -11,7 +11,7 @@ The materials schema contains information regarding the materials that are used 
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
 |identifier|`required`|UUID|The globally unique identifier for the created material unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
-|materialName|`required`|String|The name of the material this row relates to. (e.g., Aluminium 3000 Series or Borosilicate glass)|
+|name|`required`|String|The name of the material this row relates to. (e.g., Aluminium 3000 Series or Borosilicate glass)|
 |externalIdentifiers|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the material in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
 |materialConstituents|`required`|List|The information regarding the consituents that are combined to create this material. The entries should be from the [Material Constituents Relationship List](../6_Relationship_Lists/6_001_Material_Constituents.md) identifier.|
 |combinationPurpose|`recommended`|String|Why is this material being used? Use the identifier of the function that this row relates to. The entry here should be drawn from the [Function Controlled List](../5_Controlled_Lists/5_004_Function.md).|
@@ -33,7 +33,7 @@ erDiagram
 BASE_MATERIALS }o--o{ MATERIALS : material_constituents
   MATERIALS {
     identifier UUID
-    materialName String
+    name String
     externalIdentifiers Dictionary
     materialConstituents List
     combinationPurpose String
@@ -73,7 +73,7 @@ Materials should be provided as a separate csv file. The specification of this c
     --Food grade synthetic polyethylene terephthalate (PET) made in the UK. Only one base material.
     {
       "identifier": "DCEE1F88-A83B-5BBC-D2D9-6A862B344977",
-      "materialName":"PET",
+      "name":"PET",
       "externalIdentifiers": {
         "GTIN":"123456789101",
         },
@@ -97,7 +97,7 @@ Materials should be provided as a separate csv file. The specification of this c
     --Fibre based composite material to be used for a carton - semi verbose
     {
       "identifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
-      "materialName": "Classic Carton Board - EVOH",
+      "name": "Classic Carton Board - EVOH",
       "externalIdentifiers": {
         "EAN": "0123456789101",
         "BatchNumber": "2145-23-po"
@@ -107,8 +107,8 @@ Materials should be provided as a separate csv file. The specification of this c
           "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
           "materialCombinationIdentifier": {
             "identifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
-            "baseMaterialName": "Polyethylene",
-            "baseMaterialType": {
+            "name": "Polyethylene",
+            "type": {
               "identifier":"bm-material-type-0002",
               "category":"synthetic",
               "detailed":"derived from crude oil, natural gas or coal."
@@ -153,8 +153,8 @@ Materials should be provided as a separate csv file. The specification of this c
           "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
           "materialCombinationIdentifier": {
             "identifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
-            "baseMaterialName": "Polyethylene",
-            "baseMaterialType": {
+            "name": "Polyethylene",
+            "type": {
               "identifier":"bm-material-type-0002",
               "category":"synthetic",
               "detailed":"derived from crude oil, natural gas or coal."
@@ -199,8 +199,8 @@ Materials should be provided as a separate csv file. The specification of this c
           "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
           "materialCombinationIdentifier": {
             "identifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
-            "baseMaterialName": "Polyethylene",
-            "baseMaterialType": {
+            "name": "Polyethylene",
+            "type": {
               "identifier":"bm-material-type-0002",
               "category":"synthetic",
               "detailed":"derived from crude oil, natural gas or coal."
@@ -245,8 +245,8 @@ Materials should be provided as a separate csv file. The specification of this c
           "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
           "materialCombinationIdentifier": {
             "identifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
-            "baseMaterialName": "Polyethylene",
-            "baseMaterialType": {
+            "name": "Polyethylene",
+            "type": {
               "identifier":"bm-material-type-0002",
               "category":"synthetic",
               "detailed":"derived from crude oil, natural gas or coal."
