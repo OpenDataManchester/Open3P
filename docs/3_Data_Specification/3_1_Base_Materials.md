@@ -5,7 +5,12 @@ description: Base materials are the building blocks of Open 3P.
 
 # Base Materials
 
-The base materials schema contains information regarding the core materials. These are then combined together within the materials table to create more complicated materials.
+The base materials schema contains information regarding the materials at the very start of the process of creating packaging. These are then combined together within the materials table to create more complicated materials.
+
+!!! question "Frequently Asked Question"
+
+    Do all packaging items need to contain a `Base Material`?  
+    Yes - base materials is what all packaging in made from. The base material(s) can be as detailed or as minimal as required. Please see [Data flow](../1_Start_Here/1_3_Data_Flow.md) for more information.
 
 ## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|
