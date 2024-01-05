@@ -9,6 +9,15 @@ A document that contains all the changes made to the standard.
 ## January 5, 2024
 ### Documents
  - Fixed typo in sidebar to Governance
+ - Added FAQ to base materials page
+ - Remove definitions from Key Concepts
+ - Create Glossary page
+ - Improved Data Flow page
+
+ ### Data fields
+ - Renamed baseMaterialName to name
+ - Renamed baseMaterialType to type
+ - Renamed materialName to name
 
 ## November 30, 2023
 ### Documents
