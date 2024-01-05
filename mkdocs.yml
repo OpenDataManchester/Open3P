@@ -36,6 +36,7 @@ nav:
   - Start Here: 
     - Introduction: 1_Start_Here/1_1_Introduction.md
     - Key Concepts: 1_Start_Here/1_2_Key_Concepts.md
+    - Glossary: 1_Start_Here/1_5_Glossary.md
     - Data Flow: 1_Start_Here/1_3_Data_Flow.md
     - Data Schema: 1_Start_Here/1_4_Data_Schema.md
   - Data Formats: 2_Data_Formats/2_1_Data_Formats.md
@@ -121,10 +122,12 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
-      alternate_style: true 
+      alternate_style: true
   - toc:
       permalink: True
   - attr_list
   - tables
+watch:
+  - includes
 
 
