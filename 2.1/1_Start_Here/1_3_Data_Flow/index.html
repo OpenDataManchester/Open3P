@@ -1305,14 +1305,10 @@ It is the intent of Open 3P that experts in their part of the value chain are re
     subgraph completePackages[Complete Packages]
         cp_example[complete package]
     end
-    subgraph loads[Loads]
-        lo_example[load]
-    end
     bm_cardboard --&gt; ma_cardboard
     ma_cardboard --&gt; co_cardboard
     co_cardboard --&gt; cp_example
-    co_example --&gt; cp_example
-    cp_example --&gt; lo_example</code></pre></p>
+    co_example --&gt; cp_example</code></pre></p>
 <h2 id="combining-items-to-make-complex-items">Combining items to make complex items<a class="headerlink" href="#combining-items-to-make-complex-items" title="Permanent link">&para;</a></h2>
 <p>Although some items used within the packaging value chains are simple, others are complex. Open 3P allows the combination of items at each schema level. In the example below a packaging tape is created by the combination of cellulose and adhesive. This is the used in conjunction with the cardboard box to create the complete packaging. The intent of Open 3P is for the packaging tape manufacturer to provide this information and share this along the value chain.
 <pre class="mermaid"><code>flowchart LR
