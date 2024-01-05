@@ -407,8 +407,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#introducting-basic-items" class="md-nav__link">
-    Introducting basic items
+  <a href="#introducing-basic-items" class="md-nav__link">
+    Introducing basic items
   </a>
   
 </li>
@@ -435,8 +435,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#within-schema-combinations" class="md-nav__link">
-    Within schema combinations
+  <a href="#within-core-schema-combinations" class="md-nav__link">
+    Within core schema combinations
   </a>
   
 </li>
@@ -1289,8 +1289,8 @@ It is the intent of Open 3P that experts in their part of the value chain are re
     ma_example --&gt; co_example
     co_example --&gt; cp_example
     cp_example --&gt; lo_example</code></pre></p>
-<h2 id="introducting-basic-items">Introducting basic items<a class="headerlink" href="#introducting-basic-items" title="Permanent link">&para;</a></h2>
-<p>At its most basic Open 3P allows the minimal amount of infomation to be passed along. In this example cardboard is using used as the base material, then again as the material and also as the component. At the component step the cardboard box is combined with tape to create a complete package ready to be filled by a product before being sent out on a load.
+<h2 id="introducing-basic-items">Introducing basic items<a class="headerlink" href="#introducing-basic-items" title="Permanent link">&para;</a></h2>
+<p>At its most basic Open 3P allows the minimal amount of infomation to be passed along. In this example cardboard is used as the base material and then again as the material. At the component step the cardboard box is combined with tape to create a complete package ready to be filled by a product before being sent out on a load.
 <pre class="mermaid"><code>flowchart LR
     subgraph baseMaterials[Base Materials]
         bm_cardboard[cardboard]
@@ -1314,7 +1314,7 @@ It is the intent of Open 3P that experts in their part of the value chain are re
     co_example --&gt; cp_example
     cp_example --&gt; lo_example</code></pre></p>
 <h2 id="combining-items-to-make-complex-items">Combining items to make complex items<a class="headerlink" href="#combining-items-to-make-complex-items" title="Permanent link">&para;</a></h2>
-<p>Although some items used within the packaging value chains are simple, others are complex. Open 3P allows the combination of items at each schema level.  In the example bellow a packaging tape is created by the combination of cellulose and adhesive. This is the used in conjunction with the cardboard box to create the complete packaging.
+<p>Although some items used within the packaging value chains are simple, others are complex. Open 3P allows the combination of items at each schema level. In the example below a packaging tape is created by the combination of cellulose and adhesive. This is the used in conjunction with the cardboard box to create the complete packaging. The intent of Open 3P is for the packaging tape manufacturer to provide this information and share this along the value chain.
 <pre class="mermaid"><code>flowchart LR
     subgraph baseMaterials[Base Materials]
         bm_cellulose[cellulose]
@@ -1332,19 +1332,15 @@ It is the intent of Open 3P that experts in their part of the value chain are re
     subgraph completePackages[Complete Packages]
         cp_cardboard[delivery box]
     end
-    subgraph loads[Loads]
-        lo_example[load]
-    end
     bm_cellulose --&gt; ma_tape
     bm_adhesive --&gt; ma_tape
     bm_cardboard --&gt; ma_cardboard
     ma_tape --&gt; co_tape
     ma_cardboard --&gt; co_cardboard
     co_cardboard --&gt; cp_cardboard
-    co_tape --&gt; cp_cardboard
-    cp_cardboard --&gt; lo_example</code></pre></p>
+    co_tape --&gt; cp_cardboard</code></pre></p>
 <h2 id="using-items-multiple-times">Using items multiple times<a class="headerlink" href="#using-items-multiple-times" title="Permanent link">&para;</a></h2>
-<p>Within the packaging value chain items are combined in different arrangements to create similar or completely distinct items. This can been seen below where the same sand and soda ash are used to make the two different types of glass; soda-lime glass and borosilicate glass. This information can be passed through the value chain, providing additional insights for stakeholders, clients and customers.
+<p>Within the packaging value chain items are combined in different arrangements to create similar or completely distinct items. This can been seen below where the same sand and soda ash from a manufacuturer are used to make the two different types of glass; soda-lime glass and borosilicate glass. This information can be passed through the value chain, providing additional insights for stakeholders, clients and customers.
 <pre class="mermaid"><code>flowchart LR
     subgraph baseMaterials[Base Materials]
         bm_sand[sand]
@@ -1367,10 +1363,6 @@ It is the intent of Open 3P that experts in their part of the value chain are re
         cp_example1[complete packaging]
         cp_example2[complete packaging]
     end
-    subgraph loads[Loads]
-        lo_example1[load]
-        lo_example2[load]
-    end
     bm_limestone --&gt; ma_glass1
     bm_cullet --&gt; ma_glass1
     bm_sand --&gt; ma_glass1
@@ -1381,9 +1373,7 @@ It is the intent of Open 3P that experts in their part of the value chain are re
     ma_glass1 --&gt; co_glassBottle1
     ma_glass2 --&gt; co_glassBottle2
     co_glassBottle1 --&gt; cp_example1
-    co_glassBottle2 --&gt; cp_example2
-    cp_example1 --&gt; lo_example1
-    cp_example2 --&gt; lo_example2</code></pre></p>
+    co_glassBottle2 --&gt; cp_example2</code></pre></p>
 <h2 id="creating-a-load">Creating a load<a class="headerlink" href="#creating-a-load" title="Permanent link">&para;</a></h2>
 <p>Taken as a whole the cardboard, tape and glass are combined at various points to create a wine delivery. With the addition of cork and aluminium all the materials and components can be seen.
 <pre class="mermaid"><code>flowchart LR
@@ -1440,8 +1430,8 @@ It is the intent of Open 3P that experts in their part of the value chain are re
     co_tape --&gt; cp_cardboardBox
     cp_cardboardBox --&gt; lo_wineDelivery
     cp_wineBottle --&gt; lo_wineDelivery</code></pre></p>
-<h2 id="within-schema-combinations">Within schema combinations<a class="headerlink" href="#within-schema-combinations" title="Permanent link">&para;</a></h2>
-<p>The Open 3P standards allows further complexity when combining items within a schema. This is seen below where the two materials label and &lsquo;ssolvent free print substrate&rsquo; are futher combined to create a &lsquo;printed label&rsquo;.
+<h2 id="within-core-schema-combinations">Within core schema combinations<a class="headerlink" href="#within-core-schema-combinations" title="Permanent link">&para;</a></h2>
+<p>The Open 3P standards allows further complexity when combining items within a schema. This is seen below where the two materials label and &lsquo;solvent free print substrate&rsquo; are futher combined to create a &lsquo;printed label&rsquo;.
 <pre class="mermaid"><code>flowchart LR
     subgraph baseMaterials[Base Materials]
         bm_paper[paper]
@@ -1463,9 +1453,6 @@ It is the intent of Open 3P that experts in their part of the value chain are re
     subgraph completePackages[Complete Packages]
         cp_example[complete package]
     end
-    subgraph loads[Loads]
-        lo_example[load]
-    end
     bm_paper --&gt; ma_label
     bm_adhesive --&gt; ma_label
     bm_glassine --&gt; ma_label
@@ -1477,8 +1464,7 @@ It is the intent of Open 3P that experts in their part of the value chain are re
     ma_label2 --&gt; co_bottomLabel
     co_topLabel --&gt; cp_example
     co_bottomLabel --&gt; cp_example
-    co_example --&gt; cp_example
-    cp_example --&gt; lo_example</code></pre></p>
+    co_example --&gt; cp_example</code></pre></p>
 <h2 id="laminates">Laminates<a class="headerlink" href="#laminates" title="Permanent link">&para;</a></h2>
 <p>Additionally base materials and materials can be layered in an ordered arrangement; known as lamination. In the example three base materials are layered together to create a laminate. Two of the materials are used twice within the material, with the third only being used the once.
 <pre class="mermaid"><code>flowchart LR
@@ -1496,17 +1482,13 @@ It is the intent of Open 3P that experts in their part of the value chain are re
     subgraph completePackages[Complete Packages]
         cp_shrinkwrap[shrink wrap]
     end
-    subgraph loads[Loads]
-        lo_example[load]
-    end
     bm_ep -- layer 1 --&gt; ma_shrinkwrap
     bm_eva -- layer 2 --&gt; ma_shrinkwrap
     bm_copolyester -- layer 3 --&gt; ma_shrinkwrap
     bm_eva -- layer 4 --&gt; ma_shrinkwrap
     bm_ep -- layer 5 --&gt; ma_shrinkwrap
     ma_shrinkwrap --&gt; co_shrinkwrap
-    co_shrinkwrap --&gt; cp_shrinkwrap
-    cp_shrinkwrap --&gt; lo_example</code></pre></p>
+    co_shrinkwrap --&gt; cp_shrinkwrap</code></pre></p>
 <h2 id="packaging-tier">Packaging Tier<a class="headerlink" href="#packaging-tier" title="Permanent link">&para;</a></h2>
 <p>This final example shows how the above examples are combined to create a flow for the wine bottles, with the inclusion of tiers for the packaging at the load schema.
 <pre class="mermaid"><code>flowchart LR
