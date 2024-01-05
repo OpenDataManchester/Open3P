@@ -35,8 +35,8 @@ flowchart LR
     co_example --> cp_example
     cp_example --> lo_example
 ```
-## Introducting basic items
-At its most basic Open 3P allows the minimal amount of infomation to be passed along. In this example cardboard is using used as the base material, then again as the material and also as the component. At the component step the cardboard box is combined with tape to create a complete package ready to be filled by a product before being sent out on a load.
+## Introducing basic items
+At its most basic Open 3P allows the minimal amount of infomation to be passed along. In this example cardboard is used as the base material and then again as the material. At the component step the cardboard box is combined with tape to create a complete package ready to be filled by a product before being sent out on a load.
 ``` mermaid
 flowchart LR
     subgraph baseMaterials[Base Materials]
@@ -52,17 +52,13 @@ flowchart LR
     subgraph completePackages[Complete Packages]
         cp_example[complete package]
     end
-    subgraph loads[Loads]
-        lo_example[load]
-    end
     bm_cardboard --> ma_cardboard
     ma_cardboard --> co_cardboard
     co_cardboard --> cp_example
     co_example --> cp_example
-    cp_example --> lo_example
 ```
 ## Combining items to make complex items
-Although some items used within the packaging value chains are simple, others are complex. Open 3P allows the combination of items at each schema level.  In the example bellow a packaging tape is created by the combination of cellulose and adhesive. This is the used in conjunction with the cardboard box to create the complete packaging.
+Although some items used within the packaging value chains are simple, others are complex. Open 3P allows the combination of items at each schema level. In the example below a packaging tape is created by the combination of cellulose and adhesive. This is the used in conjunction with the cardboard box to create the complete packaging. The intent of Open 3P is for the packaging tape manufacturer to provide this information and share this along the value chain.
 ``` mermaid
 flowchart LR
     subgraph baseMaterials[Base Materials]
@@ -81,9 +77,6 @@ flowchart LR
     subgraph completePackages[Complete Packages]
         cp_cardboard[delivery box]
     end
-    subgraph loads[Loads]
-        lo_example[load]
-    end
     bm_cellulose --> ma_tape
     bm_adhesive --> ma_tape
     bm_cardboard --> ma_cardboard
@@ -91,10 +84,9 @@ flowchart LR
     ma_cardboard --> co_cardboard
     co_cardboard --> cp_cardboard
     co_tape --> cp_cardboard
-    cp_cardboard --> lo_example
 ```
 ## Using items multiple times
-Within the packaging value chain items are combined in different arrangements to create similar or completely distinct items. This can been seen below where the same sand and soda ash are used to make the two different types of glass; soda-lime glass and borosilicate glass. This information can be passed through the value chain, providing additional insights for stakeholders, clients and customers.
+Within the packaging value chain items are combined in different arrangements to create similar or completely distinct items. This can been seen below where the same sand and soda ash from a manufacuturer are used to make the two different types of glass; soda-lime glass and borosilicate glass. This information can be passed through the value chain, providing additional insights for stakeholders, clients and customers.
 ``` mermaid
 flowchart LR
     subgraph baseMaterials[Base Materials]
@@ -118,10 +110,6 @@ flowchart LR
         cp_example1[complete packaging]
         cp_example2[complete packaging]
     end
-    subgraph loads[Loads]
-        lo_example1[load]
-        lo_example2[load]
-    end
     bm_limestone --> ma_glass1
     bm_cullet --> ma_glass1
     bm_sand --> ma_glass1
@@ -133,8 +121,6 @@ flowchart LR
     ma_glass2 --> co_glassBottle2
     co_glassBottle1 --> cp_example1
     co_glassBottle2 --> cp_example2
-    cp_example1 --> lo_example1
-    cp_example2 --> lo_example2
 ```
 ## Creating a load
 Taken as a whole the cardboard, tape and glass are combined at various points to create a wine delivery. With the addition of cork and aluminium all the materials and components can be seen.
@@ -194,8 +180,8 @@ flowchart LR
     cp_cardboardBox --> lo_wineDelivery
     cp_wineBottle --> lo_wineDelivery
 ```
-## Within schema combinations
-The Open 3P standards allows further complexity when combining items within a schema. This is seen below where the two materials label and 'ssolvent free print substrate' are futher combined to create a 'printed label'.
+## Within core schema combinations
+The Open 3P standards allows further complexity when combining items within a schema. This is seen below where the two materials label and 'solvent free print substrate' are futher combined to create a 'printed label'.
 ``` mermaid
 flowchart LR
     subgraph baseMaterials[Base Materials]
@@ -218,9 +204,6 @@ flowchart LR
     subgraph completePackages[Complete Packages]
         cp_example[complete package]
     end
-    subgraph loads[Loads]
-        lo_example[load]
-    end
     bm_paper --> ma_label
     bm_adhesive --> ma_label
     bm_glassine --> ma_label
@@ -233,7 +216,6 @@ flowchart LR
     co_topLabel --> cp_example
     co_bottomLabel --> cp_example
     co_example --> cp_example
-    cp_example --> lo_example
 ```
 ## Laminates
 Additionally base materials and materials can be layered in an ordered arrangement; known as lamination. In the example three base materials are layered together to create a laminate. Two of the materials are used twice within the material, with the third only being used the once.
@@ -253,9 +235,6 @@ flowchart LR
     subgraph completePackages[Complete Packages]
         cp_shrinkwrap[shrink wrap]
     end
-    subgraph loads[Loads]
-        lo_example[load]
-    end
     bm_ep -- layer 1 --> ma_shrinkwrap
     bm_eva -- layer 2 --> ma_shrinkwrap
     bm_copolyester -- layer 3 --> ma_shrinkwrap
@@ -263,7 +242,6 @@ flowchart LR
     bm_ep -- layer 5 --> ma_shrinkwrap
     ma_shrinkwrap --> co_shrinkwrap
     co_shrinkwrap --> cp_shrinkwrap
-    cp_shrinkwrap --> lo_example
 ```
 ## Packaging Tier
 This final example shows how the above examples are combined to create a flow for the wine bottles, with the inclusion of tiers for the packaging at the load schema.
