@@ -11,8 +11,8 @@ The base materials schema contains information regarding the core materials. The
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
 |identifier|`required`|UUID|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
-|baseMaterialName|`required`|String|The name of the base material this row relates to. `e.g., Polypropylene or Aluminium or Silica`|
-|baseMaterialType|`recommended`|String|Is the base material 'synthetic' or 'biobased'? Use the identifier of the material type that this row relates to. The entry here should be drawn from the [Material Type Controlled List](../5_Controlled_Lists/5_001_Material_Type.md).|
+|name|`required`|String|The name of the base material this row relates to. `e.g., Polypropylene or Aluminium or Silica`|
+|type|`recommended`|String|Is the base material 'synthetic' or 'biobased'? Use the identifier of the material type that this row relates to. The entry here should be drawn from the [Material Type Controlled List](../5_Controlled_Lists/5_001_Material_Type.md).|
 |materialChemCID|`recommended`|String|The PubChem CID for the exact base material used. The PubChem CID is PubChem's compound identifier, which is a non-zero integer for a unique chemical structure. PubChem CID can be found using their [search](https://pubchem.ncbi.nlm.nih.gov/){target=_blank}. If for some reason the PubChem CID cannot be located, consider contributing to PubChem and create the compound identifier. However, if this cannot be done, please enter `Unknown`.|
 |externalIdentifiers|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the base material in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
 |certification|`recommended`|Boolean|Does the base material have a certificate (e.g. FSC, REACH, FSA etc.)? Answer as: `TRUE` for yes and `FALSE` for no.|
@@ -27,8 +27,8 @@ The base materials schema contains information regarding the core materials. The
 erDiagram
   BASE_MATERIALS {
     identifier UUID
-    baseMaterialName String
-    baseMaterialType String
+    name String
+    type String
     materialChemCID String
     externalIdentifiers Dictionary
     certification Boolean
@@ -61,21 +61,23 @@ Base materials should be provided as a separate csv file. The specification of t
 
     ``` json linenums="1"
     --FSC accredited wood grown in Spain
-    {
-      "identifier": "a5e6b8bc-ade8-4660-857e-d397243f6b57",
-      "baseMaterialName": "Spainish Softwood",
-      "baseMaterialType": "",
-      "materialChemCID": "",
-      "externalIdentifiers": {
-        "dbPK":"152314568888",
-        },
-      "certification": true,
-      "certificationClaims": ["1","35"],
-      "certificationDate": "2022-08-01",
-      "manufacturers": [""],
-      "manufacturedCountry": "724",
-      "updateDate": "2022-08-01",
-    }
+    [
+      {
+        "identifier": "a5e6b8bc-ade8-4660-857e-d397243f6b57",
+        "name": "Spainish Softwood",
+        "type": "",
+        "materialChemCID": "",
+        "externalIdentifiers": {
+          "dbPK":"152314568888"
+          },
+        "certification": true,
+        "certificationClaims": ["1","35"],
+        "certificationDate": "2022-08-01",
+        "manufacturers": [""],
+        "manufacturedCountry": "724",
+        "updateDate": "2022-08-01"
+      }
+    ]
     ```
 === "JSON #2"
 
@@ -83,8 +85,8 @@ Base materials should be provided as a separate csv file. The specification of t
     --Food grade synthetic polyethylene terephthalate (PET) made in the UK - verbose data structure
     {
       "identifier": "A4BAE07C-1847-CD8E-C933-6FD30478423B",
-      "baseMaterialName": "PET",
-      "baseMaterialType": {
+      "name": "PET",
+      "type": {
         "identifier":"bm-material-type-0002",
         "category":"synthetic",
         "detailed":"derived from crude oil, natural gas or coal."
@@ -110,7 +112,7 @@ Base materials should be provided as a separate csv file. The specification of t
         "Alpha2": "GB",
         "Alpha3": "GBR"
       },
-      "updateDate": "2022-08-01",
+      "updateDate": "2022-08-01"
     }
     ```
 === "CSV download"
