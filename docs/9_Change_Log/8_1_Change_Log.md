@@ -8,7 +8,7 @@ A document that contains all the changes made to the standard.
 
 ## January 5, 2024
 ### Documents
- - Fixed typo in sidebar ~~Goverance~~ to Governance
+ - Fixed typo in sidebar to Governance
 
 ## November 30, 2023
 ### Documents
