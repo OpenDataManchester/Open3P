@@ -14,7 +14,7 @@ A document that contains all the changes made to the standard.
  - Create Glossary page
  - Improved Data Flow page
 
- ### Data fields
+### Data fields
  - Renamed baseMaterialName to name
  - Renamed baseMaterialType to type
  - Renamed materialName to name
