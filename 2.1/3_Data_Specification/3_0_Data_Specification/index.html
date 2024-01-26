@@ -1227,16 +1227,16 @@
 <p>The Core schemas in Open 3P serve as the functional backbone, streamlining the flow of data from the foundational material to the ultimate combined load of product and packaging. Open 3P deliberately emphasises essential elements to facilitate seamless data exchange across the supply chain. Whenever feasible, fields were kept optional, ensuring flexibility. Only mandatory fields, necessary for efficient data exchange and compliance with current regulations, have been established.</p>
 <h2 id="diagram">Diagram<a class="headerlink" href="#diagram" title="Permanent link">&para;</a></h2>
 <pre class="mermaid"><code>erDiagram
-  BASE_MATERIALS }o--o{ MATERIALS
-  MATERIALS }o--o{ COMPONENTS
-  COMPONENTS }o--o{ COMPLETE_PACKAGING
-  COMPLETE_PACKAGING }o..o{ MULTIPACK
-  COMPONENTS }o..o{ MULTIPACK
-  BASE_MATERIALS }o..o{ LOADS
-  MATERIALS }o..o{ LOADS
-  COMPLETE_PACKAGING }o..o{ LOADS
-  MULTIPACK }o..o{ LOADS
-  COMPONENTS }o..o{ LOADS</code></pre>
+  BASE_MATERIALS }o--o{ MATERIALS : material_constituents
+  MATERIALS }o--o{ COMPONENTS : component_constituents
+  COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
+  COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
+  COMPONENTS }o..o{ MULTIPACK : multipack_constituents
+  BASE_MATERIALS }o..o{ LOADS : load_constituents
+  MATERIALS }o..o{ LOADS : load_constituents
+  COMPLETE_PACKAGING }o..o{ LOADS : load_constituents
+  MULTIPACK }o..o{ LOADS : load_constituents
+  COMPONENTS }o..o{ LOADS : load_constituents</code></pre>
 <p>The diagram above shows how the six core</p>
 
               
