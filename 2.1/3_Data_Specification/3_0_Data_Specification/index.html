@@ -1638,7 +1638,7 @@
 
 
 <h1 id="core-schema">Core Schema<a class="headerlink" href="#core-schema" title="Permanent link">&para;</a></h1>
-<p>The Core schemas in Open 3P serve as the functional backbone, streamlining the flow of data from the foundational material to the ultimate combined load of product and packaging. Open 3P deliberately emphasises essential elements to facilitate seamless data exchange across the supply chain. Whenever feasible, fields were kept optional, ensuring flexibility. Only fields, necessary for efficient data exchange and compliance with current regulations, are mandatory.</p>
+<p>The core schemas in Open 3P serve as the functional backbone, streamlining the flow of data from the foundational material to the ultimate combined load of product and packaging. Open 3P deliberately emphasises essential elements to facilitate seamless data exchange across the supply chain. Whenever feasible fields are kept optional ensuring flexibility. Only fields necessary for efficient data exchange and compliance with current regulations are mandatory.</p>
 <h2 id="the-schemas">The schemas<a class="headerlink" href="#the-schemas" title="Permanent link">&para;</a></h2>
 <p>There are six core schemas that are the foundations of Open 3P.</p>
 <div class="grid cards">
@@ -1708,7 +1708,7 @@
     cp_example --&gt; lo_example
     cp_example -.-&gt; mp_example
     mp_example -.-&gt; lo_example</code></pre>
-Each schema (excluding base material) is linked and has a relationship with the schema to it&rsquo;s left. This join is important to faciliate the exchange and to maintain the structure of the data.</p>
+Each schema (excluding base material) is linked and has a defined relationship with the schema to it&rsquo;s left. This join is important to faciliate the data exchange and to maintain the structure of the data.</p>
 <h2 id="diagram">Diagram<a class="headerlink" href="#diagram" title="Permanent link">&para;</a></h2>
 <pre class="mermaid"><code>erDiagram
   BASE_MATERIALS }o--o{ MATERIALS : material_constituents
@@ -1721,7 +1721,8 @@ Each schema (excluding base material) is linked and has a relationship with the 
   COMPLETE_PACKAGING }o..o{ LOADS : load_constituents
   MULTIPACK }o..o{ LOADS : load_constituents
   COMPONENTS }o..o{ LOADS : load_constituents</code></pre>
-<p>The diagram above shows how the six core schemas interact with each other with the inclusion of their <a href="../../6_Relationship_Lists/6_000_Relationship_Lists/">relationship lists</a> as these additional entities allow for additional functionality within Open 3P.</p>
+<p>The diagram above shows how the six core schemas interact with each other including their <a href="../../6_Relationship_Lists/6_000_Relationship_Lists/">relationship lists</a> as these additional entities allow for additional functionality within Open 3P.</p>
+<p>The following pages detail the information in each of the schemas, and further show how the core schema work with both the controlled lists and the relationship lists.</p>
 
 
 
