@@ -508,6 +508,20 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#the-schemas" class="md-nav__link">
+    The schemas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-flow" class="md-nav__link">
+    The flow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#diagram" class="md-nav__link">
     Diagram
   </a>
@@ -1225,6 +1239,59 @@
 
 <h1 id="core-schema">Core Schema<a class="headerlink" href="#core-schema" title="Permanent link">&para;</a></h1>
 <p>The Core schemas in Open 3P serve as the functional backbone, streamlining the flow of data from the foundational material to the ultimate combined load of product and packaging. Open 3P deliberately emphasises essential elements to facilitate seamless data exchange across the supply chain. Whenever feasible, fields were kept optional, ensuring flexibility. Only mandatory fields, necessary for efficient data exchange and compliance with current regulations, have been established.</p>
+<h2 id="the-schemas">The schemas<a class="headerlink" href="#the-schemas" title="Permanent link">&para;</a></h2>
+<p>There are six core schemas that are the foundations of Open 3P.</p>
+<div class="grid cards">
+<ul>
+<li>
+<p>{ .lg .middle } <strong>Base Materials</strong></p>
+<hr />
+<p>Contains information regarding the materials at the very start of the process of creating packaging.</p>
+<p><a href="#">:octicons-arrow-right-24: Getting started</a></p>
+</li>
+<li>
+<p>:fontawesome-brands-markdown:{ .lg .middle } <strong>It&rsquo;s just Markdown</strong></p>
+<hr />
+<p>Focus on your content and generate a responsive and searchable static site</p>
+<p><a href="#">:octicons-arrow-right-24: Reference</a></p>
+</li>
+<li>
+<p>:material-format-font:{ .lg .middle } <strong>Made to measure</strong></p>
+<hr />
+<p>Change the colors, fonts, language, icons, logo and more with a few lines</p>
+<p><a href="#">:octicons-arrow-right-24: Customization</a></p>
+</li>
+<li>
+<p>:material-scale-balance:{ .lg .middle } <strong>Open Source, MIT</strong></p>
+<hr />
+<p>Material for MkDocs is licensed under MIT and available on [GitHub]</p>
+<p><a href="#">:octicons-arrow-right-24: License</a></p>
+</li>
+</ul>
+</div>
+<h2 id="the-flow">The flow<a class="headerlink" href="#the-flow" title="Permanent link">&para;</a></h2>
+<p>As mentioned Open 3P has been designed to allow information to flow from base materials all the way through to a load. Below you can see how these are connected.
+<pre class="mermaid"><code>flowchart LR
+    subgraph baseMaterials[Base Materials]
+        bm_example[base material]
+    end
+    subgraph materials[Materials]
+        ma_example[material]
+    end
+    subgraph components[Components]
+        co_example[component]
+    end
+    subgraph completePackages[Complete Packages]
+        cp_example[complete package]
+    end
+    subgraph loads[Loads]
+        lo_example[load]
+    end
+    bm_example --&gt; ma_example
+    ma_example --&gt; co_example
+    co_example --&gt; cp_example
+    cp_example --&gt; lo_example</code></pre>
+Each schema (excluding base material) is linked and has a relationship with the schema to it&rsquo;s left. This join is </p>
 <h2 id="diagram">Diagram<a class="headerlink" href="#diagram" title="Permanent link">&para;</a></h2>
 <pre class="mermaid"><code>erDiagram
   BASE_MATERIALS }o--o{ MATERIALS : material_constituents
