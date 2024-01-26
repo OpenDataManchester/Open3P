@@ -1668,16 +1668,16 @@
 <p><a href="../3_4_Complete_Packaging/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/></svg></span> Complete Packages</a></p>
 </li>
 <li>
+<p><strong>Multipacks (optional)</strong></p>
+<hr />
+<p>Contains the information on the packaging used to protect multipacks of products.</p>
+<p><a href="../3_5_Multipack/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/></svg></span> Multipacks</a></p>
+</li>
+<li>
 <p><strong>Loads</strong></p>
 <hr />
 <p>Contains the information regard all the packaging used to transport product(s) to a destination.</p>
 <p><a href="../3_7_Load/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/></svg></span> Loads</a></p>
-</li>
-<li>
-<p><strong>Multipacks (optional)</strong></p>
-<hr />
-<p>Contains the information on the packaging used to protect multipacks of products.</p>
-<p><a href="../3_4_Complete_Packaging/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/></svg></span> Complete Packages</a></p>
 </li>
 </ul>
 </div>
@@ -1703,7 +1703,7 @@
     ma_example --&gt; co_example
     co_example --&gt; cp_example
     cp_example --&gt; lo_example</code></pre>
-Each schema (excluding base material) is linked and has a relationship with the schema to it&rsquo;s left. This join is </p>
+Each schema (excluding base material) is linked and has a relationship with the schema to it&rsquo;s left. This join is important to faciliate the exchange and to maintain the structure of the data.</p>
 <h2 id="diagram">Diagram<a class="headerlink" href="#diagram" title="Permanent link">&para;</a></h2>
 <pre class="mermaid"><code>erDiagram
   BASE_MATERIALS }o--o{ MATERIALS : material_constituents
@@ -1716,7 +1716,7 @@ Each schema (excluding base material) is linked and has a relationship with the 
   COMPLETE_PACKAGING }o..o{ LOADS : load_constituents
   MULTIPACK }o..o{ LOADS : load_constituents
   COMPONENTS }o..o{ LOADS : load_constituents</code></pre>
-<p>The diagram above shows how the six core</p>
+<p>The diagram above shows how the six core schemas </p>
 
 
 
