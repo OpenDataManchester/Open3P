@@ -193,6 +193,9 @@ description: Open 3P's list of words relating to the packaging value chain.
 ## SCB
 - Standard Custodian Board.
 
+## Schema
+- Logical structured hierarchy of information.
+
 ## Secondary Packaging
 - Packaging used to group several units together.
 
