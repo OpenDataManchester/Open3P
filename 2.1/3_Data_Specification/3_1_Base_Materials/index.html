@@ -1729,8 +1729,8 @@ Yes, every packaging item must include a Base Material. This foundational compon
 <h2 id="diagram">Diagram<a class="headerlink" href="#diagram" title="Permanent link">&para;</a></h2>
 <pre class="mermaid"><code>erDiagram
   BASE_MATERIALS {
-    identifier UUID "M"
-    name String "M"
+    identifier* UUID
+    name String
     type String
     materialChemCID String
     externalIdentifiers Dictionary
