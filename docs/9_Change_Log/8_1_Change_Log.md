@@ -6,6 +6,17 @@ title: Latest Updates
 # Latest Updates
 A document that contains all the changes made to the standard.
 
+## January 26, 2024
+### Documents
+ - Base Materials, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
+ - Materials, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
+ - Components, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
+ - Tweaked the README to be more relative for users accessing the GitHub repo.
+ - Create Core Schema definition page and added to the side bar.
+
+### Data Fields
+ - `recycledContentClaims` changed from mandatory to optional.
+
 ## January 5, 2024
 ### Documents
  - Fixed typo in sidebar to Governance
