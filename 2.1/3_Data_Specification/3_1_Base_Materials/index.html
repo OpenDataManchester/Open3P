@@ -1647,8 +1647,7 @@
 
 
 <h1 id="base-materials">Base Materials<a class="headerlink" href="#base-materials" title="Permanent link">&para;</a></h1>
-<p>TESTING
-The base materials schema contains information regarding the materials at the very start of the process of creating packaging. These are then combined together within the materials table to create more complicated materials.</p>
+<p>The base materials schema contains information regarding the materials at the very start of the process of creating packaging. These are then combined together within the materials table to create more complicated materials.</p>
 <div class="admonition question">
 <p class="admonition-title">Frequently Asked Question</p>
 <p>Do all packaging items need to contain a <code>Base Material</code>?<br />
@@ -1731,10 +1730,10 @@ Yes, every packaging item must include a Base Material. This foundational compon
 <pre class="mermaid"><code>erDiagram
   BASE_MATERIALS {
     identifier UUID
-    name* String
+    name String
     type String "*"
     materialChemCID String
-    externalIdentifiers Dictionary "M"
+    externalIdentifiers Dictionary
     certification Boolean
     certificationClaims List
     manufacturers List
