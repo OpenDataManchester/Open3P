@@ -5,26 +5,26 @@ description: Materials are a combination of base materials within Open 3P.
 
 # Materials
 
-The materials schema contains information regarding the materials that are used within components. These maybe a single material from the base materials catalogue, a combination of base materials and/or a material from the materials schema itself.
+The materials schema contains information regarding the materials that are used within components. These maybe a single material from base materials, a combination of base materials and/or a material from the materials schema itself.
 
 ## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
-|identifier|`required`|UUID|The globally unique identifier for the created material unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
-|name|`required`|String|The name of the material this row relates to. (e.g., Aluminium 3000 Series or Borosilicate glass)|
-|externalIdentifiers|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the material in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
-|materialConstituents|`required`|List|The information regarding the consituents that are combined to create this material. The entries should be from the [Material Constituents Relationship List](../6_Relationship_Lists/6_001_Material_Constituents.md) identifier.|
-|combinationPurpose|`recommended`|String|Why is this material being used? Use the identifier of the function that this row relates to. The entry here should be drawn from the [Function Controlled List](../5_Controlled_Lists/5_004_Function.md).|
-|areaDensity|`recommended`|Decimal|The area density of the material. Where area density is the measure of how much mass is packed into a given area of a two-dimensional object. Provided in grams per square metre (gsm).|
-|areaDensityUnit|`recommended`|String|Either `gsm` or `m^2/kg` to describe the area density unit of measure.|
-|areaDensityTolerance|`recommended`|Decimal|The threshold of area density that the material can vary by. This is given as a +/- value.|
-|areaDensityToleranceType|`recommended`|String|Either `unit` or `percentage` based on the value provided in `areaDensityTolerance`. Where `unit` is equal to the value provided in `areaDensityUnit`.|
-|areaDensityDate|`recommended`|Date|The date that the area density was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
-|certification|`recommended`|Boolean|Does the material have a certificate (e.g. FSC, REACH, FSA etc.)? Answer as: `TRUE` for yes and `FALSE` for no.|
-|certificationClaims|`recommended`|List|The information regarding the certification. The entries should be the [Certification Claims Relationship List](../6_Relationship_Lists/6_005_Certification_Claims.md) identifiers.|
-|manufacturers|`recommended`|List|The information regarding the manufacturer(s). The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
-|manufacturedCountry|`recommended`|String|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iso.org/obp/ui/#search){target=_blank} as described in the [ISO 3166 international standard](https://www.iso.org/iso-3166-country-codes.html){target=_blank}.|
-|updateDate|`required`|Date|The date that the material was provided/last updated. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
+|identifier|`mandatory`|UUID|The globally unique identifier for the created material unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
+|name|` `|String|The name of the material this row relates to. (e.g., Aluminium 3000 Series or Borosilicate glass)|
+|externalIdentifiers|`optional`|Dictionary|A dictionary of identifiers that might be used to identify the material in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
+|materialConstituents|`mandatory`|List|The information regarding the consituents that are combined to create this material. The entries should be from the [Material Constituents Relationship List](../6_Relationship_Lists/6_001_Material_Constituents.md) identifier.|
+|combinationPurpose|`optional`|String|Why is this material being used? Use the identifier of the function that this row relates to. The entry here should be drawn from the [Function Controlled List](../5_Controlled_Lists/5_004_Function.md).|
+|areaDensity|`optional`|Decimal|The area density of the material. Where area density is the measure of how much mass is packed into a given area of a two-dimensional object. Provided in grams per square metre (gsm).|
+|areaDensityUnit|`optional`|String|Either `gsm` or `m^2/kg` to describe the area density unit of measure.|
+|areaDensityTolerance|`optional`|Decimal|The threshold of area density that the material can vary by. This is given as a +/- value.|
+|areaDensityToleranceType|`optional`|String|Either `unit` or `percentage` based on the value provided in `areaDensityTolerance`. Where `unit` is equal to the value provided in `areaDensityUnit`.|
+|areaDensityDate|`optional`|Date|The date that the area density was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
+|certification|`optional`|Boolean|Does the material have a certificate (e.g. FSC, REACH, FSA etc.)? Answer as: `TRUE` for yes and `FALSE` for no.|
+|certificationClaims|`optional`|List|The information regarding the certification. The entries should be the [Certification Claims Relationship List](../6_Relationship_Lists/6_005_Certification_Claims.md) identifiers.|
+|manufacturers|`optional`|List|The information regarding the manufacturer(s). The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
+|manufacturedCountry|`optional`|String|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iso.org/obp/ui/#search){target=_blank} as described in the [ISO 3166 international standard](https://www.iso.org/iso-3166-country-codes.html){target=_blank}.|
+|updateDate|`mandatory`|Date|The date that the material was provided/last updated. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 
 ## Diagram
 
@@ -32,10 +32,10 @@ The materials schema contains information regarding the materials that are used 
 erDiagram
 BASE_MATERIALS }o--o{ MATERIALS : material_constituents
   MATERIALS {
-    identifier UUID
+    identifier UUID "*"
     name String
     externalIdentifiers Dictionary
-    materialConstituents List
+    materialConstituents List "*"
     combinationPurpose String
     areaDensity Decimal
     areaDensityUnit String
@@ -46,17 +46,17 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
     certificationClaims List
     manufacturers List
     manufacturedCountry String
-    updateDate Date
+    updateDate Date "*"
   }
   MATERIALS }o..o{ CONTROLLED_LISTS : attributes
   MATERIALS }o--o{ COMPONENTS : component_constituents
   MATERIALS }o..o{ RELATIONSHIP_LISTS : attributes
         CONTROLLED_LISTS {
-    function recommended
+    function optional
     }
         RELATIONSHIP_LISTS {
-    certificationClaims recommended
-    organisations recommended
+    certificationClaims optional
+    organisations optional
       }
 ```
 
