@@ -1754,241 +1754,241 @@
 <tbody>
 <tr>
 <td style="text-align: left;">identifier</td>
-<td style="text-align: left;"><code>required</code></td>
+<td style="text-align: left;"><code>mandatory</code></td>
 <td style="text-align: left;">UUID</td>
 <td style="text-align: left;">A globally unique identifier. See <a href="../../4_Identifiers/4_1_Identifiers/">identifiers</a> section for information on how to construct this identifier</td>
 </tr>
 <tr>
 <td style="text-align: left;">name</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">String</td>
 <td style="text-align: left;">The name of this component.</td>
 </tr>
 <tr>
 <td style="text-align: left;">description</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">String</td>
 <td style="text-align: left;">A brief description of this component.</td>
 </tr>
 <tr>
 <td style="text-align: left;">externalIdentifiers</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Dictionary</td>
 <td style="text-align: left;">A dictionary of identifiers that might be used to identify the component in other systems. For example: manufacturer&rsquo;s own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. <code>{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}</code></td>
 </tr>
 <tr>
 <td style="text-align: left;">imageURLs</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">List</td>
 <td style="text-align: left;">A list of URLs that links to a picture of the component. Please see the guidelines below on how to capture the image and name the URL.</td>
 </tr>
 <tr>
 <td style="text-align: left;">LOWcode</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">String</td>
 <td style="text-align: left;">The list of waste code for <strong>only</strong> the component, by itself. LOW code is synonymous with European Waste Catalogue Code (EWC). For example: an empty bottle would have a LOWcode of <code>15 01 02</code>. Please use <a href="https://dsposal.uk/browse/ewc">Dsposal</a> or <a href="https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made">legislation.gov</a> to find the LOWcode. <strong>Note</strong>: The LOWcode can based on its combination with other components and the actual product contained in the completePackaging. Be sure to only include the component LOWcode. If you cannot find the code or are uncertain please enter <code>Uncertain</code>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">componentConstituents</td>
-<td style="text-align: left;"><code>required</code></td>
+<td style="text-align: left;"><code>mandatory</code></td>
 <td style="text-align: left;">List</td>
 <td style="text-align: left;">The information regarding the consituents that are combined to create this component. The entries should be from the <a href="../../6_Relationship_Lists/6_002_Component_Constituents/">Component Constituents Relationship List</a> identifier.</td>
 </tr>
 <tr>
 <td style="text-align: left;">height</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Decimal</td>
 <td style="text-align: left;">The height of the component. Please see the guidelines below on how to properly measure and report the height.</td>
 </tr>
 <tr>
 <td style="text-align: left;">heightDate</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Date</td>
 <td style="text-align: left;">The date that the height was last verified/measured. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">width</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Decimal</td>
 <td style="text-align: left;">The width of the component. Please see the guidelines below on how to properly measure and report the width.</td>
 </tr>
 <tr>
 <td style="text-align: left;">widthDate</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Date</td>
 <td style="text-align: left;">The date that the width was last verified/measured. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">depth</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Decimal</td>
 <td style="text-align: left;">The depth of the component. Please see the guidelines below on how to properly measure and report the depth.</td>
 </tr>
 <tr>
 <td style="text-align: left;">depthDate</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Date</td>
 <td style="text-align: left;">The date that the depth was last verified/measured. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">volume</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Decimal</td>
 <td style="text-align: left;">The amount of space the component takes up. Note: this is related to the size of the component and is different to capacity. Using the height, width, and depth found using the measurement guidelines, calculate the component’s volume using: <code>height x width x depth</code>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">volumeDate</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Date</td>
 <td style="text-align: left;">The date that the volume was last verified/measured. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">weight</td>
-<td style="text-align: left;"><code>required</code></td>
+<td style="text-align: left;"><code>mandatory</code></td>
 <td style="text-align: left;">Decimal</td>
 <td style="text-align: left;">The weight of the component.</td>
 </tr>
 <tr>
 <td style="text-align: left;">weightTolerance</td>
-<td style="text-align: left;"><code>required</code></td>
+<td style="text-align: left;"><code>mandatory</code></td>
 <td style="text-align: left;">Decimal</td>
 <td style="text-align: left;">The threshold of weight that components can vary by. This is given as +/- value.</td>
 </tr>
 <tr>
 <td style="text-align: left;">weightToleranceType</td>
-<td style="text-align: left;"><code>required</code></td>
+<td style="text-align: left;"><code>mandatory</code></td>
 <td style="text-align: left;">String</td>
 <td style="text-align: left;">Either <code>grams</code> or <code>percentage</code> based on the value provided in <code>weightTolerance</code></td>
 </tr>
 <tr>
 <td style="text-align: left;">weightDate</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Date</td>
 <td style="text-align: left;">The date that the weight was last verified/measured. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">shape</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">String</td>
 <td style="text-align: left;">What is the shape of the component? The entry should contain the <a href="../../5_Controlled_Lists/5_006_Shape/">shape controlled list</a> identifier for the component.</td>
 </tr>
 <tr>
 <td style="text-align: left;">function</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">String</td>
 <td style="text-align: left;">What is the function of the component? The entry should contain the <a href="../../5_Controlled_Lists/5_004_Function/">function controlled list</a> identifier for the component.</td>
 </tr>
 <tr>
 <td style="text-align: left;">flexibility</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">String</td>
 <td style="text-align: left;">Whether the component is considered flexible or rigid. The entry should be the <a href="../../5_Controlled_Lists/5_007_Flexibility/">flexibility controlled list</a> identifier.</td>
 </tr>
 <tr>
 <td style="text-align: left;">branding</td>
-<td style="text-align: left;"><code>required</code></td>
+<td style="text-align: left;"><code>mandatory</code></td>
 <td style="text-align: left;">Boolean</td>
 <td style="text-align: left;">Does the component contain your own brand (logo, trademark, or any distinctive mark)? Answer as: <code>TRUE</code> for yes and <code>FALSE</code> for no.</td>
 </tr>
 <tr>
 <td style="text-align: left;">componentEndOfLifeRoutes</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">List</td>
 <td style="text-align: left;">The information regarding this component&rsquo;s proposed end of life routes. The entries should be the <a href="../../6_Relationship_Lists/6_007_Component_End_of_Life_Routes/">component end of life routes</a> identifiers.</td>
 </tr>
 <tr>
 <td style="text-align: left;">colour</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">String</td>
 <td style="text-align: left;">The actual colour of the component at point of production using CMYK (Cyan-Magenta-Yellow-blacK) values. The format is specified according to cmyk(C%, M%, Y%, K%), where C, M, Y, and K are the percent values for the cyan, magenta, yellow, and black values of the color. For example: black is <code>cmyk(0%,0%,0%,100%)</code>. If there are multiple colours input <code>decorative</code>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">opacity</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">String</td>
 <td style="text-align: left;">The transparency of the colours. The entry should be the <a href="../../5_Controlled_Lists/5_009_Opacity/">opacity controlled list</a> identifier.</td>
 </tr>
 <tr>
 <td style="text-align: left;">loaned</td>
-<td style="text-align: left;"><code>required</code></td>
+<td style="text-align: left;"><code>mandatory</code></td>
 <td style="text-align: left;">Boolean</td>
 <td style="text-align: left;">Is the component hired or loaned out as reusable packaging? Answer as: <code>TRUE</code> for yes and <code>FALSE</code> for no.</td>
 </tr>
 <tr>
 <td style="text-align: left;">reuseSystems</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">List</td>
 <td style="text-align: left;">The system(s) that facilitates the reuse of the component  <code>e.g., Loop</code>. The entries should be the <a href="../../5_Controlled_Lists/5_010_Reuse_System/">reuse system controlled list</a> identifier(s).</td>
 </tr>
 <tr>
 <td style="text-align: left;">partOfMultipack</td>
-<td style="text-align: left;"><code>required</code></td>
+<td style="text-align: left;"><code>mandatory</code></td>
 <td style="text-align: left;">Boolean</td>
 <td style="text-align: left;">Is the component part of a multipack? Answer as: <code>TRUE</code> for yes and <code>FALSE</code> for no.</td>
 </tr>
 <tr>
 <td style="text-align: left;">recycledContent</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Decimal</td>
 <td style="text-align: left;">The minimum allowable percent of how much recycled content is included in the makeup of the component. t is ‘required’ for plastic packaging where for the purposes of this standard we refer to <a href="https://www.gov.uk/guidance/work-out-which-packaging-is-subject-to-plastic-packaging-tax" target="_blank">UK&rsquo;s HM Revenue &amp; Customs</a> definition of recycled content. &ldquo;Recycled plastic is plastic that has been reprocessed from recovered material by using a chemical or manufacturing process. This is so it can be used either for its original purpose or for other purposes. This does not include organic recycling. Recovered material is pre-consumer plastic or post-consumer plastic that both: a) is no longer suitable to be used in the process from which it was generated and would otherwise have been used for energy recovery (for example, by incineration) or disposed of as waste (for example, by being sent to landfill); b) has been collected and recovered for use as a material input for a recycling or manufacturing process, instead of new primary material&rdquo;</td>
 </tr>
 <tr>
 <td style="text-align: left;">recycledContentClaims</td>
-<td style="text-align: left;"><code>required</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">List</td>
 <td style="text-align: left;">The information regarding the recycled contents. The entries should be the <a href="../../6_Relationship_Lists/6_009_Recycled_Content_Claims/">recycled content claims relationship list</a> indentifiers.</td>
 </tr>
 <tr>
 <td style="text-align: left;">recyclability</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Boolean</td>
 <td style="text-align: left;">Is the component recyclable (as determined by a reputable source)? Answer as: <code>TRUE</code> for yes and <code>FALSE</code> for no.</td>
 </tr>
 <tr>
 <td style="text-align: left;">recyclabilityClaims</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">List</td>
 <td style="text-align: left;">The information regarding this recyclability claims. The entries should be the <a href="../../6_Relationship_Lists/6_006_Recyclability_Claims/">recyclability claims relationship list</a> identifiers.</td>
 </tr>
 <tr>
 <td style="text-align: left;">certification</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Boolean</td>
 <td style="text-align: left;">Does the component have a certificate (e.g. FSC, REACH, FSA etc.)? Answer as: <code>TRUE</code> for yes and <code>FALSE</code> for no.</td>
 </tr>
 <tr>
 <td style="text-align: left;">certificationClaims</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">List</td>
 <td style="text-align: left;">The information regarding the certifications. The entries should be the <a href="../../6_Relationship_Lists/6_005_Certification_Claims/">certification claims relationship list</a> identifiers.</td>
 </tr>
 <tr>
 <td style="text-align: left;">manufacturers</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">List</td>
 <td style="text-align: left;">The information regarding the manufacturer(s). The entries should be the <a href="../../6_Relationship_Lists/6_010_Organisations/">Organisations Relationship List</a> identifiers.</td>
 </tr>
 <tr>
 <td style="text-align: left;">manufacturedCountry</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">String</td>
 <td style="text-align: left;">The country the component was manufactured in. Use the country numeric <a href="https://www.iso.org/obp/ui/#search" target="_blank">ISO codes</a> as described in the <a href="https://www.iso.org/iso-3166-country-codes.html" target="_blank">ISO 3166 international standard</a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">updateDate</td>
-<td style="text-align: left;"><code>required</code></td>
+<td style="text-align: left;"><code>mandatory</code></td>
 <td style="text-align: left;">Date</td>
 <td style="text-align: left;">The date that the component was provided/last updated. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">releaseDate</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Date</td>
 <td style="text-align: left;">The date that the component will be available to use. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">discontinueDate</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Date</td>
 <td style="text-align: left;">The date that the component will no longer be available to use. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
@@ -1998,13 +1998,13 @@
 <pre class="mermaid"><code>erDiagram
 MATERIALS }o--o{ COMPONENTS : component_constituents
   COMPONENTS {
-    identifier UUID
+    identifier UUID "*"
     name String
     description String
     externalIdentifiers Dictionary
     imageURLs List
     LOWcode String
-    componentConstituents List
+    componentConstituents List "*"
     height Decimal
     heightDate Date
     width Decimal
@@ -2013,29 +2013,29 @@ MATERIALS }o--o{ COMPONENTS : component_constituents
     depthDate Date
     volume Decimal
     volumeDate Date
-    weight Decimal
-    weightTolerance Decimal
-    weightToleranceType String
+    weight Decimal "*"
+    weightTolerance Decimal "*"
+    weightToleranceType String "*"
     weightDate Date
     shape String
     function String
     flexibility String
-    branding Boolean
+    branding Boolean "*"
     componentEndOfLifeRoutes List
     colour String
     opacity String
-    loaned Boolean
-    reuseSystems String
+    loaned Boolean "*"
+    reuseSystems List
     manufacturers List
     manufacturedCountry String
     recycledContent Decimal
     recycledContentClaims List
     recyclability Boolean
     recyclabilityClaims List
-    partOfMultipack Boolean
+    partOfMultipack Boolean "*"
     certification Boolean
     certificationClaims List
-    updateDate Date
+    updateDate Date "*"
     releaseDate Date
     discontinueDate Date
   }
@@ -2048,18 +2048,18 @@ MATERIALS }o--o{ COMPONENTS : component_constituents
   COMPLETE_PACKAGING }o..o{ LOADS : load_constituents
   COMPONENTS }o..o{ LOADS : load_constituents
     CONTROLLED_LISTS {
-    shape recommended
-    function recommended
-    flexibility recommended
-    opacity recommended
-    reuseSystem recommended
+    shape optional
+    function optional
+    flexibility optional
+    opacity optional
+    reuseSystem optional
   }
   RELATIONSHIP_LISTS {
-    componentEndOfLifeRoutes recommended
-    recycledContentClaims required
-    recyclabilityClaims recommended
-    certificationClaims recommended
-    organisations recommended
+    componentEndOfLifeRoutes optional
+    recycledContentClaims optional
+    recyclabilityClaims optional
+    certificationClaims optional
+    organisations optional
   }</code></pre>
 <p>Components should be provided as a separate csv file. The specification of this csv file is as follows:</p>
 <p><a href="https://www.open3p.org/wp-content/uploads/2023/09/components20230922.csv" target="_blank">Components Template</a></p>
