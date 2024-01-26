@@ -15,7 +15,9 @@ Open 3P is the open standard for packaging data. The project to create the stand
 - Dsposal
 
 v1.0 of the standard was released August 2022 with a focus on plastic packaging within the United Kingdom geography.
-v2.0 was released June 2023 and incorported all materials types with the United Kingdom geography.
+
+v2.0 was released June 2023 and incorported all materials types within the United Kingdom geography.
+
 Work is currently in development to incorporate other geographies with aims to becoming the global standard for packaging data.
 
 ## Improvementing schemas
