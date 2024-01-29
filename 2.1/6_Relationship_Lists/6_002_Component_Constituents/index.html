@@ -1666,13 +1666,13 @@
 </table>
 <h2 id="diagram">Diagram<a class="headerlink" href="#diagram" title="Permanent link">&para;</a></h2>
 <pre class="mermaid"><code>erDiagram
+
   COMPONENTS }o..o{ COMPONENT_CONSTITUENTS : within
   COMPONENT_CONSTITUENTS {
     componentConstituentsIdentifier UUID [*]
     componentCombinationIdentifier UUID [*]
   }
   COMPONENT_CONSTITUENTS }o--o{ MATERIALS : attributes
-
   COMPONENT_CONSTITUENTS }o--o{ COMPONENTS : attributes</code></pre>
 <h2 id="template">Template<a class="headerlink" href="#template" title="Permanent link">&para;</a></h2>
 <p>Component constituents should be provided as a separate csv file. The specification of this csv file is as follows:</p>
