@@ -12,18 +12,18 @@ The multipacks schema contains information regarding the multipacks that are use
 ## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
-|identifier|`required`|UUID|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
-|name|`recommended`|String|The name of this multipack.|
-|description|`recommended`|String|A brief description of this multipack.|
-|externalIdentifiers|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the multipack in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
-|multipackConstituentsIdentifiers|`required`|List|The information regarding the consituents that are combined to create this multipack. The entries should be from the [Multipack Constituents Relationship List](../6_Relationship_Lists/6_004_Multipack_Constituents.md) identifier.|
-|tier|`recommended`|Integer|The tier associated with the multipack. The inner most tier denoted as 1, and the outermost tier is the biggest number.|
-|identicalQuantity|`required`|Integer|Number of identical units for the unique complete packaging item or a component this row corresponds to.|
-|manufacturers|`recommended`|List|The information regarding the manufacturer(s). The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
-|manufacturedCountry|`recommended`|String|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iso.org/obp/ui/#search){target=_blank} as described in the [ISO 3166 international standard](https://www.iso.org/iso-3166-country-codes.html){target=_blank}.|
-|updateDate|`required`|Date|The date that the multipack was provided/last updated. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
-|releaseDate|`recommended`|Date|The date that the component will be available to use. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
-|discontinueDate|`recommended`|Date|The date that the component will no longer be available to use. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
+|identifier|`mandatory`|UUID|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
+|name|`optional`|String|The name of this multipack.|
+|description|`optional`|String|A brief description of this multipack.|
+|externalIdentifiers|`optional`|Dictionary|A dictionary of identifiers that might be used to identify the multipack in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
+|multipackConstituentsIdentifiers|`mandatory`|List|The information regarding the consituents that are combined to create this multipack. The entries should be from the [Multipack Constituents Relationship List](../6_Relationship_Lists/6_004_Multipack_Constituents.md) identifier.|
+|tier|`optional`|Integer|The tier associated with the multipack. The inner most tier denoted as 1, and the outermost tier is the biggest number.|
+|identicalQuantity|`mandatory`|Integer|Number of identical units for the unique complete packaging item or a component this row corresponds to.|
+|manufacturers|`optional`|List|The information regarding the manufacturer(s). The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
+|manufacturedCountry|`optional`|String|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iso.org/obp/ui/#search){target=_blank} as described in the [ISO 3166 international standard](https://www.iso.org/iso-3166-country-codes.html){target=_blank}.|
+|updateDate|`mandatory`|Date|The date that the multipack was provided/last updated. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
+|releaseDate|`optional`|Date|The date that the component will be available to use. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
+|discontinueDate|`optional`|Date|The date that the component will no longer be available to use. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 
 ## Diagram
 
@@ -33,16 +33,16 @@ COMPONENTS }o..o{ MULTIPACK : multipack_constituents
 COMPONENTS }o..o{ COMPLETE_PACKAGING : complete_packaging_constituents
 COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
   MULTIPACK {
-    identifier UUID
+    identifier UUID "*"
     name String
     description String
     externalIdentifiers Dictionary
-    multipackConstituentsIdentifiers List
+    multipackConstituentsIdentifiers List "*"
     tier String
-    identicalQuantity Integer
+    identicalQuantity Integer "*"
     manufacturers List
     manufacturedCountry String
-    updateDate Date
+    updateDate Date "*"
     releaseDate Date
     discontinueDate Date
   }
@@ -51,7 +51,7 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
   MULTIPACK }o..o{ LOADS : load_constituents
   COMPONENTS }o--o{ LOADS : load_constituents
       RELATIONSHIP_LISTS {
-        organisations recommended
+        organisations optional
     }
 ```
 
