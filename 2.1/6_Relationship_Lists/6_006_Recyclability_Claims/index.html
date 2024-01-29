@@ -1689,8 +1689,8 @@
   COMPONENTS }o..o{ RECYCLABILITY_CLAIMS : within
   COMPLETE_PACKAGING }o..o{ RECYCLABILITY_CLAIMS : within
   RECYCLABILITY_CLAIMS {
-    recyclabilityIdentifier UUID [*]
-    recyclabilitySource String [*]
+    recyclabilityIdentifier UUID "*"
+    recyclabilitySource String "*"
     recyclabilityIssueDate Date
   }
   RECYCLABILITY_CLAIMS }o--o{ CONTROLLED_LISTS : attributes
