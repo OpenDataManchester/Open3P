@@ -6,6 +6,25 @@ title: Latest Updates
 # Latest Updates
 A document that contains all the changes made to the standard.
 
+## January 29, 2024
+### Documents
+ - Complete Packaging, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
+ - Multipack, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
+ - Load, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
+ - Multipack, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
+ - Load, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
+ - Material Constituents, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
+ - Component Constituents, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
+ - Complete Packaging Constituents, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
+ - Multipack Constituents, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
+ - Certificate Claims, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
+ - Recyclability Claims, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
+ - Component End of Life Routes, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
+ - Complete Packaging End of Life Routes, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
+ - Recycled Content Claims, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
+ - Organisation, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
+ - Load Constituents, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
+
 ## January 26, 2024
 ### Documents
  - Base Materials, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
