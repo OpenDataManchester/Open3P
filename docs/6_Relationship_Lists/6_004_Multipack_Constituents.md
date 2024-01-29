@@ -20,8 +20,8 @@ erDiagram
 
   MULTIPACK }o..o{ MULTIPACK_CONSTITUENTS : within
   MULTIPACK_CONSTITUENTS {
-    multipackConstituentsIdentifier UUID [*]
-    multipackCombinationIdentifier UUID [*]
+    multipackConstituentsIdentifier UUID "*"
+    multipackCombinationIdentifier UUID "*"
   }
   MULTIPACK_CONSTITUENTS }o--o{ COMPLETE_PACKAGING : attributes
   MULTIPACK_CONSTITUENTS }o--o{ COMPONENTS : attributes

@@ -22,10 +22,10 @@ erDiagram
 
   COMPONENTS }o..o{ COMPONENT_END_OF_LIFE_ROUTES : within
   COMPONENT_END_OF_LIFE_ROUTES {
-    componentEndOfLifeRouteIdentifier UUID [*]
-    componentEndOfLifeRoute String [*]
+    componentEndOfLifeRouteIdentifier UUID "*"
+    componentEndOfLifeRoute String "*"
     orderOfPrecedence Integer
-    componentDistruptors List [*]
+    componentDistruptors List "*"
   }
   COMPONENT_END_OF_LIFE_ROUTES }o--o{ CONTROLLED_LISTS : attributes
   CONTROLLED_LISTS {

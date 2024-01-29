@@ -32,7 +32,7 @@ erDiagram
   MULTIPACK }o..o{ ORGANISATIONS : within
   LOAD }o..o{ ORGANISATIONS : within
   ORGANISATIONS {
-    organisationIdentifier String [*]
+    organisationIdentifier String "*"
     organisationName String
     postcode String
   }

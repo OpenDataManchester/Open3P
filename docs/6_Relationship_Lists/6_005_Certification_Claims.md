@@ -28,8 +28,8 @@ erDiagram
   COMPONENTS}o..o{ CERTIFICATION_CLAIMS : within
   COMPLETE_PACKAGING }o..o{ CERTIFICATION_CLAIMS : within
   CERTIFICATION_CLAIMS {
-    certificationIdentifier UUID [*]
-    certificationSource String [*]
+    certificationIdentifier UUID "*"
+    certificationSource String "*"
     certificationIssueDate Date
   }
   CERTIFICATION_CLAIMS }o--o{ CONTROLLED_LISTS : attributes

@@ -21,9 +21,9 @@ erDiagram
 
   COMPLETE_PACKAGING }o..o{ COMPLETE_PACKAGING_CONSTITUENTS : within
   COMPLETE_PACKAGING_CONSTITUENTS {
-    completePackagingConstituentsIdentifier UUID [*]
-    completePackagingCombinationIdentifier UUID [*]
-    contactWithProduct Boolean [*]
+    completePackagingConstituentsIdentifier UUID "*"
+    completePackagingCombinationIdentifier UUID "*"
+    contactWithProduct Boolean "*"
   }
   COMPLETE_PACKAGING_CONSTITUENTS }o--o{ COMPONENTS : attributes
   COMPLETE_PACKAGING_CONSTITUENTS }o--o{ COMPLETE_PACKAGING : attributes

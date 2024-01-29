@@ -22,7 +22,7 @@ erDiagram
 
   COMPLETE_PACKAGING }o..o{ COMPLETE_PACKAGING_END_OF_LIFE_ROUTES : within
   COMPLETE_PACKAGING_END_OF_LIFE_ROUTES {
-    completePackagingEndOfLifeRouteIdentifier UUID [*]
+    completePackagingEndOfLifeRouteIdentifier UUID "*"
     completePackagingEndOfLifeRoute String
     orderOfPrecedence Integer
     completePackagingDistruptors List

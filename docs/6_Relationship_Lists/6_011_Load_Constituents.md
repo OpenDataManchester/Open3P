@@ -24,12 +24,12 @@ erDiagram
   COMPLETE_PACKAGING }o..o{ LOAD_CONSTITUENTS : attributes
   MULTIPACKS }o..o{ LOAD_CONSTITUENTS : attributes
   LOAD_CONSTITUENTS {
-    loadConstituentsIdentifier UUID [*]
-    loadCombinationIdentifier UUID [*]
+    loadConstituentsIdentifier UUID "*"
+    loadCombinationIdentifier UUID "*"
     name String
     externalIdentifiers Dictionary
-    quantityInLoad Integer [*]
-    level String [*]
+    quantityInLoad Integer "*"
+    level String "*"
   }
   LOAD_CONSTITUENTS }o--o{ LOAD : within
   LOAD_CONSTITUENTS }o--o{ CONTROLLED_LISTS : attributes

@@ -22,7 +22,7 @@ erDiagram
 
   COMPONENTS }o..o{ RECYCLED_CONTENT_CLAIMS : within
   RECYCLED_CONTENT_CLAIMS {
-    recycledContentIdentifier UUID [*]
+    recycledContentIdentifier UUID "*"
     recycledContentEvidenceType String
     recycledContentEvidenceReference String
     recycledContentIssueDate Date

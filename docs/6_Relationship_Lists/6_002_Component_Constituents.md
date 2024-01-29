@@ -17,13 +17,13 @@ The component constituents relationship list identifies the materials that are c
 
 ``` mermaid
 erDiagram
+
   COMPONENTS }o..o{ COMPONENT_CONSTITUENTS : within
   COMPONENT_CONSTITUENTS {
-    componentConstituentsIdentifier UUID [*]
-    componentCombinationIdentifier UUID [*]
+    componentConstituentsIdentifier UUID "*"
+    componentCombinationIdentifier UUID "*"
   }
   COMPONENT_CONSTITUENTS }o--o{ MATERIALS : attributes
-  
   COMPONENT_CONSTITUENTS }o--o{ COMPONENTS : attributes
 ```
 
