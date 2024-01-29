@@ -10,9 +10,9 @@ The complete packaging constituents relationship list identifies the components 
 ## Data
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
-|completePackagingConstituentsIdentifier|`required`|UUID|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
-|completePackagingCombinationIdentifier|`required`|UUID|The unique identifier of the components and/or complete packaging that this complete packaging is made of. There must be an equivalent record in the `Components` OR `Complete Packaging` data.|
-|contactWithProduct|`required`|Boolean|Does this constituent come into contact with the product? Answer as: `TRUE` for yes and `FALSE` for no.|
+|completePackagingConstituentsIdentifier|`mandatory`|UUID|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
+|completePackagingCombinationIdentifier|`mandatory`|UUID|The unique identifier of the components and/or complete packaging that this complete packaging is made of. There must be an equivalent record in the `Components` OR `Complete Packaging` data.|
+|contactWithProduct|`mandatory`|Boolean|Does this constituent come into contact with the product? Answer as: `TRUE` for yes and `FALSE` for no.|
 
 ## Diagram
 
@@ -21,9 +21,9 @@ erDiagram
 
   COMPLETE_PACKAGING }o..o{ COMPLETE_PACKAGING_CONSTITUENTS : within
   COMPLETE_PACKAGING_CONSTITUENTS {
-    completePackagingConstituentsIdentifier UUID
-    completePackagingCombinationIdentifier UUID
-    contactWithProduct Boolean
+    completePackagingConstituentsIdentifier UUID [*]
+    completePackagingCombinationIdentifier UUID [*]
+    contactWithProduct Boolean [*]
   }
   COMPLETE_PACKAGING_CONSTITUENTS }o--o{ COMPONENTS : attributes
   COMPLETE_PACKAGING_CONSTITUENTS }o--o{ COMPLETE_PACKAGING : attributes
