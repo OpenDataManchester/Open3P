@@ -67,240 +67,114 @@ Materials should be provided as a separate csv file. The specification of this c
 
 ## Example
 
-=== "JSON #1"
+=== "Cardboard - JSON"
 
-    ``` json linenums="1"
-    --Food grade synthetic polyethylene terephthalate (PET) made in the UK. Only one base material.
-    {
-      "identifier": "DCEE1F88-A83B-5BBC-D2D9-6A862B344977",
-      "name":"PET",
-      "externalIdentifiers": {
-        "GTIN":"123456789101",
-        },
-      "materialConstituents":["DCEE1F88-A83B-5BBC-D2D9-6A862B344977"],
-      "combinationPurpose": "",
-      "areaDensity": "138",
-      "areaDensityUnit": "gsm",
-      "areaDensityTolerance": "3.3",
-      "areaDensityToleranceType": "percentage",
-      "areaDensityDate": "2022-08-01",
-      "certification": true,
-      "certificationClaims": ["1"],
-      "manufacturers": [""],
-      "manufacturedCountry": "826",
-      "updateDate": "2022-08-01",
-    }
+    ``` json linenums="1" hl_lines="3 4"
+    [
+      {
+        "identifier": "16f41cca-1a77-4e31-8b0f-2723f752317b",
+        "name":"Cardboard",
+        "externalIdentifiers": {
+          "sapPK":"153517",
+          "SKU":"34-56bg"
+          },
+          "materialConstituents": [
+            {
+              "materialConstituentsIdentifier": "95b95bf7-80c0-49bc-9367-ae48d6c107d3",
+              "materialCombinationIdentifier": "222494f7-6703-49bc-a993-8dd2675709fb"
+            }
+          ],
+        "combinationPurpose": "function-0048",
+        "areaDensity": "300",
+        "areaDensityUnit": "gsm",
+        "areaDensityTolerance": "3.3",
+        "areaDensityToleranceType": "percentage",
+        "areaDensityDate": "2023-12-07",
+        "certification": true,
+        "certificationClaims": ["307801c3-f6f7-4ca6-8553-6f367b37fd1e"],
+        "manufacturers": ["GB-COH-10906273"],
+        "manufacturedCountry": "826",
+        "updateDate": "2023-12-07",
+      }
+    ]
     ```
-=== "JSON #2"
+=== "Glass - JSON"
 
-    ``` json linenums="1"
-    --Fibre based composite material to be used for a carton - semi verbose
-    {
-      "identifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
-      "name": "Classic Carton Board - EVOH",
-      "externalIdentifiers": {
-        "EAN": "0123456789101",
-        "BatchNumber": "2145-23-po"
-        },
-      "materialConstituents": [
-        {
-          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
-          "materialCombinationIdentifier": {
-            "identifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
-            "name": "Polyethylene",
-            "type": {
-              "identifier":"bm-material-type-0002",
-              "category":"synthetic",
-              "detailed":"derived from crude oil, natural gas or coal."
-            },
-            "materialChemCID": null,
-            "externalIdentifiers": {
-              "pk":"12",
-              },
-            "certification": false,
-            "certificationClaims": null,
-            "manufacturers": [""],
-            "manufacturedCountry": {
-              "Numeric": "826",
-              "EnglishShortName": "United Kingdom of Great Britain and Northern Ireland (the)",
-              "Alpha2": "GB",
-              "Alpha3": "GBR"
-            },
-            "updateDate": "2022-08-01",
+    ``` json linenums="1" hl_lines="3 4"
+    [
+      {
+        "identifier": "b050ab75-4bcb-4c7f-b8f5-8a1f9e5ba7d3",
+        "name": "Glass",
+        "externalIdentifiers": {
+          "internal id": "70-wine-glass"
           },
-          "materialPurpose": {
-            "identifier": "m-material-purpose-0005",
-            "category": "barrier",
-            "detailed": "Used to reduce water and gas diffusion into and/or out of the material."
+        "materialConstituents": [
+          {
+            "materialConstituentsIdentifier": "11eb7b61-05f1-4894-a57b-80e5082f944a",
+            "materialCombinationIdentifier": "ff39892f-0a88-4085-9942-4522cecc8337"
           },
-          "virginMaterial": 100.0,
-          "layer": 1,
-          "materialPercentage": 7.0
-        },
-        {
-          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
-          "materialCombinationIdentifier": "96245c85-5671-4f3d-875f-82665005e9e8",
-          "materialPurpose": {
-            "identifier": "m-material-purpose-0015",
-            "category": "structure",
-            "detailed": "Providing strength and stability."
+          {
+            "materialConstituentsIdentifier": "11eb7b61-05f1-4894-a57b-80e5082f944a",
+            "materialCombinationIdentifier": "1bdca07b-ed6a-4799-a027-654322cb302f"
           },
-          "virginMaterial": 100.0,
-          "layer": 2,
-          "materialPercentage": 27.0
-        },
-        {
-          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
-          "materialCombinationIdentifier": {
-            "identifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
-            "name": "Polyethylene",
-            "type": {
-              "identifier":"bm-material-type-0002",
-              "category":"synthetic",
-              "detailed":"derived from crude oil, natural gas or coal."
-            },
-            "materialChemCID": null,
-            "externalIdentifiers": {
-              "pk":"12",
-              },
-            "certification": false,
-            "certificationClaims": null,
-            "manufacturers": [""],
-            "manufacturedCountry": {
-              "Numeric": "826",
-              "EnglishShortName": "United Kingdom of Great Britain and Northern Ireland (the)",
-              "Alpha2": "GB",
-              "Alpha3": "GBR"
-            },
-            "updateDate": "2022-08-01",
+          {
+            "materialConstituentsIdentifier": "11eb7b61-05f1-4894-a57b-80e5082f944a",
+            "materialCombinationIdentifier": "ff39892f-0a88-4085-9942-4522cecc8337"
           },
-          "materialPurpose": {
-            "identifier": "m-material-purpose-0002",
-            "category": "adhesive",
-            "detailed": "Applied to one or both surfaces of two separate items that binds them together and resists their separation."
-          },
-          "virginMaterial": 100.0,
-          "layer": 3,
-          "materialPercentage": 7.0
-        },
-        {
-          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
-          "materialCombinationIdentifier": "ff249e1f-5015-46b8-8655-6c920fbf2606",
-          "materialPurpose": {
-            "identifier": "m-material-purpose-0003",
-            "category": "antioxidant",
-            "detailed": "Used to inhibit oxidation."
-          },
-          "virginMaterial": 100.0,
-          "layer": 4,
-          "materialPercentage": 18.0
-        },
-        {
-          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
-          "materialCombinationIdentifier": {
-            "identifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
-            "name": "Polyethylene",
-            "type": {
-              "identifier":"bm-material-type-0002",
-              "category":"synthetic",
-              "detailed":"derived from crude oil, natural gas or coal."
-            },
-            "materialChemCID": null,
-            "externalIdentifiers": {
-              "pk":"12",
-              },
-            "certification": false,
-            "certificationClaims": null,
-            "manufacturers": [""],
-            "manufacturedCountry": {
-              "Numeric": "826",
-              "EnglishShortName": "United Kingdom of Great Britain and Northern Ireland (the)",
-              "Alpha2": "GB",
-              "Alpha3": "GBR"
-            },
-            "updateDate": "2022-08-01",
-          },
-          "materialPurpose": {
-            "identifier": "m-material-purpose-0002",
-            "category": "adhesive",
-            "detailed": "Applied to one or both surfaces of two separate items that binds them together and resists their separation."
-          },
-          "virginMaterial": 100.0,
-          "layer": 5,
-          "materialPercentage": 7.0
-        },
-        {
-          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
-          "materialCombinationIdentifier": "96245c85-5671-4f3d-875f-82665005e9e8",
-          "materialPurpose": {
-            "identifier": "m-material-purpose-0015",
-            "category": "structure",
-            "detailed": "Providing strength and stability."
-          },
-          "virginMaterial": 100.0,
-          "layer": 6,
-          "materialPercentage": 27.0
-        },
-        {
-          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
-          "materialCombinationIdentifier": {
-            "identifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
-            "name": "Polyethylene",
-            "type": {
-              "identifier":"bm-material-type-0002",
-              "category":"synthetic",
-              "detailed":"derived from crude oil, natural gas or coal."
-            },
-            "materialChemCID": null,
-            "externalIdentifiers": {
-              "pk":"12",
-              },
-            "certification": false,
-            "certificationClaims": null,
-            "manufacturers": [""],
-            "manufacturedCountry": {
-              "Numeric": "826",
-              "EnglishShortName": "United Kingdom of Great Britain and Northern Ireland (the)",
-              "Alpha2": "GB",
-              "Alpha3": "GBR"
-            },
-            "updateDate": "2022-08-01",
-          },
-          "materialPurpose": {
-            "identifier": "m-material-purpose-0005",
-            "category": "barrier",
-            "detailed": "Used to reduce water and gas diffusion into and/or out of the material."
-          },
-          "virginMaterial": 100.0,
-          "layer": 7,
-          "materialPercentage": 7.0
-        },
-      ],
-      "combinationPurpose": {
-        "identifier": "function-0012",
-        "category": "carton",
-        "detailed": "Box or container used for transporting and storaging goods."
-      },
-      "areaDensity": "543.5",
-      "areaDensity": "gsm",
-      "areaDensityTolerance": "6",
-      "areaDensityToleranceType": "unit",
-      "areaDensityDate": "2022-08-01",
-      "certification": false,
-      "certificationClaims": null,
-      "manufacturers": [""],
-      "manufacturedCountry": {
-        "Numeric": "826",
-        "EnglishShortName": "United Kingdom of Great Britain and Northern Ireland (the)",
-        "Alpha2": "GB",
-        "Alpha3": "GBR"
-      },
-      "updateDate": "2022-08-01"
-    }
+          {
+            "materialConstituentsIdentifier": "11eb7b61-05f1-4894-a57b-80e5082f944a",
+            "materialCombinationIdentifier": "42b19543-7138-43ff-a867-a1e551ccba14"
+          }
+        ],
+        "combinationPurpose": "function-0005",
+        "certification": false,
+        "manufacturers": ["GB-COH-10906273"],
+        "manufacturedCountry": "826",
+        "updateDate": "2022-08-01"
+      }
+    ]
     ```
-=== "CSV download"
 
-    * [Materials example download](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_2_Materials_Example.csv){target=_blank}
+## Data flow
+
+``` mermaid
+flowchart LR
+    subgraph baseMaterials[Base Materials]
+        bm_cardboard["Cardboard
+        -
+        222494f7-6703-49bc-a993-8dd2675709fb"]
+        bm_sodaAsh["Soda ash
+        -
+        ff39892f-0a88-4085-9942-4522cecc8337"]
+        bm_cullet["Cullet
+        -
+        db481bb7-e57a-4af7-8821-2258338ddd11"]
+        bm_sand["Sand
+        -
+        1bdca07b-ed6a-4799-a027-654322cb302f"]
+        bm_limestone["Limestone
+        -
+        42b19543-7138-43ff-a867-a1e551ccba14"]
+    end
+    subgraph materials[Materials]
+        ma_cardboard["`**Cardboard
+        -
+        16f41cca-1a77-4e31-8b0f-2723f752317b**`"]
+        ma_glass["`**Glass
+        -
+        b050ab75-4bcb-4c7f-b8f5-8a1f9e5ba7d3**`"]
+    end
+        subgraph components[Components]
+        co_example[example components]
+    end
+    bm_cardboard --> ma_cardboard
+    bm_sodaAsh --> ma_glass
+    bm_cullet --> ma_glass
+    bm_sand --> ma_glass
+    bm_limestone --> ma_glass
+    ma_cardboard --> components
+    ma_glass --> components
+```
 
 ## Guide for how to take measurements
 
