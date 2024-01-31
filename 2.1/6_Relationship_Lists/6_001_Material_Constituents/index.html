@@ -93,11 +93,15 @@
   <span class="twemoji">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24v112c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zm-32 224a32 32 0 1 1 64 0 32 32 0 1 1-64 0z"/></svg>
   </span>
-  While Open 3P is <strong>free and open</strong>, under the
+  Open 3P is <strong>free and open</strong>, under the
   <a rel="me" href="../../10_Licence/10_01_Licence">
     <strong>Apache License, Version 2.0</strong>
   </a>
-  you are required to inform us if you are using it. Provide your contact details to let us know and to stay informed of updates to the standard.
+  . To be kept informed of updates, events and news then signup to our 
+  <a target="_blank" href="http://eepurl.com/iB-Qhk">
+    <strong>mailing list</strong>
+  </a>
+  .
 
           </div>
           
@@ -1661,37 +1665,37 @@
 <tbody>
 <tr>
 <td style="text-align: left;">materialConstituentsIdentifier</td>
-<td style="text-align: left;"><code>required</code></td>
+<td style="text-align: left;"><code>mandatory</code></td>
 <td style="text-align: left;">UUID</td>
 <td style="text-align: left;">A globally unique identifier. See <a href="../../4_Identifiers/4_1_Identifiers/">identifiers</a> section for information on how to construct this identifier</td>
 </tr>
 <tr>
 <td style="text-align: left;">materialCombinationIdentifier</td>
-<td style="text-align: left;"><code>required</code></td>
+<td style="text-align: left;"><code>mandatory</code></td>
 <td style="text-align: left;">UUID</td>
 <td style="text-align: left;">The unique identifier of the materials that this component is made of. There must be an equivalent record in the <code>Base_Materials</code> OR <code>Materials</code> data.</td>
 </tr>
 <tr>
 <td style="text-align: left;">materialPurpose</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">String</td>
 <td style="text-align: left;">Why is this base material or material being used? Use the identifier of the material purpose that this row relates to. The entry here should be drawn from the <a href="../../5_Controlled_Lists/5_003_Material_Purpose/">Material Purpose Controlled List</a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">virginMaterial</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Decimal</td>
 <td style="text-align: left;">The maximum allowable percent of the material that was newly created for the material.</td>
 </tr>
 <tr>
 <td style="text-align: left;">layer</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Integer</td>
 <td style="text-align: left;">The layer associated with the material. The inner most layer (the layer closest to the product) denoted as 1, and the outermost layer is the biggest number.</td>
 </tr>
 <tr>
 <td style="text-align: left;">materialPercentage</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Decimal</td>
 <td style="text-align: left;">The percentage of the total materials making-up the material. For every unique material, materialPercentage should add to 100%.</td>
 </tr>
@@ -1702,8 +1706,8 @@
 
   MATERIALS }o..o{ MATERIAL_CONSTITUENTS : within
   MATERIAL_CONSTITUENTS {
-    materialConstituentsIdentifier UUID
-    materialCombinationIdentifier UUID
+    materialConstituentsIdentifier UUID "*"
+    materialCombinationIdentifier UUID "*"
     materialPurpose String
     virginMaterial Decimal
     layer Integer
@@ -1713,7 +1717,7 @@
   MATERIAL_CONSTITUENTS }o--o{ MATERIALS : attributes
   MATERIAL_CONSTITUENTS }o--o{ CONTROLLED_LISTS : attributes
   CONTROLLED_LISTS {
-    materialPurposeControlledList required 
+    materialPurposeControlledList mandatory 
   }</code></pre>
 <h2 id="template">Template<a class="headerlink" href="#template" title="Permanent link">&para;</a></h2>
 <p>Material constituents should be provided as a separate csv file. The specification of this csv file is as follows:</p>

@@ -93,11 +93,15 @@
   <span class="twemoji">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24v112c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zm-32 224a32 32 0 1 1 64 0 32 32 0 1 1-64 0z"/></svg>
   </span>
-  While Open 3P is <strong>free and open</strong>, under the
+  Open 3P is <strong>free and open</strong>, under the
   <a rel="me" href="../../10_Licence/10_01_Licence">
     <strong>Apache License, Version 2.0</strong>
   </a>
-  you are required to inform us if you are using it. Provide your contact details to let us know and to stay informed of updates to the standard.
+  . To be kept informed of updates, events and news then signup to our 
+  <a target="_blank" href="http://eepurl.com/iB-Qhk">
+    <strong>mailing list</strong>
+  </a>
+  .
 
           </div>
           
@@ -729,6 +733,15 @@
   <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
       Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data flow
     </span>
   </a>
   
@@ -1712,223 +1725,223 @@
 <tbody>
 <tr>
 <td style="text-align: left;">identifier</td>
-<td style="text-align: left;"><code>required</code></td>
+<td style="text-align: left;"><code>mandatory</code></td>
 <td style="text-align: left;">UUID</td>
 <td style="text-align: left;">A globally unique identifier. See <a href="../../4_Identifiers/4_1_Identifiers/">identifiers</a> section for information on how to construct this identifier</td>
 </tr>
 <tr>
 <td style="text-align: left;">name</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">String</td>
 <td style="text-align: left;">The name of this complete packaging.</td>
 </tr>
 <tr>
 <td style="text-align: left;">description</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">String</td>
 <td style="text-align: left;">A brief description of this complete packaging.</td>
 </tr>
 <tr>
 <td style="text-align: left;">externalIdentifiers</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Dictionary</td>
 <td style="text-align: left;">A dictionary of identifiers that might be used to identify the complete packaging in other systems. For example: manufacturer&rsquo;s own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. <code>{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}</code></td>
 </tr>
 <tr>
 <td style="text-align: left;">imageURLs</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">List</td>
 <td style="text-align: left;">URL(s) that links to a picture of the complete packaging. Please see the guidelines below on how to capture the image and name the URL.</td>
 </tr>
 <tr>
 <td style="text-align: left;">completePackagingConstituentsIdentifier</td>
-<td style="text-align: left;"><code>required</code></td>
+<td style="text-align: left;"><code>mandatory</code></td>
 <td style="text-align: left;">List</td>
 <td style="text-align: left;">The information regarding the consituents that are combined to create this complete packaging. The entries should be from the <a href="../../6_Relationship_Lists/6_003_Complete_Packaging_Constituents/">Complete Packaging Constituents Relationship List</a> identifier.</td>
 </tr>
 <tr>
 <td style="text-align: left;">LOWcodeWOproduct</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">String</td>
 <td style="text-align: left;">The list of waste code for <strong>only</strong> the complete packaging, by itself (excluding the product). LOW code is synonymous with European Waste Catalogue Code (EWC). For example: an empty bottle would have a LOWcode of <code>15 01 02</code>. Please use <a href="https://dsposal.uk/browse/ewc" target="_blank">Dsposal</a> or <a href="https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made" target="_blank">legislation.gov</a> to find the LOWcode. <strong>Note</strong>: The LOWcode can based on its combination with other components and the actual product contained in the complete packaging. Be sure to only include the complete packaging LOWcode and not the complete packaging with the product. If you cannot find the code or are uncertain please enter <code>Uncertain</code>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">productType</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">String</td>
 <td style="text-align: left;">Information about the product contained in the complete packaging. The entry here should be drawn from the <a href="../../5_Controlled_Lists/5_012_Product_Type/">product type controlled list</a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">LOWcodeWproduct</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">String</td>
 <td style="text-align: left;">The list of waste code for <strong>everything</strong> in the complete packaging. LOW code is synonymous with European Waste Catalogue Code (EWC). For example: an empty bottle would have a LOWcode of <code>15 01 02</code>. Please use <a href="https://dsposal.uk/browse/ewc" target="_blank">Dsposal</a> or <a href="https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made" target="_blank">legislation.gov</a> to find the LOWcode. <strong>Note</strong>: The LOWcode can based on its combination with other components and the actual product contained in the complete packaging. Be sure to include the complete packaging LOWcode with the product. If you cannot find the code or are uncertain please enter <code>Uncertain</code>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">onTheGo</td>
-<td style="text-align: left;"><code>required</code></td>
+<td style="text-align: left;"><code>mandatory</code></td>
 <td style="text-align: left;">Boolean</td>
 <td style="text-align: left;">Is the complete packaging often classed as packaging that will end up in street bins? Answer as: <code>TRUE</code> for yes and <code>FALSE</code> for no.</td>
 </tr>
 <tr>
 <td style="text-align: left;">householdWaste</td>
-<td style="text-align: left;"><code>required</code></td>
+<td style="text-align: left;"><code>mandatory</code></td>
 <td style="text-align: left;">Boolean</td>
 <td style="text-align: left;">Is the complete packaging often classed as packaging that will end up in kerbside collections? Answer as: <code>TRUE</code> for yes and <code>FALSE</code> for no.</td>
 </tr>
 <tr>
 <td style="text-align: left;">depositReturnSchemes</td>
-<td style="text-align: left;"><code>required</code></td>
+<td style="text-align: left;"><code>mandatory</code></td>
 <td style="text-align: left;">List</td>
 <td style="text-align: left;">Which countries support a deposit return scheme for this particular complete packaging? The entries here should be drawn from the <a href="../../5_Controlled_Lists/5_013_Deposit_Return_Scheme/">deposit return scheme controlled list</a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">completePackagingEndOfLifeRoutes</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">List</td>
 <td style="text-align: left;">The information regarding this complete packaging&rsquo;s proposed end of life routes. The entries should be the <a href="../../6_Relationship_Lists/6_008_Complete_Packaging_End_of_Life_Routes/">complete packaging end of life routes</a> identifiers.</td>
 </tr>
 <tr>
 <td style="text-align: left;">recyclability</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Boolean</td>
 <td style="text-align: left;">Is the complete packaging recyclable (as determined by a reputable source)? Answer as: <code>TRUE</code> for yes and <code>FALSE</code> for no.</td>
 </tr>
 <tr>
 <td style="text-align: left;">recyclabilityClaims</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">List</td>
 <td style="text-align: left;">The information regarding this recyclability claims. The entries should be the <a href="../../6_Relationship_Lists/6_006_Recyclability_Claims/">recyclability claims relationship list</a> identifiers.</td>
 </tr>
 <tr>
 <td style="text-align: left;">height</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Decimal</td>
 <td style="text-align: left;">The height of the complete packaging. Please see the guidelines below on how to properly measure and report the height.</td>
 </tr>
 <tr>
 <td style="text-align: left;">heightDate</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Date</td>
 <td style="text-align: left;">The date that the height was last verified/measured. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">width</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Decimal</td>
 <td style="text-align: left;">The width of the complete packaging. Please see the guidelines below on how to properly measure and report the width.</td>
 </tr>
 <tr>
 <td style="text-align: left;">widthDate</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Date</td>
 <td style="text-align: left;">The date that the width was last verified/measured. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">depth</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Decimal</td>
 <td style="text-align: left;">The depth of the complete packaging. Please see the guidelines below on how to properly measure and report the depth.</td>
 </tr>
 <tr>
 <td style="text-align: left;">depthDate</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Date</td>
 <td style="text-align: left;">The date that the depth was last verified/measured. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">volume</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Decimal</td>
 <td style="text-align: left;">Using the height, width, and depth found using the measurement guidelines, calculate the complete packaging&rsquo;s volume using: <code>height x width x depth</code>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">volumeDate</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Date</td>
 <td style="text-align: left;">The date that the volume was last verified/measured. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">weight</td>
-<td style="text-align: left;"><code>required</code></td>
+<td style="text-align: left;"><code>mandatory</code></td>
 <td style="text-align: left;">Decimal</td>
 <td style="text-align: left;">The weight of the complete packaging.</td>
 </tr>
 <tr>
 <td style="text-align: left;">weightTolerance</td>
-<td style="text-align: left;"><code>required</code></td>
+<td style="text-align: left;"><code>mandatory</code></td>
 <td style="text-align: left;">Decimal</td>
 <td style="text-align: left;">The threshold of weight that complete packaging can vary by. This can be given in grams or percentage.</td>
 </tr>
 <tr>
 <td style="text-align: left;">weightToleranceType</td>
-<td style="text-align: left;"><code>required</code></td>
+<td style="text-align: left;"><code>mandatory</code></td>
 <td style="text-align: left;">String</td>
 <td style="text-align: left;">Either <code>grams</code> or <code>percentage</code> based on the value provided in <code>weightTolerance</code></td>
 </tr>
 <tr>
 <td style="text-align: left;">weightDate</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Date</td>
 <td style="text-align: left;">The date that the weight was last verified/measured. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">servingCapacity</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Integer</td>
 <td style="text-align: left;">The serving capacity of the complete packaging - how much of a product that can be contained in the complete packaging.</td>
 </tr>
 <tr>
 <td style="text-align: left;">servingCapacityDate</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Date</td>
 <td style="text-align: left;">The date that the serving capacity was last verified/measured. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">partOfMultipack</td>
-<td style="text-align: left;"><code>required</code></td>
+<td style="text-align: left;"><code>mandatory</code></td>
 <td style="text-align: left;">Boolean</td>
 <td style="text-align: left;">Is the complete packaging part of a multipack? Answer as: <code>TRUE</code> for yes and <code>FALSE</code> for no.</td>
 </tr>
 <tr>
 <td style="text-align: left;">certification</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Boolean</td>
 <td style="text-align: left;">Does the complete packaging have a certificate (e.g. FSC, REACH, FSA etc.)? Answer as: <code>TRUE</code> for yes and <code>FALSE</code> for no.</td>
 </tr>
 <tr>
 <td style="text-align: left;">certificationClaims</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">List</td>
 <td style="text-align: left;">The information regarding the certifications. The entries should be the <a href="../../6_Relationship_Lists/6_005_Certification_Claims/">certification claims relationship list</a> identifiers.</td>
 </tr>
 <tr>
 <td style="text-align: left;">manufacturers</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">List</td>
 <td style="text-align: left;">The information regarding the manufacturer(s). The entries should be the <a href="../../6_Relationship_Lists/6_010_Organisations/">Organisations Relationship List</a> identifiers.</td>
 </tr>
 <tr>
 <td style="text-align: left;">manufacturedCountry</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">String</td>
 <td style="text-align: left;">The country the component was manufactured in. Use the country numeric <a href="https://www.iso.org/obp/ui/#search" target="_blank">ISO codes</a> as described in the <a href="https://www.iso.org/iso-3166-country-codes.html" target="_blank">ISO 3166 international standard</a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">updateDate</td>
-<td style="text-align: left;"><code>required</code></td>
+<td style="text-align: left;"><code>mandatory</code></td>
 <td style="text-align: left;">Date</td>
 <td style="text-align: left;">The date that the complete packaging was provided/last updated. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">releaseDate</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Date</td>
 <td style="text-align: left;">The date that the complete packaging will be available to use. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">discontinueDate</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Date</td>
 <td style="text-align: left;">The date that the complete packaging will no longer be available to use. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
@@ -1938,18 +1951,18 @@
 <pre class="mermaid"><code>erDiagram
 COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
   COMPLETE_PACKAGING {
-    identifier UUID
+    identifier UUID "*"
     name String
     description String
     externalIdentifiers Dictionary
     imageURLs List
-    completePackagingConstituentsIdentifier List
+    completePackagingConstituentsIdentifier List "*"
     LOWcodeWOproduct String
     productType String
     LOWcodeWproduct String
-    onTheGo Boolean
-    householdWaste Boolean
-    depositReturnSchemes List
+    onTheGo Boolean "*"
+    householdWaste Boolean "*"
+    depositReturnSchemes List "*"
     completePackagingEndOfLifeRoutes List
     recyclability Boolean
     recyclabilityClaims List
@@ -1961,18 +1974,18 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
     depthDate Date
     volume Decimal
     volumeDate Date
-    weight Decimal
-    weightTolerance Decimal
-    weightToleranceType String
+    weight Decimal "*"
+    weightTolerance Decimal "*"
+    weightToleranceType String "*"
     weightDate Date
     servingCapacity Integer
     servingCapacityDate Date
-    partOfMultipack Boolean
+    partOfMultipack Boolean "*"
     certification Boolean
     certificationClaims List
     manufacturers List
     manufacturedCountry String
-    updateDate Date
+    updateDate Date "*"
     releaseDate Date
     discontinueDate Date
   }
@@ -1984,20 +1997,20 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
   MULTIPACK }o..o{ LOADS : load_constituents
   COMPONENTS }o..o{ LOADS : load_constituents
       CONTROLLED_LISTS {
-      productType recommended
-      depositReturnScheme recommended
+      productType optional
+      depositReturnScheme optional
     }
     RELATIONSHIP_LISTS {
       completePackagingEndOfLifeRoutes required
-      recyclabilityClaims recommended
-      certificationClaims recommended
-      organisations recommended
+      recyclabilityClaims optional
+      certificationClaims optional
+      organisations optional
     }</code></pre>
 <h2 id="template">Template<a class="headerlink" href="#template" title="Permanent link">&para;</a></h2>
 <p>Complete packaging should be provided as a separate csv file. The specification of this csv file is as follows:</p>
 <p><a href="https://www.open3p.org/wp-content/uploads/2023/09/completePackaging20230922.csv" target="_blank">Complete Packaging Template</a></p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">JSON</label><label for="__tabbed_1_2">CSV download</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Wine box - JSON</label><label for="__tabbed_1_2">Wine bottle - JSON</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -2053,69 +2066,237 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
 <span class="normal">51</span>
 <span class="normal">52</span>
 <span class="normal">53</span>
-<span class="normal">54</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;63df4b40-ba4f-472e-a260-f8a944eb7961&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4 Breaded Chicken Steaks packaging&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PET tray, lidding film, top &amp; base label&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;externalIdentifiers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;internalIdentifer&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;85467889&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;GTIN&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;00123456789012&quot;</span>
-<span class="w">        </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;imageURLs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="s2">&quot;http://standard.open3p.org/2.0/img/measurements/figure1.measuring.png&quot;</span>
-<span class="w">    </span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;completePackagingConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="s2">&quot;9F459508-E365-0B9F-E3BB-FF4A7AED481B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;7197de37-8b77-4032-b0fd-84f27bae97be&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;0e9a7265-6213-4a76-9a45-3acc5d83fa6f&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;1c042eee-ec7a-400b-b05b-ca0d319e9067&quot;</span>
-<span class="w">    </span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;LOWcodeWOproduct&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;15 01 06&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;productType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cp-product-type-0001&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;LOWcodeWproduct&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;20 01 08&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;onTheGo&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;householdWaste&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;depositReturnSchemes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="s2">&quot;cp-drs-0005&quot;</span>
-<span class="w">    </span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;completePackagingEndOfLifeRoutes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="s2">&quot;1229f395-3065-4236-bc1e-2aa500f58a79&quot;</span>
-<span class="w">    </span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;recyclability&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;recyclabilityClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="s2">&quot;b101889f-87e5-4c42-abb7-0df5fc3d1a26&quot;</span>
-<span class="w">    </span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">220</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;heightDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-01-01&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">170</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;widthDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-01-01&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;depth&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;depthDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-01-01&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;volume&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.002</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;volumeDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-01-01&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;weight&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">32.8</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;weightTolerance&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;weightToleranceType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;percentage&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;weightDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-01-01&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;servingCapacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;servingCapacityDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-01-01&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;partOfMultipack&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;certificationClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="s2">&quot;eed87ac3-6e3e-45fb-af2c-dd0f64fdb597&quot;</span>
-<span class="w">    </span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;826&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-01-01&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;releaseDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-01-01&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;discontinueDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
-<span class="p">}</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="hll"><span class="w">        </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TBC&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Wine box&quot;</span><span class="p">,</span>
+</span><span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sturdy and branded, our cardboard box is crafted to hold 12 bottles securely. Includes inlay for secure transport.&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;externalIdentifiers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;internalIdentifer&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;85467889&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;GTIN&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;00123456789012&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;completePackagingConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;materialConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TBC&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;materialCombinationIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9dad67b0-d5a2-4afb-9287-e712fd1ea3e6&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;materialConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TBC&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;materialCombinationIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8f87c708-8a6b-4c9d-ae6e-af0393f84a12&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;LOWcodeWOproduct&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;15 01 01&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;productType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cp-product-type-0001&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;LOWcodeWproduct&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;15 01 06&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;onTheGo&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;householdWaste&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;completePackagingEndOfLifeRoutes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;TBC&quot;</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;recyclability&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;recyclabilityClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;TBC&quot;</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">382</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;heightDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-31&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">388</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;widthDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-31&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;depth&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">274</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;depthDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-31&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;volume&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">40611184</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;volumeDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-31&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;weight&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">450</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;weightTolerance&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">58</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;weightToleranceType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;percentage&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;weightDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-31&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;servingCapacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;servingCapacityDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-31&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;partOfMultipack&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;certificationClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;TBC&quot;</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;GB-COH-10906273&quot;</span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;826&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-31&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;releaseDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2010-01-31&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;discontinueDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">]</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<ul>
-<li><a href="https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_3_Complete_Packaging_Example.csv" target="_blank">Complete Packaging example download</a></li>
-</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="hll"><span class="w">        </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;123f1eab-f674-4009-862a-7168cd5cf53f&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Wine bottle&quot;</span><span class="p">,</span>
+</span><span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;750ml Bordeaux wine bottle with cork and two labels: Classic design, recyclable glass, sealed with a cork for freshness. Two labels for branding and information.&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;externalIdentifiers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;gtin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0123456789012&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;sku&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;5454632&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;WineMS&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;316456&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;completePackagingConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;materialConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TBC&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;materialCombinationIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;94108707-b914-43f3-bed5-93adbbd208c1&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;materialConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TBC&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;materialCombinationIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4b99be14-c89e-4869-abb7-485240ea33c6&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;materialConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TBC&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;materialCombinationIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3d77b280-690e-4ccb-84f5-584c4cbcea36&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;materialConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TBC&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;materialCombinationIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4b50247a-b2d1-4438-ac8a-fb6768180136&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;productType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cp-product-type-0001&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;onTheGo&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;householdWaste&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;completePackagingEndOfLifeRoutes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;TBC&quot;</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;recyclability&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;recyclabilityClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;TBC&quot;</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">305</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;heightDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-31&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">72.4</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;widthDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-31&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;depth&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">72.5</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;depthDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-31&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;weight&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">710</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;weightTolerance&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;weightToleranceType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;percentage&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;servingCapacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">750</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;partOfMultipack&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;certificationClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;1407ca7b-ebaf-472c-85c5-a7965a21f280&quot;</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;GB-COH-10906273&quot;</span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;826&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-31&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;releaseDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2010-01-31&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;discontinueDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
+<h2 id="data-flow">Data flow<a class="headerlink" href="#data-flow" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart LR
+    subgraph materials[Materials]
+        bm_example["example base materials"]
+    end
+        subgraph components[Components]
+        co_cardboardBox[Cardboard box
+        - 
+        9dad67b0-d5a2-4afb-9287-e712fd1ea3e]
+        co_tape[Tape
+        - 
+        8f87c708-8a6b-4c9d-ae6e-af0393f84a12]
+        co_wineBottle["Wine bottle
+        - 
+        94108707-b914-43f3-bed5-93adbbd208c1"]
+        co_cork["Cork
+        - 
+        4b99be14-c89e-4869-abb7-485240ea33c6"]
+        co_backLabel["Back label
+        - 
+        3d77b280-690e-4ccb-84f5-584c4cbcea36"]
+        co_frontLabel["Front label
+        - 
+        4b50247a-b2d1-4438-ac8a-fb6768180136"]
+    end
+    subgraph completePackages["`**Complete Packages**`"]
+        cp_wineBox["`**Wine Box
+        -
+        complete pakages**`"]
+        cp_wineBottle["`**Wine Bottle
+        -
+        123f1eab-f674-4009-862a-7168cd5cf53f**`"]
+    end
+    subgraph multipacks[Multipacks]
+        mp_example[example multipacks]
+    end
+    materials --&gt; components
+    co_cardboardBox --&gt; cp_wineBox
+    co_tape --&gt; cp_wineBox
+    co_wineBottle --&gt; cp_wineBottle
+    co_cork --&gt; cp_wineBottle
+    co_backLabel --&gt; cp_wineBottle
+    co_frontLabel --&gt; cp_wineBottle
+    cp_wineBox -.-&gt; multipacks
+    cp_wineBottle -.-&gt; multipacks</code></pre>
 <h2 id="guide-for-how-to-take-measurements">Guide for how to take measurements<a class="headerlink" href="#guide-for-how-to-take-measurements" title="Permanent link">&para;</a></h2>
 <h3 id="units">Units<a class="headerlink" href="#units" title="Permanent link">&para;</a></h3>
 <p>All measurements should be given using the metric system.</p>

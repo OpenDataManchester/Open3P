@@ -93,11 +93,15 @@
   <span class="twemoji">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24v112c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zm-32 224a32 32 0 1 1 64 0 32 32 0 1 1-64 0z"/></svg>
   </span>
-  While Open 3P is <strong>free and open</strong>, under the
+  Open 3P is <strong>free and open</strong>, under the
   <a rel="me" href="../../10_Licence/10_01_Licence">
     <strong>Apache License, Version 2.0</strong>
   </a>
-  you are required to inform us if you are using it. Provide your contact details to let us know and to stay informed of updates to the standard.
+  . To be kept informed of updates, events and news then signup to our 
+  <a target="_blank" href="http://eepurl.com/iB-Qhk">
+    <strong>mailing list</strong>
+  </a>
+  .
 
           </div>
           
@@ -1665,19 +1669,19 @@
 <tbody>
 <tr>
 <td style="text-align: left;">recyclabilityIdentifier</td>
-<td style="text-align: left;"><code>required</code></td>
+<td style="text-align: left;"><code>mandatory</code></td>
 <td style="text-align: left;">UUID</td>
 <td style="text-align: left;">A globally unique identifier. See <a href="../../4_Identifiers/4_1_Identifiers/">identifiers</a> section for information on how to construct this identifier</td>
 </tr>
 <tr>
 <td style="text-align: left;">recyclabilitySource</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">String</td>
 <td style="text-align: left;">What source provided the certificate? The entry should be the <a href="../../5_Controlled_Lists/5_005_Recyclability_Source/">recyclability source controlled list</a> identifier.</td>
 </tr>
 <tr>
 <td style="text-align: left;">recyclabilityIssueDate</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Date</td>
 <td style="text-align: left;">The date that the certificate was provided/last updated. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
@@ -1689,13 +1693,13 @@
   COMPONENTS }o..o{ RECYCLABILITY_CLAIMS : within
   COMPLETE_PACKAGING }o..o{ RECYCLABILITY_CLAIMS : within
   RECYCLABILITY_CLAIMS {
-    recyclabilityIdentifier UUID
-    recyclabilitySource String
+    recyclabilityIdentifier UUID "*"
+    recyclabilitySource String "*"
     recyclabilityIssueDate Date
   }
   RECYCLABILITY_CLAIMS }o--o{ CONTROLLED_LISTS : attributes
   CONTROLLED_LISTS {
-    recyclabilitySource required 
+    recyclabilitySource mandatory 
   }</code></pre>
 <h2 id="template">Template<a class="headerlink" href="#template" title="Permanent link">&para;</a></h2>
 <p>Recyclability claims should be provided as a separate csv file. The specification of this csv file is as follows:</p>

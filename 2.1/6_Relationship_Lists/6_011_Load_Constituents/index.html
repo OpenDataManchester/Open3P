@@ -93,11 +93,15 @@
   <span class="twemoji">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24v112c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zm-32 224a32 32 0 1 1 64 0 32 32 0 1 1-64 0z"/></svg>
   </span>
-  While Open 3P is <strong>free and open</strong>, under the
+  Open 3P is <strong>free and open</strong>, under the
   <a rel="me" href="../../10_Licence/10_01_Licence">
     <strong>Apache License, Version 2.0</strong>
   </a>
-  you are required to inform us if you are using it. Provide your contact details to let us know and to stay informed of updates to the standard.
+  . To be kept informed of updates, events and news then signup to our 
+  <a target="_blank" href="http://eepurl.com/iB-Qhk">
+    <strong>mailing list</strong>
+  </a>
+  .
 
           </div>
           
@@ -1643,37 +1647,37 @@
 <tbody>
 <tr>
 <td style="text-align: left;">loadConstituentsIdentifier</td>
-<td style="text-align: left;"><code>required</code></td>
+<td style="text-align: left;"><code>mandatory</code></td>
 <td style="text-align: left;">UUID</td>
 <td style="text-align: left;">A globally unique identifier. See <a href="../../4_Identifiers/4_1_Identifiers/">identifiers</a> section for information on how to construct this identifier</td>
 </tr>
 <tr>
 <td style="text-align: left;">loadCombinationIdentifier</td>
-<td style="text-align: left;"><code>required</code></td>
+<td style="text-align: left;"><code>mandatory</code></td>
 <td style="text-align: left;">UUID</td>
 <td style="text-align: left;">The unique identifier of the items that this component is made of. There must be an equivalent record in the <code>Complete_Packaging</code> OR <code>Multipacks</code> data.</td>
 </tr>
 <tr>
 <td style="text-align: left;">name</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">String</td>
 <td style="text-align: left;">The name of this load constituent.</td>
 </tr>
 <tr>
 <td style="text-align: left;">externalIdentifiers</td>
-<td style="text-align: left;"><code>recommended</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Dictionary</td>
 <td style="text-align: left;">A dictionary of identifiers that might be used to identify the load constituents in other systems. For example: manufacturer&rsquo;s own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. <code>{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}</code></td>
 </tr>
 <tr>
 <td style="text-align: left;">quantityInLoad</td>
-<td style="text-align: left;"><code>required</code></td>
+<td style="text-align: left;"><code>mandatory</code></td>
 <td style="text-align: left;">Integer</td>
 <td style="text-align: left;">Number of units for the packaging items found in a load that this row corresponds to.</td>
 </tr>
 <tr>
 <td style="text-align: left;">level</td>
-<td style="text-align: left;"><code>required</code></td>
+<td style="text-align: left;"><code>mandatory</code></td>
 <td style="text-align: left;">String</td>
 <td style="text-align: left;">The intended use of the component for the packaging. The entry here should be drawn from the <a href="../../5_Controlled_Lists/5_015_Level/">level controlled list</a>.</td>
 </tr>
@@ -1684,17 +1688,17 @@
   COMPLETE_PACKAGING }o..o{ LOAD_CONSTITUENTS : attributes
   MULTIPACKS }o..o{ LOAD_CONSTITUENTS : attributes
   LOAD_CONSTITUENTS {
-    loadConstituentsIdentifier UUID
-    loadCombinationIdentifier UUID
+    loadConstituentsIdentifier UUID "*"
+    loadCombinationIdentifier UUID "*"
     name String
     externalIdentifiers Dictionary
-    quantityInLoad Integer
-    level String
+    quantityInLoad Integer "*"
+    level String "*"
   }
   LOAD_CONSTITUENTS }o--o{ LOAD : within
   LOAD_CONSTITUENTS }o--o{ CONTROLLED_LISTS : attributes
   CONTROLLED_LISTS {
-    level required
+    level mandatory
   }</code></pre>
 
 
