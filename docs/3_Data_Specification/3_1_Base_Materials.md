@@ -62,64 +62,57 @@ Base materials should be provided as a separate csv file. The specification of t
 
 ## Example
 
-=== "JSON #1"
+=== "Cardboard - JSON"
 
     ``` json linenums="1"
-    --FSC accredited wood grown in Spain
     [
       {
-        "identifier": "a5e6b8bc-ade8-4660-857e-d397243f6b57",
-        "name": "Spainish Softwood",
-        "type": "",
-        "materialChemCID": "",
+        "identifier": "222494f7-6703-49bc-a993-8dd2675709fb",
+        "name": "Cardboard",
+        "type": "bm-material-type-0001",
         "externalIdentifiers": {
-          "dbPK":"152314568888"
+          "sapPK":"153516",
+          "SKU":"34-56bg"
           },
         "certification": true,
-        "certificationClaims": ["1","35"],
-        "certificationDate": "2022-08-01",
-        "manufacturers": [""],
+        "certificationClaims":  
+          ["352d6f90-139b-429c-9018-2230ff03a40b"],
+        "manufacturers": ["GB-COH-10906273"],
         "manufacturedCountry": "724",
-        "updateDate": "2022-08-01"
+        "updateDate": "2024-02-25"
       }
     ]
     ```
-=== "JSON #2"
+=== "Soda ash - JSON"
 
     ``` json linenums="1"
-    --Food grade synthetic polyethylene terephthalate (PET) made in the UK - verbose data structure
-    {
-      "identifier": "A4BAE07C-1847-CD8E-C933-6FD30478423B",
-      "name": "PET",
-      "type": {
-        "identifier":"bm-material-type-0002",
-        "category":"synthetic",
-        "detailed":"derived from crude oil, natural gas or coal."
-      },
-      "materialChemCID": "223961227",
-      "externalIdentifiers": {
-        "primaryKey":"9187e576-0dfd-46dd-809e-4af0a35f888d",
-        },
-      "certification": true,
-      "certificationClaims": [{
-        "certificationIdentifier": "2e32b7cc-5fa8-425f-a2c0-784340e43f36",
-        "certificationSource": {
-          "identifier":"certification-source-0002",
-          "category":"FSA",
-          "detailed":"The Food Standards Agency (FSA) is the independent government department working to protect public health and consumers’ wider interests in relation to food in England, Wales and Northern Ireland."
-        },
-        "certificationDate": "2022-08-01",
-      }],
-      "manufacturers": [""],
-      "manufacturedCountry": {
-        "Numeric": "826",
-        "EnglishShortName": "United Kingdom of Great Britain and Northern Ireland (the)",
-        "Alpha2": "GB",
-        "Alpha3": "GBR"
-      },
-      "updateDate": "2022-08-01"
-    }
+    [
+      {
+        "identifier": "ff39892f-0a88-4085-9942-4522cecc8337",
+        "name": "Soda ash",
+        "materialChemCID": "10340",
+        "externalIdentifiers": {
+          "internal id":"soda-ash-100-100"
+          },
+        "certification": false,
+        "manufacturers": ["GB-COH-10906273"],
+        "manufacturedCountry": "826",
+        "updateDate": "2023-12-07"
+      }
+    ]
     ```
-=== "CSV download"
 
-    * [Material Catalogue example download](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_7_Materials_Catalogue_Example.csv){target=_blank}
+## Data flow
+
+``` mermaid
+flowchart LR
+    subgraph baseMaterials[Base Materials]
+        bm_cardboard[cardboard]
+        bm_sodaAsh[soda ash]
+    end
+    subgraph materials[Materials]
+        ma_cardboard[example material]
+    end
+    bm_cardboard --> materials
+    bm_sodaAsh --> materials
+```
