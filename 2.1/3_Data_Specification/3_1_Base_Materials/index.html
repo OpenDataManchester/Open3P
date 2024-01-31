@@ -658,9 +658,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#data-flow" class="md-nav__link">
+  <a href="#template" class="md-nav__link">
     <span class="md-ellipsis">
-      Data flow
+      Template
     </span>
   </a>
   
@@ -676,9 +676,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#template" class="md-nav__link">
+  <a href="#data-flow" class="md-nav__link">
     <span class="md-ellipsis">
-      Template
+      Data flow
     </span>
   </a>
   
@@ -1763,17 +1763,9 @@ Yes, every packaging item must include a Base Material. This foundational compon
     certificationClaims optional
     organisations optional
   }</code></pre>
-<h2 id="data-flow">Data flow<a class="headerlink" href="#data-flow" title="Permanent link">&para;</a></h2>
-<pre class="mermaid"><code>flowchart LR
-    subgraph baseMaterials[Base Materials]
-        bm_cardboard[cardboard]
-        bm_sodaAsh[soda ash]
-    end
-    subgraph materials[Materials]
-        ma_cardboard[example material]
-    end
-    bm_cardboard --&gt; materials
-    bm_sodaAsh --&gt; materials</code></pre>
+<h2 id="template">Template<a class="headerlink" href="#template" title="Permanent link">&para;</a></h2>
+<p>Base materials should be provided as a separate csv file. The specification of this csv file is as follows:</p>
+<p><a href="https://www.open3p.org/wp-content/uploads/2023/09/baseMaterials20230922.csv" target="_blank">Base Materials Template</a></p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">JSON #1</label><label for="__tabbed_1_2">JSON #2</label></div>
 <div class="tabbed-content">
@@ -1846,12 +1838,20 @@ Yes, every packaging item must include a Base Material. This foundational compon
 <span class="w">  </span><span class="p">}</span>
 <span class="p">]</span>
 </code></pre></div></td></tr></table></div>
-<h2 id="template">Template<a class="headerlink" href="#template" title="Permanent link">&para;</a></h2>
 </div>
 </div>
 </div>
-<p>Base materials should be provided as a separate csv file. The specification of this csv file is as follows:</p>
-<p><a href="https://www.open3p.org/wp-content/uploads/2023/09/baseMaterials20230922.csv" target="_blank">Base Materials Template</a></p>
+<h2 id="data-flow">Data flow<a class="headerlink" href="#data-flow" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart LR
+    subgraph baseMaterials[Base Materials]
+        bm_cardboard[cardboard]
+        bm_sodaAsh[soda ash]
+    end
+    subgraph materials[Materials]
+        ma_cardboard[example material]
+    end
+    bm_cardboard --&gt; materials
+    bm_sodaAsh --&gt; materials</code></pre>
 
 
 
