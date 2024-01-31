@@ -1813,7 +1813,7 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
 <p>Materials should be provided as a separate csv file. The specification of this csv file is as follows:</p>
 <p><a href="https://www.open3p.org/wp-content/uploads/2023/09/materials20230922.csv" target="_blank">Materials Template</a></p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">JSON #1</label><label for="__tabbed_1_2">JSON #2</label><label for="__tabbed_1_3">CSV download</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Cardboard - JSON</label><label for="__tabbed_1_2">food and drink glass - JSON</label><label for="__tabbed_1_3">food and drink glass - JSON</label><label for="__tabbed_1_4">CSV download</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1834,9 +1834,7 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
 <span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="mi">--</span><span class="err">Food</span><span class="w"> </span><span class="err">grade</span><span class="w"> </span><span class="err">sy</span><span class="kc">nt</span><span class="err">he</span><span class="kc">t</span><span class="err">ic</span><span class="w"> </span><span class="err">polye</span><span class="kc">t</span><span class="err">hyle</span><span class="kc">ne</span><span class="w"> </span><span class="kc">tere</span><span class="err">ph</span><span class="kc">t</span><span class="err">hala</span><span class="kc">te</span><span class="w"> </span><span class="err">(PET)</span><span class="w"> </span><span class="err">made</span><span class="w"> </span><span class="err">i</span><span class="kc">n</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">UK.</span><span class="w"> </span><span class="err">O</span><span class="kc">nl</span><span class="err">y</span><span class="w"> </span><span class="err">o</span><span class="kc">ne</span><span class="w"> </span><span class="err">base</span><span class="w"> </span><span class="err">ma</span><span class="kc">ter</span><span class="err">ial.</span>
-<span class="p">{</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DCEE1F88-A83B-5BBC-D2D9-6A862B344977&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;PET&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;externalIdentifiers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -1854,6 +1852,98 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
 <span class="w">  </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
 <span class="w">  </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;826&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;b050ab75-4bcb-4c7f-b8f5-8a1f9e5ba7d3&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Food and drink glass&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;externalIdentifiers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;internal id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;70-wine-glass&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;materialConstituents&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;materialConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;11eb7b61-05f1-4894-a57b-80e5082f944a&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;materialCombinationIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ff39892f-0a88-4085-9942-4522cecc8337&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;materialConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;11eb7b61-05f1-4894-a57b-80e5082f944a&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;materialCombinationIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1bdca07b-ed6a-4799-a027-654322cb302f&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;materialConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;11eb7b61-05f1-4894-a57b-80e5082f944a&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;materialCombinationIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ff39892f-0a88-4085-9942-4522cecc8337&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;materialConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;11eb7b61-05f1-4894-a57b-80e5082f944a&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;materialCombinationIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;42b19543-7138-43ff-a867-a1e551ccba14&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;combinationPurpose&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;function-0012&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;carton&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;detailed&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Box or container used for transporting and storaging goods.&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;areaDensity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;543.5&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;areaDensity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;gsm&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;areaDensityTolerance&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;6&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;areaDensityToleranceType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;unit&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;areaDensityDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;certificationClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;Numeric&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;826&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;EnglishShortName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;United Kingdom of Great Britain and Northern Ireland (the)&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;Alpha2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GB&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;Alpha3&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GBR&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
@@ -2058,19 +2148,15 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
 <span class="normal">198</span>
 <span class="normal">199</span>
 <span class="normal">200</span>
-<span class="normal">201</span>
-<span class="normal">202</span>
-<span class="normal">203</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="mi">--</span><span class="err">Fibre</span><span class="w"> </span><span class="err">based</span><span class="w"> </span><span class="err">composi</span><span class="kc">te</span><span class="w"> </span><span class="err">ma</span><span class="kc">ter</span><span class="err">ial</span><span class="w"> </span><span class="kc">t</span><span class="err">o</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">used</span><span class="w"> </span><span class="kc">f</span><span class="err">or</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">car</span><span class="kc">t</span><span class="err">o</span><span class="kc">n</span><span class="w"> </span><span class="mi">-</span><span class="w"> </span><span class="err">semi</span><span class="w"> </span><span class="err">verbose</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;f87b9bb3-f141-41cf-986e-e3a32b223f09&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Classic Carton Board - EVOH&quot;</span><span class="p">,</span>
+<span class="normal">201</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;b050ab75-4bcb-4c7f-b8f5-8a1f9e5ba7d3&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Food and drink glass&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;externalIdentifiers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;EAN&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0123456789101&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;BatchNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2145-23-po&quot;</span>
+<span class="w">    </span><span class="nt">&quot;internal id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;70-wine-glass&quot;</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">  </span><span class="nt">&quot;materialConstituents&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;materialConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;f87b9bb3-f141-41cf-986e-e3a32b223f09&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;materialConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;11eb7b61-05f1-4894-a57b-80e5082f944a&quot;</span><span class="p">,</span>
 <span class="w">      </span><span class="nt">&quot;materialCombinationIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3ca24db2-84d5-4681-aa16-136fbdba101f&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Polyethylene&quot;</span><span class="p">,</span>
