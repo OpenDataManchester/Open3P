@@ -2282,7 +2282,7 @@ MATERIALS }o--o{ COMPONENTS : component_constituents
 <h2 id="data-flow">Data flow<a class="headerlink" href="#data-flow" title="Permanent link">&para;</a></h2>
 <pre class="mermaid"><code>flowchart LR
     subgraph baseMaterials[Base Materials]
-        bm_example["example base material"]
+        bm_example["example base materials"]
     end
     subgraph materials[Materials]
         ma_cardboard["`**Cardboard
@@ -2300,9 +2300,14 @@ MATERIALS }o--o{ COMPONENTS : component_constituents
         - 
         94108707-b914-43f3-bed5-93adbbd208c1**`"]
     end
+    subgraph completePackages[Complete Packages]
+        cp_example["example complete pakages"]
+    end
     baseMaterials --&gt; materials
     ma_cardboard --&gt; co_cardboardBox
-    ma_glass --&gt; co_wineBottle</code></pre>
+    ma_glass --&gt; co_wineBottle
+    co_cardboardBox --&gt; completePackages
+    co_wineBottle --&gt; completePackages</code></pre>
 <h2 id="guide-for-how-to-take-measurements">Guide for how to take measurements<a class="headerlink" href="#guide-for-how-to-take-measurements" title="Permanent link">&para;</a></h2>
 <h3 id="units">Units<a class="headerlink" href="#units" title="Permanent link">&para;</a></h3>
 <p>All measurements should be given using the metric system.</p>
