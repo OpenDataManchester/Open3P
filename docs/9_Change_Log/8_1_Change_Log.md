@@ -2,28 +2,41 @@
 title: Latest Updates
 ---
 
-
 # Latest Updates
 A document that contains all the changes made to the standard.
 
+## January 31, 2024
+### Documents
+ - Updated JSON examples to match data flow page. This includes:
+    - Base materials
+    - Materials
+    - Components
+    - Complete Packages
+    - Multipacks
+ - Added data flow charts to help with visualising the flow of the different schema through the standard. This includes:
+    - Base materials
+    - Materials
+    - Components
+    - Complete Packages
+    - Multipacks
+
 ## January 29, 2024
 ### Documents
- - Complete Packaging, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
- - Multipack, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
- - Load, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
- - Multipack, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
- - Load, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
- - Material Constituents, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
- - Component Constituents, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
- - Complete Packaging Constituents, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
- - Multipack Constituents, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
- - Certificate Claims, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
- - Recyclability Claims, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
- - Component End of Life Routes, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
- - Complete Packaging End of Life Routes, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
- - Recycled Content Claims, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
- - Organisation, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
- - Load Constituents, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram.
+ - Changed the wording from required to mandatory. Changed the wording recommended to optional. Added asterisk to diagram to signify mandatory. This includes:
+    - Complete Packaging.
+    - Multipack.
+    - Load.
+    - Material Constituents.
+    - Component Constituents.
+    - Complete Packaging Constituents.
+    - Multipack Constituents.
+    - Certificate Claims.
+    - Recyclability Claims.
+    - Component End of Life Routes.
+    - Complete Packaging End of Life Routes.
+    - Recycled Content Claims.
+    - Organisation.
+    - Load Constituents.
 
 ## January 26, 2024
 ### Documents
