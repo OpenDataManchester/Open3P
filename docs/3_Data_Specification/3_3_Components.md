@@ -39,7 +39,7 @@ The components schema contains information regarding the individual components t
 |loaned|`mandatory`|Boolean|Is the component hired or loaned out as reusable packaging? Answer as: `TRUE` for yes and `FALSE` for no.|
 |reuseSystems|`optional`|List|The system(s) that facilitates the reuse of the component  `e.g., Loop`. The entries should be the [reuse system controlled list](../5_Controlled_Lists/5_010_Reuse_System.md) identifier(s).|
 |partOfMultipack|`mandatory`|Boolean|Is the component part of a multipack? Answer as: `TRUE` for yes and `FALSE` for no.|
-|recycledContent|`optional`|Decimal|The minimum allowable percent of how much recycled content is included in the makeup of the component. t is ‘required’ for plastic packaging where for the purposes of this standard we refer to [UK's HM Revenue & Customs](https://www.gov.uk/guidance/work-out-which-packaging-is-subject-to-plastic-packaging-tax){target=_blank} definition of recycled content. "Recycled plastic is plastic that has been reprocessed from recovered material by using a chemical or manufacturing process. This is so it can be used either for its original purpose or for other purposes. This does not include organic recycling. Recovered material is pre-consumer plastic or post-consumer plastic that both: a) is no longer suitable to be used in the process from which it was generated and would otherwise have been used for energy recovery (for example, by incineration) or disposed of as waste (for example, by being sent to landfill); b) has been collected and recovered for use as a material input for a recycling or manufacturing process, instead of new primary material"|
+|recycledContent|`optional`|Decimal|Positive decimal only, maximum value is 100.00. Value should equated to a percentage (e.g. 30 = 30%) The minimum allowable percent of how much recycled content is included in the makeup of the component. It is ‘required’ for plastic packaging where for the purposes of this standard we refer to [UK's HM Revenue & Customs](https://www.gov.uk/guidance/work-out-which-packaging-is-subject-to-plastic-packaging-tax){target=_blank} definition of recycled content. "Recycled plastic is plastic that has been reprocessed from recovered material by using a chemical or manufacturing process. This is so it can be used either for its original purpose or for other purposes. This does not include organic recycling. Recovered material is pre-consumer plastic or post-consumer plastic that both: a) is no longer suitable to be used in the process from which it was generated and would otherwise have been used for energy recovery (for example, by incineration) or disposed of as waste (for example, by being sent to landfill); b) has been collected and recovered for use as a material input for a recycling or manufacturing process, instead of new primary material"|
 |recycledContentClaims|`optional`|List|The information regarding the recycled contents. The entries should be the [recycled content claims relationship list](../6_Relationship_Lists/6_009_Recycled_Content_Claims.md) indentifiers.|
 |recyclability|`optional`|Boolean|Is the component recyclable (as determined by a reputable source)? Answer as: `TRUE` for yes and `FALSE` for no.|
 |recyclabilityClaims|`optional`|List|The information regarding this recyclability claims. The entries should be the [recyclability claims relationship list](../6_Relationship_Lists/6_006_Recyclability_Claims.md) identifiers.|
@@ -128,73 +128,145 @@ Components should be provided as a separate csv file. The specification of this 
 
 ## Example
 
-=== "JSON"
+=== "Cardboard box - JSON"
 
-    ``` json linenums="1"
-    --Food grade PET pot made in Ireland
-    {
-        "identifier": "9F459508-E365-0B9F-E3BB-FF4A7AED481B",
-        "name": "Thermoformed rPET tray",
-        "description": "Clear PET tray for food products",
-        "externalIdentifiers": {
-            "internalId": "14",
-            "GTIN": "00123456789012"
-        },
-        "imageURLs": [
-        "http://standard.open3p.org/2.0/img/measurements/figure1.measuring.png"
-        ],
-        "LOWcode": "150102",
-        "componentConstituents": [
-            "DCEE1F88-A83B-5BBC-D2D9-6A862B344977"
-        ],
-        "height": 50.0,
-        "heightDate": "2022-08-01",
-        "width": 220.0,
-        "widthDate": "2022-08-01",
-        "depth": 170.0,
-        "depthDate": "2022-08-01",
-        "volume": 1870.0,
-        "volumeDate": "2022-08-01",
-        "weight": 23.0,
-        "weightTolerance": 1.5,
-        "weightToleranceType": "grams",
-        "weightDate": "2022-08-01",
-        "shape": "c-shape-0004",
-        "function": "function-0041",
-        "flexibility": "c-flexibility-0002",
-        "branding": true,
-        "componentEndOfLifeRoutes": [
-            ""
-        ],
-        "colour": "cmyk(0%,0%,0%,10%)",
-        "opacity": "c-opacity-0002",
-        "loaned": false,
-        "reuseSystems": [
-            "c-reuse-system-0001"
-        ],
-        "partOfMultipack": false,
-        "recycledContent": 0.3,
-        "recycledContentClaims": [
-            "23e8251a-4fe6-4b25-9966-b08acac9ba34"
-        ],
-        "recyclability": true,
-        "recyclabilityClaims": [
-            "b101889f-87e5-4c42-abb7-0df5fc3d1a26"
-        ],
-        "certification": true,
-        "certificationClaims": [
-            "eed87ac3-6e3e-45fb-af2c-dd0f64fdb597"
-        ],
-        "manufacturers": [""],
-        "manufacturedCountry": "372",
-        "updateDate": "2022-08-01",
-        "releaseDate": "2022-08-01",
-        "discontinueDate": ""
-    }
+    ``` json linenums="1"  hl_lines="3 4"
+    [
+        {
+            "identifier": "9dad67b0-d5a2-4afb-9287-e712fd1ea3e6",
+            "name": "Cardboard box",
+            "description": "54cm x 38cm x 38cm 0204 style cardboard box: Sturdy and spacious for shipping or storage. All flaps meet for easy sealing. Versatile packaging solution for various items.",
+            "componentConstituents": [
+                {
+                "materialConstituentsIdentifier": "6d856739-3893-4321-84b9-738a4ef1c830",
+                "materialCombinationIdentifier": "16f41cca-1a77-4e31-8b0f-2723f752317b"
+                }
+            ],
+            "height": 380,
+            "width": 540,
+            "depth": 380,
+            "weight": 600,
+            "weightTolerance": 35,
+            "weightToleranceType": "grams",
+            "shape": "c-shape-0004",
+            "function": "function-0048",
+            "flexibility": "c-flexibility-0002",
+            "branding": false,
+            "componentEndOfLifeRoutes": [
+                "671ee5cc-a402-48a5-ba56-1f4d3840aef0"
+            ],
+            "colour": "cmyk(0%,14%,33%,18%)",
+            "opacity": "c-opacity-0001",
+            "loaned": false,
+            "partOfMultipack": false,
+            "recycledContent": 30,
+            "recycledContentClaims": [
+                "81ac4ec3-e097-4092-9c8f-4ef717d3740c"
+            ],
+            "recyclability": true,
+            "recyclabilityClaims": [
+                "6af9c69a-6ec1-42dd-a8da-54bab8165e44"
+            ],
+            "certification": false,
+            "manufacturers": ["GB-COH-10906273"],
+            "manufacturedCountry": "826",
+            "updateDate": "2024-01-25",
+            "releaseDate": "2011-01-01"
+        }
+    ]
     ```
-=== "CSV download"
+=== "Wine bottle - JSON"
 
-    * [Component Catalogue example download](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_1_Component_Catalogue_Example.csv){target=_blank}
+    ``` json linenums="1"  hl_lines="3 4"
+    [
+        {
+            "identifier": "94108707-b914-43f3-bed5-93adbbd208c1",
+            "name": "Wine bottle",
+            "description": "Introducing our 750ml Bordeaux Bottle, a sophisticated and eco-conscious choice for wine packaging. Crafted with a commitment to sustainability, this bottle embodies the perfect blend of elegance and environmental responsibility.",
+            "externalIdentifiers": {
+                "gtin": "70123456 789012",
+                "internal id": "0-recycle-green-750-bordeaux",
+                "sku": "8855-bb-g"
+            },
+            "imageURLs" : ["https://dsposal.uk/media/35604/52419bc2-317f-4815-b39c-f90a20cb7a7a.jpg"],
+            "componentConstituents": [
+            {
+              "materialConstituentsIdentifier": "70023f95-2d0f-4e47-ab6e-0ce51d50e55d",
+              "materialCombinationIdentifier": "b050ab75-4bcb-4c7f-b8f5-8a1f9e5ba7d3"
+            }
+            ],
+            "height": 305,
+            "heightDate": "2015-06-16",
+            "width": 72.4,
+            "widthDate": "2015-06-16",
+            "depth": 72.5,
+            "depthDate": "2015-06-16",
+            "weight": 700,
+            "weightTolerance": 6,
+            "weightToleranceType": "percent",
+            "function": "function-0005",
+            "flexibility": "c-flexibility-0002",
+            "branding": false,
+            "componentEndOfLifeRoutes": [
+                "e2aaabed-f901-4bbe-87e6-c781de2fb569"
+            ],
+            "colour": "cmyk(90%,30%,100%,20%)",
+            "opacity": "c-opacity-0002",
+            "loaned": false,
+            "partOfMultipack": false,
+            "recycledContent": 70,
+            "recycledContentClaims": [
+                "defd2813-0987-486a-8698-e8257b5ece63"
+            ],
+            "recyclability": true,
+            "recyclabilityClaims": [
+                "79290e8d-bd0e-4fcc-aa22-b932df206c49"
+            ],
+            "certification": true,
+            "certificationClaims": [
+                "79290e8d-bd0e-4fcc-aa22-b932df206c49"
+            ],
+            "manufacturers": ["GB-COH-10906273"],
+            "manufacturedCountry": "826",
+            "updateDate": "2023-12-07",
+            "releaseDate": "2015-06-16"
+        }
+    ]
+    ```
+
+## Data flow
+
+``` mermaid
+flowchart LR
+    subgraph baseMaterials[Base Materials]
+        bm_example["example base materials"]
+    end
+    subgraph materials[Materials]
+        ma_cardboard["Cardboard
+        -
+        16f41cca-1a77-4e31-8b0f-2723f752317b"]
+        ma_glass["Glass
+        -
+        b050ab75-4bcb-4c7f-b8f5-8a1f9e5ba7d3"]
+    end
+        subgraph components[Components]
+        co_cardboardBox["`**Cardboard box
+        - 
+        9dad67b0-d5a2-4afb-9287-e712fd1ea3e6**`"]
+        co_wineBottle["`**Wine bottle
+        - 
+        94108707-b914-43f3-bed5-93adbbd208c1**`"]
+    end
+    subgraph completePackages[Complete Packages]
+        cp_example["example complete pakages"]
+    end
+    baseMaterials --> materials
+    ma_cardboard --> co_cardboardBox
+    ma_glass --> co_wineBottle
+    co_cardboardBox --> completePackages
+    co_wineBottle --> completePackages
+```
+
 
 ## Guide for how to take measurements
 
