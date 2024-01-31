@@ -1958,8 +1958,13 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
         ma_glass["glass
         b050ab75-4bcb-4c7f-b8f5-8a1f9e5ba7d3"]
     end
-    bm_cardboard --&gt; materials
-    bm_sodaAsh --&gt; ma_glass</code></pre>
+        subgraph components[Components]
+        ma_example[example components]
+    end
+    bm_cardboard --&gt; ma_cardboard
+    bm_sodaAsh --&gt; ma_glass
+    ma_cardboard --&gt; components
+    ma_glass --&gt; components</code></pre>
 <h2 id="guide-for-how-to-take-measurements">Guide for how to take measurements<a class="headerlink" href="#guide-for-how-to-take-measurements" title="Permanent link">&para;</a></h2>
 <h3 id="units">Units<a class="headerlink" href="#units" title="Permanent link">&para;</a></h3>
 <p>All measurements should be given using the metric system.</p>
