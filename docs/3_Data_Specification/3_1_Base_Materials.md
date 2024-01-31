@@ -64,7 +64,7 @@ Base materials should be provided as a separate csv file. The specification of t
 
 === "Cardboard - JSON"
 
-    ``` json linenums="1"
+    ``` json linenums="1" hl_lines="3 4"
     [
       {
         "identifier": "222494f7-6703-49bc-a993-8dd2675709fb",
@@ -85,7 +85,7 @@ Base materials should be provided as a separate csv file. The specification of t
     ```
 === "Soda ash - JSON"
 
-    ``` json linenums="1"
+    ``` json linenums="1" hl_lines="3 4"
     [
       {
         "identifier": "ff39892f-0a88-4085-9942-4522cecc8337",
@@ -107,11 +107,15 @@ Base materials should be provided as a separate csv file. The specification of t
 ``` mermaid
 flowchart LR
     subgraph baseMaterials[Base Materials]
-        bm_cardboard[cardboard]
-        bm_sodaAsh[soda ash]
+        bm_cardboard["`**Cardboard
+        -
+        222494f7-6703-49bc-a993-8dd2675709fb**`"]
+        bm_sodaAsh["`**Soda ash
+        -
+        b050ab75-4bcb-4c7f-b8f5-8a1f9e5ba7d3**`"]
     end
     subgraph materials[Materials]
-        ma_cardboard[example material]
+        ma_cardboard[example materials]
     end
     bm_cardboard --> materials
     bm_sodaAsh --> materials
