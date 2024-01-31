@@ -249,7 +249,7 @@ flowchart LR
         -
         b050ab75-4bcb-4c7f-b8f5-8a1f9e5ba7d3"]
     end
-        subgraph components[Components]
+        subgraph components["`**Components**`"]
         co_cardboardBox["`**Cardboard box
         - 
         9dad67b0-d5a2-4afb-9287-e712fd1ea3e6**`"]
