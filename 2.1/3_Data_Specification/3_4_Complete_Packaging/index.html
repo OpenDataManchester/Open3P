@@ -2261,9 +2261,21 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
         co_cardboardBox[Cardboard box
         - 
         9dad67b0-d5a2-4afb-9287-e712fd1ea3e]
+        co_cardboardInlay[Cardboard inlay
+        - 
+        8f87c708-8a6b-4c9d-ae6e-af0393f84a12]
         co_wineBottle["Wine bottle
         - 
         94108707-b914-43f3-bed5-93adbbd208c1"]
+        co_cork["Cork
+        - 
+        4b99be14-c89e-4869-abb7-485240ea33c6"]
+        co_backLabel["Back label
+        - 
+        3d77b280-690e-4ccb-84f5-584c4cbcea36"]
+        co_frontLabel["Front label
+        - 
+        4b50247a-b2d1-4438-ac8a-fb6768180136"]
     end
     subgraph completePackages["`**Complete Packages**`"]
         cp_wineBox["`**Wine Box
@@ -2278,7 +2290,11 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
     end
     materials --&gt; components
     co_cardboardBox --&gt; cp_wineBox
+    co_cardboardInlay --&gt; cp_wineBox
     co_wineBottle --&gt; cp_wineBottle
+    co_cork --&gt; cp_wineBottle
+    co_backLabel --&gt; cp_wineBottle
+    co_frontLabel --&gt; cp_wineBottle
     cp_wineBox --&gt; loads
     cp_wineBottle --&gt; loads</code></pre>
 <h2 id="guide-for-how-to-take-measurements">Guide for how to take measurements<a class="headerlink" href="#guide-for-how-to-take-measurements" title="Permanent link">&para;</a></h2>
