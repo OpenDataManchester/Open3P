@@ -119,67 +119,179 @@ Complete packaging should be provided as a separate csv file. The specification 
 
 ## Example
 
-=== "JSON"
+=== "Wine box - JSON"
 
-    ``` json linenums="1"
-    {
-        "identifier": "63df4b40-ba4f-472e-a260-f8a944eb7961",
-        "name": "4 Breaded Chicken Steaks packaging",
-        "description": "PET tray, lidding film, top & base label",
-        "externalIdentifiers": {
-            "internalIdentifer": "85467889",
-            "GTIN": "00123456789012"
-            },
-        "imageURLs": [
-            "http://standard.open3p.org/2.0/img/measurements/figure1.measuring.png"
-        ],
-        "completePackagingConstituentsIdentifier": [
-            "9F459508-E365-0B9F-E3BB-FF4A7AED481B", "7197de37-8b77-4032-b0fd-84f27bae97be", "0e9a7265-6213-4a76-9a45-3acc5d83fa6f", "1c042eee-ec7a-400b-b05b-ca0d319e9067"
-        ],
-        "LOWcodeWOproduct": "15 01 06",
-        "productType": "cp-product-type-0001",
-        "LOWcodeWproduct": "20 01 08",
-        "onTheGo": false,
-        "householdWaste": true,
-        "depositReturnSchemes": [
-            "cp-drs-0005"
-        ],
-        "completePackagingEndOfLifeRoutes": [
-            "1229f395-3065-4236-bc1e-2aa500f58a79"
-        ],
-        "recyclability": false,
-        "recyclabilityClaims": [
-            "b101889f-87e5-4c42-abb7-0df5fc3d1a26"
-        ],
-        "height": 220,
-        "heightDate": "2023-01-01",
-        "width": 170,
-        "widthDate": "2023-01-01",
-        "depth": 60,
-        "depthDate": "2023-01-01",
-        "volume": 0.002,
-        "volumeDate": "2023-01-01",
-        "weight": 32.8,
-        "weightTolerance": 5,
-        "weightToleranceType": "percentage",
-        "weightDate": "2023-01-01",
-        "servingCapacity": 4,
-        "servingCapacityDate": "2023-01-01",
-        "partOfMultipack": false,
-        "certification": true,
-        "certificationClaims": [
-            "eed87ac3-6e3e-45fb-af2c-dd0f64fdb597"
-        ],
-        "manufacturers": [""],
-        "manufacturedCountry": "826",
-        "updateDate": "2023-01-01",
-        "releaseDate": "2023-01-01",
-        "discontinueDate": ""
-    }
+    ``` json linenums="1" hl_lines="3 4"
+    [
+        {
+            "identifier": "TBC",
+            "name": "Wine box",
+            "description": "Sturdy and branded, our cardboard box is crafted to hold 12 bottles securely. Includes inlay for secure transport.",
+            "externalIdentifiers": {
+                "internalIdentifer": "85467889",
+                "GTIN": "00123456789012"
+                },
+            "completePackagingConstituentsIdentifier": [
+                {
+                "materialConstituentsIdentifier": "TBC",
+                "materialCombinationIdentifier": "9dad67b0-d5a2-4afb-9287-e712fd1ea3e6"
+                },
+                {
+                "materialConstituentsIdentifier": "TBC",
+                "materialCombinationIdentifier": "8f87c708-8a6b-4c9d-ae6e-af0393f84a12"
+                }
+                ],
+            "LOWcodeWOproduct": "15 01 01",
+            "productType": "cp-product-type-0001",
+            "LOWcodeWproduct": "15 01 06",
+            "onTheGo": false,
+            "householdWaste": true,
+            "completePackagingEndOfLifeRoutes": [
+                "TBC"
+            ],
+            "recyclability": false,
+            "recyclabilityClaims": [
+                "TBC"
+            ],
+            "height": 382,
+            "heightDate": "2024-01-31",
+            "width": 388,
+            "widthDate": "2024-01-31",
+            "depth": 274,
+            "depthDate": "2024-01-31",
+            "volume": 40611184,
+            "volumeDate": "2024-01-31",
+            "weight": 450,
+            "weightTolerance": 58,
+            "weightToleranceType": "percentage",
+            "weightDate": "2024-01-31",
+            "servingCapacity": 12,
+            "servingCapacityDate": "2024-01-31",
+            "partOfMultipack": false,
+            "certification": true,
+            "certificationClaims": [
+                "TBC"
+            ],
+            "manufacturers": ["GB-COH-10906273"],
+            "manufacturedCountry": "826",
+            "updateDate": "2024-01-31",
+            "releaseDate": "2010-01-31",
+            "discontinueDate": ""
+        }
+    ]
     ```
-=== "CSV download"
+=== "Wine bottle - JSON"
 
-    * [Complete Packaging example download](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_3_Complete_Packaging_Example.csv){target=_blank}
+    ``` json linenums="1" hl_lines="3 4"
+    [
+        {
+            "identifier": "123f1eab-f674-4009-862a-7168cd5cf53f",
+            "name": "Wine bottle",
+            "description": "750ml Bordeaux wine bottle with cork and two labels: Classic design, recyclable glass, sealed with a cork for freshness. Two labels for branding and information.",
+            "externalIdentifiers": {
+                "gtin": "0123456789012",
+                "sku": "5454632",
+                "WineMS": "316456"
+                },
+            "completePackagingConstituentsIdentifier": [
+                {
+                "materialConstituentsIdentifier": "TBC",
+                "materialCombinationIdentifier": "94108707-b914-43f3-bed5-93adbbd208c1"
+                },
+                {
+                "materialConstituentsIdentifier": "TBC",
+                "materialCombinationIdentifier": "4b99be14-c89e-4869-abb7-485240ea33c6"
+                },
+                {
+                "materialConstituentsIdentifier": "TBC",
+                "materialCombinationIdentifier": "3d77b280-690e-4ccb-84f5-584c4cbcea36"
+                },
+                {
+                "materialConstituentsIdentifier": "TBC",
+                "materialCombinationIdentifier": "4b50247a-b2d1-4438-ac8a-fb6768180136"
+                }
+                ],
+            "productType": "cp-product-type-0001",
+            "onTheGo": false,
+            "householdWaste": true,
+            "completePackagingEndOfLifeRoutes": [
+                "TBC"
+            ],
+            "recyclability": true,
+            "recyclabilityClaims": [
+                "TBC"
+            ],
+            "height": 305,
+            "heightDate": "2024-01-31",
+            "width": 72.4,
+            "widthDate": "2024-01-31",
+            "depth": 72.5,
+            "depthDate": "2024-01-31",
+            "weight": 710,
+            "weightTolerance": 6,
+            "weightToleranceType": "percentage",
+            "servingCapacity": 750,
+            "partOfMultipack": true,
+            "certification": true,
+            "certificationClaims": [
+                "1407ca7b-ebaf-472c-85c5-a7965a21f280"
+            ],
+            "manufacturers": ["GB-COH-10906273"],
+            "manufacturedCountry": "826",
+            "updateDate": "2024-01-31",
+            "releaseDate": "2010-01-31",
+            "discontinueDate": ""
+        }
+    ]
+    ```
+## Data flow
+
+``` mermaid
+flowchart LR
+    subgraph materials[Materials]
+        bm_example["example base materials"]
+    end
+        subgraph components[Components]
+        co_cardboardBox[Cardboard box
+        - 
+        9dad67b0-d5a2-4afb-9287-e712fd1ea3e]
+        co_tape[Tape
+        - 
+        8f87c708-8a6b-4c9d-ae6e-af0393f84a12]
+        co_wineBottle["Wine bottle
+        - 
+        94108707-b914-43f3-bed5-93adbbd208c1"]
+        co_cork["Cork
+        - 
+        4b99be14-c89e-4869-abb7-485240ea33c6"]
+        co_backLabel["Back label
+        - 
+        3d77b280-690e-4ccb-84f5-584c4cbcea36"]
+        co_frontLabel["Front label
+        - 
+        4b50247a-b2d1-4438-ac8a-fb6768180136"]
+    end
+    subgraph completePackages["`**Complete Packages**`"]
+        cp_wineBox["`**Wine Box
+        -
+        complete pakages**`"]
+        cp_wineBottle["`**Wine Bottle
+        -
+        123f1eab-f674-4009-862a-7168cd5cf53f**`"]
+    end
+    subgraph multipacks[Multipacks]
+        mp_example[example multipacks]
+    end
+    materials --> components
+    co_cardboardBox --> cp_wineBox
+    co_tape --> cp_wineBox
+    co_wineBottle --> cp_wineBottle
+    co_cork --> cp_wineBottle
+    co_backLabel --> cp_wineBottle
+    co_frontLabel --> cp_wineBottle
+    cp_wineBox -.-> multipacks
+    cp_wineBottle -.-> multipacks
+```
 
 ## Guide for how to take measurements
 
