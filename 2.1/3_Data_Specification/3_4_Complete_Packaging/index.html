@@ -739,6 +739,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#data-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#guide-for-how-to-take-measurements" class="md-nav__link">
     <span class="md-ellipsis">
       Guide for how to take measurements
@@ -2001,7 +2010,7 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
 <p>Complete packaging should be provided as a separate csv file. The specification of this csv file is as follows:</p>
 <p><a href="https://www.open3p.org/wp-content/uploads/2023/09/completePackaging20230922.csv" target="_blank">Complete Packaging Template</a></p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">JSON</label><label for="__tabbed_1_2">CSV download</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">JSON</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -2113,13 +2122,32 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
-<div class="tabbed-block">
-<ul>
-<li><a href="https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_3_Complete_Packaging_Example.csv" target="_blank">Complete Packaging example download</a></li>
-</ul>
 </div>
 </div>
-</div>
+<h2 id="data-flow">Data flow<a class="headerlink" href="#data-flow" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart LR
+    subgraph materials[Materials]
+        bm_example["example base materials"]
+    end
+        subgraph components[Components]
+        co_cardboardBox[Cardboard box
+        - 
+        9dad67b0-d5a2-4afb-9287-e712fd1ea3e]
+        co_wineBottle["`**Wine bottle
+        - 
+        94108707-b914-43f3-bed5-93adbbd208c1**`"]
+    end
+    subgraph completePackages[Complete Packages]
+        cp_wineBox["`**example
+        -
+        complete pakages**`"]
+        cp_wineBottle["`**example
+        -
+        complete pakages**`"]
+    end
+    materials --&gt; components
+    co_cardboardBox --&gt; cp_wineBox
+    co_wineBottle --&gt; cp_wineBottle</code></pre>
 <h2 id="guide-for-how-to-take-measurements">Guide for how to take measurements<a class="headerlink" href="#guide-for-how-to-take-measurements" title="Permanent link">&para;</a></h2>
 <h3 id="units">Units<a class="headerlink" href="#units" title="Permanent link">&para;</a></h3>
 <p>All measurements should be given using the metric system.</p>
