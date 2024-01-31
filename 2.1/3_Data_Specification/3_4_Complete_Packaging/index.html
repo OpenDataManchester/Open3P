@@ -2236,7 +2236,7 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
 <span class="w">        </span><span class="nt">&quot;weightTolerance&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;weightToleranceType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;percentage&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;servingCapacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">750</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;partOfMultipack&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;partOfMultipack&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;certificationClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">            </span><span class="s2">&quot;1407ca7b-ebaf-472c-85c5-a7965a21f280&quot;</span>
@@ -2261,7 +2261,7 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
         co_cardboardBox[Cardboard box
         - 
         9dad67b0-d5a2-4afb-9287-e712fd1ea3e]
-        co_cardboardInlay[Cardboard inlay
+        co_tape[Tape
         - 
         8f87c708-8a6b-4c9d-ae6e-af0393f84a12]
         co_wineBottle["Wine bottle
@@ -2285,16 +2285,22 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
         -
         123f1eab-f674-4009-862a-7168cd5cf53f**`"]
     end
+    subgraph multipacks[Multipacks]
+        mp_example[multipacks]
+    end
     subgraph loads[Loads]
         bm_load["example loads"]
     end
     materials --&gt; components
     co_cardboardBox --&gt; cp_wineBox
-    co_cardboardInlay --&gt; cp_wineBox
+    co_tape --&gt; cp_wineBox
     co_wineBottle --&gt; cp_wineBottle
     co_cork --&gt; cp_wineBottle
     co_backLabel --&gt; cp_wineBottle
     co_frontLabel --&gt; cp_wineBottle
+    cp_wineBox -.-&gt; multipacks
+    cp_wineBottle -.-&gt; multipacks
+    multipacks -.-&gt; loads
     cp_wineBox --&gt; loads
     cp_wineBottle --&gt; loads</code></pre>
 <h2 id="guide-for-how-to-take-measurements">Guide for how to take measurements<a class="headerlink" href="#guide-for-how-to-take-measurements" title="Permanent link">&para;</a></h2>
