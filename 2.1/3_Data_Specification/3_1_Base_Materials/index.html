@@ -1767,21 +1767,8 @@ Yes, every packaging item must include a Base Material. This foundational compon
 <pre class="mermaid"><code>flowchart LR
     subgraph baseMaterials[Base Materials]
         bm_cardboard[cardboard]
-    end
-    subgraph materials[Materials]
-        ma_cardboard[cardboard]
-    end
-    subgraph components[Components]
-        co_cardboard[cardboard box]
-        co_example[tape]
-    end
-    subgraph completePackages[Complete Packages]
-        cp_example[complete package]
-    end
-    bm_cardboard --&gt; ma_cardboard
-    ma_cardboard --&gt; co_cardboard
-    co_cardboard --&gt; cp_example
-    co_example --&gt; cp_example</code></pre>
+        bm_sodaAsh[soda ash]
+    end</code></pre>
 <h2 id="template">Template<a class="headerlink" href="#template" title="Permanent link">&para;</a></h2>
 <p>Base materials should be provided as a separate csv file. The specification of this csv file is as follows:</p>
 <p><a href="https://www.open3p.org/wp-content/uploads/2023/09/baseMaterials20230922.csv" target="_blank">Base Materials Template</a></p>
