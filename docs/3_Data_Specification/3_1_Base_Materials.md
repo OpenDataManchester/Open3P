@@ -106,7 +106,7 @@ Base materials should be provided as a separate csv file. The specification of t
 
 ``` mermaid
 flowchart LR
-    subgraph baseMaterials[Base Materials]
+    subgraph baseMaterials["`**Base Materials**`"]
         bm_cardboard["`**Cardboard
         -
         222494f7-6703-49bc-a993-8dd2675709fb**`"]
