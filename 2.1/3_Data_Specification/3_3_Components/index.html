@@ -709,6 +709,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#data-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#guide-for-how-to-take-measurements" class="md-nav__link">
     <span class="md-ellipsis">
       Guide for how to take measurements
@@ -1934,7 +1943,7 @@
 <td style="text-align: left;">recycledContent</td>
 <td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Decimal</td>
-<td style="text-align: left;">The minimum allowable percent of how much recycled content is included in the makeup of the component. t is ‘required’ for plastic packaging where for the purposes of this standard we refer to <a href="https://www.gov.uk/guidance/work-out-which-packaging-is-subject-to-plastic-packaging-tax" target="_blank">UK&rsquo;s HM Revenue &amp; Customs</a> definition of recycled content. &ldquo;Recycled plastic is plastic that has been reprocessed from recovered material by using a chemical or manufacturing process. This is so it can be used either for its original purpose or for other purposes. This does not include organic recycling. Recovered material is pre-consumer plastic or post-consumer plastic that both: a) is no longer suitable to be used in the process from which it was generated and would otherwise have been used for energy recovery (for example, by incineration) or disposed of as waste (for example, by being sent to landfill); b) has been collected and recovered for use as a material input for a recycling or manufacturing process, instead of new primary material&rdquo;</td>
+<td style="text-align: left;">Positive decimal only, maximum value is 100.00. Value should equated to a percentage (e.g. 30 = 30%) The minimum allowable percent of how much recycled content is included in the makeup of the component. It is ‘required’ for plastic packaging where for the purposes of this standard we refer to <a href="https://www.gov.uk/guidance/work-out-which-packaging-is-subject-to-plastic-packaging-tax" target="_blank">UK&rsquo;s HM Revenue &amp; Customs</a> definition of recycled content. &ldquo;Recycled plastic is plastic that has been reprocessed from recovered material by using a chemical or manufacturing process. This is so it can be used either for its original purpose or for other purposes. This does not include organic recycling. Recovered material is pre-consumer plastic or post-consumer plastic that both: a) is no longer suitable to be used in the process from which it was generated and would otherwise have been used for energy recovery (for example, by incineration) or disposed of as waste (for example, by being sent to landfill); b) has been collected and recovered for use as a material input for a recycling or manufacturing process, instead of new primary material&rdquo;</td>
 </tr>
 <tr>
 <td style="text-align: left;">recycledContentClaims</td>
@@ -2068,8 +2077,96 @@ MATERIALS }o--o{ COMPONENTS : component_constituents
 <p>Components should be provided as a separate csv file. The specification of this csv file is as follows:</p>
 <p><a href="https://www.open3p.org/wp-content/uploads/2023/09/components20230922.csv" target="_blank">Components Template</a></p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">JSON</label><label for="__tabbed_1_2">CSV download</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Cardboard box - JSON</label><label for="__tabbed_1_2">Wine bottle - JSON</label></div>
 <div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="hll"><span class="w">        </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9dad67b0-d5a2-4afb-9287-e712fd1ea3e6&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Cardboard box&quot;</span><span class="p">,</span>
+</span><span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;54cm x 38cm x 38cm 0204 style cardboard box: Sturdy and spacious for shipping or storage. All flaps meet for easy sealing. Versatile packaging solution for various items.&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;componentConstituents&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;materialConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;6d856739-3893-4321-84b9-738a4ef1c830&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;materialCombinationIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;16f41cca-1a77-4e31-8b0f-2723f752317b&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">38</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">54</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;depth&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">38</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;weight&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;weightTolerance&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">35</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;weightToleranceType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;grams&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;shape&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c-shape-0004&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;function&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;function-0048&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;flexibility&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c-flexibility-0002&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;branding&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;componentEndOfLifeRoutes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;671ee5cc-a402-48a5-ba56-1f4d3840aef0&quot;</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;colour&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cmyk(0%,14%,33%,18%)&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c-opacity-0001&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;loaned&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;partOfMultipack&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;recycledContent&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;recycledContentClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;81ac4ec3-e097-4092-9c8f-4ef717d3740c&quot;</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;recyclability&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;recyclabilityClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;6af9c69a-6ec1-42dd-a8da-54bab8165e44&quot;</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;GB-COH-10906273&quot;</span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;826&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-25&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;releaseDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2011-01-01&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+</div>
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -2124,81 +2221,88 @@ MATERIALS }o--o{ COMPONENTS : component_constituents
 <span class="normal">51</span>
 <span class="normal">52</span>
 <span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="mi">--</span><span class="err">Food</span><span class="w"> </span><span class="err">grade</span><span class="w"> </span><span class="err">PET</span><span class="w"> </span><span class="err">po</span><span class="kc">t</span><span class="w"> </span><span class="err">made</span><span class="w"> </span><span class="err">i</span><span class="kc">n</span><span class="w"> </span><span class="err">Irela</span><span class="kc">n</span><span class="err">d</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9F459508-E365-0B9F-E3BB-FF4A7AED481B&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Thermoformed rPET tray&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Clear PET tray for food products&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;externalIdentifiers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;internalId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;14&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;GTIN&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;00123456789012&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;imageURLs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="s2">&quot;http://standard.open3p.org/2.0/img/measurements/figure1.measuring.png&quot;</span>
-<span class="w">    </span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;LOWcode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;150102&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;componentConstituents&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="s2">&quot;DCEE1F88-A83B-5BBC-D2D9-6A862B344977&quot;</span>
-<span class="w">    </span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">50.0</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;heightDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">220.0</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;widthDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;depth&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">170.0</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;depthDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;volume&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1870.0</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;volumeDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;weight&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">23.0</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;weightTolerance&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1.5</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;weightToleranceType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;grams&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;weightDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;shape&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c-shape-0004&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;function&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;function-0041&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;flexibility&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c-flexibility-0002&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;branding&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;componentEndOfLifeRoutes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="s2">&quot;&quot;</span>
-<span class="w">    </span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;colour&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cmyk(0%,0%,0%,10%)&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c-opacity-0002&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;loaned&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;reuseSystems&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="s2">&quot;c-reuse-system-0001&quot;</span>
-<span class="w">    </span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;partOfMultipack&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;recycledContent&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.3</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;recycledContentClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="s2">&quot;23e8251a-4fe6-4b25-9966-b08acac9ba34&quot;</span>
-<span class="w">    </span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;recyclability&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;recyclabilityClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="s2">&quot;b101889f-87e5-4c42-abb7-0df5fc3d1a26&quot;</span>
-<span class="w">    </span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;certificationClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="s2">&quot;eed87ac3-6e3e-45fb-af2c-dd0f64fdb597&quot;</span>
-<span class="w">    </span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;372&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;releaseDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;discontinueDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
-<span class="p">}</span>
+<span class="normal">54</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="hll"><span class="w">        </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;94108707-b914-43f3-bed5-93adbbd208c1&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Wine bottle&quot;</span><span class="p">,</span>
+</span><span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Introducing our 750ml Bordeaux Bottle, a sophisticated and eco-conscious choice for wine packaging. Crafted with a commitment to sustainability, this bottle embodies the perfect blend of elegance and environmental responsibility.&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;externalIdentifiers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;gtin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;70123456 789012&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;internal id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0-recycle-green-750-bordeaux&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;sku&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8855-bb-g&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;imageURLs&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;https://dsposal.uk/media/35604/52419bc2-317f-4815-b39c-f90a20cb7a7a.jpg&quot;</span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;componentConstituents&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;materialConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;70023f95-2d0f-4e47-ab6e-0ce51d50e55d&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;materialCombinationIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;b050ab75-4bcb-4c7f-b8f5-8a1f9e5ba7d3&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">30.5</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;heightDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2015-06-16&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">7.24</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;widthDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2015-06-16&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;depth&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">7.25</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;depthDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2015-06-16&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;weight&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">700</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;weightTolerance&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;weightToleranceType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;percent&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;function&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;function-0005&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;flexibility&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c-flexibility-0002&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;branding&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;componentEndOfLifeRoutes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;e2aaabed-f901-4bbe-87e6-c781de2fb569&quot;</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;colour&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cmyk(90%,30%,100%,20%)&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c-opacity-0002&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;loaned&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;partOfMultipack&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;recycledContent&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">70</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;recycledContentClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;defd2813-0987-486a-8698-e8257b5ece63&quot;</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;recyclability&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;recyclabilityClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;79290e8d-bd0e-4fcc-aa22-b932df206c49&quot;</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;certificationClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;79290e8d-bd0e-4fcc-aa22-b932df206c49&quot;</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;GB-COH-10906273&quot;</span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;826&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-12-07&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;releaseDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2015-06-16&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">]</span>
 </code></pre></div></td></tr></table></div>
 </div>
-<div class="tabbed-block">
-<ul>
-<li><a href="https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_1_Component_Catalogue_Example.csv" target="_blank">Component Catalogue example download</a></li>
-</ul>
 </div>
 </div>
-</div>
+<h2 id="data-flow">Data flow<a class="headerlink" href="#data-flow" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart LR
+    subgraph baseMaterials[Base Materials]
+        bm_example["example base materials]
+    end
+    subgraph materials[Materials]
+        ma_cardboard["`**Cardboard
+        -
+        16f41cca-1a77-4e31-8b0f-2723f752317b**`"]
+        ma_glass["`**Glass
+        -
+        b050ab75-4bcb-4c7f-b8f5-8a1f9e5ba7d3**`"]
+    end
+        subgraph components[Components]
+        co_cardboardBox["`**Cardboard box
+        - 
+        9dad67b0-d5a2-4afb-9287-e712fd1ea3e6**`"]
+        co_wineBottle["`**Wine bottle
+        - 
+        94108707-b914-43f3-bed5-93adbbd208c1**`"]
+    end
+    baseMaterials --&gt; materials
+    ma_cardboard --&gt; co_cardboardBox
+    ma_glass --&gt; co_wineBottle</code></pre>
 <h2 id="guide-for-how-to-take-measurements">Guide for how to take measurements<a class="headerlink" href="#guide-for-how-to-take-measurements" title="Permanent link">&para;</a></h2>
 <h3 id="units">Units<a class="headerlink" href="#units" title="Permanent link">&para;</a></h3>
 <p>All measurements should be given using the metric system.</p>
