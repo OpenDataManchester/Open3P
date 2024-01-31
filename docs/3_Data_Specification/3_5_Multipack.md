@@ -63,27 +63,62 @@ Multipack should be provided as a separate csv file. The specification of this c
 
 ## Example
 
-=== "JSON"
+=== "12 Multipack of Wine JSON"
 
-    ``` json linenums="1"
-    {
-      "identifier": "B9574E9A-A561-BCA6-0E36-448A2E46B2BF",
-      "name": "4 pack of guacamole dip",
-      "description": "4 tubs of guacamole that are sold together. Not to be sold seperately.",
-      "externalIdentifiers": {
-        "GTIN":"00123456789012",
-        },
-      "multipackIdentifier": "346C5546-282B-C040-CE74-DD0DD4688C0B",
-      "packagingItems": "C29B4703-121C-7552-D905-FD5AB263D611",
-      "tier": 1,
-      "identicalQuantity": 4,
-      "manufacturers": [""],
-      "manufacturedCountry": "826",
-      "updateDate": "2022-08-01",
-      "releaseDate": "2022-08-01",
-      "discontinueDate": "",
-    }
+    ``` json linenums="1" hl_lines="3 4"
+    [
+      {
+        "identifier": "111525c0-9a41-4eea-a9b7-a8c23ffcf94d",
+        "name": "12 pack of wine",
+        "description": "12 x 750ml of red wine that are sold together. Not to be sold seperately.",
+        "externalIdentifiers": {
+          "GTIN":"00123456789012",
+          },
+        "multipackConstituentsIdentifiers": [
+          {
+          "multipackConstituentsIdentifier": "346C5546-282B-C040-CE74-DD0DD4688C0B",
+          "multipackCombinationIdentifier": "TBC"
+          },
+          {
+          "multipackConstituentsIdentifier": "346C5546-282B-C040-CE74-DD0DD4688C0B",
+          "multipackCombinationIdentifier": "123f1eab-f674-4009-862a-7168cd5cf53f"
+          }
+        ],
+        "tier": 1,
+        "identicalQuantity": 12,
+        "manufacturers": ["GB-COH-10906273"],
+        "manufacturedCountry": "826",
+        "updateDate": "2022-08-01",
+        "releaseDate": "2022-08-01",
+        "discontinueDate": "",
+      }
+    ]
     ```
-=== "CSV download"
+## Data flow
 
-    * [Multipack example download](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_4_Multipack_Example.csv){target=_blank}
+``` mermaid
+flowchart LR
+    subgraph components[Components]
+        co_example["example components"]
+    end
+    subgraph completePackages[Complete Packages]
+        cp_wineBox["Wine Box
+        -
+        complete pakages"]
+        cp_wineBottle["Wine Bottle
+        -
+        123f1eab-f674-4009-862a-7168cd5cf53f"]
+    end
+    subgraph multipacks["`**Multipacks**`"]
+        mp_wineBox["`**12 pack of wine
+        -
+        111525c0-9a41-4eea-a9b7-a8c23ffcf94d**`"]
+    end
+    subgraph loads[Loads]
+        lo_load["example loads"]
+    end
+    components --> completePackages
+    cp_wineBox -.-> mp_wineBox
+    cp_wineBottle -.-> mp_wineBox
+    mp_wineBox -.-> loads
+```
