@@ -2145,9 +2145,14 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
         -
         complete pakages**`"]
     end
+    subgraph loads[Loads]
+        bm_load["example loads"]
+    end
     materials --&gt; components
     co_cardboardBox --&gt; cp_wineBox
-    co_wineBottle --&gt; cp_wineBottle</code></pre>
+    co_wineBottle --&gt; cp_wineBottle
+    cp_wineBox --&gt; loads
+    cp_wineBottle --&gt; loads</code></pre>
 <h2 id="guide-for-how-to-take-measurements">Guide for how to take measurements<a class="headerlink" href="#guide-for-how-to-take-measurements" title="Permanent link">&para;</a></h2>
 <h3 id="units">Units<a class="headerlink" href="#units" title="Permanent link">&para;</a></h3>
 <p>All measurements should be given using the metric system.</p>
