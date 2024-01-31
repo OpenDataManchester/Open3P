@@ -1953,6 +1953,15 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
         bm_sodaAsh["soda ash
         -
         ff39892f-0a88-4085-9942-4522cecc8337"]
+        bm_cullet["cullet
+        -
+        db481bb7-e57a-4af7-8821-2258338ddd11"]
+        bm_sand["sand
+        -
+        1bdca07b-ed6a-4799-a027-654322cb302f"]
+        bm_limestone["limestone
+        -
+        42b19543-7138-43ff-a867-a1e551ccba14"]
     end
     subgraph materials[Materials]
         ma_cardboard["cardboard
@@ -1967,6 +1976,9 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
     end
     bm_cardboard --&gt; ma_cardboard
     bm_sodaAsh --&gt; ma_glass
+    bm_cullet --&gt; ma_glass
+    bm_sand --&gt; ma_glass
+    bm_limestone --&gt; ma_glass
     ma_cardboard --&gt; components
     ma_glass --&gt; components</code></pre>
 <h2 id="guide-for-how-to-take-measurements">Guide for how to take measurements<a class="headerlink" href="#guide-for-how-to-take-measurements" title="Permanent link">&para;</a></h2>
