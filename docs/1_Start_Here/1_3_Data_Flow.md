@@ -106,10 +106,6 @@ flowchart LR
         co_glassBottle1[glass bottle]
         co_glassBottle2[glass bottle]
     end
-    subgraph completePackages[Complete Packages]
-        cp_example1[complete packaging]
-        cp_example2[complete packaging]
-    end
     bm_limestone --> ma_glass1
     bm_cullet --> ma_glass1
     bm_sand --> ma_glass1
@@ -119,8 +115,6 @@ flowchart LR
     bm_boricOxide --> ma_glass2
     ma_glass1 --> co_glassBottle1
     ma_glass2 --> co_glassBottle2
-    co_glassBottle1 --> cp_example1
-    co_glassBottle2 --> cp_example2
 ```
 ## Creating a load
 Taken as a whole the cardboard, tape and glass are combined at various points to create a wine delivery. With the addition of cork and aluminium all the materials and components can be seen.
@@ -180,8 +174,8 @@ flowchart LR
     cp_cardboardBox --> lo_wineDelivery
     cp_wineBottle --> lo_wineDelivery
 ```
-## Within core schema combinations
-The Open 3P standards allows further complexity when combining items within a schema. This is seen below where the two materials label and 'solvent free print substrate' are futher combined to create a 'printed label'.
+## Combining same type items
+The Open 3P standards allows further complexity when combining items of the same type. This is seen below where the two materials 'label' and 'solvent free print substrate' are futher combined to create a 'printed label'.
 ``` mermaid
 flowchart LR
     subgraph baseMaterials[Base Materials]
@@ -199,10 +193,6 @@ flowchart LR
     subgraph components[Components]
         co_topLabel[branded front label]
         co_bottomLabel[branded back label]
-        co_example[bottle]
-    end
-    subgraph completePackages[Complete Packages]
-        cp_example[complete package]
     end
     bm_paper --> ma_label
     bm_adhesive --> ma_label
@@ -213,9 +203,6 @@ flowchart LR
     ma_coating --> ma_label2
     ma_label2 --> co_topLabel
     ma_label2 --> co_bottomLabel
-    co_topLabel --> cp_example
-    co_bottomLabel --> cp_example
-    co_example --> cp_example
 ```
 ## Laminates
 Additionally base materials and materials can be layered in an ordered arrangement; known as lamination. In the example three base materials are layered together to create a laminate. Two of the materials are used twice within the material, with the third only being used the once.
@@ -232,19 +219,31 @@ flowchart LR
     subgraph components[Components]
         co_shrinkwrap[shrink wrap]
     end
-    subgraph completePackages[Complete Packages]
-        cp_shrinkwrap[shrink wrap]
-    end
     bm_ep -- layer 1 --> ma_shrinkwrap
     bm_eva -- layer 2 --> ma_shrinkwrap
     bm_copolyester -- layer 3 --> ma_shrinkwrap
     bm_eva -- layer 4 --> ma_shrinkwrap
     bm_ep -- layer 5 --> ma_shrinkwrap
     ma_shrinkwrap --> co_shrinkwrap
-    co_shrinkwrap --> cp_shrinkwrap
 ```
 ## Packaging Tier
-This final example shows how the above examples are combined to create a flow for the wine bottles, with the inclusion of tiers for the packaging at the load schema.
+This example shows how the different complete packages are used in different ways to protect the produce.  Within packaging there are different 'tiers' of packaging. In this worked example the wine bottle is primary, the box is secondard and the shrink wrap is transit. 
+``` mermaid
+flowchart LR
+    subgraph completePackages[Complete Packages]
+        cp_wineBottle[wine bottle]
+        cp_cardboardBox[wine box]
+        cp_shrinkwrap[shrink wrap]
+    end
+    subgraph loads[Loads]
+        lo_wineDelivery[wine delivery]
+    end
+    cp_cardboardBox -- Secondary --> lo_wineDelivery
+    cp_wineBottle -- Primary --> lo_wineDelivery
+    cp_shrinkwrap -- Transit --> lo_wineDelivery
+```
+## The whole data flow
+This final example shows how all these examples are combined to create a full flow for all of this data.
 ``` mermaid
 flowchart LR
     subgraph baseMaterials[Base Materials]
