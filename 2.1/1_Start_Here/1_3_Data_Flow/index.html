@@ -1888,16 +1888,12 @@ It is the intent of Open 3P that experts in their part of the value chain are re
     subgraph components[Components]
         co_shrinkwrap[shrink wrap]
     end
-    subgraph completePackages[Complete Packages]
-        cp_shrinkwrap[shrink wrap]
-    end
     bm_ep -- layer 1 --&gt; ma_shrinkwrap
     bm_eva -- layer 2 --&gt; ma_shrinkwrap
     bm_copolyester -- layer 3 --&gt; ma_shrinkwrap
     bm_eva -- layer 4 --&gt; ma_shrinkwrap
     bm_ep -- layer 5 --&gt; ma_shrinkwrap
-    ma_shrinkwrap --&gt; co_shrinkwrap
-    co_shrinkwrap --&gt; cp_shrinkwrap</code></pre></p>
+    ma_shrinkwrap --&gt; co_shrinkwrap</code></pre></p>
 <h2 id="packaging-tier">Packaging Tier<a class="headerlink" href="#packaging-tier" title="Permanent link">&para;</a></h2>
 <p>This final example shows how the above examples are combined to create a flow for the wine bottles, with the inclusion of tiers for the packaging at the load schema.
 <pre class="mermaid"><code>flowchart LR
