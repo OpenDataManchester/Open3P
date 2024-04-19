@@ -1773,12 +1773,19 @@
 <p>External identifiers play a vital role in linking data within the Open 3P standard to external sources, enabling seamless integration and access to additional information. While these identifiers are generated outside the Open 3P standard, they can be incorporated into it to establish connections with relevant external data sources.</p>
 <p>One example of an external identifier commonly used in the packaging industry is the Global Trade Item Number (GTIN), which is widely recognised as a barcode. GTINs provide valuable links to external product data and facilitate efficient inventory management and supply chain operations.</p>
 <p>To provide external identifiers within the Open 3P standard, follow this format:</p>
-<p>```json
-{
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">JSON</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>```json</p>
+</div>
+</div>
+</div>
+<p>{
   &ldquo;externalIdentifierName1&rdquo;: &ldquo;identifier1&rdquo;,
   &ldquo;externalIdentifierName2&rdquo;: &ldquo;identifier2&rdquo;
-}</p>
-<p>For instance, a dictionary of identifiers for base materials in other systems could include the manufacturer&rsquo;s own internal identifier and the GTIN:</p>
+}
+    ```
+For instance, a dictionary of identifiers for base materials in other systems could include the manufacturer&rsquo;s own internal identifier and the GTIN:</p>
 <p>```json
 {
   &ldquo;ManufacturerInternalID&rdquo;: &ldquo;ABC123&rdquo;,
