@@ -544,11 +544,53 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#identifier-types" class="md-nav__link">
+  <a href="#types-of-identifiers" class="md-nav__link">
     <span class="md-ellipsis">
-      Identifier types
+      Types of Identifiers
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#u-niversally-unique-identifier-uuid" class="md-nav__link">
+    <span class="md-ellipsis">
+      U niversally Unique Identifier (UUID)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generating" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generating">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#online" class="md-nav__link">
+    <span class="md-ellipsis">
+      Online
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      In code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1622,37 +1664,6 @@
 
 
 <h1 id="identifiers">Identifiers<a class="headerlink" href="#identifiers" title="Permanent link">&para;</a></h1>
-<p>Identifiers are the way that humans and machines can know that a particular thing is that thing. In the context of Open 3P, there are different ways of talking about the various things involved. A packaging manufacturer may refer to a particular bottle as ‘small clear bottle’, but a filler may know it as ‘500 ml clear bottle’. In a database it may be recorded as ‘0.5L PET Bottle’. While these are all referring to the same thing, it could be hard for a human to know that they are the same, and pretty much impossible for a computer.</p>
-<p>To help get around this, we use identifiers. These are codes that we use to unambiguously reference a particular thing. </p>
-<h2 id="identifier-types">Identifier types<a class="headerlink" href="#identifier-types" title="Permanent link">&para;</a></h2>
-<p>Within the Open 3P data standard we need to identify things in different ways. Depending on how the identifier is generated, and how it is going to be used we use different types of identifier. They fall into three broad catagories:</p>
-<ol>
-<li>
-<p><strong>Universally Unique Identifier</strong> - As the same implies that are completely unique, they also do not identifier the user, the organisation or the machine that created them. This provides complete anonymity.</p>
-</li>
-<li>
-<p><strong>Controlled List Identifier</strong> - These are identifiers created for use within the Open 3P standard. They defined a particular attribute within the standard and are controlled by the Standard Custodian Board.</p>
-</li>
-<li>
-<p><strong>External Identifier</strong> - These are identifiers that are generated outside the Open 3P standard, but can be included within it to allow external data sources to link to the records within it. As example of a value external identifier would be a barcode/ GTIN. This identifier links to a particular product that this packaging is protecting; this link is a useful one to document and know.</p>
-</li>
-</ol>
-<div class="admonition question">
-<p class="admonition-title">Why not use the GTIN as the packaging identifier</p>
-<p>This is a good question and comes up frequently. There are three main reasons.</p>
-<ol>
-<li>
-<p>GTINs are organisational identifable by design, meaning that they can be reverse engineered to determine who provided that item.</p>
-</li>
-<li>
-<p>GTINs do not have to change when minor changes are made to the packaging.</p>
-</li>
-<li>
-<p>GTINs have to be minted by a standards body; meaning that they are not readily accessible.</p>
-</li>
-</ol>
-</div>
-<h1 id="identifiers_1">Identifiers<a class="headerlink" href="#identifiers_1" title="Permanent link">&para;</a></h1>
 <p>Identifiers are crucial for uniquely referencing items within the Open 3P ecosystem, enabling both humans and machines to accurately identify and reference specific objects. Without identifiers, it can be challenging for different stakeholders to recognise that they are referring to the same thing, leading to confusion and inefficiencies.</p>
 <h2 id="types-of-identifiers">Types of Identifiers<a class="headerlink" href="#types-of-identifiers" title="Permanent link">&para;</a></h2>
 <p>In the Open 3P data standard, various types of identifiers are used to distinguish and categorise items based on their generation method and intended usage. These identifiers can be broadly categorised into three types:</p>
@@ -1700,7 +1711,7 @@
 <li><a href="https://www.webtools.services/uuid-generator">Webtools - Online UUID (GUID) Generator</a></li>
 </ul>
 <h3 id="in-code">In code<a class="headerlink" href="#in-code" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Python</label><label for="__tabbed_1_2">C#</label><label for="__tabbed_1_3">T-SQL</label><label for="__tabbed_1_4">PHP</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Python</label><label for="__tabbed_1_2">C#</label><label for="__tabbed_1_3">T-SQL</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">uuid</span>
@@ -1726,22 +1737,6 @@
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nf">NEWID</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">)</span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="x">function guidv4($data = null) {</span>
-<span class="x">    // Generate 16 bytes (128 bits) of random data or use the data passed into the function.</span>
-<span class="x">    $data = $data ?? random_bytes(16);</span>
-<span class="x">    assert(strlen($data) == 16);</span>
-
-<span class="x">    // Set version to 0100</span>
-<span class="x">    $data[6] = chr(ord($data[6]) &amp; 0x0f | 0x40);</span>
-<span class="x">    // Set bits 6-7 to 10</span>
-<span class="x">    $data[8] = chr(ord($data[8]) &amp; 0x3f | 0x80);</span>
-
-<span class="x">    // Output the 36 character UUID.</span>
-<span class="x">    return vsprintf(&#39;%s%s-%s-%s-%s-%s%s%s&#39;, str_split(bin2hex($data), 4));</span>
-<span class="x">}</span>
 </code></pre></div>
 </div>
 </div>
