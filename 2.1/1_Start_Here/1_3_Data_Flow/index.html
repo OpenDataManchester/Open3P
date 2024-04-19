@@ -548,6 +548,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#packaging-tier_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Packaging Tier
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1895,6 +1904,20 @@ It is the intent of Open 3P that experts in their part of the value chain are re
     bm_ep -- layer 5 --&gt; ma_shrinkwrap
     ma_shrinkwrap --&gt; co_shrinkwrap</code></pre></p>
 <h2 id="packaging-tier">Packaging Tier<a class="headerlink" href="#packaging-tier" title="Permanent link">&para;</a></h2>
+<p>This example shows how the different complete packages are used in different ways to protect the produce.  Within packaging there are different &lsquo;tiers&rsquo; of packaging. In this worked example the wine bottle is primary, the box is secondard and the shrink wrap is transit. 
+<pre class="mermaid"><code>flowchart LR
+    subgraph completePackages[Complete Packages]
+        cp_wineBottle[wine bottle]
+        cp_cardboardBox[wine box]
+        cp_shrinkwrap[shrink wrap]
+    end
+    subgraph loads[Loads]
+        lo_wineDelivery[wine delivery]
+    end
+    cp_cardboardBox -- Secondary --&gt; lo_wineDelivery
+    cp_wineBottle -- Primary --&gt; lo_wineDelivery
+    cp_shrinkwrap -- Transit --&gt; lo_wineDelivery</code></pre></p>
+<h2 id="packaging-tier_1">Packaging Tier<a class="headerlink" href="#packaging-tier_1" title="Permanent link">&para;</a></h2>
 <p>This final example shows how the above examples are combined to create a flow for the wine bottles, with the inclusion of tiers for the packaging at the load schema.
 <pre class="mermaid"><code>flowchart LR
     subgraph baseMaterials[Base Materials]
