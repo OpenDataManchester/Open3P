@@ -1,13 +1,15 @@
 ---
+hide:
+  - navigation
+  - toc
 title: Home
 description: Open 3P is an open data standard built with and for the packaging supply chain.
 ---
+# Open 3P - The open standard for the packaging value chain
 
 [![Open Data Manchester](img/Open_3P_banner_compress.png)](https://open3p.org){target=_blank}
 
-## Open 3P: Definition
-
-A data standard for the packaging value chain.
+The Open 3P standard for packaging data has been created to provide information about what packaging is made out of and how these materials flow through the packaging supply chain. With Open 3P, stakeholders in the packaging supply chain will be able to share information about materials, components and packaging in a standardised format. This will allow for better collaboration between manufacturers, brands, retailers, consumers, recyclers, compliance schemes and regulators.
 
 ## Version
 
@@ -19,13 +21,38 @@ The standard is open and free to use, copy and distribute. However, the standard
 
 ## Contents
 
-1. [Start Here](./1_Start_Here/1_1_Introduction.md)
-2. [Data Formats](./2_Data_Formats/2_1_Data_Formats.md)
-3. [Core Schema](./3_Data_Specification/3_1_Base_Materials.md)
-4. [Identifiers](./4_Identifiers/4_1_Identifiers.md)
-5. [Controlled Lists](./5_Controlled_Lists/5_000_Controlled_Lists.md)
-6. [Relationship Lists](./6_Relationship_Lists/6_000_Relationship_Lists.md)
-7. [Supporting Files](./7_Supporting_Files/7_2_Example_Files.md)
-8. [Governance](./8_Governance/8_1_Governance.md)
-9. [Licence](./10_Licence/10_01_Licence.md)
-10. [Change Log](./9_Change_Log/8_1_Change_Log.md)
+<div class="grid cards" markdown>
+
+-   :material-clock-fast:{ .lg .middle } __Start Here__
+
+    ---
+
+    First time here? Get up to speed fast.
+
+    [:octicons-arrow-right-24: Getting started](./1_Start_Here/1_1_Introduction.md)
+
+-   :fontawesome-brands-markdown:{ .lg .middle } __Schema__
+
+    ---
+
+    Jump into the schemas.
+
+    [:octicons-arrow-right-24: Schema](./3_Data_Specification/3_0_Data_Specification.md)
+
+-   :material-format-font:{ .lg .middle } __Controlled Lists__
+
+    ---
+
+    Establish consistency in data entry.
+
+    [:octicons-arrow-right-24: Controlled Lists](./5_Controlled_Lists/5_000_Controlled_Lists.md)
+
+-   :material-scale-balance:{ .lg .middle } __Licence__
+
+    ---
+
+    Open 3P is licensed under Apache License, Version 2.0.
+
+    [:octicons-arrow-right-24: License](./10_Licence/10_01_Licence.md)
+
+</div>
