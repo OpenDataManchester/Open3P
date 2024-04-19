@@ -1781,10 +1781,6 @@ It is the intent of Open 3P that experts in their part of the value chain are re
         co_glassBottle1[glass bottle]
         co_glassBottle2[glass bottle]
     end
-    subgraph completePackages[Complete Packages]
-        cp_example1[complete packaging]
-        cp_example2[complete packaging]
-    end
     bm_limestone --&gt; ma_glass1
     bm_cullet --&gt; ma_glass1
     bm_sand --&gt; ma_glass1
@@ -1793,9 +1789,7 @@ It is the intent of Open 3P that experts in their part of the value chain are re
     bm_sodaAsh --&gt; ma_glass2
     bm_boricOxide --&gt; ma_glass2
     ma_glass1 --&gt; co_glassBottle1
-    ma_glass2 --&gt; co_glassBottle2
-    co_glassBottle1 --&gt; cp_example1
-    co_glassBottle2 --&gt; cp_example2</code></pre></p>
+    ma_glass2 --&gt; co_glassBottle2</code></pre></p>
 <h2 id="creating-a-load">Creating a load<a class="headerlink" href="#creating-a-load" title="Permanent link">&para;</a></h2>
 <p>Taken as a whole the cardboard, tape and glass are combined at various points to create a wine delivery. With the addition of cork and aluminium all the materials and components can be seen.
 <pre class="mermaid"><code>flowchart LR
