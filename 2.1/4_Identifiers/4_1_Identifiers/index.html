@@ -609,6 +609,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#external-identifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Identifier
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1757,6 +1766,25 @@
 </div>
 </div>
 <h2 id="controlled-list-identifier">Controlled List Identifier<a class="headerlink" href="#controlled-list-identifier" title="Permanent link">&para;</a></h2>
+<p>Controlled lists are fundamental elements of data standards, crucial for maintaining consistency and accuracy in data entry within the packaging industry. They serve as centralised repositories for standardised terms and phrases used across various aspects of packaging.</p>
+<p>Each entry in a controlled list is assigned a unique identifier, allowing for precise referencing of specific records within the list. These identifiers serve as keys to access detailed information about each term or concept, ensuring clarity and uniformity in data representation.</p>
+<p>By leveraging controlled list identifiers, stakeholders can streamline data entry processes, minimise errors, and promote interoperability across different systems and platforms within the packaging ecosystem.</p>
+<h2 id="external-identifier">External Identifier<a class="headerlink" href="#external-identifier" title="Permanent link">&para;</a></h2>
+<p>External identifiers play a vital role in linking data within the Open 3P standard to external sources, enabling seamless integration and access to additional information. While these identifiers are generated outside the Open 3P standard, they can be incorporated into it to establish connections with relevant external data sources.</p>
+<p>One example of an external identifier commonly used in the packaging industry is the Global Trade Item Number (GTIN), which is widely recognised as a barcode. GTINs provide valuable links to external product data and facilitate efficient inventory management and supply chain operations.</p>
+<p>To provide external identifiers within the Open 3P standard, follow this format:</p>
+<p>```json
+{
+  &ldquo;externalIdentifierName1&rdquo;: &ldquo;identifier1&rdquo;,
+  &ldquo;externalIdentifierName2&rdquo;: &ldquo;identifier2&rdquo;
+}</p>
+<p>For instance, a dictionary of identifiers for base materials in other systems could include the manufacturer&rsquo;s own internal identifier and the GTIN:</p>
+<p>```json
+{
+  &ldquo;ManufacturerInternalID&rdquo;: &ldquo;ABC123&rdquo;,
+  &ldquo;GTIN&rdquo;: &ldquo;01234567890123&rdquo;
+}</p>
+<p>By adhering to standardised formats for external identifiers, stakeholders can ensure interoperability and compatibility with external data sources, enhancing data quality and facilitating seamless data exchange within the packaging ecosystem.</p>
 
 
 
