@@ -544,35 +544,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#generating" class="md-nav__link">
+  <a href="#identifier-types" class="md-nav__link">
     <span class="md-ellipsis">
-      Generating
+      Identifier types
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Generating">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#online" class="md-nav__link">
-    <span class="md-ellipsis">
-      Online
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#in-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      In code
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1647,7 +1623,57 @@
 
 <h1 id="identifiers">Identifiers<a class="headerlink" href="#identifiers" title="Permanent link">&para;</a></h1>
 <p>Identifiers are the way that humans and machines can know that a particular thing is that thing. In the context of Open 3P, there are different ways of talking about the various things involved. A packaging manufacturer may refer to a particular bottle as ‘small clear bottle’, but a filler may know it as ‘500 ml clear bottle’. In a database it may be recorded as ‘0.5L PET Bottle’. While these are all referring to the same thing, it could be hard for a human to know that they are the same, and pretty much impossible for a computer.</p>
-<p>To help get around this, we use identifiers. These are codes that we use to unambiguously reference a particular thing. Within the Open 3P data standard we need to uniquely identify every entry. Each record in each schema needs to have an identifier. Since the packaging supply chain is global, the Open 3P data standard needs to be global and thus the unique identifier also needs to be global. We are therefore using the <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">Universally Unique Identifier (UUID)</a> standard methodology to (probabilistically) guarantee uniqueness.</p>
+<p>To help get around this, we use identifiers. These are codes that we use to unambiguously reference a particular thing. </p>
+<h2 id="identifier-types">Identifier types<a class="headerlink" href="#identifier-types" title="Permanent link">&para;</a></h2>
+<p>Within the Open 3P data standard we need to identify things in different ways. Depending on how the identifier is generated, and how it is going to be used we use different types of identifier. They fall into three broad catagories:</p>
+<ol>
+<li>
+<p><strong>Universally Unique Identifier</strong> - As the same implies that are completely unique, they also do not identifier the user, the organisation or the machine that created them. This provides complete anonymity.</p>
+</li>
+<li>
+<p><strong>Controlled List Identifier</strong> - These are identifiers created for use within the Open 3P standard. They defined a particular attribute within the standard and are controlled by the Standard Custodian Board.</p>
+</li>
+<li>
+<p><strong>External Identifier</strong> - These are identifiers that are generated outside the Open 3P standard, but can be included within it to allow external data sources to link to the records within it. As example of a value external identifier would be a barcode/ GTIN. This identifier links to a particular product that this packaging is protecting; this link is a useful one to document and know.</p>
+</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Why not use the GTIN as the packaging identifier</p>
+<p>This is a good question and comes up frequently. There are three main reasons.
+1. GTINs are organisational identifable by design, meaning that they can be reverse engineered to determine who provided that item.
+2. GTINs do not have to change when minor changes are made to the packaging.
+3. GTINs have to be minted by a standards body; meaning that they are not readily accessible.</p>
+</div>
+<h1 id="identifiers_1">Identifiers<a class="headerlink" href="#identifiers_1" title="Permanent link">&para;</a></h1>
+<p>Identifiers are crucial for uniquely referencing items within the Open 3P ecosystem, enabling both humans and machines to accurately identify and reference specific objects. Without identifiers, it can be challenging for different stakeholders to recognize that they are referring to the same thing, leading to confusion and inefficiencies.</p>
+<h2 id="types-of-identifiers">Types of Identifiers<a class="headerlink" href="#types-of-identifiers" title="Permanent link">&para;</a></h2>
+<p>In the Open 3P data standard, various types of identifiers are used to distinguish and categorize items based on their generation method and intended usage. These identifiers can be broadly categorized into three types:</p>
+<ol>
+<li>
+<p><strong>Universally Unique Identifier (UUID)</strong>: These identifiers are globally unique and do not contain any information about the user, organization, or machine that created them. UUIDs ensure complete anonymity and eliminate the risk of conflicts with other identifiers.</p>
+</li>
+<li>
+<p><strong>Controlled List Identifier</strong>: Controlled list identifiers are specifically created for use within the Open 3P standard. They define specific attributes within the standard and are regulated by the Standard Custodian Board to maintain consistency and integrity across the ecosystem.</p>
+</li>
+<li>
+<p><strong>External Identifier</strong>: External identifiers are generated outside the Open 3P standard but can be incorporated into it to establish links with external data sources. One example is the Global Trade Item Number (GTIN), commonly used as a barcode. While GTINs are not specific to the Open 3P standard, they provide valuable links to external product data and are widely recognized in the industry.</p>
+</li>
+</ol>
+<h2 id="why-not-use-gtin-as-the-packaging-identifier">Why Not Use GTIN as the Packaging Identifier?<a class="headerlink" href="#why-not-use-gtin-as-the-packaging-identifier" title="Permanent link">&para;</a></h2>
+<p>The question often arises as to why GTINs are not used as packaging identifiers within the Open 3P standard. There are several reasons for this decision:</p>
+<ol>
+<li>
+<p><strong>Organizational Identifiability</strong>: GTINs inherently contain information about the organization that provided the item, potentially compromising anonymity within the Open 3P ecosystem.</p>
+</li>
+<li>
+<p><strong>Stability and Flexibility</strong>: GTINs do not need to change when minor packaging variations occur, leading to potential inconsistencies in the identification process.</p>
+</li>
+<li>
+<p><strong>Access and Standards</strong>: GTINs are regulated by standards bodies and may not be readily accessible or applicable to all packaging items within the Open 3P ecosystem.</p>
+</li>
+</ol>
+<p>By utilizing a standardized approach to identifiers within the Open 3P ecosystem, stakeholders can ensure consistency, interoperability, and accuracy in referencing packaging materials and products.</p>
+<p>Each record in each schema needs to have an identifier. Since the packaging supply chain is global, the Open 3P data standard needs to be global and thus the unique identifier also needs to be global. We are therefore using the <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">Universally Unique Identifier (UUID)</a> standard methodology to (probabilistically) guarantee uniqueness.</p>
 <blockquote>
 <p>A universally unique identifier (UUID) is a 128-bit label used for information in computer systems. The term globally unique identifier (GUID) is also used.</p>
 <p>-<em><a href="https://datatracker.ietf.org/doc/html/rfc4122">A Universally Unique IDentifier (UUID) URN Namespace</a></em></p>
