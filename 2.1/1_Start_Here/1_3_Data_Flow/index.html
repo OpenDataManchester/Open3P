@@ -522,9 +522,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#within-core-schema-combinations" class="md-nav__link">
+  <a href="#combining-same-type-items" class="md-nav__link">
     <span class="md-ellipsis">
-      Within core schema combinations
+      Combining same type items
     </span>
   </a>
   
@@ -1846,8 +1846,8 @@ It is the intent of Open 3P that experts in their part of the value chain are re
     co_tape --&gt; cp_cardboardBox
     cp_cardboardBox --&gt; lo_wineDelivery
     cp_wineBottle --&gt; lo_wineDelivery</code></pre></p>
-<h2 id="within-core-schema-combinations">Within core schema combinations<a class="headerlink" href="#within-core-schema-combinations" title="Permanent link">&para;</a></h2>
-<p>The Open 3P standards allows further complexity when combining items within a schema. This is seen below where the two materials label and &lsquo;solvent free print substrate&rsquo; are futher combined to create a &lsquo;printed label&rsquo;.
+<h2 id="combining-same-type-items">Combining same type items<a class="headerlink" href="#combining-same-type-items" title="Permanent link">&para;</a></h2>
+<p>The Open 3P standards allows further complexity when combining items of the same type. This is seen below where the two materials &lsquo;label&rsquo; and &lsquo;solvent free print substrate&rsquo; are futher combined to create a &lsquo;printed label&rsquo;.
 <pre class="mermaid"><code>flowchart LR
     subgraph baseMaterials[Base Materials]
         bm_paper[paper]
@@ -1877,10 +1877,7 @@ It is the intent of Open 3P that experts in their part of the value chain are re
     ma_label --&gt; ma_label2
     ma_coating --&gt; ma_label2
     ma_label2 --&gt; co_topLabel
-    ma_label2 --&gt; co_bottomLabel
-    co_topLabel --&gt; cp_example
-    co_bottomLabel --&gt; cp_example
-    co_example --&gt; cp_example</code></pre></p>
+    ma_label2 --&gt; co_bottomLabel</code></pre></p>
 <h2 id="laminates">Laminates<a class="headerlink" href="#laminates" title="Permanent link">&para;</a></h2>
 <p>Additionally base materials and materials can be layered in an ordered arrangement; known as lamination. In the example three base materials are layered together to create a laminate. Two of the materials are used twice within the material, with the third only being used the once.
 <pre class="mermaid"><code>flowchart LR
