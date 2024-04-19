@@ -7,7 +7,7 @@ description: Introduction to the Open 3P open standard for packaging data for th
 
 ## What is Open 3P?
 
-Open 3P is an open standard for packaging data for the packaging industry, which is being developed by Open Data Manchester in collaboration with over 120 individuals from 70 organisations across the packaging supply chain. The goal of Open 3P is to establish a common language for exchanging and sharing data related to packaging materials and processes, which will help to improve transparency and accountability in the industry.
+Open 3P is an open standard for packaging data for the packaging industry, which is being developed by Open Data Manchester in collaboration with over 200 individuals from 110 organisations across the packaging supply chain. The goal of Open 3P is to establish a common language for exchanging and sharing data related to packaging materials and processes, which will help to improve transparency and accountability in the industry.
 
 With Open 3P, stakeholders in the packaging supply chain will be able to share information about materials, components and packaging in a standardised format. This will allow for better collaboration between manufacturers, retailers, recyclers, regulators, and consumers. By creating a common understanding of the materials and processes involved in packaging, it will be easier to identify opportunities for reducing waste, increasing efficiency, and improving sustainability throughout the supply chain.
 
@@ -24,14 +24,6 @@ Open 3P is based on the principles of open data, which means that it is freely a
 which ensure that the standard is developed in a fair and inclusive manner, and that all stakeholders have a voice in the process.
 
 Overall, Open 3P represents an important step forward for the packaging industry, as it provides a foundation for greater transparency and collaboration across the supply chain. By adopting a common language for sharing and exchanging data, stakeholders will be able to work together more effectively to reduce waste, improve sustainability, and create a more circular economy.
-
-## What is an open data standard?
-
-An open data standard is a set of guidelines that dictate the structure and composition of data. It enables people and organisations to communicate data about the same topic using the same language. Standardisation of data structure ensures consistency, comparability and interconnectivity. Open data standards are publicly accessible and can be used by anyone. This makes it easy to understand, share, and reuse data that has been published and shared by others. As a result of open data standards, multiple organisations can collaborate and create a larger and more comprehensive dataset when they publish data about the same topic. By adhering to a set of open standards, data can be shared more efficiently, allowing for greater collaboration, analysis and discovery.
-
-## How is the standard being developed?
-
-The initial standard development was funded by [Innovate UK](https://www.gov.uk/government/organisations/innovate-uk){target=_blank}, and is being developed through workshops with industry experts over a number of iterations. The project patners were OPRL Open Data Manchester, Dsposal, RECOUP, and Ecosurety.
 
 ## How to use the standard
 
