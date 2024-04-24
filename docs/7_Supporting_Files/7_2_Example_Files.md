@@ -4,7 +4,8 @@ This section of the guidance provides examples of different scenarios for provid
 
 ## Excel Workbook
 
-[BETA VERSION](https://www.open3p.org/wp-content/uploads/2023/09/Open-3P-Excel-Template-20230922.xlsx)
+!!! note "Contact Helpdesk"
+    To get a version of the excel workbook please contact our [helpdesk](https://www.open3p.org/contact/).
 
 ## CSV blank
 
