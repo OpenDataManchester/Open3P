@@ -1825,19 +1825,18 @@
         -
         42b19543-7138-43ff-a867-a1e551ccba14"]
     end
+    subgraph materialConstituents["`**Material Constituents**`"]
+        mc_cardboard["`**95b95bf7-80c0-49bc-9367-ae48d6c107d3
+        -
+        100%**`"]        
+    end
     subgraph materials["Materials"]
         ma_cardboard["Cardboard
         -
         16f41cca-1a77-4e31-8b0f-2723f752317b"]
-        ma_glass["Glass
-        -
-        b050ab75-4bcb-4c7f-b8f5-8a1f9e5ba7d3"]
     end
-    bm_cardboard --&gt; ma_cardboard
-    bm_sodaAsh --&gt; ma_glass
-    bm_cullet --&gt; ma_glass
-    bm_sand --&gt; ma_glass
-    bm_limestone --&gt; ma_glass</code></pre>
+    bm_cardboard --&gt; mc_cardboard
+    mc_cardboard --&gt; ma_cardboard</code></pre>
 
 
 
