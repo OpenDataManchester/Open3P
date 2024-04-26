@@ -60,11 +60,6 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
       }
 ```
 
-## Template
-Materials should be provided as a separate csv file. The specification of this csv file is as follows:
-
-[Materials Template](https://www.open3p.org/wp-content/uploads/2023/09/materials20230922.csv){target=_blank}
-
 ## Example
 
 === "Cardboard - JSON"
@@ -133,6 +128,67 @@ Materials should be provided as a separate csv file. The specification of this c
         "updateDate": "2022-08-01"
       }
     ]
+    ```
+=== "Cardboard - XML"
+
+    ``` xml linenums="1" hl_lines="3 4"
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <material>
+      <identifier>16f41cca-1a77-4e31-8b0f-2723f752317b</identifier>
+      <name>Cardboard</name>
+      <externalIdentifiers>
+        <sapPK>153517</sapPK>
+        <SKU>34-56bg</SKU>
+      </externalIdentifiers>
+      <materialConstituents>
+        <materialConstituentsIdentifier>95b95bf7-80c0-49bc-9367-ae48d6c107d3</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>222494f7-6703-49bc-a993-8dd2675709fb</materialCombinationIdentifier>
+      </materialConstituents>
+      <combinationPurpose>function-0048</combinationPurpose>
+      <areaDensity>300</areaDensity>
+      <areaDensityUnit>gsm</areaDensityUnit>
+      <areaDensityTolerance>3.3</areaDensityTolerance>
+      <areaDensityToleranceType>percentage</areaDensityToleranceType>
+      <areaDensityDate>2023-12-07</areaDensityDate>
+      <certification>true</certification>
+      <certificationClaims>307801c3-f6f7-4ca6-8553-6f367b37fd1e</certificationClaims>
+      <manufacturers>GB-COH-10906273</manufacturers>
+      <manufacturedCountry>826</manufacturedCountry>
+      <updateDate>2023-12-07</updateDate>
+    </material>
+    ```
+=== "Glass - XML"
+
+    ``` xml linenums="1" hl_lines="3 4"
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <material>
+      <identifier>b050ab75-4bcb-4c7f-b8f5-8a1f9e5ba7d3</identifier>
+      <name>Glass</name>
+      <externalIdentifiers>
+        <internal_id>70-wine-glass</internal_id>
+      </externalIdentifiers>
+      <materialConstituents>
+        <materialConstituentsIdentifier>11eb7b61-05f1-4894-a57b-80e5082f944a</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>ff39892f-0a88-4085-9942-4522cecc8337</materialCombinationIdentifier>
+      </materialConstituents>
+      <materialConstituents>
+        <materialConstituentsIdentifier>11eb7b61-05f1-4894-a57b-80e5082f944a</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>1bdca07b-ed6a-4799-a027-654322cb302f</materialCombinationIdentifier>
+      </materialConstituents>
+      <materialConstituents>
+        <materialConstituentsIdentifier>11eb7b61-05f1-4894-a57b-80e5082f944a</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>ff39892f-0a88-4085-9942-4522cecc8337</materialCombinationIdentifier>
+      </materialConstituents>
+      <materialConstituents>
+        <materialConstituentsIdentifier>11eb7b61-05f1-4894-a57b-80e5082f944a</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>42b19543-7138-43ff-a867-a1e551ccba14</materialCombinationIdentifier>
+      </materialConstituents>
+      <combinationPurpose>function-0005</combinationPurpose>
+      <certification>false</certification>
+      <manufacturers>GB-COH-10906273</manufacturers>
+      <manufacturedCountry>826</manufacturedCountry>
+      <updateDate>2022-08-01</updateDate>
+    </material>
     ```
 
 ## Data flow
