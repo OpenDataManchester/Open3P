@@ -53,12 +53,6 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
     }
 ```
 
-## Template
-
-Multipack should be provided as a separate csv file. The specification of this csv file is as follows:
-
-[Multipack Template](https://www.open3p.org/wp-content/uploads/2023/09/multipack20230922.csv){target=_blank}
-
 ## Example
 
 === "12 Multipack of Wine JSON"
@@ -90,6 +84,33 @@ Multipack should be provided as a separate csv file. The specification of this c
         "discontinueDate": "",
       }
     ]
+    ```
+=== "12 Multipack of Wine XML"
+
+    ``` xml linenums="1" hl_lines="3 4"
+    <?xml version="1.0" encoding="UTF-8" ?>
+      <multipack>
+        <identifier>111525c0-9a41-4eea-a9b7-a8c23ffcf94d</identifier>
+        <name>12 pack of wine</name>
+        <description>12 x 750ml of red wine that are sold together. Not to be sold separately.</description>
+        <externalIdentifiers>
+          <GTIN>00123456789012</GTIN>
+        </externalIdentifiers>
+        <multipackConstituentsIdentifiers>
+          <multipackConstituentsIdentifier>346C5546-282B-C040-CE74-DD0DD4688C0B</multipackConstituentsIdentifier>
+          <multipackCombinationIdentifier>516ac728-65e3-48c6-9756-37c29c177a7c</multipackCombinationIdentifier>
+        </multipackConstituentsIdentifiers>
+        <multipackConstituentsIdentifiers>
+          <multipackConstituentsIdentifier>346C5546-282B-C040-CE74-DD0DD4688C0B</multipackConstituentsIdentifier>
+          <multipackCombinationIdentifier>123f1eab-f674-4009-862a-7168cd5cf53f</multipackCombinationIdentifier>
+        </multipackConstituentsIdentifiers>
+        <tier>1</tier>
+        <manufacturers>GB-COH-10906273</manufacturers>
+        <manufacturedCountry>826</manufacturedCountry>
+        <updateDate>2022-08-01</updateDate>
+        <releaseDate>2022-08-01</releaseDate>
+        <discontinueDate></discontinueDate>
+      </multipack>
     ```
 ## Data flow
 
