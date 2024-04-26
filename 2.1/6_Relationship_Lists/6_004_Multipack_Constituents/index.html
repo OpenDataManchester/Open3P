@@ -1666,6 +1666,12 @@
 <td style="text-align: left;">UUID</td>
 <td style="text-align: left;">The unique identifier of components and/or complete packaging that this multipack is made of. There must be an equivalent record in the <code>Components</code> OR <code>Complete Packaging</code> data.</td>
 </tr>
+<tr>
+<td style="text-align: left;">identicalQuantity</td>
+<td style="text-align: left;"><code>mandatory</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">Number of identical units of the component and/or complete package that this multipack is made of.</td>
+</tr>
 </tbody>
 </table>
 <h2 id="diagram">Diagram<a class="headerlink" href="#diagram" title="Permanent link">&para;</a></h2>
@@ -1675,6 +1681,7 @@
   MULTIPACK_CONSTITUENTS {
     multipackConstituentsIdentifier UUID "*"
     multipackCombinationIdentifier UUID "*"
+    identicalQuantity integer "*"
   }
   MULTIPACK_CONSTITUENTS }o--o{ COMPLETE_PACKAGING : attributes
   MULTIPACK_CONSTITUENTS }o--o{ COMPONENTS : attributes</code></pre>

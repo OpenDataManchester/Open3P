@@ -763,15 +763,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#template" class="md-nav__link">
-    <span class="md-ellipsis">
-      Template
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
       Example
@@ -1696,13 +1687,13 @@
 </tr>
 <tr>
 <td style="text-align: left;">startDate</td>
-<td style="text-align: left;"><code>mandatory</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Date</td>
 <td style="text-align: left;">The date that the load began for the destination. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">endDate</td>
-<td style="text-align: left;"><code>mandatory</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Date</td>
 <td style="text-align: left;">The date that the load ended at the destination. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
@@ -1714,25 +1705,25 @@
 </tr>
 <tr>
 <td style="text-align: left;">destinationAddressStreet</td>
-<td style="text-align: left;"><code>mandatory</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">String</td>
 <td style="text-align: left;">The street address of this load destination.</td>
 </tr>
 <tr>
 <td style="text-align: left;">destinationAddressCountry</td>
-<td style="text-align: left;"><code>mandatory</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">String</td>
 <td style="text-align: left;">The country of this load destination.</td>
 </tr>
 <tr>
 <td style="text-align: left;">destinationPostalCode</td>
-<td style="text-align: left;"><code>mandatory</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">String</td>
 <td style="text-align: left;">The postal code of this load destination.</td>
 </tr>
 <tr>
 <td style="text-align: left;">timesSent</td>
-<td style="text-align: left;"><code>mandatory</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Integer</td>
 <td style="text-align: left;">The number of times this load was sent to the destination during the specified time period.</td>
 </tr>
@@ -1772,13 +1763,13 @@ COMPONENTS }o..o{ COMPLETE_PACKAGING : complete_packaging_constituents
     description String
     externalIdentifier Dictionary
     loadIdentifiers List "*"
-    startDate Date "*"
-    endDate Date "*"
+    startDate Date
+    endDate Date
     destinationAddressName String
-    destinationAddressStreet String "*"
-    destinationAddressCountry String "*"
-    destinationPostalCode String "*"
-    timesSent Integer "*"
+    destinationAddressStreet String
+    destinationAddressCountry String
+    destinationPostalCode String
+    timesSent Integer
     manufacturers List
     manufacturedCountry String
     updateDate Date "*"
@@ -1787,9 +1778,6 @@ COMPONENTS }o..o{ COMPLETE_PACKAGING : complete_packaging_constituents
   RELATIONSHIP_LISTS {
       organisations optional
     }</code></pre>
-<h2 id="template">Template<a class="headerlink" href="#template" title="Permanent link">&para;</a></h2>
-<p>Loads should be provided as a separate csv file. The specification of this csv file is as follows:</p>
-<p><a href="https://www.open3p.org/wp-content/uploads/2023/09/load20230922.csv" target="_blank">Load Template</a></p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">JSON</label><label for="__tabbed_1_2">CSV download</label></div>
 <div class="tabbed-content">

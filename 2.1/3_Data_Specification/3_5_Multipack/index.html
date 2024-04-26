@@ -1710,12 +1710,6 @@
 <td style="text-align: left;">The tier associated with the multipack. The inner most tier denoted as 1, and the outermost tier is the biggest number.</td>
 </tr>
 <tr>
-<td style="text-align: left;">identicalQuantity</td>
-<td style="text-align: left;"><code>mandatory</code></td>
-<td style="text-align: left;">Integer</td>
-<td style="text-align: left;">Number of identical units for the unique complete packaging item or a component this row corresponds to.</td>
-</tr>
-<tr>
 <td style="text-align: left;">manufacturers</td>
 <td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">List</td>
@@ -1759,7 +1753,6 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
     externalIdentifiers Dictionary
     multipackConstituentsIdentifiers List "*"
     tier String
-    identicalQuantity Integer "*"
     manufacturers List
     manufacturedCountry String
     updateDate Date "*"
@@ -1805,19 +1798,18 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
 <span class="normal">23</span>
 <span class="normal">24</span>
 <span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">[</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">[</span>
 <span class="w">  </span><span class="p">{</span>
 <span class="hll"><span class="w">    </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;111525c0-9a41-4eea-a9b7-a8c23ffcf94d&quot;</span><span class="p">,</span>
 </span><span class="hll"><span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12 pack of wine&quot;</span><span class="p">,</span>
-</span><span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12 x 750ml of red wine that are sold together. Not to be sold seperately.&quot;</span><span class="p">,</span>
+</span><span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12 x 750ml of red wine that are sold together. Not to be sold separately.&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;externalIdentifiers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;GTIN&quot;</span><span class="p">:</span><span class="s2">&quot;00123456789012&quot;</span><span class="p">,</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">    </span><span class="nt">&quot;multipackConstituentsIdentifiers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">      </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;multipackConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;346C5546-282B-C040-CE74-DD0DD4688C0B&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;multipackCombinationIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TBC&quot;</span>
+<span class="w">      </span><span class="nt">&quot;multipackCombinationIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;516ac728-65e3-48c6-9756-37c29c177a7c&quot;</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;multipackConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;346C5546-282B-C040-CE74-DD0DD4688C0B&quot;</span><span class="p">,</span>
@@ -1825,7 +1817,6 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
 <span class="w">      </span><span class="p">}</span>
 <span class="w">    </span><span class="p">],</span>
 <span class="w">    </span><span class="nt">&quot;tier&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;identicalQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;GB-COH-10906273&quot;</span><span class="p">],</span>
 <span class="w">    </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;826&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
@@ -1845,7 +1836,7 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
     subgraph completePackages[Complete Packages]
         cp_wineBox["Wine Box
         -
-        complete pakages"]
+        516ac728-65e3-48c6-9756-37c29c177a7c"]
         cp_wineBottle["Wine Bottle
         -
         123f1eab-f674-4009-862a-7168cd5cf53f"]
