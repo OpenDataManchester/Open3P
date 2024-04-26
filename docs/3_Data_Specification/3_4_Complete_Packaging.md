@@ -124,7 +124,7 @@ Complete packaging should be provided as a separate csv file. The specification 
     ``` json linenums="1" hl_lines="3 4"
     [
         {
-            "identifier": "TBC",
+            "identifier": "516ac728-65e3-48c6-9756-37c29c177a7c",
             "name": "Wine box",
             "description": "Sturdy and branded, our cardboard box is crafted to hold 12 bottles securely. Includes inlay for secure transport.",
             "externalIdentifiers": {
@@ -133,11 +133,11 @@ Complete packaging should be provided as a separate csv file. The specification 
                 },
             "completePackagingConstituentsIdentifier": [
                 {
-                "materialConstituentsIdentifier": "TBC",
+                "materialConstituentsIdentifier": "64e3cf80-14f2-46d2-8f2f-181d48e02d70",
                 "materialCombinationIdentifier": "9dad67b0-d5a2-4afb-9287-e712fd1ea3e6"
                 },
                 {
-                "materialConstituentsIdentifier": "TBC",
+                "materialConstituentsIdentifier": "64e3cf80-14f2-46d2-8f2f-181d48e02d70",
                 "materialCombinationIdentifier": "8f87c708-8a6b-4c9d-ae6e-af0393f84a12"
                 }
                 ],
@@ -195,19 +195,19 @@ Complete packaging should be provided as a separate csv file. The specification 
                 },
             "completePackagingConstituentsIdentifier": [
                 {
-                "materialConstituentsIdentifier": "TBC",
+                "materialConstituentsIdentifier": "cf2216d2-64df-4bcd-8f64-1396eddbae28",
                 "materialCombinationIdentifier": "94108707-b914-43f3-bed5-93adbbd208c1"
                 },
                 {
-                "materialConstituentsIdentifier": "TBC",
+                "materialConstituentsIdentifier": "cf2216d2-64df-4bcd-8f64-1396eddbae28",
                 "materialCombinationIdentifier": "4b99be14-c89e-4869-abb7-485240ea33c6"
                 },
                 {
-                "materialConstituentsIdentifier": "TBC",
+                "materialConstituentsIdentifier": "cf2216d2-64df-4bcd-8f64-1396eddbae28",
                 "materialCombinationIdentifier": "3d77b280-690e-4ccb-84f5-584c4cbcea36"
                 },
                 {
-                "materialConstituentsIdentifier": "TBC",
+                "materialConstituentsIdentifier": "cf2216d2-64df-4bcd-8f64-1396eddbae28",
                 "materialCombinationIdentifier": "4b50247a-b2d1-4438-ac8a-fb6768180136"
                 }
                 ],
@@ -274,7 +274,7 @@ flowchart LR
     subgraph completePackages["`**Complete Packages**`"]
         cp_wineBox["`**Wine Box
         -
-        complete pakages**`"]
+        516ac728-65e3-48c6-9756-37c29c177a7c**`"]
         cp_wineBottle["`**Wine Bottle
         -
         123f1eab-f674-4009-862a-7168cd5cf53f**`"]
