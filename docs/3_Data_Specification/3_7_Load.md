@@ -65,30 +65,63 @@ COMPONENTS }o..o{ COMPLETE_PACKAGING : complete_packaging_constituents
 
 ## Example
 
-=== "JSON"
+=== "Wine Delivery - JSON"
 
-    ``` json linenums="1"
-    {
-      "identifier": "ED051AFD-EC7F-0428-B054-8837118922FE",
-      "name": "Weekly Load of Guacamole Dip",
-      "description": "24 cases of 12 tubs of guacamole dip for example company on high street west",
-      "externalIdentifiers": {
-        "GTIN":"00123456789012",
-        },
-      "loadIdentifiers": "CA88F5CE-2D09-AFE0-08D7-44804780F924",
-      "startDate": "2023-01-01",
-      "endDate": "2023-01-01",
-      "destinationAddressName": "Example Company",
-      "destinationAddressStreet": "High Street West",
-      "destinationAddressCountry": "England",
-      "destinationPostalCode": "XX00 0XX",
-      "timesSent": 2,
-      "manufacturers": [""],
-      "manufacturedCountry": "826",
-      "updateDate": "2022-08-01",
-    }
+    ``` json linenums="1" hl_lines="3 4"
+    [
+      {
+        "identifier": "ED051AFD-EC7F-0428-B054-8837118922FE",
+        "name": "Pallet of multicase wine",
+        "description": "27 cases of 12 x wine",
+        "externalIdentifiers": {
+          "GTIN":"00123456789012"
+          },
+        "loadIdentifiers": "CA88F5CE-2D09-AFE0-08D7-44804780F924",
+        "manufacturers": ["GB-COH-10906273"],
+        "manufacturedCountry": "826",
+        "updateDate": "2022-08-01",
+      }
+    ]
     ```
-=== "CSV download"
+=== "Wine Delivery - XML"
 
-    * [Load example download](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_6_Load_Example.csv){target=_blank}
+    ``` xml linenums="1" hl_lines="3 4"
+    <?xml version="1.0" encoding="UTF-8" ?>
+      <load>
+        <identifier>ED051AFD-EC7F-0428-B054-8837118922FE</identifier>
+        <name>Pallet of multicase wine</name>
+        <description>27 cases of 12 x wine</description>
+        <externalIdentifiers>
+          <GTIN>00123456789012</GTIN>
+        </externalIdentifiers>
+        <loadIdentifiers>CA88F5CE-2D09-AFE0-08D7-44804780F924</loadIdentifiers>
+        <manufacturers>GB-COH-10906273</manufacturers>
+        <manufacturedCountry>826</manufacturedCountry>
+        <updateDate>2022-08-01</updateDate>
+      </load>
+    ```
     
+## Data flow
+
+``` mermaid
+flowchart LR
+    subgraph completePackages[Complete Packages]
+        cp_wineBox[example complete packages]
+        cp_pallet[Pallet]
+        cp_shrinkWrap[Shrink Wrap]
+    end
+    subgraph multipacks[Multipacks]
+        mp_wineBox["12 pack of wine
+        -
+        111525c0-9a41-4eea-a9b7-a8c23ffcf94d"]
+    end
+    subgraph loads["`**Loads**`"]
+        lo_load["`**Pallet of multicase wine
+        -
+        ED051AFD-EC7F-0428-B054-8837118922FE**`"]
+    end
+    cp_wineBox -.-> multipacks
+    mp_wineBox -.-> lo_load
+    cp_pallet --> lo_load
+    cp_shrinkWrap --> lo_load
+```
