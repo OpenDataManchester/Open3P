@@ -70,14 +70,14 @@ Multipack should be provided as a separate csv file. The specification of this c
       {
         "identifier": "111525c0-9a41-4eea-a9b7-a8c23ffcf94d",
         "name": "12 pack of wine",
-        "description": "12 x 750ml of red wine that are sold together. Not to be sold seperately.",
+        "description": "12 x 750ml of red wine that are sold together. Not to be sold separately.",
         "externalIdentifiers": {
           "GTIN":"00123456789012",
           },
         "multipackConstituentsIdentifiers": [
           {
           "multipackConstituentsIdentifier": "346C5546-282B-C040-CE74-DD0DD4688C0B",
-          "multipackCombinationIdentifier": "TBC"
+          "multipackCombinationIdentifier": "516ac728-65e3-48c6-9756-37c29c177a7c"
           },
           {
           "multipackConstituentsIdentifier": "346C5546-282B-C040-CE74-DD0DD4688C0B",
@@ -104,7 +104,7 @@ flowchart LR
     subgraph completePackages[Complete Packages]
         cp_wineBox["Wine Box
         -
-        complete pakages"]
+        516ac728-65e3-48c6-9756-37c29c177a7c"]
         cp_wineBottle["Wine Bottle
         -
         123f1eab-f674-4009-862a-7168cd5cf53f"]
