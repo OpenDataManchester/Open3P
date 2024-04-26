@@ -1854,6 +1854,8 @@ COMPONENTS }o..o{ COMPLETE_PACKAGING : complete_packaging_constituents
 <pre class="mermaid"><code>flowchart LR
     subgraph completePackages[Complete Packages]
         cp_wineBox[example complete packages]
+        cp_pallet[pallet]
+        cp_shrinkWrap[shrinkWrap]
     end
     subgraph multipacks[Multipacks]
         mp_wineBox["12 pack of wine
@@ -1866,7 +1868,9 @@ COMPONENTS }o..o{ COMPLETE_PACKAGING : complete_packaging_constituents
         ED051AFD-EC7F-0428-B054-8837118922FE**`"]
     end
     cp_wineBox -.-&gt; multipacks
-    mp_wineBox -.-&gt; lo_load</code></pre>
+    mp_wineBox -.-&gt; lo_load
+    cp_pallet --&gt; lo_load
+    cp_shrinkWrap --&gt; lo_load</code></pre>
 
 
 
