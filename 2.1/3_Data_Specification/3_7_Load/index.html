@@ -771,6 +771,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#data-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data flow
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1779,7 +1788,7 @@ COMPONENTS }o..o{ COMPLETE_PACKAGING : complete_packaging_constituents
       organisations optional
     }</code></pre>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">JSON</label><label for="__tabbed_1_2">CSV download</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Wine Delivery - JSON</label><label for="__tabbed_1_2">Wine Delivery - XML</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1795,39 +1804,66 @@ COMPONENTS }o..o{ COMPLETE_PACKAGING : complete_packaging_constituents
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ED051AFD-EC7F-0428-B054-8837118922FE&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Weekly Load of Guacamole Dip&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;24 cases of 12 tubs of guacamole dip for example company on high street west&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;externalIdentifiers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;GTIN&quot;</span><span class="p">:</span><span class="s2">&quot;00123456789012&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;loadIdentifiers&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CA88F5CE-2D09-AFE0-08D7-44804780F924&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;startDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-01-01&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;endDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-01-01&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;destinationAddressName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Company&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;destinationAddressStreet&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;High Street West&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;destinationAddressCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;England&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;destinationPostalCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;XX00 0XX&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;timesSent&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
-<span class="w">  </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;826&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
-<span class="p">}</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="hll"><span class="w">    </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ED051AFD-EC7F-0428-B054-8837118922FE&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Pallet of multicase wine&quot;</span><span class="p">,</span>
+</span><span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;27 cases of 12 x wine&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;externalIdentifiers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;GTIN&quot;</span><span class="p">:</span><span class="s2">&quot;00123456789012&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;loadIdentifiers&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CA88F5CE-2D09-AFE0-08D7-44804780F924&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;GB-COH-10906273&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;manufacturedCountry&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;826&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;updateDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-08-01&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">]</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<ul>
-<li><a href="https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_6_Load_Example.csv" target="_blank">Load example download</a></li>
-</ul>
+<p>``` xml linenums=&rdquo;1&rdquo;</p>
 </div>
 </div>
 </div>
+<?xml version="1.0" encoding="UTF-8" ?>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;load&gt;</span>
+<span class="w">  </span><span class="nt">&lt;identifier&gt;</span>ED051AFD-EC7F-0428-B054-8837118922FE<span class="nt">&lt;/identifier&gt;</span>
+<span class="w">  </span><span class="nt">&lt;name&gt;</span>Pallet<span class="w"> </span>of<span class="w"> </span>multicase<span class="w"> </span>wine<span class="nt">&lt;/name&gt;</span>
+<span class="w">  </span><span class="nt">&lt;description&gt;</span>27<span class="w"> </span>cases<span class="w"> </span>of<span class="w"> </span>12<span class="w"> </span>x<span class="w"> </span>wine<span class="nt">&lt;/description&gt;</span>
+<span class="w">  </span><span class="nt">&lt;externalIdentifiers&gt;</span>
+<span class="w">    </span><span class="nt">&lt;GTIN&gt;</span>00123456789012<span class="nt">&lt;/GTIN&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/externalIdentifiers&gt;</span>
+<span class="w">  </span><span class="nt">&lt;loadIdentifiers&gt;</span>CA88F5CE-2D09-AFE0-08D7-44804780F924<span class="nt">&lt;/loadIdentifiers&gt;</span>
+<span class="w">  </span><span class="nt">&lt;manufacturers&gt;</span>GB-COH-10906273<span class="nt">&lt;/manufacturers&gt;</span>
+<span class="w">  </span><span class="nt">&lt;manufacturedCountry&gt;</span>826<span class="nt">&lt;/manufacturedCountry&gt;</span>
+<span class="w">  </span><span class="nt">&lt;updateDate&gt;</span>2022-08-01<span class="nt">&lt;/updateDate&gt;</span>
+<span class="nt">&lt;/load&gt;</span>
+```
+</code></pre></div>
+
+<h2 id="data-flow">Data flow<a class="headerlink" href="#data-flow" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart LR
+    subgraph completePackages[Complete Packages]
+        cp_wineBox["Wine Box
+        -
+        516ac728-65e3-48c6-9756-37c29c177a7c"]
+        cp_wineBottle["Wine Bottle
+        -
+        123f1eab-f674-4009-862a-7168cd5cf53f"]
+    end
+    subgraph multipacks[Multipacks]
+        mp_wineBox["12 pack of wine
+        -
+        111525c0-9a41-4eea-a9b7-a8c23ffcf94d"]
+    end
+    subgraph loads["`**Loads**`"]
+        lo_load["`**Pallet of multicase wine
+        -
+        ED051AFD-EC7F-0428-B054-8837118922FE**`"]
+    end
+    cp_wineBox -.-&gt; mp_wineBox
+    cp_wineBottle -.-&gt; mp_wineBox
+    mp_wineBox -.-&gt; loads</code></pre>
 
 
 
