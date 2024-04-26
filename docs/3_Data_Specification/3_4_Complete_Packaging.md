@@ -111,12 +111,6 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
     }
 ```
 
-## Template
-
-Complete packaging should be provided as a separate csv file. The specification of this csv file is as follows:
-
-[Complete Packaging Template](https://www.open3p.org/wp-content/uploads/2023/09/completePackaging20230922.csv){target=_blank}
-
 ## Example
 
 === "Wine box - JSON"
@@ -243,6 +237,113 @@ Complete packaging should be provided as a separate csv file. The specification 
             "discontinueDate": ""
         }
     ]
+    ```
+=== "Wine box - XML"
+
+    ``` xml linenums="1" hl_lines="3 4"
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <completePackage>
+        <identifier>516ac728-65e3-48c6-9756-37c29c177a7c</identifier>
+        <name>Wine box</name>
+        <description>Sturdy and branded, our cardboard box is crafted to hold 12 bottles securely. Includes inlay for secure transport.</description>
+        <externalIdentifiers>
+        <internalIdentifer>85467889</internalIdentifer>
+        <GTIN>00123456789012</GTIN>
+        </externalIdentifiers>
+        <completePackagingConstituentsIdentifier>
+        <materialConstituentsIdentifier>64e3cf80-14f2-46d2-8f2f-181d48e02d70</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>9dad67b0-d5a2-4afb-9287-e712fd1ea3e6</materialCombinationIdentifier>
+        </completePackagingConstituentsIdentifier>
+        <completePackagingConstituentsIdentifier>
+        <materialConstituentsIdentifier>64e3cf80-14f2-46d2-8f2f-181d48e02d70</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>8f87c708-8a6b-4c9d-ae6e-af0393f84a12</materialCombinationIdentifier>
+        </completePackagingConstituentsIdentifier>
+        <LOWcodeWOproduct>15 01 01</LOWcodeWOproduct>
+        <productType>cp-product-type-0001</productType>
+        <LOWcodeWproduct>15 01 06</LOWcodeWproduct>
+        <onTheGo>false</onTheGo>
+        <householdWaste>true</householdWaste>
+        <completePackagingEndOfLifeRoutes>TBC</completePackagingEndOfLifeRoutes>
+        <recyclability>false</recyclability>
+        <recyclabilityClaims>TBC</recyclabilityClaims>
+        <height>382</height>
+        <heightDate>2024-01-31</heightDate>
+        <width>388</width>
+        <widthDate>2024-01-31</widthDate>
+        <depth>274</depth>
+        <depthDate>2024-01-31</depthDate>
+        <volume>40611184</volume>
+        <volumeDate>2024-01-31</volumeDate>
+        <weight>450</weight>
+        <weightTolerance>58</weightTolerance>
+        <weightToleranceType>percentage</weightToleranceType>
+        <weightDate>2024-01-31</weightDate>
+        <servingCapacity>12</servingCapacity>
+        <servingCapacityDate>2024-01-31</servingCapacityDate>
+        <partOfMultipack>false</partOfMultipack>
+        <certification>true</certification>
+        <certificationClaims>TBC</certificationClaims>
+        <manufacturers>GB-COH-10906273</manufacturers>
+        <manufacturedCountry>826</manufacturedCountry>
+        <updateDate>2024-01-31</updateDate>
+        <releaseDate>2010-01-31</releaseDate>
+        <discontinueDate></discontinueDate>
+    </completePackage>
+    ```
+=== "Wine bottle - XML"
+
+    ``` xml linenums="1" hl_lines="3 4"
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <completePackage>
+        <identifier>123f1eab-f674-4009-862a-7168cd5cf53f</identifier>
+        <name>Wine bottle</name>
+        <description>750ml Bordeaux wine bottle with cork and two labels: Classic design, recyclable glass, sealed with a cork for freshness. Two labels for branding and information.</description>
+        <externalIdentifiers>
+        <gtin>0123456789012</gtin>
+        <sku>5454632</sku>
+        <WineMS>316456</WineMS>
+        </externalIdentifiers>
+        <completePackagingConstituentsIdentifier>
+        <materialConstituentsIdentifier>cf2216d2-64df-4bcd-8f64-1396eddbae28</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>94108707-b914-43f3-bed5-93adbbd208c1</materialCombinationIdentifier>
+        </completePackagingConstituentsIdentifier>
+        <completePackagingConstituentsIdentifier>
+        <materialConstituentsIdentifier>cf2216d2-64df-4bcd-8f64-1396eddbae28</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>4b99be14-c89e-4869-abb7-485240ea33c6</materialCombinationIdentifier>
+        </completePackagingConstituentsIdentifier>
+        <completePackagingConstituentsIdentifier>
+        <materialConstituentsIdentifier>cf2216d2-64df-4bcd-8f64-1396eddbae28</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>3d77b280-690e-4ccb-84f5-584c4cbcea36</materialCombinationIdentifier>
+        </completePackagingConstituentsIdentifier>
+        <completePackagingConstituentsIdentifier>
+        <materialConstituentsIdentifier>cf2216d2-64df-4bcd-8f64-1396eddbae28</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>4b50247a-b2d1-4438-ac8a-fb6768180136</materialCombinationIdentifier>
+        </completePackagingConstituentsIdentifier>
+        <productType>cp-product-type-0001</productType>
+        <onTheGo>false</onTheGo>
+        <householdWaste>true</householdWaste>
+        <completePackagingEndOfLifeRoutes>TBC</completePackagingEndOfLifeRoutes>
+        <recyclability>true</recyclability>
+        <recyclabilityClaims>TBC</recyclabilityClaims>
+        <height>305</height>
+        <heightDate>2024-01-31</heightDate>
+        <width>72.4</width>
+        <widthDate>2024-01-31</widthDate>
+        <depth>72.5</depth>
+        <depthDate>2024-01-31</depthDate>
+        <weight>710</weight>
+        <weightTolerance>6</weightTolerance>
+        <weightToleranceType>percentage</weightToleranceType>
+        <servingCapacity>750</servingCapacity>
+        <partOfMultipack>true</partOfMultipack>
+        <certification>true</certification>
+        <certificationClaims>1407ca7b-ebaf-472c-85c5-a7965a21f280</certificationClaims>
+        <manufacturers>GB-COH-10906273</manufacturers>
+        <manufacturedCountry>826</manufacturedCountry>
+        <updateDate>2024-01-31</updateDate>
+        <releaseDate>2010-01-31</releaseDate>
+        <discontinueDate></discontinueDate>
+    </completePackage>
     ```
 ## Data flow
 
