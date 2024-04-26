@@ -2074,10 +2074,8 @@ MATERIALS }o--o{ COMPONENTS : component_constituents
     certificationClaims optional
     organisations optional
   }</code></pre>
-<p>Components should be provided as a separate csv file. The specification of this csv file is as follows:</p>
-<p><a href="https://www.open3p.org/wp-content/uploads/2023/09/components20230922.csv" target="_blank">Components Template</a></p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Cardboard box - JSON</label><label for="__tabbed_1_2">Wine bottle - JSON</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Cardboard box - JSON</label><label for="__tabbed_1_2">Wine bottle - JSON</label><label for="__tabbed_1_3">Cardboard box - XML</label><label for="__tabbed_1_4">Wine bottle - XML</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -2275,6 +2273,164 @@ MATERIALS }o--o{ COMPONENTS : component_constituents
 <span class="w">        </span><span class="nt">&quot;releaseDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2015-06-16&quot;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="nt">&lt;component&gt;</span>
+<span class="hll"><span class="w">    </span><span class="nt">&lt;identifier&gt;</span>9dad67b0-d5a2-4afb-9287-e712fd1ea3e6<span class="nt">&lt;/identifier&gt;</span>
+</span><span class="hll"><span class="w">    </span><span class="nt">&lt;name&gt;</span>Cardboard<span class="w"> </span>box<span class="nt">&lt;/name&gt;</span>
+</span><span class="w">    </span><span class="nt">&lt;description&gt;</span>54cm<span class="w"> </span>x<span class="w"> </span>38cm<span class="w"> </span>x<span class="w"> </span>38cm<span class="w"> </span>0204<span class="w"> </span>style<span class="w"> </span>cardboard<span class="w"> </span>box:<span class="w"> </span>Sturdy<span class="w"> </span>and<span class="w"> </span>spacious<span class="w"> </span>for<span class="w"> </span>shipping<span class="w"> </span>or<span class="w"> </span>storage.<span class="w"> </span>All<span class="w"> </span>flaps<span class="w"> </span>meet<span class="w"> </span>for<span class="w"> </span>easy<span class="w"> </span>sealing.<span class="w"> </span>Versatile<span class="w"> </span>packaging<span class="w"> </span>solution<span class="w"> </span>for<span class="w"> </span>various<span class="w"> </span>items.<span class="nt">&lt;/description&gt;</span>
+<span class="w">    </span><span class="nt">&lt;componentConstituents&gt;</span>
+<span class="w">    </span><span class="nt">&lt;materialConstituentsIdentifier&gt;</span>6d856739-3893-4321-84b9-738a4ef1c830<span class="nt">&lt;/materialConstituentsIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;materialCombinationIdentifier&gt;</span>16f41cca-1a77-4e31-8b0f-2723f752317b<span class="nt">&lt;/materialCombinationIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/componentConstituents&gt;</span>
+<span class="w">    </span><span class="nt">&lt;height&gt;</span>380<span class="nt">&lt;/height&gt;</span>
+<span class="w">    </span><span class="nt">&lt;width&gt;</span>540<span class="nt">&lt;/width&gt;</span>
+<span class="w">    </span><span class="nt">&lt;depth&gt;</span>380<span class="nt">&lt;/depth&gt;</span>
+<span class="w">    </span><span class="nt">&lt;weight&gt;</span>600<span class="nt">&lt;/weight&gt;</span>
+<span class="w">    </span><span class="nt">&lt;weightTolerance&gt;</span>35<span class="nt">&lt;/weightTolerance&gt;</span>
+<span class="w">    </span><span class="nt">&lt;weightToleranceType&gt;</span>grams<span class="nt">&lt;/weightToleranceType&gt;</span>
+<span class="w">    </span><span class="nt">&lt;shape&gt;</span>c-shape-0004<span class="nt">&lt;/shape&gt;</span>
+<span class="w">    </span><span class="nt">&lt;function&gt;</span>function-0048<span class="nt">&lt;/function&gt;</span>
+<span class="w">    </span><span class="nt">&lt;flexibility&gt;</span>c-flexibility-0002<span class="nt">&lt;/flexibility&gt;</span>
+<span class="w">    </span><span class="nt">&lt;branding&gt;</span>false<span class="nt">&lt;/branding&gt;</span>
+<span class="w">    </span><span class="nt">&lt;componentEndOfLifeRoutes&gt;</span>671ee5cc-a402-48a5-ba56-1f4d3840aef0<span class="nt">&lt;/componentEndOfLifeRoutes&gt;</span>
+<span class="w">    </span><span class="nt">&lt;colour&gt;</span>cmyk(0%,14%,33%,18%)<span class="nt">&lt;/colour&gt;</span>
+<span class="w">    </span><span class="nt">&lt;opacity&gt;</span>c-opacity-0001<span class="nt">&lt;/opacity&gt;</span>
+<span class="w">    </span><span class="nt">&lt;loaned&gt;</span>false<span class="nt">&lt;/loaned&gt;</span>
+<span class="w">    </span><span class="nt">&lt;partOfMultipack&gt;</span>false<span class="nt">&lt;/partOfMultipack&gt;</span>
+<span class="w">    </span><span class="nt">&lt;recycledContent&gt;</span>30<span class="nt">&lt;/recycledContent&gt;</span>
+<span class="w">    </span><span class="nt">&lt;recycledContentClaims&gt;</span>81ac4ec3-e097-4092-9c8f-4ef717d3740c<span class="nt">&lt;/recycledContentClaims&gt;</span>
+<span class="w">    </span><span class="nt">&lt;recyclability&gt;</span>true<span class="nt">&lt;/recyclability&gt;</span>
+<span class="w">    </span><span class="nt">&lt;recyclabilityClaims&gt;</span>6af9c69a-6ec1-42dd-a8da-54bab8165e44<span class="nt">&lt;/recyclabilityClaims&gt;</span>
+<span class="w">    </span><span class="nt">&lt;certification&gt;</span>false<span class="nt">&lt;/certification&gt;</span>
+<span class="w">    </span><span class="nt">&lt;manufacturers&gt;</span>GB-COH-10906273<span class="nt">&lt;/manufacturers&gt;</span>
+<span class="w">    </span><span class="nt">&lt;manufacturedCountry&gt;</span>826<span class="nt">&lt;/manufacturedCountry&gt;</span>
+<span class="w">    </span><span class="nt">&lt;updateDate&gt;</span>2024-01-25<span class="nt">&lt;/updateDate&gt;</span>
+<span class="w">    </span><span class="nt">&lt;releaseDate&gt;</span>2011-01-01<span class="nt">&lt;/releaseDate&gt;</span>
+<span class="nt">&lt;/component&gt;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="nt">&lt;component&gt;</span>
+<span class="hll"><span class="w">    </span><span class="nt">&lt;identifier&gt;</span>94108707-b914-43f3-bed5-93adbbd208c1<span class="nt">&lt;/identifier&gt;</span>
+</span><span class="hll"><span class="w">    </span><span class="nt">&lt;name&gt;</span>Wine<span class="w"> </span>bottle<span class="nt">&lt;/name&gt;</span>
+</span><span class="w">    </span><span class="nt">&lt;description&gt;</span>Introducing<span class="w"> </span>our<span class="w"> </span>750ml<span class="w"> </span>Bordeaux<span class="w"> </span>Bottle,<span class="w"> </span>a<span class="w"> </span>sophisticated<span class="w"> </span>and<span class="w"> </span>eco-conscious<span class="w"> </span>choice<span class="w"> </span>for<span class="w"> </span>wine<span class="w"> </span>packaging.<span class="w"> </span>Crafted<span class="w"> </span>with<span class="w"> </span>a<span class="w"> </span>commitment<span class="w"> </span>to<span class="w"> </span>sustainability,<span class="w"> </span>this<span class="w"> </span>bottle<span class="w"> </span>embodies<span class="w"> </span>the<span class="w"> </span>perfect<span class="w"> </span>blend<span class="w"> </span>of<span class="w"> </span>elegance<span class="w"> </span>and<span class="w"> </span>environmental<span class="w"> </span>responsibility.<span class="nt">&lt;/description&gt;</span>
+<span class="w">    </span><span class="nt">&lt;externalIdentifiers&gt;</span>
+<span class="w">    </span><span class="nt">&lt;gtin&gt;</span>70123456<span class="w"> </span>789012<span class="nt">&lt;/gtin&gt;</span>
+<span class="w">    </span><span class="nt">&lt;sku&gt;</span>8855-bb-g<span class="nt">&lt;/sku&gt;</span>
+<span class="w">    </span><span class="nt">&lt;internal_id&gt;</span>0-recycle-green-750-bordeaux<span class="nt">&lt;/internal_id&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/externalIdentifiers&gt;</span>
+<span class="w">    </span><span class="nt">&lt;imageURLs&gt;</span>https://dsposal.uk/media/35604/52419bc2-317f-4815-b39c-f90a20cb7a7a.jpg<span class="nt">&lt;/imageURLs&gt;</span>
+<span class="w">    </span><span class="nt">&lt;componentConstituents&gt;</span>
+<span class="w">    </span><span class="nt">&lt;materialConstituentsIdentifier&gt;</span>70023f95-2d0f-4e47-ab6e-0ce51d50e55d<span class="nt">&lt;/materialConstituentsIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;materialCombinationIdentifier&gt;</span>b050ab75-4bcb-4c7f-b8f5-8a1f9e5ba7d3<span class="nt">&lt;/materialCombinationIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/componentConstituents&gt;</span>
+<span class="w">    </span><span class="nt">&lt;height&gt;</span>305<span class="nt">&lt;/height&gt;</span>
+<span class="w">    </span><span class="nt">&lt;heightDate&gt;</span>2015-06-16<span class="nt">&lt;/heightDate&gt;</span>
+<span class="w">    </span><span class="nt">&lt;width&gt;</span>72.4<span class="nt">&lt;/width&gt;</span>
+<span class="w">    </span><span class="nt">&lt;widthDate&gt;</span>2015-06-16<span class="nt">&lt;/widthDate&gt;</span>
+<span class="w">    </span><span class="nt">&lt;depth&gt;</span>72.5<span class="nt">&lt;/depth&gt;</span>
+<span class="w">    </span><span class="nt">&lt;depthDate&gt;</span>2015-06-16<span class="nt">&lt;/depthDate&gt;</span>
+<span class="w">    </span><span class="nt">&lt;weight&gt;</span>700<span class="nt">&lt;/weight&gt;</span>
+<span class="w">    </span><span class="nt">&lt;weightTolerance&gt;</span>6<span class="nt">&lt;/weightTolerance&gt;</span>
+<span class="w">    </span><span class="nt">&lt;weightToleranceType&gt;</span>percent<span class="nt">&lt;/weightToleranceType&gt;</span>
+<span class="w">    </span><span class="nt">&lt;function&gt;</span>function-0005<span class="nt">&lt;/function&gt;</span>
+<span class="w">    </span><span class="nt">&lt;flexibility&gt;</span>c-flexibility-0002<span class="nt">&lt;/flexibility&gt;</span>
+<span class="w">    </span><span class="nt">&lt;branding&gt;</span>false<span class="nt">&lt;/branding&gt;</span>
+<span class="w">    </span><span class="nt">&lt;componentEndOfLifeRoutes&gt;</span>e2aaabed-f901-4bbe-87e6-c781de2fb569<span class="nt">&lt;/componentEndOfLifeRoutes&gt;</span>
+<span class="w">    </span><span class="nt">&lt;colour&gt;</span>cmyk(90%,30%,100%,20%)<span class="nt">&lt;/colour&gt;</span>
+<span class="w">    </span><span class="nt">&lt;opacity&gt;</span>c-opacity-0002<span class="nt">&lt;/opacity&gt;</span>
+<span class="w">    </span><span class="nt">&lt;loaned&gt;</span>false<span class="nt">&lt;/loaned&gt;</span>
+<span class="w">    </span><span class="nt">&lt;partOfMultipack&gt;</span>false<span class="nt">&lt;/partOfMultipack&gt;</span>
+<span class="w">    </span><span class="nt">&lt;recycledContent&gt;</span>70<span class="nt">&lt;/recycledContent&gt;</span>
+<span class="w">    </span><span class="nt">&lt;recycledContentClaims&gt;</span>defd2813-0987-486a-8698-e8257b5ece63<span class="nt">&lt;/recycledContentClaims&gt;</span>
+<span class="w">    </span><span class="nt">&lt;recyclability&gt;</span>true<span class="nt">&lt;/recyclability&gt;</span>
+<span class="w">    </span><span class="nt">&lt;recyclabilityClaims&gt;</span>79290e8d-bd0e-4fcc-aa22-b932df206c49<span class="nt">&lt;/recyclabilityClaims&gt;</span>
+<span class="w">    </span><span class="nt">&lt;certification&gt;</span>true<span class="nt">&lt;/certification&gt;</span>
+<span class="w">    </span><span class="nt">&lt;certificationClaims&gt;</span>79290e8d-bd0e-4fcc-aa22-b932df206c49<span class="nt">&lt;/certificationClaims&gt;</span>
+<span class="w">    </span><span class="nt">&lt;manufacturers&gt;</span>GB-COH-10906273<span class="nt">&lt;/manufacturers&gt;</span>
+<span class="w">    </span><span class="nt">&lt;manufacturedCountry&gt;</span>826<span class="nt">&lt;/manufacturedCountry&gt;</span>
+<span class="w">    </span><span class="nt">&lt;updateDate&gt;</span>2023-12-07<span class="nt">&lt;/updateDate&gt;</span>
+<span class="w">    </span><span class="nt">&lt;releaseDate&gt;</span>2015-06-16<span class="nt">&lt;/releaseDate&gt;</span>
+<span class="nt">&lt;/component&gt;</span>
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
