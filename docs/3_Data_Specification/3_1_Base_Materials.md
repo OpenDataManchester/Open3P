@@ -54,12 +54,6 @@ erDiagram
   }
 ```
 
-## Template
-
-Base materials should be provided as a separate csv file. The specification of this csv file is as follows:
-
-[Base Materials Template](https://www.open3p.org/wp-content/uploads/2023/09/baseMaterials20230922.csv){target=_blank}
-
 ## Example
 
 === "Cardboard - JSON"
@@ -101,7 +95,42 @@ Base materials should be provided as a separate csv file. The specification of t
       }
     ]
     ```
+=== "Cardboard - XML"
 
+    ``` xml linenums="1" hl_lines="3 4"
+    <?xml version="1.0" encoding="UTF-8"?>
+    <baseMaterial>
+      <identifier>222494f7-6703-49bc-a993-8dd2675709fb</identifier>
+      <name>Cardboard</name>
+      <type>bm-material-type-0001</type>
+      <externalIdentifiers>
+        <sapPK>153516</sapPK>
+        <SKU>34-56bg</SKU>
+      </externalIdentifiers>
+      <certification>true</certification>
+      <certificationClaims>352d6f90-139b-429c-9018-2230ff03a40b</certificationClaims>
+      <manufacturers>GB-COH-10906273</manufacturers>
+      <manufacturedCountry>724</manufacturedCountry>
+      <updateDate>2024-02-25</updateDate>
+    </baseMaterial>
+    ```
+=== "Soda ash - XML"
+
+    ``` xml linenums="1" hl_lines="3 4"
+    <?xml version="1.0" encoding="UTF-8"?>
+    <baseMaterial>
+      <identifier>ff39892f-0a88-4085-9942-4522cecc8337</identifier>
+      <name>Soda ash</name>
+      <materialChemCID>10340</materialChemCID>
+      <externalIdentifiers>
+        <internal_id>soda-ash-100-100</internal_id>
+      </externalIdentifiers>
+      <certification>false</certification>
+      <manufacturers>GB-COH-10906273</manufacturers>
+      <manufacturedCountry>826</manufacturedCountry>
+      <updateDate>2023-12-07</updateDate>
+    </baseMaterial>
+    ```
 ## Data flow
 
 ``` mermaid
