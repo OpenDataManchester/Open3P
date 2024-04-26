@@ -721,15 +721,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#template" class="md-nav__link">
-    <span class="md-ellipsis">
-      Template
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
       Example
@@ -2006,11 +1997,8 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
       certificationClaims optional
       organisations optional
     }</code></pre>
-<h2 id="template">Template<a class="headerlink" href="#template" title="Permanent link">&para;</a></h2>
-<p>Complete packaging should be provided as a separate csv file. The specification of this csv file is as follows:</p>
-<p><a href="https://www.open3p.org/wp-content/uploads/2023/09/completePackaging20230922.csv" target="_blank">Complete Packaging Template</a></p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Wine box - JSON</label><label for="__tabbed_1_2">Wine bottle - JSON</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Wine box - JSON</label><label for="__tabbed_1_2">Wine bottle - JSON</label><label for="__tabbed_1_3">Wine box - XML</label><label for="__tabbed_1_4">Wine bottle - XML</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -2248,6 +2236,208 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
 <span class="w">        </span><span class="nt">&quot;discontinueDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="nt">&lt;completePackage&gt;</span>
+<span class="hll"><span class="w">    </span><span class="nt">&lt;identifier&gt;</span>516ac728-65e3-48c6-9756-37c29c177a7c<span class="nt">&lt;/identifier&gt;</span>
+</span><span class="hll"><span class="w">    </span><span class="nt">&lt;name&gt;</span>Wine<span class="w"> </span>box<span class="nt">&lt;/name&gt;</span>
+</span><span class="w">    </span><span class="nt">&lt;description&gt;</span>Sturdy<span class="w"> </span>and<span class="w"> </span>branded,<span class="w"> </span>our<span class="w"> </span>cardboard<span class="w"> </span>box<span class="w"> </span>is<span class="w"> </span>crafted<span class="w"> </span>to<span class="w"> </span>hold<span class="w"> </span>12<span class="w"> </span>bottles<span class="w"> </span>securely.<span class="w"> </span>Includes<span class="w"> </span>inlay<span class="w"> </span>for<span class="w"> </span>secure<span class="w"> </span>transport.<span class="nt">&lt;/description&gt;</span>
+<span class="w">    </span><span class="nt">&lt;externalIdentifiers&gt;</span>
+<span class="w">    </span><span class="nt">&lt;internalIdentifer&gt;</span>85467889<span class="nt">&lt;/internalIdentifer&gt;</span>
+<span class="w">    </span><span class="nt">&lt;GTIN&gt;</span>00123456789012<span class="nt">&lt;/GTIN&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/externalIdentifiers&gt;</span>
+<span class="w">    </span><span class="nt">&lt;completePackagingConstituentsIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;materialConstituentsIdentifier&gt;</span>64e3cf80-14f2-46d2-8f2f-181d48e02d70<span class="nt">&lt;/materialConstituentsIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;materialCombinationIdentifier&gt;</span>9dad67b0-d5a2-4afb-9287-e712fd1ea3e6<span class="nt">&lt;/materialCombinationIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/completePackagingConstituentsIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;completePackagingConstituentsIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;materialConstituentsIdentifier&gt;</span>64e3cf80-14f2-46d2-8f2f-181d48e02d70<span class="nt">&lt;/materialConstituentsIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;materialCombinationIdentifier&gt;</span>8f87c708-8a6b-4c9d-ae6e-af0393f84a12<span class="nt">&lt;/materialCombinationIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/completePackagingConstituentsIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;LOWcodeWOproduct&gt;</span>15<span class="w"> </span>01<span class="w"> </span>01<span class="nt">&lt;/LOWcodeWOproduct&gt;</span>
+<span class="w">    </span><span class="nt">&lt;productType&gt;</span>cp-product-type-0001<span class="nt">&lt;/productType&gt;</span>
+<span class="w">    </span><span class="nt">&lt;LOWcodeWproduct&gt;</span>15<span class="w"> </span>01<span class="w"> </span>06<span class="nt">&lt;/LOWcodeWproduct&gt;</span>
+<span class="w">    </span><span class="nt">&lt;onTheGo&gt;</span>false<span class="nt">&lt;/onTheGo&gt;</span>
+<span class="w">    </span><span class="nt">&lt;householdWaste&gt;</span>true<span class="nt">&lt;/householdWaste&gt;</span>
+<span class="w">    </span><span class="nt">&lt;completePackagingEndOfLifeRoutes&gt;</span>TBC<span class="nt">&lt;/completePackagingEndOfLifeRoutes&gt;</span>
+<span class="w">    </span><span class="nt">&lt;recyclability&gt;</span>false<span class="nt">&lt;/recyclability&gt;</span>
+<span class="w">    </span><span class="nt">&lt;recyclabilityClaims&gt;</span>TBC<span class="nt">&lt;/recyclabilityClaims&gt;</span>
+<span class="w">    </span><span class="nt">&lt;height&gt;</span>382<span class="nt">&lt;/height&gt;</span>
+<span class="w">    </span><span class="nt">&lt;heightDate&gt;</span>2024-01-31<span class="nt">&lt;/heightDate&gt;</span>
+<span class="w">    </span><span class="nt">&lt;width&gt;</span>388<span class="nt">&lt;/width&gt;</span>
+<span class="w">    </span><span class="nt">&lt;widthDate&gt;</span>2024-01-31<span class="nt">&lt;/widthDate&gt;</span>
+<span class="w">    </span><span class="nt">&lt;depth&gt;</span>274<span class="nt">&lt;/depth&gt;</span>
+<span class="w">    </span><span class="nt">&lt;depthDate&gt;</span>2024-01-31<span class="nt">&lt;/depthDate&gt;</span>
+<span class="w">    </span><span class="nt">&lt;volume&gt;</span>40611184<span class="nt">&lt;/volume&gt;</span>
+<span class="w">    </span><span class="nt">&lt;volumeDate&gt;</span>2024-01-31<span class="nt">&lt;/volumeDate&gt;</span>
+<span class="w">    </span><span class="nt">&lt;weight&gt;</span>450<span class="nt">&lt;/weight&gt;</span>
+<span class="w">    </span><span class="nt">&lt;weightTolerance&gt;</span>58<span class="nt">&lt;/weightTolerance&gt;</span>
+<span class="w">    </span><span class="nt">&lt;weightToleranceType&gt;</span>percentage<span class="nt">&lt;/weightToleranceType&gt;</span>
+<span class="w">    </span><span class="nt">&lt;weightDate&gt;</span>2024-01-31<span class="nt">&lt;/weightDate&gt;</span>
+<span class="w">    </span><span class="nt">&lt;servingCapacity&gt;</span>12<span class="nt">&lt;/servingCapacity&gt;</span>
+<span class="w">    </span><span class="nt">&lt;servingCapacityDate&gt;</span>2024-01-31<span class="nt">&lt;/servingCapacityDate&gt;</span>
+<span class="w">    </span><span class="nt">&lt;partOfMultipack&gt;</span>false<span class="nt">&lt;/partOfMultipack&gt;</span>
+<span class="w">    </span><span class="nt">&lt;certification&gt;</span>true<span class="nt">&lt;/certification&gt;</span>
+<span class="w">    </span><span class="nt">&lt;certificationClaims&gt;</span>TBC<span class="nt">&lt;/certificationClaims&gt;</span>
+<span class="w">    </span><span class="nt">&lt;manufacturers&gt;</span>GB-COH-10906273<span class="nt">&lt;/manufacturers&gt;</span>
+<span class="w">    </span><span class="nt">&lt;manufacturedCountry&gt;</span>826<span class="nt">&lt;/manufacturedCountry&gt;</span>
+<span class="w">    </span><span class="nt">&lt;updateDate&gt;</span>2024-01-31<span class="nt">&lt;/updateDate&gt;</span>
+<span class="w">    </span><span class="nt">&lt;releaseDate&gt;</span>2010-01-31<span class="nt">&lt;/releaseDate&gt;</span>
+<span class="w">    </span><span class="nt">&lt;discontinueDate&gt;&lt;/discontinueDate&gt;</span>
+<span class="nt">&lt;/completePackage&gt;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="nt">&lt;completePackage&gt;</span>
+<span class="hll"><span class="w">    </span><span class="nt">&lt;identifier&gt;</span>123f1eab-f674-4009-862a-7168cd5cf53f<span class="nt">&lt;/identifier&gt;</span>
+</span><span class="hll"><span class="w">    </span><span class="nt">&lt;name&gt;</span>Wine<span class="w"> </span>bottle<span class="nt">&lt;/name&gt;</span>
+</span><span class="w">    </span><span class="nt">&lt;description&gt;</span>750ml<span class="w"> </span>Bordeaux<span class="w"> </span>wine<span class="w"> </span>bottle<span class="w"> </span>with<span class="w"> </span>cork<span class="w"> </span>and<span class="w"> </span>two<span class="w"> </span>labels:<span class="w"> </span>Classic<span class="w"> </span>design,<span class="w"> </span>recyclable<span class="w"> </span>glass,<span class="w"> </span>sealed<span class="w"> </span>with<span class="w"> </span>a<span class="w"> </span>cork<span class="w"> </span>for<span class="w"> </span>freshness.<span class="w"> </span>Two<span class="w"> </span>labels<span class="w"> </span>for<span class="w"> </span>branding<span class="w"> </span>and<span class="w"> </span>information.<span class="nt">&lt;/description&gt;</span>
+<span class="w">    </span><span class="nt">&lt;externalIdentifiers&gt;</span>
+<span class="w">    </span><span class="nt">&lt;gtin&gt;</span>0123456789012<span class="nt">&lt;/gtin&gt;</span>
+<span class="w">    </span><span class="nt">&lt;sku&gt;</span>5454632<span class="nt">&lt;/sku&gt;</span>
+<span class="w">    </span><span class="nt">&lt;WineMS&gt;</span>316456<span class="nt">&lt;/WineMS&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/externalIdentifiers&gt;</span>
+<span class="w">    </span><span class="nt">&lt;completePackagingConstituentsIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;materialConstituentsIdentifier&gt;</span>cf2216d2-64df-4bcd-8f64-1396eddbae28<span class="nt">&lt;/materialConstituentsIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;materialCombinationIdentifier&gt;</span>94108707-b914-43f3-bed5-93adbbd208c1<span class="nt">&lt;/materialCombinationIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/completePackagingConstituentsIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;completePackagingConstituentsIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;materialConstituentsIdentifier&gt;</span>cf2216d2-64df-4bcd-8f64-1396eddbae28<span class="nt">&lt;/materialConstituentsIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;materialCombinationIdentifier&gt;</span>4b99be14-c89e-4869-abb7-485240ea33c6<span class="nt">&lt;/materialCombinationIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/completePackagingConstituentsIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;completePackagingConstituentsIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;materialConstituentsIdentifier&gt;</span>cf2216d2-64df-4bcd-8f64-1396eddbae28<span class="nt">&lt;/materialConstituentsIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;materialCombinationIdentifier&gt;</span>3d77b280-690e-4ccb-84f5-584c4cbcea36<span class="nt">&lt;/materialCombinationIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/completePackagingConstituentsIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;completePackagingConstituentsIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;materialConstituentsIdentifier&gt;</span>cf2216d2-64df-4bcd-8f64-1396eddbae28<span class="nt">&lt;/materialConstituentsIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;materialCombinationIdentifier&gt;</span>4b50247a-b2d1-4438-ac8a-fb6768180136<span class="nt">&lt;/materialCombinationIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/completePackagingConstituentsIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;productType&gt;</span>cp-product-type-0001<span class="nt">&lt;/productType&gt;</span>
+<span class="w">    </span><span class="nt">&lt;onTheGo&gt;</span>false<span class="nt">&lt;/onTheGo&gt;</span>
+<span class="w">    </span><span class="nt">&lt;householdWaste&gt;</span>true<span class="nt">&lt;/householdWaste&gt;</span>
+<span class="w">    </span><span class="nt">&lt;completePackagingEndOfLifeRoutes&gt;</span>TBC<span class="nt">&lt;/completePackagingEndOfLifeRoutes&gt;</span>
+<span class="w">    </span><span class="nt">&lt;recyclability&gt;</span>true<span class="nt">&lt;/recyclability&gt;</span>
+<span class="w">    </span><span class="nt">&lt;recyclabilityClaims&gt;</span>TBC<span class="nt">&lt;/recyclabilityClaims&gt;</span>
+<span class="w">    </span><span class="nt">&lt;height&gt;</span>305<span class="nt">&lt;/height&gt;</span>
+<span class="w">    </span><span class="nt">&lt;heightDate&gt;</span>2024-01-31<span class="nt">&lt;/heightDate&gt;</span>
+<span class="w">    </span><span class="nt">&lt;width&gt;</span>72.4<span class="nt">&lt;/width&gt;</span>
+<span class="w">    </span><span class="nt">&lt;widthDate&gt;</span>2024-01-31<span class="nt">&lt;/widthDate&gt;</span>
+<span class="w">    </span><span class="nt">&lt;depth&gt;</span>72.5<span class="nt">&lt;/depth&gt;</span>
+<span class="w">    </span><span class="nt">&lt;depthDate&gt;</span>2024-01-31<span class="nt">&lt;/depthDate&gt;</span>
+<span class="w">    </span><span class="nt">&lt;weight&gt;</span>710<span class="nt">&lt;/weight&gt;</span>
+<span class="w">    </span><span class="nt">&lt;weightTolerance&gt;</span>6<span class="nt">&lt;/weightTolerance&gt;</span>
+<span class="w">    </span><span class="nt">&lt;weightToleranceType&gt;</span>percentage<span class="nt">&lt;/weightToleranceType&gt;</span>
+<span class="w">    </span><span class="nt">&lt;servingCapacity&gt;</span>750<span class="nt">&lt;/servingCapacity&gt;</span>
+<span class="w">    </span><span class="nt">&lt;partOfMultipack&gt;</span>true<span class="nt">&lt;/partOfMultipack&gt;</span>
+<span class="w">    </span><span class="nt">&lt;certification&gt;</span>true<span class="nt">&lt;/certification&gt;</span>
+<span class="w">    </span><span class="nt">&lt;certificationClaims&gt;</span>1407ca7b-ebaf-472c-85c5-a7965a21f280<span class="nt">&lt;/certificationClaims&gt;</span>
+<span class="w">    </span><span class="nt">&lt;manufacturers&gt;</span>GB-COH-10906273<span class="nt">&lt;/manufacturers&gt;</span>
+<span class="w">    </span><span class="nt">&lt;manufacturedCountry&gt;</span>826<span class="nt">&lt;/manufacturedCountry&gt;</span>
+<span class="w">    </span><span class="nt">&lt;updateDate&gt;</span>2024-01-31<span class="nt">&lt;/updateDate&gt;</span>
+<span class="w">    </span><span class="nt">&lt;releaseDate&gt;</span>2010-01-31<span class="nt">&lt;/releaseDate&gt;</span>
+<span class="w">    </span><span class="nt">&lt;discontinueDate&gt;&lt;/discontinueDate&gt;</span>
+<span class="nt">&lt;/completePackage&gt;</span>
 </code></pre></div></td></tr></table></div>
 </div>
 </div>

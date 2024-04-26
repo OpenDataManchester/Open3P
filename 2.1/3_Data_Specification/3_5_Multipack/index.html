@@ -742,15 +742,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#template" class="md-nav__link">
-    <span class="md-ellipsis">
-      Template
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
       Example
@@ -1766,11 +1757,8 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
       RELATIONSHIP_LISTS {
         organisations optional
     }</code></pre>
-<h2 id="template">Template<a class="headerlink" href="#template" title="Permanent link">&para;</a></h2>
-<p>Multipack should be provided as a separate csv file. The specification of this csv file is as follows:</p>
-<p><a href="https://www.open3p.org/wp-content/uploads/2023/09/multipack20230922.csv" target="_blank">Multipack Template</a></p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">12 Multipack of Wine JSON</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">12 Multipack of Wine JSON</label><label for="__tabbed_1_2">12 Multipack of Wine XML</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1824,6 +1812,54 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
 <span class="w">    </span><span class="nt">&quot;discontinueDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="w">  </span><span class="nt">&lt;multipack&gt;</span>
+<span class="hll"><span class="w">    </span><span class="nt">&lt;identifier&gt;</span>111525c0-9a41-4eea-a9b7-a8c23ffcf94d<span class="nt">&lt;/identifier&gt;</span>
+</span><span class="hll"><span class="w">    </span><span class="nt">&lt;name&gt;</span>12<span class="w"> </span>pack<span class="w"> </span>of<span class="w"> </span>wine<span class="nt">&lt;/name&gt;</span>
+</span><span class="w">    </span><span class="nt">&lt;description&gt;</span>12<span class="w"> </span>x<span class="w"> </span>750ml<span class="w"> </span>of<span class="w"> </span>red<span class="w"> </span>wine<span class="w"> </span>that<span class="w"> </span>are<span class="w"> </span>sold<span class="w"> </span>together.<span class="w"> </span>Not<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>sold<span class="w"> </span>separately.<span class="nt">&lt;/description&gt;</span>
+<span class="w">    </span><span class="nt">&lt;externalIdentifiers&gt;</span>
+<span class="w">      </span><span class="nt">&lt;GTIN&gt;</span>00123456789012<span class="nt">&lt;/GTIN&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/externalIdentifiers&gt;</span>
+<span class="w">    </span><span class="nt">&lt;multipackConstituentsIdentifiers&gt;</span>
+<span class="w">      </span><span class="nt">&lt;multipackConstituentsIdentifier&gt;</span>346C5546-282B-C040-CE74-DD0DD4688C0B<span class="nt">&lt;/multipackConstituentsIdentifier&gt;</span>
+<span class="w">      </span><span class="nt">&lt;multipackCombinationIdentifier&gt;</span>516ac728-65e3-48c6-9756-37c29c177a7c<span class="nt">&lt;/multipackCombinationIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/multipackConstituentsIdentifiers&gt;</span>
+<span class="w">    </span><span class="nt">&lt;multipackConstituentsIdentifiers&gt;</span>
+<span class="w">      </span><span class="nt">&lt;multipackConstituentsIdentifier&gt;</span>346C5546-282B-C040-CE74-DD0DD4688C0B<span class="nt">&lt;/multipackConstituentsIdentifier&gt;</span>
+<span class="w">      </span><span class="nt">&lt;multipackCombinationIdentifier&gt;</span>123f1eab-f674-4009-862a-7168cd5cf53f<span class="nt">&lt;/multipackCombinationIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/multipackConstituentsIdentifiers&gt;</span>
+<span class="w">    </span><span class="nt">&lt;tier&gt;</span>1<span class="nt">&lt;/tier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;manufacturers&gt;</span>GB-COH-10906273<span class="nt">&lt;/manufacturers&gt;</span>
+<span class="w">    </span><span class="nt">&lt;manufacturedCountry&gt;</span>826<span class="nt">&lt;/manufacturedCountry&gt;</span>
+<span class="w">    </span><span class="nt">&lt;updateDate&gt;</span>2022-08-01<span class="nt">&lt;/updateDate&gt;</span>
+<span class="w">    </span><span class="nt">&lt;releaseDate&gt;</span>2022-08-01<span class="nt">&lt;/releaseDate&gt;</span>
+<span class="w">    </span><span class="nt">&lt;discontinueDate&gt;&lt;/discontinueDate&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/multipack&gt;</span>
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
