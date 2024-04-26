@@ -1821,26 +1821,35 @@ COMPONENTS }o..o{ COMPLETE_PACKAGING : complete_packaging_constituents
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>``` xml linenums=&rdquo;1&rdquo; hl_lines=&rdquo;3 4&rdquo;</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="w">  </span><span class="nt">&lt;load&gt;</span>
+<span class="hll"><span class="w">    </span><span class="nt">&lt;identifier&gt;</span>ED051AFD-EC7F-0428-B054-8837118922FE<span class="nt">&lt;/identifier&gt;</span>
+</span><span class="hll"><span class="w">    </span><span class="nt">&lt;name&gt;</span>Pallet<span class="w"> </span>of<span class="w"> </span>multicase<span class="w"> </span>wine<span class="nt">&lt;/name&gt;</span>
+</span><span class="w">    </span><span class="nt">&lt;description&gt;</span>27<span class="w"> </span>cases<span class="w"> </span>of<span class="w"> </span>12<span class="w"> </span>x<span class="w"> </span>wine<span class="nt">&lt;/description&gt;</span>
+<span class="w">    </span><span class="nt">&lt;externalIdentifiers&gt;</span>
+<span class="w">      </span><span class="nt">&lt;GTIN&gt;</span>00123456789012<span class="nt">&lt;/GTIN&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/externalIdentifiers&gt;</span>
+<span class="w">    </span><span class="nt">&lt;loadIdentifiers&gt;</span>CA88F5CE-2D09-AFE0-08D7-44804780F924<span class="nt">&lt;/loadIdentifiers&gt;</span>
+<span class="w">    </span><span class="nt">&lt;manufacturers&gt;</span>GB-COH-10906273<span class="nt">&lt;/manufacturers&gt;</span>
+<span class="w">    </span><span class="nt">&lt;manufacturedCountry&gt;</span>826<span class="nt">&lt;/manufacturedCountry&gt;</span>
+<span class="w">    </span><span class="nt">&lt;updateDate&gt;</span>2022-08-01<span class="nt">&lt;/updateDate&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/load&gt;</span>
+</code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
-<?xml version="1.0" encoding="UTF-8" ?>
-<div class="codehilite"><pre><span></span><code><span class="nt">&lt;load&gt;</span>
-<span class="w">  </span><span class="nt">&lt;identifier&gt;</span>ED051AFD-EC7F-0428-B054-8837118922FE<span class="nt">&lt;/identifier&gt;</span>
-<span class="w">  </span><span class="nt">&lt;name&gt;</span>Pallet<span class="w"> </span>of<span class="w"> </span>multicase<span class="w"> </span>wine<span class="nt">&lt;/name&gt;</span>
-<span class="w">  </span><span class="nt">&lt;description&gt;</span>27<span class="w"> </span>cases<span class="w"> </span>of<span class="w"> </span>12<span class="w"> </span>x<span class="w"> </span>wine<span class="nt">&lt;/description&gt;</span>
-<span class="w">  </span><span class="nt">&lt;externalIdentifiers&gt;</span>
-<span class="w">    </span><span class="nt">&lt;GTIN&gt;</span>00123456789012<span class="nt">&lt;/GTIN&gt;</span>
-<span class="w">  </span><span class="nt">&lt;/externalIdentifiers&gt;</span>
-<span class="w">  </span><span class="nt">&lt;loadIdentifiers&gt;</span>CA88F5CE-2D09-AFE0-08D7-44804780F924<span class="nt">&lt;/loadIdentifiers&gt;</span>
-<span class="w">  </span><span class="nt">&lt;manufacturers&gt;</span>GB-COH-10906273<span class="nt">&lt;/manufacturers&gt;</span>
-<span class="w">  </span><span class="nt">&lt;manufacturedCountry&gt;</span>826<span class="nt">&lt;/manufacturedCountry&gt;</span>
-<span class="w">  </span><span class="nt">&lt;updateDate&gt;</span>2022-08-01<span class="nt">&lt;/updateDate&gt;</span>
-<span class="nt">&lt;/load&gt;</span>
-```
-</code></pre></div>
-
 <h2 id="data-flow">Data flow<a class="headerlink" href="#data-flow" title="Permanent link">&para;</a></h2>
 <pre class="mermaid"><code>flowchart LR
     subgraph completePackages[Complete Packages]
