@@ -122,10 +122,6 @@ MATERIALS }o--o{ COMPONENTS : component_constituents
   }
 ```
 
-Components should be provided as a separate csv file. The specification of this csv file is as follows:
-
-[Components Template](https://www.open3p.org/wp-content/uploads/2023/09/components20230922.csv){target=_blank}
-
 ## Example
 
 === "Cardboard box - JSON"
@@ -232,6 +228,91 @@ Components should be provided as a separate csv file. The specification of this 
             "releaseDate": "2015-06-16"
         }
     ]
+    ```
+=== "Cardboard box - XML"
+
+    ``` xml linenums="1"  hl_lines="3 4"
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <component>
+        <identifier>9dad67b0-d5a2-4afb-9287-e712fd1ea3e6</identifier>
+        <name>Cardboard box</name>
+        <description>54cm x 38cm x 38cm 0204 style cardboard box: Sturdy and spacious for shipping or storage. All flaps meet for easy sealing. Versatile packaging solution for various items.</description>
+        <componentConstituents>
+        <materialConstituentsIdentifier>6d856739-3893-4321-84b9-738a4ef1c830</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>16f41cca-1a77-4e31-8b0f-2723f752317b</materialCombinationIdentifier>
+        </componentConstituents>
+        <height>380</height>
+        <width>540</width>
+        <depth>380</depth>
+        <weight>600</weight>
+        <weightTolerance>35</weightTolerance>
+        <weightToleranceType>grams</weightToleranceType>
+        <shape>c-shape-0004</shape>
+        <function>function-0048</function>
+        <flexibility>c-flexibility-0002</flexibility>
+        <branding>false</branding>
+        <componentEndOfLifeRoutes>671ee5cc-a402-48a5-ba56-1f4d3840aef0</componentEndOfLifeRoutes>
+        <colour>cmyk(0%,14%,33%,18%)</colour>
+        <opacity>c-opacity-0001</opacity>
+        <loaned>false</loaned>
+        <partOfMultipack>false</partOfMultipack>
+        <recycledContent>30</recycledContent>
+        <recycledContentClaims>81ac4ec3-e097-4092-9c8f-4ef717d3740c</recycledContentClaims>
+        <recyclability>true</recyclability>
+        <recyclabilityClaims>6af9c69a-6ec1-42dd-a8da-54bab8165e44</recyclabilityClaims>
+        <certification>false</certification>
+        <manufacturers>GB-COH-10906273</manufacturers>
+        <manufacturedCountry>826</manufacturedCountry>
+        <updateDate>2024-01-25</updateDate>
+        <releaseDate>2011-01-01</releaseDate>
+    </component>
+    ```
+=== "Wine bottle - XML"
+
+    ``` xml linenums="1"  hl_lines="3 4"
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <component>
+        <identifier>94108707-b914-43f3-bed5-93adbbd208c1</identifier>
+        <name>Wine bottle</name>
+        <description>Introducing our 750ml Bordeaux Bottle, a sophisticated and eco-conscious choice for wine packaging. Crafted with a commitment to sustainability, this bottle embodies the perfect blend of elegance and environmental responsibility.</description>
+        <externalIdentifiers>
+        <gtin>70123456 789012</gtin>
+        <sku>8855-bb-g</sku>
+        <internal_id>0-recycle-green-750-bordeaux</internal_id>
+        </externalIdentifiers>
+        <imageURLs>https://dsposal.uk/media/35604/52419bc2-317f-4815-b39c-f90a20cb7a7a.jpg</imageURLs>
+        <componentConstituents>
+        <materialConstituentsIdentifier>70023f95-2d0f-4e47-ab6e-0ce51d50e55d</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>b050ab75-4bcb-4c7f-b8f5-8a1f9e5ba7d3</materialCombinationIdentifier>
+        </componentConstituents>
+        <height>305</height>
+        <heightDate>2015-06-16</heightDate>
+        <width>72.4</width>
+        <widthDate>2015-06-16</widthDate>
+        <depth>72.5</depth>
+        <depthDate>2015-06-16</depthDate>
+        <weight>700</weight>
+        <weightTolerance>6</weightTolerance>
+        <weightToleranceType>percent</weightToleranceType>
+        <function>function-0005</function>
+        <flexibility>c-flexibility-0002</flexibility>
+        <branding>false</branding>
+        <componentEndOfLifeRoutes>e2aaabed-f901-4bbe-87e6-c781de2fb569</componentEndOfLifeRoutes>
+        <colour>cmyk(90%,30%,100%,20%)</colour>
+        <opacity>c-opacity-0002</opacity>
+        <loaned>false</loaned>
+        <partOfMultipack>false</partOfMultipack>
+        <recycledContent>70</recycledContent>
+        <recycledContentClaims>defd2813-0987-486a-8698-e8257b5ece63</recycledContentClaims>
+        <recyclability>true</recyclability>
+        <recyclabilityClaims>79290e8d-bd0e-4fcc-aa22-b932df206c49</recyclabilityClaims>
+        <certification>true</certification>
+        <certificationClaims>79290e8d-bd0e-4fcc-aa22-b932df206c49</certificationClaims>
+        <manufacturers>GB-COH-10906273</manufacturers>
+        <manufacturedCountry>826</manufacturedCountry>
+        <updateDate>2023-12-07</updateDate>
+        <releaseDate>2015-06-16</releaseDate>
+    </component>
     ```
 
 ## Data flow
