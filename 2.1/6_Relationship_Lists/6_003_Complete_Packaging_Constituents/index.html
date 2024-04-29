@@ -1716,9 +1716,9 @@
 </span><span class="w">    </span><span class="nt">&quot;contactWithProduct&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
 <span class="w">  </span><span class="p">},</span>
 <span class="w">  </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;completePackagingConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;6d856739-3893-4321-84b9-738a4ef1c830&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;completePackagingCombinationIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8f87c708-8a6b-4c9d-ae6e-af0393f84a12&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;contactWithProduct&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="hll"><span class="w">    </span><span class="nt">&quot;completePackagingConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;6d856739-3893-4321-84b9-738a4ef1c830&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="w">    </span><span class="nt">&quot;completePackagingCombinationIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8f87c708-8a6b-4c9d-ae6e-af0393f84a12&quot;</span><span class="p">,</span>
+</span><span class="w">    </span><span class="nt">&quot;contactWithProduct&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <span class="w">  </span><span class="p">},</span>
 <span class="p">]</span>
 </code></pre></div></td></tr></table></div>
@@ -1752,6 +1752,9 @@
         cpc_wineBox["`**6d856739-3893-4321-84b9-738a4ef1c830
         -
         contactWithProduct: FALSE**`"]
+        cpc_tape["`**6d856739-3893-4321-84b9-738a4ef1c830
+        -
+        contactWithProduct: FALSE**`"]
       end
       subgraph cpcs_wineBottle ["`**Wine Bottle Constituents**`"]
         cpc_wineBottle["`**70023f95-2d0f-4e47-ab6e-0ce51d50e55d
@@ -1777,12 +1780,12 @@
         123f1eab-f674-4009-862a-7168cd5cf53f"]
     end
     co_cardboardBox --&gt; cpc_wineBox
-    co_tape --&gt; cpc_wineBox
-    cpcs_wineBox --&gt; cp_wineBox
+    co_tape --&gt; cpc_tape
     co_wineBottle --&gt; cpc_wineBottle
     co_cork --&gt; cpc_cork
     co_backLabel --&gt; cpc_backLabel
     co_frontLabel --&gt; cpc_frontLabel
+    cpcs_wineBox --&gt; cp_wineBox
     cpcs_wineBottle --&gt; cp_wineBottle</code></pre>
 
 
