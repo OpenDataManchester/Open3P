@@ -1725,16 +1725,16 @@
       subgraph cpcs_wineBottle ["`**Wine bottle Constituents**`"]
         cpc_wineBottle["`**70023f95-2d0f-4e47-ab6e-0ce51d50e55d
         -
-        contactWithProduct: TRUE **`"**`"]
+        contactWithProduct: TRUE**`"]
         cpc_cork["`**70023f95-2d0f-4e47-ab6e-0ce51d50e55d
         -
-        contactWithProduct: TRUE **`"**`"]
+        contactWithProduct: TRUE**`"]
         cpc_backLabel["`**70023f95-2d0f-4e47-ab6e-0ce51d50e55d
         -
-        contactWithProduct: FALSE **`"**`"]
+        contactWithProduct: FALSE**`"]
         cpc_frontLabel["`**70023f95-2d0f-4e47-ab6e-0ce51d50e55d
         -
-        contactWithProduct: FALSE **`"**`"]
+        contactWithProduct: FALSE**`"]
       end  
     end
     subgraph completePackages["`**Complete Packages**`"]
@@ -1749,7 +1749,8 @@
     co_tape --&gt; cpc_wineBox
     cpcs_wineBox --&gt; cp_wineBox
     co_wineBottle --&gt; cpc_wineBottle
-    co_cork --&gt; cpc_backLabel
+    co_cork --&gt; cpc_cork
+    co_backLabel --&gt; cpc_backLabel
     co_frontLabel --&gt; cpc_frontLabel
     cpcs_wineBottle --&gt; cp_wineBottle</code></pre>
 <h2 id="template">Template<a class="headerlink" href="#template" title="Permanent link">&para;</a></h2>
