@@ -1770,13 +1770,23 @@
         loc_wineBox["`**CA88F5CE-2D09-AFE0-08D7-44804780F924
         -
         quantityInLoad: 27**`"]
+        loc_pallet["`**CA88F5CE-2D09-AFE0-08D7-44804780F924
+        -
+        quantityInLoad: 1**`"]
+        loc_shrinkWrap["`**CA88F5CE-2D09-AFE0-08D7-44804780F924
+        -
+        quantityInLoad: 1**`"]
       end
     end
     subgraph loads["Loads"]
         lo_load["Pallet of multicase wine
         -
         ED051AFD-EC7F-0428-B054-8837118922FE"]
-    end</code></pre>
+    end
+    cp_pallet --&gt; loc_pallet
+    cp_shrinkWrap --&gt; loc_shrinkWrap
+    mp_wineBox --&gt; loc_wineBox
+    locs_wineBox --&gt; lo_load</code></pre>
 
 
 
