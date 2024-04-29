@@ -1354,6 +1354,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#data-flow" class="md-nav__link">
     <span class="md-ellipsis">
       Data flow
@@ -1685,6 +1694,37 @@
   }
   COMPLETE_PACKAGING_CONSTITUENTS }o--o{ COMPONENTS : attributes
   COMPLETE_PACKAGING_CONSTITUENTS }o--o{ COMPLETE_PACKAGING : attributes</code></pre>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">To Wine Box JSON</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="hll"><span class="w">    </span><span class="nt">&quot;completePackagingConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;6d856739-3893-4321-84b9-738a4ef1c830&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="w">    </span><span class="nt">&quot;completePackagingCombinationIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9dad67b0-d5a2-4afb-9287-e712fd1ea3e6&quot;</span><span class="p">,</span>
+</span><span class="w">    </span><span class="nt">&quot;contactWithProduct&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;completePackagingConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;6d856739-3893-4321-84b9-738a4ef1c830&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;completePackagingCombinationIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8f87c708-8a6b-4c9d-ae6e-af0393f84a12&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;contactWithProduct&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
 <h2 id="data-flow">Data flow<a class="headerlink" href="#data-flow" title="Permanent link">&para;</a></h2>
 <pre class="mermaid"><code>flowchart LR
     subgraph components["Components"]
