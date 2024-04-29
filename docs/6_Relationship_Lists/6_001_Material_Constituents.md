@@ -155,23 +155,23 @@ flowchart LR
         -
         42b19543-7138-43ff-a867-a1e551ccba14"]
     end
-    subgraph materialConstituents["`**Material Constituents**`"]
-        subgraph mcs_cardboard ["`**Cardboard Constituents**`"]
-          mc_cardboard["`**95b95bf7-80c0-49bc-9367-ae48d6c107d3
+    subgraph materialConstituents["`**-**`"]
+        subgraph macs_cardboard ["`**Cardboard Constituents**`"]
+          mac_cardboard["`**95b95bf7-80c0-49bc-9367-ae48d6c107d3
           -
           materialPercentage: 100%**`"]
         end
-        subgraph mcs_glass ["`**Glass Constituents**`"]
-          mc_sodaAsh["`**11eb7b61-05f1-4894-a57b-80e5082f944a
+        subgraph macs_glass ["`**Glass Constituents**`"]
+          mac_sodaAsh["`**11eb7b61-05f1-4894-a57b-80e5082f944a
           -
           materialPercentage: 10%**`"]
-          mc_cullet["`**11eb7b61-05f1-4894-a57b-80e5082f944a
+          mac_cullet["`**11eb7b61-05f1-4894-a57b-80e5082f944a
           -
           materialPercentage: 70%**`"]
-          mc_sand["`**11eb7b61-05f1-4894-a57b-80e5082f944a
+          mac_sand["`**11eb7b61-05f1-4894-a57b-80e5082f944a
           -
           materialPercentage: 15%**`"]
-          mc_limestone["`**11eb7b61-05f1-4894-a57b-80e5082f944a
+          mac_limestone["`**11eb7b61-05f1-4894-a57b-80e5082f944a
           -
           materialPercentage: 5%**`"]
         end  
@@ -184,11 +184,11 @@ flowchart LR
         -
         b050ab75-4bcb-4c7f-b8f5-8a1f9e5ba7d3"]
     end
-    bm_cardboard --> mc_cardboard
-    mcs_cardboard --> ma_cardboard
-    bm_sodaAsh --> mc_sodaAsh
-    bm_cullet --> mc_cullet
-    bm_sand --> mc_sand
-    bm_limestone --> mc_limestone
-    mcs_glass --> ma_glass
+    bm_cardboard --> mac_cardboard
+    macs_cardboard --> ma_cardboard
+    bm_sodaAsh --> mac_sodaAsh
+    bm_cullet --> mac_cullet
+    bm_sand --> mac_sand
+    bm_limestone --> mac_limestone
+    macs_glass --> ma_glass
 ```
