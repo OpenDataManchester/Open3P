@@ -1375,9 +1375,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#template" class="md-nav__link">
+  <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
-      Template
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data flow
     </span>
   </a>
   
@@ -1685,10 +1694,65 @@
   }
   MULTIPACK_CONSTITUENTS }o--o{ COMPLETE_PACKAGING : attributes
   MULTIPACK_CONSTITUENTS }o--o{ COMPONENTS : attributes</code></pre>
-<h2 id="template">Template<a class="headerlink" href="#template" title="Permanent link">&para;</a></h2>
-<p>Multipack constituents should be provided as a separate csv file.</p>
-<p>The specification of this csv file is as follows:</p>
-<p><a href="https://www.open3p.org/wp-content/uploads/2023/09/multipackConstituents20230922.csv">Multipack Constituents Template</a></p>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">To Multipack of Wine JSON</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="hll"><span class="w">    </span><span class="nt">&quot;multipackConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;346C5546-282B-C040-CE74-DD0DD4688C0B&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="w">    </span><span class="nt">&quot;multipackCombinationIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;516ac728-65e3-48c6-9756-37c29c177a7c&quot;</span><span class="p">,</span>
+</span><span class="w">    </span><span class="nt">&quot;identicalQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;multipackConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;346C5546-282B-C040-CE74-DD0DD4688C0B&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;multipackCombinationIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;123f1eab-f674-4009-862a-7168cd5cf53f&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;identicalQuantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span>
+<span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<h2 id="data-flow">Data flow<a class="headerlink" href="#data-flow" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart LR
+    subgraph completePackages[Complete Packages]
+        cp_wineBox["Wine Box
+        -
+        516ac728-65e3-48c6-9756-37c29c177a7c"]
+        cp_wineBottle["Wine Bottle
+        -
+        123f1eab-f674-4009-862a-7168cd5cf53f"]
+    end
+    subgraph multipackConstituents["`**-**`"]
+      subgraph mpcs_wineBox ["`**Wine Multipack Constituents**`"]
+        mpc_wineBox["`**346C5546-282B-C040-CE74-DD0DD4688C0B
+        -
+        identicalQuantity: 1**`"]
+        mpc_wineBottle["`**346C5546-282B-C040-CE74-DD0DD4688C0B
+        -
+        identicalQuantity: 12**`"]
+      end
+    end
+    subgraph multipacks["Multipacks"]
+        mp_wineBox["12 pack of wine
+        -
+        111525c0-9a41-4eea-a9b7-a8c23ffcf94d"]
+    end
+    cp_wineBox --&gt; mpc_wineBox
+    cp_wineBottle --&gt; mpc_wineBottle
+    mpcs_wineBox --&gt; mp_wineBox</code></pre>
 
 
 
