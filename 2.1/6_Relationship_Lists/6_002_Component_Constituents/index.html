@@ -1731,11 +1731,11 @@
       b050ab75-4bcb-4c7f-b8f5-8a1f9e5ba7d3"]
     end
     subgraph componetConstituents["`**Component Constituents**`"]
-      subgraph mcs_cardboard ["`**Cardboard Box Constituents**`"]
+      subgraph cocs_cardboard ["`**Cardboard Box Constituents**`"]
         coc_cardboard["`**6d856739-3893-4321-84b9-738a4ef1c830**`"]
       end
-      subgraph mcs_glass ["`**Wine bottle Constituents**`"]
-        mc_sodaAsh["`**70023f95-2d0f-4e47-ab6e-0ce51d50e55d**`"]
+      subgraph coc_glass ["`**Wine bottle Constituents**`"]
+        coc_glass["`**70023f95-2d0f-4e47-ab6e-0ce51d50e55d**`"]
       end  
     end
     subgraph components["Components"]
@@ -1747,9 +1747,9 @@
       94108707-b914-43f3-bed5-93adbbd208c1"]
     end
     ma_cardboard --&gt; coc_cardboard
-    ma_glass --&gt; mc_sodaAsh
-    mcs_cardboard --&gt; co_cardboardBox
-    mcs_glass --&gt; co_wineBottle
+    ma_glass --&gt; coc_glass
+    cocs_cardboard --&gt; co_cardboardBox
+    cocs_glass --&gt; co_wineBottle
 </code></pre>
 
 
