@@ -41,7 +41,7 @@ erDiagram
 
 ## Example
 
-=== "Cardboard - JSON"
+=== "To Cardboard - JSON"
 
     ``` json linenums="1" hl_lines="3 4"
     [
@@ -54,7 +54,7 @@ erDiagram
       }
     ]
     ```
-=== "Glass - JSON"
+=== "To Glass - JSON"
 
     ``` json linenums="1" hl_lines="3 4"
     [
@@ -88,7 +88,7 @@ erDiagram
       }
     ]
     ```
-=== "Cardboard - XML"
+=== "To Cardboard - XML"
 
     ``` xml linenums="1" hl_lines="3 4"
     <?xml version="1.0" encoding="UTF-8" ?>
@@ -100,7 +100,7 @@ erDiagram
         <materialPercentage>100</materialPercentage>
       </materialConstituents>
     ```
-=== "Glass - XML"
+=== "To Glass - XML"
 
     ``` xml linenums="1" hl_lines="3 4"
     <?xml version="1.0" encoding="UTF-8" ?>
