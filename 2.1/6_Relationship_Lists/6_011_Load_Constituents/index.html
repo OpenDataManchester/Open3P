@@ -1395,6 +1395,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data flow
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1700,6 +1718,65 @@
   CONTROLLED_LISTS {
     level mandatory
   }</code></pre>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">To Wine Delivery - JSON</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="hll"><span class="w">    </span><span class="nt">&quot;loadConstituentsIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CA88F5CE-2D09-AFE0-08D7-44804780F924&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="w">    </span><span class="nt">&quot;loadCombinationIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;111525c0-9a41-4eea-a9b7-a8c23ffcf94d&quot;</span><span class="p">,</span>
+</span><span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Cases of 12 x wine&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;externalIdentifiers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;GTIN&quot;</span><span class="p">:</span><span class="s2">&quot;00123456789012&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;quantityInLoad&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;27&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;level&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;lc-level-0001&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="data-flow">Data flow<a class="headerlink" href="#data-flow" title="Permanent link">&para;</a></h2>
+</div>
+</div>
+</div>
+<pre class="mermaid"><code>flowchart LR
+    subgraph completePackages["Complete Packages"]
+        cp_pallet[Pallet]
+        cp_shrinkWrap[Shrink Wrap]
+    end
+    subgraph multipacks[Multipacks]
+        mp_wineBox["12 pack of wine
+        -
+        111525c0-9a41-4eea-a9b7-a8c23ffcf94d"]
+    end
+    subgraph multipacks[Multipacks]
+        mp_wineBox["12 pack of wine
+        -
+        111525c0-9a41-4eea-a9b7-a8c23ffcf94d"]
+    end
+    subgraph loadConstituents["`**-**`"]
+      subgraph locs_wineBox ["`**Wine Multipack Constituents**`"]
+        loc_wineBox["`**CA88F5CE-2D09-AFE0-08D7-44804780F924
+        -
+        quantityInLoad: 27**`"]
+      end
+    end
+    subgraph loads["Loads"]
+        lo_load["Pallet of multicase wine
+        -
+        ED051AFD-EC7F-0428-B054-8837118922FE"]
+    end</code></pre>
 
 
 
