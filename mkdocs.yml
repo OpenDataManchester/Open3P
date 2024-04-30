@@ -36,7 +36,6 @@ nav:
   - Start Here: 
     - Introduction: 1_Start_Here/1_1_Introduction.md
     - Key Concepts: 1_Start_Here/1_2_Key_Concepts.md
-    - Glossary: 1_Start_Here/1_5_Glossary.md
     - Data Flow: 1_Start_Here/1_3_Data_Flow.md
     - Data Schema: 1_Start_Here/1_4_Data_Schema.md
   - Data Formats: 2_Data_Formats/2_1_Data_Formats.md
@@ -80,9 +79,10 @@ nav:
     - Complete Packaging End of Life Routes: 6_Relationship_Lists/6_008_Complete_Packaging_End_of_Life_Routes.md
     - Recycled Content Claims: 6_Relationship_Lists/6_009_Recycled_Content_Claims.md
     - Organisations: 6_Relationship_Lists/6_010_Organisations.md
-  - Supporting Files: 7_Supporting_Files/7_2_Example_Files.md
+  # - Supporting Files: 7_Supporting_Files/7_2_Example_Files.md
   - Governance: 8_Governance/8_1_Governance.md
   - Licence: 10_Licence/10_01_Licence.md
+  - Glossary: 11_Glossary/11_000_Glossary.md
   - Change Log: 9_Change_Log/8_1_Change_Log.md
 
 extra:
