@@ -47,6 +47,23 @@ erDiagram
       } 
     ]
     ```
+=== "To Multipack of Wine XML"
+
+    ``` xml linenums="1" hl_lines="3 4 8 9"
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <root>
+      <row>
+        <multipackConstituentsIdentifier>346C5546-282B-C040-CE74-DD0DD4688C0B</multipackConstituentsIdentifier>
+        <multipackCombinationIdentifier>516ac728-65e3-48c6-9756-37c29c177a7c</multipackCombinationIdentifier>
+        <identicalQuantity>1</identicalQuantity>
+      </row>
+      <row>
+        <multipackConstituentsIdentifier>346C5546-282B-C040-CE74-DD0DD4688C0B</multipackConstituentsIdentifier>
+        <multipackCombinationIdentifier>123f1eab-f674-4009-862a-7168cd5cf53f</multipackCombinationIdentifier>
+        <identicalQuantity>12</identicalQuantity>
+      </row>
+    </root>
+    ```
 
 ## Data flow
 
