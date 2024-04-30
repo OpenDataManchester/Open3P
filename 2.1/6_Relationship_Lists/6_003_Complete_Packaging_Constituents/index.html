@@ -1695,7 +1695,7 @@
   COMPLETE_PACKAGING_CONSTITUENTS }o--o{ COMPONENTS : attributes
   COMPLETE_PACKAGING_CONSTITUENTS }o--o{ COMPLETE_PACKAGING : attributes</code></pre>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">To Wine Box JSON</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">To Wine Box JSON</label><label for="__tabbed_1_2">To Wine Box XML</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1721,6 +1721,34 @@
 </span><span class="w">    </span><span class="nt">&quot;contactWithProduct&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <span class="w">  </span><span class="p">},</span>
 <span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="nt">&lt;root&gt;</span>
+<span class="hll"><span class="w">  </span><span class="nt">&lt;row&gt;</span>
+</span><span class="hll"><span class="w">    </span><span class="nt">&lt;completePackagingConstituentsIdentifier&gt;</span>6d856739-3893-4321-84b9-738a4ef1c830<span class="nt">&lt;/completePackagingConstituentsIdentifier&gt;</span>
+</span><span class="w">    </span><span class="nt">&lt;completePackagingCombinationIdentifier&gt;</span>9dad67b0-d5a2-4afb-9287-e712fd1ea3e6<span class="nt">&lt;/completePackagingCombinationIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;contactWithProduct&gt;</span>false<span class="nt">&lt;/contactWithProduct&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/row&gt;</span>
+<span class="hll"><span class="w">  </span><span class="nt">&lt;row&gt;</span>
+</span><span class="hll"><span class="w">    </span><span class="nt">&lt;completePackagingConstituentsIdentifier&gt;</span>6d856739-3893-4321-84b9-738a4ef1c830<span class="nt">&lt;/completePackagingConstituentsIdentifier&gt;</span>
+</span><span class="w">    </span><span class="nt">&lt;completePackagingCombinationIdentifier&gt;</span>8f87c708-8a6b-4c9d-ae6e-af0393f84a12<span class="nt">&lt;/completePackagingCombinationIdentifier&gt;</span>
+<span class="w">    </span><span class="nt">&lt;contactWithProduct&gt;</span>true<span class="nt">&lt;/contactWithProduct&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/row&gt;</span>
+<span class="nt">&lt;/root&gt;</span>
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
