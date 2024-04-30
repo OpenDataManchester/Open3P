@@ -8,8 +8,6 @@ A document that contains all the changes made to the standard.
 ## April 30, 2024
 ### Model
 - Moved identicalQuantity from **Multipacks** to **Multipack Constituents**
-- Removed Load Catalogue
-- Added Load Consitutuents relationship list  
 
 ### Data fields
 - Changed following fields within load from **mandatory** to **optional**
