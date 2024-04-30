@@ -21,6 +21,9 @@ The loads constituents relationship list identifies the all the complete packagi
 
 ``` mermaid
 erDiagram
+  BASE_MATERIALS }o..o{ LOAD_CONSTITUENTS : attributes
+  MATERIALS }o..o{ LOAD_CONSTITUENTS : attributes
+  COMPONENTS }o..o{ LOAD_CONSTITUENTS : attributes
   COMPLETE_PACKAGING }o..o{ LOAD_CONSTITUENTS : attributes
   MULTIPACKS }o..o{ LOAD_CONSTITUENTS : attributes
   LOAD_CONSTITUENTS {
@@ -55,7 +58,23 @@ erDiagram
       }
     ]
     ```
-    ## Data flow
+=== "To Wine Delivery - XML"
+
+    ``` xml linenums="1" hl_lines="3 4"
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <loadConstituent>
+      <loadConstituentsIdentifier>CA88F5CE-2D09-AFE0-08D7-44804780F924</loadConstituentsIdentifier>
+      <loadCombinationIdentifier>111525c0-9a41-4eea-a9b7-a8c23ffcf94d</loadCombinationIdentifier>
+      <name>Cases of 12 x wine</name>
+      <externalIdentifiers>
+        <GTIN>00123456789012</GTIN>
+      </externalIdentifiers>
+      <quantityInLoad>27</quantityInLoad>
+      <level>lc-level-0001</level>
+    </loadConstituent>
+    ```
+
+## Data flow
 
 ``` mermaid
 flowchart LR
