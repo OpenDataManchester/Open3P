@@ -31,7 +31,15 @@ The standard is open and free to use, copy and distribute. However, the standard
 
     [:octicons-arrow-right-24: Getting started](./1_Start_Here/1_1_Introduction.md)
 
--   :fontawesome-brands-markdown:{ .lg .middle } __Schema__
+-   :material-key:{ .lg .middle } __Identifiers__
+
+    ---
+
+    Identifying the different aspects of packaging is key.
+
+    [:octicons-arrow-right-24: Identifiers](./4_Identifiers/4_1_Identifiers.md)
+
+-   :material-code-json:{ .lg .middle } __Schema__
 
     ---
 
@@ -39,13 +47,29 @@ The standard is open and free to use, copy and distribute. However, the standard
 
     [:octicons-arrow-right-24: Schema](./3_Data_Specification/3_0_Data_Specification.md)
 
--   :material-format-font:{ .lg .middle } __Controlled Lists__
+-   :fontawesome-solid-list:{ .lg .middle } __Controlled Lists__
 
     ---
 
     Establish consistency in data entry.
 
     [:octicons-arrow-right-24: Controlled Lists](./5_Controlled_Lists/5_000_Controlled_Lists.md)
+
+-   :fontawesome-solid-circle-nodes:{ .lg .middle } __Relationship Lists__
+
+    ---
+
+    Joining the dots needs both a dot and a line. Learning about the lines in relationship lists.
+
+    [:octicons-arrow-right-24: Relationship Lists](./6_Relationship_Lists/6_000_Relationship_Lists.md)
+
+-   :fontawesome-solid-users:{ .lg .middle } __Governance__
+
+    ---
+
+    Information about the governance behind Open 3P.
+
+    [:octicons-arrow-right-24: Governance](./8_Governance/8_1_Governance.md)
 
 -   :material-scale-balance:{ .lg .middle } __Licence__
 
@@ -54,5 +78,21 @@ The standard is open and free to use, copy and distribute. However, the standard
     Open 3P is licensed under Apache License, Version 2.0.
 
     [:octicons-arrow-right-24: License](./10_Licence/10_01_Licence.md)
+
+-   :material-library:{ .lg .middle } __Glossary__
+
+    ---
+
+    Learn the abbreviations and jardon of Open 3P.
+
+    [:octicons-arrow-right-24: Glossary](./11_Glossary/11_000_Glossary.md)
+
+-   :material-source-branch:{ .lg .middle } __Change Log__
+
+    ---
+
+    Nothing stays the same. Learn about what has changed.
+
+    [:octicons-arrow-right-24: Change Log](./9_Change_Log/8_1_Change_Log.md)
 
 </div>
