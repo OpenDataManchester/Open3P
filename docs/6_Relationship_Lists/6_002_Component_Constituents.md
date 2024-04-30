@@ -49,6 +49,28 @@ erDiagram
       }
     ]
     ```
+=== "To Cardboard Box - XML"
+
+    ``` xml linenums="1" hl_lines="3 4"
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <root>
+      <row>
+        <componentConstituentsIdentifier>6d856739-3893-4321-84b9-738a4ef1c830</componentConstituentsIdentifier>
+        <componentCombinationIdentifier>16f41cca-1a77-4e31-8b0f-2723f752317b</componentCombinationIdentifier>
+      </row>
+    </root>
+    ```
+=== "To Glass Wine Bottle - XML"
+
+    ``` xml linenums="1" hl_lines="3 4"
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <root>
+      <row>
+        <componentConstituentsIdentifier>70023f95-2d0f-4e47-ab6e-0ce51d50e55d</componentConstituentsIdentifier>
+        <componentCombinationIdentifier>b050ab75-4bcb-4c7f-b8f5-8a1f9e5ba7d3</componentCombinationIdentifier>
+      </row>
+    </root>
+    ```
 
 ## Data flow
 
