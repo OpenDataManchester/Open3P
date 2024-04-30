@@ -46,6 +46,23 @@ erDiagram
       },
     ]
     ```
+=== "To Wine Box XML"
+
+    ``` xml linenums="1" hl_lines="3 4 8 9"
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <root>
+      <row>
+        <completePackagingConstituentsIdentifier>6d856739-3893-4321-84b9-738a4ef1c830</completePackagingConstituentsIdentifier>
+        <completePackagingCombinationIdentifier>9dad67b0-d5a2-4afb-9287-e712fd1ea3e6</completePackagingCombinationIdentifier>
+        <contactWithProduct>false</contactWithProduct>
+      </row>
+      <row>
+        <completePackagingConstituentsIdentifier>6d856739-3893-4321-84b9-738a4ef1c830</completePackagingConstituentsIdentifier>
+        <completePackagingCombinationIdentifier>8f87c708-8a6b-4c9d-ae6e-af0393f84a12</completePackagingCombinationIdentifier>
+        <contactWithProduct>true</contactWithProduct>
+      </row>
+    </root>
+    ```
 ## Data flow
 
 ``` mermaid
