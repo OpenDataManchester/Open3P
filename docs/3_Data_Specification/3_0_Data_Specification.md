@@ -104,8 +104,6 @@ erDiagram
   COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
   COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
   COMPONENTS }o..o{ MULTIPACK : multipack_constituents
-  BASE_MATERIALS }o..o{ LOADS : load_constituents
-  MATERIALS }o..o{ LOADS : load_constituents
   COMPLETE_PACKAGING }o..o{ LOADS : load_constituents
   MULTIPACK }o..o{ LOADS : load_constituents
   COMPONENTS }o..o{ LOADS : load_constituents

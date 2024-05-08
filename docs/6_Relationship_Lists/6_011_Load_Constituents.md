@@ -11,7 +11,7 @@ The loads constituents relationship list identifies the all the complete packagi
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
 |loadConstituentsIdentifier|`mandatory`|UUID|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
-|loadCombinationIdentifier|`mandatory`|UUID|The unique identifier of the items that this component is made of. There must be an equivalent record in the `Base_Materials`, `Materials`, `Components`, `Complete_Packaging` OR `Multipacks` data.|
+|loadCombinationIdentifier|`mandatory`|UUID|The unique identifier of the items that this component is made of. There must be an equivalent record in the `Components`, `Complete_Packaging` OR `Multipacks` data.|
 |name|`optional`|String|The name of this load constituent.|
 |externalIdentifiers|`optional`|Dictionary|A dictionary of identifiers that might be used to identify the load constituents in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
 |quantityInLoad|`mandatory`|Integer|Number of units for the packaging items found in a load that this row corresponds to.|
@@ -21,8 +21,6 @@ The loads constituents relationship list identifies the all the complete packagi
 
 ``` mermaid
 erDiagram
-  BASE_MATERIALS }o..o{ LOAD_CONSTITUENTS : attributes
-  MATERIALS }o..o{ LOAD_CONSTITUENTS : attributes
   COMPONENTS }o..o{ LOAD_CONSTITUENTS : attributes
   COMPLETE_PACKAGING }o..o{ LOAD_CONSTITUENTS : attributes
   MULTIPACKS }o..o{ LOAD_CONSTITUENTS : attributes

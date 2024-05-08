@@ -32,8 +32,6 @@ Note that all core entities can be incorporated into loads. This is to faciliate
 
 ``` mermaid
 erDiagram
-BASE_MATERIALS }o..o{ LOADS : load_constituents
-MATERIALS }o..o{ LOADS : load_constituents
 COMPLETE_PACKAGING }o..o{ LOADS : load_constituents
 COMPONENTS }o..o{ LOADS : load_constituents
 MULTIPACK }o..o{ LOADS : load_constituents
