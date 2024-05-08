@@ -11,7 +11,7 @@ The complete packaging end of life routes relationship list identifies the purpo
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
 |completePackagingEndOfLifeRouteIdentifier|`mandatory`|UUID|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
-|completePackagingEndOfLifeRoute|`optional`|String|What is the intended end of life route for this complete packaging. The entry should be the [end of life route controlled list](../5_Controlled_Lists/5_016_End_Of_Life_Route.md) identifier. To be filled in when complete packaging has an intended end of life route AS complete packaging, otherwise only fill out at component level.|
+|completePackagingEndOfLifeRoute|`mandatory`|String|What is the intended end of life route for this complete packaging. The entry should be the [end of life route controlled list](../5_Controlled_Lists/5_016_End_Of_Life_Route.md) identifier. To be filled in when complete packaging has an intended end of life route AS complete packaging, otherwise only fill out at component level.|
 |orderOfPrecedence|`optional`|Integer|The order that end of life routes should be used. The preferred route denoted as 1, and the last best option being the biggest number.|
 |completePackagingDisruptors|`optional`|List|What challenges this end of life route for this complete packaging has. The entry should be the [complete packaging end of life route disruptors controlled list](../5_Controlled_Lists/5_014_Complete_Packaging_Disruptors.md) identifier.|
 
@@ -23,7 +23,7 @@ erDiagram
   COMPLETE_PACKAGING }o..o{ COMPLETE_PACKAGING_END_OF_LIFE_ROUTES : within
   COMPLETE_PACKAGING_END_OF_LIFE_ROUTES {
     completePackagingEndOfLifeRouteIdentifier UUID "*"
-    completePackagingEndOfLifeRoute String
+    completePackagingEndOfLifeRoute String "*"
     orderOfPrecedence Integer
     completePackagingDistruptors List
   }
