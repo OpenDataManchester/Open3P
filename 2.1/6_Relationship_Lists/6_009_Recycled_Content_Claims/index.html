@@ -1648,7 +1648,7 @@
 </tr>
 <tr>
 <td style="text-align: left;">recycledContentEvidenceType</td>
-<td style="text-align: left;"><code>optional</code></td>
+<td style="text-align: left;"><code>mandatory</code></td>
 <td style="text-align: left;">String</td>
 <td style="text-align: left;">What type of document provides the information regarding the claim? The entry should be the <a href="../../5_Controlled_Lists/5_011_Recycled_Content_Evidence_Type/">recycled content evidence type</a> identifier.</td>
 </tr>
@@ -1672,7 +1672,7 @@
   COMPONENTS }o..o{ RECYCLED_CONTENT_CLAIMS : within
   RECYCLED_CONTENT_CLAIMS {
     recycledContentIdentifier UUID "*"
-    recycledContentEvidenceType String
+    recycledContentEvidenceType String "*"
     recycledContentEvidenceReference String
     recycledContentIssueDate Date
   }

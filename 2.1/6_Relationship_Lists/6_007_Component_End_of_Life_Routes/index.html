@@ -1651,7 +1651,7 @@
 </tr>
 <tr>
 <td style="text-align: left;">componentDisruptors</td>
-<td style="text-align: left;"><code>mandatory</code></td>
+<td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">List</td>
 <td style="text-align: left;">What challenges this end of life route for this component has. The entry should be the <a href="../../5_Controlled_Lists/5_008_Component_Disruptors/">component end of life route disruptors controlled list</a> identifier.</td>
 </tr>
@@ -1665,7 +1665,7 @@
     componentEndOfLifeRouteIdentifier UUID "*"
     componentEndOfLifeRoute String "*"
     orderOfPrecedence Integer
-    componentDistruptors List "*"
+    componentDistruptors List
   }
   COMPONENT_END_OF_LIFE_ROUTES }o--o{ CONTROLLED_LISTS : attributes
   CONTROLLED_LISTS {

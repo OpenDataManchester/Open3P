@@ -1648,7 +1648,7 @@
 </tr>
 <tr>
 <td style="text-align: left;">completePackagingEndOfLifeRoute</td>
-<td style="text-align: left;"><code>optional</code></td>
+<td style="text-align: left;"><code>mandatory</code></td>
 <td style="text-align: left;">String</td>
 <td style="text-align: left;">What is the intended end of life route for this complete packaging. The entry should be the <a href="../../5_Controlled_Lists/5_016_End_Of_Life_Route/">end of life route controlled list</a> identifier. To be filled in when complete packaging has an intended end of life route AS complete packaging, otherwise only fill out at component level.</td>
 </tr>
@@ -1672,7 +1672,7 @@
   COMPLETE_PACKAGING }o..o{ COMPLETE_PACKAGING_END_OF_LIFE_ROUTES : within
   COMPLETE_PACKAGING_END_OF_LIFE_ROUTES {
     completePackagingEndOfLifeRouteIdentifier UUID "*"
-    completePackagingEndOfLifeRoute String
+    completePackagingEndOfLifeRoute String "*"
     orderOfPrecedence Integer
     completePackagingDistruptors List
   }
