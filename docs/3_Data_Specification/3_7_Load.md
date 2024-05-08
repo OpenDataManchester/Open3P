@@ -16,7 +16,7 @@ Note that all core entities can be incorporated into loads. This is to faciliate
 |name|`optional`|String|The name of this load.|
 |description|`optional`|String|A brief description of this load.|
 |externalIdentifiers|`optional`|Dictionary|A dictionary of identifiers that might be used to identify the load in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
-|loadIdentifiers|`mandatory`|List|The unique identifier of the created load. There must be an equivalent identifier found in the `Load Catalogue`.|
+|loadIdentifiers|`mandatory`|List|The unique identifier of the created load. There must be an equivalent identifier found in the [`Load Constituents`](../6_Relationship_Lists/6_011_Load_Constituents.md).|
 |startDate|`optional`|Date|The date that the load began for the destination. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 |endDate|`optional`|Date|The date that the load ended at the destination. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 |destinationAddressName|`optional`|String|The name of the load destination address.|
