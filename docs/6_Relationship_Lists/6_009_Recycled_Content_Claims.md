@@ -11,7 +11,7 @@ The recycled content claims relationship list identifies the document that detai
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
 |recycledContentIdentifier|`mandatory`|UUID|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
-|recycledContentEvidenceType|`optional`|String|What type of document provides the information regarding the claim? The entry should be the [recycled content evidence type](../5_Controlled_Lists/5_011_Recycled_Content_Evidence_Type.md) identifier.|
+|recycledContentEvidenceType|`mandatory`|String|What type of document provides the information regarding the claim? The entry should be the [recycled content evidence type](../5_Controlled_Lists/5_011_Recycled_Content_Evidence_Type.md) identifier.|
 |recycledContentEvidenceReference|`optional`|String|An accompanying reference number associated with the recycled content evidence type for the component.|
 |recycledContentIssueDate|`optional`|Date|The date that the recycled content evidence was issued. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 
@@ -23,7 +23,7 @@ erDiagram
   COMPONENTS }o..o{ RECYCLED_CONTENT_CLAIMS : within
   RECYCLED_CONTENT_CLAIMS {
     recycledContentIdentifier UUID "*"
-    recycledContentEvidenceType String
+    recycledContentEvidenceType String "*"
     recycledContentEvidenceReference String
     recycledContentIssueDate Date
   }

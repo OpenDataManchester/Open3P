@@ -13,7 +13,7 @@ The component end of life routes relationship list identifies the purposed and i
 |componentEndOfLifeRouteIdentifier|`mandatory`|UUID|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
 |componentEndOfLifeRoute|`mandatory`|String|What is the intended end of life route for this component? The entry should be the [end of life route controlled list](../5_Controlled_Lists/5_016_End_Of_Life_Route.md) identifier.|
 |orderOfPrecedence|`optional`|Integer|The order that end of life routes should be used. The preferred route denoted as 1, and the last best option being the biggest number.|
-|componentDisruptors|`mandatory`|List|What challenges this end of life route for this component has. The entry should be the [component end of life route disruptors controlled list](../5_Controlled_Lists/5_008_Component_Disruptors.md) identifier.|
+|componentDisruptors|`optional`|List|What challenges this end of life route for this component has. The entry should be the [component end of life route disruptors controlled list](../5_Controlled_Lists/5_008_Component_Disruptors.md) identifier.|
 
 ## Diagram
 
@@ -25,7 +25,7 @@ erDiagram
     componentEndOfLifeRouteIdentifier UUID "*"
     componentEndOfLifeRoute String "*"
     orderOfPrecedence Integer
-    componentDistruptors List "*"
+    componentDistruptors List
   }
   COMPONENT_END_OF_LIFE_ROUTES }o--o{ CONTROLLED_LISTS : attributes
   CONTROLLED_LISTS {
