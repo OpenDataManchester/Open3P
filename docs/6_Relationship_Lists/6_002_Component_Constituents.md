@@ -11,7 +11,7 @@ The component constituents relationship list identifies the materials that are c
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
 |componentConstituentsIdentifier|`mandatory`|UUID|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
-|materialCombinationIdentifier|`mandatory`|UUID|The unique identifier of the materials that this component is made of. There must be an equivalent record in the `Materials` OR `Components` data.|
+|componentCombinationIdentifier|`mandatory`|UUID|The unique identifier of the materials and components that this component is made of. There must be an equivalent record in the `Materials` OR `Components` data.|
 
 ## Diagram
 
