@@ -5,7 +5,7 @@ description: The multipack constituents relationship list.
 
 # Multipack Constituents
 
-The multipack constituents relationship list identifies the complete packaging items that are combined to create multipacks. This is only used in [multipack](../3_Data_Specification/3_5_Multipack.md).
+The multipack constituents relationship list identifies the complete packaging items and components that are combined to create multipacks. This is only used in [multipack](../3_Data_Specification/3_5_Multipack.md).
 
 ## Data
 |Column|<div style="width:90px">Status</div>|Format|Notes|
