@@ -5,6 +5,20 @@ title: Latest Updates
 # Latest Updates
 A document that contains all the changes made to the standard.
 
+## May 08, 2024
+
+### Data fields
+- Changed recyclability source in recyclability claims to mandatory.
+- Changed complete packaging end Of life route in complete packaging end of life routes to mandatory.
+- Changed recycled content evidence type in recycled content evidence type to mandatory.
+- Changed component disruptors in component end of life routes to optional.
+
+### Documents
+- Changed wording for weight tolerance in components
+- Changed multipack constitutents introduction text.
+- Changed load identifiers to from catalogue to constituents in description.
+- Changed load combination identifier description in load consitutents.
+
 ## April 30, 2024
 ### Model
 - Moved identicalQuantity from **Multipacks** to **Multipack Constituents**
