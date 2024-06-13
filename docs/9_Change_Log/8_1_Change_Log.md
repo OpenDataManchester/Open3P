@@ -5,6 +5,19 @@ title: Latest Updates
 # Latest Updates
 A document that contains all the changes made to the standard.
 
+## June 13, 2024
+
+### Model
+ - Added Measures controlled list
+ - Added Measurements relationship list
+
+### Data fields
+
+
+### Documents
+ - Added Measures to nav bar
+ - Added Measurements to nav bar
+
 ## May 08, 2024
 
 ### Data fields
