@@ -3,9 +3,9 @@ title: Meaurements
 description: The measurements relationship list.
 ---
 
-# Measures
+# Measurements
 
-The measurements relationship list identifies the different measurement that an object in each schema can have. 
+The measurements relationship list identifies the different measurement that an item in each schema can have. 
 
 ## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|
