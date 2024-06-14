@@ -1718,6 +1718,12 @@
 <td style="text-align: left;">The unique identifier of the created load. There must be an equivalent identifier found in the <a href="../../6_Relationship_Lists/6_011_Load_Constituents/"><code>Load Constituents</code></a>.</td>
 </tr>
 <tr>
+<td style="text-align: left;">measurements</td>
+<td style="text-align: left;"><code>optional</code></td>
+<td style="text-align: left;">List</td>
+<td style="text-align: left;">The information regarding the measurements of the load. The entries should be from the <a href="../../6_Relationship_Lists/6_012_Measurements/">Measurements Relationship List</a>.</td>
+</tr>
+<tr>
 <td style="text-align: left;">startDate</td>
 <td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Date</td>
@@ -1793,6 +1799,7 @@ COMPONENTS }o..o{ COMPLETE_PACKAGING : complete_packaging_constituents
     description String
     externalIdentifier Dictionary
     loadIdentifiers List "*"
+    measurements List
     startDate Date
     endDate Date
     destinationAddressName String
@@ -1807,6 +1814,7 @@ COMPONENTS }o..o{ COMPLETE_PACKAGING : complete_packaging_constituents
   LOADS }o--o{ RELATIONSHIP_LISTS : attributes
   RELATIONSHIP_LISTS {
       organisations optional
+      measurements optional
     }</code></pre>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Wine Delivery - JSON</label><label for="__tabbed_1_2">Wine Delivery - XML</label></div>

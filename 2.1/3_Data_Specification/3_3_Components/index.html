@@ -695,48 +695,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#guide-for-how-to-take-measurements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Guide for how to take measurements
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Guide for how to take measurements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#units" class="md-nav__link">
-    <span class="md-ellipsis">
-      Units
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#default-front-of-a-component" class="md-nav__link">
-    <span class="md-ellipsis">
-      Default Front of a component
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#measuring-the-height-width-and-depth-of-a-component" class="md-nav__link">
-    <span class="md-ellipsis">
-      Measuring the height, width, and depth of a component
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#guide-for-component-images" class="md-nav__link">
     <span class="md-ellipsis">
       Guide for component images
@@ -1831,76 +1789,10 @@
 <td style="text-align: left;">The information regarding the consituents that are combined to create this component. The entries should be from the <a href="../../6_Relationship_Lists/6_002_Component_Constituents/">Component Constituents Relationship List</a> identifier.</td>
 </tr>
 <tr>
-<td style="text-align: left;">height</td>
-<td style="text-align: left;"><code>optional</code></td>
-<td style="text-align: left;">Decimal</td>
-<td style="text-align: left;">The height of the component. Please see the guidelines below on how to properly measure and report the height.</td>
-</tr>
-<tr>
-<td style="text-align: left;">heightDate</td>
-<td style="text-align: left;"><code>optional</code></td>
-<td style="text-align: left;">Date</td>
-<td style="text-align: left;">The date that the height was last verified/measured. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
-</tr>
-<tr>
-<td style="text-align: left;">width</td>
-<td style="text-align: left;"><code>optional</code></td>
-<td style="text-align: left;">Decimal</td>
-<td style="text-align: left;">The width of the component. Please see the guidelines below on how to properly measure and report the width.</td>
-</tr>
-<tr>
-<td style="text-align: left;">widthDate</td>
-<td style="text-align: left;"><code>optional</code></td>
-<td style="text-align: left;">Date</td>
-<td style="text-align: left;">The date that the width was last verified/measured. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
-</tr>
-<tr>
-<td style="text-align: left;">depth</td>
-<td style="text-align: left;"><code>optional</code></td>
-<td style="text-align: left;">Decimal</td>
-<td style="text-align: left;">The depth of the component. Please see the guidelines below on how to properly measure and report the depth.</td>
-</tr>
-<tr>
-<td style="text-align: left;">depthDate</td>
-<td style="text-align: left;"><code>optional</code></td>
-<td style="text-align: left;">Date</td>
-<td style="text-align: left;">The date that the depth was last verified/measured. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
-</tr>
-<tr>
-<td style="text-align: left;">volume</td>
-<td style="text-align: left;"><code>optional</code></td>
-<td style="text-align: left;">Decimal</td>
-<td style="text-align: left;">The amount of space the component takes up. Note: this is related to the size of the component and is different to capacity. Using the height, width, and depth found using the measurement guidelines, calculate the component’s volume using: <code>height x width x depth</code>.</td>
-</tr>
-<tr>
-<td style="text-align: left;">volumeDate</td>
-<td style="text-align: left;"><code>optional</code></td>
-<td style="text-align: left;">Date</td>
-<td style="text-align: left;">The date that the volume was last verified/measured. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
-</tr>
-<tr>
-<td style="text-align: left;">weight</td>
+<td style="text-align: left;">measurements</td>
 <td style="text-align: left;"><code>mandatory</code></td>
-<td style="text-align: left;">Decimal</td>
-<td style="text-align: left;">The weight of the component. Please see the guidelines below on how to properly measure and report the weight.</td>
-</tr>
-<tr>
-<td style="text-align: left;">weightTolerance</td>
-<td style="text-align: left;"><code>mandatory</code></td>
-<td style="text-align: left;">Decimal</td>
-<td style="text-align: left;">The threshold of weight that a component can vary by. This can be given in grams or percentage.</td>
-</tr>
-<tr>
-<td style="text-align: left;">weightToleranceType</td>
-<td style="text-align: left;"><code>mandatory</code></td>
-<td style="text-align: left;">String</td>
-<td style="text-align: left;">Either <code>grams</code> or <code>percentage</code> based on the value provided in <code>weightTolerance</code></td>
-</tr>
-<tr>
-<td style="text-align: left;">weightDate</td>
-<td style="text-align: left;"><code>optional</code></td>
-<td style="text-align: left;">Date</td>
-<td style="text-align: left;">The date that the weight was last verified/measured. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
+<td style="text-align: left;">List</td>
+<td style="text-align: left;">The information regarding the measurements of the component. The entries should be from the <a href="../../6_Relationship_Lists/6_012_Measurements/">Measurements Relationship List</a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">shape</td>
@@ -2041,18 +1933,7 @@ MATERIALS }o--o{ COMPONENTS : component_constituents
     imageURLs List
     LOWcode String
     componentConstituents List "*"
-    height Decimal
-    heightDate Date
-    width Decimal
-    widthDate Date
-    depth Decimal
-    depthDate Date
-    volume Decimal
-    volumeDate Date
-    weight Decimal "*"
-    weightTolerance Decimal "*"
-    weightToleranceType String "*"
-    weightDate Date
+    measurements List "*"
     shape String
     function String
     flexibility String
@@ -2091,6 +1972,7 @@ MATERIALS }o--o{ COMPONENTS : component_constituents
     reuseSystem optional
   }
   RELATIONSHIP_LISTS {
+    measurements mandatory
     componentEndOfLifeRoutes optional
     recycledContentClaims optional
     recyclabilityClaims optional
@@ -2140,10 +2022,7 @@ MATERIALS }o--o{ COMPONENTS : component_constituents
 <span class="normal">37</span>
 <span class="normal">38</span>
 <span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">[</span>
+<span class="normal">40</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="hll"><span class="w">        </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9dad67b0-d5a2-4afb-9287-e712fd1ea3e6&quot;</span><span class="p">,</span>
 </span><span class="hll"><span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Cardboard box&quot;</span><span class="p">,</span>
@@ -2154,12 +2033,9 @@ MATERIALS }o--o{ COMPONENTS : component_constituents
 <span class="w">            </span><span class="nt">&quot;materialCombinationIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;16f41cca-1a77-4e31-8b0f-2723f752317b&quot;</span>
 <span class="w">            </span><span class="p">}</span>
 <span class="w">        </span><span class="p">],</span>
-<span class="w">        </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">380</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">540</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;depth&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">380</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;weight&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;weightTolerance&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">35</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;weightToleranceType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;grams&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;measurements&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;8c7a71e1-899c-4932-b4e7-1492a7dc6083&quot;</span>
+<span class="w">        </span><span class="p">],</span>
 <span class="w">        </span><span class="nt">&quot;shape&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c-shape-0004&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;function&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;function-0048&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;flexibility&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c-flexibility-0002&quot;</span><span class="p">,</span>
@@ -2236,13 +2112,7 @@ MATERIALS }o--o{ COMPONENTS : component_constituents
 <span class="normal">45</span>
 <span class="normal">46</span>
 <span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">[</span>
+<span class="normal">48</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="hll"><span class="w">        </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;94108707-b914-43f3-bed5-93adbbd208c1&quot;</span><span class="p">,</span>
 </span><span class="hll"><span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Wine bottle&quot;</span><span class="p">,</span>
@@ -2259,15 +2129,9 @@ MATERIALS }o--o{ COMPONENTS : component_constituents
 <span class="w">          </span><span class="nt">&quot;materialCombinationIdentifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;b050ab75-4bcb-4c7f-b8f5-8a1f9e5ba7d3&quot;</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">        </span><span class="p">],</span>
-<span class="w">        </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">305</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;heightDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2015-06-16&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">72.4</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;widthDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2015-06-16&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;depth&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">72.5</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;depthDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2015-06-16&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;weight&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">700</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;weightTolerance&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;weightToleranceType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;percent&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;measurements&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;e83b250b-8fd5-472f-82d1-049b0c4e9ca9&quot;</span>
+<span class="w">        </span><span class="p">],</span>
 <span class="w">        </span><span class="nt">&quot;function&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;function-0005&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;flexibility&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c-flexibility-0002&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;branding&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
@@ -2327,12 +2191,7 @@ MATERIALS }o--o{ COMPONENTS : component_constituents
 <span class="normal">26</span>
 <span class="normal">27</span>
 <span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
 <span class="nt">&lt;component&gt;</span>
 <span class="hll"><span class="w">    </span><span class="nt">&lt;identifier&gt;</span>9dad67b0-d5a2-4afb-9287-e712fd1ea3e6<span class="nt">&lt;/identifier&gt;</span>
 </span><span class="hll"><span class="w">    </span><span class="nt">&lt;name&gt;</span>Cardboard<span class="w"> </span>box<span class="nt">&lt;/name&gt;</span>
@@ -2341,12 +2200,7 @@ MATERIALS }o--o{ COMPONENTS : component_constituents
 <span class="w">    </span><span class="nt">&lt;materialConstituentsIdentifier&gt;</span>6d856739-3893-4321-84b9-738a4ef1c830<span class="nt">&lt;/materialConstituentsIdentifier&gt;</span>
 <span class="w">    </span><span class="nt">&lt;materialCombinationIdentifier&gt;</span>16f41cca-1a77-4e31-8b0f-2723f752317b<span class="nt">&lt;/materialCombinationIdentifier&gt;</span>
 <span class="w">    </span><span class="nt">&lt;/componentConstituents&gt;</span>
-<span class="w">    </span><span class="nt">&lt;height&gt;</span>380<span class="nt">&lt;/height&gt;</span>
-<span class="w">    </span><span class="nt">&lt;width&gt;</span>540<span class="nt">&lt;/width&gt;</span>
-<span class="w">    </span><span class="nt">&lt;depth&gt;</span>380<span class="nt">&lt;/depth&gt;</span>
-<span class="w">    </span><span class="nt">&lt;weight&gt;</span>600<span class="nt">&lt;/weight&gt;</span>
-<span class="w">    </span><span class="nt">&lt;weightTolerance&gt;</span>35<span class="nt">&lt;/weightTolerance&gt;</span>
-<span class="w">    </span><span class="nt">&lt;weightToleranceType&gt;</span>grams<span class="nt">&lt;/weightToleranceType&gt;</span>
+<span class="w">    </span><span class="nt">&lt;measurements&gt;</span>8c7a71e1-899c-4932-b4e7-1492a7dc6083<span class="nt">&lt;/measurements&gt;</span>
 <span class="w">    </span><span class="nt">&lt;shape&gt;</span>c-shape-0004<span class="nt">&lt;/shape&gt;</span>
 <span class="w">    </span><span class="nt">&lt;function&gt;</span>function-0048<span class="nt">&lt;/function&gt;</span>
 <span class="w">    </span><span class="nt">&lt;flexibility&gt;</span>c-flexibility-0002<span class="nt">&lt;/flexibility&gt;</span>
@@ -2403,15 +2257,7 @@ MATERIALS }o--o{ COMPONENTS : component_constituents
 <span class="normal">32</span>
 <span class="normal">33</span>
 <span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
 <span class="nt">&lt;component&gt;</span>
 <span class="hll"><span class="w">    </span><span class="nt">&lt;identifier&gt;</span>94108707-b914-43f3-bed5-93adbbd208c1<span class="nt">&lt;/identifier&gt;</span>
 </span><span class="hll"><span class="w">    </span><span class="nt">&lt;name&gt;</span>Wine<span class="w"> </span>bottle<span class="nt">&lt;/name&gt;</span>
@@ -2426,15 +2272,7 @@ MATERIALS }o--o{ COMPONENTS : component_constituents
 <span class="w">    </span><span class="nt">&lt;materialConstituentsIdentifier&gt;</span>70023f95-2d0f-4e47-ab6e-0ce51d50e55d<span class="nt">&lt;/materialConstituentsIdentifier&gt;</span>
 <span class="w">    </span><span class="nt">&lt;materialCombinationIdentifier&gt;</span>b050ab75-4bcb-4c7f-b8f5-8a1f9e5ba7d3<span class="nt">&lt;/materialCombinationIdentifier&gt;</span>
 <span class="w">    </span><span class="nt">&lt;/componentConstituents&gt;</span>
-<span class="w">    </span><span class="nt">&lt;height&gt;</span>305<span class="nt">&lt;/height&gt;</span>
-<span class="w">    </span><span class="nt">&lt;heightDate&gt;</span>2015-06-16<span class="nt">&lt;/heightDate&gt;</span>
-<span class="w">    </span><span class="nt">&lt;width&gt;</span>72.4<span class="nt">&lt;/width&gt;</span>
-<span class="w">    </span><span class="nt">&lt;widthDate&gt;</span>2015-06-16<span class="nt">&lt;/widthDate&gt;</span>
-<span class="w">    </span><span class="nt">&lt;depth&gt;</span>72.5<span class="nt">&lt;/depth&gt;</span>
-<span class="w">    </span><span class="nt">&lt;depthDate&gt;</span>2015-06-16<span class="nt">&lt;/depthDate&gt;</span>
-<span class="w">    </span><span class="nt">&lt;weight&gt;</span>700<span class="nt">&lt;/weight&gt;</span>
-<span class="w">    </span><span class="nt">&lt;weightTolerance&gt;</span>6<span class="nt">&lt;/weightTolerance&gt;</span>
-<span class="w">    </span><span class="nt">&lt;weightToleranceType&gt;</span>percent<span class="nt">&lt;/weightToleranceType&gt;</span>
+<span class="w">    </span><span class="nt">&lt;measurements&gt;</span>671ee5cc-a402-48a5-ba56-1f4d3840aef0<span class="nt">&lt;/measurements&gt;</span>
 <span class="w">    </span><span class="nt">&lt;function&gt;</span>function-0005<span class="nt">&lt;/function&gt;</span>
 <span class="w">    </span><span class="nt">&lt;flexibility&gt;</span>c-flexibility-0002<span class="nt">&lt;/flexibility&gt;</span>
 <span class="w">    </span><span class="nt">&lt;branding&gt;</span>false<span class="nt">&lt;/branding&gt;</span>
@@ -2487,90 +2325,6 @@ MATERIALS }o--o{ COMPONENTS : component_constituents
     ma_glass --&gt; co_wineBottle
     co_cardboardBox --&gt; completePackages
     co_wineBottle --&gt; completePackages</code></pre>
-<h2 id="guide-for-how-to-take-measurements">Guide for how to take measurements<a class="headerlink" href="#guide-for-how-to-take-measurements" title="Permanent link">&para;</a></h2>
-<h3 id="units">Units<a class="headerlink" href="#units" title="Permanent link">&para;</a></h3>
-<p>All measurements should be given using the metric system.</p>
-<ul>
-<li>Height: millimetre (mm)</li>
-<li>Width: millimetre (mm)</li>
-<li>Length: millimetre (mm)</li>
-<li>Volume: cubic metre (m3)</li>
-<li>Weight: grams (g)</li>
-<li>Weight Tolerance: percent (%)</li>
-</ul>
-<p>Numbers should be entered with a decimal place. Use the decimal / full stop / period character as a separator. Do not exceed 3 decimal places. When rounding, use convential rounding methods: for 5 and above round up, 4 and below round down. For example: volume = 0.67952 rounded to 0.68. </p>
-<p><strong>Important</strong>: When converting between systems of measurement, perform the conversion first and then apply the convential rounding. This will give more accuracy and consistency.</p>
-<h3 id="default-front-of-a-component">Default Front of a component<a class="headerlink" href="#default-front-of-a-component" title="Permanent link">&para;</a></h3>
-<p>Prior caputuring measurements, first determine the default front of the component, this is similar to <a href="https://www.gs1.org/" target="_blank">GS1</a> (Note: GS1 rules are specified only for complete packaging and not components. Therefore, there are subtle differences to convert from taking a measurement for the complete packaging versus a component). In this standard, as with <a href="https://www.gs1.org/standards/gs1-package-and-product-measurement-standard/current-standard#4-Consumer-(end-user)-trade-items+4-2-Determining-the-default-front" target="_blank">GS1</a>, the default front is the face with the largest surface area, where area is equal to the <code>width</code> times the <code>height</code>.</p>
-<p><strong>Important</strong>: Determining of default front provides a consistent, repeatable process to find measurements for a given component.</p>
-<p><center><img alt="image" height="40%" src="../../img/measurements/figure1.defaultFront.png" width="30%" /></center>
-<center><em>Figure 1: An example for finding the default front of a component. The default front is the face of the with the largest area (Area = <code>width</code> X <code>height</code>)</em></center></p>
-<p>Some components have the same surface area, thus more than one possible front. These components can be presented both vertically and horizontally. If a component has more than one possible front, the highest side is considered to be the default front.</p>
-<p><strong>Note</strong>: Calculating the area for a rectangular component is simple. However, for non-rectangular components (for example, components with a cylindrical or irregular form), the method to calculate the area is:</p>
-<ul>
-<li>First break the component into multiple sides. Then, for:<ul>
-<li>a round component: do not use (=pi*r^2) to calculate the area. Instead, draw &ldquo;two dimensional&rdquo; rectangles around the round component&rsquo;s sides and then calculate the area for each side.</li>
-<li>any other shape component: draw a &ldquo;two dimensional&rdquo; rectangle around the sides of the component, and then calculate the area for each side.</li>
-</ul>
-</li>
-<li>The side with the maximum area then becomes the default front of that component.</li>
-</ul>
-<p><center><img alt="image" height="40%" src="../../img/measurements/figure2.defaultFront.png" width="50%" /></center>
-<center><em>Figure 2: An example for finding the default front of an irregular shaped component. After drawing rectangles around the component, the default front is the face of the with the largest surface area (Area = <code>width</code> X <code>height</code>)</em></center></p>
-<h3 id="measuring-the-height-width-and-depth-of-a-component">Measuring the height, width, and depth of a component<a class="headerlink" href="#measuring-the-height-width-and-depth-of-a-component" title="Permanent link">&para;</a></h3>
-<p>After the default front has been determined, as with <a href="https://www.gs1.org/standards/gs1-package-and-product-measurement-standard/current-standard#4-Consumer-(end-user)-trade-items+4-3-Determining-the-height,-width-and-depth" target="_blank">GS1</a>, it is possible to determine the height, width, and depth of a component. </p>
-<ol>
-<li>For rectangular components: <ul>
-<li>Height: from the base to the top</li>
-<li>Width: from the left to the right</li>
-<li>Depth: from the front to the back</li>
-</ul>
-</li>
-</ol>
-<p><center><img alt="image" height="40%" src="../../img/measurements/figure1.measuring.png" width="30%" /></center>
-<center><em>Figure 3: Example of measuring the height, width, and depth for a rectangular component.</em></center></p>
-<p><strong>Note:</strong> If there are two different measurements for the height, width, or depth, always report the maximum measurement.</p>
-<p><center><img alt="image" height="40%" src="../../img/measurements/figure2.measuring.png" width="30%" /></center>
-<center><em>Figure 4: Example of reporting the maximum width, when there are two different size widths. Here, the width reported would be 12 mm because it is larger than the 8 mm. Additionally, there are two different sized depths. Here, the 9 mm depth would be reported because it is larger than the 5 mm depth.</em></center></p>
-<ol>
-<li>
-<p>For irregular shaped components:
-Similar to finding the default front of an irregularly shaped component, draw a &ldquo;three dimensional&rdquo; rectangle around the component.</p>
-<ul>
-<li>Height: from the base to the top</li>
-<li>Width: from the left to the right</li>
-<li>Depth: from the front to the back</li>
-</ul>
-</li>
-<li>
-<p>For unformed, flexible components:</p>
-<ul>
-<li>Take the measurements as if the component was fully formed and filled.</li>
-</ul>
-</li>
-<li>
-<p>For standing components:</p>
-<ul>
-<li>Height: from the flat surface to the top most point</li>
-<li>Width: from the left-most point to the right-most point</li>
-<li>Depth: from the default front to the farthest opposite surface</li>
-</ul>
-</li>
-<li>
-<p>For components with leaning or irregular verticlas:</p>
-<ul>
-<li>Height: from the flat surface to the top most point (parallel to the vertex)</li>
-<li>Width: from the left most point to the right most point </li>
-<li>Depth: from the default front to the farthest opposite surface</li>
-</ul>
-</li>
-<li>
-<p>For components that are cylindrical:</p>
-<ul>
-<li>For cylindrical items two dimensions will be nominally equal. Which dimensions are equal is determined by the result of determination of the default front.</li>
-</ul>
-</li>
-</ol>
 <h2 id="guide-for-component-images">Guide for component images<a class="headerlink" href="#guide-for-component-images" title="Permanent link">&para;</a></h2>
 <p>As with providing measurements, please first find the default front of the component. The image capturing process and naming convention is similar to <a href="https://www.gs1.org/standards/gs1-product-image-specification-standard/current-standard#1-Introduction" target="_blank">GS1</a>. As with measurements, we altered the gs1 standard for capturing the component.</p>
 <h3 id="type-of-image">Type of Image<a class="headerlink" href="#type-of-image" title="Permanent link">&para;</a></h3>
