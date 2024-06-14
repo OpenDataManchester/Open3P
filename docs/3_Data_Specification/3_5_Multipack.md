@@ -18,6 +18,7 @@ The multipacks schema contains information regarding the multipacks that are use
 |externalIdentifiers|`optional`|Dictionary|A dictionary of identifiers that might be used to identify the multipack in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
 |multipackConstituentsIdentifiers|`mandatory`|List|The information regarding the consituents that are combined to create this multipack. The entries should be from the [Multipack Constituents Relationship List](../6_Relationship_Lists/6_004_Multipack_Constituents.md) identifier.|
 |tier|`optional`|Integer|The tier associated with the multipack. The inner most tier denoted as 1, and the outermost tier is the biggest number.|
+|measurements|`optional`|List|The information regarding the measurements of the multipack. The entries should be from the [Measurements Relationship List](../6_Relationship_Lists/6_012_Measurements.md).|
 |manufacturers|`optional`|List|The information regarding the manufacturer(s). The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
 |manufacturedCountry|`optional`|String|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iso.org/obp/ui/#search){target=_blank} as described in the [ISO 3166 international standard](https://www.iso.org/iso-3166-country-codes.html){target=_blank}.|
 |updateDate|`mandatory`|Date|The date that the multipack was provided/last updated. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
@@ -38,6 +39,7 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
     externalIdentifiers Dictionary
     multipackConstituentsIdentifiers List "*"
     tier String
+    measurements List
     manufacturers List
     manufacturedCountry String
     updateDate Date "*"
@@ -50,6 +52,7 @@ COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
   COMPONENTS }o--o{ LOADS : load_constituents
       RELATIONSHIP_LISTS {
         organisations optional
+        measurements optional
     }
 ```
 
