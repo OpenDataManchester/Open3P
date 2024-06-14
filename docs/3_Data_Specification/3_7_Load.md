@@ -33,11 +33,11 @@ Note that all core entities can be incorporated into loads. This is to faciliate
 
 ``` mermaid
 erDiagram
-COMPLETE_PACKAGING }o..o{ LOADS : load_constituents
 COMPONENTS }o..o{ LOADS : load_constituents
 MULTIPACK }o..o{ LOADS : load_constituents
 COMPONENTS }o..o{ MULTIPACK : multipack_constituents
 COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
+COMPLETE_PACKAGING }o..o{ LOADS : load_constituents
 COMPONENTS }o..o{ COMPLETE_PACKAGING : complete_packaging_constituents
   LOADS {
     identifier UUID "*"
