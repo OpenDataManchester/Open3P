@@ -12,11 +12,53 @@ A document that contains all the changes made to the standard.
  - Added Measurements relationship list
 
 ### Data fields
-
+ - Removed the following attributes from Materials:
+    - areaDensity
+    - areaDensityUnit
+    - areaDensityTolerance
+    - areaDensityToleranceType
+    - areaDensityDate
+ - Removed the following attributes from Components:
+    - height
+    - heightDate
+    - width
+    - widthDate
+    - depth
+    - depthDate
+    - volume
+    - volumeDate
+    - weight
+    - weightTolerance
+    - weightToleranceType
+    - weightDate
+- Removed the following attributes from Complete Packaging:
+    - height
+    - heightDate
+    - width
+    - widthDate
+    - depth
+    - depthDate
+    - volume
+    - volumeDate
+    - weight
+    - weightTolerance
+    - weightToleranceType
+    - weightDate
 
 ### Documents
  - Added Measures to nav bar
  - Added Measurements to nav bar
+ - Removed Guide for how to take measurements from:
+    - Materials
+    - Components
+    - Complete Packaging
+ - Added Measurements relationship list to diagram on:
+    - Base Materials
+    - Materials
+    - Components
+    - Complete Packaging
+    - Multipacks
+    - Loads
 
 ## May 08, 2024
 
