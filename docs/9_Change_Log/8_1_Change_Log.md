@@ -5,7 +5,7 @@ title: Latest Updates
 # Latest Updates
 A document that contains all the changes made to the standard.
 
-## June 13, 2024
+## July 04, 2024
 
 ### Model
  - Added Measures controlled list
@@ -44,6 +44,7 @@ A document that contains all the changes made to the standard.
     - weightTolerance
     - weightToleranceType
     - weightDate
+- Added Reuse Standard and PR3 to the Reuse System Controlled list.
 
 ### Documents
  - Added Measures to nav bar
@@ -59,6 +60,7 @@ A document that contains all the changes made to the standard.
     - Complete Packaging
     - Multipacks
     - Loads
+- Components reuseSystems field notes changed to include PR3 and Reuse Standard.
 
 ## May 08, 2024
 
