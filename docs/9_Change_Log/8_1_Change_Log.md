@@ -5,6 +5,10 @@ title: Latest Updates
 # Latest Updates
 A document that contains all the changes made to the standard.
 
+## July 11, 2024
+### Documents
+- Added cork-cork explanation to data flow
+
 ## May 08, 2024
 
 ### Data fields
