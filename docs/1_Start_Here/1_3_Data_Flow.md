@@ -174,6 +174,13 @@ flowchart LR
     cp_cardboardBox --> lo_wineDelivery
     cp_wineBottle --> lo_wineDelivery
 ```
+
+!!! question "Cork material and cork components"
+
+    In the above example the cork base material, is converted into the cork material and then a cork component.  
+    This might seem confusing, but cork is both a material from the Quercus suber (aka cork oak), and component called a cork (aka a stopper or bung).
+    This confusion is intentional to show that in this example the cork is made of cork. Whereas corks can also be made from plastic.
+
 ## Combining same type items
 The Open 3P standards allows further complexity when combining items of the same type. This is seen below where the two materials 'label' and 'solvent free print substrate' are futher combined to create a 'printed label'.
 ``` mermaid
