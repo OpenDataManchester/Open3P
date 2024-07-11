@@ -816,8 +816,6 @@
       
         
       
-        
-      
     
     
     
@@ -1205,27 +1203,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../5_Controlled_Lists/5_017_Measures/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Measures
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1241,8 +1218,6 @@
   
     
     
-      
-        
       
         
       
@@ -1550,27 +1525,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../6_Relationship_Lists/6_012_Measurements/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Measurements
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1718,12 +1672,6 @@
 <td style="text-align: left;">The unique identifier of the created load. There must be an equivalent identifier found in the <a href="../../6_Relationship_Lists/6_011_Load_Constituents/"><code>Load Constituents</code></a>.</td>
 </tr>
 <tr>
-<td style="text-align: left;">measurements</td>
-<td style="text-align: left;"><code>optional</code></td>
-<td style="text-align: left;">List</td>
-<td style="text-align: left;">The information regarding the measurements of the load. The entries should be from the <a href="../../6_Relationship_Lists/6_012_Measurements/">Measurements Relationship List</a>.</td>
-</tr>
-<tr>
 <td style="text-align: left;">startDate</td>
 <td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Date</td>
@@ -1787,11 +1735,11 @@
 </table>
 <h2 id="diagram">Diagram<a class="headerlink" href="#diagram" title="Permanent link">&para;</a></h2>
 <pre class="mermaid"><code>erDiagram
+COMPLETE_PACKAGING }o..o{ LOADS : load_constituents
 COMPONENTS }o..o{ LOADS : load_constituents
 MULTIPACK }o..o{ LOADS : load_constituents
 COMPONENTS }o..o{ MULTIPACK : multipack_constituents
 COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
-COMPLETE_PACKAGING }o..o{ LOADS : load_constituents
 COMPONENTS }o..o{ COMPLETE_PACKAGING : complete_packaging_constituents
   LOADS {
     identifier UUID "*"
@@ -1799,7 +1747,6 @@ COMPONENTS }o..o{ COMPLETE_PACKAGING : complete_packaging_constituents
     description String
     externalIdentifier Dictionary
     loadIdentifiers List "*"
-    measurements List
     startDate Date
     endDate Date
     destinationAddressName String
@@ -1814,7 +1761,6 @@ COMPONENTS }o..o{ COMPLETE_PACKAGING : complete_packaging_constituents
   LOADS }o--o{ RELATIONSHIP_LISTS : attributes
   RELATIONSHIP_LISTS {
       organisations optional
-      measurements optional
     }</code></pre>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Wine Delivery - JSON</label><label for="__tabbed_1_2">Wine Delivery - XML</label></div>

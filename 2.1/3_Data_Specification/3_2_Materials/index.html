@@ -840,8 +840,6 @@
       
         
       
-        
-      
     
     
     
@@ -1229,27 +1227,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../5_Controlled_Lists/5_017_Measures/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Measures
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1265,8 +1242,6 @@
   
     
     
-      
-        
       
         
       
@@ -1574,27 +1549,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../6_Relationship_Lists/6_012_Measurements/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Measurements
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1741,10 +1695,34 @@
 <td style="text-align: left;">Why is this material being used? Use the identifier of the function that this row relates to. The entry here should be drawn from the <a href="../../5_Controlled_Lists/5_004_Function/">Function Controlled List</a>.</td>
 </tr>
 <tr>
-<td style="text-align: left;">measurements</td>
+<td style="text-align: left;">areaDensity</td>
 <td style="text-align: left;"><code>optional</code></td>
-<td style="text-align: left;">List</td>
-<td style="text-align: left;">The information regarding the measurements of the material. The entries should be from the <a href="../../6_Relationship_Lists/6_012_Measurements/">Measurements Relationship List</a>.</td>
+<td style="text-align: left;">Decimal</td>
+<td style="text-align: left;">The area density of the material. Where area density is the measure of how much mass is packed into a given area of a two-dimensional object. Provided in grams per square metre (gsm).</td>
+</tr>
+<tr>
+<td style="text-align: left;">areaDensityUnit</td>
+<td style="text-align: left;"><code>optional</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">Either <code>gsm</code> or <code>m^2/kg</code> to describe the area density unit of measure.</td>
+</tr>
+<tr>
+<td style="text-align: left;">areaDensityTolerance</td>
+<td style="text-align: left;"><code>optional</code></td>
+<td style="text-align: left;">Decimal</td>
+<td style="text-align: left;">The threshold of area density that the material can vary by. This is given as a +/- value.</td>
+</tr>
+<tr>
+<td style="text-align: left;">areaDensityToleranceType</td>
+<td style="text-align: left;"><code>optional</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">Either <code>unit</code> or <code>percentage</code> based on the value provided in <code>areaDensityTolerance</code>. Where <code>unit</code> is equal to the value provided in <code>areaDensityUnit</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">areaDensityDate</td>
+<td style="text-align: left;"><code>optional</code></td>
+<td style="text-align: left;">Date</td>
+<td style="text-align: left;">The date that the area density was last verified/measured. Use the format <code>yyyy-mm-dd</code> adhering to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 dateTime standard</a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">certification</td>
@@ -1787,7 +1765,11 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
     externalIdentifiers Dictionary
     materialConstituents List "*"
     combinationPurpose String
-    measurements List
+    areaDensity Decimal
+    areaDensityUnit String
+    areaDensityTolerance Decimal
+    areaDensityToleranceType String
+    areaDensityDate Date
     certification Boolean
     certificationClaims List
     manufacturers List
@@ -1803,7 +1785,6 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
         RELATIONSHIP_LISTS {
     certificationClaims optional
     organisations optional
-    measurements optional
       }</code></pre>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Cardboard - JSON</label><label for="__tabbed_1_2">Glass - JSON</label><label for="__tabbed_1_3">Cardboard - XML</label><label for="__tabbed_1_4">Glass - XML</label></div>
@@ -1830,7 +1811,12 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
 <span class="normal">19</span>
 <span class="normal">20</span>
 <span class="normal">21</span>
-<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">[</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">[</span>
 <span class="w">  </span><span class="p">{</span>
 <span class="hll"><span class="w">    </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;16f41cca-1a77-4e31-8b0f-2723f752317b&quot;</span><span class="p">,</span>
 </span><span class="hll"><span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Cardboard&quot;</span><span class="p">,</span>
@@ -1845,6 +1831,11 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
 <span class="w">        </span><span class="p">}</span>
 <span class="w">      </span><span class="p">],</span>
 <span class="w">    </span><span class="nt">&quot;combinationPurpose&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;function-0048&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;areaDensity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;300&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;areaDensityUnit&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;gsm&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;areaDensityTolerance&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3.3&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;areaDensityToleranceType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;percentage&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;areaDensityDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-12-07&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;certification&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;certificationClaims&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;307801c3-f6f7-4ca6-8553-6f367b37fd1e&quot;</span><span class="p">],</span>
 <span class="w">    </span><span class="nt">&quot;manufacturers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;GB-COH-10906273&quot;</span><span class="p">],</span>
@@ -1939,7 +1930,12 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
 <span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
 <span class="nt">&lt;material&gt;</span>
 <span class="hll"><span class="w">  </span><span class="nt">&lt;identifier&gt;</span>16f41cca-1a77-4e31-8b0f-2723f752317b<span class="nt">&lt;/identifier&gt;</span>
 </span><span class="hll"><span class="w">  </span><span class="nt">&lt;name&gt;</span>Cardboard<span class="nt">&lt;/name&gt;</span>
@@ -1952,6 +1948,11 @@ BASE_MATERIALS }o--o{ MATERIALS : material_constituents
 <span class="w">    </span><span class="nt">&lt;materialCombinationIdentifier&gt;</span>222494f7-6703-49bc-a993-8dd2675709fb<span class="nt">&lt;/materialCombinationIdentifier&gt;</span>
 <span class="w">  </span><span class="nt">&lt;/materialConstituents&gt;</span>
 <span class="w">  </span><span class="nt">&lt;combinationPurpose&gt;</span>function-0048<span class="nt">&lt;/combinationPurpose&gt;</span>
+<span class="w">  </span><span class="nt">&lt;areaDensity&gt;</span>300<span class="nt">&lt;/areaDensity&gt;</span>
+<span class="w">  </span><span class="nt">&lt;areaDensityUnit&gt;</span>gsm<span class="nt">&lt;/areaDensityUnit&gt;</span>
+<span class="w">  </span><span class="nt">&lt;areaDensityTolerance&gt;</span>3.3<span class="nt">&lt;/areaDensityTolerance&gt;</span>
+<span class="w">  </span><span class="nt">&lt;areaDensityToleranceType&gt;</span>percentage<span class="nt">&lt;/areaDensityToleranceType&gt;</span>
+<span class="w">  </span><span class="nt">&lt;areaDensityDate&gt;</span>2023-12-07<span class="nt">&lt;/areaDensityDate&gt;</span>
 <span class="w">  </span><span class="nt">&lt;certification&gt;</span>true<span class="nt">&lt;/certification&gt;</span>
 <span class="w">  </span><span class="nt">&lt;certificationClaims&gt;</span>307801c3-f6f7-4ca6-8553-6f367b37fd1e<span class="nt">&lt;/certificationClaims&gt;</span>
 <span class="w">  </span><span class="nt">&lt;manufacturers&gt;</span>GB-COH-10906273<span class="nt">&lt;/manufacturers&gt;</span>
