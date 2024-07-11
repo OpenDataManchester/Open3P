@@ -250,7 +250,7 @@ flowchart LR
     cp_shrinkwrap -- Transit --> lo_wineDelivery
 ```
 ## The whole data flow
-This final example shows how all these examples are combined to create a full flow for all of this data.
+This final example for the wine delivery shows how all these examples are combined to create a full flow for all of this data.
 ``` mermaid
 flowchart LR
     subgraph baseMaterials[Base Materials]
@@ -341,4 +341,56 @@ flowchart LR
     cp_cardboardBox -- Secondary --> lo_wineDelivery
     cp_wineBottle -- Primary --> lo_wineDelivery
     cp_shrinkwrap -- Transit --> lo_wineDelivery
+```
+## Milk bottles example
+This next, completely seperate example shows another situation using items multiple times through each schema. This time we are showing this reusing of schema throughout a supply chain can reduce the amount of data that needs to flow.
+``` mermaid
+flowchart LR
+    subgraph baseMaterials[Base Materials]
+        bm_oil[oil]
+        bm_ink[solvent free ink]
+        bm_varnish[solvent free varnish]
+    end
+    subgraph materials[Materials]
+        ma_coating[solvent free print substrate]
+        ma_pp[pp]
+        ma_hdpe[hdpe]
+        ma_label[printed label]
+    end
+    subgraph components[Components]
+        co_lid[milk bottle lid]
+        co_label1pt[1 pint label]
+        co_label2pt[2 pint label]
+        co_label6pt[6 pint label]
+        co_bottle1pt[1 pint bottle]
+        co_bottle2pt[2 pint bottle]
+        co_bottle6pt[6 pint bottle]
+    end
+    subgraph completePackages[Complete Packages]
+        cp_bottle1pt[1 pint bottle]
+        cp_bottle2pt[2 pint bottle]
+        cp_bottle6pt[6 pint bottle]
+    end
+    bm_oil --> ma_pp
+    bm_oil --> ma_hdpe
+    bm_ink --> ma_coating
+    bm_varnish --> ma_coating
+    ma_pp --> ma_label
+    ma_coating --> ma_label
+    ma_hdpe --> co_lid
+    ma_hdpe --> co_bottle1pt
+    ma_hdpe --> co_bottle2pt
+    ma_hdpe --> co_bottle6pt
+    ma_label --> co_label1pt
+    ma_label --> co_label2pt
+    ma_label --> co_label6pt
+    co_lid --> cp_bottle2pt
+    co_lid --> cp_bottle6pt
+    co_lid --> cp_bottle1pt
+    co_bottle1pt --> cp_bottle1pt
+    co_bottle2pt --> cp_bottle2pt
+    co_bottle6pt --> cp_bottle6pt
+    co_label1pt --> cp_bottle1pt
+    co_label2pt --> cp_bottle2pt
+    co_label6pt --> cp_bottle6pt
 ```
