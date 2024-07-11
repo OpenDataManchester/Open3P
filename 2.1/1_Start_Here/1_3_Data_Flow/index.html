@@ -534,6 +534,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#milk-bottles-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Milk bottles example
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1901,7 +1910,7 @@ This confusion is intentional to show that in this example the cork is made of c
     cp_wineBottle -- Primary --&gt; lo_wineDelivery
     cp_shrinkwrap -- Transit --&gt; lo_wineDelivery</code></pre></p>
 <h2 id="the-whole-data-flow">The whole data flow<a class="headerlink" href="#the-whole-data-flow" title="Permanent link">&para;</a></h2>
-<p>This final example shows how all these examples are combined to create a full flow for all of this data.
+<p>This final example for the wine delivery shows how all these examples are combined to create a full flow for all of this data.
 <pre class="mermaid"><code>flowchart LR
     subgraph baseMaterials[Base Materials]
         bm_cardboard[cardboard]
@@ -1991,6 +2000,34 @@ This confusion is intentional to show that in this example the cork is made of c
     cp_cardboardBox -- Secondary --&gt; lo_wineDelivery
     cp_wineBottle -- Primary --&gt; lo_wineDelivery
     cp_shrinkwrap -- Transit --&gt; lo_wineDelivery</code></pre></p>
+<h2 id="milk-bottles-example">Milk bottles example<a class="headerlink" href="#milk-bottles-example" title="Permanent link">&para;</a></h2>
+<p>This next, completely seperate example shows another situation using items multiple times through each schema. This time we are showing this reusing of schema throughout a supply chain can reduce the amount of data that needs to flow.
+<pre class="mermaid"><code>flowchart LR
+    subgraph baseMaterials[Base Materials]
+        bm_oil[hdpe]
+        bm_ink[solvent free ink]
+        bm_varnish[solvent free varnish]
+    end
+    subgraph materials[Materials]
+        ma_coating[solvent free print substrate]
+        ma_ldpe[ldpe]
+        ma_hdpe[hdpe]
+        ma_label2[printed label]
+    end
+    subgraph components[Components]
+        co_lid[milk bottle lid]
+        co_label1pt[1 pint label]
+        co_label2pt[2 pint label]
+        co_label6pt[6 pint label]
+        co_bottle1pt[1 pint bottle]
+        co_bottle2pt[2 pint bottle]
+        co_bottle6pt[6 pint bottle]
+    end
+    subgraph completePackages[Complete Packages]
+        cp_bottle1pt[1 pint bottle]
+        cp_bottle2pt[2 pint bottle]
+        cp_bottle6pt[6 pint bottle]
+    end</code></pre></p>
 
 
 
