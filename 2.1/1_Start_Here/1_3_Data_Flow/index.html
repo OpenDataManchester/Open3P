@@ -2010,9 +2010,9 @@ This confusion is intentional to show that in this example the cork is made of c
     end
     subgraph materials[Materials]
         ma_coating[solvent free print substrate]
-        ma_ldpe[ldpe]
+        ma_pp[pp]
         ma_hdpe[hdpe]
-        ma_label2[printed label]
+        ma_label[printed label]
     end
     subgraph components[Components]
         co_lid[milk bottle lid]
@@ -2027,7 +2027,29 @@ This confusion is intentional to show that in this example the cork is made of c
         cp_bottle1pt[1 pint bottle]
         cp_bottle2pt[2 pint bottle]
         cp_bottle6pt[6 pint bottle]
-    end</code></pre></p>
+    end
+    bm_oil --&gt; ma_pp
+    bm_oil --&gt; ma_hdpe
+    bm_ink --&gt; ma_coating
+    bm_varnish --&gt; ma_coating
+    ma_pp --&gt; ma_label
+    ma_coating --&gt; ma_label
+    ma_hdpe --&gt; co_lid
+    ma_hdpe --&gt; co_bottle1pt
+    ma_hdpe --&gt; co_bottle2pt
+    ma_hdpe --&gt; co_bottle6pt
+    ma_label --&gt; co_label1pt
+    ma_label --&gt; co_label2pt
+    ma_label --&gt; co_label6pt
+    co_lid --&gt; cp_bottle1pt
+    co_lid --&gt; cp_bottle2pt
+    co_lid --&gt; cp_bottle6pt
+    co_bottle1pt --&gt; cp_bottle1pt
+    co_bottle2pt --&gt; cp_bottle2pt
+    co_bottle6pt --&gt; cp_bottle6pt
+    co_label1pt --&gt; cp_bottle1pt
+    co_label2pt --&gt; cp_bottle2pt
+    co_label6pt --&gt; cp_bottle6pt</code></pre></p>
 
 
 
