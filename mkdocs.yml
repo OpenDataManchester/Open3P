@@ -1,5 +1,13 @@
+# Project information
 site_name: Open3P
-site_description: Open3P is an open data standard for the packaging value chain.
+site_url: https://standard.open3p.org
+site_description: Open3P is an open standard for packaging data.
+
+# Copyright
+copyright: Copyright &copy; Open Data Manchester CIC, and released under the Apache License, Version 2.0.
+
+
+# Configuration
 theme:
   name: material
   custom_dir: overrides
@@ -26,9 +34,6 @@ theme:
     - navigation.path
     - navigation.footer
     - content.code.copy
-
-copyright: Copyright &copy; Open Data Manchester CIC, and released under the Apache License, Version 2.0.
-
 
 # Page Tree
 nav:
@@ -118,8 +123,8 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
