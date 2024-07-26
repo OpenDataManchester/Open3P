@@ -10,12 +10,12 @@ The material constituents relationship list identifies the base_material and oth
 ## Data
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
-|materialConstituentsIdentifier|`required`|String|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
-|materialCombinationIdentifier|`required`|String|The unique identifier of the materials that this component is made of. There must be an equivalent record in the `Base_Materials` OR `Materials` data.|
-|materialPurpose|`recommended`|String|Why is this base material or material being used? Use the identifier of the material purpose that this row relates to. The entry here should be drawn from the [Material Purpose Controlled List](../5_Controlled_Lists/5_003_Material_Purpose.md).|
-|virginMaterial|`recommended`|Numeric|The maximum allowable percent of the material that was newly created for the material.|
-|layer|`recommended`|Numeric|The layer associated with the material. The inner most layer (the layer closest to the product) denoted as 1, and the outermost layer is the biggest number.|
-|materialPercentage|`recommended`|Numeric|The percentage of the total materials making-up the material. For every unique material, materialPercentage should add to 100%.|
+|materialConstituentsIdentifier|`mandatory`|UUID|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
+|materialCombinationIdentifier|`mandatory`|UUID|The unique identifier of the materials that this component is made of. There must be an equivalent record in the `Base_Materials` OR `Materials` data.|
+|materialPurpose|`optional`|String|Why is this base material or material being used? Use the identifier of the material purpose that this row relates to. The entry here should be drawn from the [Material Purpose Controlled List](../5_Controlled_Lists/5_003_Material_Purpose.md).|
+|virginMaterial|`optional`|Decimal|The maximum allowable percent of the material that was newly created for the material.|
+|layer|`optional`|Integer|The layer associated with the material. The inner most layer (the layer closest to the product) denoted as 1, and the outermost layer is the biggest number.|
+|materialPercentage|`optional`|Decimal|The percentage of the total materials making-up the material. For every unique material, materialPercentage should add to 100%.|
 
 ## Diagram
 
@@ -24,118 +24,171 @@ erDiagram
 
   MATERIALS }o..o{ MATERIAL_CONSTITUENTS : within
   MATERIAL_CONSTITUENTS {
-    materialConstituentsIdentifier String
-    materialCombinationIdentifier String
+    materialConstituentsIdentifier UUID "*"
+    materialCombinationIdentifier UUID "*"
     materialPurpose String
-    virginMaterial Numeric
-    layer Numeric
-    materialPercentage Numeric
+    virginMaterial Decimal
+    layer Integer
+    materialPercentage Decimal
   }
   MATERIAL_CONSTITUENTS }o--o{ BASE_MATERIALS : attributes
   MATERIAL_CONSTITUENTS }o--o{ MATERIALS : attributes
   MATERIAL_CONSTITUENTS }o--o{ CONTROLLED_LISTS : attributes
-      CONTROLLED_LISTS {
-    materialPurposeControlledList required }
+  CONTROLLED_LISTS {
+    materialPurposeControlledList mandatory 
   }
 ```
 
-## Template
-
-Material constituents should be provided as a separate csv file. The specification of this csv file is as follows:
-
-[Material Constituents Template](https://www.open3p.org/wp-content/uploads/2023/09/materialConstituents20230922.csv)
-
 ## Example
 
-=== "JSON #1"
+=== "To Cardboard - JSON"
 
-    ``` json linenums="1"
-    --Fibre based composite Polyethylene, EVOH, Paper multi layer
-    {
-      [
-        {
-          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
-          "materialCombinationIdentifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
-          "materialPurpose": "m-material-purpose-0005",
-          "virginMaterial": 100,
-          "layer": 1,
-          "materialPercentage": 7
-        },
-        {
-          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
-          "materialCombinationIdentifier": "96245c85-5671-4f3d-875f-82665005e9e8",
-          "materialPurpose": "m-material-purpose-0015",
-          "virginMaterial": 100,
-          "layer": 2,
-          "materialPercentage": 27
-        },
-        {
-          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
-          "materialCombinationIdentifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
-          "materialPurpose": "m-material-purpose-0002",
-          "virginMaterial": 100,
-          "layer": 3,
-          "materialPercentage": 7
-        },
-        {
-          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
-          "materialCombinationIdentifier": "ff249e1f-5015-46b8-8655-6c920fbf2606",
-          "materialPurpose": "m-material-purpose-0003",
-          "virginMaterial": 100,
-          "layer": 4,
-          "materialPercentage": 18
-        },
-        {
-          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
-          "materialCombinationIdentifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
-          "materialPurpose": "m-material-purpose-0002",
-          "virginMaterial": 100,
-          "layer": 5,
-          "materialPercentage": 7
-        },
-        {
-          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
-          "materialCombinationIdentifier": "96245c85-5671-4f3d-875f-82665005e9e8",
-          "materialPurpose": "m-material-purpose-0015",
-          "virginMaterial": 100,
-          "layer": 6,
-          "materialPercentage": 27
-        },
-        {
-          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
-          "materialCombinationIdentifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
-          "materialPurpose": "m-material-purpose-0005",
-          "virginMaterial": 100,
-          "layer": 7,
-          "materialPercentage": 7
-        },
-      ]
-    } 
+    ``` json linenums="1" hl_lines="3 4"
+    [
+      {
+        "materialConstituentsIdentifier": "95b95bf7-80c0-49bc-9367-ae48d6c107d3",
+        "materialCombinationIdentifier": "222494f7-6703-49bc-a993-8dd2675709fb",
+        "materialPurpose": "m-material-purpose-0015",
+        "virginMaterial": 70.0,
+        "materialPercentage": 100.0
+      }
+    ]
     ```
-=== "JSON #2"
+=== "To Glass - JSON"
 
-    ``` json linenums="1"
-    --Cellulose - verbose data structure
-    {
-      "materialConstituentsIdentifier": "a4ef4dec-eceb-417d-bded-9bd1e305a440",
-      "materialCombinationIdentifier": {
-        "identifier": "m-material-purpose-0015",
-        "baseMaterialName": "Cellulose",
-        "baseMaterialType": {
-          "identifier": "bm-material-type-0001",
-          "category": "biobased",
-          "detailed": "from renewable products such as carbohydrates, starch, vegetable fats and oils, bacteria and other biological substances."
-        },
-        "baseMaterialType": "bm-material-type-0001",
-        "materialChemCID": "14055602"
+    ``` json linenums="1" hl_lines="3 4"
+    [
+      {
+        "materialConstituentsIdentifier": "11eb7b61-05f1-4894-a57b-80e5082f944a",
+        "materialCombinationIdentifier": "ff39892f-0a88-4085-9942-4522cecc8337",
+        "materialPurpose": "m-material-purpose-0015",
+        "virginMaterial": 100.00,
+        "materialPercentage": 10.0
       },
-      "materialPurpose":{
-        "identifier": "m-material-purpose-0015",
-        "category": "structure",
-        "detailed": "Providing strength and stability."
+            {
+        "materialConstituentsIdentifier": "11eb7b61-05f1-4894-a57b-80e5082f944a",
+        "materialCombinationIdentifier": "db481bb7-e57a-4af7-8821-2258338ddd11",
+        "materialPurpose": "m-material-purpose-0015",
+        "virginMaterial": 0.0,
+        "materialPercentage": 70.0
       },
-      "virginMaterial": 100,
-      "layer": null,
-      "materialPercentage": 100
-    }
+      {
+        "materialConstituentsIdentifier": "11eb7b61-05f1-4894-a57b-80e5082f944a",
+        "materialCombinationIdentifier": "1bdca07b-ed6a-4799-a027-654322cb302f",
+        "materialPurpose": "m-material-purpose-0015",
+        "virginMaterial": 100.0,
+        "materialPercentage": 15.0
+      },
+      {
+        "materialConstituentsIdentifier": "11eb7b61-05f1-4894-a57b-80e5082f944a",
+        "materialCombinationIdentifier": "42b19543-7138-43ff-a867-a1e551ccba14",
+        "materialPurpose": "m-material-purpose-0016",
+        "virginMaterial": 70.0,
+        "materialPercentage": 5.0
+      }
+    ]
     ```
+=== "To Cardboard - XML"
+
+    ``` xml linenums="1" hl_lines="3 4"
+    <?xml version="1.0" encoding="UTF-8" ?>
+      <materialConstituents>
+        <materialConstituentsIdentifier>95b95bf7-80c0-49bc-9367-ae48d6c107d3</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>222494f7-6703-49bc-a993-8dd2675709fb</materialCombinationIdentifier>
+        <materialPurpose>m-material-purpose-0015</materialPurpose>
+        <virginMaterial>70</virginMaterial>
+        <materialPercentage>100</materialPercentage>
+      </materialConstituents>
+    ```
+=== "To Glass - XML"
+
+    ``` xml linenums="1" hl_lines="3 4"
+    <?xml version="1.0" encoding="UTF-8" ?>
+      <materialConstituents>
+        <materialConstituentsIdentifier>11eb7b61-05f1-4894-a57b-80e5082f944a</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>ff39892f-0a88-4085-9942-4522cecc8337</materialCombinationIdentifier>
+        <materialPurpose>m-material-purpose-0015</materialPurpose>
+        <virginMaterial>100</virginMaterial>
+        <materialPercentage>10</materialPercentage>
+      </materialConstituents>
+      <materialConstituents>
+        <materialConstituentsIdentifier>11eb7b61-05f1-4894-a57b-80e5082f944a</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>db481bb7-e57a-4af7-8821-2258338ddd11</materialCombinationIdentifier>
+        <materialPurpose>m-material-purpose-0015</materialPurpose>
+        <virginMaterial>0</virginMaterial>
+        <materialPercentage>70</materialPercentage>
+      </materialConstituents>
+      <materialConstituents>
+        <materialConstituentsIdentifier>11eb7b61-05f1-4894-a57b-80e5082f944a</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>1bdca07b-ed6a-4799-a027-654322cb302f</materialCombinationIdentifier>
+        <materialPurpose>m-material-purpose-0015</materialPurpose>
+        <virginMaterial>100</virginMaterial>
+        <materialPercentage>15</materialPercentage>
+      </materialConstituents>
+      <materialConstituents>
+        <materialConstituentsIdentifier>11eb7b61-05f1-4894-a57b-80e5082f944a</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>42b19543-7138-43ff-a867-a1e551ccba14</materialCombinationIdentifier>
+        <materialPurpose>m-material-purpose-0016</materialPurpose>
+        <virginMaterial>70</virginMaterial>
+        <materialPercentage>5</materialPercentage>
+      </materialConstituents>
+    ```
+
+## Data flow
+
+``` mermaid
+flowchart LR
+    subgraph baseMaterials[Base Materials]
+        bm_cardboard["Cardboard
+        -
+        222494f7-6703-49bc-a993-8dd2675709fb"]
+        bm_sodaAsh["Soda ash
+        -
+        ff39892f-0a88-4085-9942-4522cecc8337"]
+        bm_cullet["Cullet
+        -
+        db481bb7-e57a-4af7-8821-2258338ddd11"]
+        bm_sand["Sand
+        -
+        1bdca07b-ed6a-4799-a027-654322cb302f"]
+        bm_limestone["Limestone
+        -
+        42b19543-7138-43ff-a867-a1e551ccba14"]
+    end
+    subgraph materialConstituents["`**-**`"]
+        subgraph macs_cardboard ["`**Cardboard Constituents**`"]
+          mac_cardboard["`**95b95bf7-80c0-49bc-9367-ae48d6c107d3
+          -
+          materialPercentage: 100%**`"]
+        end
+        subgraph macs_glass ["`**Glass Constituents**`"]
+          mac_sodaAsh["`**11eb7b61-05f1-4894-a57b-80e5082f944a
+          -
+          materialPercentage: 10%**`"]
+          mac_cullet["`**11eb7b61-05f1-4894-a57b-80e5082f944a
+          -
+          materialPercentage: 70%**`"]
+          mac_sand["`**11eb7b61-05f1-4894-a57b-80e5082f944a
+          -
+          materialPercentage: 15%**`"]
+          mac_limestone["`**11eb7b61-05f1-4894-a57b-80e5082f944a
+          -
+          materialPercentage: 5%**`"]
+        end  
+    end
+    subgraph materials["Materials"]
+        ma_cardboard["Cardboard
+        -
+        16f41cca-1a77-4e31-8b0f-2723f752317b"]
+        ma_glass["Glass
+        -
+        b050ab75-4bcb-4c7f-b8f5-8a1f9e5ba7d3"]
+    end
+    bm_cardboard --> mac_cardboard
+    macs_cardboard --> ma_cardboard
+    bm_sodaAsh --> mac_sodaAsh
+    bm_cullet --> mac_cullet
+    bm_sand --> mac_sand
+    bm_limestone --> mac_limestone
+    macs_glass --> ma_glass
+```

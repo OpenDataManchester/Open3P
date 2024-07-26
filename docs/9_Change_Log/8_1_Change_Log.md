@@ -2,13 +2,190 @@
 title: Latest Updates
 ---
 
-
 # Latest Updates
 A document that contains all the changes made to the standard.
 
+## July 11, 2024
+### Documents
+- Added cork-cork explanation to data flow
+
+## May 08, 2024
+
+### Data fields
+- Changed recyclability source in recyclability claims to mandatory
+- Changed complete packaging end Of life route in complete packaging end of life routes to mandatory
+- Changed recycled content evidence type in recycled content evidence type to mandatory
+- Changed component disruptors in component end of life routes to optional
+- Changed materialCombinationIdentifier to componentCombinationIdentifier in Component Constituents
+
+### Documents
+- Changed wording for weight tolerance in components
+- Changed multipack constitutents introduction text
+- Changed load identifiers to from catalogue to constituents in description
+- Changed load combination identifier description in load consitutents
+- Removed load_constituents joins in the erds for base materials and materials
+
+## April 30, 2024
+### Model
+- Moved identicalQuantity from **Multipacks** to **Multipack Constituents**
+
+### Data fields
+- Changed following fields within load from **mandatory** to **optional**
+    - startDate
+    - endDate
+    - destinationAddressStreet
+    - destinationAddressCountry
+    - destinationPostalCode
+    - timesSent
+- Changed description on baseMaterial type
+
+### Documents
+- Updated homepage up more cards and relevant icons
+- Removed excel workbook download
+- Removed data templates:
+    - Base Materials
+    - Materials
+    - Components
+    - Complete Packaging
+    - Multipacks
+    - Loads
+    - Material Constituents
+    - Component Constituents
+    - Complete Packaging Constituents
+    - Multipack Constituents
+- Added data flow examples:
+    - Loads
+    - Material Constituents
+    - Component Constituents
+    - Complete Packaging Constituents
+    - Multipack Constituents
+    - Load Constituent
+- Added XML examples:
+    - Base Materials
+    - Materials
+    - Components
+    - Complete Packaging
+    - Multipacks
+    - Loads
+    - Material Constituents
+    - Component Constituents
+    - Complete Packaging Constituents
+    - Multipack Constituents
+    - Load Constituent
+- Improved ERDs
+- Moved glossary from start here to it's own folder
+- Removed entries from glossary that did not directly link to Open 3P.
+- Tweaked description for weight
+    - Components
+    - Complete Packaging
+
+## January 31, 2024
+### Documents
+ - Updated JSON examples to match data flow page. This includes:
+    - Base materials
+    - Materials
+    - Components
+    - Complete Packages
+    - Multipacks
+ - Added data flow charts to help with visualising the flow of the different schema through the standard. This includes:
+    - Base materials
+    - Materials
+    - Components
+    - Complete Packages
+    - Multipacks
+
+## January 29, 2024
+### Documents
+ - Changed the wording from required to mandatory. Changed the wording recommended to optional. Added asterisk to diagram to signify mandatory. This includes:
+    - Complete Packaging
+    - Multipack
+    - Load
+    - Material Constituents
+    - Component Constituents
+    - Complete Packaging Constituents
+    - Multipack Constituents
+    - Certificate Claims
+    - Recyclability Claims
+    - Component End of Life Routes
+    - Complete Packaging End of Life Routes
+    - Recycled Content Claims
+    - Organisation
+    - Load Constituents
+
+## January 26, 2024
+### Documents
+ - Base Materials, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram
+ - Materials, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram
+ - Components, changed required to mandatory. Changed recommended to optional. Added asterisk to diagram
+ - Tweaked the README to be more relative for users accessing the GitHub repo
+ - Create Core Schema definition page and added to the side bar
+
+### Data Fields
+ - `recycledContentClaims` changed from mandatory to optional
+
+## January 5, 2024
+### Documents
+ - Fixed typo in sidebar to Governance
+ - Added FAQ to base materials page
+ - Remove definitions from Key Concepts
+ - Create Glossary page
+ - Improved Data Flow page
+
+### Data fields
+ - Renamed baseMaterialName to name
+ - Renamed baseMaterialType to type
+ - Renamed materialName to name
+
+## November 30, 2023
+### Documents
+ - Changed ALL date related fields to ISO 8601 standard, changed the format to `Date`
+ - Updated ALL JSON dates to read as `yyyy-mm-dd`
+ - Changed appropriate identifier fields to UUID from string
+ - Changed Boolean values in JSON examples to `true` and `false` rather than `"TRUE"` and `"FALSE"`
+ - Change manufactedCountry format to string, and improved description to indicate that the numeric value should be used from ISO 3166
+ - Changed Numeric format to either Decimal or Integer
+    - Materials
+        - areaDensity -> Decimal
+        - areaDensityTolerance -> Decimal
+    - Components
+        - height -> Decimal
+        - width -> Decimal
+        - depth -> Decimal
+        - volume -> Decimal
+        - weight -> Decimal
+        - weightTolerance -> Decimal
+        - recycledContent -> Decimal
+    - Complete Packaging
+        - height -> Decimal
+        - width -> Decimal
+        - depth -> Decimal
+        - volume -> Decimal
+        - weight -> Decimal
+        - weightTolerance -> Decimal
+        - servingCapacity -> Integer
+    - Multipacks
+        - identicalQuantity -> Integer
+    - Loads
+        - timesSent -> Integer
+    - Material Constituents
+        - virginMaterial -> Decimal
+        - layer -> Integer
+        - materialPercentage -> Decimal
+    - Component End of Life Routes
+        - orderOfPrecedence -> Integer
+    - Complete Packaging End of Life Routes
+        - orderOfPrecedence -> Integer
+    - Load Constituent
+        - quantityInLoad -> Integer
+
+## November 23, 2023
+### Documents
+ - Reworked data diagrams to show the constituents lists as the edges between the tables
+ - Updated data diagrams to remove obsolete `Load_Catalogue`
+
 ## November 17, 2023
 ### Data fields
- - Added `areaDensity`, `areaDensityUnit`, `areaDensityTolerance`, `areaDensityToleranceType`, `areaDensityDate` to Materials core schema.
+ - Added `areaDensity`, `areaDensityUnit`, `areaDensityTolerance`, `areaDensityToleranceType`, `areaDensityDate` to Materials core schema
 
 ## October 12, 2023
 ### Model

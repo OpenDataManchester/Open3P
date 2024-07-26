@@ -10,191 +10,344 @@ The components schema contains information regarding the individual components t
 ## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
-|identifier|`required`|String|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
-|name|`recommended`|String|The name of this component.|
-|description|`recommended`|String|A brief description of this component.|
-|externalIdentifiers|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the component in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
-|imageURLs|`recommended`|List|A list of URLs that links to a picture of the component. Please see the guidelines below on how to capture the image and name the URL.|
-|LOWcode|`recommended`|String|The list of waste code for **only** the component, by itself. LOW code is synonymous with European Waste Catalogue Code (EWC). For example: an empty bottle would have a LOWcode of `15 01 02`. Please use [Dsposal](https://dsposal.uk/browse/ewc) or [legislation.gov](https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made) to find the LOWcode. **Note**: The LOWcode can based on its combination with other components and the actual product contained in the completePackaging. Be sure to only include the component LOWcode. If you cannot find the code or are uncertain please enter `Uncertain`.|
-|componentConstituents|`required`|List|The information regarding the consituents that are combined to create this component. The entries should be from the [Component Constituents Relationship List](../6_Relationship_Lists/6_002_Component_Constituents.md) identifier.|
-|height|`recommended`|Numeric|The height of the component. Please see the guidelines below on how to properly measure and report the height.|
-|heightDate|`recommended`|String|The date that the height was last verified/measured. Use the format `dd/mm/yyyy`.|
-|width|`recommended`|Numeric|The width of the component. Please see the guidelines below on how to properly measure and report the width.|
-|widthDate|`recommended`|String|The date that the width was last verified/measured. Use the format `dd/mm/yyyy`.|
-|depth|`recommended`|Numeric|The depth of the component. Please see the guidelines below on how to properly measure and report the depth.|
-|depthDate|`recommended`|String|The date that the depth was last verified/measured. Use the format `dd/mm/yyyy`.|
-|volume|`recommended`|Numeric|The amount of space the component takes up. Note: this is related to the size of the component and is different to capacity. Using the height, width, and depth found using the measurement guidelines, calculate the component’s volume using: `height x width x depth`.|
-|volumeDate|`recommended`|String|The date that the volume was last verified/measured. Use the format `dd/mm/yyyy`.|
-|weight|`required`|Numeric|The weight of the component.|
-|weightTolerance|`required`|Numeric|The threshold of weight that components can vary by. This is given as +/- x%.|
-|weightToleranceType|`required`|String|Either `grams` or `percentage` based on the value provided in `weightTolerance`|
-|weightDate|`recommended`|String|The date that the weight was last verified/measured. Use the format `dd/mm/yyyy`.|
-|shape|`recommended`|String|What is the shape of the component? The entry should contain the [shape controlled list](../5_Controlled_Lists/5_006_Shape.md) identifier for the component.|
-|function|`recommended`|String|What is the function of the component? The entry should contain the [function controlled list](../5_Controlled_Lists/5_004_Function.md) identifier for the component.|
-|flexibility|`recommended`|String|Whether the component is considered flexible or rigid. The entry should be the [flexibility controlled list](../5_Controlled_Lists/5_007_Flexibility.md) identifier.|
-|branding|`required`|Boolean|Does the component contain your own brand (logo, trademark, or any distinctive mark)? Answer as: `TRUE` for yes and `FALSE` for no.|
-|componentEndOfLifeRoutes|`recommended`|List|The information regarding this component's proposed end of life routes. The entries should be the [component end of life routes](../6_Relationship_Lists/6_007_Component_End_of_Life_Routes.md) identifiers.|
-|colour|`recommended`|String|The actual colour of the component at point of production using CMYK (Cyan-Magenta-Yellow-blacK) values. The format is specified according to cmyk(C%, M%, Y%, K%), where C, M, Y, and K are the percent values for the cyan, magenta, yellow, and black values of the color. For example: black is `cmyk(0%,0%,0%,100%)`. If there are multiple colours input `decorative`.|
-|opacity|`recommended`|String|The transparency of the colours. The entry should be the [opacity controlled list](../5_Controlled_Lists/5_009_Opacity.md) identifier.|
-|loaned|`required`|Boolean|Is the component hired or loaned out as reusable packaging? Answer as: `TRUE` for yes and `FALSE` for no.|
-|reuseSystems|`recommended`|List|The system(s) that facilitates the reuse of the component  `e.g., Loop`. The entries should be the [reuse system controlled list](../5_Controlled_Lists/5_010_Reuse_System.md) identifier(s).|
-|partOfMultipack|`required`|Boolean|Is the component part of a multipack? Answer as: `TRUE` for yes and `FALSE` for no.|
-|recycledContent|`recommended`|Numeric|The minimum allowable percent of how much recycled content is included in the makeup of the component. t is ‘required’ for plastic packaging where for the purposes of this standard we refer to [UK's HM Revenue & Customs](https://www.gov.uk/guidance/work-out-which-packaging-is-subject-to-plastic-packaging-tax){target=_blank} definition of recycled content. "Recycled plastic is plastic that has been reprocessed from recovered material by using a chemical or manufacturing process. This is so it can be used either for its original purpose or for other purposes. This does not include organic recycling. Recovered material is pre-consumer plastic or post-consumer plastic that both: a) is no longer suitable to be used in the process from which it was generated and would otherwise have been used for energy recovery (for example, by incineration) or disposed of as waste (for example, by being sent to landfill); b) has been collected and recovered for use as a material input for a recycling or manufacturing process, instead of new primary material"|
-|recycledContentClaims|`required`|List|The information regarding the recycled contents. The entries should be the [recycled content claims relationship list](../6_Relationship_Lists/6_009_Recycled_Content_Claims.md) indentifiers.|
-|recyclability|`recommended`|Boolean|Is the component recyclable (as determined by a reputable source)? Answer as: `TRUE` for yes and `FALSE` for no.|
-|recyclabilityClaims|`recommended`|List|The information regarding this recyclability claims. The entries should be the [recyclability claims relationship list](../6_Relationship_Lists/6_006_Recyclability_Claims.md) identifiers.|
-|certification|`recommended`|Boolean|Does the component have a certificate (e.g. FSC, REACH, FSA etc.)? Answer as: `TRUE` for yes and `FALSE` for no.|
-|certificationClaims|`recommended`|List|The information regarding the certifications. The entries should be the [certification claims relationship list](../6_Relationship_Lists/6_005_Certification_Claims.md) identifiers.|
-|manufacturers|`recommended`|List|The information regarding the manufacturer(s). The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
-|manufacturedCountry|`recommended`|Numeric|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
-|updateDate|`required`|String|The date that the component was provided/last updated. Use the format `dd/mm/yyyy`.|
-|releaseDate|`recommended`|String|The date that the component will be available to use. Use the format `dd/mm/yyyy`.|
-|discontinueDate|`recommended`|String|The date that the component will no longer be available to use. Use the format `dd/mm/yyyy`.|
+|identifier|`mandatory`|UUID|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
+|name|`optional`|String|The name of this component.|
+|description|`optional`|String|A brief description of this component.|
+|externalIdentifiers|`optional`|Dictionary|A dictionary of identifiers that might be used to identify the component in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
+|imageURLs|`optional`|List|A list of URLs that links to a picture of the component. Please see the guidelines below on how to capture the image and name the URL.|
+|LOWcode|`optional`|String|The list of waste code for **only** the component, by itself. LOW code is synonymous with European Waste Catalogue Code (EWC). For example: an empty bottle would have a LOWcode of `15 01 02`. Please use [Dsposal](https://dsposal.uk/browse/ewc) or [legislation.gov](https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made) to find the LOWcode. **Note**: The LOWcode can based on its combination with other components and the actual product contained in the completePackaging. Be sure to only include the component LOWcode. If you cannot find the code or are uncertain please enter `Uncertain`.|
+|componentConstituents|`mandatory`|List|The information regarding the consituents that are combined to create this component. The entries should be from the [Component Constituents Relationship List](../6_Relationship_Lists/6_002_Component_Constituents.md) identifier.|
+|height|`optional`|Decimal|The height of the component. Please see the guidelines below on how to properly measure and report the height.|
+|heightDate|`optional`|Date|The date that the height was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
+|width|`optional`|Decimal|The width of the component. Please see the guidelines below on how to properly measure and report the width.|
+|widthDate|`optional`|Date|The date that the width was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
+|depth|`optional`|Decimal|The depth of the component. Please see the guidelines below on how to properly measure and report the depth.|
+|depthDate|`optional`|Date|The date that the depth was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
+|volume|`optional`|Decimal|The amount of space the component takes up. Note: this is related to the size of the component and is different to capacity. Using the height, width, and depth found using the measurement guidelines, calculate the component’s volume using: `height x width x depth`.|
+|volumeDate|`optional`|Date|The date that the volume was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
+|weight|`mandatory`|Decimal|The weight of the component. Please see the guidelines below on how to properly measure and report the weight.|
+|weightTolerance|`mandatory`|Decimal|The threshold of weight that a component can vary by. This can be given in grams or percentage.|
+|weightToleranceType|`mandatory`|String|Either `grams` or `percentage` based on the value provided in `weightTolerance`|
+|weightDate|`optional`|Date|The date that the weight was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
+|shape|`optional`|String|What is the shape of the component? The entry should contain the [shape controlled list](../5_Controlled_Lists/5_006_Shape.md) identifier for the component.|
+|function|`optional`|String|What is the function of the component? The entry should contain the [function controlled list](../5_Controlled_Lists/5_004_Function.md) identifier for the component.|
+|flexibility|`optional`|String|Whether the component is considered flexible or rigid. The entry should be the [flexibility controlled list](../5_Controlled_Lists/5_007_Flexibility.md) identifier.|
+|branding|`mandatory`|Boolean|Does the component contain your own brand (logo, trademark, or any distinctive mark)? Answer as: `TRUE` for yes and `FALSE` for no.|
+|componentEndOfLifeRoutes|`optional`|List|The information regarding this component's proposed end of life routes. The entries should be the [component end of life routes](../6_Relationship_Lists/6_007_Component_End_of_Life_Routes.md) identifiers.|
+|colour|`optional`|String|The actual colour of the component at point of production using CMYK (Cyan-Magenta-Yellow-blacK) values. The format is specified according to cmyk(C%, M%, Y%, K%), where C, M, Y, and K are the percent values for the cyan, magenta, yellow, and black values of the color. For example: black is `cmyk(0%,0%,0%,100%)`. If there are multiple colours input `decorative`.|
+|opacity|`optional`|String|The transparency of the colours. The entry should be the [opacity controlled list](../5_Controlled_Lists/5_009_Opacity.md) identifier.|
+|loaned|`mandatory`|Boolean|Is the component hired or loaned out as reusable packaging? Answer as: `TRUE` for yes and `FALSE` for no.|
+|reuseSystems|`optional`|List|The system(s) that facilitates the reuse of the component  `e.g., Loop`. The entries should be the [reuse system controlled list](../5_Controlled_Lists/5_010_Reuse_System.md) identifier(s).|
+|partOfMultipack|`mandatory`|Boolean|Is the component part of a multipack? Answer as: `TRUE` for yes and `FALSE` for no.|
+|recycledContent|`optional`|Decimal|Positive decimal only, maximum value is 100.00. Value should equated to a percentage (e.g. 30 = 30%) The minimum allowable percent of how much recycled content is included in the makeup of the component. It is ‘required’ for plastic packaging where for the purposes of this standard we refer to [UK's HM Revenue & Customs](https://www.gov.uk/guidance/work-out-which-packaging-is-subject-to-plastic-packaging-tax){target=_blank} definition of recycled content. "Recycled plastic is plastic that has been reprocessed from recovered material by using a chemical or manufacturing process. This is so it can be used either for its original purpose or for other purposes. This does not include organic recycling. Recovered material is pre-consumer plastic or post-consumer plastic that both: a) is no longer suitable to be used in the process from which it was generated and would otherwise have been used for energy recovery (for example, by incineration) or disposed of as waste (for example, by being sent to landfill); b) has been collected and recovered for use as a material input for a recycling or manufacturing process, instead of new primary material"|
+|recycledContentClaims|`optional`|List|The information regarding the recycled contents. The entries should be the [recycled content claims relationship list](../6_Relationship_Lists/6_009_Recycled_Content_Claims.md) indentifiers.|
+|recyclability|`optional`|Boolean|Is the component recyclable (as determined by a reputable source)? Answer as: `TRUE` for yes and `FALSE` for no.|
+|recyclabilityClaims|`optional`|List|The information regarding this recyclability claims. The entries should be the [recyclability claims relationship list](../6_Relationship_Lists/6_006_Recyclability_Claims.md) identifiers.|
+|certification|`optional`|Boolean|Does the component have a certificate (e.g. FSC, REACH, FSA etc.)? Answer as: `TRUE` for yes and `FALSE` for no.|
+|certificationClaims|`optional`|List|The information regarding the certifications. The entries should be the [certification claims relationship list](../6_Relationship_Lists/6_005_Certification_Claims.md) identifiers.|
+|manufacturers|`optional`|List|The information regarding the manufacturer(s). The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
+|manufacturedCountry|`optional`|String|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iso.org/obp/ui/#search){target=_blank} as described in the [ISO 3166 international standard](https://www.iso.org/iso-3166-country-codes.html){target=_blank}.|
+|updateDate|`mandatory`|Date|The date that the component was provided/last updated. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
+|releaseDate|`optional`|Date|The date that the component will be available to use. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
+|discontinueDate|`optional`|Date|The date that the component will no longer be available to use. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 
 ## Diagram
 
 ``` mermaid
 erDiagram
-MATERIALS }o--o{ COMPONENTS : within
+MATERIALS }o--o{ COMPONENTS : component_constituents
   COMPONENTS {
-    identifier String
+    identifier UUID "*"
     name String
     description String
     externalIdentifiers Dictionary
     imageURLs List
     LOWcode String
-    componentConstituents List
-    height Numeric
-    heightDate String
-    width Numeric
-    widthDate String
-    depth Numeric
-    depthDate String
-    volume Numeric
-    volumeDate String
-    weight Numeric
-    weightTolerance Numeric
-    weightDate String
+    componentConstituents List "*"
+    height Decimal
+    heightDate Date
+    width Decimal
+    widthDate Date
+    depth Decimal
+    depthDate Date
+    volume Decimal
+    volumeDate Date
+    weight Decimal "*"
+    weightTolerance Decimal "*"
+    weightToleranceType String "*"
+    weightDate Date
     shape String
     function String
     flexibility String
-    branding Boolean
+    branding Boolean "*"
     componentEndOfLifeRoutes List
     colour String
     opacity String
-    loaned Boolean
-    reuseSystems String
+    loaned Boolean "*"
+    reuseSystems List
     manufacturers List
-    manufacturedCountry Numeric
-    recycledContent Numeric
+    manufacturedCountry String
+    recycledContent Decimal
     recycledContentClaims List
     recyclability Boolean
     recyclabilityClaims List
-    partOfMultipack Boolean
+    partOfMultipack Boolean "*"
     certification Boolean
     certificationClaims List
-    updateDate String
-    releaseDate String
-    discontinueDate String
+    updateDate Date "*"
+    releaseDate Date
+    discontinueDate Date
   }
   COMPONENTS }o..o{ CONTROLLED_LISTS : attributes
   COMPONENTS }o..o{ RELATIONSHIP_LISTS : attributes
-  COMPONENTS }o--o{ COMPLETE_PACKAGING : within
-  COMPONENTS }o..o{ MULTIPACK : within
-  MULTIPACK }o..o{ LOAD_CATALOGUE : within
-  COMPLETE_PACKAGING }o..o{ MULTIPACK : within
-  COMPLETE_PACKAGING }o..o{ LOAD_CATALOGUE : within
-  COMPONENTS }o..o{ LOAD_CATALOGUE : within
+  COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
+  COMPONENTS }o..o{ MULTIPACK : multipack_constituents
+  MULTIPACK }o..o{ LOADS : load_constituents
+  COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
+  COMPLETE_PACKAGING }o..o{ LOADS : load_constituents
+  COMPONENTS }o..o{ LOADS : load_constituents
     CONTROLLED_LISTS {
-    shape recommended
-    function recommended
-    flexibility recommended
-    opacity recommended
-    reuseSystem recommended
+    shape optional
+    function optional
+    flexibility optional
+    opacity optional
+    reuseSystem optional
   }
   RELATIONSHIP_LISTS {
-    componentConstituents required
-    componentEndOfLifeRoutes recommended
-    recycledContentClaims required
-    recyclabilityClaims recommended
-    certificationClaims recommended
-    organisations recommended
+    componentEndOfLifeRoutes optional
+    recycledContentClaims optional
+    recyclabilityClaims optional
+    certificationClaims optional
+    organisations optional
   }
 ```
 
-Components should be provided as a separate csv file. The specification of this csv file is as follows:
-
-[Components Template](https://www.open3p.org/wp-content/uploads/2023/09/components20230922.csv){target=_blank}
-
 ## Example
 
-=== "JSON"
+=== "Cardboard box - JSON"
 
-    ``` json linenums="1"
-    --Food grade PET pot made in Ireland
-    {
-        "identifier": "9F459508-E365-0B9F-E3BB-FF4A7AED481B",
-        "name": "Thermoformed rPET tray",
-        "description": "Clear PET tray for food products",
-        "externalIdentifiers": {
-            "internalId": "14",
-            "GTIN": "00123456789012"
-        },
-        "imageURLs": [
-        "http://standard.open3p.org/2.0/img/measurements/figure1.measuring.png"
-        ],
-        "LOWcode": "150102",
-        "componentConstituents": [
-            "DCEE1F88-A83B-5BBC-D2D9-6A862B344977"
-        ],
-        "height": 50,
-        "heightDate": "01/08/2022",
-        "width": 220,
-        "widthDate": "01/08/2022",
-        "depth": 170,
-        "depthDate": "01/08/2022",
-        "volume": 1870,
-        "volumeDate": "01/08/2022",
-        "weight": 23,
-        "weightTolerance": 1.5,
-        "weightToleranceType": "grams",
-        "weightDate": "01/08/2022",
-        "shape": "c-shape-0004",
-        "function": "function-0041",
-        "flexibility": "c-flexibility-0002",
-        "branding": true,
-        "componentEndOfLifeRoutes": [
-            ""
-        ],
-        "colour": "cmyk(0%,0%,0%,10%)",
-        "opacity": "c-opacity-0002",
-        "loaned": false,
-        "reuseSystems": [
-            "c-reuse-system-0001"
-        ],
-        "partOfMultipack": false,
-        "recycledContent": 0.3,
-        "recycledContentClaims": [
-            "23e8251a-4fe6-4b25-9966-b08acac9ba34"
-        ],
-        "recyclability": true,
-        "recyclabilityClaims": [
-            "b101889f-87e5-4c42-abb7-0df5fc3d1a26"
-        ],
-        "certification": true,
-        "certificationClaims": [
-            "eed87ac3-6e3e-45fb-af2c-dd0f64fdb597"
-        ],
-        "manufacturers": [""],
-        "manufacturedCountry": 372,
-        "updateDate": "01/08/2022",
-        "releaseDate": "01/08/2022",
-        "discontinueDate": ""
-    }
+    ``` json linenums="1"  hl_lines="3 4"
+    [
+        {
+            "identifier": "9dad67b0-d5a2-4afb-9287-e712fd1ea3e6",
+            "name": "Cardboard box",
+            "description": "54cm x 38cm x 38cm 0204 style cardboard box: Sturdy and spacious for shipping or storage. All flaps meet for easy sealing. Versatile packaging solution for various items.",
+            "componentConstituents": [
+                {
+                "materialConstituentsIdentifier": "6d856739-3893-4321-84b9-738a4ef1c830",
+                "materialCombinationIdentifier": "16f41cca-1a77-4e31-8b0f-2723f752317b"
+                }
+            ],
+            "height": 380,
+            "width": 540,
+            "depth": 380,
+            "weight": 600,
+            "weightTolerance": 35,
+            "weightToleranceType": "grams",
+            "shape": "c-shape-0004",
+            "function": "function-0048",
+            "flexibility": "c-flexibility-0002",
+            "branding": false,
+            "componentEndOfLifeRoutes": [
+                "671ee5cc-a402-48a5-ba56-1f4d3840aef0"
+            ],
+            "colour": "cmyk(0%,14%,33%,18%)",
+            "opacity": "c-opacity-0001",
+            "loaned": false,
+            "partOfMultipack": false,
+            "recycledContent": 30,
+            "recycledContentClaims": [
+                "81ac4ec3-e097-4092-9c8f-4ef717d3740c"
+            ],
+            "recyclability": true,
+            "recyclabilityClaims": [
+                "6af9c69a-6ec1-42dd-a8da-54bab8165e44"
+            ],
+            "certification": false,
+            "manufacturers": ["GB-COH-10906273"],
+            "manufacturedCountry": "826",
+            "updateDate": "2024-01-25",
+            "releaseDate": "2011-01-01"
+        }
+    ]
     ```
-=== "CSV download"
+=== "Wine bottle - JSON"
 
-    * [Component Catalogue example download](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_1_Component_Catalogue_Example.csv){target=_blank}
+    ``` json linenums="1"  hl_lines="3 4"
+    [
+        {
+            "identifier": "94108707-b914-43f3-bed5-93adbbd208c1",
+            "name": "Wine bottle",
+            "description": "Introducing our 750ml Bordeaux Bottle, a sophisticated and eco-conscious choice for wine packaging. Crafted with a commitment to sustainability, this bottle embodies the perfect blend of elegance and environmental responsibility.",
+            "externalIdentifiers": {
+                "gtin": "70123456 789012",
+                "internal id": "0-recycle-green-750-bordeaux",
+                "sku": "8855-bb-g"
+            },
+            "imageURLs" : ["https://dsposal.uk/media/35604/52419bc2-317f-4815-b39c-f90a20cb7a7a.jpg"],
+            "componentConstituents": [
+            {
+              "materialConstituentsIdentifier": "70023f95-2d0f-4e47-ab6e-0ce51d50e55d",
+              "materialCombinationIdentifier": "b050ab75-4bcb-4c7f-b8f5-8a1f9e5ba7d3"
+            }
+            ],
+            "height": 305,
+            "heightDate": "2015-06-16",
+            "width": 72.4,
+            "widthDate": "2015-06-16",
+            "depth": 72.5,
+            "depthDate": "2015-06-16",
+            "weight": 700,
+            "weightTolerance": 6,
+            "weightToleranceType": "percent",
+            "function": "function-0005",
+            "flexibility": "c-flexibility-0002",
+            "branding": false,
+            "componentEndOfLifeRoutes": [
+                "e2aaabed-f901-4bbe-87e6-c781de2fb569"
+            ],
+            "colour": "cmyk(90%,30%,100%,20%)",
+            "opacity": "c-opacity-0002",
+            "loaned": false,
+            "partOfMultipack": false,
+            "recycledContent": 70,
+            "recycledContentClaims": [
+                "defd2813-0987-486a-8698-e8257b5ece63"
+            ],
+            "recyclability": true,
+            "recyclabilityClaims": [
+                "79290e8d-bd0e-4fcc-aa22-b932df206c49"
+            ],
+            "certification": true,
+            "certificationClaims": [
+                "79290e8d-bd0e-4fcc-aa22-b932df206c49"
+            ],
+            "manufacturers": ["GB-COH-10906273"],
+            "manufacturedCountry": "826",
+            "updateDate": "2023-12-07",
+            "releaseDate": "2015-06-16"
+        }
+    ]
+    ```
+=== "Cardboard box - XML"
+
+    ``` xml linenums="1"  hl_lines="3 4"
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <component>
+        <identifier>9dad67b0-d5a2-4afb-9287-e712fd1ea3e6</identifier>
+        <name>Cardboard box</name>
+        <description>54cm x 38cm x 38cm 0204 style cardboard box: Sturdy and spacious for shipping or storage. All flaps meet for easy sealing. Versatile packaging solution for various items.</description>
+        <componentConstituents>
+        <materialConstituentsIdentifier>6d856739-3893-4321-84b9-738a4ef1c830</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>16f41cca-1a77-4e31-8b0f-2723f752317b</materialCombinationIdentifier>
+        </componentConstituents>
+        <height>380</height>
+        <width>540</width>
+        <depth>380</depth>
+        <weight>600</weight>
+        <weightTolerance>35</weightTolerance>
+        <weightToleranceType>grams</weightToleranceType>
+        <shape>c-shape-0004</shape>
+        <function>function-0048</function>
+        <flexibility>c-flexibility-0002</flexibility>
+        <branding>false</branding>
+        <componentEndOfLifeRoutes>671ee5cc-a402-48a5-ba56-1f4d3840aef0</componentEndOfLifeRoutes>
+        <colour>cmyk(0%,14%,33%,18%)</colour>
+        <opacity>c-opacity-0001</opacity>
+        <loaned>false</loaned>
+        <partOfMultipack>false</partOfMultipack>
+        <recycledContent>30</recycledContent>
+        <recycledContentClaims>81ac4ec3-e097-4092-9c8f-4ef717d3740c</recycledContentClaims>
+        <recyclability>true</recyclability>
+        <recyclabilityClaims>6af9c69a-6ec1-42dd-a8da-54bab8165e44</recyclabilityClaims>
+        <certification>false</certification>
+        <manufacturers>GB-COH-10906273</manufacturers>
+        <manufacturedCountry>826</manufacturedCountry>
+        <updateDate>2024-01-25</updateDate>
+        <releaseDate>2011-01-01</releaseDate>
+    </component>
+    ```
+=== "Wine bottle - XML"
+
+    ``` xml linenums="1"  hl_lines="3 4"
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <component>
+        <identifier>94108707-b914-43f3-bed5-93adbbd208c1</identifier>
+        <name>Wine bottle</name>
+        <description>Introducing our 750ml Bordeaux Bottle, a sophisticated and eco-conscious choice for wine packaging. Crafted with a commitment to sustainability, this bottle embodies the perfect blend of elegance and environmental responsibility.</description>
+        <externalIdentifiers>
+        <gtin>70123456 789012</gtin>
+        <sku>8855-bb-g</sku>
+        <internal_id>0-recycle-green-750-bordeaux</internal_id>
+        </externalIdentifiers>
+        <imageURLs>https://dsposal.uk/media/35604/52419bc2-317f-4815-b39c-f90a20cb7a7a.jpg</imageURLs>
+        <componentConstituents>
+        <materialConstituentsIdentifier>70023f95-2d0f-4e47-ab6e-0ce51d50e55d</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>b050ab75-4bcb-4c7f-b8f5-8a1f9e5ba7d3</materialCombinationIdentifier>
+        </componentConstituents>
+        <height>305</height>
+        <heightDate>2015-06-16</heightDate>
+        <width>72.4</width>
+        <widthDate>2015-06-16</widthDate>
+        <depth>72.5</depth>
+        <depthDate>2015-06-16</depthDate>
+        <weight>700</weight>
+        <weightTolerance>6</weightTolerance>
+        <weightToleranceType>percent</weightToleranceType>
+        <function>function-0005</function>
+        <flexibility>c-flexibility-0002</flexibility>
+        <branding>false</branding>
+        <componentEndOfLifeRoutes>e2aaabed-f901-4bbe-87e6-c781de2fb569</componentEndOfLifeRoutes>
+        <colour>cmyk(90%,30%,100%,20%)</colour>
+        <opacity>c-opacity-0002</opacity>
+        <loaned>false</loaned>
+        <partOfMultipack>false</partOfMultipack>
+        <recycledContent>70</recycledContent>
+        <recycledContentClaims>defd2813-0987-486a-8698-e8257b5ece63</recycledContentClaims>
+        <recyclability>true</recyclability>
+        <recyclabilityClaims>79290e8d-bd0e-4fcc-aa22-b932df206c49</recyclabilityClaims>
+        <certification>true</certification>
+        <certificationClaims>79290e8d-bd0e-4fcc-aa22-b932df206c49</certificationClaims>
+        <manufacturers>GB-COH-10906273</manufacturers>
+        <manufacturedCountry>826</manufacturedCountry>
+        <updateDate>2023-12-07</updateDate>
+        <releaseDate>2015-06-16</releaseDate>
+    </component>
+    ```
+
+## Data flow
+
+``` mermaid
+flowchart LR
+    subgraph baseMaterials[Base Materials]
+        bm_example["example base materials"]
+    end
+    subgraph materials[Materials]
+        ma_cardboard["Cardboard
+        -
+        16f41cca-1a77-4e31-8b0f-2723f752317b"]
+        ma_glass["Glass
+        -
+        b050ab75-4bcb-4c7f-b8f5-8a1f9e5ba7d3"]
+    end
+        subgraph components["`**Components**`"]
+        co_cardboardBox["`**Cardboard box
+        - 
+        9dad67b0-d5a2-4afb-9287-e712fd1ea3e6**`"]
+        co_wineBottle["`**Wine bottle
+        - 
+        94108707-b914-43f3-bed5-93adbbd208c1**`"]
+    end
+    subgraph completePackages[Complete Packages]
+        cp_example["example complete pakages"]
+    end
+    baseMaterials --> materials
+    ma_cardboard --> co_cardboardBox
+    ma_glass --> co_wineBottle
+    co_cardboardBox --> completePackages
+    co_wineBottle --> completePackages
+```
+
 
 ## Guide for how to take measurements
 

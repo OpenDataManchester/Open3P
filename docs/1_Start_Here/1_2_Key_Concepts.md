@@ -1,14 +1,58 @@
 ---
 title: Key Concepts
-description: The key concepts to understanding the open data standard for the packaging value chain.
+description: The key concepts to understanding the open standard for the packaging value chain.
 ---
 
 # Key Concepts
 
-The Open 3P data standard is to provide information about what packaging is made out of and how these materials flow through the packaging supply chain. With Open 3P, stakeholders in the packaging supply chain will be able to share information about materials, components and packaging in a standardised format. This will allow for better collaboration between manufacturers, brands, retailers, consumers, recyclers, compliance schemes and regulators.
+Our goal is to rally as many organisations as possible to revolutionise the way packaging data is managed. We believe that seamless data exchange is essential for sustainable practices. To achieve this, we’ve developed the groundbreaking Open 3P data standard - a free and open standard specifically for the packaging industry. By adopting Open 3P, you’ll streamline data capture, enhance compliance, and unlock new insights. Below are the key concepts that need to be understood to leverage the power of the open standard for packaging data within the packaging supply chain.
 
-## Packaging Ecosystem Data, Products, Waste Flows
-The diagram below can help you to visualise how information might flow across the packaging supply chain using Open 3P. The standard supports data exchange between necessary parties whilst preserving a single source of truth across the industry.
+## What is a supply chain?
+
+Think of a supply chain like a big relay race where everyone has to pass the baton smoothly to the next runner. In a supply chain, different companies and people work together to get products from where they're made to where they're sold.
+
+There are various steps in the supply chain:
+
+- **Getting Materials**: It starts with getting the materials needed to make something, like a car or a phone. These materials might come from different places around the world.
+- **Making Stuff**: Then, companies use those materials to make the actual product. For example, a car company takes metal, plastic, and other parts to build cars.
+- **Moving Things Around**: Once the product is made, it needs to get to the stores or customers who want to buy it. This involves shipping and transportation, which can involve trucks, ships, planes, and more.
+- **Selling and Supporting**: Finally, the product gets to the stores or customers, who buy it. But the process doesn't end there. Companies often provide support, like customer service or repairs, to make sure customers are happy with their purchase.
+
+Key componets of an efficient and effective supply chain are:
+
+- **Collaboration**: Different companies and people along the supply chain need to work together smoothly. If one part of the chain breaks down, it can slow everything down. For example, if a supplier can't deliver materials on time, it can delay production.
+- **Interoperability**: This means making sure all the different parts of the supply chain can work together seamlessly. For example, the computer systems used by suppliers should be able to communicate with the systems used by manufacturers and retailers. If they can't, it can cause errors and delays.
+
+## The packaging supply chain
+
+Let's take a look at the supply chain for packaging, which is essential for protecting products and getting them safely to customers:
+
+1. **Material Sourcing**:
+    - The supply chain for packaging starts with the sourcing of raw materials. These materials can include paper, cardboard, plastic, glass, metal, and various other materials used for packaging.
+    - Suppliers gather these materials from different sources, which could be forests for paper, oil refineries for plastics, mines for metals, or recycling facilities for recycled materials.
+2. **Manufacturing**:
+    - Once the raw materials are sourced, they are sent to manufacturing facilities where they are turned into packaging materials. For example, paper pulp is processed into cardboard boxes, plastic pellets are molded into bottles or bags, and metal sheets are shaped into cans.
+    - These manufacturing processes involve machinery, specialised equipment, and skilled labor to produce packaging materials in large quantities.
+3. **Packaging Design and Printing**:
+    - Some packaging may require additional steps for design and printing. This can involve graphic design, branding, and printing of logos, product information, and marketing messages on the packaging.
+    - Printing facilities or specialised packaging design companies handle this aspect of the supply chain, ensuring that the packaging meets both functional and aesthetic requirements.
+4. **Distribution and Logistics**:
+    - Once the packaging materials are manufactured and printed, they need to be distributed to the companies that will use them to package their products.
+    - This involves transportation and logistics networks to move the packaging materials from manufacturing facilities to warehouses and distribution centers, where they are stored until needed.
+5. **Usage by Manufacturers**:
+    - Manufacturers of consumer goods, food and beverage products, pharmaceuticals, and other products use the packaging materials to package their products.
+    - They integrate the packaging into their production processes, filling bottles, wrapping products, or placing items into boxes before they are ready for distribution.
+6. **Retail Distribution**:
+    - Finished products with packaging are then distributed to retailers or directly to customers through various channels such as brick-and-mortar stores, online marketplaces, or wholesalers.
+    - Packaging plays a crucial role in protecting products during transportation and storage, as well as attracting customers' attention on store shelves.
+7. **End-of-Life Management**:
+    - Finally, after the products are consumed, the packaging enters the end-of-life stage. Depending on the material, packaging may be recycled, reused, composted, or disposed of in landfills.
+    - Recycling facilities, waste management companies, and government programs handle the disposal or recycling of packaging materials, closing the loop of the packaging supply chain.
+
+Throughout this supply chain, collaboration and interoperability are essential to ensure that packaging materials are sourced sustainably, manufactured efficiently, and used effectively to protect products and minimise environmental impact.
+
+## Supply Chain, Products, Waste Flows
+The diagram below can help you to visualise how information might flow across the packaging supply chain.
 ``` mermaid
 sequenceDiagram
     participant manufacturers
@@ -16,7 +60,7 @@ sequenceDiagram
     participant retailers
     participant consumers
     participant recyclers
-    participant complianceSchemes
+    participant complianceSchemes 
     participant regulators
     manufacturers->>brands: products
     manufacturers->>retailers: products
@@ -35,54 +79,35 @@ sequenceDiagram
     recyclers->>manufacturers: material
     complianceSchemes->>regulators: data
 ```
-# Definitions
+The diagram hows the complexity of the packaging supply chain. To truly collabrate and interoperate organisations need to share information. Exchange standards help with this interoperability.
 
-## Base Materials
-- general template used to store information about a base level material
+## What is a data exchange standard?
 
-## Materials
-- an individual substance (e.g., PET)
-- created from the base materials level
+An exchange data standard is a set of guidelines or rules that define how data is formatted, structured, and exchanged between different systems, organisations, or entities. These standards ensure that data can be understood and interpreted accurately by both the sender and the receiver, facilitating seamless communication and interoperability.
 
-## Components
-- an individual unit (e.g., a bottle)
-- parts made from different materials (e.g., a window on a sandwich box)
-- zippers, taps, etc. (even though attached)
-- general template used for packaging manufacturers to store information.
-- these components can be used by multiple users and combined with other components in different ways
+Here's a breakdown of key aspects of exchange data standards:
 
-## Product
-- That which is contained inside of the packaging
+1. **Format and Structure**: Exchange data standards specify the format and structure of data elements, including how they are organised, labeled, and represented. This ensures consistency in how data is presented and interpreted across different systems.
+2. **Data Elements**: Standards define the specific data elements or fields that are exchanged, along with their meanings and permissible values. This includes information such as names, addresses, dates, product codes, and financial transactions.
+3. **Syntax and Encoding**: Standards may also define the syntax and encoding used to represent data, such as XML (eXtensible Markup Language), JSON (JavaScript Object Notation), or EDI (Electronic Data Interchange). These specifications determine how data is packaged and transmitted between systems.
+4. **Protocols and Communication**: Exchange data standards often include protocols or communication guidelines for transmitting data over networks or communication channels. This can include protocols for data validation, error handling, security, and authentication.
+5. **Industry Specificity**: Many exchange data standards are tailored to specific industries or domains, such as healthcare, finance, retail, or manufacturing. These standards address the unique data requirements and regulatory considerations of each industry.
+6. **Adoption and Compliance**: Adoption of exchange data standards promotes interoperability and seamless integration between different systems and organisations. Compliance with standards ensures that data exchanges are consistent, reliable, and compatible with other systems within the same ecosystem.
 
-## Complete Packaging
-- Components are combined to make complete packaging
-- for example, a lid, a bottle and a label are all individual components. These would be combined to form a complete packaging item
+Overall, exchange data standards play a critical role in enabling efficient and accurate exchange of information between diverse systems, promoting interoperability, data integrity, and effective communication across various domains and industries.
 
-## Multipack
-- Sometimes, multiple units of complete packaging are combined, and sold as a single unit
-- This is a multipack
+## Data exchange standard for the packaging supply chain
 
-## Load Catalogue
-- Complete packaging units are combined into a delivery load
-- Usually wrapped in secondary and tertiary packaging 
+Implementing a data exchange standard for the packaging supply chain can bring numerous benefits and efficiencies to the entire process:
 
-## Load
-- Collection of load catalogue broken into destinations and on-the-market packaging for specified reporting periods
+1. **Improved Communication**: A data exchange standard provides a common language for communication between different stakeholders in the packaging supply chain, including raw material suppliers, manufacturers, distributors, retailers, and end consumers. This common language facilitates clear and accurate transmission of information, reducing the risk of misunderstandings or errors.
+2. **Enhanced Efficiency**: Standardising data exchange processes streamlines the flow of information throughout the packaging supply chain. This reduces manual intervention, minimises delays, and improves overall operational efficiency. For example, automated data exchange can accelerate order processing, inventory management, and shipping logistics.
+3. **Increased Visibility and Traceability**: With a standardised data exchange framework, stakeholders gain better visibility into the status and location of packaging materials and products at each stage of the supply chain. This enhanced traceability enables more accurate forecasting, inventory management, and risk mitigation, such as identifying and addressing quality issues or supply chain disruptions more promptly.
+4. **Better Decision-Making**: Access to standardised data allows stakeholders to make more informed decisions regarding production scheduling, inventory levels, and resource allocation. Real-time data exchange enables quicker response to changes in demand, market trends, or regulatory requirements, optimising resource utilisation and reducing waste.
+5. **Cost Savings**: By streamlining data exchange processes and reducing manual errors, a standardised approach to data exchange in the packaging supply chain can lead to cost savings. Automation of repetitive tasks, such as order processing and invoicing, reduces labor costs and improves overall operational efficiency.
+6. **Compliance and Regulatory Alignment**: Many industries have specific regulations and standards governing packaging materials, labeling, and environmental sustainability. Implementing a data exchange standard that aligns with these regulations ensures compliance and facilitates reporting and auditing processes.
+7. **Facilitates Innovation and Collaboration**: Standardised data exchange encourages collaboration and innovation within the packaging supply chain ecosystem. It enables seamless integration of new technologies, such as IoT (Internet of Things) sensors for tracking and monitoring, blockchain for transparent supply chain management, and AI (Artificial Intelligence) for predictive analytics.
 
-## Packaging Item
-- A component, complete packaging, or multipack 
+Overall, a data exchange standard for the packaging supply chain promotes interoperability, efficiency, transparency, and collaboration, enabling stakeholders to deliver high-quality products to market more effectively and sustainably.
 
-## Controlled List
-- Controlled Lists serve as reference points for key terms and phrases that are commonly used in the packaging industry, which are maintained and administred by the Standard Custodian Board (SCB)
-
-## Relationship List
-- Relationship lists are user-defined lists used in data standards to specify the relationships between different data elements. Unlike controlled lists relationship lists are populated by the user to provide context and clarity to the data being recorded
-
-## UUID
-- A machine readable unique identifier generated for an entry conforming to the standard
-- UUIDs improve data flow by assigning an unambiguous tag to your data
-- These IDs are then used to link between layers of the standard e.g. to link components to complete packaging
-
-## Single Source of Truth
-- In information science and information technology, single source of truth (SSOT) architecture, or single point of truth (SPOT) architecture, for information systems is the practice of structuring information models and associated data schemas such that every data element is mastered (or edited) in only one place.
-- [Singe source of truth wikipedia article](https://en.wikipedia.org/wiki/Single_source_of_truth){target=_blank}
+This is where Open 3P comes in.

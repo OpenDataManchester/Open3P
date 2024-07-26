@@ -5,293 +5,232 @@ description: Materials are a combination of base materials within Open 3P.
 
 # Materials
 
-The materials schema contains information regarding the materials that are used within components. These maybe a single material from the base materials catalogue, a combination of base materials and/or a material from the materials schema itself.
+The materials schema contains information regarding the materials that are used within components. These maybe a single material from base materials, a combination of base materials and/or a material from the materials schema itself.
 
 ## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
-|identifier|`required`|String|The globally unique identifier for the created material unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
-|materialName|`required`|String|The name of the material this row relates to. (e.g., Aluminium 3000 Series or Borosilicate glass)|
-|externalIdentifiers|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the material in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
-|materialConstituents|`required`|List|The information regarding the consituents that are combined to create this material. The entries should be from the [Material Constituents Relationship List](../6_Relationship_Lists/6_001_Material_Constituents.md) identifier.|
-|combinationPurpose|`recommended`|String|Why is this material being used? Use the identifier of the function that this row relates to. The entry here should be drawn from the [Function Controlled List](../5_Controlled_Lists/5_004_Function.md).|
-|areaDensity|`recommended`|Numeric|The area density of the material. Where area density is the measure of how much mass is packed into a given area of a two-dimensional object. Provided in grams per square metre (gsm).|
-|areaDensityUnit|`recommended`|String|Either `gsm` or `m^2/kg` to describe the area density unit of measure.|
-|areaDensityTolerance|`recommended`|Numeric|The threshold of area density that the material can vary by. This is given as a +/- value.|
-|areaDensityToleranceType|`recommended`|String|Either `unit` or `percentage` based on the value provided in `areaDensityTolerance`. Where `unit` is equal to the value provided in `areaDensityUnit`.|
-|areaDensityDate|`recommended`|String|The date that the area density was last verified/measured. Use the format `dd/mm/yyyy`.|
-|certification|`recommended`|Boolean|Does the material have a certificate (e.g. FSC, REACH, FSA etc.)? Answer as: `TRUE` for yes and `FALSE` for no.|
-|certificationClaims|`recommended`|List|The information regarding the certification. The entries should be the [Certification Claims Relationship List](../6_Relationship_Lists/6_005_Certification_Claims.md) identifiers.|
-|manufacturers|`recommended`|List|The information regarding the manufacturer(s). The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
-|manufacturedCountry|`recommended`|Numeric|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
-|updateDate|`required`|String|The date that the material was provided/last updated. Use the format `dd/mm/yyyy`.|
+|identifier|`mandatory`|UUID|The globally unique identifier for the created material unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
+|name|`optional`|String|The name of the material this row relates to. (e.g., Aluminium 3000 Series or Borosilicate glass)|
+|externalIdentifiers|`optional`|Dictionary|A dictionary of identifiers that might be used to identify the material in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
+|materialConstituents|`mandatory`|List|The information regarding the consituents that are combined to create this material. The entries should be from the [Material Constituents Relationship List](../6_Relationship_Lists/6_001_Material_Constituents.md) identifier.|
+|combinationPurpose|`optional`|String|Why is this material being used? Use the identifier of the function that this row relates to. The entry here should be drawn from the [Function Controlled List](../5_Controlled_Lists/5_004_Function.md).|
+|areaDensity|`optional`|Decimal|The area density of the material. Where area density is the measure of how much mass is packed into a given area of a two-dimensional object. Provided in grams per square metre (gsm).|
+|areaDensityUnit|`optional`|String|Either `gsm` or `m^2/kg` to describe the area density unit of measure.|
+|areaDensityTolerance|`optional`|Decimal|The threshold of area density that the material can vary by. This is given as a +/- value.|
+|areaDensityToleranceType|`optional`|String|Either `unit` or `percentage` based on the value provided in `areaDensityTolerance`. Where `unit` is equal to the value provided in `areaDensityUnit`.|
+|areaDensityDate|`optional`|Date|The date that the area density was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
+|certification|`optional`|Boolean|Does the material have a certificate (e.g. FSC, REACH, FSA etc.)? Answer as: `TRUE` for yes and `FALSE` for no.|
+|certificationClaims|`optional`|List|The information regarding the certification. The entries should be the [Certification Claims Relationship List](../6_Relationship_Lists/6_005_Certification_Claims.md) identifiers.|
+|manufacturers|`optional`|List|The information regarding the manufacturer(s). The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
+|manufacturedCountry|`optional`|String|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iso.org/obp/ui/#search){target=_blank} as described in the [ISO 3166 international standard](https://www.iso.org/iso-3166-country-codes.html){target=_blank}.|
+|updateDate|`mandatory`|Date|The date that the material was provided/last updated. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 
 ## Diagram
 
 ``` mermaid
 erDiagram
-BASE_MATERIALS }o--o{ MATERIALS : within
+BASE_MATERIALS }o--o{ MATERIALS : material_constituents
   MATERIALS {
-    identifier String
-    materialName String
+    identifier UUID "*"
+    name String
     externalIdentifiers Dictionary
-    materialConstituents List
+    materialConstituents List "*"
     combinationPurpose String
-    areaDensity Numeric
+    areaDensity Decimal
     areaDensityUnit String
-    areaDensityTolerance Numeric
+    areaDensityTolerance Decimal
     areaDensityToleranceType String
-    areaDensityDate String
+    areaDensityDate Date
     certification Boolean
     certificationClaims List
     manufacturers List
-    manufacturedCountry Numeric
-    updateDate String
+    manufacturedCountry String
+    updateDate Date "*"
   }
   MATERIALS }o..o{ CONTROLLED_LISTS : attributes
-  MATERIALS }o--o{ COMPONENTS : within
+  MATERIALS }o--o{ COMPONENTS : component_constituents
   MATERIALS }o..o{ RELATIONSHIP_LISTS : attributes
         CONTROLLED_LISTS {
-    function recommended
+    function optional
     }
         RELATIONSHIP_LISTS {
-    materialConstituents required
-    certificationClaims recommended
-    organisations recommended
+    certificationClaims optional
+    organisations optional
       }
 ```
 
-## Template
-Materials should be provided as a separate csv file. The specification of this csv file is as follows:
-
-[Materials Template](https://www.open3p.org/wp-content/uploads/2023/09/materials20230922.csv){target=_blank}
-
 ## Example
 
-=== "JSON #1"
+=== "Cardboard - JSON"
 
-    ``` json linenums="1"
-    --Food grade synthetic polyethylene terephthalate (PET) made in the UK. Only one base material.
-    {
-      "identifier": "DCEE1F88-A83B-5BBC-D2D9-6A862B344977",
-      "materialName":"PET",
-      "externalIdentifiers": {
-        "GTIN":"123456789101",
-        },
-      "materialConstituents":["DCEE1F88-A83B-5BBC-D2D9-6A862B344977"],
-      "combinationPurpose": "",
-      "areaDensity": "138",
-      "areaDensityUnit": "gsm",
-      "areaDensityTolerance": "3.3",
-      "areaDensityToleranceType": "percentage",
-      "areaDensityDate": "01/08/2022",
-      "certification": "TRUE",
-      "certificationClaims": ["1"],
-      "manufacturers": [""],
-      "manufacturedCountry": 826,
-      "updateDate": "01/08/2022",
-    }
+    ``` json linenums="1" hl_lines="3 4"
+    [
+      {
+        "identifier": "16f41cca-1a77-4e31-8b0f-2723f752317b",
+        "name":"Cardboard",
+        "externalIdentifiers": {
+          "sapPK":"153517",
+          "SKU":"34-56bg"
+          },
+          "materialConstituents": [
+            {
+              "materialConstituentsIdentifier": "95b95bf7-80c0-49bc-9367-ae48d6c107d3",
+              "materialCombinationIdentifier": "222494f7-6703-49bc-a993-8dd2675709fb"
+            }
+          ],
+        "combinationPurpose": "function-0048",
+        "areaDensity": "300",
+        "areaDensityUnit": "gsm",
+        "areaDensityTolerance": "3.3",
+        "areaDensityToleranceType": "percentage",
+        "areaDensityDate": "2023-12-07",
+        "certification": true,
+        "certificationClaims": ["307801c3-f6f7-4ca6-8553-6f367b37fd1e"],
+        "manufacturers": ["GB-COH-10906273"],
+        "manufacturedCountry": "826",
+        "updateDate": "2023-12-07",
+      }
+    ]
     ```
-=== "JSON #2"
+=== "Glass - JSON"
 
-    ``` json linenums="1"
-    --Fibre based composite material to be used for a carton - semi verbose
-    {
-      "identifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
-      "materialName": "Classic Carton Board - EVOH",
-      "externalIdentifiers": {
-        "EAN": "0123456789101",
-        "BatchNumber": "2145-23-po"
-        },
-      "materialConstituents": [
-        {
-          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
-          "materialCombinationIdentifier": {
-            "identifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
-            "baseMaterialName": "Polyethylene",
-            "baseMaterialType": {
-              "identifier":"bm-material-type-0002",
-              "category":"synthetic",
-              "detailed":"derived from crude oil, natural gas or coal."
-            },
-            "materialChemCID": null,
-            "externalIdentifiers": {
-              "pk":"12",
-              },
-            "certification": "FALSE",
-            "certificationClaims": null,
-            "manufacturers": [""],
-            "manufacturedCountry": {
-              "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
-              "Numeric": 826
-            },
-            "updateDate": "01/08/2022",
+    ``` json linenums="1" hl_lines="3 4"
+    [
+      {
+        "identifier": "b050ab75-4bcb-4c7f-b8f5-8a1f9e5ba7d3",
+        "name": "Glass",
+        "externalIdentifiers": {
+          "internal id": "70-wine-glass"
           },
-          "materialPurpose": {
-            "identifier": "m-material-purpose-0005",
-            "category": "barrier",
-            "detailed": "Used to reduce water and gas diffusion into and/or out of the material."
+        "materialConstituents": [
+          {
+            "materialConstituentsIdentifier": "11eb7b61-05f1-4894-a57b-80e5082f944a",
+            "materialCombinationIdentifier": "ff39892f-0a88-4085-9942-4522cecc8337"
           },
-          "virginMaterial": 100,
-          "layer": 1,
-          "materialPercentage": 7
-        },
-        {
-          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
-          "materialCombinationIdentifier": "96245c85-5671-4f3d-875f-82665005e9e8",
-          "materialPurpose": {
-            "identifier": "m-material-purpose-0015",
-            "category": "structure",
-            "detailed": "Providing strength and stability."
+          {
+            "materialConstituentsIdentifier": "11eb7b61-05f1-4894-a57b-80e5082f944a",
+            "materialCombinationIdentifier": "1bdca07b-ed6a-4799-a027-654322cb302f"
           },
-          "virginMaterial": 100,
-          "layer": 2,
-          "materialPercentage": 27
-        },
-        {
-          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
-          "materialCombinationIdentifier": {
-            "identifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
-            "baseMaterialName": "Polyethylene",
-            "baseMaterialType": {
-              "identifier":"bm-material-type-0002",
-              "category":"synthetic",
-              "detailed":"derived from crude oil, natural gas or coal."
-            },
-            "materialChemCID": null,
-            "externalIdentifiers": {
-              "pk":"12",
-              },
-            "certification": "FALSE",
-            "certificationClaims": null,
-            "manufacturers": [""],
-            "manufacturedCountry": {
-              "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
-              "Numeric": 826
-            },
-            "updateDate": "01/08/2022",
+          {
+            "materialConstituentsIdentifier": "11eb7b61-05f1-4894-a57b-80e5082f944a",
+            "materialCombinationIdentifier": "ff39892f-0a88-4085-9942-4522cecc8337"
           },
-          "materialPurpose": {
-            "identifier": "m-material-purpose-0002",
-            "category": "adhesive",
-            "detailed": "Applied to one or both surfaces of two separate items that binds them together and resists their separation."
-          },
-          "virginMaterial": 100,
-          "layer": 3,
-          "materialPercentage": 7
-        },
-        {
-          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
-          "materialCombinationIdentifier": "ff249e1f-5015-46b8-8655-6c920fbf2606",
-          "materialPurpose": {
-            "identifier": "m-material-purpose-0003",
-            "category": "antioxidant",
-            "detailed": "Used to inhibit oxidation."
-          },
-          "virginMaterial": 100,
-          "layer": 4,
-          "materialPercentage": 18
-        },
-        {
-          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
-          "materialCombinationIdentifier": {
-            "identifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
-            "baseMaterialName": "Polyethylene",
-            "baseMaterialType": {
-              "identifier":"bm-material-type-0002",
-              "category":"synthetic",
-              "detailed":"derived from crude oil, natural gas or coal."
-            },
-            "materialChemCID": null,
-            "externalIdentifiers": {
-              "pk":"12",
-              },
-            "certification": "FALSE",
-            "certificationClaims": null,
-            "manufacturers": [""],
-            "manufacturedCountry": {
-              "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
-              "Numeric": 826
-            },
-            "updateDate": "01/08/2022",
-          },
-          "materialPurpose": {
-            "identifier": "m-material-purpose-0002",
-            "category": "adhesive",
-            "detailed": "Applied to one or both surfaces of two separate items that binds them together and resists their separation."
-          },
-          "virginMaterial": 100,
-          "layer": 5,
-          "materialPercentage": 7
-        },
-        {
-          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
-          "materialCombinationIdentifier": "96245c85-5671-4f3d-875f-82665005e9e8",
-          "materialPurpose": {
-            "identifier": "m-material-purpose-0015",
-            "category": "structure",
-            "detailed": "Providing strength and stability."
-          },
-          "virginMaterial": 100,
-          "layer": 6,
-          "materialPercentage": 27
-        },
-        {
-          "materialConstituentsIdentifier": "f87b9bb3-f141-41cf-986e-e3a32b223f09",
-          "materialCombinationIdentifier": {
-            "identifier": "3ca24db2-84d5-4681-aa16-136fbdba101f",
-            "baseMaterialName": "Polyethylene",
-            "baseMaterialType": {
-              "identifier":"bm-material-type-0002",
-              "category":"synthetic",
-              "detailed":"derived from crude oil, natural gas or coal."
-            },
-            "materialChemCID": null,
-            "externalIdentifiers": {
-              "pk":"12",
-              },
-            "certification": "FALSE",
-            "certificationClaims": null,
-            "manufacturers": [""],
-            "manufacturedCountry": {
-              "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
-              "Numeric": 826
-            },
-            "updateDate": "01/08/2022",
-          },
-          "materialPurpose": {
-            "identifier": "m-material-purpose-0005",
-            "category": "barrier",
-            "detailed": "Used to reduce water and gas diffusion into and/or out of the material."
-          },
-          "virginMaterial": 100,
-          "layer": 7,
-          "materialPercentage": 7
-        },
-      ],
-      "combinationPurpose": {
-        "identifier": "function-0012",
-        "category": "carton",
-        "detailed": "Box or container used for transporting and storaging goods."
-      },
-      "areaDensity": "543.5",
-      "areaDensity": "gsm",
-      "areaDensityTolerance": "6",
-      "areaDensityToleranceType": "unit",
-      "areaDensityDate": "01/08/2022",
-      "certification": "FALSE",
-      "certificationClaims": null,
-      "manufacturers": [""],
-      "manufacturedCountry": {
-        "Country": "United Kingdom of Great Britain and Northern Ireland (the)",
-        "Numeric": 826
-      },
-      "updateDate": "01/08/2022"
-    }
+          {
+            "materialConstituentsIdentifier": "11eb7b61-05f1-4894-a57b-80e5082f944a",
+            "materialCombinationIdentifier": "42b19543-7138-43ff-a867-a1e551ccba14"
+          }
+        ],
+        "combinationPurpose": "function-0005",
+        "certification": false,
+        "manufacturers": ["GB-COH-10906273"],
+        "manufacturedCountry": "826",
+        "updateDate": "2022-08-01"
+      }
+    ]
     ```
-=== "CSV download"
+=== "Cardboard - XML"
 
-    * [Materials example download](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_2_Materials_Example.csv){target=_blank}
+    ``` xml linenums="1" hl_lines="3 4"
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <material>
+      <identifier>16f41cca-1a77-4e31-8b0f-2723f752317b</identifier>
+      <name>Cardboard</name>
+      <externalIdentifiers>
+        <sapPK>153517</sapPK>
+        <SKU>34-56bg</SKU>
+      </externalIdentifiers>
+      <materialConstituents>
+        <materialConstituentsIdentifier>95b95bf7-80c0-49bc-9367-ae48d6c107d3</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>222494f7-6703-49bc-a993-8dd2675709fb</materialCombinationIdentifier>
+      </materialConstituents>
+      <combinationPurpose>function-0048</combinationPurpose>
+      <areaDensity>300</areaDensity>
+      <areaDensityUnit>gsm</areaDensityUnit>
+      <areaDensityTolerance>3.3</areaDensityTolerance>
+      <areaDensityToleranceType>percentage</areaDensityToleranceType>
+      <areaDensityDate>2023-12-07</areaDensityDate>
+      <certification>true</certification>
+      <certificationClaims>307801c3-f6f7-4ca6-8553-6f367b37fd1e</certificationClaims>
+      <manufacturers>GB-COH-10906273</manufacturers>
+      <manufacturedCountry>826</manufacturedCountry>
+      <updateDate>2023-12-07</updateDate>
+    </material>
+    ```
+=== "Glass - XML"
+
+    ``` xml linenums="1" hl_lines="3 4"
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <material>
+      <identifier>b050ab75-4bcb-4c7f-b8f5-8a1f9e5ba7d3</identifier>
+      <name>Glass</name>
+      <externalIdentifiers>
+        <internal_id>70-wine-glass</internal_id>
+      </externalIdentifiers>
+      <materialConstituents>
+        <materialConstituentsIdentifier>11eb7b61-05f1-4894-a57b-80e5082f944a</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>ff39892f-0a88-4085-9942-4522cecc8337</materialCombinationIdentifier>
+      </materialConstituents>
+      <materialConstituents>
+        <materialConstituentsIdentifier>11eb7b61-05f1-4894-a57b-80e5082f944a</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>1bdca07b-ed6a-4799-a027-654322cb302f</materialCombinationIdentifier>
+      </materialConstituents>
+      <materialConstituents>
+        <materialConstituentsIdentifier>11eb7b61-05f1-4894-a57b-80e5082f944a</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>ff39892f-0a88-4085-9942-4522cecc8337</materialCombinationIdentifier>
+      </materialConstituents>
+      <materialConstituents>
+        <materialConstituentsIdentifier>11eb7b61-05f1-4894-a57b-80e5082f944a</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>42b19543-7138-43ff-a867-a1e551ccba14</materialCombinationIdentifier>
+      </materialConstituents>
+      <combinationPurpose>function-0005</combinationPurpose>
+      <certification>false</certification>
+      <manufacturers>GB-COH-10906273</manufacturers>
+      <manufacturedCountry>826</manufacturedCountry>
+      <updateDate>2022-08-01</updateDate>
+    </material>
+    ```
+
+## Data flow
+
+``` mermaid
+flowchart LR
+    subgraph baseMaterials[Base Materials]
+        bm_cardboard["Cardboard
+        -
+        222494f7-6703-49bc-a993-8dd2675709fb"]
+        bm_sodaAsh["Soda ash
+        -
+        ff39892f-0a88-4085-9942-4522cecc8337"]
+        bm_cullet["Cullet
+        -
+        db481bb7-e57a-4af7-8821-2258338ddd11"]
+        bm_sand["Sand
+        -
+        1bdca07b-ed6a-4799-a027-654322cb302f"]
+        bm_limestone["Limestone
+        -
+        42b19543-7138-43ff-a867-a1e551ccba14"]
+    end
+    subgraph materials["`**Materials**`"]
+        ma_cardboard["`**Cardboard
+        -
+        16f41cca-1a77-4e31-8b0f-2723f752317b**`"]
+        ma_glass["`**Glass
+        -
+        b050ab75-4bcb-4c7f-b8f5-8a1f9e5ba7d3**`"]
+    end
+        subgraph components[Components]
+        co_example[example components]
+    end
+    bm_cardboard --> ma_cardboard
+    bm_sodaAsh --> ma_glass
+    bm_cullet --> ma_glass
+    bm_sand --> ma_glass
+    bm_limestone --> ma_glass
+    ma_cardboard --> components
+    ma_glass --> components
+```
 
 ## Guide for how to take measurements
 

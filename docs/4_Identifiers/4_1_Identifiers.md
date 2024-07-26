@@ -4,29 +4,52 @@ title: Identifiers
 
 # Identifiers
 
-Identifiers are the way that humans and machines can know that a particular thing is that thing. In the context of Open 3P, there are different ways of talking about the various things involved. A packaging manufacturer may refer to a particular bottle as ‘small clear bottle’, but a filler may know it as ‘500 ml clear bottle’. In a database it may be recorded as ‘0.5L PET Bottle’. While these are all referring to the same thing, it could be hard for a human to know that they are the same, and pretty much impossible for a computer.
+Identifiers are crucial for uniquely referencing items within the Open 3P ecosystem, enabling both humans and machines to accurately identify and reference specific objects. Without identifiers, it can be challenging for different stakeholders to recognise that they are referring to the same thing, leading to confusion and inefficiencies.
 
-To help get around this, we use identifiers. These are codes that we use to unambiguously reference a particular thing. Within the Open 3P data standard we need to uniquely identify every entry. Each record in each schema needs to have an identifier. Since the packaging supply chain is global, the Open 3P data standard needs to be global and thus the unique identifier also needs to be global. We are therefore using the [Universally Unique Identifier (UUID)](https://en.wikipedia.org/wiki/Universally_unique_identifier) standard methodology to (probabilistically) guarantee uniqueness.
+## Types of Identifiers
+
+In the Open 3P data standard, various types of identifiers are used to distinguish and categorise items based on their generation method and intended usage. These identifiers can be broadly categorised into three types:
+
+1. **Universally Unique Identifier (UUID)**: These identifiers are globally unique and do not contain any information about the user, organisation, or machine that created them. UUIDs ensure complete anonymity and eliminate the risk of conflicts with other identifiers.
+
+2. **Controlled List Identifier**: Controlled list identifiers are specifically created for use within the Open 3P standard. They define specific attributes within the standard and are regulated by the Standard Custodian Board to maintain consistency and integrity across the ecosystem.
+
+3. **External Identifier**: External identifiers are generated outside the Open 3P standard but can be incorporated into it to establish links with external data sources. One example is the Global Trade Item Number (GTIN), commonly used as a barcode. While GTINs are not specific to the Open 3P standard, they provide valuable links to external product data and are widely recognised in the industry.
+
+!!! question "Why Not Use GTIN as the Packaging Identifier?"
+
+    The question often arises as to why GTINs are not used as packaging identifiers within the Open 3P standard. There are several reasons for this decision:
+
+    1. **Organisational Identifiability**: GTINs inherently contain information about the organisation that provided the item, potentially compromising anonymity within the Open 3P ecosystem.
+
+    2. **Stability and Flexibility**: GTINs do not need to change when minor packaging variations occur, leading to potential inconsistencies in the identification process.
+
+    3. **Access and Standards**: GTINs are regulated by standards bodies and may not be readily accessible or applicable to all packaging items within the Open 3P ecosystem.
+
+By utilising a standardised approach to identifiers within the Open 3P ecosystem, stakeholders can ensure consistency, interoperability, and accuracy in referencing packaging materials and products.
+
+## Universally Unique Identifier (UUID)
+
+Each record in each schema needs to have an identifier. Since the packaging supply chain is global, the Open 3P data standard needs to be global and thus the unique identifier also needs to be global. We are therefore using the [Universally Unique Identifier (UUID)](https://en.wikipedia.org/wiki/Universally_unique_identifier) standard methodology to (probabilistically) guarantee uniqueness.
 
 > A universally unique identifier (UUID) is a 128-bit label used for information in computer systems. The term globally unique identifier (GUID) is also used.
 >
 > -*[A Universally Unique IDentifier (UUID) URN Namespace](https://datatracker.ietf.org/doc/html/rfc4122)*
 
-## Generating
+### Generating
 
 Generating a UUID must be done by a machine and there are various ways to create one. 
 
-### Online
+#### Online
 
 There are various online tools available, including but not limited to and in no specific order:
 
 - [Online UUID Generator](https://www.uuidgenerator.net/)
-- [UUID Generator](https://www.uuidgen.org/v/4)
 - [Online UUID/GUID Generator](https://www.uuidtools.com)
 - [Generate UUID Online](https://generate-uuid.com)
 - [Webtools - Online UUID (GUID) Generator](https://www.webtools.services/uuid-generator)
 
-### In code
+#### In code
 
 === "Python"
 
@@ -54,61 +77,48 @@ There are various online tools available, including but not limited to and in no
     }
     ```
 
-=== "Excel Function"
-
-    ``` vb
-    =CONCATENATE(DEC2HEX(RANDBETWEEN(0,4294967295),8),"-",DEC2HEX(RANDBETWEEN(0,65535),4),"-",DEC2HEX(RANDBETWEEN(0,65535),4),"-",DEC2HEX(RANDBETWEEN(0,65535),4),"-",DEC2HEX(RANDBETWEEN(0,4294967295),8),DEC2HEX(RANDBETWEEN(0,65535),4))
-    ```
-
-=== "vba"
-
-    ``` vb
-    Function GUID$(Optional lowercase As Boolean, Optional parens As Boolean)
-        Dim k&, h$
-        GUID = Space(36)
-        For k = 1 To Len(GUID)
-            Randomize
-            Select Case k
-                Case 9, 14, 19, 24: h = "-"
-                Case 15:            h = "4"
-                Case 20:            h = Hex(Rnd * 3 + 8)
-                Case Else:          h = Hex(Rnd * 15)
-            End Select
-            Mid$(GUID, k, 1) = h
-        Next
-        If lowercase Then GUID = LCase$(GUID)
-        If parens Then GUID = "{" & GUID & "}"
-    End Function
-    ```
-
 === "T-SQL"
 
     ``` t-sql
     NEWID ( )
     ```
 
-=== "PHP"
+## Controlled List Identifier
 
-    ``` php
-    function guidv4($data = null) {
-        // Generate 16 bytes (128 bits) of random data or use the data passed into the function.
-        $data = $data ?? random_bytes(16);
-        assert(strlen($data) == 16);
+Controlled lists are fundamental elements of data standards, crucial for maintaining consistency and accuracy in data entry within the packaging industry. They serve as centralised repositories for standardised terms and phrases used across various aspects of packaging.
 
-        // Set version to 0100
-        $data[6] = chr(ord($data[6]) & 0x0f | 0x40);
-        // Set bits 6-7 to 10
-        $data[8] = chr(ord($data[8]) & 0x3f | 0x80);
+Each entry in a controlled list is assigned a unique identifier, allowing for precise referencing of specific records within the list. These identifiers serve as keys to access detailed information about each term or concept, ensuring clarity and uniformity in data representation.
 
-        // Output the 36 character UUID.
-        return vsprintf('%s%s-%s-%s-%s-%s%s%s', str_split(bin2hex($data), 4));
+By leveraging controlled list identifiers, stakeholders can streamline data entry processes, minimise errors, and promote interoperability across different systems and platforms within the packaging ecosystem.
+
+## External Identifier
+
+External identifiers play a vital role in linking data within the Open 3P standard to external sources, enabling seamless integration and access to additional information. While these identifiers are generated outside the Open 3P standard, they can be incorporated into it to establish connections with relevant external data sources.
+
+One example of an external identifier commonly used in the packaging industry is the Global Trade Item Number (GTIN), which is widely recognised as a barcode. GTINs provide valuable links to external product data and facilitate efficient inventory management and supply chain operations.
+
+To provide external identifiers within the Open 3P standard, follow this format:
+
+=== "JSON" 
+
+    ```json
+    {
+        "externalIdentifierName1": "identifier1",
+        "externalIdentifierName2": "identifier2"
+    }
+    ```
+For instance, a dictionary of identifiers for base materials in other systems could include the manufacturer's own internal identifier and the GTIN:
+
+=== "JSON"
+
+    ```json
+    {
+        "ManufacturerInternalID": "ABC123",
+        "GTIN": "01234567890123"
     }
     ```
 
-
-
-
-
+By adhering to standardised formats for external identifiers, stakeholders can ensure interoperability and compatibility with external data sources, enhancing data quality and facilitating seamless data exchange within the packaging ecosystem.
 
 
 

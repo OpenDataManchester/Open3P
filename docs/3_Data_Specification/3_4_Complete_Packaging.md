@@ -10,177 +10,389 @@ The complete packaging schema contains information regarding the complete packag
 ## Table
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
-|identifier|`required`|String|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
-|name|`recommended`|String|The name of this complete packaging.|
-|description|`recommended`|String|A brief description of this complete packaging.|
-|externalIdentifiers|`recommended`|Dictionary|A dictionary of identifiers that might be used to identify the complete packaging in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
-|imageURLs|`recommended`|List|URL(s) that links to a picture of the complete packaging. Please see the guidelines below on how to capture the image and name the URL.|
-|completePackagingConstituentsIdentifier|`required`|List|The information regarding the consituents that are combined to create this complete packaging. The entries should be from the [Complete Packaging Constituents Relationship List](../6_Relationship_Lists/6_003_Complete_Packaging_Constituents.md) identifier.|
-|LOWcodeWOproduct|`recommended`|String|The list of waste code for **only** the complete packaging, by itself (excluding the product). LOW code is synonymous with European Waste Catalogue Code (EWC). For example: an empty bottle would have a LOWcode of `15 01 02`. Please use [Dsposal](https://dsposal.uk/browse/ewc){target=_blank} or [legislation.gov](https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made){target=_blank} to find the LOWcode. **Note**: The LOWcode can based on its combination with other components and the actual product contained in the complete packaging. Be sure to only include the complete packaging LOWcode and not the complete packaging with the product. If you cannot find the code or are uncertain please enter `Uncertain`.|
-|productType|`recommended`|String|Information about the product contained in the complete packaging. The entry here should be drawn from the [product type controlled list](../5_Controlled_Lists/5_012_Product_Type.md).|
-|LOWcodeWproduct|`recommended`|String|The list of waste code for **everything** in the complete packaging. LOW code is synonymous with European Waste Catalogue Code (EWC). For example: an empty bottle would have a LOWcode of `15 01 02`. Please use [Dsposal](https://dsposal.uk/browse/ewc){target=_blank} or [legislation.gov](https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made){target=_blank} to find the LOWcode. **Note**: The LOWcode can based on its combination with other components and the actual product contained in the complete packaging. Be sure to include the complete packaging LOWcode with the product. If you cannot find the code or are uncertain please enter `Uncertain`.|
-|onTheGo|`required`|Boolean|Is the complete packaging often classed as packaging that will end up in street bins? Answer as: `TRUE` for yes and `FALSE` for no.|
-|householdWaste|`required`|Boolean|Is the complete packaging often classed as packaging that will end up in kerbside collections? Answer as: `TRUE` for yes and `FALSE` for no.|
-|depositReturnSchemes|`required`|List|Which countries support a deposit return scheme for this particular complete packaging? The entries here should be drawn from the [deposit return scheme controlled list](../5_Controlled_Lists/5_013_Deposit_Return_Scheme.md).|
-|completePackagingEndOfLifeRoutes|`recommended`|List|The information regarding this complete packaging's proposed end of life routes. The entries should be the [complete packaging end of life routes](../6_Relationship_Lists/6_008_Complete_Packaging_End_of_Life_Routes.md) identifiers.|
-|recyclability|`recommended`|Boolean|Is the complete packaging recyclable (as determined by a reputable source)? Answer as: `TRUE` for yes and `FALSE` for no.|
-|recyclabilityClaims|`recommended`|List|The information regarding this recyclability claims. The entries should be the [recyclability claims relationship list](../6_Relationship_Lists/6_006_Recyclability_Claims.md) identifiers.|
-|height|`recommended`|Numeric|The height of the complete packaging. Please see the guidelines below on how to properly measure and report the height.|
-|heightDate|`recommended`|String|The date that the height was last verified/measured. Use the format `dd/mm/yyyy`.|
-|width|`recommended`|Numeric|The width of the complete packaging. Please see the guidelines below on how to properly measure and report the width.|
-|widthDate|`recommended`|String|The date that the width was last verified/measured. Use the format `dd/mm/yyyy`.|
-|depth|`recommended`|Numeric|The depth of the complete packaging. Please see the guidelines below on how to properly measure and report the depth.|
-|depthDate|`recommended`|String|The date that the depth was last verified/measured. Use the format `dd/mm/yyyy`.|
-|volume|`recommended`|Numeric|Using the height, width, and depth found using the measurement guidelines, calculate the complete packaging's volume using: `height x width x depth`.|
-|volumeDate|`recommended`|String|The date that the volume was last verified/measured. Use the format `dd/mm/yyyy`.|
-|weight|`required`|Numeric|The weight of the complete packaging.|
-|weightTolerance|`required`|Numeric|The threshold of weight that complete packaging can vary by. This can be given in grams or percentage.|
-|weightToleranceType|`required`|String|Either `grams` or `percentage` based on the value provided in `weightTolerance`|
-|weightDate|`recommended`|String|The date that the weight was last verified/measured. Use the format `dd/mm/yyyy`.|
-|servingCapacity|`recommended`|Numeric|The serving capacity of the complete packaging - how much of a product that can be contained in the complete packaging.|
-|servingCapacityDate|`recommended`|String|The date that the serving capacity was last verified/measured. Use the format `dd/mm/yyyy`.|
-|partOfMultipack|`required`|Boolean|Is the complete packaging part of a multipack? Answer as: `TRUE` for yes and `FALSE` for no.|
-|certification|`recommended`|Boolean|Does the complete packaging have a certificate (e.g. FSC, REACH, FSA etc.)? Answer as: `TRUE` for yes and `FALSE` for no.|
-|certificationClaims|`recommended`|List|The information regarding the certifications. The entries should be the [certification claims relationship list](../6_Relationship_Lists/6_005_Certification_Claims.md) identifiers.|
-|manufacturers|`recommended`|List|The information regarding the manufacturer(s). The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
-|manufacturedCountry|`recommended`|Numeric|The country the complete packaging was manufactured and/or combined in. Use the country numeric [ISO codes](https://www.iban.com/country-codes){target=_blank} as described in the ISO 3166 international standard.|
-|updateDate|`required`|String|The date that the complete packaging was provided/last updated. Use the format `dd/mm/yyyy`.|
-|releaseDate|`recommended`|String|The date that the complete packaging will be available to use. Use the format `dd/mm/yyyy`.|
-|discontinueDate|`recommended`|String|The date that the complete packaging will no longer be available to use. Use the format `dd/mm/yyyy`.|
+|identifier|`mandatory`|UUID|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
+|name|`optional`|String|The name of this complete packaging.|
+|description|`optional`|String|A brief description of this complete packaging.|
+|externalIdentifiers|`optional`|Dictionary|A dictionary of identifiers that might be used to identify the complete packaging in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
+|imageURLs|`optional`|List|URL(s) that links to a picture of the complete packaging. Please see the guidelines below on how to capture the image and name the URL.|
+|completePackagingConstituentsIdentifier|`mandatory`|List|The information regarding the consituents that are combined to create this complete packaging. The entries should be from the [Complete Packaging Constituents Relationship List](../6_Relationship_Lists/6_003_Complete_Packaging_Constituents.md) identifier.|
+|LOWcodeWOproduct|`optional`|String|The list of waste code for **only** the complete packaging, by itself (excluding the product). LOW code is synonymous with European Waste Catalogue Code (EWC). For example: an empty bottle would have a LOWcode of `15 01 02`. Please use [Dsposal](https://dsposal.uk/browse/ewc){target=_blank} or [legislation.gov](https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made){target=_blank} to find the LOWcode. **Note**: The LOWcode can based on its combination with other components and the actual product contained in the complete packaging. Be sure to only include the complete packaging LOWcode and not the complete packaging with the product. If you cannot find the code or are uncertain please enter `Uncertain`.|
+|productType|`optional`|String|Information about the product contained in the complete packaging. The entry here should be drawn from the [product type controlled list](../5_Controlled_Lists/5_012_Product_Type.md).|
+|LOWcodeWproduct|`optional`|String|The list of waste code for **everything** in the complete packaging. LOW code is synonymous with European Waste Catalogue Code (EWC). For example: an empty bottle would have a LOWcode of `15 01 02`. Please use [Dsposal](https://dsposal.uk/browse/ewc){target=_blank} or [legislation.gov](https://www.legislation.gov.uk/uksi/2005/895/schedule/1/made){target=_blank} to find the LOWcode. **Note**: The LOWcode can based on its combination with other components and the actual product contained in the complete packaging. Be sure to include the complete packaging LOWcode with the product. If you cannot find the code or are uncertain please enter `Uncertain`.|
+|onTheGo|`mandatory`|Boolean|Is the complete packaging often classed as packaging that will end up in street bins? Answer as: `TRUE` for yes and `FALSE` for no.|
+|householdWaste|`mandatory`|Boolean|Is the complete packaging often classed as packaging that will end up in kerbside collections? Answer as: `TRUE` for yes and `FALSE` for no.|
+|depositReturnSchemes|`mandatory`|List|Which countries support a deposit return scheme for this particular complete packaging? The entries here should be drawn from the [deposit return scheme controlled list](../5_Controlled_Lists/5_013_Deposit_Return_Scheme.md).|
+|completePackagingEndOfLifeRoutes|`optional`|List|The information regarding this complete packaging's proposed end of life routes. The entries should be the [complete packaging end of life routes](../6_Relationship_Lists/6_008_Complete_Packaging_End_of_Life_Routes.md) identifiers.|
+|recyclability|`optional`|Boolean|Is the complete packaging recyclable (as determined by a reputable source)? Answer as: `TRUE` for yes and `FALSE` for no.|
+|recyclabilityClaims|`optional`|List|The information regarding this recyclability claims. The entries should be the [recyclability claims relationship list](../6_Relationship_Lists/6_006_Recyclability_Claims.md) identifiers.|
+|height|`optional`|Decimal|The height of the complete packaging. Please see the guidelines below on how to properly measure and report the height.|
+|heightDate|`optional`|Date|The date that the height was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
+|width|`optional`|Decimal|The width of the complete packaging. Please see the guidelines below on how to properly measure and report the width.|
+|widthDate|`optional`|Date|The date that the width was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
+|depth|`optional`|Decimal|The depth of the complete packaging. Please see the guidelines below on how to properly measure and report the depth.|
+|depthDate|`optional`|Date|The date that the depth was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
+|volume|`optional`|Decimal|Using the height, width, and depth found using the measurement guidelines, calculate the complete packaging's volume using: `height x width x depth`.|
+|volumeDate|`optional`|Date|The date that the volume was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
+|weight|`mandatory`|Decimal|The weight of the complete packaging. Please see the guidelines below on how to properly measure and report the weight.|
+|weightTolerance|`mandatory`|Decimal|The threshold of weight that complete packaging can vary by. This can be given in grams or percentage.|
+|weightToleranceType|`mandatory`|String|Either `grams` or `percentage` based on the value provided in `weightTolerance`|
+|weightDate|`optional`|Date|The date that the weight was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
+|servingCapacity|`optional`|Integer|The serving capacity of the complete packaging - how much of a product that can be contained in the complete packaging.|
+|servingCapacityDate|`optional`|Date|The date that the serving capacity was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
+|partOfMultipack|`mandatory`|Boolean|Is the complete packaging part of a multipack? Answer as: `TRUE` for yes and `FALSE` for no.|
+|certification|`optional`|Boolean|Does the complete packaging have a certificate (e.g. FSC, REACH, FSA etc.)? Answer as: `TRUE` for yes and `FALSE` for no.|
+|certificationClaims|`optional`|List|The information regarding the certifications. The entries should be the [certification claims relationship list](../6_Relationship_Lists/6_005_Certification_Claims.md) identifiers.|
+|manufacturers|`optional`|List|The information regarding the manufacturer(s). The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
+|manufacturedCountry|`optional`|String|The country the component was manufactured in. Use the country numeric [ISO codes](https://www.iso.org/obp/ui/#search){target=_blank} as described in the [ISO 3166 international standard](https://www.iso.org/iso-3166-country-codes.html){target=_blank}.|
+|updateDate|`mandatory`|Date|The date that the complete packaging was provided/last updated. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
+|releaseDate|`optional`|Date|The date that the complete packaging will be available to use. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
+|discontinueDate|`optional`|Date|The date that the complete packaging will no longer be available to use. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 
 ## Diagram
 
 ``` mermaid
 erDiagram
-COMPONENTS }o--o{ COMPLETE_PACKAGING : within
+COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
   COMPLETE_PACKAGING {
-    identifier String
+    identifier UUID "*"
     name String
     description String
     externalIdentifiers Dictionary
     imageURLs List
-    completePackagingConstituentsIdentifier List
+    completePackagingConstituentsIdentifier List "*"
     LOWcodeWOproduct String
     productType String
     LOWcodeWproduct String
-    onTheGo Boolean
-    householdWaste Boolean
-    depositReturnSchemes List
+    onTheGo Boolean "*"
+    householdWaste Boolean "*"
+    depositReturnSchemes List "*"
     completePackagingEndOfLifeRoutes List
     recyclability Boolean
     recyclabilityClaims List
-    height Numeric
-    heightDate String
-    width Numeric
-    widthDate String
-    depth Numeric
-    depthDate String
-    volume Numeric
-    volumeDate String
-    weight Numeric
-    weightTolerance Numeric
-    weightToleranceType String
-    weightDate String
-    servingCapacity Numeric
-    servingCapacityDate String
-    partOfMultipack Boolean
+    height Decimal
+    heightDate Date
+    width Decimal
+    widthDate Date
+    depth Decimal
+    depthDate Date
+    volume Decimal
+    volumeDate Date
+    weight Decimal "*"
+    weightTolerance Decimal "*"
+    weightToleranceType String "*"
+    weightDate Date
+    servingCapacity Integer
+    servingCapacityDate Date
+    partOfMultipack Boolean "*"
     certification Boolean
     certificationClaims List
     manufacturers List
-    manufacturedCountry Numeric
-    updateDate String
-    releaseDate String
-    discontinueDate String
+    manufacturedCountry String
+    updateDate Date "*"
+    releaseDate Date
+    discontinueDate Date
   }
   COMPLETE_PACKAGING }o..o{ CONTROLLED_LISTS : attributes
   COMPLETE_PACKAGING }O..O{ RELATIONSHIP_LISTS : attributes
-  COMPLETE_PACKAGING }o..o{ MULTIPACK : within
-  COMPONENTS }o..o{ MULTIPACK : within
-  COMPLETE_PACKAGING }o..o{ LOAD_CATALOGUE : within
-  MULTIPACK }o..o{ LOAD_CATALOGUE : within
-  COMPONENTS }o..o{ LOAD_CATALOGUE : within
+  COMPLETE_PACKAGING }o..o{ MULTIPACK : multipack_constituents
+  COMPONENTS }o..o{ MULTIPACK : multipack_constituents
+  COMPLETE_PACKAGING }o..o{ LOADS : load_constituents
+  MULTIPACK }o..o{ LOADS : load_constituents
+  COMPONENTS }o..o{ LOADS : load_constituents
       CONTROLLED_LISTS {
-      productType recommended
-      depositReturnScheme recommended
+      productType optional
+      depositReturnScheme optional
     }
     RELATIONSHIP_LISTS {
       completePackagingEndOfLifeRoutes required
-      completePackagingConstituentsIdentifier required
-      recyclabilityClaims recommended
-      certificationClaims recommended
-      organisations recommended
+      recyclabilityClaims optional
+      certificationClaims optional
+      organisations optional
     }
 ```
 
-## Template
-
-Complete packaging should be provided as a separate csv file. The specification of this csv file is as follows:
-
-[Complete Packaging Template](https://www.open3p.org/wp-content/uploads/2023/09/completePackaging20230922.csv){target=_blank}
-
 ## Example
 
-=== "JSON"
+=== "Wine box - JSON"
 
-    ``` json linenums="1"
-    {
-        "identifier": "63df4b40-ba4f-472e-a260-f8a944eb7961",
-        "name": "4 Breaded Chicken Steaks packaging",
-        "description": "PET tray, lidding film, top & base label",
-        "externalIdentifiers": {
-            "internalIdentifer": "85467889",
-            "GTIN": "00123456789012"
-            },
-        "imageURLs": [
-            "http://standard.open3p.org/2.0/img/measurements/figure1.measuring.png"
-        ],
-        "completePackagingConstituentsIdentifier": [
-            "9F459508-E365-0B9F-E3BB-FF4A7AED481B", "7197de37-8b77-4032-b0fd-84f27bae97be", "0e9a7265-6213-4a76-9a45-3acc5d83fa6f", "1c042eee-ec7a-400b-b05b-ca0d319e9067"
-        ],
-        "LOWcodeWOproduct": "15 01 06",
-        "productType": "cp-product-type-0001",
-        "LOWcodeWproduct": "20 01 08",
-        "onTheGo": false,
-        "householdWaste": true,
-        "depositReturnSchemes": [
-            "cp-drs-0005"
-        ],
-        "completePackagingEndOfLifeRoutes": [
-            "1229f395-3065-4236-bc1e-2aa500f58a79"
-        ],
-        "recyclability": false,
-        "recyclabilityClaims": [
-            "b101889f-87e5-4c42-abb7-0df5fc3d1a26"
-        ],
-        "height": 220,
-        "heightDate": "01/01/2023",
-        "width": 170,
-        "widthDate": "01/01/2023",
-        "depth": 60,
-        "depthDate": "01/01/2023",
-        "volume": 0.002,
-        "volumeDate": "01/01/2023",
-        "weight": 32.8,
-        "weightTolerance": 5,
-        "weightToleranceType": "percentage",
-        "weightDate": "01/01/2023",
-        "servingCapacity": 4,
-        "servingCapacityDate": "01/01/2023",
-        "partOfMultipack": false,
-        "certification": true,
-        "certificationClaims": [
-            "eed87ac3-6e3e-45fb-af2c-dd0f64fdb597"
-        ],
-        "manufacturers": [""],
-        "manufacturedCountry": 826,
-        "updateDate": "01/01/2023",
-        "releaseDate": "01/01/2023",
-        "discontinueDate": ""
-    }
+    ``` json linenums="1" hl_lines="3 4"
+    [
+        {
+            "identifier": "516ac728-65e3-48c6-9756-37c29c177a7c",
+            "name": "Wine box",
+            "description": "Sturdy and branded, our cardboard box is crafted to hold 12 bottles securely. Includes inlay for secure transport.",
+            "externalIdentifiers": {
+                "internalIdentifer": "85467889",
+                "GTIN": "00123456789012"
+                },
+            "completePackagingConstituentsIdentifier": [
+                {
+                "materialConstituentsIdentifier": "64e3cf80-14f2-46d2-8f2f-181d48e02d70",
+                "materialCombinationIdentifier": "9dad67b0-d5a2-4afb-9287-e712fd1ea3e6"
+                },
+                {
+                "materialConstituentsIdentifier": "64e3cf80-14f2-46d2-8f2f-181d48e02d70",
+                "materialCombinationIdentifier": "8f87c708-8a6b-4c9d-ae6e-af0393f84a12"
+                }
+                ],
+            "LOWcodeWOproduct": "15 01 01",
+            "productType": "cp-product-type-0001",
+            "LOWcodeWproduct": "15 01 06",
+            "onTheGo": false,
+            "householdWaste": true,
+            "completePackagingEndOfLifeRoutes": [
+                "TBC"
+            ],
+            "recyclability": false,
+            "recyclabilityClaims": [
+                "TBC"
+            ],
+            "height": 382,
+            "heightDate": "2024-01-31",
+            "width": 388,
+            "widthDate": "2024-01-31",
+            "depth": 274,
+            "depthDate": "2024-01-31",
+            "volume": 40611184,
+            "volumeDate": "2024-01-31",
+            "weight": 450,
+            "weightTolerance": 58,
+            "weightToleranceType": "percentage",
+            "weightDate": "2024-01-31",
+            "servingCapacity": 12,
+            "servingCapacityDate": "2024-01-31",
+            "partOfMultipack": false,
+            "certification": true,
+            "certificationClaims": [
+                "TBC"
+            ],
+            "manufacturers": ["GB-COH-10906273"],
+            "manufacturedCountry": "826",
+            "updateDate": "2024-01-31",
+            "releaseDate": "2010-01-31",
+            "discontinueDate": ""
+        }
+    ]
     ```
-=== "CSV download"
+=== "Wine bottle - JSON"
 
-    * [Complete Packaging example download](https://www.opendatamanchester.org.uk/wp-content/uploads/2023/01/7_1_3_Complete_Packaging_Example.csv){target=_blank}
+    ``` json linenums="1" hl_lines="3 4"
+    [
+        {
+            "identifier": "123f1eab-f674-4009-862a-7168cd5cf53f",
+            "name": "Wine bottle",
+            "description": "750ml Bordeaux wine bottle with cork and two labels: Classic design, recyclable glass, sealed with a cork for freshness. Two labels for branding and information.",
+            "externalIdentifiers": {
+                "gtin": "0123456789012",
+                "sku": "5454632",
+                "WineMS": "316456"
+                },
+            "completePackagingConstituentsIdentifier": [
+                {
+                "materialConstituentsIdentifier": "cf2216d2-64df-4bcd-8f64-1396eddbae28",
+                "materialCombinationIdentifier": "94108707-b914-43f3-bed5-93adbbd208c1"
+                },
+                {
+                "materialConstituentsIdentifier": "cf2216d2-64df-4bcd-8f64-1396eddbae28",
+                "materialCombinationIdentifier": "4b99be14-c89e-4869-abb7-485240ea33c6"
+                },
+                {
+                "materialConstituentsIdentifier": "cf2216d2-64df-4bcd-8f64-1396eddbae28",
+                "materialCombinationIdentifier": "3d77b280-690e-4ccb-84f5-584c4cbcea36"
+                },
+                {
+                "materialConstituentsIdentifier": "cf2216d2-64df-4bcd-8f64-1396eddbae28",
+                "materialCombinationIdentifier": "4b50247a-b2d1-4438-ac8a-fb6768180136"
+                }
+                ],
+            "productType": "cp-product-type-0001",
+            "onTheGo": false,
+            "householdWaste": true,
+            "completePackagingEndOfLifeRoutes": [
+                "TBC"
+            ],
+            "recyclability": true,
+            "recyclabilityClaims": [
+                "TBC"
+            ],
+            "height": 305,
+            "heightDate": "2024-01-31",
+            "width": 72.4,
+            "widthDate": "2024-01-31",
+            "depth": 72.5,
+            "depthDate": "2024-01-31",
+            "weight": 710,
+            "weightTolerance": 6,
+            "weightToleranceType": "percentage",
+            "servingCapacity": 750,
+            "partOfMultipack": true,
+            "certification": true,
+            "certificationClaims": [
+                "1407ca7b-ebaf-472c-85c5-a7965a21f280"
+            ],
+            "manufacturers": ["GB-COH-10906273"],
+            "manufacturedCountry": "826",
+            "updateDate": "2024-01-31",
+            "releaseDate": "2010-01-31",
+            "discontinueDate": ""
+        }
+    ]
+    ```
+=== "Wine box - XML"
+
+    ``` xml linenums="1" hl_lines="3 4"
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <completePackage>
+        <identifier>516ac728-65e3-48c6-9756-37c29c177a7c</identifier>
+        <name>Wine box</name>
+        <description>Sturdy and branded, our cardboard box is crafted to hold 12 bottles securely. Includes inlay for secure transport.</description>
+        <externalIdentifiers>
+        <internalIdentifer>85467889</internalIdentifer>
+        <GTIN>00123456789012</GTIN>
+        </externalIdentifiers>
+        <completePackagingConstituentsIdentifier>
+        <materialConstituentsIdentifier>64e3cf80-14f2-46d2-8f2f-181d48e02d70</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>9dad67b0-d5a2-4afb-9287-e712fd1ea3e6</materialCombinationIdentifier>
+        </completePackagingConstituentsIdentifier>
+        <completePackagingConstituentsIdentifier>
+        <materialConstituentsIdentifier>64e3cf80-14f2-46d2-8f2f-181d48e02d70</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>8f87c708-8a6b-4c9d-ae6e-af0393f84a12</materialCombinationIdentifier>
+        </completePackagingConstituentsIdentifier>
+        <LOWcodeWOproduct>15 01 01</LOWcodeWOproduct>
+        <productType>cp-product-type-0001</productType>
+        <LOWcodeWproduct>15 01 06</LOWcodeWproduct>
+        <onTheGo>false</onTheGo>
+        <householdWaste>true</householdWaste>
+        <completePackagingEndOfLifeRoutes>TBC</completePackagingEndOfLifeRoutes>
+        <recyclability>false</recyclability>
+        <recyclabilityClaims>TBC</recyclabilityClaims>
+        <height>382</height>
+        <heightDate>2024-01-31</heightDate>
+        <width>388</width>
+        <widthDate>2024-01-31</widthDate>
+        <depth>274</depth>
+        <depthDate>2024-01-31</depthDate>
+        <volume>40611184</volume>
+        <volumeDate>2024-01-31</volumeDate>
+        <weight>450</weight>
+        <weightTolerance>58</weightTolerance>
+        <weightToleranceType>percentage</weightToleranceType>
+        <weightDate>2024-01-31</weightDate>
+        <servingCapacity>12</servingCapacity>
+        <servingCapacityDate>2024-01-31</servingCapacityDate>
+        <partOfMultipack>false</partOfMultipack>
+        <certification>true</certification>
+        <certificationClaims>TBC</certificationClaims>
+        <manufacturers>GB-COH-10906273</manufacturers>
+        <manufacturedCountry>826</manufacturedCountry>
+        <updateDate>2024-01-31</updateDate>
+        <releaseDate>2010-01-31</releaseDate>
+        <discontinueDate></discontinueDate>
+    </completePackage>
+    ```
+=== "Wine bottle - XML"
+
+    ``` xml linenums="1" hl_lines="3 4"
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <completePackage>
+        <identifier>123f1eab-f674-4009-862a-7168cd5cf53f</identifier>
+        <name>Wine bottle</name>
+        <description>750ml Bordeaux wine bottle with cork and two labels: Classic design, recyclable glass, sealed with a cork for freshness. Two labels for branding and information.</description>
+        <externalIdentifiers>
+        <gtin>0123456789012</gtin>
+        <sku>5454632</sku>
+        <WineMS>316456</WineMS>
+        </externalIdentifiers>
+        <completePackagingConstituentsIdentifier>
+        <materialConstituentsIdentifier>cf2216d2-64df-4bcd-8f64-1396eddbae28</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>94108707-b914-43f3-bed5-93adbbd208c1</materialCombinationIdentifier>
+        </completePackagingConstituentsIdentifier>
+        <completePackagingConstituentsIdentifier>
+        <materialConstituentsIdentifier>cf2216d2-64df-4bcd-8f64-1396eddbae28</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>4b99be14-c89e-4869-abb7-485240ea33c6</materialCombinationIdentifier>
+        </completePackagingConstituentsIdentifier>
+        <completePackagingConstituentsIdentifier>
+        <materialConstituentsIdentifier>cf2216d2-64df-4bcd-8f64-1396eddbae28</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>3d77b280-690e-4ccb-84f5-584c4cbcea36</materialCombinationIdentifier>
+        </completePackagingConstituentsIdentifier>
+        <completePackagingConstituentsIdentifier>
+        <materialConstituentsIdentifier>cf2216d2-64df-4bcd-8f64-1396eddbae28</materialConstituentsIdentifier>
+        <materialCombinationIdentifier>4b50247a-b2d1-4438-ac8a-fb6768180136</materialCombinationIdentifier>
+        </completePackagingConstituentsIdentifier>
+        <productType>cp-product-type-0001</productType>
+        <onTheGo>false</onTheGo>
+        <householdWaste>true</householdWaste>
+        <completePackagingEndOfLifeRoutes>TBC</completePackagingEndOfLifeRoutes>
+        <recyclability>true</recyclability>
+        <recyclabilityClaims>TBC</recyclabilityClaims>
+        <height>305</height>
+        <heightDate>2024-01-31</heightDate>
+        <width>72.4</width>
+        <widthDate>2024-01-31</widthDate>
+        <depth>72.5</depth>
+        <depthDate>2024-01-31</depthDate>
+        <weight>710</weight>
+        <weightTolerance>6</weightTolerance>
+        <weightToleranceType>percentage</weightToleranceType>
+        <servingCapacity>750</servingCapacity>
+        <partOfMultipack>true</partOfMultipack>
+        <certification>true</certification>
+        <certificationClaims>1407ca7b-ebaf-472c-85c5-a7965a21f280</certificationClaims>
+        <manufacturers>GB-COH-10906273</manufacturers>
+        <manufacturedCountry>826</manufacturedCountry>
+        <updateDate>2024-01-31</updateDate>
+        <releaseDate>2010-01-31</releaseDate>
+        <discontinueDate></discontinueDate>
+    </completePackage>
+    ```
+## Data flow
+
+``` mermaid
+flowchart LR
+    subgraph materials[Materials]
+        bm_example["example base materials"]
+    end
+        subgraph components[Components]
+        co_cardboardBox[Cardboard box
+        - 
+        9dad67b0-d5a2-4afb-9287-e712fd1ea3e]
+        co_tape[Tape
+        - 
+        8f87c708-8a6b-4c9d-ae6e-af0393f84a12]
+        co_wineBottle["Wine bottle
+        - 
+        94108707-b914-43f3-bed5-93adbbd208c1"]
+        co_cork["Cork
+        - 
+        4b99be14-c89e-4869-abb7-485240ea33c6"]
+        co_backLabel["Back label
+        - 
+        3d77b280-690e-4ccb-84f5-584c4cbcea36"]
+        co_frontLabel["Front label
+        - 
+        4b50247a-b2d1-4438-ac8a-fb6768180136"]
+    end
+    subgraph completePackages["`**Complete Packages**`"]
+        cp_wineBox["`**Wine Box
+        -
+        516ac728-65e3-48c6-9756-37c29c177a7c**`"]
+        cp_wineBottle["`**Wine Bottle
+        -
+        123f1eab-f674-4009-862a-7168cd5cf53f**`"]
+    end
+    subgraph multipacks[Multipacks]
+        mp_example[example multipacks]
+    end
+    materials --> components
+    co_cardboardBox --> cp_wineBox
+    co_tape --> cp_wineBox
+    co_wineBottle --> cp_wineBottle
+    co_cork --> cp_wineBottle
+    co_backLabel --> cp_wineBottle
+    co_frontLabel --> cp_wineBottle
+    cp_wineBox -.-> multipacks
+    cp_wineBottle -.-> multipacks
+```
 
 ## Guide for how to take measurements
 

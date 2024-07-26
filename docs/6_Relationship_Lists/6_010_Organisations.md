@@ -17,9 +17,9 @@ The organisations relationship list identifies the organisations that are involv
 ## Data
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
-|organisationIdentifier|`required`|String|Unique identifier for organisation using [Org.Id format](https://github.com/OpenDataServices/org-ids/). Where possible, using company numbers as the baseline for unambiguous identification. This allows an internationally unique ID (EG: An identifier of the form GB-COH-XXXXXXXX for a UK-registered company). To lookup the format for a location & organisation type use [org-id.guide](http://org-id.guide/).|
-|organisationName|`recommended`|String|Name of the organisation.|
-|postcode|`recommended`|String|Postcode for organisation headquarters.|
+|organisationIdentifier|`mandatory`|String|Unique identifier for organisation using [Org.Id format](https://github.com/OpenDataServices/org-ids/). Where possible, using company numbers as the baseline for unambiguous identification. This allows an internationally unique ID (EG: An identifier of the form GB-COH-XXXXXXXX for a UK-registered company). To lookup the format for a location & organisation type use [org-id.guide](http://org-id.guide/).|
+|organisationName|`optional`|String|Name of the organisation.|
+|postcode|`optional`|String|Postcode for organisation headquarters.|
 
 ## Diagram
 
@@ -32,7 +32,7 @@ erDiagram
   MULTIPACK }o..o{ ORGANISATIONS : within
   LOAD }o..o{ ORGANISATIONS : within
   ORGANISATIONS {
-    organisationIdentifier String
+    organisationIdentifier String "*"
     organisationName String
     postcode String
   }

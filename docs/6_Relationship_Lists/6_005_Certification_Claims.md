@@ -15,9 +15,9 @@ The Certification Claims relationship list identifies the certificates that can 
 ## Data
 |Column|<div style="width:90px">Status</div>|Format|Notes|
 |:-|:-|:-|:-|
-|certificationIdentifier|`required`|String|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
-|certificationSource|`required`|String|What source provided the certificate? The entry should be the [Certification Source Controlled List](../5_Controlled_Lists/5_002_Certification_Source.md) identifier.|
-|certificationIssueDate|`recommended`|String|The date that the certificate was provided/last updated. Use the format `dd/mm/yyyy`.|
+|certificationIdentifier|`mandatory`|UUID|A globally unique identifier. See [identifiers](../4_Identifiers/4_1_Identifiers.md) section for information on how to construct this identifier|
+|certificationSource|`mandatory`|String|What source provided the certificate? The entry should be the [Certification Source Controlled List](../5_Controlled_Lists/5_002_Certification_Source.md) identifier.|
+|certificationIssueDate|`optional`|Date|The date that the certificate was provided/last updated. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 
 ## Diagram
 
@@ -28,13 +28,13 @@ erDiagram
   COMPONENTS}o..o{ CERTIFICATION_CLAIMS : within
   COMPLETE_PACKAGING }o..o{ CERTIFICATION_CLAIMS : within
   CERTIFICATION_CLAIMS {
-    certificationIdentifier String
-    certificationSource String
-    certificationIssueDate String
+    certificationIdentifier UUID "*"
+    certificationSource String "*"
+    certificationIssueDate Date
   }
   CERTIFICATION_CLAIMS }o--o{ CONTROLLED_LISTS : attributes
-      CONTROLLED_LISTS {
-    certificationSource required }
+  CONTROLLED_LISTS {
+    certificationSource mandatory 
   }
 ```
 
@@ -53,7 +53,7 @@ Certification claims should be provided as a separate csv file. The specificatio
     {
       "certificationIdentifier": "eed87ac3-6e3e-45fb-af2c-dd0f64fdb597",
       "certificationSource": "certification-source-0002",
-      "certificationIssueDate": "01/08/2022"
+      "certificationIssueDate": "2022-08-01"
     }
     ```
 

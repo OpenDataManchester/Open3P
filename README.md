@@ -1,43 +1,37 @@
-# Open 3P
+# Welcome to Open 3p
 
-# Introduction
+This is the Open 3P project repository. It contains all the schemas, controlled lists and additional information to publish standard.open3p.org. For the site itself, please see [standard.open3p.org](https://standard.open3p.org/) instead. 
 
-## What is the Open 3P?
+The site is build with [![Built with Material for MkDocs](https://img.shields.io/badge/Material_for_MkDocs-526CFE?style=for-the-badge&logo=MaterialForMkDocs&logoColor=white)](https://squidfunk.github.io/mkdocs-material/) from this repository.
 
-Open 3P is an open data standard for packaging. It has been developed as part of the Plastics Packaging Portals (PPP) Project, an Innovate UK supported project under the Smart Sustainable Plastic Packaging (SSPP) Fund. The project is led by OPRL alongside project partners Open Data Manchester, Dsposal, RECOUP, and Ecosurety.
+## What is Open 3P?
 
-The project brings together stakeholders from the entire packaging ecosystem to explore how we might create the foundations for systemic change 
-in the packaging value chain. We have had more than 80 individuals from over 40 organisations take part in our workshops, interviews and research and we are incredibly grateful to them for sharing their time, expertise and support. 
+Open 3P is the open standard for packaging data. The project to create the standard started June 2021 and contained project partners:
 
-PPP has 5 main aims which will be delivered by 30th November 2022:
+- Open Data Manchester
+- OPRL
+- Ecosurety
+- RECOUP
+- Dsposal
 
-1. Extend the Open3R Household Waste Recycling Centre (HWRCs) [data standard](https://opendatamanchester.github.io/Open3R/)
-2. Develop a prototype portal to capture data on geographically located recycling services such as HWRCs, bring banks, instore take back schemes
-to support a comprehensive open database of this information
-3. Develop an open standard for plastic packaging data (Open 3P)
-4. Develop a prototype portal to capture packaging attribute data to enable it to be shared along the plastic packaging value chain and reported on
-5. Determine a sustainable business model and governance structure
+v1.0 of the standard was released August 2022 with a focus on plastic packaging within the United Kingdom geography.
 
-Although this funding and this phase of the project is focussed on plastic packaging, which is what Open 3P covers currently, there is a commitment and desire to extend it to cover all types of packaging.
+v2.0 was released June 2023 and incorported all materials types within the United Kingdom geography.
 
-By improving the data quality, granularity and availability of both packaging data and recycling services data and by enabling these datasets to be linked we believe we can support more sustainable packaging choices. By giving stakeholders visibility of the different parts of the chain we can help designers and manufacturers consider the end-of-life implications of their choices and we can help them determine the difference between a material being technically  recyclable and the practicality of it being recycled. Providing recyclers and reprocessors with detailed data about material types and recycling disruptors we can enable more materials to be kept at a higher value for longer. Improving these datasets also helps deliver better information into the hands of consumers to support them to recycle more. Better data on market trends in packaging can also provide more certainty and unlock investment and innovation so that we can increase our recycling infrastructure and ensure more of our waste packaging ends up recycled.
+Work is currently in development to incorporate other geographies with aims to becoming the global standard for packaging data.
 
-The standard is being developed according to the [OpenStand](https://open-stand.org/) principles of:
+## Improvementing schemas
 
-* Due process
-* Broad consensus
-* Transparency
-* Balance
-* Openness
+We are always interested in practical suggestions for improvements to Open 3P, and our collection of schemas has been growing gradually since it's initital launch in 2021.
 
-## What is an open data standard?
+Open 3P is designed to be a practical and user-friendly solution. We acknowledge that it's impossible to capture every nuance of packaging specifications. Our goal is to provide a simplified yet effective framework.
 
-An open data standard is a set of rules that describe the structure and components of a dataset. Putting rules in place means people and organisations that publish and share data about the same thing can use the same language to talk about it. Having a standard makes it a lot easier to understand and reuse data that has been published and shared. It is especially useful if data is being published and shared by lots of different organisations to make an even bigger dataset. Anyone can then read about the standard, contribute data, or use the data knowing everyone is talking about the same thing.
+## A Simplified Approach
 
-## How is the standard being developed?
+We recognise that packaging details can be intricate. In the spirit of simplicity and user-friendliness, Open 3P intentionally focuses on key elements for exchanging data through the supply chain. While it might seem feasible to include more granular details, we believe in keeping the standard straightforward for the benefit of data capture, exchange and analysis.
 
-The initial standard development was funded by [Innovate UK](https://www.gov.uk/government/organisations/innovate-uk), and is being developed through workshops with industry experts over a number of iterations.
+## User-Centric Philosophy
 
-## How to use the standard
+Our commitment is to create a standard that is easy to understand and use. This means making choices that prioritise simplicity over exhaustive complexity. We aim to strike a balance that serves the needs of manufacturers, retailers, compliance schemes and all stakeholders involved.
 
-The documentation here details how to *publish* data to the standard, and how to use data that has been published to the standard. At this stage, the expectation is that data management will be supported by additional applications (such as the packaging portal that is also being developed as part of this project), and it is possible to record and publish data to the standard using the provided csv files in [Section 7](/PPP/7_Supporting_Files/7_2_Example_Files/) of this documentation. 
+In essence, Open 3P is a practical solution that acknowledges the complexity of packaging specifications while ensuring a straightforward and usable exchange standard for the community.

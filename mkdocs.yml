@@ -1,5 +1,13 @@
+# Project information
 site_name: Open3P
-site_description: Open3P is an open data standard for the packaging value chain.
+site_url: https://standard.open3p.org
+site_description: Open3P is an open standard for packaging data.
+
+# Copyright
+copyright: Copyright &copy; Open Data Manchester CIC, and released under the Apache License, Version 2.0.
+
+
+# Configuration
 theme:
   name: material
   custom_dir: overrides
@@ -27,9 +35,6 @@ theme:
     - navigation.footer
     - content.code.copy
 
-copyright: Copyright &copy; Open Data Manchester CIC, and released under the Apache License, Version 2.0.
-
-
 # Page Tree
 nav:
   - Home: index.md
@@ -41,12 +46,13 @@ nav:
   - Data Formats: 2_Data_Formats/2_1_Data_Formats.md
   - Identifiers: 4_Identifiers/4_1_Identifiers.md
   - Core Schema:
+    - Definition: 3_Data_Specification/3_0_Data_Specification.md
     - Base Materials: 3_Data_Specification/3_1_Base_Materials.md
     - Materials: 3_Data_Specification/3_2_Materials.md
     - Components: 3_Data_Specification/3_3_Components.md
     - Complete Packaging: 3_Data_Specification/3_4_Complete_Packaging.md
     - Multipack: 3_Data_Specification/3_5_Multipack.md
-    - Load: 3_Data_Specification/3_7_Load.md
+    - Loads: 3_Data_Specification/3_7_Load.md
   - Controlled Lists:
     - Definition: 5_Controlled_Lists/5_000_Controlled_Lists.md
     - Material Type: 5_Controlled_Lists/5_001_Material_Type.md
@@ -78,9 +84,10 @@ nav:
     - Complete Packaging End of Life Routes: 6_Relationship_Lists/6_008_Complete_Packaging_End_of_Life_Routes.md
     - Recycled Content Claims: 6_Relationship_Lists/6_009_Recycled_Content_Claims.md
     - Organisations: 6_Relationship_Lists/6_010_Organisations.md
-  - Supporting Files: 7_Supporting_Files/7_2_Example_Files.md
-  - Goverance: 8_Governance/8_1_Governance.md
+  # - Supporting Files: 7_Supporting_Files/7_2_Example_Files.md
+  - Governance: 8_Governance/8_1_Governance.md
   - Licence: 10_Licence/10_01_Licence.md
+  - Glossary: 11_Glossary/11_000_Glossary.md
   - Change Log: 9_Change_Log/8_1_Change_Log.md
 
 extra:
@@ -115,16 +122,17 @@ markdown_extensions:
   - meta
   - attr_list
   - md_in_html
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
-      alternate_style: true 
+      alternate_style: true
   - toc:
       permalink: True
-  - attr_list
   - tables
-
 
