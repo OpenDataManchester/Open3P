@@ -25,18 +25,7 @@ The complete packaging schema contains information regarding the complete packag
 |completePackagingEndOfLifeRoutes|`optional`|List|The information regarding this complete packaging's proposed end of life routes. The entries should be the [complete packaging end of life routes](../6_Relationship_Lists/6_008_Complete_Packaging_End_of_Life_Routes.md) identifiers.|
 |recyclability|`optional`|Boolean|Is the complete packaging recyclable (as determined by a reputable source)? Answer as: `TRUE` for yes and `FALSE` for no.|
 |recyclabilityClaims|`optional`|List|The information regarding this recyclability claims. The entries should be the [recyclability claims relationship list](../6_Relationship_Lists/6_006_Recyclability_Claims.md) identifiers.|
-|height|`optional`|Decimal|The height of the complete packaging. Please see the guidelines below on how to properly measure and report the height.|
-|heightDate|`optional`|Date|The date that the height was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
-|width|`optional`|Decimal|The width of the complete packaging. Please see the guidelines below on how to properly measure and report the width.|
-|widthDate|`optional`|Date|The date that the width was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
-|depth|`optional`|Decimal|The depth of the complete packaging. Please see the guidelines below on how to properly measure and report the depth.|
-|depthDate|`optional`|Date|The date that the depth was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
-|volume|`optional`|Decimal|Using the height, width, and depth found using the measurement guidelines, calculate the complete packaging's volume using: `height x width x depth`.|
-|volumeDate|`optional`|Date|The date that the volume was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
-|weight|`mandatory`|Decimal|The weight of the complete packaging. Please see the guidelines below on how to properly measure and report the weight.|
-|weightTolerance|`mandatory`|Decimal|The threshold of weight that complete packaging can vary by. This can be given in grams or percentage.|
-|weightToleranceType|`mandatory`|String|Either `grams` or `percentage` based on the value provided in `weightTolerance`|
-|weightDate|`optional`|Date|The date that the weight was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
+|measurements|`mandatory`|List|The information regarding the measurements of the complete packaging. The entries should be from the [Measurements Relationship List](../6_Relationship_Lists/6_012_Measurements.md).|
 |servingCapacity|`optional`|Integer|The serving capacity of the complete packaging - how much of a product that can be contained in the complete packaging.|
 |servingCapacityDate|`optional`|Date|The date that the serving capacity was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 |partOfMultipack|`mandatory`|Boolean|Is the complete packaging part of a multipack? Answer as: `TRUE` for yes and `FALSE` for no.|
@@ -69,18 +58,7 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
     completePackagingEndOfLifeRoutes List
     recyclability Boolean
     recyclabilityClaims List
-    height Decimal
-    heightDate Date
-    width Decimal
-    widthDate Date
-    depth Decimal
-    depthDate Date
-    volume Decimal
-    volumeDate Date
-    weight Decimal "*"
-    weightTolerance Decimal "*"
-    weightToleranceType String "*"
-    weightDate Date
+    measurements List "*"
     servingCapacity Integer
     servingCapacityDate Date
     partOfMultipack Boolean "*"
@@ -104,7 +82,8 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
       depositReturnScheme optional
     }
     RELATIONSHIP_LISTS {
-      completePackagingEndOfLifeRoutes required
+      measurements mandatory
+      completePackagingEndOfLifeRoutes mandatory
       recyclabilityClaims optional
       certificationClaims optional
       organisations optional
@@ -147,18 +126,9 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
             "recyclabilityClaims": [
                 "TBC"
             ],
-            "height": 382,
-            "heightDate": "2024-01-31",
-            "width": 388,
-            "widthDate": "2024-01-31",
-            "depth": 274,
-            "depthDate": "2024-01-31",
-            "volume": 40611184,
-            "volumeDate": "2024-01-31",
-            "weight": 450,
-            "weightTolerance": 58,
-            "weightToleranceType": "percentage",
-            "weightDate": "2024-01-31",
+            "measurements": [
+                "0e46eefa-473a-4bb0-9b5f-cbdfd144cde7"
+            ],
             "servingCapacity": 12,
             "servingCapacityDate": "2024-01-31",
             "partOfMultipack": false,
@@ -215,15 +185,9 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
             "recyclabilityClaims": [
                 "TBC"
             ],
-            "height": 305,
-            "heightDate": "2024-01-31",
-            "width": 72.4,
-            "widthDate": "2024-01-31",
-            "depth": 72.5,
-            "depthDate": "2024-01-31",
-            "weight": 710,
-            "weightTolerance": 6,
-            "weightToleranceType": "percentage",
+            "measurements": [
+                "af36b114-9e8a-489e-868e-00e68b7ecec3"
+            ],
             "servingCapacity": 750,
             "partOfMultipack": true,
             "certification": true,
@@ -266,18 +230,7 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
         <completePackagingEndOfLifeRoutes>TBC</completePackagingEndOfLifeRoutes>
         <recyclability>false</recyclability>
         <recyclabilityClaims>TBC</recyclabilityClaims>
-        <height>382</height>
-        <heightDate>2024-01-31</heightDate>
-        <width>388</width>
-        <widthDate>2024-01-31</widthDate>
-        <depth>274</depth>
-        <depthDate>2024-01-31</depthDate>
-        <volume>40611184</volume>
-        <volumeDate>2024-01-31</volumeDate>
-        <weight>450</weight>
-        <weightTolerance>58</weightTolerance>
-        <weightToleranceType>percentage</weightToleranceType>
-        <weightDate>2024-01-31</weightDate>
+        <measurements>0e46eefa-473a-4bb0-9b5f-cbdfd144cde7</measurements>
         <servingCapacity>12</servingCapacity>
         <servingCapacityDate>2024-01-31</servingCapacityDate>
         <partOfMultipack>false</partOfMultipack>
@@ -325,15 +278,7 @@ COMPONENTS }o--o{ COMPLETE_PACKAGING : complete_packaging_constituents
         <completePackagingEndOfLifeRoutes>TBC</completePackagingEndOfLifeRoutes>
         <recyclability>true</recyclability>
         <recyclabilityClaims>TBC</recyclabilityClaims>
-        <height>305</height>
-        <heightDate>2024-01-31</heightDate>
-        <width>72.4</width>
-        <widthDate>2024-01-31</widthDate>
-        <depth>72.5</depth>
-        <depthDate>2024-01-31</depthDate>
-        <weight>710</weight>
-        <weightTolerance>6</weightTolerance>
-        <weightToleranceType>percentage</weightToleranceType>
+        <measurements>af36b114-9e8a-489e-868e-00e68b7ecec3</measurements>
         <servingCapacity>750</servingCapacity>
         <partOfMultipack>true</partOfMultipack>
         <certification>true</certification>
@@ -393,32 +338,6 @@ flowchart LR
     cp_wineBox -.-> multipacks
     cp_wineBottle -.-> multipacks
 ```
-
-## Guide for how to take measurements
-
-### Units
-
-All measurements should be given using the metric system.
-
-- Height: millimetre (mm)
-- Width: millimetre (mm)
-- Length: millimetre (mm)
-- Volume: cubic metre (m3)
-- Weight: grams (g)
-- servingCapacity: grams (g)
-
-Numbers should be entered with a decimal place, a space between the number, and the unit as specified above. Use the decimal / full stop / period character as a separator. For example: volume = 20.000 mm3. Do not exceed 3 decimal places.
-
-**Important**: When converting between systems of measurement, perform the conversion first and then apply rounding. This will give more accuracy and consistency.
-
-### Default Front of a complete packaging
-As with taking and reporting measurements for components, we use the [GS1](https://www.gs1.org/){target=_blank} method for taking measurements. Now, with all the components put together to form the complete packaging, first find the default front, the the face with the largest area, where area is equal to the width times the height.
-
-- The side with the maximum area then becomes the default front of that complete packaging.
-
-### Measuring the height, width, and depth of a complete packaging
-After the default front has been determined, it is possible to determine the height, width, and depth of the complete packaging. Please follow the measurement guidelines provided by [GS1](https://www.gs1.org/standards/gs1-package-and-product-measurement-standard/current-standard#4-Consumer-(end-user)-trade-items+4-3-Determining-the-height,-width-and-depth){target=_blank}
-
 
 ## Guide for complete packaging images
 As with providing measurements, please first find the default front of the complete packaging. The image capturing process and naming convention is similar to [GS1](https://www.gs1.org/standards/gs1-product-image-specification-standard/current-standard#1-Introduction){target=_blank}. 

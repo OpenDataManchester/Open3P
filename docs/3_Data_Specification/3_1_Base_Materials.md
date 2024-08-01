@@ -20,6 +20,7 @@ The base materials schema contains information regarding the materials at the ve
 |type|`optional`|String|What type of base material is this? The entry here should be drawn from the [Material Type Controlled List](../5_Controlled_Lists/5_001_Material_Type.md).|
 |materialChemCID|`optional`|String|The PubChem CID for the exact base material used. The PubChem CID is PubChem's compound identifier, which is a non-zero integer for a unique chemical structure. PubChem CID can be found using their [search](https://pubchem.ncbi.nlm.nih.gov/){target=_blank}. If for some reason the PubChem CID cannot be located, consider contributing to PubChem and create the compound identifier. However, if this cannot be done, please enter `Unknown`.|
 |externalIdentifiers|`optional`|Dictionary|A dictionary of identifiers that might be used to identify the base material in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
+|measurements|`optional`|List|The information regarding the measurements of the base material. The entries should be from the [Measurements Relationship List](../6_Relationship_Lists/6_012_Measurements.md).|
 |certification|`optional`|Boolean|Does the base material have a certificate (e.g. FSC, REACH, FSA etc.)? Answer as: `TRUE` for yes and `FALSE` for no.|
 |certificationClaims|`optional`|List|The information regarding the certification. The entries should be the [Certification Claims Relationship List](../6_Relationship_Lists/6_005_Certification_Claims.md) identifiers.|
 |manufacturers|`optional`|List|The information regarding the manufacturer(s). The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
@@ -36,6 +37,7 @@ erDiagram
     type String
     materialChemCID String
     externalIdentifiers Dictionary
+    measurements List
     certification Boolean
     certificationClaims List
     manufacturers List
@@ -51,6 +53,7 @@ erDiagram
   RELATIONSHIP_LISTS {
     certificationClaims optional
     organisations optional
+    measurements optional
   }
 ```
 
