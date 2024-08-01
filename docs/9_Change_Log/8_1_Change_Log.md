@@ -5,9 +5,13 @@ title: Latest Updates
 # Latest Updates
 A document that contains all the changes made to the standard.
 
+## August 1, 2024
+- Updated home page to show versio 3.0 unreleased
+
 ## July 11, 2024
 ### Documents
 - Added cork-cork explanation to data flow
+- Added milk bottle example to data flow
 
 ## May 08, 2024
 
