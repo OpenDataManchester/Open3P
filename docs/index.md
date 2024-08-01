@@ -13,7 +13,7 @@ The Open 3P standard for packaging data has been created to provide information 
 
 ## Version
 
-Version 2.1 Published 2024-07-26
+Version 3.0 UNRELEASED
 
 ## Working with the Standard
 
