@@ -818,6 +818,8 @@
       
         
       
+        
+      
     
     
     
@@ -1205,6 +1207,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5_Controlled_Lists/5_017_Measures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Measures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1220,6 +1243,8 @@
   
     
     
+      
+        
       
         
       
@@ -1527,6 +1552,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6_Relationship_Lists/6_012_Measurements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Measurements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1678,6 +1724,12 @@ Yes, every packaging item must include a Base Material. This foundational compon
 <td style="text-align: left;">A dictionary of identifiers that might be used to identify the base material in other systems. For example: manufacturer&rsquo;s own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. <code>{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}</code></td>
 </tr>
 <tr>
+<td style="text-align: left;">measurements</td>
+<td style="text-align: left;"><code>optional</code></td>
+<td style="text-align: left;">List</td>
+<td style="text-align: left;">The information regarding the measurements of the base material. The entries should be from the <a href="../../6_Relationship_Lists/6_012_Measurements/">Measurements Relationship List</a>.</td>
+</tr>
+<tr>
 <td style="text-align: left;">certification</td>
 <td style="text-align: left;"><code>optional</code></td>
 <td style="text-align: left;">Boolean</td>
@@ -1717,6 +1769,7 @@ Yes, every packaging item must include a Base Material. This foundational compon
     type String
     materialChemCID String
     externalIdentifiers Dictionary
+    measurements List
     certification Boolean
     certificationClaims List
     manufacturers List
@@ -1732,6 +1785,7 @@ Yes, every packaging item must include a Base Material. This foundational compon
   RELATIONSHIP_LISTS {
     certificationClaims optional
     organisations optional
+    measurements optional
   }</code></pre>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Cardboard - JSON</label><label for="__tabbed_1_2">Soda ash - JSON</label><label for="__tabbed_1_3">Cardboard - XML</label><label for="__tabbed_1_4">Soda ash - XML</label></div>

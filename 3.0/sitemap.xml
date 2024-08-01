@@ -171,6 +171,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://standard.open3p.org/3.0/5_Controlled_Lists/5_017_Measures/</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://standard.open3p.org/3.0/6_Relationship_Lists/6_000_Relationship_Lists/</loc>
          <lastmod>2024-08-01</lastmod>
          <changefreq>daily</changefreq>
@@ -227,6 +232,11 @@
     </url>
     <url>
          <loc>https://standard.open3p.org/3.0/6_Relationship_Lists/6_011_Load_Constituents/</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://standard.open3p.org/3.0/6_Relationship_Lists/6_012_Measurements/</loc>
          <lastmod>2024-08-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
