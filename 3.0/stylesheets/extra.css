@@ -29,3 +29,7 @@
     mask-image: var(--md-status--updated);
     -webkit-mask-image: var(--md-status--updated);
   }
+
+  .addition {
+    color: #EE0F0F;
+  }
