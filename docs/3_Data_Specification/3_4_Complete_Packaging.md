@@ -1,6 +1,7 @@
 ---
 title: Complete Packaging
 description: Complete packaging items are the finished packaging within Open 3P.
+status: updated
 ---
 
 # Complete Packaging
@@ -25,7 +26,7 @@ The complete packaging schema contains information regarding the complete packag
 |completePackagingEndOfLifeRoutes|`optional`|List|The information regarding this complete packaging's proposed end of life routes. The entries should be the [complete packaging end of life routes](../6_Relationship_Lists/6_008_Complete_Packaging_End_of_Life_Routes.md) identifiers.|
 |recyclability|`optional`|Boolean|Is the complete packaging recyclable (as determined by a reputable source)? Answer as: `TRUE` for yes and `FALSE` for no.|
 |recyclabilityClaims|`optional`|List|The information regarding this recyclability claims. The entries should be the [recyclability claims relationship list](../6_Relationship_Lists/6_006_Recyclability_Claims.md) identifiers.|
-|measurements|`mandatory`|List|The information regarding the measurements of the complete packaging. The entries should be from the [Measurements Relationship List](../6_Relationship_Lists/6_012_Measurements.md).|
+|measurements fontawesome-solid-square-plus:{ title="Added to this version" .addition }|`mandatory`|List|The information regarding the measurements of the complete packaging. The entries should be from the [Measurements Relationship List](../6_Relationship_Lists/6_012_Measurements.md).|
 |servingCapacity|`optional`|Integer|The serving capacity of the complete packaging - how much of a product that can be contained in the complete packaging.|
 |servingCapacityDate|`optional`|Date|The date that the serving capacity was last verified/measured. Use the format `yyyy-mm-dd` adhering to the [ISO 8601 dateTime standard](https://www.iso.org/iso-8601-date-and-time-format.html).|
 |partOfMultipack|`mandatory`|Boolean|Is the complete packaging part of a multipack? Answer as: `TRUE` for yes and `FALSE` for no.|

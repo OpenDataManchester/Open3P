@@ -93,6 +93,9 @@ nav:
   - Change Log: 9_Change_Log/8_1_Change_Log.md
 
 extra:
+  status:
+    new: Added in this version
+    updated: Updated in this version
   version:
     provider: mike
   social:
@@ -138,3 +141,6 @@ markdown_extensions:
       permalink: True
   - tables
 
+# Additional styling
+extra_css:
+  - stylesheets/extra.css

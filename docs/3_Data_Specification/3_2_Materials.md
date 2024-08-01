@@ -1,6 +1,7 @@
 ---
 title: Materials
 description: Materials are a combination of base materials within Open 3P.
+status: updated
 ---
 
 # Materials
@@ -15,7 +16,7 @@ The materials schema contains information regarding the materials that are used 
 |externalIdentifiers|`optional`|Dictionary|A dictionary of identifiers that might be used to identify the material in other systems. For example: manufacturer's own internal identifier, bar codes or global trade item number (gtin). To provide external identifiers please follow this format. `{'externalIdentifierName1': 'identifier1', 'externalIdentifierName2': 'identifier2'}`|
 |materialConstituents|`mandatory`|List|The information regarding the consituents that are combined to create this material. The entries should be from the [Material Constituents Relationship List](../6_Relationship_Lists/6_001_Material_Constituents.md) identifier.|
 |combinationPurpose|`optional`|String|Why is this material being used? Use the identifier of the function that this row relates to. The entry here should be drawn from the [Function Controlled List](../5_Controlled_Lists/5_004_Function.md).|
-|measurements|`optional`|List|The information regarding the measurements of the material. The entries should be from the [Measurements Relationship List](../6_Relationship_Lists/6_012_Measurements.md).|
+|measurements fontawesome-solid-square-plus:{ title="Added to this version" .addition }|`optional`|List|The information regarding the measurements of the material. The entries should be from the [Measurements Relationship List](../6_Relationship_Lists/6_012_Measurements.md).|
 |certification|`optional`|Boolean|Does the material have a certificate (e.g. FSC, REACH, FSA etc.)? Answer as: `TRUE` for yes and `FALSE` for no.|
 |certificationClaims|`optional`|List|The information regarding the certification. The entries should be the [Certification Claims Relationship List](../6_Relationship_Lists/6_005_Certification_Claims.md) identifiers.|
 |manufacturers|`optional`|List|The information regarding the manufacturer(s). The entries should be the [Organisations Relationship List](../6_Relationship_Lists/6_010_Organisations.md) identifiers.|
