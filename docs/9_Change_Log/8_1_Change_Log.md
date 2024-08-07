@@ -1,9 +1,12 @@
----
-title: Latest Updates
----
-
-# Latest Updates
+# Change Log
 A document that contains all the changes made to the standard.
+
+## Open 3P
+
+### 3.0.0-alpha <small>01 Auguse, 2024</small> { id="3.0.0" }
+
+- Fixed #7380: Navigation icons disappearing on hover in Safari
+- Fixed #7367: Blog readtime computation includes SVG text content
 
 ## August 1, 2024
 
