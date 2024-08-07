@@ -1,16 +1,21 @@
 # Project information
-site_name: Open3P
+site_name: Open 3P
 site_url: https://standard.open3p.org
-site_description: Open3P is an open standard for packaging data.
+site_author: Open Data Manchester CIC
+site_description: Open3 P is an open standard for packaging data.
+
+# Repository
+repo_name: ODM/Open3P
+repo_url: https://github.com/OpenDataManchester/Open3p
 
 # Copyright
 copyright: Copyright &copy; Open Data Manchester CIC, and released under the Apache License, Version 2.0.
-
 
 # Configuration
 theme:
   name: material
   custom_dir: overrides
+  logo: img/Open_3P_logo.png
   favicon: img/favicon-192.png
   icon:
     repo: fontawesome/brands/git-alt
@@ -112,8 +117,6 @@ extra:
     - icon: fontawesome/solid/globe
       link: https://www.opendatamanchester.org.uk/
       name: ODM Website
-repo_url: https://github.com/OpenDataManchester/PPP
-repo_name: ODM/PPP
 edit_uri: ""
 markdown_extensions:
   - admonition
