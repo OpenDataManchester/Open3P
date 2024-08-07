@@ -5,9 +5,17 @@ title: Latest Updates
 # Latest Updates
 A document that contains all the changes made to the standard.
 
+## 2.1.1 August 07, 2024 { id="2.1.1" }
+### Documents
+- Added Open 3P logo
+- Added author into meta data
+- Updated site name
+- Updated repository name and url
+
 ## July 11, 2024
 ### Documents
 - Added cork-cork explanation to data flow
+- Added milk bottle example to data flow
 
 ## May 08, 2024
 
