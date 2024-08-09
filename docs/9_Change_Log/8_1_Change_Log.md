@@ -5,6 +5,10 @@ title: Latest Updates
 # Latest Updates
 A document that contains all the changes made to the standard.
 
+## 2.1.2 August 09, 2024 { id="2.1.2"}
+### Documents
+ - Updated licence
+
 ## 2.1.1 August 07, 2024 { id="2.1.1" }
 ### Documents
 - Added Open 3P logo
