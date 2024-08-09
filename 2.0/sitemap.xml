@@ -2,227 +2,227 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://standard.open3p.org/2.0/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/10_Licence/10_01_Licence/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/1_Start_Here/1_1_Introduction/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/1_Start_Here/1_2_Key_Concepts/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/1_Start_Here/1_3_Data_Flow/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/1_Start_Here/1_4_Data_Schema/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/2_Data_Formats/2_1_Data_Formats/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/3_Data_Specification/3_1_Base_Materials/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/3_Data_Specification/3_2_Materials/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/3_Data_Specification/3_3_Components/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/3_Data_Specification/3_4_Complete_Packaging/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/3_Data_Specification/3_5_Multipack/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/3_Data_Specification/3_6_Load_Catalogue/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/3_Data_Specification/3_7_Load/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/4_Identifiers/4_1_Identifiers/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/5_Controlled_Lists/5_000_Controlled_Lists/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/5_Controlled_Lists/5_001_Material_Type/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/5_Controlled_Lists/5_002_Certification_Source/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/5_Controlled_Lists/5_003_Material_Purpose/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/5_Controlled_Lists/5_004_Function/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/5_Controlled_Lists/5_005_Recyclability_Source/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/5_Controlled_Lists/5_006_Shape/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/5_Controlled_Lists/5_007_Flexibility/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/5_Controlled_Lists/5_008_Component_Disruptors/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/5_Controlled_Lists/5_009_Opacity/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/5_Controlled_Lists/5_010_Reuse_System/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/5_Controlled_Lists/5_011_Recycled_Content_Evidence_Type/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/5_Controlled_Lists/5_012_Product_Type/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/5_Controlled_Lists/5_013_Deposit_Return_Scheme/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/5_Controlled_Lists/5_014_Complete_Packaging_Disruptors/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/5_Controlled_Lists/5_015_Level/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/5_Controlled_Lists/5_016_End_Of_Life_Route/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/6_Relationship_Lists/6_000_Relationship_Lists/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/6_Relationship_Lists/6_001_Material_Constituents/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/6_Relationship_Lists/6_002_Component_Constituents/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/6_Relationship_Lists/6_003_Complete_Packaging_Constituents/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/6_Relationship_Lists/6_004_Multipack_Constituents/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/6_Relationship_Lists/6_005_Certification_Claims/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/6_Relationship_Lists/6_006_Recyclability_Claims/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/6_Relationship_Lists/6_007_Component_End_of_Life_Routes/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/6_Relationship_Lists/6_008_Complete_Packaging_End_of_Life_Routes/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/6_Relationship_Lists/6_009_Recycled_Content_Claims/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/7_Supporting_Files/7_2_Example_Files/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/8_Governance/8_1_Governance/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://standard.open3p.org/2.0/9_Change_Log/8_1_Change_Log/</loc>
-         <lastmod>2024-07-18</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
