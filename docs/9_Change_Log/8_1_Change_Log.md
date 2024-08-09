@@ -6,6 +6,10 @@ title: Latest Updates
 # Latest Updates
 A document that contains all the changes made to the standard.
 
+## August 09, 2024
+#### Documents
+ - Updated licence
+
 ## September 29, 2023
 ### Documents
  - Reworked data formats page to include various wored examples
