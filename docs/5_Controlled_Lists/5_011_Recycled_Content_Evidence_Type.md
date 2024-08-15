@@ -12,4 +12,4 @@ The recycled content evidence type controlled list identifies the type of eviden
 ## Data
 |<div style="width:200px">identifier</div>|category|detailed|
 |:-|:-|:-|
-|c-recycled-evidence-0001|certificate||
+|c-recycled-evidence-0001|certificate|Official document that confirms a specific achievement.|
