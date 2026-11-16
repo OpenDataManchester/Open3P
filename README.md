@@ -2,7 +2,7 @@
 
 This is the Open 3P project repository. It contains all the schemas, controlled lists and additional information to publish standard.open3p.org. For the site itself, please see [standard.open3p.org](https://standard.open3p.org/) instead. 
 
-The site is build with [![Built with Material for MkDocs](https://img.shields.io/badge/Material_for_MkDocs-526CFE?style=for-the-badge&logo=MaterialForMkDocs&logoColor=white)](https://squidfunk.github.io/mkdocs-material/) from this repository.
+The v3.0 documentation is being migrated to [Zensical](https://zensical.org/). Install the dependencies with `python -m pip install -r requirements.txt`, preview locally with `zensical serve`, or build the static site with `zensical build --clean`. These commands only build locally; versioned publication still needs a Zensical-compatible Mike invocation and has not been run.
 
 ## What is Open 3P?
 
