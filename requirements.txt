@@ -1,6 +1,6 @@
 torch>=1.7
 torchvision
 mermaid==0.3.2
-mike==1.1.2
-mkdocs==1.4.3
-mkdocs-material==9.1.18
+zensical==0.1.1
+# Zensical's Mike integration requires its compatible fork.
+git+https://github.com/squidfunk/mike.git
